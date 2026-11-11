@@ -134,7 +134,15 @@ p{margin:0}
 .voicenote{flex-basis:100%;color:var(--muted)}
 #reading{padding:16px;font-size:19px;line-height:1.7;display:flex;flex-direction:column;gap:14px}
 #reading .rh{font-family:var(--f-display);font-weight:800;font-size:22px;letter-spacing:.04em;text-transform:uppercase;line-height:1.2;border-bottom:2px solid var(--line);padding-bottom:4px;margin-top:6px}
-#reading ul{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:6px}
+#reading ul,#reading ol{margin:0;padding-left:1.3em;display:flex;flex-direction:column;gap:6px}
+#reading ol li::marker{font-family:var(--f-display);font-weight:800;color:var(--field)}
+.mbox{background:var(--field-2);border:2px solid var(--field);border-radius:8px;padding:12px 16px;display:flex;flex-direction:column;gap:8px}
+.mbox h4{margin:0;font-family:var(--f-display);font-weight:800;font-size:19px;letter-spacing:.06em;text-transform:uppercase;color:var(--field);line-height:1.25}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.gallery .fig{margin:0}
+.gallery .fig figcaption{font-size:15px;line-height:1.45;padding:8px 10px}
+.fig-art img{border-radius:6px}
+@media (max-width:560px){.fig-art svg{min-width:520px}}
 .sent{border-radius:4px;transition:background-color .15s;cursor:pointer;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 .sent:hover{background:color-mix(in srgb,var(--hi-soft) 55%,transparent)}
 .sent.on{background:var(--hi-soft)}
@@ -521,8 +529,14 @@ function lev(a, b) {
   }
   return prev[b.length];
 }
-const sim = (a, b) => 1 - lev(a, b) / Math.max(a.length, b.length, 1);
-const thresh = t => t.length <= 3 ? 1 : t.length <= 6 ? 0.8 : 0.75;
+// Typo tolerant, but "vertebrates" never passes for "invertebrates", nor "selective" for "nonselective".
+function close(a, b) {
+  if (a === b) return true;
+  if (a.endsWith(b) || b.endsWith(a)) return false;
+  const L = Math.max(a.length, b.length);
+  const allowed = L <= 3 ? 0 : L <= 7 ? 1 : L <= 14 ? 2 : Math.floor(L * 0.15);
+  return Math.abs(a.length - b.length) <= allowed && lev(a, b) <= allowed;
+}
 function phraseIn(phrase, ans) {
   const target = norm(phrase); if (!target) return false;
   const p = target.split(' '), a = norm(ans).split(' ');
@@ -530,7 +544,7 @@ function phraseIn(phrase, ans) {
     for (let i = 0; i + len <= a.length; i++) {
       const w = a.slice(i, i + len).join(' ');
       if (/\d/.test(target)) { if (w.replace(/\s/g, '') === target.replace(/\s/g, '')) return true; continue; }
-      if (sim(w, target) >= thresh(target)) return true;
+      if (close(w, target)) return true;
     }
   }
   return false;
@@ -538,10 +552,12 @@ function phraseIn(phrase, ans) {
 function localGrade(q, text) {
   const t = norm(text); if (!t) return false;
   const acc = [q.answer, ...(q.accept || [])].filter(x => x !== undefined && x !== null && x !== '').map(String);
-  for (const a of acc) { const na = norm(a); if (sim(t, na) >= thresh(na)) return true; }
+  if (acc.some(a => norm(a) === t)) return true;
   const negTrap = NEG.test(t) && !acc.some(a => NEG.test(norm(a)));
   if (negTrap) return false;
+  // With required points, every point must be there; whole-answer fuzziness would let list answers slide.
   if (q.keys && q.keys.length) return q.keys.every(g => [].concat(g).some(alt => phraseIn(alt, text)));
+  for (const a of acc) { const na = norm(a); if (/\d/.test(na) ? t === na : close(t, na)) return true; }
   return acc.some(a => phraseIn(a, text));
 }
 let samplerOff = false;
@@ -578,11 +594,15 @@ async function gradeShort(q, text) {
 }
 function collectPlain(s) {
   const out = [];
+  const fig = id => { const f = (s.figures || []).find(f => f.id === id); if (f) out.push(plain(f.title) + ' ' + (f.explain || []).map(plain).join(' ')); };
   for (const b of s.body || []) {
     if (b.h) out.push(plain(b.h));
+    if (b.box !== undefined) out.push(plain(b.box) + ':');
     if (b.p) out.push(b.p.map(plain).join(' '));
     if (b.list) out.push(b.list.map(plain).join(' '));
-    if (b.fig) { const f = (s.figures || []).find(f => f.id === b.fig); if (f) out.push('Figure: ' + plain(f.title) + '. ' + (f.explain || []).map(plain).join(' ')); }
+    if (b.ol) out.push(b.ol.map(plain).join(' '));
+    if (b.fig) fig(b.fig);
+    if (b.gallery) b.gallery.forEach(fig);
   }
   for (const t of s.terms || []) out.push(plain(t.term) + ': ' + plain(t.def));
   return out.join('\n');
@@ -909,19 +929,35 @@ function sentence(t, i) {
 }
 function figureHtml(s, f, next) {
   if (!f) return '';
-  const art = f.svg ? f.svg : f.img ? `<img src="${esc(f.img)}" alt="${esc(f.alt || f.title)}" loading="lazy">` : '';
-  return `<figure class="fig">${art ? `<div class="fig-art">${art}</div>` : ''}<figcaption>${sentence('**Figure:** ' + f.title + (/[.!?]$/.test(f.title) ? '' : '.'), next())}${f.photo ? `<span class="fig-ref">In your manual: ${esc(f.photo)}</span>` : ''}${(f.explain || []).length ? `<p>${f.explain.map(x => sentence(x, next())).join(' ')}</p>` : ''}</figcaption></figure>`;
+  const art = f.svg ? f.svg : f.img ? `<img src="${esc(f.img)}" alt="${esc(f.alt || plain(f.title))}" loading="lazy">` : '';
+  const ref = f.page ? 'Manual, ' + f.page : f.photo ? 'In your manual: ' + f.photo : '';
+  return `<figure class="fig">${art ? `<div class="fig-art">${art}</div>` : ''}<figcaption>${sentence(f.title + (/[.!?:]$/.test(f.title) ? '' : '.'), next())}${ref ? `<span class="fig-ref">${esc(ref)}</span>` : ''}${(f.explain || []).length ? `<p>${f.explain.map(x => sentence(x, next())).join(' ')}</p>` : ''}</figcaption></figure>`;
+}
+const findFig = (s, id) => (s.figures || []).find(f => f.id === id);
+function blockHtml(s, b, next) {
+  const ul = arr => `<ul>${arr.map(t => `<li>${sentence(t, next())}</li>`).join('')}</ul>`;
+  const ol = arr => `<ol>${arr.map(t => `<li>${sentence(t, next())}</li>`).join('')}</ol>`;
+  const para = arr => `<p>${arr.map(t => sentence(t, next())).join(' ')}</p>`;
+  if (b.h) return `<h3 class="rh">${sentence(b.h, next())}</h3>`;
+  if (b.box !== undefined) {
+    let inner = `<h4>${sentence(b.box, next())}</h4>`;
+    if (b.p) inner += para(b.p);
+    if (b.list) inner += ul(b.list);
+    if (b.ol) inner += ol(b.ol);
+    return `<aside class="mbox">${inner}</aside>`;
+  }
+  if (b.p) return para(b.p);
+  if (b.list) return ul(b.list);
+  if (b.ol) return ol(b.ol);
+  if (b.fig) return figureHtml(s, findFig(s, b.fig), next);
+  if (b.gallery) return `<div class="gallery">${b.gallery.map(id => figureHtml(s, findFig(s, id), next)).join('')}</div>`;
+  return '';
 }
 function viewStudy() {
   const s = SEC[S.sid]; if (!s) return viewHome();
   let i = 0; const next = () => i++;
   let body = '';
-  for (const b of s.body || []) {
-    if (b.h) body += `<h3 class="rh">${sentence(b.h, next())}</h3>`;
-    else if (b.p) body += `<p>${b.p.map(t => sentence(t, next())).join(' ')}</p>`;
-    else if (b.list) body += `<ul>${b.list.map(t => `<li>${sentence(t, next())}</li>`).join('')}</ul>`;
-    else if (b.fig) body += figureHtml(s, (s.figures || []).find(f => f.id === b.fig), next);
-  }
+  for (const b of s.body || []) body += blockHtml(s, b, next);
   const words = collectPlain(s).split(/\s+/).length;
   const st = s.practice ? null : secStatus(s);
   return `<div class="view">

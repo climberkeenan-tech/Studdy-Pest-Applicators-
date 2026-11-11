@@ -1,0 +1,42 @@
+<svg viewBox="0 0 640 300" role="img" aria-label="Figure 1.2: a systemic pesticide moves inside the plant; a contact pesticide stays on the surface of the plant">
+  <defs>
+    <marker id="ah-1-2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path class="f-ink" d="M0 0 L10 5 L0 10 Z"/></marker>
+  </defs>
+  <g font-family="var(--f-display)" font-weight="800" font-size="24" text-anchor="middle">
+    <text class="f-ink" x="160" y="30">SYSTEMIC</text>
+    <text class="f-ink" x="480" y="30">CONTACT</text>
+  </g>
+  <g font-family="var(--f-body)" font-size="15" text-anchor="middle">
+    <text class="f-muted" x="160" y="52">Pesticides inside plant</text>
+    <text class="f-muted" x="480" y="52">Pesticides on surface of plant</text>
+  </g>
+  <g>
+    <path class="s-muted" stroke-width="2" fill="none" d="M50 222 H270"/>
+    <path class="s-field" stroke-width="7" stroke-linecap="round" fill="none" d="M160 222 V128"/>
+    <path class="s-field" stroke-width="3" fill="none" d="M160 222 c-10 16 -30 26 -52 30 M160 222 c10 16 30 26 52 30 M160 222 v38 M136 236 l-22 4 M184 236 l22 4"/>
+    <path class="f-field s-field" fill-opacity=".22" stroke-width="2.5" d="M160 128 C130 88 82 90 62 114 C90 144 136 146 160 128 Z"/>
+    <path class="f-field s-field" fill-opacity=".22" stroke-width="2.5" d="M160 128 C190 88 238 90 258 114 C230 144 184 146 160 128 Z"/>
+  </g>
+  <g class="s-ink" stroke-width="2.5" fill="none" marker-end="url(#ah-1-2)">
+    <path d="M80 114 L146 126"/>
+    <path d="M240 114 L174 126"/>
+    <path d="M160 144 V200"/>
+  </g>
+  <g>
+    <path class="s-muted" stroke-width="2" fill="none" d="M370 222 H590"/>
+    <path class="s-field" stroke-width="7" stroke-linecap="round" fill="none" d="M480 222 V128"/>
+    <path class="s-field" stroke-width="3" fill="none" d="M480 222 c-10 16 -30 26 -52 30 M480 222 c10 16 30 26 52 30 M480 222 v38 M456 236 l-22 4 M504 236 l22 4"/>
+    <path class="f-field s-field" fill-opacity=".22" stroke-width="2.5" d="M480 128 C450 88 402 90 382 114 C410 144 456 146 480 128 Z"/>
+    <path class="f-field s-field" fill-opacity=".22" stroke-width="2.5" d="M480 128 C510 88 558 90 578 114 C550 144 504 146 480 128 Z"/>
+  </g>
+  <g class="f-ink">
+    <circle cx="398" cy="110" r="3.5"/><circle cx="412" cy="102" r="3.5"/><circle cx="426" cy="98" r="3.5"/><circle cx="440" cy="100" r="3.5"/><circle cx="454" cy="106" r="3.5"/><circle cx="466" cy="116" r="3.5"/>
+    <circle cx="414" cy="122" r="3.5"/><circle cx="430" cy="116" r="3.5"/><circle cx="446" cy="120" r="3.5"/><circle cx="432" cy="131" r="3.5"/>
+    <circle cx="562" cy="110" r="3.5"/><circle cx="548" cy="102" r="3.5"/><circle cx="534" cy="98" r="3.5"/><circle cx="520" cy="100" r="3.5"/><circle cx="506" cy="106" r="3.5"/><circle cx="494" cy="116" r="3.5"/>
+    <circle cx="546" cy="122" r="3.5"/><circle cx="530" cy="116" r="3.5"/><circle cx="514" cy="120" r="3.5"/><circle cx="528" cy="131" r="3.5"/>
+  </g>
+  <g font-family="var(--f-body)" font-size="14" text-anchor="middle">
+    <text class="f-muted" x="160" y="290">Absorbed and moved within the plant</text>
+    <text class="f-muted" x="480" y="290">Not absorbed; must touch the pest</text>
+  </g>
+</svg>

@@ -1,0 +1,27 @@
+<svg viewBox="0 0 640 360" role="img" aria-label="Pest management methods split into natural controls, such as abiotic factors, and six applied controls: biological, chemical, cultural, genetic, mechanical or physical, and regulatory">
+  <g font-family="var(--f-display)" font-weight="700" text-anchor="middle">
+    <rect class="f-field" x="160" y="8" width="320" height="44" rx="8"/>
+    <text class="f-on" x="320" y="38" font-size="21">PEST MANAGEMENT METHODS</text>
+    <path class="s-ink" stroke-width="2" fill="none" d="M320 52 V70 M130 70 H465 M130 70 V90 M465 70 V90"/>
+    <rect class="f-card" x="30" y="90" width="200" height="40" rx="8"/>
+    <text class="f-ink" x="130" y="117" font-size="19">NATURAL CONTROLS</text>
+    <rect class="f-card" x="330" y="90" width="270" height="40" rx="8"/>
+    <text class="f-ink" x="465" y="117" font-size="19">APPLIED CONTROLS</text>
+  </g>
+  <g font-family="var(--f-body)" font-size="15" text-anchor="middle">
+    <text class="f-ink" x="130" y="162" font-weight="700">Abiotic factors:</text>
+    <text class="f-muted" x="130" y="184">wind, temperature,</text>
+    <text class="f-muted" x="130" y="206">sunshine, rain,</text>
+    <text class="f-muted" x="130" y="228">air or water pollution,</text>
+    <text class="f-muted" x="130" y="250">rivers, lakes, mountains</text>
+  </g>
+  <path class="s-ink" stroke-width="2" fill="none" d="M345 130 V330 M345 150 H360 M345 186 H360 M345 222 H360 M345 258 H360 M345 294 H360 M345 330 H360"/>
+  <g font-family="var(--f-display)" font-weight="700" font-size="17">
+    <rect class="f-card" x="360" y="135" width="240" height="30" rx="6"/><text class="f-ink" x="374" y="156">1 · BIOLOGICAL</text>
+    <rect class="f-card" x="360" y="171" width="240" height="30" rx="6"/><text class="f-ink" x="374" y="192">2 · CHEMICAL</text>
+    <rect class="f-card" x="360" y="207" width="240" height="30" rx="6"/><text class="f-ink" x="374" y="228">3 · CULTURAL</text>
+    <rect class="f-card" x="360" y="243" width="240" height="30" rx="6"/><text class="f-ink" x="374" y="264">4 · GENETIC</text>
+    <rect class="f-card" x="360" y="279" width="240" height="30" rx="6"/><text class="f-ink" x="374" y="300">5 · MECHANICAL/PHYSICAL</text>
+    <rect class="f-card" x="360" y="315" width="240" height="30" rx="6"/><text class="f-ink" x="374" y="336">6 · REGULATORY</text>
+  </g>
+</svg>

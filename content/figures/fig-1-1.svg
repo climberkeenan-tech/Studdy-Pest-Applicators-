@@ -1,0 +1,23 @@
+<svg viewBox="0 0 640 420" role="img" aria-label="Figure 1.1: DDT concentration in parts per million rises from .000003 in water to .04 in planktonic algae, .20 in zooplankton, 2.0 in fish, and 20.00 in fish-eating birds">
+  <text class="f-muted" x="630" y="18" text-anchor="end" font-size="14" font-family="var(--f-mono)">DDT concentration (parts per million)</text>
+  <g font-family="var(--f-display)" font-weight="700" font-size="22">
+    <rect class="f-field" fill-opacity=".06" x="100" y="30" width="530" height="70" rx="6"/>
+    <text class="f-ink" x="120" y="73">FISH-EATING BIRDS</text>
+    <text class="f-ink" x="612" y="73" text-anchor="end" font-family="var(--f-mono)">20.00</text>
+    <rect class="f-field" fill-opacity=".13" x="100" y="106" width="530" height="70" rx="6"/>
+    <text class="f-ink" x="120" y="149">FISH</text>
+    <text class="f-ink" x="612" y="149" text-anchor="end" font-family="var(--f-mono)">2.0</text>
+    <rect class="f-field" fill-opacity=".2" x="100" y="182" width="530" height="70" rx="6"/>
+    <text class="f-ink" x="120" y="225">ZOOPLANKTON</text>
+    <text class="f-ink" x="612" y="225" text-anchor="end" font-family="var(--f-mono)">.20</text>
+    <rect class="f-field" fill-opacity=".27" x="100" y="258" width="530" height="70" rx="6"/>
+    <text class="f-ink" x="120" y="301">PLANKTONIC ALGAE</text>
+    <text class="f-ink" x="612" y="301" text-anchor="end" font-family="var(--f-mono)">.04</text>
+    <rect class="f-field" fill-opacity=".34" x="100" y="334" width="530" height="70" rx="6"/>
+    <text class="f-ink" x="120" y="377">WATER</text>
+    <text class="f-ink" x="612" y="377" text-anchor="end" font-family="var(--f-mono)">.000003</text>
+  </g>
+  <path class="s-field" stroke-width="7" fill="none" d="M44 404 V56"/>
+  <path class="f-field" d="M44 30 L28 60 H60 Z"/>
+  <text class="f-ink" font-size="15" font-weight="700" font-family="var(--f-body)" text-anchor="middle" transform="translate(80 217) rotate(-90)">Concentration increases 10 million times</text>
+</svg>

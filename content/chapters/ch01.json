@@ -1,0 +1,1365 @@
+{
+  "chapter": "Chapter 1 · Pest Management",
+  "pages": [1, 15],
+  "sections": [
+    {
+      "id": "c01-s01",
+      "chapter": "Chapter 1 · Pest Management",
+      "title": "Chapter goals and early pest disasters",
+      "pages": [1, 2],
+      "body": [
+        {"box": "Learning objectives", "p": ["After studying this chapter, you should be able to do the following."], "list": [
+          "Define **pest**.",
+          "State the four main groups of pests and give an example of each.",
+          "Discuss the importance of pest identification in pest control.",
+          "List six general pest management methods.",
+          "Define **integrated pest management (IPM)**.",
+          "List five benefits of using IPM.",
+          "Discuss how using one or more control options can improve pest control.",
+          "Describe how selectivity and persistence affect chemical controls.",
+          "Explain how pest population levels trigger control procedures.",
+          "Distinguish between prevention and suppression when developing pest management goals.",
+          "Give several reasons why pesticide applications may fail.",
+          "Explain the importance of a pesticide's mode of action in managing pesticide resistance.",
+          "List two tactics that will minimize the development of pesticide resistance."
+        ]},
+        {"fig": "p1-cockroach"},
+        {"h": "Pest problems throughout history"},
+        {"p": [
+          "Civilization has been combating insects and other pests throughout history.",
+          "Perhaps the most infamous human catastrophe was the **Black Plague** of Europe, when millions of people in the 14th century died from a mysterious scourge.",
+          "Centuries later, it was determined that the cause was a **bacterial disease spread by rat fleas**.",
+          "When rats, the normal host animals, were unavailable as a food source, the fleas sought other warm-blooded hosts, including humans.",
+          "Although the plague is still present in parts of the world today, controlling rats, other rodents, and fleas can greatly reduce disease incidence."
+        ]},
+        {"p": [
+          "The destruction of Ireland's potato crop by a fungal disease in the 19th century directly affected the population of the United States.",
+          "**Late blight** essentially eliminated potatoes, the staple food crop of Ireland.",
+          "Potatoes not destroyed in the field rotted in storage during the winter.",
+          "Thousands of Irish starved in the resulting famine, and more than a million migrated to the United States.",
+          "Late blight continues to be a major problem of potatoes.",
+          "Today it is managed through the use of **resistant cultivars, proper sanitation practices, and fungicides**."
+        ]}
+      ],
+      "figures": [
+        {"id": "p1-cockroach", "title": "Pest: Brownbanded cockroach.", "page": "p. 1", "imgFile": "p1-cockroach.jpg"}
+      ],
+      "questions": [
+        {"id": "c01-s01-t1", "src": "test", "kind": "mc", "q": "What caused the Black Plague of Europe?",
+         "choices": ["A fungal disease spread by rats", "A bacterial disease spread by rat fleas", "A virus spread by mosquitoes", "A protozoan spread by lice"], "answer": 1,
+         "ref": "pp. 1–2, 'Pest Problems Throughout History'", "why": "Centuries later, the cause was found to be a bacterial disease spread by rat fleas."},
+        {"id": "c01-s01-t2", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT listed as a way late blight of potatoes is managed today?",
+         "choices": ["Resistant cultivars", "Proper sanitation practices", "Fungicides", "Crop rotation"], "answer": 3,
+         "ref": "p. 2, 'Pest Problems Throughout History'", "why": "The manual lists resistant cultivars, proper sanitation practices, and fungicides."},
+        {"id": "c01-s01-t3", "src": "test", "kind": "tf", "q": "Ireland's potato famine was caused by an insect pest.", "answer": false,
+         "ref": "p. 2, 'Pest Problems Throughout History'", "why": "It was late blight, a fungal disease."},
+        {"id": "c01-s01-t4", "src": "test", "kind": "mc", "style": "scenario", "q": "A health department wants fewer plague cases in a region where the plague is still present. What does the manual say can greatly reduce disease incidence?",
+         "choices": ["Controlling rats, other rodents, and fleas", "Draining standing water", "Planting resistant cultivars", "Spraying fungicides"], "answer": 0,
+         "ref": "p. 2, 'Pest Problems Throughout History'", "why": "Controlling rats, other rodents, and fleas can greatly reduce disease incidence."},
+        {"id": "c01-s01-t5", "src": "test", "kind": "short", "q": "Plague fleas turned to humans when their normal host animals were unavailable. What were those normal host animals?",
+         "answer": "rats", "accept": ["rat", "the rats"],
+         "ref": "pp. 1–2, 'Pest Problems Throughout History'", "why": "Rats were the normal hosts. Without them, the fleas sought other warm-blooded hosts, including humans."}
+      ]
+    },
+    {
+      "id": "c01-s02",
+      "chapter": "Chapter 1 · Pest Management",
+      "title": "Malaria, beetles, and what a pest is",
+      "pages": [2, 2],
+      "body": [
+        {"p": [
+          "**Malaria** is a disease caused by the transmission of a parasitic microorganism, a **protozoan**, by **mosquitoes** when they feed on humans.",
+          "Historians credit malaria with altering the patterns of human history and causing the collapse of some civilizations.",
+          "During World War II, 500,000 soldiers were infected in the South Pacific and African theaters, with 60,000 deaths recorded.",
+          "In 2010, malaria cases numbered 219 million, with 660,000 people dying from this debilitating disease.",
+          "Antimalarial drugs, insecticide applications, environmental modifications, and mosquito (bed) nets have brought great improvements to fighting this difficult-to-control disease."
+        ]},
+        {"p": [
+          "In the early 21st century, outbreaks of the native **mountain pine beetle** in the western United States and Canada destroyed more than 4 million acres of lodgepole, ponderosa, Scots, and limber pines.",
+          "During this same period, the **emerald ash borer** was accidentally introduced from Asia.",
+          "It has destroyed millions of ash trees in the midwestern United States.",
+          "Preventive insecticidal treatments are being used to manage these two destructive beetles."
+        ]},
+        {"p": [
+          "These examples illustrate the enormity and complexity of pest problems.",
+          "But what is a pest?"
+        ]},
+        {"box": "Definition of a pest", "p": [
+          "A **pest** is an undesirable organism that injures humans, desirable plants and animals, manufactured products, or natural substances."
+        ]},
+        {"p": [
+          "Many insects, **pathogens**, plants, mollusks, fish, birds, and a variety of mammals compete for our crops and livestock.",
+          "Pathogens are disease-causing organisms, such as viruses, bacteria, or fungi.",
+          "Plants that are pests are known as **weeds**.",
+          "Mollusks are slugs and snails, and the mammals range from mice to deer.",
+          "In addition, some pests destroy clothing, furniture, and buildings.",
+          "Some reduce the beauty and recreational value of the landscape, and some invade our homes during the winter months.",
+          "As the battle between humans and pests continues over time, so will innovative methods of control."
+        ]}
+      ],
+      "questions": [
+        {"id": "c01-s02-t1", "src": "test", "kind": "mc", "q": "Which is the manual's definition of a pest?",
+         "choices": ["Any insect found on a crop", "An undesirable organism that injures humans, desirable plants and animals, manufactured products, or natural substances", "Any organism that is not native to an area", "An organism that has become resistant to pesticides"], "answer": 1,
+         "ref": "p. 2, 'Pest Problems Throughout History'", "why": "That is the manual's definition, word for word."},
+        {"id": "c01-s02-t2", "src": "test", "kind": "short", "q": "Type the definition of a pest.",
+         "answer": "An undesirable organism that injures humans, desirable plants and animals, manufactured products, or natural substances.",
+         "keys": [["undesirable", "unwanted"], ["organism", "organisms", "living thing"], ["injures", "injure", "harms", "harm", "damages", "damage"], ["humans", "people"], ["plants"], ["animals"], ["products", "manufactured"], ["natural substances", "substances"]],
+         "ref": "p. 2, 'Pest Problems Throughout History'", "why": "Know all four things a pest injures: humans, desirable plants and animals, manufactured products, and natural substances."},
+        {"id": "c01-s02-t3", "src": "test", "kind": "mc", "q": "Malaria is caused by which kind of organism, transmitted by mosquitoes?",
+         "choices": ["A bacterium", "A virus", "A protozoan, a parasitic microorganism", "A fungus"], "answer": 2,
+         "ref": "p. 2, 'Pest Problems Throughout History'", "why": "Malaria is caused by a parasitic microorganism, a protozoan, spread by mosquitoes when they feed on humans."},
+        {"id": "c01-s02-t4", "src": "test", "kind": "tf", "q": "The emerald ash borer is a native beetle of the western United States.", "answer": false,
+         "ref": "p. 2, 'Pest Problems Throughout History'", "why": "The emerald ash borer was accidentally introduced from Asia. The native one is the mountain pine beetle."},
+        {"id": "c01-s02-t5", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT listed as having improved the fight against malaria?",
+         "choices": ["Antimalarial drugs", "Insecticide applications", "Mosquito (bed) nets", "Releasing natural enemies of mosquitoes"], "answer": 3,
+         "ref": "p. 2, 'Pest Problems Throughout History'", "why": "The manual lists antimalarial drugs, insecticide applications, environmental modifications, and bed nets."}
+      ]
+    },
+    {
+      "id": "c01-s03",
+      "chapter": "Chapter 1 · Pest Management",
+      "title": "Pest control over the years",
+      "pages": [2, 3],
+      "body": [
+        {"h": "Pest control over the years"},
+        {"p": [
+          "For many centuries, the causes of crop failures and human and animal diseases were shrouded in mystery.",
+          "The first pest control measures were crude: weeds were pulled, rats were clubbed, and beetles were plucked from foliage."
+        ]},
+        {"box": "Other ancient nonchemical control methods", "list": [
+          "Burning to control weeds, diseases, and insects, in 950 B.C.",
+          "Egyptians placing fishnets over beds to prevent mosquito bites, in 440 B.C.",
+          "Romans using rat-proof grain storage bins, in 13 B.C."
+        ]},
+        {"p": [
+          "The first known use of **natural enemies** is credited to **Arabian growers**, in 1000 A.D.",
+          "Arab farmers moved colonies of a predaceous ant species from nearby mountains to an oasis to control pest ants that were damaging their date palms."
+        ]},
+        {"box": "Early chemical pest control", "list": [
+          "The earliest use of chemicals as pesticides dates back to **2500 B.C.**, when the **Sumerians** used **sulfur** compounds to control mites and insects.",
+          "The **Chinese** used **mercury and arsenic** compounds in 500 B.C. to control body lice.",
+          "Early plant-derived insecticides included **hellebore** to control body lice, **nicotine** to control aphids, and **pyrethrins** to control a wide variety of insects."
+        ]},
+        {"p": [
+          "In France during the late 19th century, a farmer sprayed a mixture of **lime and copper sulfate** on grapevines to deter passers-by from picking the grapes.",
+          "The farmer found that the mixture also controlled **downy mildew**, a serious fungal disease of grapes.",
+          "Later named **Bordeaux mixture**, it remains a widely used fungicide worldwide."
+        ]},
+        {"p": [
+          "Until the 1940s, pest control chemicals were derived from plants and inorganic compounds.",
+          "During World War II, the synthetic chemical **DDT** saved many Allied soldiers from insect-transmitted diseases.",
+          "Synthetic pesticides launched the modern-day chemical industry and a new era in pest control."
+        ]},
+        {"box": "Why pesticides became the primary means of solving pest problems", "list": [
+          "They were effective.",
+          "They were relatively inexpensive.",
+          "They provided season-long crop protection.",
+          "They could be used with fertilizers and other production practices."
+        ]},
+        {"p": [
+          "Modern pesticides achieved wide acceptance following their successful use in agriculture and for human health."
+        ]}
+      ],
+      "questions": [
+        {"id": "c01-s03-t1", "src": "test", "kind": "mc", "q": "What is the earliest recorded use of chemicals as pesticides?",
+         "choices": ["Sumerians using sulfur compounds in 2500 B.C.", "Chinese using mercury and arsenic compounds in 500 B.C.", "Romans using rat-proof grain bins in 13 B.C.", "Egyptians using fishnets in 440 B.C."], "answer": 0,
+         "ref": "p. 2, 'Pest Control Over the Years'", "why": "The Sumerians used sulfur compounds against mites and insects in 2500 B.C."},
+        {"id": "c01-s03-t2", "src": "test", "kind": "mc", "q": "Bordeaux mixture, still a widely used fungicide, is a mixture of:",
+         "choices": ["Sulfur and lime", "Lime and copper sulfate", "Mercury and arsenic", "Nicotine and pyrethrins"], "answer": 1,
+         "ref": "pp. 2–3, 'Pest Control Over the Years'", "why": "A French farmer sprayed lime and copper sulfate on grapevines and found it also controlled downy mildew."},
+        {"id": "c01-s03-t3", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT a reason the manual gives for pesticides becoming the primary means of solving pest problems?",
+         "choices": ["They were effective", "They were relatively inexpensive", "They provided season-long crop protection", "They had no effect on the environment"], "answer": 3,
+         "ref": "p. 3, 'Pest Control Over the Years'", "why": "The four reasons: effective, relatively inexpensive, season-long protection, and usable with fertilizers and other practices."},
+        {"id": "c01-s03-t4", "src": "test", "kind": "mc", "q": "Which early plant-derived insecticide was used to control aphids?",
+         "choices": ["Hellebore", "Nicotine", "Pyrethrins", "Sulfur"], "answer": 1,
+         "ref": "p. 2, 'Pest Control Over the Years'", "why": "Hellebore was for body lice, nicotine for aphids, and pyrethrins for a wide variety of insects."},
+        {"id": "c01-s03-t5", "src": "test", "kind": "mc", "style": "scenario", "q": "Long ago, farmers moved colonies of predaceous ants to an oasis to protect date palms from pest ants. What was this the first known use of?",
+         "choices": ["Chemical control", "Natural enemies", "Quarantine", "Crop rotation"], "answer": 1,
+         "ref": "p. 2, 'Pest Control Over the Years'", "why": "The first known use of natural enemies is credited to Arabian growers, in 1000 A.D."}
+      ]
+    },
+    {
+      "id": "c01-s04",
+      "chapter": "Chapter 1 · Pest Management",
+      "title": "Resistance, Silent Spring, and biomagnification",
+      "pages": [3, 4],
+      "body": [
+        {"p": [
+          "In recent years, some drawbacks of heavy dependence on pesticides have become increasingly apparent.",
+          "**Pesticide resistance** to DDT was documented in **1947**.",
+          "Since that time, hundreds of insects have become resistant to one or more pesticides.",
+          "Most notable is the **Colorado potato beetle**, which has developed resistance to every major group of insecticides, greatly complicating pest management efforts.",
+          "Resistance also has arisen in many weeds and plant pathogens in agricultural production."
+        ]},
+        {"p": [
+          "In **1962**, **Rachel Carson** graphically illustrated the impact of increasing pesticide use on the environment.",
+          "Her book, **Silent Spring**, focused on DDT and other **chlorinated hydrocarbons** because of their long residual activity and persistence in the environment.",
+          "Although these characteristics contributed to their effectiveness, chlorinated hydrocarbons also accumulated in the fatty tissue of some animals, especially those higher in the food chain.",
+          "This is called **bioaccumulation**.",
+          "In certain situations, some organisms accumulated chemical residues in higher concentrations than those found in the food organisms they consumed.",
+          "This is called **biomagnification**."
+        ]},
+        {"p": [
+          "Ecologists refer to a **food chain** as the sequence of animals feeding in the natural environment, where a particular plant, animal, or microorganism is eaten by an animal that is in turn eaten by another animal.",
+          "Animals at each level normally consume individuals from the previous level.",
+          "Figure 1.1 shows how biomagnification of a pesticide can occur in a food chain."
+        ]},
+        {"fig": "fig-1-1"},
+        {"p": [
+          "Organisms with pesticides in their tissues are eaten by fish, which are in turn eaten by birds.",
+          "The birds at the top of the food chain accumulate the highest concentration of pesticide residues."
+        ]},
+        {"p": [
+          "Since the publication of Silent Spring, the United States has experienced a level of environmental awareness unequal to any other period in history.",
+          "The U.S. **Environmental Protection Agency (EPA)** was created in **1970** by Congress to implement laws passed to protect the environment and the health of humans and other animals.",
+          "In **1972**, EPA **banned the use of DDT** in the United States.",
+          "Regulatory action has since been taken against many chemicals thought to pose significant environmental and health hazards."
+        ]}
+      ],
+      "figures": [
+        {"id": "fig-1-1", "title": "Figure 1.1: Biomagnification in the food chain", "page": "p. 3", "svgFile": "fig-1-1.svg",
+         "explain": [
+           "DDT concentration, in parts per million, goes from .000003 in water, to .04 in planktonic algae, .20 in zooplankton, 2.0 in fish, and 20.00 in fish-eating birds.",
+           "The figure labels this a concentration increase of 10 million times."
+         ]}
+      ],
+      "questions": [
+        {"id": "c01-s04-t1", "src": "test", "kind": "mc", "q": "What is biomagnification?",
+         "choices": ["Organisms accumulating chemical residues in higher concentrations than those found in the food organisms they consumed", "A pest's ability to tolerate a pesticide that once controlled it", "A pesticide breaking down in storage", "Spreading a pesticide over a large area"], "answer": 0,
+         "ref": "p. 4, 'Pest Control Over the Years'", "why": "That is biomagnification. Bioaccumulation is buildup in fatty tissue, especially in animals higher in the food chain."},
+        {"id": "c01-s04-t2", "src": "test", "kind": "mc", "q": "In Figure 1.1, which level has the highest DDT concentration?",
+         "choices": ["Water", "Zooplankton", "Fish", "Fish-eating birds"], "answer": 3,
+         "ref": "p. 3, Figure 1.1", "why": "Fish-eating birds are at the top of the food chain, at 20.00 parts per million."},
+        {"id": "c01-s04-t3", "src": "test", "kind": "mc", "q": "In what year did EPA ban the use of DDT in the United States?",
+         "choices": ["1947", "1962", "1970", "1972"], "answer": 3,
+         "ref": "p. 4, 'Pest Control Over the Years'", "why": "1947: DDT resistance documented. 1962: Silent Spring. 1970: EPA created. 1972: DDT banned."},
+        {"id": "c01-s04-t4", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT true of DDT and other chlorinated hydrocarbons, according to the manual?",
+         "choices": ["They have long residual activity", "They persist in the environment", "They accumulated in the fatty tissue of some animals", "They break down within a few hours"], "answer": 3,
+         "ref": "pp. 3–4, 'Pest Control Over the Years'", "why": "Silent Spring focused on them because of their long residual activity and persistence."},
+        {"id": "c01-s04-t5", "src": "test", "kind": "tf", "q": "The Colorado potato beetle has developed resistance to every major group of insecticides.", "answer": true,
+         "ref": "p. 3, 'Pest Control Over the Years'", "why": "The manual calls it the most notable example of resistance."}
+      ]
+    },
+    {
+      "id": "c01-s05",
+      "chapter": "Chapter 1 · Pest Management",
+      "title": "The four main groups of pests",
+      "pages": [4, 4],
+      "body": [
+        {"h": "Pest recognition"},
+        {"p": [
+          "There are four main groups of pest organisms: **weeds, invertebrate animals, pathogens, and vertebrate animals**."
+        ]},
+        {"box": "The four main groups of pests", "ol": [
+          "**Weeds**: undesirable plants.",
+          "**Invertebrates**: insects, mites, ticks, spiders, snails, and slugs.",
+          "**Disease agents or pathogens**: bacteria, viruses, fungi, nematodes (roundworms), mycoplasmas (parasitic microorganisms), and other microorganisms.",
+          "**Vertebrates**: birds, reptiles, amphibians, fish, and rodents and other mammals."
+        ]},
+        {"gallery": ["p4-thistle", "p4-wasp", "p4-rust", "p5-dove"]},
+        {"p": [
+          "Never classify an organism as a pest until it is clearly determined to be one.",
+          "Be certain any injury or observed damage is actually due to the identified organism and not to some other cause.",
+          "Some plants, for example, can be damaged by factors in the environment.",
+          "These factors include **weather extremes, air pollutants, road salt, and inadequate or excessive fertilization**.",
+          "This damage may be mistaken for that caused by living pests."
+        ]}
+      ],
+      "figures": [
+        {"id": "p4-thistle", "title": "Weed pest: Canada thistle flowers.", "page": "p. 4", "imgFile": "p4-thistle.jpg"},
+        {"id": "p4-wasp", "title": "Invertebrate pest: Paper wasp.", "page": "p. 4", "imgFile": "p4-wasp.jpg"},
+        {"id": "p4-rust", "title": "Disease pathogen: Hawthorne rust.", "page": "p. 4", "imgFile": "p4-rust.jpg"},
+        {"id": "p5-dove", "title": "Vertebrate pest: Rock dove.", "page": "p. 5", "imgFile": "p5-dove.jpg"}
+      ],
+      "questions": [
+        {"id": "c01-s05-t1", "src": "test", "kind": "short", "q": "Name the four main groups of pests.",
+         "answer": "Weeds, invertebrates, pathogens, and vertebrates",
+         "keys": [["weeds", "weed", "undesirable plants"], ["invertebrates", "invertebrate", "invertebrate animals"], ["pathogens", "pathogen", "disease agents"], ["vertebrates", "vertebrate", "vertebrate animals"]],
+         "ref": "p. 4, 'The Four Main Groups of Pests'", "why": "Weeds, invertebrates, pathogens (disease agents), and vertebrates."},
+        {"id": "c01-s05-t2", "src": "test", "kind": "mc", "q": "Nematodes (roundworms) are listed in which group of pests?",
+         "choices": ["Invertebrates", "Disease agents or pathogens", "Vertebrates", "Weeds"], "answer": 1,
+         "ref": "p. 4, 'The Four Main Groups of Pests'", "why": "The manual lists nematodes with the disease agents or pathogens, not the invertebrates."},
+        {"id": "c01-s05-t3", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT listed as an invertebrate pest?",
+         "choices": ["Mites", "Ticks", "Slugs", "Amphibians"], "answer": 3,
+         "ref": "p. 4, 'The Four Main Groups of Pests'", "why": "Amphibians are vertebrates."},
+        {"id": "c01-s05-t4", "src": "test", "kind": "mc", "style": "scenario", "q": "Shrubs along a highway turn brown after winter. You find no insects or disease. What should you consider before calling it a pest problem?",
+         "choices": ["Damage from road salt, an environmental factor", "A new invasive pathogen", "A secondary pest outbreak", "Pesticide resistance"], "answer": 0,
+         "ref": "p. 4, 'Pest Recognition'", "why": "Weather extremes, air pollutants, road salt, and fertilization problems can look like pest damage."},
+        {"id": "c01-s05-t5", "src": "test", "kind": "tf", "q": "You should classify an organism as a pest as soon as you find it on a damaged plant.", "answer": false,
+         "ref": "p. 4, 'Pest Recognition'", "why": "Never classify an organism as a pest until it is clearly determined to be one."}
+      ]
+    },
+    {
+      "id": "c01-s06",
+      "chapter": "Chapter 1 · Pest Management",
+      "title": "Identifying pests",
+      "pages": [4, 5],
+      "body": [
+        {"p": [
+          "The first step in pest management is to **accurately identify the pest**.",
+          "Once the pest is identified, applicators can learn about its life cycle, behavior, characteristic damage, factors that favor its development, susceptible life stage or stages, and known control methods.",
+          "Misidentification and lack of accurate information could cause **pest control failure**."
+        ]},
+        {"h": "Ways to identify pests"},
+        {"p": [
+          "To identify an organism, consult reference materials: **identification books, Extension bulletins, field guides, and online identification keys** that contain pictures and biological information.",
+          "If you cannot pinpoint a specific plant or animal, take or send the specimen to a **university diagnostic lab** or a **local pest management specialist**.",
+          "Collect several specimens, if possible.",
+          "Ask the specialist to recommend the best way to collect and send samples."
+        ]},
+        {"p": [
+          "It may be difficult to identify small insects and most mites, nematodes, and plant pathogens.",
+          "Accurate identification requires the use of a **hand lens or microscope, special tests, or careful damage analysis**.",
+          "Often the pest's **host**, the animal or plant on which an organism lives, and its **location** are important clues in making a correct identification.",
+          "Information on the environmental conditions where you collect pests, and the time of year of collection, also provide clues to the pest's identity."
+        ]},
+        {"p": [
+          "Pest species have different physical forms depending on the **life cycle stage** or the **time of year**.",
+          "Weed seedlings, for example, often do not resemble the mature plant.",
+          "Many insect species undergo changes in appearance as they develop from eggs through immature stages to the adult form."
+        ]},
+        {"h": "Characteristic damage"},
+        {"p": [
+          "Pests may leave signs of their presence or damage that will help you determine what they are.",
+          "Birds and rodents often build characteristic nests.",
+          "The type of feeding damage and excrement can help you identify many insects.",
+          "Burrows, gnaw marks, tracks, trails in the grass, and/or feces are often characteristic of certain mammals.",
+          "Weeds may have unique flowers, seeds, or fruits, or unusual growth habits.",
+          "Fungi and other pathogens often cause specific types of damage, deformation, or color changes in host tissues."
+        ]}
+      ],
+      "questions": [
+        {"id": "c01-s06-t1", "src": "test", "kind": "mc", "q": "What is the first step in pest management?",
+         "choices": ["Choose a pesticide", "Accurately identify the pest", "Set an action threshold", "Monitor the pest"], "answer": 1,
+         "ref": "p. 4, 'Pest Recognition'", "why": "Identification comes first. Misidentification could cause pest control failure."},
+        {"id": "c01-s06-t2", "src": "test", "kind": "mc", "style": "scenario", "q": "You find tiny mites on a crop and cannot tell what they are. What does the manual say to do?",
+         "choices": ["Spray a broad-spectrum pesticide to be safe", "Take or send specimens to a university diagnostic lab or a local pest management specialist", "Wait until they become adults", "Treat them the same as weeds"], "answer": 1,
+         "ref": "p. 4, 'Ways to Identify Pests'", "why": "Collect several specimens if possible, and ask the specialist how to collect and send them."},
+        {"id": "c01-s06-t3", "src": "test", "kind": "mc", "q": "In pest identification, what is the pest's host?",
+         "choices": ["The person who reported the pest", "The animal or plant on which an organism lives", "A natural enemy that eats the pest", "The building where the pest was found"], "answer": 1,
+         "ref": "p. 5, 'Ways to Identify Pests'", "why": "The host and the location are important clues for a correct identification."},
+        {"id": "c01-s06-t4", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT listed as a sign often characteristic of certain mammals?",
+         "choices": ["Burrows", "Gnaw marks", "Trails in the grass", "Color changes in host tissues"], "answer": 3,
+         "ref": "p. 5, 'Characteristic Damage'", "why": "Color changes in host tissues point to fungi and other pathogens."},
+        {"id": "c01-s06-t5", "src": "test", "kind": "short", "q": "Name a tool the manual says you may need to identify small insects, mites, nematodes, and plant pathogens.",
+         "answer": "A hand lens or microscope", "accept": ["hand lens", "microscope", "a microscope", "a hand lens", "lens"],
+         "ref": "pp. 4–5, 'Ways to Identify Pests'", "why": "A hand lens or microscope, special tests, or careful damage analysis."}
+      ]
+    },
+    {
+      "id": "c01-s07",
+      "chapter": "Chapter 1 · Pest Management",
+      "title": "Natural and applied controls",
+      "pages": [5, 5],
+      "body": [
+        {"h": "Pest management methods"},
+        {"p": [
+          "Once a pest problem is identified, you can begin planning how to manage the pest.",
+          "Determine what management methods are available and the benefits and limitations of each.",
+          "Select methods that are most effective in controlling the pest yet **least harmful to people and the environment**."
+        ]},
+        {"p": [
+          "**Abiotic factors** are natural control measures within the environment that injure or destroy plants and animals, including pests.",
+          "They include climatic factors, such as wind, temperature, sunshine, and rain.",
+          "They include air or water pollution.",
+          "And they include topographic features, such as rivers, lakes, and mountains, that can affect pest movement.",
+          "If such natural controls do not hold pests in check, humans must intervene and apply pest management tactics."
+        ]},
+        {"box": "Pest management methods", "p": ["**Natural controls**.", "**Applied controls**, which are:"], "ol": [
+          "Biological control.",
+          "Chemical control.",
+          "Cultural control.",
+          "Genetic control.",
+          "Mechanical/physical control.",
+          "Regulatory control."
+        ]},
+        {"fig": "fig-methods"}
+      ],
+      "figures": [
+        {"id": "fig-methods", "title": "Diagram: pest management methods at a glance", "page": "p. 5, redrawn from the box", "svgFile": "fig-methods.svg",
+         "explain": [
+           "Natural controls include abiotic factors.",
+           "When natural controls do not hold pests in check, people apply one or more of the six applied controls."
+         ]}
+      ],
+      "questions": [
+        {"id": "c01-s07-t1", "src": "test", "kind": "mc", "q": "What are abiotic factors?",
+         "choices": ["Natural control measures in the environment, such as weather, pollution, and topography, that injure or destroy plants and animals", "Natural enemies such as predators and parasites", "Government programs that stop the spread of pests", "Plant-derived pesticides"], "answer": 0,
+         "ref": "p. 5, 'Pest Management Methods'", "why": "Abiotic factors are natural controls: climate, air or water pollution, and topographic features."},
+        {"id": "c01-s07-t2", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT one of the six applied pest controls?",
+         "choices": ["Biological", "Cultural", "Abiotic", "Regulatory"], "answer": 2,
+         "ref": "p. 5, 'Pest Management Methods' box", "why": "Abiotic factors are natural controls, not applied controls."},
+        {"id": "c01-s07-t3", "src": "test", "kind": "short", "q": "List the six applied pest control methods.",
+         "answer": "Biological, chemical, cultural, genetic, mechanical/physical, and regulatory",
+         "keys": [["biological"], ["chemical"], ["cultural"], ["genetic"], ["mechanical", "physical"], ["regulatory"]],
+         "ref": "p. 5, 'Pest Management Methods' box", "why": "Biological, chemical, cultural, genetic, mechanical/physical, and regulatory."},
+        {"id": "c01-s07-t4", "src": "test", "kind": "mc", "style": "scenario", "q": "A mountain range keeps a pest from moving into a valley. What kind of control is that?",
+         "choices": ["Regulatory control", "A natural control, an abiotic factor", "Cultural control", "Mechanical control"], "answer": 1,
+         "ref": "p. 5, 'Pest Management Methods'", "why": "Topographic features like rivers, lakes, and mountains are abiotic factors that can affect pest movement."},
+        {"id": "c01-s07-t5", "src": "test", "kind": "tf", "q": "When choosing pest management methods, select those most effective against the pest yet least harmful to people and the environment.", "answer": true,
+         "ref": "p. 5, 'Pest Management Methods'", "why": "That is the selection rule in the manual."}
+      ]
+    },
+    {
+      "id": "c01-s08",
+      "chapter": "Chapter 1 · Pest Management",
+      "title": "Biological control",
+      "pages": [5, 6],
+      "body": [
+        {"h": "Biological control"},
+        {"p": [
+          "In an undisturbed ecosystem, most organisms have one or more natural enemies or competitors that keep them from developing into large, damaging populations.",
+          "When an organism is removed from one ecosystem to another, this natural check-and-balance is disturbed.",
+          "The organism can become a pest in the new geographical area, especially when its natural enemies do not accompany it to the new location.",
+          "One pest management method involves reuniting the introduced pest with its natural enemies."
+        ]},
+        {"p": [
+          "**Biological control** is the use of **natural enemies**, which are **predators, parasites, pathogens, and competitors**, to control pests and their damage.",
+          "These biological control, or **biocontrol**, agents are being used successfully to manage certain insect, mite, fungal, fish, and weed pests."
+        ]},
+        {"p": [
+          "Once suitable natural enemies from the native home of an introduced pest are located, extensive testing and evaluation are necessary to ensure that these natural enemies will not become pests themselves in the new environment.",
+          "Laws and regulations strictly control the importation of all organisms, including biological control agents, into the United States.",
+          "The selected natural enemies are imported, reared, and released.",
+          "If successful, these biocontrol agents become established within large areas.",
+          "Over time, they will lower target pest populations for long periods with **no further human intervention**."
+        ]},
+        {"p": [
+          "A second biological control technique is the **mass release** of large numbers of natural enemies into fields, orchards, greenhouses, or other locations to control specific pests.",
+          "Because this method usually does not yield long-term results, the natural enemies must be **released periodically**.",
+          "For example, **predatory mites** are used to control plant-feeding **spider mites**.",
+          "**Parasitic wasps** are used to manage specific pests.",
+          "**Praying mantids, lady beetles, and lacewings** are used as **general predators** in a garden or greenhouse.",
+          "Nematodes and fungi are being studied as biological control agents for certain weeds and insects."
+        ]},
+        {"gallery": ["p6-lacewing", "p6-ichneumonid"]},
+        {"p": [
+          "Another aspect of biological control is to maintain healthy populations of **native natural enemies**.",
+          "This could mean planting crops or groundcovers to ensure a diverse plant community of pollen and nectar sources for adult insects.",
+          "This method also requires careful selection and use of pesticides that are less toxic to natural enemies.",
+          "Additionally, applicators should apply pesticides at **lower-than-label rates**, if recommended and effective, to lessen the impact on natural enemies."
+        ]}
+      ],
+      "figures": [
+        {"id": "p6-lacewing", "title": "Biological control: Lacewing larva.", "page": "p. 6", "imgFile": "p6-lacewing.jpg"},
+        {"id": "p6-ichneumonid", "title": "Biological control: Ichneumonid wasp.", "page": "p. 6", "imgFile": "p6-ichneumonid.jpg"}
+      ],
+      "questions": [
+        {"id": "c01-s08-t1", "src": "test", "kind": "mc", "q": "Biological control is the use of:",
+         "choices": ["Natural enemies, such as predators, parasites, pathogens, and competitors", "Plant-derived chemicals", "Plants bred to resist pests", "Traps and barriers"], "answer": 0,
+         "ref": "p. 5, 'Biological Control'", "why": "Biological control uses natural enemies to control pests and their damage."},
+        {"id": "c01-s08-t2", "src": "test", "kind": "mc", "style": "scenario", "q": "A greenhouse grower releases predatory mites every few weeks to control spider mites. Why must the releases be repeated?",
+         "choices": ["Mass release usually does not yield long-term results", "The law requires repeated releases", "Predatory mites become pests themselves", "Spider mites become resistant to predatory mites"], "answer": 0,
+         "ref": "p. 6, 'Biological Control'", "why": "Because mass release usually does not give long-term results, natural enemies must be released periodically."},
+        {"id": "c01-s08-t3", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT listed as a general predator used in a garden or greenhouse?",
+         "choices": ["Praying mantids", "Lady beetles", "Lacewings", "Spider mites"], "answer": 3,
+         "ref": "p. 6, 'Biological Control'", "why": "Spider mites are the pest that predatory mites control."},
+        {"id": "c01-s08-t4", "src": "test", "kind": "tf", "q": "Natural enemies brought in for an introduced pest need extensive testing to make sure they will not become pests themselves.", "answer": true,
+         "ref": "pp. 5–6, 'Biological Control'", "why": "Testing and evaluation make sure they will not become pests in the new environment."},
+        {"id": "c01-s08-t5", "src": "test", "kind": "mc", "q": "How can an applicator help keep native natural enemies healthy?",
+         "choices": ["Apply pesticides on a fixed schedule", "Use pesticides that are less toxic to natural enemies, and lower-than-label rates if recommended and effective", "Remove all groundcovers", "Use the highest labeled rate to kill pests fast"], "answer": 1,
+         "ref": "p. 6, 'Biological Control'", "why": "Careful pesticide selection and lower-than-label rates, if recommended and effective, lessen the impact on natural enemies."}
+      ]
+    },
+    {
+      "id": "c01-s09",
+      "chapter": "Chapter 1 · Pest Management",
+      "title": "Chemical control and pesticide types",
+      "pages": [6, 7],
+      "body": [
+        {"h": "Chemical control"},
+        {"p": [
+          "**Chemical control** is the pest management method that involves using **naturally derived and/or synthetic chemicals** to manage pests.",
+          "These chemicals are often called pesticides."
+        ]},
+        {"box": "Definition of a pesticide", "p": [
+          "A **pesticide** is any material that is applied to plants, soil, water, harvested crops, structures, clothing and furnishings, or animals to **kill, attract, repel, or regulate or interrupt the growth and mating of pests**, or to **regulate plant growth**."
+        ]},
+        {"gallery": ["p6-tractor"]},
+        {"p": [
+          "Pesticides often play a key role in pest management programs and may often be the only known control method for a given pest.",
+          "Major benefits of pesticides are their **effectiveness**, the **speed and ease** of controlling pests, and their **reasonable cost** compared with other control options.",
+          "Pesticides include a wide assortment of chemicals with specialized names and functions.",
+          "They are often grouped according to the type of pest they control."
+        ]},
+        {"box": "Pesticides grouped by the pest they control", "list": [
+          "**Avicides** control or repel pest birds.",
+          "**Bactericides** control bacteria.",
+          "**Chemosterilants** sterilize insects or pest vertebrates.",
+          "**Defoliants** cause leaves (foliage) to drop from plants.",
+          "**Desiccants** promote drying or loss of moisture from plant tissues and insects.",
+          "**Disinfectants** (antimicrobials) control microorganisms.",
+          "**Fungicides** control fungi.",
+          "**Growth regulators** alter the growth or development of a plant or animal.",
+          "**Herbicides** control weeds.",
+          "**Insecticides** control insects and related arthropods.",
+          "**Miticides** (acaricides) control mites.",
+          "**Molluscicides** control snails and slugs.",
+          "**Nematicides** control nematodes (roundworms).",
+          "**Ovicides** destroy eggs.",
+          "**Pheromones** attract insects.",
+          "**Piscicides** control pest fish.",
+          "**Predacides** control predatory vertebrates, for example, coyotes.",
+          "**Repellents** repel insects, mites, ticks, pest vertebrates, invertebrates, birds, and mammals.",
+          "**Rodenticides** control rodents."
+        ]}
+      ],
+      "figures": [
+        {"id": "p6-tractor", "title": "Chemical control.", "page": "p. 6", "imgFile": "p6-tractor.jpg"}
+      ],
+      "questions": [
+        {"id": "c01-s09-t1", "src": "test", "kind": "mc", "q": "Which type of pesticide controls mites?",
+         "choices": ["Molluscicides", "Miticides (acaricides)", "Ovicides", "Avicides"], "answer": 1,
+         "ref": "p. 7, pesticide list", "why": "Miticides, also called acaricides, control mites."},
+        {"id": "c01-s09-t2", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT part of the manual's definition of a pesticide?",
+         "choices": ["Material applied to kill pests", "Material applied to attract or repel pests", "Material applied to regulate plant growth", "Material applied only to crops grown for food"], "answer": 3,
+         "ref": "p. 6, 'Chemical Control'", "why": "A pesticide can be applied to plants, soil, water, harvested crops, structures, clothing and furnishings, or animals."},
+        {"id": "c01-s09-t3", "src": "test", "kind": "mc", "style": "scenario", "q": "Coyotes are killing a rancher's sheep. Which type of pesticide is made to control predatory vertebrates like coyotes?",
+         "choices": ["Rodenticides", "Avicides", "Predacides", "Piscicides"], "answer": 2,
+         "ref": "p. 7, pesticide list", "why": "Predacides control predatory vertebrates, for example, coyotes."},
+        {"id": "c01-s09-t4", "src": "test", "kind": "mc", "q": "What are the major benefits of pesticides named in the manual?",
+         "choices": ["Effectiveness, speed and ease of control, and reasonable cost", "No risk to the environment", "Permanent control after one application", "They never lead to resistance"], "answer": 0,
+         "ref": "p. 6, 'Chemical Control'", "why": "Effectiveness, speed and ease of controlling pests, and reasonable cost compared with other options."},
+        {"id": "c01-s09-t5", "src": "test", "kind": "short", "q": "What do molluscicides control?",
+         "answer": "Snails and slugs", "keys": [["snails", "snail"], ["slugs", "slug"]],
+         "ref": "p. 7, pesticide list", "why": "Molluscicides control snails and slugs."}
+      ]
+    },
+    {
+      "id": "c01-s10",
+      "chapter": "Chapter 1 · Pest Management",
+      "title": "How pesticides differ",
+      "pages": [7, 7],
+      "body": [
+        {"p": [
+          "Each group of pesticides includes several **classes** or **families**.",
+          "For example, the classes of insecticides include the organophosphates, organochlorines, carbamates, pyrethroids, botanicals, insecticidal soaps, and microbials, among others.",
+          "The pesticides within a particular class have similar chemical structures or properties, or share a common **mode of action** or **site of action**.",
+          "**Mode of action** is how they kill the pest.",
+          "**Site of action** is the specific biological system affected within the pest.",
+          "The various classes of chemicals work in different ways and present different risks and problems."
+        ]},
+        {"h": "Selective and nonselective pesticides"},
+        {"p": [
+          "Some chemicals are called **selective pesticides** because they are toxic to some pests but have little or no effect on others.",
+          "For example, certain selective herbicides control broadleaf weeds but not grasses, and ovicides kill only the eggs of certain insects and mites.",
+          "In contrast, **fumigants are nonselective** and will kill a wide variety of pests: fungi, insects, weeds, nematodes, and other organisms.",
+          "**Nonselective herbicides** control any susceptible plant, given a sufficient dose."
+        ]},
+        {"h": "Systemic and contact pesticides"},
+        {"p": [
+          "Pesticides may move in various ways after they contact a host.",
+          "**Systemic pesticides** are absorbed and translocated within a plant or animal.",
+          "Systemic herbicides are absorbed through leaves or roots and are then transported within the treated plant.",
+          "Similarly, systemic insecticides can be eaten by or injected into livestock to control insect pests.",
+          "By contrast, **contact pesticides** are not absorbed by treated plants or animals.",
+          "These pesticides must directly touch the pest or a site the pest frequents to be effective."
+        ]},
+        {"fig": "fig-1-2"},
+        {"h": "Persistence"},
+        {"p": [
+          "Pesticides also vary in their **persistence**, or how long they remain active to control pests.",
+          "Some **residual pesticides** control pests for weeks, months, or even years.",
+          "Others provide only short-term control, sometimes lasting only a few hours."
+        ]}
+      ],
+      "figures": [
+        {"id": "fig-1-2", "title": "Figure 1.2: Systemic and contact pesticides on treated plants", "page": "p. 7", "svgFile": "fig-1-2.svg",
+         "explain": [
+           "On the left, a systemic pesticide is absorbed and moves inside the plant.",
+           "On the right, a contact pesticide stays on the surface of the plant."
+         ]}
+      ],
+      "questions": [
+        {"id": "c01-s10-t1", "src": "test", "kind": "mc", "q": "What is a selective pesticide?",
+         "choices": ["One that is toxic to some pests but has little or no effect on others", "One that kills a wide variety of pests", "One that stays active for years", "One that must touch the pest directly"], "answer": 0,
+         "ref": "p. 7, selective pesticides", "why": "Selective pesticides are toxic to some pests but have little or no effect on others."},
+        {"id": "c01-s10-t2", "src": "test", "kind": "mc", "style": "scenario", "q": "A rancher controls insect pests on cattle with an insecticide the animals eat or that is injected into them. What kind of insecticide is this?",
+         "choices": ["Contact insecticide", "Systemic insecticide", "Fumigant", "Ovicide"], "answer": 1,
+         "ref": "p. 7, systemic pesticides", "why": "Systemic insecticides can be eaten by or injected into livestock to control insect pests."},
+        {"id": "c01-s10-t3", "src": "test", "kind": "mc", "q": "What is the difference between mode of action and site of action?",
+         "choices": ["Mode of action is how the pesticide kills the pest; site of action is the specific biological system affected within the pest", "Mode of action is where it is applied; site of action is how long it lasts", "They mean the same thing", "Mode of action is the label code; site of action is where the pest lives"], "answer": 0,
+         "ref": "p. 7, pesticide classes", "why": "Mode of action is how they kill the pest. Site of action is the specific biological system affected."},
+        {"id": "c01-s10-t4", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT one of the insecticide classes named in the manual?",
+         "choices": ["Organophosphates", "Pyrethroids", "Insecticidal soaps", "Avicides"], "answer": 3,
+         "ref": "p. 7, pesticide classes", "why": "Avicides are a pesticide group for birds, not a class of insecticides."},
+        {"id": "c01-s10-t5", "src": "test", "kind": "short", "q": "What is a pesticide's persistence?",
+         "answer": "How long it remains active to control pests",
+         "keys": [["how long", "length of time", "long"], ["active", "effective", "works", "working", "control", "controls"]],
+         "ref": "p. 7, persistence", "why": "Persistence is how long a pesticide remains active to control pests."}
+      ]
+    },
+    {
+      "id": "c01-s11",
+      "chapter": "Chapter 1 · Pest Management",
+      "title": "Cultural control and sanitation",
+      "pages": [7, 8],
+      "body": [
+        {"h": "Cultural control"},
+        {"p": [
+          "**Cultural controls** are practices that reduce pest **establishment, reproduction, dispersal, and survival**.",
+          "Cultural practices and **sanitation** are two examples of cultural control."
+        ]},
+        {"p": [
+          "Many cultural practices affect pest survival.",
+          "**Mowing, irrigation, aeration, and fertilization** are all important ways of producing healthy turf and preventing pest buildup and damage.",
+          "In agricultural production, **cultivation, selection of crop plant varieties, timing of planting and harvesting, irrigation management and timing, crop rotation, and the use of trap crops** help decrease populations of weeds, microorganisms, insects, mites, and other pests.",
+          "**Cultivation** is one of the most important ways to control weeds.",
+          "It is also used to manage some insects and other soil-inhabiting pests.",
+          "Plows, disks, mowers, cultivators, and bed conditioners destroy weeds or control their growth.",
+          "These tools also disrupt soil conditions suitable for the survival of some microorganisms and insects.",
+          "Weeds also can be managed by **mulching**, with plastic, straw, shredded bark, or wood chips, and by using **cover crops**."
+        ]},
+        {"gallery": ["p7-mulch", "p8-aquatic"]},
+        {"p": [
+          "**Sanitation** involves eliminating the necessities important to a pest's survival, such as **food, water, or shelter**.",
+          "In crop production, sanitation includes such practices as removing weeds that harbor pest insects or rodents, eliminating weed plants before they produce seed, destroying diseased plant material or crop residues, and keeping field borders or surrounding areas free of pests and pest breeding sites.",
+          "**Animal manure management** is an effective sanitation practice used to prevent or reduce fly problems in poultry and livestock operations.",
+          "Mosquitoes can be controlled by **draining standing water**.",
+          "Closed garbage containers and frequent garbage pickup eliminate food sources for flies, cockroaches, wasps, and rodents.",
+          "Removing soil, trash, and wood debris from around and under buildings reduces termite and fungal rot damage."
+        ]}
+      ],
+      "figures": [
+        {"id": "p7-mulch", "title": "Cultural control: Mulch.", "page": "p. 7", "imgFile": "p7-mulch.jpg"},
+        {"id": "p8-aquatic", "title": "Sanitation: Aquatic herbicide application.", "page": "p. 8", "imgFile": "p8-aquatic.jpg"}
+      ],
+      "questions": [
+        {"id": "c01-s11-t1", "src": "test", "kind": "mc", "q": "Cultural controls are practices that:",
+         "choices": ["Reduce pest establishment, reproduction, dispersal, and survival", "Use natural enemies to control pests", "Use laws to stop pest movement", "Use chemicals to kill pests"], "answer": 0,
+         "ref": "p. 7, 'Cultural Control'", "why": "Cultural controls reduce pest establishment, reproduction, dispersal, and survival."},
+        {"id": "c01-s11-t2", "src": "test", "kind": "mc", "style": "scenario", "q": "A poultry operation has a fly problem. Which sanitation practice does the manual name for this?",
+         "choices": ["Animal manure management", "Crop rotation", "Deer fences", "Releasing parasitic wasps"], "answer": 0,
+         "ref": "p. 8, sanitation", "why": "Animal manure management prevents or reduces fly problems in poultry and livestock operations."},
+        {"id": "c01-s11-t3", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT a cultural control practice named in the manual?",
+         "choices": ["Crop rotation", "Timing of planting and harvesting", "Trap crops", "Quarantine"], "answer": 3,
+         "ref": "p. 7, 'Cultural Control'", "why": "Quarantine is regulatory control."},
+        {"id": "c01-s11-t4", "src": "test", "kind": "short", "q": "What does the manual call one of the most important ways to control weeds?",
+         "answer": "Cultivation", "accept": ["cultivating"],
+         "ref": "p. 7, 'Cultural Control'", "why": "Cultivation is one of the most important ways to control weeds."},
+        {"id": "c01-s11-t5", "src": "test", "kind": "mc", "style": "scenario", "q": "A homeowner has termite and fungal rot damage. Which sanitation step does the manual say reduces this?",
+         "choices": ["Removing soil, trash, and wood debris from around and under buildings", "Draining standing water", "Installing bright lights", "Using closed garbage containers"], "answer": 0,
+         "ref": "p. 8, sanitation", "why": "Removing soil, trash, and wood debris from around and under buildings reduces termite and fungal rot damage."}
+      ]
+    },
+    {
+      "id": "c01-s12",
+      "chapter": "Chapter 1 · Pest Management",
+      "title": "Genetic control",
+      "pages": [8, 8],
+      "body": [
+        {"h": "Genetic control"},
+        {"p": [
+          "Sometimes plants and animals can be **bred or selected to resist** specific pest problems.",
+          "For example, certain livestock breeds are selected for physical characteristics that prevent attack by some pests or provide physiological resistance to disease or parasitic organisms.",
+          "Certain plant varieties are naturally resistant to insects, pathogens, or nematodes.",
+          "Many plants actually repel various types of pests, and some contain toxic substances.",
+          "Plant resistance to insect pests can sometimes be achieved by transferring genetic material from certain insect-destroying microorganisms to hybrid seed.",
+          "Genetic control has been widely used in the past and may be an effective tool in the future, especially when combined with new gene manipulation techniques."
+        ]},
+        {"box": "Examples of genetic control", "list": [
+          "**Bacillus thuringiensis (Bt)** corn and potatoes.",
+          "Herbicide-resistant corn, for example, Roundup Ready corn and Liberty Link corn.",
+          "Herbicide-resistant cotton, for example, Roundup Ready cotton.",
+          "Herbicide-resistant soybean, for example, Roundup Ready soybean."
+        ]},
+        {"p": [
+          "The plant is **genetically modified** through molecular techniques to add a small amount of genetic material from other organisms.",
+          "The incorporated genetic traits provide **protection from pests**, **tolerance to herbicides**, or an **improvement in quality**.",
+          "For example, **Bt crops produce a protein that kills caterpillars**."
+        ]}
+      ],
+      "questions": [
+        {"id": "c01-s12-t1", "src": "test", "kind": "mc", "q": "Bt corn is an example of which kind of pest control?",
+         "choices": ["Biological control", "Genetic control", "Chemical control", "Cultural control"], "answer": 1,
+         "ref": "p. 8, 'Genetic Control'", "why": "The manual lists Bt corn and potatoes as examples of genetic control."},
+        {"id": "c01-s12-t2", "src": "test", "kind": "mc", "q": "What does the protein produced by Bt crops do?",
+         "choices": ["Kills caterpillars", "Kills weeds", "Repels birds", "Helps the crop tolerate herbicides"], "answer": 0,
+         "ref": "p. 8, 'Genetic Control'", "why": "Bt crops produce a protein that kills caterpillars."},
+        {"id": "c01-s12-t3", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT an example of genetic control in the manual?",
+         "choices": ["Roundup Ready soybean", "Liberty Link corn", "Bt potatoes", "Bordeaux mixture"], "answer": 3,
+         "ref": "p. 8, 'Genetic Control'", "why": "Bordeaux mixture is a fungicide, which is chemical control."},
+        {"id": "c01-s12-t4", "src": "test", "kind": "tf", "q": "Certain livestock breeds are selected for physical characteristics that prevent attack by some pests.", "answer": true,
+         "ref": "p. 8, 'Genetic Control'", "why": "Some breeds are selected to prevent attack or to resist disease or parasitic organisms."},
+        {"id": "c01-s12-t5", "src": "test", "kind": "mc", "style": "scenario", "q": "A seed company transfers genetic material from an insect-destroying microorganism into hybrid seed so the crop resists insect pests. What kind of control is this?",
+         "choices": ["Genetic control", "Biological control", "Mass release", "Sanitation"], "answer": 0,
+         "ref": "p. 8, 'Genetic Control'", "why": "Building pest resistance into the plant itself is genetic control."}
+      ]
+    },
+    {
+      "id": "c01-s13",
+      "chapter": "Chapter 1 · Pest Management",
+      "title": "Mechanical and physical control",
+      "pages": [8, 9],
+      "body": [
+        {"h": "Mechanical/physical control"},
+        {"p": [
+          "Mechanical and physical controls can **kill a pest directly** or **make its environment unsuitable**.",
+          "**Rodent traps** are examples of mechanical control.",
+          "Several types of traps are commonly used.",
+          "Some kill animals that come across them; others snare animals that are then relocated or destroyed.",
+          "Traps can be mechanical devices or sticky surfaces, some with **pheromones** incorporated to increase trapping efficiency."
+        ]},
+        {"gallery": ["p8-sticky"]},
+        {"p": [
+          "**Physical controls** include mulches for weed management, steam soil sterilization for disease control, deer fences, screens to keep insects out, and cloth mesh to exclude birds from fruit trees.",
+          "Another example is **sealing cracks, crevices, and other small openings** in buildings to exclude insects, rodents, bats, birds, and squirrels.",
+          "A **band of sticky material** painted around tree trunks prevents crawling insects from reaching the tree's leaves."
+        ]},
+        {"p": [
+          "Pests living in enclosed areas may sometimes be suppressed by altering physical and environmental conditions, such as **water, air movement, temperature, light, and humidity**.",
+          "**Refrigeration**, for example, protects stored food products, furs, and other items from insect pests.",
+          "Lowered temperatures kill the insects, cause them to stop feeding, and prevent egg hatch or development.",
+          "Installing **bright lights in attics** sometimes discourages bats from roosting there.",
+          "**Lowering the humidity** of stored grains and other food products reduces damage from molds and some insects.",
+          "**Increasing air movement in greenhouses** often helps to prevent fungal diseases from developing on plants."
+        ]}
+      ],
+      "figures": [
+        {"id": "p8-sticky", "title": "Mechanical control: Sticky trap.", "page": "p. 8", "imgFile": "p8-sticky.jpg"}
+      ],
+      "questions": [
+        {"id": "c01-s13-t1", "src": "test", "kind": "mc", "q": "Rodent traps are an example of:",
+         "choices": ["Mechanical control", "Biological control", "Regulatory control", "Genetic control"], "answer": 0,
+         "ref": "p. 8, 'Mechanical/Physical Control'", "why": "The manual names rodent traps as examples of mechanical control."},
+        {"id": "c01-s13-t2", "src": "test", "kind": "mc", "style": "scenario", "q": "Bats are roosting in an attic. Which physical control does the manual say sometimes discourages them?",
+         "choices": ["Installing bright lights in the attic", "Lowering the humidity", "Refrigeration", "Releasing predators"], "answer": 0,
+         "ref": "p. 9, 'Mechanical/Physical Control'", "why": "Installing bright lights in attics sometimes discourages bats from roosting there."},
+        {"id": "c01-s13-t3", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT a physical control listed in the manual?",
+         "choices": ["Deer fences", "Steam soil sterilization", "Cloth mesh over fruit trees", "Crop rotation"], "answer": 3,
+         "ref": "p. 8, 'Mechanical/Physical Control'", "why": "Crop rotation is a cultural control."},
+        {"id": "c01-s13-t4", "src": "test", "kind": "tf", "q": "Increasing air movement in greenhouses often helps prevent fungal diseases from developing on plants.", "answer": true,
+         "ref": "p. 9, 'Mechanical/Physical Control'", "why": "Altering air movement is one of the physical and environmental conditions you can change."},
+        {"id": "c01-s13-t5", "src": "test", "kind": "short", "q": "Refrigeration protects stored products from insects. Name one thing lowered temperatures do to the insects.",
+         "answer": "Kill them", "accept": ["kill", "kills them", "kill the insects", "stop feeding", "make them stop feeding", "cause them to stop feeding", "prevent egg hatch", "prevent egg hatch or development", "prevent development", "stops egg hatch"],
+         "ref": "p. 9, 'Mechanical/Physical Control'", "why": "Lowered temperatures kill the insects, stop their feeding, and prevent egg hatch or development."}
+      ]
+    },
+    {
+      "id": "c01-s14",
+      "chapter": "Chapter 1 · Pest Management",
+      "title": "Regulatory control",
+      "pages": [9, 9],
+      "body": [
+        {"h": "Regulatory control"},
+        {"p": [
+          "Some pest problems cannot be controlled successfully at a local level or by individuals.",
+          "These problems are caused by pests that seriously endanger **public health** or are likely to cause **widespread damage** to agricultural crops or animals, forests, or ornamental plants.",
+          "**Quarantine** or **eradication** programs directed by governmental agencies according to federal and state laws target the introduction and spread of such pests."
+        ]},
+        {"p": [
+          "**Quarantine** is a pest control process designed to **prevent entry of certain pests into pest-free areas**.",
+          "Some states maintain inspection stations at all major entry points to intercept pests or materials that might harbor pests.",
+          "Regulatory agencies monitor airports and ocean ports.",
+          "Quarantine also prevents movement of designated pests **within a state**.",
+          "Identified items being shipped from a quarantine area must be treated to destroy pests before shipment.",
+          "Nursery stock, plant cuttings, seed shipments, and budding and grafting material are also regulated to prevent the spread of pests."
+        ]},
+        {"gallery": ["p9-usda"]},
+        {"p": [
+          "**Eradication** is the **elimination of a pest from a designated area**.",
+          "Often, these pests are under quarantine restrictions.",
+          "When eradication is required, the geographical extent of pest infestation is determined and control measures are taken to eliminate this pest from the defined area.",
+          "Procedures may include an **area-wide spraying program, releasing sterile insects, and intensive monitoring** for pests within and around the borders of the infested area."
+        ]},
+        {"p": [
+          "Government agencies are authorized to destroy weeds and plants that cause fire hazards, harbor harmful pathogens or animals, or are noxious to people or livestock in and around agricultural areas.",
+          "Similar authority applies to diseased or infected livestock or poultry, and to weeds and nuisance plants in residential, commercial, and industrial areas.",
+          "**Mosquito abatement** is an important pest control function undertaken to protect public health.",
+          "Mosquito abatement laws allow state agencies to **drain or treat standing water** that provides breeding sites for mosquitoes."
+        ]}
+      ],
+      "figures": [
+        {"id": "p9-usda", "title": "Regulatory control: USDA inspections.", "page": "p. 9", "imgFile": "p9-usda.jpg"}
+      ],
+      "questions": [
+        {"id": "c01-s14-t1", "src": "test", "kind": "mc", "q": "What is quarantine?",
+         "choices": ["A pest control process designed to prevent entry of certain pests into pest-free areas", "The elimination of a pest from a designated area", "Killing pests with refrigeration", "Breeding plants to resist pests"], "answer": 0,
+         "ref": "p. 9, 'Regulatory Control'", "why": "Quarantine keeps certain pests out of pest-free areas, and also stops their movement within a state."},
+        {"id": "c01-s14-t2", "src": "test", "kind": "mc", "q": "What is eradication?",
+         "choices": ["The elimination of a pest from a designated area", "Reducing pests below the economic injury level", "Preventing pests from entering an area", "Releasing natural enemies"], "answer": 0,
+         "ref": "p. 9, 'Regulatory Control'", "why": "Eradication is the elimination of a pest from a designated area."},
+        {"id": "c01-s14-t3", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT listed as a possible eradication procedure?",
+         "choices": ["An area-wide spraying program", "Releasing sterile insects", "Intensive monitoring in and around the infested area", "Planting trap crops"], "answer": 3,
+         "ref": "p. 9, 'Regulatory Control'", "why": "Trap crops are a cultural control."},
+        {"id": "c01-s14-t4", "src": "test", "kind": "mc", "style": "scenario", "q": "A nursery wants to ship plant cuttings out of a quarantine area. What must happen first?",
+         "choices": ["The items must be treated to destroy pests before shipment", "Nothing; quarantine only applies at state borders", "The items must be destroyed", "The nursery must release sterile insects"], "answer": 0,
+         "ref": "p. 9, 'Regulatory Control'", "why": "Identified items shipped from a quarantine area must be treated to destroy pests before shipment."},
+        {"id": "c01-s14-t5", "src": "test", "kind": "tf", "q": "Mosquito abatement laws allow state agencies to drain or treat standing water that provides breeding sites for mosquitoes.", "answer": true,
+         "ref": "p. 9, 'Regulatory Control'", "why": "Mosquito abatement is done to protect public health."}
+      ]
+    },
+    {
+      "id": "c01-s15",
+      "chapter": "Chapter 1 · Pest Management",
+      "title": "What IPM is",
+      "pages": [9, 10],
+      "body": [
+        {"h": "Integrated pest management (IPM)"},
+        {"p": [
+          "Pesticide use is a significant factor in food and fiber production, forestry, turf and landscape maintenance, and public health.",
+          "In recent years, pest management has shifted from relying heavily on pesticides to using an integrated approach based on **pest assessment, decision-making, and evaluation**.",
+          "This pest management approach has benefited pest managers and the environment, decreased pesticide use, and reduced the occurrence of pesticide resistance in pest populations."
+        ]},
+        {"p": [
+          "**Integrated pest management** is a balanced, tactical approach to pest control.",
+          "It defines ways to **anticipate pest outbreaks and prevent pest damage**.",
+          "IPM is a pest management strategy that uses a wide range of pest control methods, for example, cultural, biological, mechanical, and chemical, or tactics such as **sanitation and exclusion**.",
+          "The goal of this strategy is to prevent pests from reaching damaging levels with the **least risk to the environment**.",
+          "Such pest management programs enable the specialist to make intelligent, **site-specific** decisions about control."
+        ]},
+        {"box": "Integrated pest management (IPM)", "p": [
+          "A pest management strategy that utilizes a wide range of pest control methods or tactics.",
+          "The goal of this strategy is to prevent pests from reaching **economically or aesthetically damaging levels** with the least risk to the environment."
+        ]},
+        {"box": "Why practice IPM?", "ol": [
+          "IPM helps to keep a balanced ecosystem.",
+          "Pesticides can be ineffective.",
+          "IPM can save money.",
+          "IPM promotes a healthy environment.",
+          "IPM maintains a good public image."
+        ]}
+      ],
+      "questions": [
+        {"id": "c01-s15-t1", "src": "test", "kind": "mc", "q": "What is the goal of IPM?",
+         "choices": ["Prevent pests from reaching economically or aesthetically damaging levels with the least risk to the environment", "Eliminate every pest from a site", "Use pesticides on a regular schedule", "Rely on one control method"], "answer": 0,
+         "ref": "p. 10, 'Integrated Pest Management (IPM)' box", "why": "That is the goal stated in the IPM definition box."},
+        {"id": "c01-s15-t2", "src": "test", "kind": "short", "q": "Define integrated pest management (IPM).",
+         "answer": "A pest management strategy that utilizes a wide range of pest control methods or tactics to prevent pests from reaching economically or aesthetically damaging levels with the least risk to the environment.",
+         "keys": [["strategy", "approach"], ["wide range", "range", "many", "variety", "multiple"], ["methods", "method", "tactics", "tactic"], ["prevent", "prevents", "keep", "stop"], ["damaging", "damage"], ["least risk", "lowest risk", "minimal risk", "less risk", "least harm"], ["environment", "environmental"]],
+         "ref": "p. 10, 'Integrated Pest Management (IPM)' box", "why": "A strategy using a wide range of methods or tactics to prevent damaging pest levels with the least risk to the environment."},
+        {"id": "c01-s15-t3", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT one of the five reasons to practice IPM?",
+         "choices": ["IPM helps keep a balanced ecosystem", "IPM can save money", "IPM maintains a good public image", "IPM guarantees pests will never return"], "answer": 3,
+         "ref": "p. 10, 'Why Practice IPM?' box", "why": "The five: balanced ecosystem, pesticides can be ineffective, saves money, healthy environment, good public image."},
+        {"id": "c01-s15-t4", "src": "test", "kind": "tf", "q": "In recent years, pest management has shifted toward relying more heavily on pesticides.", "answer": false,
+         "ref": "p. 9, 'Integrated Pest Management (IPM)'", "why": "It shifted away from heavy reliance on pesticides, toward an integrated approach."},
+        {"id": "c01-s15-t5", "src": "test", "kind": "mc", "style": "scenario", "q": "A school wants a pest program based on pest assessment, decision-making, and evaluation, using sanitation and exclusion along with other methods. What approach is this?",
+         "choices": ["Integrated pest management (IPM)", "Eradication", "Quarantine", "Chemical control"], "answer": 0,
+         "ref": "pp. 9–10, 'Integrated Pest Management (IPM)'", "why": "IPM is an integrated approach based on pest assessment, decision-making, and evaluation."}
+      ]
+    },
+    {
+      "id": "c01-s16",
+      "chapter": "Chapter 1 · Pest Management",
+      "title": "Why practice IPM",
+      "pages": [10, 10],
+      "body": [
+        {"h": "Why practice IPM?"},
+        {"p": [
+          "**IPM helps preserve a balanced ecosystem.**",
+          "Every ecosystem, made up of living things and their nonliving environment, has a balance: the actions of one kind of organism usually affect other species.",
+          "Introducing chemicals into the ecosystem can change this balance, destroying certain species and allowing other species, sometimes other pests, to dominate.",
+          "Unfortunately, pesticides can kill **beneficial insects** that consume pests, leaving few natural pest control mechanisms."
+        ]},
+        {"p": [
+          "**Pesticides can be ineffective.**",
+          "Chemical pesticides do not always work.",
+          "Many common weeds, insects, and disease-causing fungi have developed a resistance to pesticides.",
+          "Furthermore, pests may survive if the chemical **does not reach them, is washed off, or is applied improperly**."
+        ]},
+        {"p": [
+          "**IPM can save money.**",
+          "A good IPM program can prevent crop loss and landscape or structural damage caused by pests.",
+          "IPM may also avoid the cost of purchasing unnecessary pesticides.",
+          "Moreover, IPM can reduce the costs of treating chronic conditions such as **asthma** by controlling disease triggers."
+        ]},
+        {"p": [
+          "**IPM promotes a healthy environment.**",
+          "Using IPM strategies helps reduce environmental injury.",
+          "Using fewer pesticides lowers the risk that persistent chemicals may harm living creatures and contaminate **groundwater**.",
+          "It also lessens the need to dispose of containers and unused pesticides."
+        ]},
+        {"p": [
+          "**IPM helps maintain a good public image.**",
+          "IPM is a well-known strategy that is requested in many areas of society.",
+          "IPM is used to grow food, manage turf and ornamentals, protect homes and businesses, manage school grounds, and safeguard the health of humans, pets, and livestock."
+        ]}
+      ],
+      "questions": [
+        {"id": "c01-s16-t1", "src": "test", "kind": "mc", "q": "How can pesticides upset a balanced ecosystem?",
+         "choices": ["They can kill beneficial insects that consume pests, leaving few natural pest control mechanisms", "They always increase the number of natural enemies", "They only affect the target pest", "They make weeds grow more slowly"], "answer": 0,
+         "ref": "p. 10, 'Why Practice IPM?'", "why": "Chemicals can destroy certain species and let others, sometimes other pests, dominate."},
+        {"id": "c01-s16-t2", "src": "test", "kind": "mc", "style": "scenario", "q": "An apartment manager says IPM costs too much. According to the manual, how can IPM save money?",
+         "choices": ["By preventing damage, avoiding unnecessary pesticide purchases, and reducing costs of treating conditions like asthma", "By always using the cheapest pesticide", "By spraying on a schedule", "By skipping monitoring"], "answer": 0,
+         "ref": "p. 10, 'Why Practice IPM?'", "why": "IPM prevents loss and damage, avoids unnecessary pesticides, and controls asthma triggers."},
+        {"id": "c01-s16-t3", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT a reason the manual gives for why pesticides can be ineffective?",
+         "choices": ["Pests have developed resistance", "The chemical does not reach the pest", "The chemical is washed off", "The pesticide was applied correctly at the right time"], "answer": 3,
+         "ref": "p. 10, 'Why Practice IPM?'", "why": "Pests survive when the chemical does not reach them, is washed off, or is applied improperly."},
+        {"id": "c01-s16-t4", "src": "test", "kind": "tf", "q": "Using fewer pesticides lowers the risk that persistent chemicals contaminate groundwater.", "answer": true,
+         "ref": "p. 10, 'Why Practice IPM?'", "why": "That is part of how IPM promotes a healthy environment."},
+        {"id": "c01-s16-t5", "src": "test", "kind": "short", "q": "Name the five reasons to practice IPM.",
+         "answer": "It keeps a balanced ecosystem, pesticides can be ineffective, it saves money, it promotes a healthy environment, and it maintains a good public image.",
+         "keys": [["balanced ecosystem", "balanced", "balance", "ecosystem"], ["ineffective", "not effective", "do not work", "don't work", "doesn't work"], ["save money", "saves money", "money", "cost", "costs"], ["healthy environment", "environment"], ["public image", "image", "good image"]],
+         "ref": "p. 10, 'Why Practice IPM?' box", "why": "Balanced ecosystem, pesticides can be ineffective, saves money, healthy environment, good public image."}
+      ]
+    },
+    {
+      "id": "c01-s17",
+      "chapter": "Chapter 1 · Pest Management",
+      "title": "IPM step 1: identify the pest",
+      "pages": [10, 11],
+      "body": [
+        {"h": "Components of IPM"},
+        {"p": ["The components of an IPM approach can be grouped into the following five steps."]},
+        {"box": "Components of IPM", "ol": [
+          "Identify the pest and understand its biology.",
+          "Monitor the pest to be managed.",
+          "Develop the pest management goal.",
+          "Implement the IPM program.",
+          "Record and evaluate results."
+        ]},
+        {"h": "1. Identify the pest and understand its biology"},
+        {"p": [
+          "The first step in any pest management program is to identify the pest, whether you are dealing with an insect, weed, plant disease, or vertebrate animal.",
+          "Once you have identified the pest, you can determine its significance and the need for control.",
+          "Some pests have little impact on a plant, animal, or structure and do not require control.",
+          "Others warrant immediate control because they cause serious damage or present a significant threat to human health or public safety."
+        ]},
+        {"p": [
+          "**Key pests** may cause major damage on a regular basis unless they are controlled.",
+          "Many weeds, for example, are key pests because they compete with crop or ornamental plants for resources and require regular control efforts to prevent or reduce damage.",
+          "Cockroaches and rodents are also examples of key pests because their waste and body coverings, shed cockroach skins and rodent hairs, can trigger **asthma** in some people."
+        ]},
+        {"p": [
+          "**Secondary pests** become a problem when a key pest is controlled or absent.",
+          "For example, some weed species become pests only after key weeds, which are normally more successful in competing for resources, are controlled.",
+          "Certain species of fleas, ticks, and blood-feeding bugs attack people only when their natural hosts, such as pet dogs or cats, are no longer present."
+        ]},
+        {"p": [
+          "**Occasional pests** become troublesome only once in a while because of their life cycles, environmental influences, or as a result of human activities.",
+          "For instance, ants may become occasional pests when sanitation practices change, providing them with food that previously did not exist.",
+          "They also may move into buildings after a rainfall or other event destroys an outdoor food source."
+        ]}
+      ],
+      "questions": [
+        {"id": "c01-s17-t1", "src": "test", "kind": "mc", "q": "A pest that may cause major damage on a regular basis unless it is controlled is called a:",
+         "choices": ["Key pest", "Secondary pest", "Occasional pest", "Quarantine pest"], "answer": 0,
+         "ref": "p. 11, step 1 'Identify the pest'", "why": "Key pests cause major damage on a regular basis unless controlled."},
+        {"id": "c01-s17-t2", "src": "test", "kind": "mc", "style": "scenario", "q": "After a family gives away their dog, fleas in the house start biting the people. What kind of pest are these fleas?",
+         "choices": ["Secondary pests", "Key pests", "Occasional pests", "Beneficial insects"], "answer": 0,
+         "ref": "p. 11, step 1 'Identify the pest'", "why": "Some fleas attack people only when their natural hosts, such as pet dogs or cats, are no longer present."},
+        {"id": "c01-s17-t3", "src": "test", "kind": "mc", "style": "scenario", "q": "Heavy rain destroys an outdoor food source, and ants move into a building. What kind of pest are the ants?",
+         "choices": ["Occasional pests", "Key pests", "Secondary pests", "Quarantine pests"], "answer": 0,
+         "ref": "p. 11, step 1 'Identify the pest'", "why": "Occasional pests become troublesome only once in a while, as when ants move in after rainfall."},
+        {"id": "c01-s17-t4", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT one of the five components of IPM?",
+         "choices": ["Identify the pest and understand its biology", "Monitor the pest", "Spray on a regular calendar schedule", "Record and evaluate results"], "answer": 2,
+         "ref": "pp. 10–11, 'Components of IPM'", "why": "The five: identify, monitor, develop the goal, implement, record and evaluate."},
+        {"id": "c01-s17-t5", "src": "test", "kind": "short", "q": "List the five components of IPM, in order.",
+         "answer": "Identify the pest, monitor the pest, develop the pest management goal, implement the IPM program, and record and evaluate results.",
+         "keys": [["identify", "identification", "identifying"], ["monitor", "monitoring"], ["goal", "goals"], ["implement", "implementation", "implementing"], ["record", "evaluate", "evaluation", "recording"]],
+         "ref": "p. 11, 'Components of IPM' box", "why": "Identify, monitor, develop the goal, implement, record and evaluate."}
+      ]
+    },
+    {
+      "id": "c01-s18",
+      "chapter": "Chapter 1 · Pest Management",
+      "title": "IPM step 2: monitoring, ET and EIL",
+      "pages": [11, 11],
+      "body": [
+        {"h": "2. Monitor the target pest"},
+        {"p": [
+          "The key to a successful IPM program is **regular monitoring**.",
+          "This involves measuring pest populations and/or the resulting damage or losses.",
+          "Monitoring procedures vary with the pest and the situation.",
+          "Carefully looking at plants or animals over time, called **scouting**, and **trapping** are often used to monitor insects and their activity.",
+          "**Weather and temperature data** are particularly helpful in following a pest's life cycle or in predicting how long it takes a certain pest to develop.",
+          "Models exist for specific insects and plant diseases that predict the need for and timing of pesticide applications."
+        ]},
+        {"gallery": ["p11-inspect"]},
+        {"h": "Pest population thresholds"},
+        {"p": [
+          "Agricultural or ornamental producers must understand the concept of economic thresholds.",
+          "The presence of a pest does not always cause a loss in quality or quantity of a product.",
+          "To justify the cost of control, pest populations must be large enough to cause significant damage.",
+          "The **economic threshold (ET)** is the pest population density, the number of pests per unit area, at which control measures are needed to prevent the pest from reaching the economic injury level.",
+          "The **economic injury level (EIL)** is the pest population density that causes losses equal to the cost of control measures.",
+          "To justify using a control method, it is necessary to **set the ET below the EIL**.",
+          "Otherwise, producers lose money: first from the damage caused by the pest, and then by the cost of the control method.",
+          "Setting the ET below the EIL triggers the appropriate control method before pests reach the EIL."
+        ]},
+        {"fig": "fig-1-3"}
+      ],
+      "figures": [
+        {"id": "p11-inspect", "title": "Inspecting a plant for pests.", "page": "p. 11", "imgFile": "p11-inspect.jpg"},
+        {"id": "fig-1-3", "title": "Figure 1.3: To make a control measure profitable, or at least break even, it is necessary to set the economic threshold below the economic injury level", "page": "p. 11", "svgFile": "fig-1-3.svg",
+         "explain": [
+           "The pest population rises over time.",
+           "The time to treat is when the population reaches the economic threshold, the dashed line, which sits below the economic injury level.",
+           "The treated population falls before it reaches the economic injury level. The untreated population climbs past it."
+         ]}
+      ],
+      "questions": [
+        {"id": "c01-s18-t1", "src": "test", "kind": "mc", "q": "The economic injury level (EIL) is the pest population density that:",
+         "choices": ["Causes losses equal to the cost of control measures", "Triggers control before damage occurs", "Is set by state law", "Means zero pests are tolerated"], "answer": 0,
+         "ref": "p. 11, 'Pest Population Thresholds'", "why": "The EIL is the pest density where losses equal the cost of control."},
+        {"id": "c01-s18-t2", "src": "test", "kind": "mc", "q": "Where must the economic threshold (ET) be set?",
+         "choices": ["Below the EIL", "Above the EIL", "Equal to the EIL", "At zero"], "answer": 0,
+         "ref": "p. 11, 'Pest Population Thresholds' and Figure 1.3", "why": "Setting the ET below the EIL triggers control before pests reach the EIL."},
+        {"id": "c01-s18-t3", "src": "test", "kind": "mc", "style": "scenario", "q": "A soybean grower waits to spray until the pest population reaches the economic injury level. What happens, according to the manual?",
+         "choices": ["The grower loses money, first from pest damage and then from the cost of control", "The grower saves money by waiting", "The pests become resistant", "Nothing; that is the correct timing"], "answer": 0,
+         "ref": "p. 11, 'Pest Population Thresholds'", "why": "If the ET is not below the EIL, producers lose money from the damage and then from the control cost."},
+        {"id": "c01-s18-t4", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT described as part of monitoring pests?",
+         "choices": ["Scouting", "Trapping", "Weather and temperature data", "Treating on a calendar schedule"], "answer": 3,
+         "ref": "p. 11, 'Monitor the target pest'", "why": "Scouting, trapping, and weather and temperature data are monitoring tools."},
+        {"id": "c01-s18-t5", "src": "test", "kind": "short", "q": "What is the economic threshold (ET)?",
+         "answer": "The pest population density at which control measures are needed to prevent the pest from reaching the economic injury level.",
+         "keys": [["population", "number", "density", "pests"], ["control"], ["prevent", "before", "keep", "stop"], ["economic injury level", "eil", "injury level"]],
+         "ref": "p. 11, 'Pest Population Thresholds'", "why": "The ET is the pest density at which you act so the pest does not reach the EIL."}
+      ]
+    },
+    {
+      "id": "c01-s19",
+      "chapter": "Chapter 1 · Pest Management",
+      "title": "Action thresholds",
+      "pages": [11, 12],
+      "body": [
+        {"p": [
+          "For pest managers not directly involved in commodity production, the concept of an **action threshold** is more appropriate.",
+          "An action threshold is the pest level at which some type of pest management action must be taken.",
+          "This is a **predetermined pest level that is deemed unacceptable**.",
+          "Often the action threshold is expressed as the number of pests per unit area.",
+          "Below this level, IPM practitioners do not use any control measures, though they should continue to monitor the situation and do sanitation inspections as needed.",
+          "Once a pest is at or above the action threshold, you should implement appropriate IPM strategies."
+        ]},
+        {"p": [
+          "In some situations, the action threshold for a pest may be **zero**, meaning no presence of the pest is tolerated.",
+          "Examples include pests capable of transmitting a human pathogen, for example, mosquitoes and the **West Nile virus**, or of creating a public health emergency, for example, cockroaches or rodents.",
+          "In an urban landscape, action thresholds consider not only the economic value of the landscape but also its **ecological and aesthetic roles**.",
+          "A higher action threshold would be set for insect damage when no harm is done to the plant, for example, leaf galls on a shade tree, compared to a wood-borer that may destroy the tree, which has an action threshold of zero."
+        ]},
+        {"p": [
+          "Action thresholds may vary **by pest**, for example, a stinging insect in a classroom versus a foraging ant.",
+          "They may vary **by site**, for example, a storage room versus a school infirmary.",
+          "And they may vary **by season**, for example, pests present daily versus two weeks of a year.",
+          "Establishing action thresholds for a new IPM program will require a practical approach.",
+          "First, establish an **arbitrary action threshold** for the major pests you encounter.",
+          "Then, **revise the action levels up or down** as you gain understanding of a specific pest management setting."
+        ]}
+      ],
+      "questions": [
+        {"id": "c01-s19-t1", "src": "test", "kind": "mc", "q": "What is an action threshold?",
+         "choices": ["The pest level at which some type of pest management action must be taken", "The cost of a pesticide", "The date pesticides must be applied", "The level at which pests become resistant"], "answer": 0,
+         "ref": "p. 11, 'Pest Population Thresholds'", "why": "It is a predetermined pest level deemed unacceptable."},
+        {"id": "c01-s19-t2", "src": "test", "kind": "mc", "style": "scenario", "q": "Mosquitoes that can carry West Nile virus are found near a school. What action threshold does the manual describe for pests like this?",
+         "choices": ["Zero: no presence of the pest is tolerated", "Very high, because mosquitoes are common", "The same as for leaf galls on a shade tree", "No threshold; just keep monitoring"], "answer": 0,
+         "ref": "p. 11, 'Pest Population Thresholds'", "why": "Pests that can transmit a human pathogen can have an action threshold of zero."},
+        {"id": "c01-s19-t3", "src": "test", "kind": "mc", "style": "scenario", "q": "Leaf galls are on a shade tree but do no harm to it. Compared with a wood-borer that may destroy the tree, the action threshold for the galls should be:",
+         "choices": ["Higher", "Lower", "Zero", "The same"], "answer": 0,
+         "ref": "p. 12, 'Pest Population Thresholds'", "why": "No harm to the plant means a higher threshold. The wood-borer's threshold is zero."},
+        {"id": "c01-s19-t4", "src": "test", "kind": "mc", "style": "not", "q": "Action thresholds may vary by all of these EXCEPT:",
+         "choices": ["The pest", "The site", "The season", "The brand of pesticide on hand"], "answer": 3,
+         "ref": "p. 12, 'Pest Population Thresholds'", "why": "Thresholds vary by pest, by site, and by season."},
+        {"id": "c01-s19-t5", "src": "test", "kind": "tf", "q": "For a new IPM program, the manual says to first set an arbitrary action threshold for major pests, then revise it up or down as you learn.", "answer": true,
+         "ref": "p. 12, 'Pest Population Thresholds'", "why": "Establishing thresholds takes a practical approach: start arbitrary, then adjust."}
+      ]
+    },
+    {
+      "id": "c01-s20",
+      "chapter": "Chapter 1 · Pest Management",
+      "title": "IPM step 3: the goal, and prevention",
+      "pages": [12, 12],
+      "body": [
+        {"h": "3. Develop the pest management goal"},
+        {"p": [
+          "The goal of IPM programs is to keep pest damage at **economically or aesthetically acceptable levels**.",
+          "**Prevention** and **suppression** techniques are often combined in an effective IPM program.",
+          "Eradication is sometimes, though rarely, the goal.",
+          "The strategy for a sound IPM program is to coordinate the use of multiple tactics into a single integrated system.",
+          "Pesticides are just one control method.",
+          "**Nonchemical methods** may provide longer and more permanent pest control. **Consider these first** when developing a pest management strategy.",
+          "Evaluate the costs, benefits, and liabilities of each tactic."
+        ]},
+        {"h": "Prevention"},
+        {"p": [
+          "There are economically and environmentally sound ways to prevent loss or damage from pests.",
+          "Such techniques include planting **weed- and disease-free seed** and growing varieties of plants **resistant** to diseases or insects.",
+          "Other choices are using cultural controls to prevent weedy plants from seeding, and choosing planting and harvesting times that lessen pest problems.",
+          "Sanitation methods often reduce pest buildup.",
+          "Other preventive methods involve **excluding pests** from the target area or host, and using practices that conserve natural enemies.",
+          "Making sure that plants, poultry, or livestock receive adequate water and nutrients often reduces stress and susceptibility to diseases or pests."
+        ]},
+        {"p": [
+          "Pesticides are sometimes used for pest prevention.",
+          "For instance, growers treat some crops and landscapes with **preplant or preemergence herbicides** because they know that weed seeds are already present.",
+          "If plant pathogens have already infected susceptible plants, economic damage usually cannot be prevented.",
+          "For this reason, **fungicides are normally applied before infection occurs**, whenever environmental conditions favor infection.",
+          "Likewise, pesticides may be applied to **structural lumber before construction** to protect it from wood-destroying insects and fungi."
+        ]}
+      ],
+      "questions": [
+        {"id": "c01-s20-t1", "src": "test", "kind": "mc", "q": "What does the manual say to consider FIRST when developing a pest management strategy?",
+         "choices": ["Nonchemical methods", "The strongest pesticide available", "Eradication", "Fumigation"], "answer": 0,
+         "ref": "p. 12, 'Develop the pest management goal'", "why": "Nonchemical methods may provide longer and more permanent control, so consider them first."},
+        {"id": "c01-s20-t2", "src": "test", "kind": "mc", "style": "scenario", "q": "A field gets a fungal disease almost every wet spring. When does the manual say fungicides are normally applied?",
+         "choices": ["Before infection occurs, whenever environmental conditions favor infection", "Only after the disease is widespread", "At harvest", "Never, because fungicides cannot prevent disease"], "answer": 0,
+         "ref": "p. 12, 'Prevention'", "why": "Once pathogens infect susceptible plants, economic damage usually cannot be prevented."},
+        {"id": "c01-s20-t3", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT listed as a preventive technique?",
+         "choices": ["Planting weed- and disease-free seed", "Growing resistant varieties", "Excluding pests from the target area or host", "Releasing sterile insects over an infested region"], "answer": 3,
+         "ref": "p. 12, 'Prevention'", "why": "Releasing sterile insects is an eradication procedure."},
+        {"id": "c01-s20-t4", "src": "test", "kind": "tf", "q": "Preemergence herbicides are an example of using pesticides for prevention.", "answer": true,
+         "ref": "p. 12, 'Prevention'", "why": "Growers use preplant or preemergence herbicides because they know weed seeds are already present."},
+        {"id": "c01-s20-t5", "src": "test", "kind": "mc", "q": "What is the goal of IPM programs, according to step 3?",
+         "choices": ["Keep pest damage at economically or aesthetically acceptable levels", "Eliminate all pests", "Use as many pesticides as possible", "Treat on a fixed schedule"], "answer": 0,
+         "ref": "p. 12, 'Develop the pest management goal'", "why": "The goal is to keep damage at economically or aesthetically acceptable levels."}
+      ]
+    },
+    {
+      "id": "c01-s21",
+      "chapter": "Chapter 1 · Pest Management",
+      "title": "Suppression, eradication, and IPM steps 4 and 5",
+      "pages": [12, 13],
+      "body": [
+        {"h": "Suppression"},
+        {"p": [
+          "Suppressive pest control methods aim to **reduce pest population levels**.",
+          "These methods usually do not eliminate all pests but reduce their populations to a tolerable level or to a point **below the EIL**.",
+          "Suppression sometimes lowers pest populations so that natural enemies can maintain control.",
+          "**Suppression is the goal of most pesticide applications.**",
+          "Other techniques, such as cultivation, mowing weeds, and releasing biological control agents, are also used to suppress pest populations."
+        ]},
+        {"h": "Eradication"},
+        {"p": [
+          "Eradication efforts are effective in **buildings or other small, confined spaces** where, once the pest is eliminated, it can be excluded.",
+          "For example, eliminating cockroaches, rats, and mice from **commercial food establishments** requires eradication.",
+          "Over larger areas, however, eradication is very expensive and often has limited success.",
+          "Regulatory eradication programs are usually directed at **exotic or introduced pests** posing an area-wide public health or economic threat."
+        ]},
+        {"h": "4. Implement the integrated pest management program"},
+        {"p": [
+          "Once you have selected appropriate methods and have set predetermined thresholds, you can initiate the IPM program.",
+          "IPM programs are specific to each situation and can be adjusted as you learn more about the pest and the site.",
+          "Observe all local, state, and federal regulations regarding the methods chosen."
+        ]},
+        {"h": "5. Record and evaluate results"},
+        {"p": [
+          "It is extremely important to **record and evaluate the results** of each pest management effort.",
+          "Some control methods, especially **nonchemical ones, are slow to yield measurable results**.",
+          "Other methods may be ineffective or even damage the target crop, animal, treated surface, or natural enemy.",
+          "Objectively evaluate how well your strategies work so that you will be better prepared if you must control a specific pest again."
+        ]}
+      ],
+      "questions": [
+        {"id": "c01-s21-t1", "src": "test", "kind": "mc", "q": "What is the goal of most pesticide applications?",
+         "choices": ["Suppression", "Eradication", "Prevention", "Quarantine"], "answer": 0,
+         "ref": "p. 12, 'Suppression'", "why": "Suppression is the goal of most pesticide applications."},
+        {"id": "c01-s21-t2", "src": "test", "kind": "mc", "style": "scenario", "q": "A restaurant has cockroaches, rats, and mice. What goal does the manual say this situation requires?",
+         "choices": ["Eradication", "Suppression", "Prevention only", "Raising the action threshold"], "answer": 0,
+         "ref": "p. 12, 'Eradication'", "why": "Eliminating cockroaches, rats, and mice from commercial food establishments requires eradication."},
+        {"id": "c01-s21-t3", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT true about eradication?",
+         "choices": ["It is effective in buildings and small, confined spaces", "Over large areas it is very expensive and often has limited success", "Regulatory eradication targets exotic or introduced pests", "It is the goal of most pesticide applications"], "answer": 3,
+         "ref": "p. 12, 'Suppression' and 'Eradication'", "why": "Suppression, not eradication, is the goal of most pesticide applications."},
+        {"id": "c01-s21-t4", "src": "test", "kind": "tf", "q": "Some control methods, especially nonchemical ones, are slow to yield measurable results.", "answer": true,
+         "ref": "p. 13, 'Record and evaluate results'", "why": "That is one reason recording and evaluating results matters."},
+        {"id": "c01-s21-t5", "src": "test", "kind": "short", "q": "Suppression reduces pest populations to a tolerable level or to a point below what?",
+         "answer": "The economic injury level", "accept": ["EIL", "economic injury level", "the EIL", "economic injury"],
+         "ref": "p. 12, 'Suppression'", "why": "Suppression lowers populations to a tolerable level or below the EIL."}
+      ]
+    },
+    {
+      "id": "c01-s22",
+      "chapter": "Chapter 1 · Pest Management",
+      "title": "Why pesticide applications fail",
+      "pages": [13, 14],
+      "body": [
+        {"h": "Effectiveness of pest management programs"},
+        {"p": [
+          "As noted earlier, pesticides represent only one tool in the IPM toolbox.",
+          "When combined with other control methods, they can help create an effective treatment plan to reduce pest populations.",
+          "However, pesticides might not control the pests as expected. A good pest manager needs to find out why."
+        ]},
+        {"h": "Why pesticide applications fail"},
+        {"p": [
+          "**Pest identification.** Sometimes a pesticide application fails because the pest was not identified correctly.",
+          "Being able to accurately identify pests requires patience and practice.",
+          "For example, knowing the difference between a **caterpillar and a sawfly** will result in success or failure when using **Bacillus thuringiensis**.",
+          "Bt is effective on caterpillars but not on sawflies.",
+          "Even nonchemical tactics may fail if the pest and susceptible life stages are not accurately identified."
+        ]},
+        {"p": [
+          "**Dosage.** Make sure that you have applied the correct pesticide at the correct dosage, according to label instructions."
+        ]},
+        {"p": [
+          "**Correct use.** Some herbicides are formulated to kill grasses, others for broadleaf weeds, and still others can kill both types of weeds.",
+          "Always read the pesticide label to see if the target pest is listed."
+        ]},
+        {"p": [
+          "**Application timing.** Other applications fail because the pesticide was not applied at the correct time.",
+          "The pest may not have been in the area during the application, or it may have been in a life cycle stage where it was not susceptible to the pesticide.",
+          "**Insects are usually more vulnerable when they are immature**, and **weeds are most easily controlled before they flower and go to seed**.",
+          "Also, remember that current pests may be part of a new infestation that developed long after the chemical was applied."
+        ]},
+        {"p": [
+          "**Application equipment.** Concealed pests, under leaves or bark, in the soil, or within stems or fruits, are difficult to reach.",
+          "This means that knowing the best type of application equipment to use is very important.",
+          "For example, use an **air-blast sprayer** for pests hiding under apple tree leaves, but a **granular applicator** during planting operations for soil-dwelling agronomic pests."
+        ]},
+        {"p": [
+          "**Environmental conditions.** In general, do not apply pesticides just before a **rainstorm**.",
+          "The pesticide may be washed off the target plants and away from the application site.",
+          "Temperature extremes and windy conditions can move pesticides away from the target pests and site."
+        ]},
+        {"p": [
+          "**Pesticide degradation.** Pesticides may degrade when stored.",
+          "Under some conditions, pesticides can change into a form that is ineffective, due to the age of the product or the pesticide storage conditions.",
+          "For example, **granular pesticides stored in wet or very humid conditions** will draw moisture.",
+          "This may cause **clumping and possible deactivation** of the pesticide."
+        ]}
+      ],
+      "questions": [
+        {"id": "c01-s22-t1", "src": "test", "kind": "mc", "style": "scenario", "q": "A grower sprays Bacillus thuringiensis (Bt) on larvae that turn out to be sawflies, and nothing dies. Why did it fail?",
+         "choices": ["The pest was misidentified; Bt works on caterpillars but not sawflies", "The dosage was too high", "Bt only works on weeds", "Bt works only on adult insects"], "answer": 0,
+         "ref": "p. 13, 'Why Pesticide Applications Fail'", "why": "Knowing a caterpillar from a sawfly decides success or failure with Bt."},
+        {"id": "c01-s22-t2", "src": "test", "kind": "mc", "q": "When are insects usually most vulnerable to pesticides?",
+         "choices": ["When they are immature", "When they are adults", "Only as eggs", "During the winter"], "answer": 0,
+         "ref": "p. 13, application timing", "why": "Insects are usually more vulnerable when they are immature."},
+        {"id": "c01-s22-t3", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT one of the reasons the manual gives for pesticide application failure?",
+         "choices": ["Pest identification", "Application timing", "Pesticide degradation", "Following an IPM program"], "answer": 3,
+         "ref": "pp. 13–14, 'Why Pesticide Applications Fail'", "why": "The reasons: identification, dosage, correct use, timing, equipment, environmental conditions, degradation."},
+        {"id": "c01-s22-t4", "src": "test", "kind": "mc", "style": "scenario", "q": "Pests are hiding under apple tree leaves. Which equipment does the manual recommend?",
+         "choices": ["An air-blast sprayer", "A granular applicator", "A sticky band", "A bait station"], "answer": 0,
+         "ref": "p. 13, application equipment", "why": "Air-blast sprayer for pests under apple leaves; granular applicator for soil-dwelling pests at planting."},
+        {"id": "c01-s22-t5", "src": "test", "kind": "short", "q": "Granular pesticides stored in wet or very humid conditions draw moisture. What can this cause?",
+         "answer": "Clumping and possible deactivation of the pesticide",
+         "keys": [["clumping", "clump", "clumps", "clumped"], ["deactivation", "deactivated", "deactivate", "ineffective", "stop working", "stops working"]],
+         "ref": "p. 14, pesticide degradation", "why": "Moisture can cause clumping and possible deactivation."}
+      ]
+    },
+    {
+      "id": "c01-s23",
+      "chapter": "Chapter 1 · Pest Management",
+      "title": "How pesticide resistance develops",
+      "pages": [14, 14],
+      "body": [
+        {"h": "Pesticide resistance"},
+        {"p": [
+          "**Pesticide resistance** is the ability of a pest to tolerate a pesticide that once controlled it.",
+          "Resistance develops when intensive pesticide use kills the **susceptible individuals** in a population but leaves the **resistant ones to reproduce**.",
+          "Initially, **higher labeled rates and more frequent applications** are needed to control resistant pests.",
+          "Eventually the pesticide will have **little or no effect** on the pest population as the resistant population grows."
+        ]},
+        {"fig": "fig-1-4"},
+        {"p": [
+          "Resistance may develop to a single insecticide, fungicide, herbicide, or rodenticide.",
+          "More often, however, pest populations become resistant to **chemically related pesticides in a class of compounds**.",
+          "It is also possible for a pest to develop resistance to pesticides in two or more classes of compounds with different modes of action."
+        ]},
+        {"p": [
+          "Continual use of pesticides from the **same chemical class**, such as all growth regulator herbicides or all pyrethroid insecticides, increases the likelihood that resistance will develop in a pest population.",
+          "**Frequent applications** and **greater persistence** of the chemical further increase the chances of pesticide resistance.",
+          "Finally, resistance can spread through a pest population much more rapidly in pests that have **many generations per year and many offspring per generation**, such as many insects, mites, fungi, and rodents."
+        ]}
+      ],
+      "figures": [
+        {"id": "fig-1-4", "title": "Figure 1.4: Pesticide resistance", "page": "p. 14", "svgFile": "fig-1-4.svg",
+         "explain": [
+           "Panel 1: Some individuals in a pest population have genetic traits that allow them to survive pesticide application.",
+           "Panel 2: A proportion of the survivor's offspring inherit the resistance traits. At the next spraying these resistant individuals will survive.",
+           "Panel 3: If pesticides are applied frequently, the pest population will soon consist mostly of resistant individuals."
+         ]}
+      ],
+      "questions": [
+        {"id": "c01-s23-t1", "src": "test", "kind": "mc", "q": "What is pesticide resistance?",
+         "choices": ["The ability of a pest to tolerate a pesticide that once controlled it", "A pesticide that lasts a long time", "A crop that tolerates herbicides", "The time it takes a pesticide to break down"], "answer": 0,
+         "ref": "p. 14, 'Pesticide Resistance'", "why": "Resistance is a pest's ability to tolerate a pesticide that once controlled it."},
+        {"id": "c01-s23-t2", "src": "test", "kind": "mc", "style": "not", "q": "Which of these does NOT increase the chances of pesticide resistance?",
+         "choices": ["Continual use of pesticides from the same chemical class", "Frequent applications", "Greater persistence of the chemical", "Pests that have few generations per year and few offspring"], "answer": 3,
+         "ref": "p. 14, 'Pesticide Resistance'", "why": "Many generations and many offspring speed resistance up. Few does not."},
+        {"id": "c01-s23-t3", "src": "test", "kind": "mc", "style": "scenario", "q": "A turf manager uses only pyrethroid insecticides, year after year. What does the manual say this does?",
+         "choices": ["Increases the likelihood that resistance will develop", "Prevents resistance because pyrethroids are a single class", "Has no effect on resistance", "Makes the pests more susceptible"], "answer": 0,
+         "ref": "p. 14, 'Pesticide Resistance'", "why": "Continual use of one chemical class, such as all pyrethroids, increases the likelihood of resistance."},
+        {"id": "c01-s23-t4", "src": "test", "kind": "tf", "q": "Resistance spreads much more rapidly in pests with many generations per year and many offspring per generation.", "answer": true,
+         "ref": "p. 14, 'Pesticide Resistance'", "why": "Many insects, mites, fungi, and rodents fit this description."},
+        {"id": "c01-s23-t5", "src": "test", "kind": "mc", "q": "In the early stages of resistance, what happens?",
+         "choices": ["Higher labeled rates and more frequent applications are needed to control the pests", "The pesticide stops working completely right away", "The pests die faster than before", "Natural enemies take over"], "answer": 0,
+         "ref": "p. 14, 'Pesticide Resistance'", "why": "First it takes higher rates and more applications; eventually the pesticide has little or no effect."}
+      ]
+    },
+    {
+      "id": "c01-s24",
+      "chapter": "Chapter 1 · Pest Management",
+      "title": "Delaying pesticide resistance",
+      "pages": [14, 15],
+      "body": [
+        {"p": [
+          "Several pest management tactics help **prevent or delay** the occurrence of pesticide resistance.",
+          "One approach is the use of **new or altered pesticides**.",
+          "Using new compounds with **different modes of action** will lessen the likelihood of resistance developing in a population.",
+          "Most pesticides have a **code number at the top of the label** indicating the mode of action, for example, **Group 4A Insecticides, Neonicotinoids**, or **Group 2 Herbicides, ALS Inhibitors**.",
+          "Unfortunately, new replacement products are often quite complex, difficult to synthesize, and very costly to develop.",
+          "Moreover, they have very specific modes of action, which can rapidly lead to the development of resistant pest populations even after limited use in the field.",
+          "No longer can we expect to respond to pesticide resistance by merely substituting one pesticide for another."
+        ]},
+        {"p": [
+          "**Changing pesticide use patterns** is an important step in preventing resistance.",
+          "When **dosages are reduced**, fewer pests are killed, so the pressure to develop resistant pest populations is decreased.",
+          "**Applying pesticides over limited areas** reduces the proportion of the total pest population exposed to the chemical.",
+          "The result is a large pool of individuals still susceptible to the pesticide.",
+          "This tactic tends to delay the development of a resistant population because pesticide-susceptible individuals continue to interbreed with resistant ones, thus **diluting the resistance** in the population.",
+          "Also, **treating alternate generations** of pests with pesticides that have different modes of action decreases the selection pressure for resistance."
+        ]},
+        {"p": [
+          "Managing pesticide resistance is a critical aspect of integrated pest management.",
+          "Monitor pest populations carefully and **treat only when necessary instead of on a schedule**.",
+          "Good pesticide **application records** are another important part of resistance management.",
+          "Pesticides are more effectively managed when **treatment history** is known.",
+          "Resistance must be **detected when it is at a very low level**.",
+          "It should then be controlled by using all available pest management techniques to extend the useful life of our current pesticides."
+        ]}
+      ],
+      "questions": [
+        {"id": "c01-s24-t1", "src": "test", "kind": "mc", "q": "Where do most pesticides show a code number for the mode of action?",
+         "choices": ["At the top of the label", "In the storage section", "In the first aid section", "On the container cap"], "answer": 0,
+         "ref": "p. 14, 'Pesticide Resistance'", "why": "Examples: Group 4A Insecticides, Neonicotinoids, or Group 2 Herbicides, ALS Inhibitors."},
+        {"id": "c01-s24-t2", "src": "test", "kind": "mc", "style": "scenario", "q": "A grower wants to slow resistance. Which plan follows the manual?",
+         "choices": ["Treat alternate generations with pesticides that have different modes of action", "Use the same pesticide at higher rates every week", "Treat the whole area on a fixed schedule", "Switch to a new product with the same mode of action"], "answer": 0,
+         "ref": "p. 15, 'Pesticide Resistance'", "why": "Treating alternate generations with different modes of action decreases selection pressure."},
+        {"id": "c01-s24-t3", "src": "test", "kind": "mc", "style": "not", "q": "Which of these does NOT help delay resistance, according to the manual?",
+         "choices": ["Reducing dosages", "Applying pesticides over limited areas", "Treating only when necessary", "Treating on a calendar schedule"], "answer": 3,
+         "ref": "pp. 14–15, 'Pesticide Resistance'", "why": "Treat only when necessary instead of on a schedule."},
+        {"id": "c01-s24-t4", "src": "test", "kind": "mc", "q": "Why does applying pesticides over limited areas delay resistance?",
+         "choices": ["Susceptible individuals keep interbreeding with resistant ones, diluting the resistance", "It kills every pest in the area", "It makes pests resistant faster", "It lowers the cost of pesticides"], "answer": 0,
+         "ref": "p. 15, 'Pesticide Resistance'", "why": "A large pool of susceptible pests remains, and they dilute the resistance."},
+        {"id": "c01-s24-t5", "src": "test", "kind": "short", "q": "Using mode of action, what is one way to lessen the chance of resistance?",
+         "answer": "Use pesticides with different modes of action",
+         "keys": [["different", "rotate", "rotating", "alternate", "alternating", "change", "changing", "switch", "switching"], ["mode of action", "modes of action", "moa", "mode", "modes"]],
+         "ref": "p. 14, 'Pesticide Resistance'", "why": "New compounds with different modes of action lessen the likelihood of resistance."}
+      ]
+    },
+    {
+      "id": "c01-s25",
+      "chapter": "Chapter 1 · Pest Management",
+      "title": "Chapter 1 summary",
+      "pages": [15, 15],
+      "body": [
+        {"h": "Summary"},
+        {"p": [
+          "A successful pest management program begins with the **proper identification** of the pest.",
+          "Choosing the appropriate pest control method depends on recognizing and understanding the pest, its **life cycle, habits, and habitat**.",
+          "Integrated pest management programs attempt to balance the need for pest control with the desire to protect the environment from pesticide contamination.",
+          "**Monitoring** is critical to knowing where pests are located, when to act against growing pest populations, and what type of control measures to use.",
+          "Evaluation and recording results help to determine how well the IPM program is working and whether there are any harmful human or environmental effects."
+        ]},
+        {"p": [
+          "Minimizing pesticide resistance is critical for sustaining the effectiveness of pest management programs.",
+          "Using a variety of tools and techniques will help prevent or delay the occurrence of pesticide resistance.",
+          "If the pest has not been properly identified, **even nonchemical control tactics will fail**.",
+          "It is your responsibility to consider the effects of pest control actions on the **entire treatment site**, whether an outdoor area or inside a structure.",
+          "Use good judgment, especially when pesticides are part of the control strategy, to avoid harmful effects to other living organisms and the environment."
+        ]}
+      ],
+      "questions": [
+        {"id": "c01-s25-t1", "src": "test", "kind": "mc", "q": "According to the chapter summary, a successful pest management program begins with:",
+         "choices": ["Proper identification of the pest", "Choosing a pesticide", "Eradication", "Setting the economic injury level"], "answer": 0,
+         "ref": "p. 15, 'Summary'", "why": "Everything else depends on knowing what the pest is."},
+        {"id": "c01-s25-t2", "src": "test", "kind": "tf", "q": "If a pest has not been properly identified, nonchemical control tactics will still work.", "answer": false,
+         "ref": "p. 15, 'Summary'", "why": "Without proper identification, even nonchemical control tactics will fail."},
+        {"id": "c01-s25-t3", "src": "test", "kind": "mc", "style": "not", "q": "Monitoring helps you know all of these EXCEPT:",
+         "choices": ["Where pests are located", "When to act against growing pest populations", "What type of control measures to use", "Which pesticide brand is cheapest"], "answer": 3,
+         "ref": "p. 15, 'Summary'", "why": "Monitoring tells you where pests are, when to act, and what control to use."},
+        {"id": "c01-s25-t4", "src": "test", "kind": "mc", "style": "scenario", "q": "You are treating a building for pests. Whose responsibility is it to consider the effects of the treatment on the entire treatment site?",
+         "choices": ["Yours, as the applicator", "Only the building owner's", "The pesticide manufacturer's", "EPA's"], "answer": 0,
+         "ref": "p. 15, 'Summary'", "why": "It is your responsibility, outdoors or inside a structure."}
+      ]
+    }
+  ]
+}

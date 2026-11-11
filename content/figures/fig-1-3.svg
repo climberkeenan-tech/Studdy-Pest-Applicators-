@@ -1,0 +1,21 @@
+<svg viewBox="0 0 640 340" role="img" aria-label="Figure 1.3: the pest population rises over time; treatment starts at the economic threshold, which is set below the economic injury level, so the treated population falls before reaching the injury level while the untreated population passes it">
+  <defs>
+    <marker id="ah-1-3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="f-ink" d="M0 0 L10 5 L0 10 Z"/></marker>
+  </defs>
+  <path class="s-ink" stroke-width="2.5" fill="none" d="M70 24 V290 H626"/>
+  <text class="f-ink" font-family="var(--f-display)" font-weight="700" font-size="18" text-anchor="middle" transform="translate(40 158) rotate(-90)">NUMBER OF PESTS</text>
+  <text class="f-ink" font-family="var(--f-display)" font-weight="700" font-size="18" x="348" y="324" text-anchor="middle">TIME</text>
+  <path class="s-ink" stroke-width="2.5" fill="none" d="M70 120 H626"/>
+  <path class="s-muted" stroke-width="2.5" stroke-dasharray="9 7" fill="none" d="M70 160 H626"/>
+  <path class="s-field" stroke-width="4" fill="none" d="M80 272 C120 252 160 242 200 256 C240 270 272 262 300 212 C318 180 330 152 346 124 C372 88 452 54 566 42"/>
+  <path class="s-ink" stroke-width="3" stroke-dasharray="7 6" fill="none" d="M326 162 C338 146 352 146 366 162 C392 194 414 240 448 270"/>
+  <g font-family="var(--f-body)" font-size="15">
+    <text class="f-ink" x="620" y="111" text-anchor="end" font-weight="700">Economic injury level</text>
+    <text class="f-muted" x="620" y="182" text-anchor="end" font-weight="700">Economic threshold</text>
+    <text class="f-ink" x="540" y="34" text-anchor="end">Untreated</text>
+    <text class="f-ink" x="416" y="214" transform="rotate(58 416 214)">Treated</text>
+    <text class="f-ink" x="296" y="56" text-anchor="middle">Time to treat</text>
+    <text class="f-ink" x="118" y="232">Pest population</text>
+  </g>
+  <path class="s-ink" stroke-width="2" fill="none" marker-end="url(#ah-1-3)" d="M310 62 L326 150"/>
+</svg>

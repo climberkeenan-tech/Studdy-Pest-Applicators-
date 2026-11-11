@@ -1,0 +1,1184 @@
+<title>Pest Applicator Study</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: one 720px reading column. Sticky status bar on top, a fixed reading dock under study cards.
+   Verdicts are full-width bands styled like the signal-word panel on a pesticide label. */
+:root{
+  --paper:#f4f6ef; --card:#ffffff; --ink:#17221b; --muted:#55645a; --line:#d6ddd1;
+  --field:#1d5c40; --field-2:#e3eee6; --on-field:#ffffff;
+  --hi:#ffdc33; --hi-soft:#fff3b0; --hi-ink:#17221b;
+  --ok:#16703d; --ok-bg:#e0f1e5; --bad:#b42318; --bad-bg:#fce6e2; --warn:#8a5800; --warn-bg:#fbefd2;
+  --shadow:0 1px 0 rgba(23,34,27,.05),0 10px 24px -16px rgba(23,34,27,.35);
+  --f-display:"Barlow Condensed","Arial Narrow","Roboto Condensed",system-ui,sans-serif;
+  --f-body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#0e1411; --card:#151e19; --ink:#e5ebe6; --muted:#9bada1; --line:#28352d;
+  --field:#6cc195; --field-2:#1a2b21; --on-field:#0c1410;
+  --hi:#ffdc33; --hi-soft:#3b3510; --hi-ink:#16140a;
+  --ok:#6ad197; --ok-bg:#132e1e; --bad:#ff8c80; --bad-bg:#3a1613; --warn:#f2b64a; --warn-bg:#33270d;
+  --shadow:0 1px 0 rgba(0,0,0,.3),0 10px 24px -16px rgba(0,0,0,.8);
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --paper:#0e1411; --card:#151e19; --ink:#e5ebe6; --muted:#9bada1; --line:#28352d;
+  --field:#6cc195; --field-2:#1a2b21; --on-field:#0c1410;
+  --hi:#ffdc33; --hi-soft:#3b3510; --hi-ink:#16140a;
+  --ok:#6ad197; --ok-bg:#132e1e; --bad:#ff8c80; --bad-bg:#3a1613; --warn:#f2b64a; --warn-bg:#33270d;
+  --shadow:0 1px 0 rgba(0,0,0,.3),0 10px 24px -16px rgba(0,0,0,.8);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.5;min-height:100%}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--card)}
+button,select,input{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--hi);outline-offset:2px;border-radius:6px}
+.wrap{max-width:760px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+/* ---------- top bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--card);border-bottom:1px solid var(--line)}
+.bar-in{display:flex;align-items:center;gap:10px;padding-block:10px;flex-wrap:wrap}
+.brand{background:none;border:0;padding:0;display:flex;flex-direction:column;align-items:flex-start;line-height:.9;font-family:var(--f-display);font-weight:800;letter-spacing:.04em;font-size:19px;text-transform:uppercase}
+.brand small{font-size:12px;font-weight:700;letter-spacing:.18em;color:var(--field)}
+.chips{display:flex;gap:6px;margin-left:auto;flex-wrap:wrap;justify-content:flex-end}
+.chip{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--line);border-radius:999px;padding:3px 10px 3px 8px;font-family:var(--f-mono);font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap;background:var(--paper)}
+.chip svg{width:15px;height:15px;flex:none}
+.chip.hot{border-color:var(--hi);background:var(--hi-soft)}
+.chip.bump{animation:bump .35s ease}
+@keyframes bump{40%{transform:scale(1.18)}}
+.bar-prog{height:4px;background:var(--line)}
+.bar-prog i{display:block;height:100%;background:var(--field);transition:width .5s ease}
+
+main{padding-block:20px 120px}
+.view{display:flex;flex-direction:column;gap:18px}
+
+/* ---------- type */
+.eyebrow{font-family:var(--f-display);font-weight:700;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--field)}
+h1,h2,h3{text-wrap:balance;margin:0}
+.display{font-family:var(--f-display);font-weight:800;line-height:.95;letter-spacing:.01em;text-transform:uppercase}
+.muted{color:var(--muted)}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+p{margin:0}
+
+/* ---------- buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1.5px solid var(--line);background:var(--card);border-radius:10px;padding:10px 16px;font-weight:700;min-height:46px;text-decoration:none}
+.btn:hover{border-color:var(--field)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn.primary{background:var(--field);border-color:var(--field);color:var(--on-field)}
+.btn.primary:hover{filter:brightness(1.08)}
+.btn.big{min-height:60px;font-size:20px;padding:12px 22px;font-family:var(--f-display);letter-spacing:.06em;text-transform:uppercase}
+.btn.hi{background:var(--hi);border-color:var(--hi);color:var(--hi-ink)}
+.btn.small{min-height:36px;padding:6px 12px;font-size:15px}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.row>.grow{flex:1 1 200px}
+.linkish{background:none;border:0;padding:0;color:var(--field);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+
+/* ---------- home */
+.mission{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);overflow:hidden}
+.mission-top{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;padding:18px}
+.countdown{font-family:var(--f-display);font-weight:800;font-size:72px;line-height:.8;color:var(--field);font-variant-numeric:tabular-nums}
+.countdown small{display:block;font-size:15px;letter-spacing:.14em;color:var(--muted);margin-top:8px}
+.mission-copy{display:flex;flex-direction:column;gap:6px;min-width:0}
+.mission-copy h1{font-family:var(--f-display);font-weight:800;font-size:28px;text-transform:uppercase;line-height:1}
+.mission-cta{padding:0 18px 18px;display:flex;flex-direction:column;gap:8px}
+.mission-cta .btn{width:100%}
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@media (min-width:640px){.stats{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.stat b{font-family:var(--f-display);font-size:30px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+.stat .lbl{font-size:13px;color:var(--muted);font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.meter{height:8px;border-radius:99px;background:var(--line);overflow:hidden}
+.meter i{display:block;height:100%;background:var(--field);border-radius:99px;transition:width .5s ease}
+.meter.yellow i{background:var(--hi)}
+.dots{display:flex;gap:4px}
+.dots i{width:12px;height:12px;border-radius:3px;background:var(--line)}
+.dots i.on{background:var(--hi);box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)}
+.dots i.today{outline:2px solid var(--field);outline-offset:1px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:12px}
+.panel h2{font-family:var(--f-display);font-weight:800;font-size:22px;text-transform:uppercase;letter-spacing:.03em}
+.secgroup{display:flex;flex-direction:column;gap:6px}
+.secgroup h3{font-family:var(--f-display);font-weight:700;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.secrow{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;text-align:left;width:100%;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.secrow:hover{border-color:var(--field)}
+.secrow .t{font-weight:700;min-width:0}
+.secrow .m{font-size:14px;color:var(--muted)}
+.pill{display:inline-flex;align-items:center;gap:4px;border-radius:999px;padding:2px 10px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;border:1px solid transparent}
+.pill.pass{background:var(--ok-bg);color:var(--ok);border-color:var(--ok)}
+.pill.fail{background:var(--bad-bg);color:var(--bad);border-color:var(--bad)}
+.pill.new{background:var(--paper);color:var(--muted);border-color:var(--line)}
+.pill.next{background:var(--hi);color:var(--hi-ink)}
+.pill.weak{background:var(--warn-bg);color:var(--warn);border-color:var(--warn)}
+.pill.review{background:var(--field-2);color:var(--field);border-color:var(--field)}
+.pill.retry{background:var(--warn-bg);color:var(--warn);border-color:var(--warn)}
+.empty{border:2px dashed var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:8px}
+.weaklist{display:flex;flex-direction:column;gap:6px;margin:0;padding:0;list-style:none}
+.weaklist li{border-left:4px solid var(--warn);padding:4px 10px;background:var(--paper);border-radius:0 8px 8px 0;font-size:15px}
+.foot{display:flex;flex-wrap:wrap;gap:12px;align-items:center;font-size:14px;color:var(--muted)}
+
+/* ---------- study card (styled like a label panel) */
+.label{background:var(--card);border:2px solid var(--ink);border-radius:6px;overflow:hidden}
+.label-band{background:var(--field);color:var(--on-field);padding:10px 16px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-family:var(--f-display);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:15px}
+.label-head{padding:16px 16px 4px;display:flex;flex-direction:column;gap:6px}
+.label-head h1{font-family:var(--f-display);font-weight:800;font-size:34px;line-height:1;text-transform:uppercase}
+.label-meta{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px;color:var(--muted)}
+.voicebar{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;padding:10px 16px;border-block:1px solid var(--line);margin-top:10px;font-size:14px;background:var(--paper)}
+.voicebar label{display:inline-flex;gap:6px;align-items:center;font-weight:700}
+.voicebar select{border:1px solid var(--line);border-radius:8px;padding:4px 8px;background:var(--card)}
+.voicenote{flex-basis:100%;color:var(--muted)}
+#reading{padding:16px;font-size:19px;line-height:1.7;display:flex;flex-direction:column;gap:14px}
+#reading .rh{font-family:var(--f-display);font-weight:800;font-size:22px;letter-spacing:.04em;text-transform:uppercase;line-height:1.2;border-bottom:2px solid var(--line);padding-bottom:4px;margin-top:6px}
+#reading ul{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:6px}
+.sent{border-radius:4px;transition:background-color .15s;cursor:pointer;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.sent:hover{background:color-mix(in srgb,var(--hi-soft) 55%,transparent)}
+.sent.on{background:var(--hi-soft)}
+.w{border-radius:3px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.w.on{background:var(--hi);color:var(--hi-ink);box-shadow:0 0 0 2px var(--hi)}
+.term{font-weight:700}
+.fig{margin:6px 0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--paper)}
+.fig-art{padding:12px;overflow-x:auto;background:var(--card)}
+.fig-art svg,.fig-art img{display:block;width:100%;max-width:100%;height:auto}
+.fig figcaption{padding:10px 12px;font-size:17px;line-height:1.6;display:flex;flex-direction:column;gap:4px}
+.fig-ref{font-size:14px;color:var(--muted);font-family:var(--f-mono)}
+.f-ink{fill:var(--ink)} .f-muted{fill:var(--muted)} .f-on{fill:var(--on-field)}
+.f-card{fill:var(--card);stroke:var(--ink);stroke-width:2}
+.f-field{fill:var(--field)} .f-hi{fill:var(--hi)} .f-line{fill:var(--line)}
+.f-ok{fill:var(--ok)} .f-bad{fill:var(--bad)}
+.f-arrow{stroke:var(--ink)} .s-ink{stroke:var(--ink)} .s-field{stroke:var(--field)} .s-muted{stroke:var(--muted)}
+.terms{margin:0 16px 16px;border-top:2px solid var(--ink);padding-top:10px;display:grid;grid-template-columns:minmax(0,1fr);gap:8px}
+.terms h3{font-family:var(--f-display);font-size:18px;letter-spacing:.1em;text-transform:uppercase}
+.terms dl{margin:0;display:grid;gap:8px}
+.terms dt{font-weight:700}
+.terms dd{margin:0;color:var(--muted)}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:15;background:var(--card);border-top:1px solid var(--line);padding-top:10px;padding-bottom:calc(10px + env(safe-area-inset-bottom,0px));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));box-shadow:0 -8px 24px -18px rgba(0,0,0,.5)}
+.dock-in{max-width:728px;margin:0 auto;display:flex;gap:8px;align-items:center}
+.dock .spacer{flex:1}
+.dock .btn{min-height:50px}
+.speaking-dot{width:10px;height:10px;border-radius:50%;background:var(--hi);box-shadow:0 0 0 0 var(--hi);animation:pulse 1.2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px transparent}}
+
+/* ---------- quiz */
+.qhead{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.qbar{height:10px;border-radius:99px;background:var(--line);overflow:hidden}
+.qbar i{display:block;height:100%;background:var(--hi);transition:width .3s ease}
+.qcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:14px;box-shadow:var(--shadow)}
+.qtext{font-size:22px;line-height:1.35;font-weight:700}
+.choices{display:flex;flex-direction:column;gap:8px}
+.choice{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:center;text-align:left;width:100%;min-height:54px;background:var(--paper);border:1.5px solid var(--line);border-radius:10px;padding:8px 12px;font-size:18px}
+.choice:hover:not([disabled]){border-color:var(--field)}
+.choice .k{font-family:var(--f-mono);font-weight:600;width:30px;height:30px;border-radius:7px;display:grid;place-items:center;border:1.5px solid var(--line);background:var(--card)}
+.choice.right{background:var(--ok-bg);border-color:var(--ok)}
+.choice.right .k{background:var(--ok);color:var(--card);border-color:var(--ok)}
+.choice.wrong{background:var(--bad-bg);border-color:var(--bad)}
+.choice.wrong .k{background:var(--bad);color:var(--card);border-color:var(--bad)}
+.choice.dim{opacity:.5}
+.choice[disabled]{cursor:default}
+.tf{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.tf .choice{grid-template-columns:1fr;justify-items:center;font-family:var(--f-display);font-weight:800;font-size:24px;letter-spacing:.08em;text-transform:uppercase}
+.short{display:flex;gap:8px;flex-wrap:wrap}
+.short input{flex:1 1 220px;min-width:0;min-height:54px;border:1.5px solid var(--line);border-radius:10px;padding:10px 14px;font-size:19px;background:var(--paper)}
+.short input:focus{border-color:var(--field);outline:none}
+.typed{padding:10px 14px;border-radius:10px;border:1.5px solid var(--line);background:var(--paper);font-size:18px}
+.typed.right{border-color:var(--ok);background:var(--ok-bg)}
+.typed.wrong{border-color:var(--bad);background:var(--bad-bg)}
+.band{font-family:var(--f-display);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:26px;padding:8px 14px;border-radius:8px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.band.ok{background:var(--ok);color:var(--card)}
+.band.bad{background:var(--bad);color:var(--card)}
+.band.wait{background:var(--line);color:var(--ink)}
+.band .xp{font-family:var(--f-mono);font-size:16px;letter-spacing:0;background:rgba(255,255,255,.2);padding:2px 10px;border-radius:99px}
+.fb{display:flex;flex-direction:column;gap:8px;font-size:17px}
+.fb .ans{font-weight:700}
+.fb .src{font-family:var(--f-mono);font-size:14px;color:var(--muted)}
+.combo{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-display);font-weight:800;font-size:20px;letter-spacing:.06em;text-transform:uppercase}
+.combo svg{width:20px;height:20px}
+.combo.on{color:var(--warn)}
+.hint{font-size:13px;color:var(--muted)}
+
+/* ---------- results */
+.result{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 18px;display:flex;flex-direction:column;gap:14px;align-items:flex-start;box-shadow:var(--shadow)}
+.stamp{font-family:var(--f-display);font-weight:800;font-size:54px;line-height:1;letter-spacing:.08em;text-transform:uppercase;border:5px solid currentColor;border-radius:8px;padding:6px 16px 2px;transform:rotate(-5deg);animation:stamp .5s cubic-bezier(.2,1.5,.4,1)}
+.stamp.ok{color:var(--ok)} .stamp.bad{color:var(--bad)}
+@keyframes stamp{0%{transform:rotate(-5deg) scale(1.8);opacity:0}100%{transform:rotate(-5deg) scale(1);opacity:1}}
+.bigscore{font-family:var(--f-display);font-weight:800;font-size:40px;line-height:1;font-variant-numeric:tabular-nums}
+.misslist{display:flex;flex-direction:column;gap:10px;width:100%;margin:0;padding:0;list-style:none}
+.misslist li{border:1px solid var(--line);border-left:5px solid var(--bad);border-radius:8px;padding:10px 12px;display:flex;flex-direction:column;gap:4px;background:var(--paper)}
+.misslist .src{font-family:var(--f-mono);font-size:13px;color:var(--muted)}
+.sumgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;width:100%}
+@media (min-width:640px){.sumgrid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.sumlist{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:4px}
+
+.toast{position:fixed;left:50%;bottom:calc(86px + env(safe-area-inset-bottom,0px));transform:translateX(-50%) translateY(20px);opacity:0;pointer-events:none;z-index:40;background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:10px;font-weight:700;max-width:min(92vw,520px);text-align:center;transition:opacity .2s,transform .2s}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+@media (max-width:420px){
+  .countdown{font-size:58px}
+  .mission-copy h1{font-size:24px}
+  .label-head h1{font-size:28px}
+  .qtext{font-size:20px}
+  #reading{font-size:18px}
+  .brand{font-size:17px}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+
+<header class="bar">
+  <div class="wrap bar-in">
+    <button class="brand" data-act="home" aria-label="Home">Pest Applicator<small>Study</small></button>
+    <div class="chips" id="chips"></div>
+  </div>
+  <div class="bar-prog" aria-hidden="true"><i id="barprog" style="width:0%"></i></div>
+</header>
+<main class="wrap" id="app" aria-live="polite"></main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script id="content" type="application/json">{"manual":{"title":"Pesticide Applicator Manual","state":null,"category":null,"totalPages":null,"deadline":"2027-01-11"},"sections":[{"id":"practice","practice":true,"chapter":"Practice card","title":"How this study tool works","pages":null,"photos":[],"body":[{"p":["This card is practice. It is **not** from your manual, and it does not count toward your progress.","Press **Play** to hear it read in a Claude voice.","The **yellow highlight** follows the voice, word by word.","Tap any sentence to start reading from that spot."]},{"h":"How you pass"},{"p":["After each card, you get a quiz, one question at a time.","The manual's own review questions come first.","Then come new questions written like the real test, including scenario questions and **NOT** questions.","You pass a card only at **100 percent**."]},{"h":"How misses work"},{"p":["Every question you miss comes back later in the session.","It comes back again next session.","It stays on your weak list until you get it right **twice in a row**."]},{"h":"How a session runs"},{"list":["Each session starts with a **5-question rapid round** from old cards.","Then you study the next card and take its quiz.","Each session ends with what you mastered, what you are weak on, and what is next."]},{"fig":"loop"}],"figures":[{"id":"loop","title":"The study loop","photo":null,"svg":"<svg viewBox=\"0 0 640 150\" role=\"img\" aria-label=\"Rapid round, then study card, then quiz, then pass at 100 percent or retake\"><g font-family=\"var(--f-display)\" font-size=\"22\" font-weight=\"700\" text-anchor=\"middle\"><rect class=\"f-card\" x=\"6\" y=\"40\" width=\"130\" height=\"64\" rx=\"8\"/><text class=\"f-ink\" x=\"71\" y=\"79\">RAPID ROUND<\/text><rect class=\"f-card\" x=\"170\" y=\"40\" width=\"130\" height=\"64\" rx=\"8\"/><text class=\"f-ink\" x=\"235\" y=\"79\">STUDY CARD<\/text><rect class=\"f-card\" x=\"334\" y=\"40\" width=\"130\" height=\"64\" rx=\"8\"/><text class=\"f-ink\" x=\"399\" y=\"79\">QUIZ<\/text><rect class=\"f-ok\" x=\"498\" y=\"18\" width=\"136\" height=\"50\" rx=\"8\"/><text class=\"f-on\" x=\"566\" y=\"50\">100% = PASS<\/text><rect class=\"f-bad\" x=\"498\" y=\"82\" width=\"136\" height=\"50\" rx=\"8\"/><text class=\"f-on\" x=\"566\" y=\"114\">MISS = RETAKE<\/text><\/g><g class=\"f-arrow\" stroke-width=\"3\" fill=\"none\"><path d=\"M138 72h26\"/><path d=\"M302 72h26\"/><path d=\"M466 64l26-20\"/><path d=\"M466 80l26 20\"/><\/g><\/svg>","explain":["The loop is simple: rapid round, study card, quiz.","A perfect quiz passes the card. Any miss means you retake it."]}],"terms":[{"term":"Weak list","def":"Questions you missed that you have not yet answered right twice in a row."},{"term":"Rapid round","def":"Five quick questions from old cards at the start of every session."}],"questions":[{"id":"practice-q1","src":"test","kind":"mc","q":"What score do you need to pass a card?","choices":["80 percent","90 percent","100 percent","70 percent"],"answer":2,"ref":"Practice card, 'How you pass'","why":"Anything under 100 percent is a fail."},{"id":"practice-q2","src":"test","kind":"tf","q":"A missed question leaves your weak list after you answer it right once.","answer":false,"ref":"Practice card, 'How misses work'","why":"You have to get it right twice in a row."},{"id":"practice-q3","src":"test","kind":"mc","style":"not","q":"Which of these is NOT part of a study session?","choices":["A 5-question rapid round from old cards","A quiz after each card","A timed two-hour mock exam","A summary of what you mastered and what is weak"],"answer":2,"ref":"Practice card, 'How a session runs'","why":"Sessions are rapid round, cards, quizzes, and a summary. There is no timed mock exam."},{"id":"practice-q4","src":"test","kind":"short","q":"Type it: how many times in a row must you get a missed question right to clear it?","answer":"twice","accept":["2","two","two times","2 times","twice in a row","two in a row"],"ref":"Practice card, 'How misses work'","why":"Twice in a row clears it."}]}]}</script>
+<script>
+(() => {
+'use strict';
+
+/* ================= content ================= */
+const C = JSON.parse(document.getElementById('content').textContent);
+const SECTIONS = C.sections || [];
+const SEC = Object.fromEntries(SECTIONS.map(s => [s.id, s]));
+const REAL = SECTIONS.filter(s => !s.practice);
+const Q = {};
+for (const s of SECTIONS) for (const q of (s.questions || [])) Q[q.id] = Object.assign({ sid: s.id }, q);
+const DEADLINE = new Date((C.manual?.deadline || '2027-01-11') + 'T00:00:00');
+const DAILY_GOAL = 25;
+const RANKS = [[0,'Trainee'],[250,'Apprentice'],[750,'Technician'],[1600,'Field Tech'],[3000,'Lead Applicator'],[5000,'License Ready']];
+
+/* ================= utils ================= */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+const md = s => esc(s).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+const plain = s => String(s ?? '').replace(/\*\*/g, '');
+const dayKey = (d = new Date()) => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const fmt = n => Number(n || 0).toLocaleString('en-US');
+const pct = (a, b) => b ? Math.round(100 * a / b) : 0;
+const LET = 'ABCDEF';
+const reduced = () => window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+const pagesLabel = s => !s.pages ? '' : (s.pages[0] === s.pages[1] || s.pages.length === 1 ? 'p. ' + s.pages[0] : 'pp. ' + s.pages[0] + '–' + s.pages[1]);
+
+const ICON = {
+  bolt: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg>',
+  flame: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c1 4 5 6 5 11a5 5 0 0 1-10 0c0-2 1-3.5 2-4.5 0 2 1 3 2 3 0-3-1-6 1-9.5z"/></svg>',
+  cal: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>',
+  clock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+  play: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4v16l13-8z"/></svg>',
+  pause: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>',
+  stop: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="2"/></svg>',
+  arrow: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
+  back: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>',
+};
+
+/* ================= profile + storage ================= */
+const LS_KEY = 'pas-profile-v1';
+const lsGet = k => { try { return JSON.parse(localStorage.getItem(k)); } catch (e) { return null; } };
+const lsSet = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
+function blank() { return { v: 1, updatedAt: 0, xp: 0, bestCombo: 0, days: {}, passed: {}, attempts: {}, q: {}, sessions: [], settings: { voice: 'buttery', rate: 1, sound: true } }; }
+function normalize(p) {
+  const b = blank();
+  if (!p || typeof p !== 'object') return b;
+  for (const k of Object.keys(b)) if (p[k] === undefined || p[k] === null) p[k] = b[k];
+  p.settings = Object.assign(b.settings, p.settings || {});
+  if (!Array.isArray(p.sessions)) p.sessions = [];
+  return p;
+}
+let P = normalize(lsGet(LS_KEY));
+let profRef = null, sync = 'local', dirty = false, saving = false, saveT = null;
+
+function save() {
+  P.updatedAt = Date.now();
+  lsSet(LS_KEY, P);
+  dirty = true;
+  clearTimeout(saveT);
+  saveT = setTimeout(flush, 700);
+}
+async function flush() {
+  if (!profRef || saving || !dirty) return;
+  saving = true; dirty = false;
+  try { await profRef.set(JSON.parse(JSON.stringify(P))); sync = 'synced'; }
+  catch (e) { dirty = true; sync = e && e.code === 'quota_exceeded' ? 'full' : 'error'; }
+  saving = false;
+  renderFoot();
+  if (dirty && sync === 'synced') saveT = setTimeout(flush, 700);
+}
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') flush(); });
+
+async function initDb() {
+  if (!window.claude || !claude.use) return;
+  sync = 'loading'; renderFoot();
+  let slow = setTimeout(() => { if (sync === 'loading') { sync = 'slow'; renderFoot(); } }, 10000);
+  try {
+    const [db, user] = await Promise.all([claude.use('db'), claude.use('user')]);
+    const id = user ? await user.id() : null;
+    if (!db || !id) { clearTimeout(slow); sync = 'local'; renderFoot(); return; }
+    profRef = db.doc('data/users/' + id + '/profile');
+    const snap = await profRef.get();
+    clearTimeout(slow);
+    if (snap.exists) {
+      const remote = normalize(JSON.parse(JSON.stringify(snap.data())));
+      if ((remote.updatedAt || 0) >= (P.updatedAt || 0)) { P = remote; lsSet(LS_KEY, P); resumeSession(); }
+      else { dirty = true; }
+    } else if (P.updatedAt) { dirty = true; }
+    sync = 'synced';
+    if (dirty) flush();
+    if (S.view === 'home') render(); else { renderChips(); renderFoot(); }
+  } catch (e) { clearTimeout(slow); sync = 'error'; renderFoot(); }
+}
+
+/* ================= derived stats ================= */
+const qs = id => P.q[id] || (P.q[id] = { seen: 0, right: 0, wrong: 0, run: 0, open: false, last: 0 });
+const today = () => P.days[dayKey()] || (P.days[dayKey()] = { a: 0, c: 0, xp: 0 });
+function dayStreak() {
+  let n = 0; const d = new Date();
+  if (!(P.days[dayKey(d)] && P.days[dayKey(d)].a)) d.setDate(d.getDate() - 1);
+  while (P.days[dayKey(d)] && P.days[dayKey(d)].a) { n++; d.setDate(d.getDate() - 1); }
+  return n;
+}
+const isReal = qid => Q[qid] && SEC[Q[qid].sid] && !SEC[Q[qid].sid].practice;
+const openMisses = () => Object.keys(P.q).filter(id => P.q[id].open && isReal(id)).sort((a, b) => (P.q[a].last || 0) - (P.q[b].last || 0));
+function rank(xp = P.xp) {
+  let i = 0; for (let k = 0; k < RANKS.length; k++) if (xp >= RANKS[k][0]) i = k;
+  const next = RANKS[i + 1];
+  return { name: RANKS[i][1], next: next ? next[1] : null, frac: next ? (xp - RANKS[i][0]) / (next[0] - RANKS[i][0]) : 1, need: next ? next[0] - xp : 0 };
+}
+function daysLeft() { const t = new Date(); t.setHours(0, 0, 0, 0); return Math.max(0, Math.round((DEADLINE - t) / 864e5)); }
+function secStatus(s) {
+  if (P.passed[s.id]) return 'pass';
+  if (P.attempts[s.id] && P.attempts[s.id].n) return 'fail';
+  return 'new';
+}
+const nextSection = () => REAL.find(s => !P.passed[s.id]) || null;
+function manualProgress() {
+  const total = C.manual && C.manual.totalPages;
+  const passedN = REAL.filter(s => P.passed[s.id]).length;
+  if (total) {
+    const byPage = {};
+    for (const s of REAL) if (s.pages) for (let p = s.pages[0]; p <= (s.pages[1] || s.pages[0]); p++) { (byPage[p] = byPage[p] || []).push(s.id); }
+    const done = Object.keys(byPage).filter(p => byPage[p].every(id => P.passed[id])).length;
+    return { frac: done / total, text: done + ' of ' + total + ' manual pages passed', passedN, pagesDone: done, total };
+  }
+  return { frac: REAL.length ? passedN / REAL.length : 0, text: passedN + ' of ' + REAL.length + ' cards passed', passedN, total: null };
+}
+
+/* ================= session ================= */
+const S = { view: 'home', sid: null, quiz: null, result: null, combo: 0, sess: null };
+function resumeSession() {
+  const now = Date.now();
+  for (const x of P.sessions) if (!x.end && now - (x.touch || x.start) > 3 * 3600e3) x.end = x.touch || x.start;
+  S.sess = P.sessions.find(x => !x.end) || null;
+}
+resumeSession();
+function touchSess() { if (S.sess) S.sess.touch = Date.now(); }
+function startSession() {
+  if (!REAL.length) { toast('No manual pages loaded yet. Try the practice card while you wait.'); openSection('practice'); return; }
+  S.sess = { id: 's' + Date.now(), start: Date.now(), touch: Date.now(), end: null, a: 0, c: 0, xp: 0, best: 0, passed: [], cleared: [], failed: [], missed: [], studied: [], rapid: null };
+  P.sessions.unshift(S.sess);
+  P.sessions = P.sessions.slice(0, 60);
+  save();
+  const pool = rapidPool();
+  if (pool.length) startQuiz('rapid', null, pool.slice(0, 5));
+  else { toast('No old cards yet, so no rapid round. Straight to studying.'); goNext(); }
+}
+function endSession() {
+  Reader.stop();
+  if (!S.sess) { go('home'); return; }
+  S.sess.end = Date.now();
+  save(); flush();
+  S.summary = S.sess; S.sess = null; S.quiz = null;
+  go('summary');
+}
+function goNext() {
+  const n = nextSection();
+  if (n) openSection(n.id);
+  else if (openMisses().length) startQuiz('drill', null, openMisses().slice(0, 15));
+  else { toast(REAL.length ? 'Every loaded card is passed. Send Claude your next pages.' : 'No manual pages loaded yet. Send Claude photos of your pages.'); go('home'); }
+}
+function rapidPool() {
+  const studied = REAL.filter(s => P.attempts[s.id] && P.attempts[s.id].n);
+  const all = []; for (const s of studied) for (const q of s.questions) all.push(q.id);
+  const last = id => (P.q[id] && P.q[id].last) || 0;
+  const open = shuffle(all.filter(id => P.q[id] && P.q[id].open)).sort((a, b) => last(a) - last(b));
+  const rest = shuffle(all.filter(id => !(P.q[id] && P.q[id].open))).sort((a, b) => last(a) - last(b));
+  return [...open, ...rest];
+}
+
+/* ================= quiz engine ================= */
+function startQuiz(mode, sid, ids) {
+  Reader.stop();
+  if (!ids.length) { toast('No questions here yet.'); return; }
+  S.quiz = { mode, sid, items: ids.map(id => ({ id, retry: false })), i: 0, first: {}, reins: {}, cur: null };
+  prepCur();
+  go('quiz');
+}
+function sectionQuizIds(s) {
+  const qsx = s.questions || [];
+  return [...qsx.filter(q => q.src === 'review').map(q => q.id), ...shuffle(qsx.filter(q => q.src !== 'review')).map(q => q.id)];
+}
+function prepCur() {
+  const it = S.quiz.items[S.quiz.i];
+  const q = Q[it.id];
+  let order = null;
+  if (q.kind === 'mc') { order = q.choices.map((_, k) => k); if (!q.fixed) order = shuffle(order); }
+  S.quiz.cur = { id: it.id, retry: it.retry, order, picked: null, typed: '', result: null, grading: false };
+}
+function record(ok, extra) {
+  const quiz = S.quiz, cur = quiz.cur, q = Q[cur.id];
+  const practice = !isReal(cur.id);
+  const rBefore = rank().name;
+  let gain = 0, cleared = false, broke = 0;
+  if (ok) { S.combo++; gain = 10 + Math.min(S.combo - 1, 5) * 2; }
+  else { broke = S.combo; S.combo = 0; }
+  if (!practice) {
+    const st = qs(cur.id); st.seen++; st.last = Date.now();
+    if (ok) { st.right++; st.run++; if (st.open && st.run >= 2) { st.open = false; cleared = true; gain += 25; if (S.sess) S.sess.cleared.push(cur.id); } }
+    else { st.wrong++; st.run = 0; st.open = true; if (S.sess && !S.sess.missed.includes(cur.id)) S.sess.missed.push(cur.id); }
+    const d = today(); d.a++; if (ok) d.c++; d.xp += gain;
+    P.xp += gain; P.bestCombo = Math.max(P.bestCombo, S.combo);
+    if (S.sess) { S.sess.a++; if (ok) S.sess.c++; S.sess.xp += gain; S.sess.best = Math.max(S.sess.best, S.combo); touchSess(); }
+    save();
+  }
+  if (!cur.retry && quiz.first[cur.id] === undefined) quiz.first[cur.id] = ok;
+  if (!ok) {
+    const n = quiz.reins[cur.id] || 0;
+    if (n < 3) { quiz.reins[cur.id] = n + 1; const pos = Math.min(quiz.items.length, quiz.i + 4); quiz.items.splice(pos, 0, { id: cur.id, retry: true }); }
+  }
+  cur.result = Object.assign({ ok, gain, cleared, broke, practice }, extra || {});
+  beep(ok ? 'ok' : 'bad');
+  render();
+  bumpChips();
+  if (cleared) toast('Cleared from your weak list: right twice in a row. +25 XP');
+  const rAfter = rank().name;
+  if (!practice && rAfter !== rBefore) setTimeout(() => toast('Rank up: ' + rAfter), cleared ? 1800 : 0);
+}
+function pick(k) {
+  const cur = S.quiz && S.quiz.cur; if (!cur || cur.result) return;
+  const q = Q[cur.id];
+  if (q.kind === 'mc') { cur.picked = k; record(k === q.answer); }
+  else if (q.kind === 'tf') { cur.picked = k; record(k === q.answer); }
+}
+async function submitShort() {
+  const cur = S.quiz && S.quiz.cur; if (!cur || cur.result || cur.grading) return;
+  const inp = $('#short-in'); const text = (inp ? inp.value : '').trim();
+  if (!text) { toast('Type an answer first.'); return; }
+  cur.typed = text; cur.grading = true; render();
+  const g = await gradeShort(Q[cur.id], text);
+  if (S.quiz && S.quiz.cur === cur) { cur.grading = false; record(g.ok, { why2: g.why, by: g.by }); }
+}
+function nextQ() {
+  const quiz = S.quiz; if (!quiz || !quiz.cur || !quiz.cur.result) return;
+  quiz.i++;
+  if (quiz.i >= quiz.items.length) return finishQuiz();
+  prepCur(); render();
+  const f = $('#short-in'); if (f) f.focus();
+}
+function finishQuiz() {
+  const quiz = S.quiz;
+  const ids = Object.keys(quiz.first);
+  const right = ids.filter(id => quiz.first[id]).length, total = ids.length, score = pct(right, total);
+  const missed = ids.filter(id => !quiz.first[id]);
+  const res = { mode: quiz.mode, sid: quiz.sid, right, total, score, missed, firstPass: false };
+  const practice = quiz.sid && SEC[quiz.sid] && SEC[quiz.sid].practice;
+  if (quiz.mode === 'section' && !practice) {
+    const sid = quiz.sid;
+    const at = P.attempts[sid] || (P.attempts[sid] = { n: 0, best: 0, last: 0 });
+    at.n++; at.best = Math.max(at.best, score); at.last = score;
+    if (score === 100) {
+      if (!P.passed[sid]) { P.passed[sid] = { at: Date.now(), tries: at.n }; P.xp += 50; today().xp += 50; if (S.sess) S.sess.xp += 50; res.firstPass = true; }
+      if (S.sess && !S.sess.passed.includes(sid)) S.sess.passed.push(sid);
+    } else if (S.sess && !S.sess.failed.includes(sid)) S.sess.failed.push(sid);
+    save();
+  }
+  if (quiz.mode === 'rapid') {
+    if (S.sess) S.sess.rapid = { right, total };
+    if (score === 100 && total >= 3) { P.xp += 20; today().xp += 20; if (S.sess) S.sess.xp += 20; res.bonus = 20; }
+    save();
+  }
+  S.result = res;
+  S.quiz = null;
+  beep(score === 100 ? 'pass' : 'bad');
+  go('result');
+}
+
+/* ================= grading typed answers ================= */
+const NEG = /\b(not|no|never|isn'?t|don'?t|doesn'?t|cannot|can'?t|without)\b/;
+const norm = s => plain(s).toLowerCase().replace(/[‘’]/g, "'").replace(/[^a-z0-9%.'\s-]/g, ' ').replace(/\s+/g, ' ').trim();
+function lev(a, b) {
+  if (a === b) return 0; if (!a.length) return b.length; if (!b.length) return a.length;
+  let prev = Array.from({ length: b.length + 1 }, (_, i) => i);
+  for (let i = 1; i <= a.length; i++) {
+    const cur = [i];
+    for (let j = 1; j <= b.length; j++) cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+    prev = cur;
+  }
+  return prev[b.length];
+}
+const sim = (a, b) => 1 - lev(a, b) / Math.max(a.length, b.length, 1);
+const thresh = t => t.length <= 3 ? 1 : t.length <= 6 ? 0.8 : 0.75;
+function phraseIn(phrase, ans) {
+  const target = norm(phrase); if (!target) return false;
+  const p = target.split(' '), a = norm(ans).split(' ');
+  for (let len = Math.max(1, p.length - 1); len <= p.length + 1; len++) {
+    for (let i = 0; i + len <= a.length; i++) {
+      const w = a.slice(i, i + len).join(' ');
+      if (/\d/.test(target)) { if (w.replace(/\s/g, '') === target.replace(/\s/g, '')) return true; continue; }
+      if (sim(w, target) >= thresh(target)) return true;
+    }
+  }
+  return false;
+}
+function localGrade(q, text) {
+  const t = norm(text); if (!t) return false;
+  const acc = [q.answer, ...(q.accept || [])].filter(x => x !== undefined && x !== null && x !== '').map(String);
+  for (const a of acc) { const na = norm(a); if (sim(t, na) >= thresh(na)) return true; }
+  const negTrap = NEG.test(t) && !acc.some(a => NEG.test(norm(a)));
+  if (negTrap) return false;
+  if (q.keys && q.keys.length) return q.keys.every(g => [].concat(g).some(alt => phraseIn(alt, text)));
+  return acc.some(a => phraseIn(a, text));
+}
+let samplerOff = false;
+const sampleP = (window.claude && claude.use) ? claude.use('sample').catch(() => null) : Promise.resolve(null);
+async function gradeShort(q, text) {
+  if (localGrade(q, text)) return { ok: true, by: 'match' };
+  const sample = samplerOff ? null : await sampleP;
+  if (sample) {
+    const s = SEC[q.sid];
+    const source = s ? collectPlain(s).slice(0, 5000) : '';
+    const prompt = [
+      'You are grading one answer on a pesticide applicator license study quiz.',
+      'Grade by meaning. Ignore spelling mistakes, typos, grammar and capitalization.',
+      'Mark it correct only if the student gives the same fact as the correct answer' + (q.keys && q.keys.length ? ' and covers every required point' : '') + '.',
+      'Mark it wrong if it is vague, incomplete, or says anything that contradicts the correct answer.',
+      'Judge only against the information below. Do not use outside knowledge.',
+      '', 'Question: ' + plain(q.q),
+      'Correct answer: ' + plain(q.answer),
+      q.accept && q.accept.length ? 'Also acceptable: ' + q.accept.map(plain).join(' | ') : '',
+      q.keys && q.keys.length ? 'Required points: ' + q.keys.map(g => [].concat(g).join(' or ')).join('; ') : '',
+      q.ref ? 'Where it is in the manual: ' + plain(q.ref) : '',
+      source ? 'Manual text for this card:\n' + source : '',
+      '', 'Student answer: """' + text.slice(0, 600) + '"""',
+      '', 'Reply with only JSON: {"correct": true or false, "why": "one short sentence for the student"}'
+    ].filter(Boolean).join('\n');
+    try {
+      const r = await sample.json(prompt, { modelTier: 'quick' });
+      if (r && typeof r.correct === 'boolean') return { ok: r.correct, by: 'claude', why: String(r.why || '').slice(0, 240) };
+    } catch (e) {
+      if (e && ['not_granted', 'sampling_disabled', 'not_declared', 'capability_disabled', 'capability_removed'].includes(e.code)) samplerOff = true;
+    }
+  }
+  return { ok: false, by: 'match' };
+}
+function collectPlain(s) {
+  const out = [];
+  for (const b of s.body || []) {
+    if (b.h) out.push(plain(b.h));
+    if (b.p) out.push(b.p.map(plain).join(' '));
+    if (b.list) out.push(b.list.map(plain).join(' '));
+    if (b.fig) { const f = (s.figures || []).find(f => f.id === b.fig); if (f) out.push('Figure: ' + plain(f.title) + '. ' + (f.explain || []).map(plain).join(' ')); }
+  }
+  for (const t of s.terms || []) out.push(plain(t.term) + ': ' + plain(t.def));
+  return out.join('\n');
+}
+
+/* ================= sound ================= */
+let AC = null;
+function beep(kind) {
+  if (!P.settings.sound) return;
+  try {
+    AC = AC || new (window.AudioContext || window.webkitAudioContext)();
+    const now = AC.currentTime + 0.01;
+    const seq = kind === 'ok' ? [[660, 0, .09], [990, .08, .14]] : kind === 'bad' ? [[196, 0, .26]] : kind === 'pass' ? [[523, 0, .1], [659, .1, .1], [784, .2, .1], [1047, .3, .3]] : [[880, 0, .08]];
+    for (const [f, t, d] of seq) {
+      const o = AC.createOscillator(), g = AC.createGain();
+      o.type = kind === 'bad' ? 'triangle' : 'sine'; o.frequency.value = f;
+      g.gain.setValueAtTime(0.0001, now + t);
+      g.gain.exponentialRampToValueAtTime(0.13, now + t + 0.012);
+      g.gain.exponentialRampToValueAtTime(0.0001, now + t + d);
+      o.connect(g); g.connect(AC.destination); o.start(now + t); o.stop(now + t + d + 0.03);
+    }
+  } catch (e) {}
+}
+
+/* ================= reader (voice + highlight) ================= */
+const Reader = {
+  mode: 'pending', t: null, state: 'idle', lines: [], cur: -1, wordEl: null,
+  msPerUnit: 62, lastMs: 0, note: '', voices: ['buttery', 'airy', 'glassy', 'rounded'], devVoice: null,
+  stop() {
+    if (this.state === 'idle') return;
+    if (this.mode === 'claude' && this.t) this.t.stop().catch(() => {});
+    if (this.mode === 'device') { try { speechSynthesis.cancel(); } catch (e) {} this.setState('idle', 'stopped'); }
+  },
+  setState(state, reason) {
+    this.state = state;
+    if (state === 'idle') { clearHi(); this.done = reason === 'completed'; }
+    renderDock();
+  },
+};
+const ttsP = (window.claude && claude.use) ? claude.use('tts').catch(() => null) : Promise.resolve(null);
+ttsP.then(t => {
+  if (t) {
+    Reader.t = t; Reader.mode = 'claude';
+    t.onState(({ state, reason }) => {
+      if (state === 'idle') {
+        if (reason === 'not_granted' || reason === 'unavailable') { Reader.mode = 'off'; Reader.note = 'Reading aloud is turned off for this page. Turn it back on in the artifact\'s Permissions menu.'; }
+        else if (reason === 'rate_limited') Reader.note = 'Voice limit reached for now. Read on screen and try Play again later.';
+        else if (reason === 'upstream_error') Reader.note = 'The voice cut out. Press Play to try again.';
+        else if (reason !== 'completed' && reason !== 'stopped' && reason !== 'replaced') Reader.note = '';
+      }
+      Reader.setState(state === 'starting' ? 'speaking' : state, reason);
+      renderVoiceNote();
+    });
+    t.onLine(({ id }) => onLine(id));
+    t.onPosition(({ ms, id }) => onPos(id, ms));
+    try { const r = t.setRate && t.setRate(P.settings.rate); if (r && r.catch) r.catch(() => {}); } catch (e) {}
+    t.voices().then(v => { if (Array.isArray(v) && v.length) { Reader.voices = v; if (S.view === 'study') renderVoiceBar(); } }).catch(() => {});
+  } else {
+    Reader.mode = ('speechSynthesis' in window) ? 'device' : 'none';
+    if (Reader.mode === 'device') { try { speechSynthesis.getVoices(); speechSynthesis.onvoiceschanged = () => { Reader.devVoice = null; }; } catch (e) {} }
+  }
+  if (S.view === 'study') { renderVoiceBar(); renderDock(); }
+});
+function buildLines() {
+  Reader.lines = $$('#reading .sent').map(el => {
+    const words = $$('.w', el).map(w => ({ el: w, t: w.textContent }));
+    const say = words.map(w => w.t).join(' ');
+    const cum = [], starts = []; let u = 0, c = 0;
+    for (const w of words) { starts.push(c); c += w.t.length + 1; u += w.t.length + 1 + (/[,;:]$/.test(w.t) ? 3 : /[.!?)]$/.test(w.t) ? 5 : 0); cum.push(u); }
+    return { el, words, say, cum, starts, total: u || 1 };
+  });
+  Reader.cur = -1;
+}
+function setCur(i) {
+  if (Reader.cur === i) return;
+  const old = Reader.lines[Reader.cur]; if (old) old.el.classList.remove('on');
+  if (Reader.wordEl) { Reader.wordEl.classList.remove('on'); Reader.wordEl = null; }
+  Reader.cur = i;
+  const L = Reader.lines[i]; if (!L) return;
+  L.el.classList.add('on');
+  const r = L.el.getBoundingClientRect();
+  if (r.top < 90 || r.bottom > innerHeight - 110) L.el.scrollIntoView({ block: 'center', behavior: reduced() ? 'auto' : 'smooth' });
+}
+function hiWord(i, k) {
+  const L = Reader.lines[i]; if (!L) return;
+  const w = L.words[Math.max(0, Math.min(k, L.words.length - 1))];
+  const el = w && w.el; if (Reader.wordEl === el) return;
+  if (Reader.wordEl) Reader.wordEl.classList.remove('on');
+  Reader.wordEl = el; if (el) el.classList.add('on');
+}
+function clearHi() {
+  const L = Reader.lines[Reader.cur]; if (L) L.el.classList.remove('on');
+  if (Reader.wordEl) Reader.wordEl.classList.remove('on');
+  Reader.wordEl = null; Reader.cur = -1;
+}
+const idIdx = id => id && id[0] === 'L' ? parseInt(id.slice(1), 10) : -1;
+function onLine(id) {
+  const i = idIdx(id); if (i < 0) return;
+  const prev = Reader.lines[Reader.cur];
+  if (prev && Reader.lastMs > 400) {
+    const est = Reader.lastMs * (P.settings.rate || 1) / prev.total;
+    Reader.msPerUnit = Math.max(35, Math.min(120, Reader.msPerUnit * 0.55 + est * 0.45));
+  }
+  Reader.lastMs = 0; setCur(i); hiWord(i, 0);
+}
+function wordAtUnits(L, units) { let k = 0; while (k < L.cum.length - 1 && L.cum[k] < units) k++; return k; }
+function onPos(id, ms) {
+  const i = idIdx(id); if (i < 0) return;
+  if (i !== Reader.cur) { Reader.lastMs = 0; setCur(i); }
+  Reader.lastMs = ms;
+  const L = Reader.lines[i]; if (!L) return;
+  const units = Math.max(0, ms - 90) / (Reader.msPerUnit / (P.settings.rate || 1));
+  hiWord(i, wordAtUnits(L, units));
+}
+async function play(from) {
+  from = Math.max(0, from || 0);
+  Reader.done = false;
+  if (!Reader.lines.length) buildLines();
+  if (Reader.mode === 'pending') { const t = await ttsP; if (!t && Reader.mode === 'pending') Reader.mode = 'speechSynthesis' in window ? 'device' : 'none'; }
+  Reader.note = ''; renderVoiceNote();
+  if (Reader.mode === 'claude') {
+    const lines = Reader.lines.slice(from, from + 100).map((L, k) => ({ text: L.say, id: 'L' + (from + k) }));
+    if (!lines.length) return;
+    Reader.state = 'speaking'; renderDock();
+    try { await Reader.t.speak(lines, { voice: P.settings.voice, rate: P.settings.rate, language: 'en' }); }
+    catch (e) {
+      const c = e && e.code;
+      if (c === 'stopped') return;
+      if (c === 'not_granted' || c === 'unavailable') { Reader.mode = 'off'; Reader.note = 'Reading aloud is turned off for this page. Turn it back on in the artifact\'s Permissions menu.'; }
+      else if (c === 'no_gesture') Reader.note = 'Tap Play again to start the voice.';
+      else if (c === 'busy') Reader.note = 'Finish dictating first, then press Play.';
+      else if (c === 'rate_limited') Reader.note = 'Voice limit reached for now. Read on screen and try again later.';
+      else Reader.note = 'The voice failed. Press Play to try again.';
+      Reader.setState('idle', 'error'); renderVoiceNote(); renderVoiceBar();
+    }
+  } else if (Reader.mode === 'device') {
+    deviceSpeak(from);
+  } else {
+    Reader.note = 'This browser cannot read aloud. Open this page in Chrome or Edge on a computer for the Claude voice.'; renderVoiceNote();
+  }
+}
+function pickDeviceVoice() {
+  if (Reader.devVoice) return Reader.devVoice;
+  let best = null, bs = -1;
+  try {
+    for (const v of speechSynthesis.getVoices()) {
+      if (!/^en/i.test(v.lang)) continue;
+      let s = 0; const n = v.name;
+      if (/natural|neural/i.test(n)) s += 6; if (/premium/i.test(n)) s += 5; if (/enhanced/i.test(n)) s += 4;
+      if (/google/i.test(n)) s += 2; if (/samantha|ava|allison|aria|jenny|zoe|evan|nathan/i.test(n)) s += 2;
+      if (/en[-_]US/i.test(v.lang)) s += 1; if (/compact|espeak/i.test(n)) s -= 5;
+      if (s > bs) { bs = s; best = v; }
+    }
+  } catch (e) {}
+  return (Reader.devVoice = best);
+}
+function deviceSpeak(from) {
+  try { speechSynthesis.cancel(); } catch (e) {}
+  const voice = pickDeviceVoice();
+  const tick = { timer: null, i: -1, t0: 0, boundary: false };
+  const end = Reader.lines.length;
+  for (let i = from; i < end; i++) {
+    const L = Reader.lines[i];
+    const u = new SpeechSynthesisUtterance(L.say);
+    if (voice) u.voice = voice; u.lang = (voice && voice.lang) || 'en-US'; u.rate = P.settings.rate || 1;
+    u.onstart = () => {
+      clearInterval(tick.timer); tick.i = i; tick.t0 = performance.now(); tick.boundary = false;
+      setCur(i); hiWord(i, 0);
+      tick.timer = setInterval(() => {
+        if (tick.boundary || Reader.state !== 'speaking') return;
+        const units = (performance.now() - tick.t0) / (70 / (P.settings.rate || 1));
+        hiWord(i, wordAtUnits(L, units));
+      }, 120);
+    };
+    u.onboundary = e => {
+      if (e.name && e.name !== 'word') return;
+      tick.boundary = true;
+      let k = 0; while (k < L.starts.length - 1 && L.starts[k + 1] <= e.charIndex) k++;
+      hiWord(i, k);
+    };
+    u.onend = () => { if (i === end - 1) { clearInterval(tick.timer); Reader.setState('idle', 'completed'); } };
+    u.onerror = e => { if (e.error === 'interrupted' || e.error === 'canceled') { clearInterval(tick.timer); } };
+    speechSynthesis.speak(u);
+  }
+  Reader.setState('speaking');
+}
+function pauseResume() {
+  if (Reader.mode === 'claude' && Reader.t) {
+    if (Reader.state === 'paused') Reader.t.resume().catch(() => {}); else Reader.t.pause().catch(() => {});
+  } else if (Reader.mode === 'device') {
+    try { if (Reader.state === 'paused') { speechSynthesis.resume(); Reader.setState('speaking'); } else { speechSynthesis.pause(); Reader.setState('paused'); } } catch (e) {}
+  }
+}
+function playToggle() {
+  if (Reader.state === 'idle') play(0); else pauseResume();
+}
+
+/* ================= navigation ================= */
+function go(view) { if (view !== 'study') Reader.stop(); S.view = view; render(); window.scrollTo(0, 0); }
+function openSection(sid) {
+  Reader.stop();
+  Reader.done = false;
+  S.sid = sid;
+  if (S.sess && !S.sess.studied.includes(sid) && !SEC[sid].practice) { S.sess.studied.push(sid); touchSess(); save(); }
+  go('study');
+}
+
+/* ================= rendering ================= */
+function renderChips() {
+  const dl = daysLeft(), ds = dayStreak();
+  $('#chips').innerHTML =
+    `<span class="chip" title="Days left until ${esc(C.manual.deadline)}">${ICON.clock}${dl}d</span>` +
+    `<span class="chip" id="chip-xp" title="XP">${ICON.bolt}${fmt(P.xp)}</span>` +
+    `<span class="chip${S.combo >= 3 ? ' hot' : ''}" id="chip-combo" title="Answer streak">${ICON.flame}${S.combo}</span>` +
+    `<span class="chip" title="Days in a row studied">${ICON.cal}${ds}</span>`;
+  $('#barprog').style.width = (manualProgress().frac * 100).toFixed(1) + '%';
+}
+function bumpChips() {
+  renderChips();
+  for (const id of ['chip-xp', 'chip-combo']) { const el = document.getElementById(id); if (el) { el.classList.remove('bump'); void el.offsetWidth; el.classList.add('bump'); } }
+}
+function render() {
+  renderChips();
+  const v = S.view;
+  const html = v === 'study' ? viewStudy() : v === 'quiz' ? viewQuiz() : v === 'result' ? viewResult() : v === 'summary' ? viewSummary() : viewHome();
+  $('#app').innerHTML = html;
+  document.body.dataset.view = v;
+  if (v === 'study') { buildLines(); renderVoiceBar(); renderDock(); } else removeDock();
+  if (v === 'home') renderFoot();
+  if (v === 'quiz') { const f = $('#short-in'); if (f && !S.quiz.cur.result && !S.quiz.cur.grading) setTimeout(() => f.focus(), 30); }
+}
+
+function viewHome() {
+  const dl = daysLeft(), mp = manualProgress(), r = rank(), d = P.days[dayKey()] || { a: 0, c: 0 };
+  const nx = nextSection(), misses = openMisses();
+  let pace = '';
+  if (mp.total) { const left = mp.total - mp.pagesDone; pace = left > 0 && dl > 0 ? `Pace needed: <b>${Math.ceil(left / dl)} pages a day</b> to finish the manual by ${esc(fmtDate(DEADLINE))}.` : ''; }
+  else pace = 'Tell Claude how many pages your manual has, and this will show your daily pace.';
+  const ctaSub = S.sess ? 'Session in progress. Pick up where you left off.' : (rapidPool().length ? '5-question rapid round first, then ' : 'Next up: ') + (nx ? '<b>' + esc(nx.title) + '</b>' : (REAL.length ? 'drilling your weak spots' : 'the practice card'));
+  const totalA = Object.values(P.days).reduce((s, x) => s + (x.a || 0), 0), totalC = Object.values(P.days).reduce((s, x) => s + (x.c || 0), 0);
+  const week = []; for (let k = 6; k >= 0; k--) { const dd = new Date(); dd.setDate(dd.getDate() - k); const rec = P.days[dayKey(dd)]; week.push(`<i class="${rec && rec.a ? 'on' : ''}${k === 0 ? ' today' : ''}" title="${dayKey(dd)}"></i>`); }
+  return `<div class="view">
+  <section class="mission">
+    <div class="mission-top">
+      <div class="countdown">${dl}<small>DAYS LEFT</small></div>
+      <div class="mission-copy">
+        <span class="eyebrow">Deadline ${esc(fmtDate(DEADLINE))}</span>
+        <h1>Pass the license. Land the internship.</h1>
+        <p class="muted" style="font-size:15px">${pace}</p>
+      </div>
+    </div>
+    <div class="mission-cta">
+      ${S.sess
+        ? `<div class="row"><button class="btn primary big grow" data-act="continue">${ICON.play} Continue session</button><button class="btn" data-act="end-session">End session</button></div>`
+        : `<button class="btn primary big" data-act="start-session">${ICON.play} Start session</button>`}
+      <p class="muted" style="font-size:15px">${ctaSub}</p>
+    </div>
+  </section>
+
+  <section class="stats" aria-label="Your stats">
+    <div class="stat"><span class="lbl">Rank</span><b style="font-size:24px">${esc(r.name)}</b><div class="meter yellow"><i style="width:${(r.frac * 100).toFixed(0)}%"></i></div><span class="hint">${r.next ? fmt(r.need) + ' XP to ' + esc(r.next) : 'Top rank'}</span></div>
+    <div class="stat"><span class="lbl">Day streak</span><b>${dayStreak()}</b><div class="dots">${week.join('')}</div></div>
+    <div class="stat"><span class="lbl">Today</span><b>${d.a}<span class="muted" style="font-size:18px"> / ${DAILY_GOAL}</span></b><div class="meter"><i style="width:${Math.min(100, pct(d.a, DAILY_GOAL))}%"></i></div><span class="hint">questions answered</span></div>
+    <div class="stat"><span class="lbl">Accuracy</span><b>${totalA ? pct(totalC, totalA) + '%' : '—'}</b><span class="hint">${fmt(totalA)} answered · best streak ${P.bestCombo}</span></div>
+  </section>
+
+  <section class="panel">
+    <div class="row" style="justify-content:space-between"><h2>Manual progress</h2><span class="mono">${Math.round(mp.frac * 100)}%</span></div>
+    <div class="meter" style="height:14px"><i style="width:${(mp.frac * 100).toFixed(1)}%"></i></div>
+    <p class="muted" style="font-size:15px">${esc(mp.text)}${mp.total ? '' : '. Total manual size not set yet.'}</p>
+  </section>
+
+  ${misses.length ? `<section class="panel">
+    <div class="row" style="justify-content:space-between"><h2>Weak spots</h2><span class="pill weak">${misses.length} open</span></div>
+    <ul class="weaklist">${misses.slice(0, 5).map(id => `<li>${md(Q[id].q)}</li>`).join('')}</ul>
+    <button class="btn" data-act="drill">Drill weak spots now</button>
+  </section>` : ''}
+
+  <section class="panel">
+    <h2>Study cards</h2>
+    ${REAL.length ? groupSections(REAL, nx) : `<div class="empty"><b>No manual pages loaded yet.</b><span class="muted">Send Claude photos of your manual pages. Each batch becomes study cards here, with a quiz after each one.</span></div>`}
+    <div class="secgroup"><h3>Practice</h3>${SECTIONS.filter(s => s.practice).map(s => secRow(s, null)).join('')}</div>
+  </section>
+
+  <div class="foot" id="foot"></div>
+</div>`;
+}
+function groupSections(list, nx) {
+  let html = '', ch = null;
+  for (const s of list) {
+    if (s.chapter !== ch) { if (ch !== null) html += '</div>'; ch = s.chapter; html += `<div class="secgroup"><h3>${esc(ch || 'Cards')}</h3>`; }
+    html += secRow(s, nx);
+  }
+  return html + (ch !== null ? '</div>' : '');
+}
+function secRow(s, nx) {
+  const st = s.practice ? 'practice' : secStatus(s);
+  const weak = (s.questions || []).filter(q => P.q[q.id] && P.q[q.id].open).length;
+  let pill = st === 'pass' ? '<span class="pill pass">Passed</span>' : st === 'fail' ? `<span class="pill fail">Failed ${P.attempts[s.id].last}%</span>` : st === 'practice' ? '<span class="pill new">Try it</span>' : (nx && nx.id === s.id ? '<span class="pill next">Next</span>' : '<span class="pill new">New</span>');
+  if (weak && !s.practice) pill = `<span class="row" style="gap:4px">${pill}<span class="pill weak">${weak} weak</span></span>`;
+  return `<button class="secrow" data-act="open" data-sid="${esc(s.id)}"><span style="min-width:0"><span class="t">${esc(s.title)}</span><br><span class="m">${esc([pagesLabel(s), (s.questions || []).length + ' questions'].filter(Boolean).join(' · '))}</span></span>${pill}</button>`;
+}
+function renderFoot() {
+  const f = $('#foot'); if (!f) return;
+  const syncTxt = { local: 'Progress saved on this device', loading: 'Loading your progress…', slow: 'Can’t reach saved progress yet. Using this device’s copy.', synced: 'Progress saved to your account', error: 'Could not save to your account. Saved on this device.', full: 'Account storage is full. Saved on this device.' }[sync] || '';
+  f.innerHTML = `<span>${esc(syncTxt)}</span><button class="linkish" data-act="sound">${P.settings.sound ? 'Sound on' : 'Sound off'}</button>`;
+}
+function fmtDate(d) { return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }); }
+
+/* ----- study card */
+function sentence(t, i) {
+  let out = '';
+  for (const seg of String(t).split(/(\*\*[^*]+\*\*)/)) {
+    if (!seg) continue;
+    const bold = seg.startsWith('**') && seg.endsWith('**');
+    const txt = bold ? seg.slice(2, -2) : seg;
+    for (const p of txt.split(/(\s+)/)) {
+      if (!p) continue;
+      if (/^\s+$/.test(p)) { out += ' '; continue; }
+      out += `<span class="w${bold ? ' term' : ''}">${esc(p)}</span>`;
+    }
+  }
+  return `<span class="sent" data-i="${i}">${out.trim()}</span>`;
+}
+function figureHtml(s, f, next) {
+  if (!f) return '';
+  const art = f.svg ? f.svg : f.img ? `<img src="${esc(f.img)}" alt="${esc(f.alt || f.title)}" loading="lazy">` : '';
+  return `<figure class="fig">${art ? `<div class="fig-art">${art}</div>` : ''}<figcaption>${sentence('**Figure:** ' + f.title + (/[.!?]$/.test(f.title) ? '' : '.'), next())}${f.photo ? `<span class="fig-ref">In your manual: ${esc(f.photo)}</span>` : ''}${(f.explain || []).length ? `<p>${f.explain.map(x => sentence(x, next())).join(' ')}</p>` : ''}</figcaption></figure>`;
+}
+function viewStudy() {
+  const s = SEC[S.sid]; if (!s) return viewHome();
+  let i = 0; const next = () => i++;
+  let body = '';
+  for (const b of s.body || []) {
+    if (b.h) body += `<h3 class="rh">${sentence(b.h, next())}</h3>`;
+    else if (b.p) body += `<p>${b.p.map(t => sentence(t, next())).join(' ')}</p>`;
+    else if (b.list) body += `<ul>${b.list.map(t => `<li>${sentence(t, next())}</li>`).join('')}</ul>`;
+    else if (b.fig) body += figureHtml(s, (s.figures || []).find(f => f.id === b.fig), next);
+  }
+  const words = collectPlain(s).split(/\s+/).length;
+  const st = s.practice ? null : secStatus(s);
+  return `<div class="view">
+  <div class="row" style="justify-content:space-between">
+    <button class="btn small" data-act="home">${ICON.back} Home</button>
+    ${S.sess ? '<button class="btn small" data-act="end-session">End session</button>' : ''}
+  </div>
+  <article class="label">
+    <div class="label-band"><span>${esc(s.practice ? 'Practice card' : 'Study card')}</span><span>${esc(s.practice ? 'Not from the manual' : (s.chapter || ''))}</span></div>
+    <div class="label-head">
+      <h1>${esc(s.title)}</h1>
+      <div class="label-meta">
+        ${s.pages ? `<span class="mono">${esc(pagesLabel(s))}</span>` : ''}
+        ${s.photos && s.photos.length ? `<span>From ${esc(s.photos.join(', '))}</span>` : ''}
+        <span>About ${Math.max(1, Math.round(words / 150))} min read</span>
+        <span>${(s.questions || []).length} questions</span>
+        ${st === 'pass' ? '<span class="pill pass">Passed</span>' : st === 'fail' ? '<span class="pill fail">Failed last try</span>' : ''}
+      </div>
+    </div>
+    <div class="voicebar" id="voicebar"></div>
+    <div id="reading">${body}</div>
+    ${(s.terms || []).length ? `<div class="terms"><h3>Key terms</h3><dl>${s.terms.map(t => `<div><dt>${md(t.term)}</dt><dd>${md(t.def)}</dd></div>`).join('')}</dl></div>` : ''}
+  </article>
+  <button class="btn primary big" data-act="quiz" data-sid="${esc(s.id)}">Quiz me on this card ${ICON.arrow}</button>
+</div>`;
+}
+function renderVoiceBar() {
+  const vb = $('#voicebar'); if (!vb) return;
+  if (Reader.mode === 'claude') {
+    vb.innerHTML = `<label for="sel-voice">Voice <select id="sel-voice">${Reader.voices.map(v => `<option value="${esc(v)}"${v === P.settings.voice ? ' selected' : ''}>${esc(v[0].toUpperCase() + v.slice(1))}</option>`).join('')}</select></label>
+      <label for="sel-rate">Speed ${rateSelect()}</label><span class="voicenote" id="voicenote"></span>`;
+  } else if (Reader.mode === 'device') {
+    vb.innerHTML = `<label for="sel-rate">Speed ${rateSelect()}</label><span class="voicenote" id="voicenote">The Claude voice is not offered in this browser or app, so Play uses this device's voice. For the Claude voice, open this page in Chrome or Edge on a computer.</span>`;
+  } else if (Reader.mode === 'pending') {
+    vb.innerHTML = `<span class="voicenote" id="voicenote">Loading the Claude voice…</span>`;
+  } else {
+    vb.innerHTML = `<span class="voicenote" id="voicenote">Reading aloud is not available here. For the Claude voice, open this page in Chrome or Edge on a computer.</span>`;
+  }
+  renderVoiceNote();
+}
+function rateSelect() { return `<select id="sel-rate">${[0.8, 0.9, 1, 1.15, 1.3].map(r => `<option value="${r}"${r === P.settings.rate ? ' selected' : ''}>${r}×</option>`).join('')}</select>`; }
+function renderVoiceNote() {
+  const n = $('#voicenote'); if (!n) return;
+  if (Reader.note) { n.textContent = Reader.note; n.style.color = 'var(--warn)'; }
+  else if (Reader.mode === 'claude') { n.textContent = 'Tap any sentence to start reading from there.'; n.style.color = ''; }
+}
+function renderDock() {
+  if (S.view !== 'study') return;
+  let d = $('#dock');
+  if (!d) { d = document.createElement('div'); d.className = 'dock'; d.id = 'dock'; document.body.appendChild(d); }
+  const can = Reader.mode === 'claude' || Reader.mode === 'device' || Reader.mode === 'pending';
+  const st = Reader.state;
+  const label = st === 'idle' ? 'Play' : st === 'paused' ? 'Resume' : 'Pause';
+  const icon = st === 'speaking' ? ICON.pause : ICON.play;
+  d.innerHTML = `<div class="dock-in">
+    <button class="btn primary" data-act="play" ${can ? '' : 'disabled'} aria-label="${label}">${icon} ${label}</button>
+    ${st !== 'idle' ? `<button class="btn" data-act="stop" aria-label="Stop reading">${ICON.stop} Stop</button>` : ''}
+    ${st === 'speaking' ? '<span class="speaking-dot" aria-hidden="true"></span>' : ''}
+    <span class="spacer"></span>
+    <button class="btn${Reader.done ? ' hi' : ''}" id="dock-quiz" data-act="quiz" data-sid="${esc(S.sid)}">Quiz ${ICON.arrow}</button>
+  </div>`;
+}
+function removeDock() { const d = $('#dock'); if (d) d.remove(); }
+
+/* ----- quiz */
+function viewQuiz() {
+  const quiz = S.quiz; if (!quiz) return viewHome();
+  const cur = quiz.cur, q = Q[cur.id], s = SEC[q.sid];
+  const title = quiz.mode === 'rapid' ? 'Rapid round' : quiz.mode === 'drill' ? 'Weak-spot drill' : 'Card quiz';
+  const done = quiz.i + (cur.result ? 1 : 0);
+  const tags = [];
+  if (q.src === 'review') tags.push('<span class="pill review">Manual review question</span>');
+  else tags.push('<span class="pill new">Test-style</span>');
+  if (q.style === 'scenario') tags.push('<span class="pill new">Scenario</span>');
+  if (q.style === 'not') tags.push('<span class="pill new">NOT question</span>');
+  if (cur.retry) tags.push('<span class="pill retry">Missed earlier</span>');
+  else if (P.q[cur.id] && P.q[cur.id].open && isReal(cur.id)) tags.push('<span class="pill weak">Weak spot</span>');
+  let body = '';
+  const R = cur.result;
+  if (q.kind === 'mc') {
+    body = `<div class="choices">${cur.order.map((k, pos) => {
+      let cls = 'choice';
+      if (R) { if (k === q.answer) cls += ' right'; else if (k === cur.picked) cls += ' wrong'; else cls += ' dim'; }
+      return `<button class="${cls}" data-act="pick" data-k="${k}" ${R ? 'disabled' : ''}><span class="k">${LET[pos]}</span><span>${md(q.choices[k])}</span></button>`;
+    }).join('')}</div>`;
+  } else if (q.kind === 'tf') {
+    body = `<div class="tf">${[true, false].map(v => {
+      let cls = 'choice';
+      if (R) { if (v === q.answer) cls += ' right'; else if (v === cur.picked) cls += ' wrong'; else cls += ' dim'; }
+      return `<button class="${cls}" data-act="tf" data-v="${v}" ${R ? 'disabled' : ''}>${v ? 'True' : 'False'}</button>`;
+    }).join('')}</div>`;
+  } else {
+    body = R || cur.grading
+      ? `<div class="typed ${R ? (R.ok ? 'right' : 'wrong') : ''}">${esc(cur.typed)}</div>`
+      : `<form class="short" data-form="short" autocomplete="off"><input id="short-in" type="text" placeholder="Type your answer" aria-label="Your answer" autocapitalize="off" spellcheck="false" enterkeyhint="done"><button class="btn primary" type="submit">Check</button></form>`;
+  }
+  let fb = '';
+  if (cur.grading) fb = `<div class="band wait">Checking…</div><p class="hint">Claude is reading your answer. Spelling does not count.</p>`;
+  else if (R) {
+    const correctText = q.kind === 'mc' ? `${LET[cur.order.indexOf(q.answer)]}. ${q.choices[q.answer]}` : q.kind === 'tf' ? (q.answer ? 'True' : 'False') : q.answer;
+    fb = `<div class="band ${R.ok ? 'ok' : 'bad'}"><span>${R.ok ? 'Right' : 'Wrong'}</span>${R.gain ? `<span class="xp">+${R.gain} XP</span>` : ''}</div>
+    <div class="fb">
+      ${R.ok ? '' : `<p class="ans">Correct answer: ${md(correctText)}</p>`}
+      ${R.why2 ? `<p>${esc(R.why2)}</p>` : ''}
+      ${q.why ? `<p>${md(q.why)}</p>` : ''}
+      <p class="src">Source: ${esc(q.ref || 'not given')}${s && s.pages && !s.practice ? ' · ' + esc(pagesLabel(s)) : ''}</p>
+      ${!R.ok && R.broke >= 3 ? `<p><b>Streak broken at ${R.broke}.</b></p>` : ''}
+      ${!R.ok && !R.practice ? '<p class="hint">This one comes back later. Get it right twice in a row to clear it.</p>' : ''}
+      ${R.by === 'match' && q.kind === 'short' && !R.ok ? '<p class="hint">Graded by matching key words because Claude grading is not available in this view.</p>' : ''}
+    </div>
+    <button class="btn primary big" data-act="next" id="btn-next">${quiz.i + 1 >= quiz.items.length ? 'See results' : 'Next'} ${ICON.arrow}</button>
+    <span class="hint">Press Enter for next.</span>`;
+  }
+  return `<div class="view">
+  <div class="qhead"><span class="eyebrow">${esc(title)}${quiz.sid && SEC[quiz.sid] ? ' · ' + esc(SEC[quiz.sid].title) : ''}</span><span class="row" style="gap:12px"><span class="combo${S.combo >= 3 ? ' on' : ''}">${ICON.flame}${S.combo}</span><span class="mono">${Math.min(quiz.i + 1, quiz.items.length)} / ${quiz.items.length}</span></span></div>
+  <div class="qbar" role="progressbar" aria-valuemin="0" aria-valuemax="${quiz.items.length}" aria-valuenow="${done}"><i style="width:${pct(done, quiz.items.length)}%"></i></div>
+  <section class="qcard">
+    <div class="row" style="gap:6px">${tags.join('')}</div>
+    <h2 class="qtext">${md(q.q)}</h2>
+    ${body}
+    ${fb}
+    ${!R && !cur.grading && q.kind !== 'short' ? `<span class="hint">${q.kind === 'mc' ? 'Keys A to ' + LET[q.choices.length - 1] + ' work too.' : 'Keys T and F work too.'}</span>` : ''}
+  </section>
+  <div class="row"><button class="btn small" data-act="quit-quiz">${ICON.back} Leave quiz</button></div>
+</div>`;
+}
+
+/* ----- results */
+function missList(ids) {
+  return `<ul class="misslist">${ids.map(id => {
+    const q = Q[id]; const a = q.kind === 'mc' ? q.choices[q.answer] : q.kind === 'tf' ? (q.answer ? 'True' : 'False') : q.answer;
+    return `<li><span>${md(q.q)}</span><b>Answer: ${md(a)}</b><span class="src">${esc(q.ref || '')}</span></li>`;
+  }).join('')}</ul>`;
+}
+function viewResult() {
+  const r = S.result; if (!r) return viewHome();
+  const nx = nextSection();
+  const s = r.sid ? SEC[r.sid] : null;
+  const nextBtn = nx ? `<button class="btn primary big" data-act="next-section">Next card: ${esc(nx.title)} ${ICON.arrow}</button>` : (openMisses().length ? `<button class="btn primary big" data-act="drill">Drill weak spots ${ICON.arrow}</button>` : '');
+  const endBtn = S.sess ? '<button class="btn" data-act="end-session">End session and see summary</button>' : '<button class="btn" data-act="home">Home</button>';
+  if (r.mode === 'section') {
+    const pass = r.score === 100;
+    return `<div class="view"><section class="result">
+      <span class="eyebrow">${esc(s ? s.title : 'Card quiz')}</span>
+      <div class="stamp ${pass ? 'ok' : 'bad'}">${pass ? 'Passed' : 'Failed'}</div>
+      <div class="bigscore">${r.right} / ${r.total} · ${r.score}%</div>
+      <p>${pass ? (r.firstPass ? 'Perfect. Card passed. +50 XP.' : 'Perfect again.') : `You missed ${r.total - r.right}. You need 100% to pass. Study the misses, then retake it.`}</p>
+      ${r.missed.length ? missList(r.missed) : ''}
+      <div class="row" style="width:100%">
+        ${pass ? '' : `<button class="btn primary big grow" data-act="quiz" data-sid="${esc(r.sid)}">Retake quiz</button><button class="btn" data-act="open" data-sid="${esc(r.sid)}">Reread the card</button>`}
+      </div>
+      ${pass ? nextBtn : (nx && nx.id !== r.sid ? `<button class="btn" data-act="next-section">Move on for now (stays failed)</button>` : '')}
+      ${endBtn}
+    </section></div>`;
+  }
+  const label = r.mode === 'rapid' ? 'Rapid round' : 'Weak-spot drill';
+  return `<div class="view"><section class="result">
+    <span class="eyebrow">${label}</span>
+    <div class="bigscore">${r.right} / ${r.total} · ${r.score}%</div>
+    <p>${r.score === 100 ? 'Clean sweep.' + (r.bonus ? ' +' + r.bonus + ' XP bonus.' : '') : 'Missed ' + (r.total - r.right) + '. Those stay on your weak list until you get each right twice in a row.'}</p>
+    ${r.missed.length ? missList(r.missed) : ''}
+    ${nextBtn || ''}
+    ${endBtn}
+  </section></div>`;
+}
+function viewSummary() {
+  const x = S.summary; if (!x) return viewHome();
+  const mins = Math.max(1, Math.round(((x.end || Date.now()) - x.start) / 60000));
+  const weak = openMisses();
+  const failedNow = (x.failed || []).filter(id => !P.passed[id]);
+  const nx = nextSection();
+  const li = arr => arr.length ? `<ul class="sumlist">${arr.join('')}</ul>` : '<p class="muted">Nothing.</p>';
+  return `<div class="view"><section class="result">
+    <span class="eyebrow">Session summary · ${mins} min</span>
+    <h1 class="display" style="font-size:40px">${x.a ? (pct(x.c, x.a) >= 90 ? 'Strong session.' : pct(x.c, x.a) >= 70 ? 'Decent. Not good enough yet.' : 'Rough session. Fix the misses.') : 'No questions answered.'}</h1>
+    <div class="sumgrid">
+      <div class="stat"><span class="lbl">Answered</span><b>${x.a}</b></div>
+      <div class="stat"><span class="lbl">Accuracy</span><b>${x.a ? pct(x.c, x.a) + '%' : '—'}</b></div>
+      <div class="stat"><span class="lbl">XP earned</span><b>+${fmt(x.xp)}</b></div>
+      <div class="stat"><span class="lbl">Best streak</span><b>${x.best}</b></div>
+    </div>
+    <div class="panel" style="width:100%"><h2>Mastered</h2>${li([...(x.passed || []).map(id => SEC[id] ? `<li>Passed card: <b>${esc(SEC[id].title)}</b></li>` : ''), ...(x.cleared || []).filter(isReal).map(id => `<li>Cleared: ${md(Q[id].q)}</li>`)].filter(Boolean))}</div>
+    <div class="panel" style="width:100%"><h2>Weak on</h2>${li([...failedNow.map(id => SEC[id] ? `<li>Card not passed: <b>${esc(SEC[id].title)}</b></li>` : ''), ...weak.slice(0, 10).map(id => `<li>${md(Q[id].q)} <span class="muted">(${esc(Q[id].ref || '')})</span></li>`)].filter(Boolean))}${weak.length > 10 ? `<p class="muted">Plus ${weak.length - 10} more on your weak list.</p>` : ''}</div>
+    <div class="panel" style="width:100%"><h2>Next</h2><p>${nx ? `Card: <b>${esc(nx.title)}</b> (${esc(pagesLabel(nx))}).` : REAL.length ? 'Every loaded card is passed. Send Claude the next pages of your manual.' : 'Send Claude photos of your first manual pages.'}${weak.length ? ` Your next session opens with a rapid round that hits your ${weak.length} weak question${weak.length === 1 ? '' : 's'} first.` : ''}</p></div>
+    <button class="btn primary" data-act="home">Back to home</button>
+  </section></div>`;
+}
+
+/* ================= toast ================= */
+let toastT = null;
+function toast(msg) { const t = $('#toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove('show'), 2600); }
+
+/* ================= events ================= */
+const ACT = {
+  home: () => go('home'),
+  'start-session': () => startSession(),
+  continue: () => { if (S.quiz) go('quiz'); else goNext(); },
+  'end-session': () => endSession(),
+  open: b => openSection(b.dataset.sid),
+  quiz: b => { const s = SEC[b.dataset.sid]; if (s) startQuiz('section', s.id, sectionQuizIds(s)); },
+  pick: b => pick(parseInt(b.dataset.k, 10)),
+  tf: b => pick(b.dataset.v === 'true'),
+  next: () => nextQ(),
+  'quit-quiz': () => { S.quiz = null; go('home'); },
+  'next-section': () => goNext(),
+  drill: () => startQuiz('drill', null, openMisses().slice(0, 15)),
+  play: () => playToggle(),
+  stop: () => Reader.stop(),
+  sound: () => { P.settings.sound = !P.settings.sound; save(); renderFoot(); },
+};
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-act]');
+  if (b && !b.disabled) { ACT[b.dataset.act] && ACT[b.dataset.act](b, e); return; }
+  const sent = e.target.closest('#reading .sent');
+  if (sent && (Reader.mode === 'claude' || Reader.mode === 'device')) play(parseInt(sent.dataset.i, 10));
+});
+document.addEventListener('submit', e => { if (e.target.matches('[data-form="short"]')) { e.preventDefault(); submitShort(); } });
+document.addEventListener('change', e => {
+  if (e.target.id === 'sel-voice') { P.settings.voice = e.target.value; save(); if (Reader.state !== 'idle' && Reader.cur >= 0) play(Reader.cur); }
+  if (e.target.id === 'sel-rate') {
+    P.settings.rate = parseFloat(e.target.value) || 1; save();
+    if (Reader.mode === 'claude' && Reader.t && Reader.t.setRate) { try { const r = Reader.t.setRate(P.settings.rate); if (r && r.catch) r.catch(() => {}); } catch (x) {} }
+    if (Reader.mode === 'device' && Reader.state !== 'idle' && Reader.cur >= 0) play(Reader.cur);
+  }
+});
+document.addEventListener('keydown', e => {
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  if (e.target.matches && e.target.matches('input, textarea, select')) return;
+  if (S.view === 'quiz' && S.quiz) {
+    const cur = S.quiz.cur, q = Q[cur.id];
+    if (!cur.result && !cur.grading) {
+      const k = e.key.toLowerCase();
+      if (q.kind === 'mc') {
+        let pos = LET.toLowerCase().indexOf(k); if (pos < 0 && /^[1-6]$/.test(k)) pos = parseInt(k, 10) - 1;
+        if (pos >= 0 && pos < cur.order.length) { e.preventDefault(); pick(cur.order[pos]); }
+      } else if (q.kind === 'tf') { if (k === 't') pick(true); if (k === 'f') pick(false); }
+    } else if (cur.result && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); nextQ(); }
+  } else if (S.view === 'study' && e.key === ' ' && !(e.target.closest && e.target.closest('button'))) { e.preventDefault(); playToggle(); }
+});
+
+/* ================= boot (with hot reload state) ================= */
+function snapshotState() { return { view: S.view, sid: S.sid, quiz: S.quiz, result: S.result, summary: S.summary, combo: S.combo }; }
+function start(data) {
+  try {
+    if (data && data.view) {
+      const okQuiz = !data.quiz || data.quiz.items.every(it => Q[it.id]);
+      if (okQuiz && (!data.sid || SEC[data.sid])) { Object.assign(S, { view: data.view, sid: data.sid, quiz: data.quiz, result: data.result, summary: data.summary, combo: data.combo || 0 }); if (S.view === 'quiz' && !S.quiz) S.view = 'home'; }
+    }
+  } catch (e) { S.view = 'home'; }
+  render();
+  initDb();
+}
+try { const h = window.claude && window.claude.hot; if (h && typeof h.snapshot === 'function') h.snapshot(snapshotState); } catch (e) {}
+let started = false;
+const startOnce = data => { if (started) return; started = true; start(data); };
+const hot = window.claude && window.claude.hot;
+if (hot && typeof hot.ready === 'function') { try { hot.ready(startOnce); } catch (e) {} setTimeout(() => startOnce({}), 1500); }
+else startOnce((hot && hot.data) || {});
+})();
+</script>

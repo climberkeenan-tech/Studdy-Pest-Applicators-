@@ -1,0 +1,110 @@
+{
+  "manual": {
+    "title": "Pesticide Applicator Manual",
+    "state": null,
+    "category": null,
+    "totalPages": null,
+    "deadline": "2027-01-11"
+  },
+  "sections": [
+    {
+      "id": "practice",
+      "practice": true,
+      "chapter": "Practice card",
+      "title": "How this study tool works",
+      "pages": null,
+      "photos": [],
+      "body": [
+        {"p": [
+          "This card is practice. It is **not** from your manual, and it does not count toward your progress.",
+          "Press **Play** to hear it read in a Claude voice.",
+          "The **yellow highlight** follows the voice, word by word.",
+          "Tap any sentence to start reading from that spot."
+        ]},
+        {"h": "How you pass"},
+        {"p": [
+          "After each card, you get a quiz, one question at a time.",
+          "The manual's own review questions come first.",
+          "Then come new questions written like the real test, including scenario questions and **NOT** questions.",
+          "You pass a card only at **100 percent**."
+        ]},
+        {"h": "How misses work"},
+        {"p": [
+          "Every question you miss comes back later in the session.",
+          "It comes back again next session.",
+          "It stays on your weak list until you get it right **twice in a row**."
+        ]},
+        {"h": "How a session runs"},
+        {"list": [
+          "Each session starts with a **5-question rapid round** from old cards.",
+          "Then you study the next card and take its quiz.",
+          "Each session ends with what you mastered, what you are weak on, and what is next."
+        ]},
+        {"fig": "loop"}
+      ],
+      "figures": [
+        {
+          "id": "loop",
+          "title": "The study loop",
+          "photo": null,
+          "svg": "<svg viewBox=\"0 0 640 150\" role=\"img\" aria-label=\"Rapid round, then study card, then quiz, then pass at 100 percent or retake\"><g font-family=\"var(--f-display)\" font-size=\"22\" font-weight=\"700\" text-anchor=\"middle\"><rect class=\"f-card\" x=\"6\" y=\"40\" width=\"130\" height=\"64\" rx=\"8\"/><text class=\"f-ink\" x=\"71\" y=\"79\">RAPID ROUND</text><rect class=\"f-card\" x=\"170\" y=\"40\" width=\"130\" height=\"64\" rx=\"8\"/><text class=\"f-ink\" x=\"235\" y=\"79\">STUDY CARD</text><rect class=\"f-card\" x=\"334\" y=\"40\" width=\"130\" height=\"64\" rx=\"8\"/><text class=\"f-ink\" x=\"399\" y=\"79\">QUIZ</text><rect class=\"f-ok\" x=\"498\" y=\"18\" width=\"136\" height=\"50\" rx=\"8\"/><text class=\"f-on\" x=\"566\" y=\"50\">100% = PASS</text><rect class=\"f-bad\" x=\"498\" y=\"82\" width=\"136\" height=\"50\" rx=\"8\"/><text class=\"f-on\" x=\"566\" y=\"114\">MISS = RETAKE</text></g><g class=\"f-arrow\" stroke-width=\"3\" fill=\"none\"><path d=\"M138 72h26\"/><path d=\"M302 72h26\"/><path d=\"M466 64l26-20\"/><path d=\"M466 80l26 20\"/></g></svg>",
+          "explain": [
+            "The loop is simple: rapid round, study card, quiz.",
+            "A perfect quiz passes the card. Any miss means you retake it."
+          ]
+        }
+      ],
+      "terms": [
+        {"term": "Weak list", "def": "Questions you missed that you have not yet answered right twice in a row."},
+        {"term": "Rapid round", "def": "Five quick questions from old cards at the start of every session."}
+      ],
+      "questions": [
+        {
+          "id": "practice-q1",
+          "src": "test",
+          "kind": "mc",
+          "q": "What score do you need to pass a card?",
+          "choices": ["80 percent", "90 percent", "100 percent", "70 percent"],
+          "answer": 2,
+          "ref": "Practice card, 'How you pass'",
+          "why": "Anything under 100 percent is a fail."
+        },
+        {
+          "id": "practice-q2",
+          "src": "test",
+          "kind": "tf",
+          "q": "A missed question leaves your weak list after you answer it right once.",
+          "answer": false,
+          "ref": "Practice card, 'How misses work'",
+          "why": "You have to get it right twice in a row."
+        },
+        {
+          "id": "practice-q3",
+          "src": "test",
+          "kind": "mc",
+          "style": "not",
+          "q": "Which of these is NOT part of a study session?",
+          "choices": [
+            "A 5-question rapid round from old cards",
+            "A quiz after each card",
+            "A timed two-hour mock exam",
+            "A summary of what you mastered and what is weak"
+          ],
+          "answer": 2,
+          "ref": "Practice card, 'How a session runs'",
+          "why": "Sessions are rapid round, cards, quizzes, and a summary. There is no timed mock exam."
+        },
+        {
+          "id": "practice-q4",
+          "src": "test",
+          "kind": "short",
+          "q": "Type it: how many times in a row must you get a missed question right to clear it?",
+          "answer": "twice",
+          "accept": ["2", "two", "two times", "2 times", "twice in a row", "two in a row"],
+          "ref": "Practice card, 'How misses work'",
+          "why": "Twice in a row clears it."
+        }
+      ]
+    }
+  ]
+}

@@ -10,10 +10,17 @@ The license is required for a summer internship. Be blunt. If they fail, say so.
 Manual: **Pennsylvania Pesticide Applicator Certification Core Manual**, Second Edition, 2014
 (Penn State Extension, Pesticide Education Program). Exam: Core. Total page count: not given yet.
 
+The user is in Pennsylvania and is studying for the **Core** exam only, for now.
+Pennsylvania Core exam (per a search summary of the PA Dept. of Agriculture page, which this
+session's network could not open directly): 50 multiple-choice questions, 35 correct (70%) to pass.
+
 ## Status
-- Chapter 1, Pest Management (pp. 1–15): 25 cards built (`c01-s01` to `c01-s25`), test-style questions only.
-- Waiting on: Chapter 1 review questions from the user. Add them as `"src": "review"` questions,
-  ids `c01-sNN-rK`, placed FIRST in the card whose pages hold the answer, in the manual's order.
+- Chapter 1, Pest Management (pp. 1–15): 25 cards (`c01-s01` to `c01-s25`), 124 test-style questions.
+- Chapter 1 review questions (pp. 17–18, 10 questions) added as `"src": "review"` (ids `c01-sNN-rK`),
+  first in the card that holds the answer. The manual's key is in **Appendix A**, which the user has
+  not sent. The answers were taken from the chapter text. When Appendix A arrives, check every
+  review answer against it and report any disagreement.
+- Next: Chapter 2 pages. Ask for the manual's total page count (still unknown).
 
 ## Rules for every session (the user's own rules)
 1. The user sends photos of manual pages. Work **only** from those pages.

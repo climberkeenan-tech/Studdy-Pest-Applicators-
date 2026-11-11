@@ -445,6 +445,9 @@
         {"id": "p6-ichneumonid", "title": "Biological control: Ichneumonid wasp.", "page": "p. 6", "imgFile": "p6-ichneumonid.jpg"}
       ],
       "questions": [
+        {"id": "c01-s08-r1", "src": "review", "kind": "mc", "q": "Which statement about biological control methods is **true**?",
+         "choices": ["Modifying the environment to enhance natural enemies is recommended in biological control.", "Biological control involves importing exotic pests to control natural enemies.", "Using several cultural practices and a wide variety of pesticides works best in biological control."], "answer": 0,
+         "ref": "Review question 3, p. 17. Answer in the text: p. 6, 'Biological Control'", "why": "Keeping native natural enemies healthy, for example with pollen and nectar plants, is biological control. B has it backwards."},
         {"id": "c01-s08-t1", "src": "test", "kind": "mc", "q": "Biological control is the use of:",
          "choices": ["Natural enemies, such as predators, parasites, pathogens, and competitors", "Plant-derived chemicals", "Plants bred to resist pests", "Traps and barriers"], "answer": 0,
          "ref": "p. 5, 'Biological Control'", "why": "Biological control uses natural enemies to control pests and their damage."},
@@ -625,6 +628,9 @@
         {"id": "p8-aquatic", "title": "Sanitation: Aquatic herbicide application.", "page": "p. 8", "imgFile": "p8-aquatic.jpg"}
       ],
       "questions": [
+        {"id": "c01-s11-r1", "src": "review", "kind": "mc", "q": "Which statement about cultural control practices is **true**?",
+         "choices": ["They reduce pest establishment, reproduction, and survival.", "They use naturally derived and/or synthesized chemicals to control pests.", "They involve the release of parasites and predators found in foreign countries."], "answer": 0,
+         "ref": "Review question 5, p. 17. Answer in the text: p. 7, 'Cultural Control'", "why": "B describes chemical control and C describes biological control."},
         {"id": "c01-s11-t1", "src": "test", "kind": "mc", "q": "Cultural controls are practices that:",
          "choices": ["Reduce pest establishment, reproduction, dispersal, and survival", "Use natural enemies to control pests", "Use laws to stop pest movement", "Use chemicals to kill pests"], "answer": 0,
          "ref": "p. 7, 'Cultural Control'", "why": "Cultural controls reduce pest establishment, reproduction, dispersal, and survival."},
@@ -670,6 +676,9 @@
         ]}
       ],
       "questions": [
+        {"id": "c01-s12-r1", "src": "review", "kind": "mc", "q": "Making use of plant varieties that are naturally resistant to insect feeding is an example of which type of pest management method?",
+         "choices": ["Biological.", "Genetic.", "Regulatory."], "answer": 1,
+         "ref": "Review question 2, p. 17. Answer in the text: p. 8, 'Genetic Control'", "why": "Plant varieties naturally resistant to insects, pathogens, or nematodes are genetic control."},
         {"id": "c01-s12-t1", "src": "test", "kind": "mc", "q": "Bt corn is an example of which kind of pest control?",
          "choices": ["Biological control", "Genetic control", "Chemical control", "Cultural control"], "answer": 1,
          "ref": "p. 8, 'Genetic Control'", "why": "The manual lists Bt corn and potatoes as examples of genetic control."},
@@ -719,6 +728,12 @@
         {"id": "p8-sticky", "title": "Mechanical control: Sticky trap.", "page": "p. 8", "imgFile": "p8-sticky.jpg"}
       ],
       "questions": [
+        {"id": "c01-s13-r1", "src": "review", "kind": "mc", "q": "Using barriers to prevent pests from getting into an area is an example of which type of pest management method?",
+         "choices": ["Biological.", "Mechanical.", "Genetic."], "answer": 1,
+         "ref": "Review question 1, p. 17. Answer in the text: p. 8, 'Mechanical/Physical Control'", "why": "Fences, screens, mesh, and sealed openings that keep pests out are mechanical/physical controls."},
+        {"id": "c01-s13-r2", "src": "review", "kind": "mc", "q": "Sealing cracks and crevices and small openings in buildings is an example of which type of pest management method?",
+         "choices": ["Physical.", "Genetic.", "Biological."], "answer": 0,
+         "ref": "Review question 4, p. 17. Answer in the text: p. 8, 'Mechanical/Physical Control'", "why": "Sealing cracks, crevices, and small openings to exclude pests is a physical control."},
         {"id": "c01-s13-t1", "src": "test", "kind": "mc", "q": "Rodent traps are an example of:",
          "choices": ["Mechanical control", "Biological control", "Regulatory control", "Genetic control"], "answer": 0,
          "ref": "p. 8, 'Mechanical/Physical Control'", "why": "The manual names rodent traps as examples of mechanical control."},
@@ -773,6 +788,9 @@
         {"id": "p9-usda", "title": "Regulatory control: USDA inspections.", "page": "p. 9", "imgFile": "p9-usda.jpg"}
       ],
       "questions": [
+        {"id": "c01-s14-r1", "src": "review", "kind": "mc", "q": "Monitoring pests at airports and ocean ports that pose a serious threat to public health or widespread damage to crops or animals is an example of which type of pest management method?",
+         "choices": ["Regulatory.", "Genetic.", "Biological."], "answer": 0,
+         "ref": "Review question 6, p. 17. Answer in the text: p. 9, 'Regulatory Control'", "why": "Agencies monitoring airports and ocean ports is quarantine, a regulatory control."},
         {"id": "c01-s14-t1", "src": "test", "kind": "mc", "q": "What is quarantine?",
          "choices": ["A pest control process designed to prevent entry of certain pests into pest-free areas", "The elimination of a pest from a designated area", "Killing pests with refrigeration", "Breeding plants to resist pests"], "answer": 0,
          "ref": "p. 9, 'Regulatory Control'", "why": "Quarantine keeps certain pests out of pest-free areas, and also stops their movement within a state."},
@@ -1037,6 +1055,9 @@
         ]}
       ],
       "questions": [
+        {"id": "c01-s19-r1", "src": "review", "kind": "mc", "q": "Which statement about action thresholds is **true**?",
+         "choices": ["The IPM technician needs to implement control measures below the action threshold level.", "The action threshold for a pest may be set at a zero pest population density.", "In an urban landscape, action thresholds are usually more related to economics than aesthetics."], "answer": 1,
+         "ref": "Review question 9, p. 18. Answer in the text: pp. 11–12, 'Pest Population Thresholds'", "why": "A threshold can be zero. Below the threshold no controls are used, and urban thresholds weigh ecological and aesthetic roles too."},
         {"id": "c01-s19-t1", "src": "test", "kind": "mc", "q": "What is an action threshold?",
          "choices": ["The pest level at which some type of pest management action must be taken", "The cost of a pesticide", "The date pesticides must be applied", "The level at which pests become resistant"], "answer": 0,
          "ref": "p. 11, 'Pest Population Thresholds'", "why": "It is a predetermined pest level deemed unacceptable."},
@@ -1087,6 +1108,9 @@
         ]}
       ],
       "questions": [
+        {"id": "c01-s20-r1", "src": "review", "kind": "mc", "q": "Which statement about pest management strategies in IPM is **true**?",
+         "choices": ["The goal is to prevent pests from reaching damaging levels.", "Eradication is never the goal of an IPM program.", "Nonchemical methods are short-term solutions to control pests."], "answer": 0,
+         "ref": "Review question 7, p. 17. Answer in the text: p. 10, IPM goal, and p. 12, 'Develop the pest management goal'", "why": "Eradication is sometimes, though rarely, the goal, and nonchemical methods may give longer, more permanent control."},
         {"id": "c01-s20-t1", "src": "test", "kind": "mc", "q": "What does the manual say to consider FIRST when developing a pest management strategy?",
          "choices": ["Nonchemical methods", "The strongest pesticide available", "Eradication", "Fumigation"], "answer": 0,
          "ref": "p. 12, 'Develop the pest management goal'", "why": "Nonchemical methods may provide longer and more permanent control, so consider them first."},
@@ -1139,6 +1163,9 @@
         ]}
       ],
       "questions": [
+        {"id": "c01-s21-r1", "src": "review", "kind": "mc", "q": "Which would be considered a preventive pest management strategy?",
+         "choices": ["Planting weed- and disease-free seed on an athletic field.", "Releasing natural enemies to help reduce pest populations.", "Removing a pest that is a public health concern from an area."], "answer": 0,
+         "ref": "Review question 8, p. 17. Answer in the text: p. 12, 'Prevention'", "why": "Clean seed is prevention. Releasing natural enemies suppresses, and removing a pest from an area is eradication."},
         {"id": "c01-s21-t1", "src": "test", "kind": "mc", "q": "What is the goal of most pesticide applications?",
          "choices": ["Suppression", "Eradication", "Prevention", "Quarantine"], "answer": 0,
          "ref": "p. 12, 'Suppression'", "why": "Suppression is the goal of most pesticide applications."},
@@ -1258,6 +1285,9 @@
          ]}
       ],
       "questions": [
+        {"id": "c01-s23-r1", "src": "review", "kind": "mc", "q": "Which would increase the likelihood of pesticide resistance?",
+         "choices": ["An insect that has one generation per year.", "Continual use of pesticides from the same chemical class.", "Applying a pesticide that has little or no residual effect."], "answer": 1,
+         "ref": "Review question 10, p. 18. Answer in the text: p. 14, 'Pesticide Resistance'", "why": "Many generations and greater persistence raise the chances, so A and C lower them."},
         {"id": "c01-s23-t1", "src": "test", "kind": "mc", "q": "What is pesticide resistance?",
          "choices": ["The ability of a pest to tolerate a pesticide that once controlled it", "A pesticide that lasts a long time", "A crop that tolerates herbicides", "The time it takes a pesticide to break down"], "answer": 0,
          "ref": "p. 14, 'Pesticide Resistance'", "why": "Resistance is a pest's ability to tolerate a pesticide that once controlled it."},

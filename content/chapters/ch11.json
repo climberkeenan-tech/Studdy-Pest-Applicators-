@@ -1,0 +1,909 @@
+{
+  "chapter": "Chapter 11 · Pesticide Application Procedures",
+  "pages": [157, 169],
+  "sections": [
+    {
+      "id": "c11-s01",
+      "chapter": "Chapter 11 · Pesticide Application Procedures",
+      "title": "Read the label first, then pick a method",
+      "pages": [157, 157],
+      "body": [
+        {"box": "Learning objectives", "p": ["After studying this chapter, you should be able to do the following."], "list": [
+          "Name several different application procedures and types of equipment.",
+          "Discuss appropriate safety systems, for example, closed mixing and loading, enclosed cab, and pesticide containment.",
+          "Identify the factors, for example, nozzles, volumes, pressures, and speeds, that affect calibration.",
+          "Explain the importance of calibrating application equipment.",
+          "Show how to calculate the size of the application area.",
+          "Indicate how to determine the pesticide application rate.",
+          "Demonstrate how to determine the amount of pesticide concentrate and diluent to use.",
+          "Explain how to choose appropriate drift reduction practices."
+        ]},
+        {"p": [
+          "Today's pest management practices require modern equipment to apply a variety of pesticides.",
+          "Pesticides may be applied as **sprays**, **dusts**, **granules**, **gases (vapors)**, **fogs**, **baits**, **rubs**, or **dips**.",
+          "The vast array of application equipment must be matched to the pesticide as well as to the size and type of the job.",
+          "To make an effective, safe, and efficient application, **read the label first**.",
+          "In addition, you must properly **select, operate, calibrate, and maintain** your equipment."
+        ]},
+        {"h": "Application methods"},
+        {"p": [
+          "The pesticide application method you choose depends on the nature and habits of the **target pest**, characteristics of the **target site**, properties of the **pesticide**, suitability of the **application equipment**, and **cost and efficiency** of alternative methods.",
+          "Your choice is often **predetermined** by one or more of these factors."
+        ]}
+      ],
+      "questions": [
+        {"id": "c11-s01-t1", "src": "test", "kind": "mc", "q": "To make an effective, safe, and efficient application, what does the manual tell you to do first?",
+         "choices": ["Calibrate the sprayer", "Read the label", "Check the wind speed", "Put on your PPE"], "answer": 1,
+         "ref": "p. 157, chapter introduction", "why": "The manual says it in bold italics: read the label first."},
+        {"id": "c11-s01-t2", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT listed as a factor that the choice of application method depends on?",
+         "choices": ["Nature and habits of the target pest", "Characteristics of the target site", "Cost and efficiency of alternative methods", "The color of the pesticide formulation"], "answer": 3,
+         "ref": "p. 157, 'Application Methods'", "why": "The listed factors are pest, site, pesticide properties, equipment suitability, and cost and efficiency."},
+        {"id": "c11-s01-t3", "src": "test", "kind": "tf", "q": "According to the manual, pesticides may be applied as rubs or dips.", "answer": true,
+         "ref": "p. 157, chapter introduction", "why": "The list is sprays, dusts, granules, gases (vapors), fogs, baits, rubs, or dips."},
+        {"id": "c11-s01-t4", "src": "test", "kind": "mc", "style": "scenario", "q": "A new coworker says you can always pick any application method you like. What does the manual say?",
+         "choices": ["That is correct; the method is personal preference", "Your choice is often predetermined by one or more factors, such as the pest, site, pesticide, equipment, and cost", "Only the state agency chooses the method", "The method is always set by the equipment dealer"], "answer": 1,
+         "ref": "p. 157, 'Application Methods'", "why": "The manual says your choice is often predetermined by one or more of those factors."},
+        {"id": "c11-s01-t5", "src": "test", "kind": "mc", "q": "Besides reading the label, what four things must you do with your equipment?",
+         "choices": ["Buy, borrow, test, and return it", "Select, operate, calibrate, and maintain it", "Paint, label, lock, and store it", "Clean, weigh, register, and insure it"], "answer": 1,
+         "ref": "p. 157, chapter introduction", "why": "You must properly select, operate, calibrate, and maintain your equipment."}
+      ]
+    },
+    {
+      "id": "c11-s02",
+      "chapter": "Chapter 11 · Pesticide Application Procedures",
+      "title": "Common application methods",
+      "pages": [157, 158],
+      "body": [
+        {"p": ["The following are some common application methods."]},
+        {"list": [
+          "**Band application**: applying a pesticide in parallel strips or bands, such as between or over rows of crops.",
+          "**Basal application**: directing herbicides to the lower portions of brush or small trees.",
+          "**Broadcast application**: uniformly applying a pesticide to an entire area or field.",
+          "**Crack-and-crevice application**: placing small amounts of pesticide into cracks and crevices in buildings, such as along baseboards and in cabinets.",
+          "**Directed-spray application**: specifically targeting pests to minimize pesticide contact with nontarget plants and animals.",
+          "**Foliar application**: directing pesticide to the leafy portions of a plant.",
+          "**Rope-wick or wiper treatments**: releasing pesticides onto a device that is wiped onto weeds taller than the crop, or wiped selectively onto individual weeds in an ornamental planting bed.",
+          "**Soil application**: placing pesticide directly on or in the soil instead of on a growing plant.",
+          "**Soil incorporation**: using tillage, rainfall, or irrigation equipment to move pesticide into the soil.",
+          "**Soil injection**: applying a pesticide under pressure beneath the soil surface.",
+          "**Space treatment**: applying a pesticide in an enclosed area.",
+          "**Spot treatment**: applying a pesticide to small, distinct areas.",
+          "**Tree injection**: applying pesticides under the bark of trees."
+        ]},
+        {"gallery": ["p158-broadcast", "p158-crack", "p158-foliar"]}
+      ],
+      "figures": [
+        {"id": "p158-broadcast", "title": "Broadcast application.", "page": "p. 158", "imgFile": "p158-broadcast.jpg"},
+        {"id": "p158-crack", "title": "Crack and crevice application.", "page": "p. 158", "imgFile": "p158-crack.jpg"},
+        {"id": "p158-foliar", "title": "Foliar application.", "page": "p. 158", "imgFile": "p158-foliar.jpg"}
+      ],
+      "questions": [
+        {"id": "c11-s02-r1", "src": "review", "kind": "mc", "q": "Which application method involves uniformly applying a pesticide to an entire area or field?",
+         "choices": ["Broadcast.", "Band.", "Directed spray."], "answer": 0,
+         "ref": "Review question 1, p. 169. Answer in the text: p. 158, broadcast application", "why": "Broadcast is uniform over an entire area or field; band is parallel strips."},
+        {"id": "c11-s02-r2", "src": "review", "kind": "mc", "q": "Which type of pesticide application would you use to control cockroaches inside buildings?",
+         "choices": ["Basal.", "Band.", "Crack and crevice."], "answer": 2,
+         "ref": "Review question 2, p. 169. Answer in the text: p. 158, crack-and-crevice application", "why": "Crack-and-crevice places small amounts into cracks and crevices in buildings, such as along baseboards and in cabinets."},
+        {"id": "c11-s02-t1", "src": "test", "kind": "mc", "style": "scenario", "q": "You are directing an herbicide only at the lower portions of brush and small trees along a fence. What method is this?",
+         "choices": ["Foliar application", "Basal application", "Space treatment", "Broadcast application"], "answer": 1,
+         "ref": "p. 158, basal application", "why": "Basal application directs herbicides to the lower portions of brush or small trees."},
+        {"id": "c11-s02-t2", "src": "test", "kind": "mc", "style": "not", "q": "Which of these methods does NOT put pesticide on, in, or under the soil?",
+         "choices": ["Soil incorporation", "Soil injection", "Tree injection", "Soil application"], "answer": 2,
+         "ref": "p. 158, application methods list", "why": "Tree injection applies pesticides under the bark of trees."},
+        {"id": "c11-s02-t3", "src": "test", "kind": "mc", "q": "Which method releases pesticide onto a device that is wiped onto weeds taller than the crop?",
+         "choices": ["Rope-wick or wiper treatment", "Directed-spray application", "Band application", "Spot treatment"], "answer": 0,
+         "ref": "p. 158, rope-wick or wiper treatments", "why": "Rope-wick or wiper treatments wipe pesticide onto taller weeds or onto individual weeds in a bed."},
+        {"id": "c11-s02-t4", "src": "test", "kind": "tf", "q": "A spot treatment is applying a pesticide in an enclosed area.", "answer": false,
+         "ref": "p. 158, space treatment and spot treatment", "why": "That is a space treatment. A spot treatment is small, distinct areas."},
+        {"id": "c11-s02-t5", "src": "test", "kind": "mc", "q": "What is the purpose of a directed-spray application?",
+         "choices": ["To cover the entire field evenly", "To minimize pesticide contact with nontarget plants and animals", "To move pesticide into the soil", "To treat an enclosed space"], "answer": 1,
+         "ref": "p. 158, directed-spray application", "why": "Directed spray specifically targets pests to minimize contact with nontarget plants and animals."}
+      ]
+    },
+    {
+      "id": "c11-s03",
+      "chapter": "Chapter 11 · Pesticide Application Procedures",
+      "title": "Closed systems and mechanical loading",
+      "pages": [158, 159],
+      "body": [
+        {"h": "Safety systems"},
+        {"p": [
+          "**Closed mixing and loading systems**, **enclosed application systems** (for example, enclosed cabs), and **pesticide containment systems** are excellent investments if you use large quantities of pesticides or the kind that is very hazardous to humans or to the environment."
+        ]},
+        {"box": "Closed systems...", "list": [
+          "Increase handler safety.",
+          "Reduce the need for some personal protective equipment.",
+          "Decrease the occurrence of spills.",
+          "Provide a more accurate measurement of pesticide concentrate, which reduces overdosing or underdosing."
+        ]},
+        {"h": "Closed mixing and loading systems"},
+        {"p": [
+          "Closed mixing and loading systems are designed to prevent pesticides from contacting handlers or other persons during mixing and loading.",
+          "Sometimes the label of pesticides with a high risk of causing human health effects may **require** the use of a closed mixing and loading system.",
+          "There are **two primary types** of closed mixing and loading systems.",
+          "One type uses **mechanical devices** to deliver the pesticide from the container to the equipment.",
+          "The other type uses **water-soluble packaging**."
+        ]},
+        {"h": "Mechanical systems"},
+        {"p": [
+          "Mechanical systems often consist of a series of interconnected equipment parts that allow for the safe removal of a pesticide concentrate from its original container, either by **gravity** or by **suction**.",
+          "These systems minimize exposure when rinsing the empty container and transferring the pesticide and rinsate to the application equipment.",
+          "Mechanical systems are often custom-made with components from several commercial sources.",
+          "These systems are available for containers as small as **2.5 gallons**.",
+          "Because pesticide container openings vary in shape and size, **no single closed system can be used with all containers**."
+        ]},
+        {"fig": "p159-closed"},
+        {"p": [
+          "A mechanical loading system is often used with **minibulk containers**.",
+          "These containers range in volume from **40 to 330 gallons** and are adapted to closed systems.",
+          "Typically, pump-and-drive units deliver the product.",
+          "A meter allows accurate measuring from the minibulk tank to the sprayer.",
+          "Minibulks usually must be **returned to the dealer for refilling**.",
+          "This process eliminates the need to triple rinse or pressure rinse multiple small containers and reduces the volume of used plastic containers."
+        ]},
+        {"fig": "p159-minibulk"}
+      ],
+      "figures": [
+        {"id": "p159-closed", "title": "A closed loading system.", "page": "p. 159", "imgFile": "p159-closed.jpg"},
+        {"id": "p159-minibulk", "title": "Mini-bulk tank.", "page": "p. 159", "imgFile": "p159-minibulk.jpg"}
+      ],
+      "questions": [
+        {"id": "c11-s03-t1", "src": "test", "kind": "mc", "q": "Minibulk containers range in volume from:",
+         "choices": ["2.5 to 30 gallons", "40 to 330 gallons", "100 to 500 gallons", "5 to 55 gallons"], "answer": 1,
+         "ref": "p. 159, 'Mechanical Systems'", "why": "Minibulks range from 40 to 330 gallons."},
+        {"id": "c11-s03-t2", "src": "test", "kind": "tf", "q": "One standard closed system can be used with all pesticide containers.", "answer": false,
+         "ref": "p. 159, 'Mechanical Systems'", "why": "Container openings vary in shape and size, so no single closed system fits all containers."},
+        {"id": "c11-s03-t3", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT a benefit of closed systems listed in the manual's box?",
+         "choices": ["Increase handler safety", "Decrease the occurrence of spills", "Eliminate the need for all personal protective equipment", "Provide a more accurate measurement of pesticide concentrate"], "answer": 2,
+         "ref": "p. 158, box 'Closed systems...'", "why": "Closed systems reduce the need for some PPE. They do not eliminate it."},
+        {"id": "c11-s03-t4", "src": "test", "kind": "mc", "style": "scenario", "q": "You buy a product with a high risk of causing human health effects. What might its label require during mixing and loading?",
+         "choices": ["A closed mixing and loading system", "A drop spreader", "A rope-wick applicator", "A rotary spreader"], "answer": 0,
+         "ref": "p. 158, 'Closed Mixing and Loading Systems'", "why": "Labels of high-risk pesticides may require a closed mixing and loading system."},
+        {"id": "c11-s03-t5", "src": "test", "kind": "mc", "q": "What are the two primary types of closed mixing and loading systems?",
+         "choices": ["Mechanical devices and water-soluble packaging", "Enclosed cabs and containment pads", "Gravity feed and rotary spreaders", "Foggers and dusters"], "answer": 0,
+         "ref": "p. 158, 'Closed Mixing and Loading Systems'", "why": "One type uses mechanical devices; the other uses water-soluble packaging."},
+        {"id": "c11-s03-t6", "src": "test", "kind": "mc", "style": "scenario", "q": "A farm switches from many small jugs to minibulks that go back to the dealer for refilling. What job does this eliminate?",
+         "choices": ["Calibrating the sprayer", "Triple rinsing or pressure rinsing multiple small containers", "Reading the label", "Wearing PPE"], "answer": 1,
+         "ref": "p. 159, 'Mechanical Systems'", "why": "Returning minibulks for refilling removes the need to rinse many small containers."}
+      ]
+    },
+    {
+      "id": "c11-s04",
+      "chapter": "Chapter 11 · Pesticide Application Procedures",
+      "title": "Water-soluble bags and enclosed cabs",
+      "pages": [159, 159],
+      "body": [
+        {"h": "Water-soluble packaging"},
+        {"p": [
+          "**Water-soluble bags** are a simple type of closed mixing and loading system.",
+          "The premeasured pesticide is contained inside a water-soluble bag or packet.",
+          "The pesticide bag is placed **unopened** into the water or fertilizer in the mixing tank.",
+          "**Few** manufacturers, however, provide water-soluble bags for small-volume applications.",
+          "There must be ample time during mixing to allow for the bags to dissolve."
+        ]},
+        {"h": "Enclosed cabs"},
+        {"p": [
+          "An **enclosed cab** (such as a tractor cab, cockpit, or truck or vehicle cab) surrounds the occupants and may prevent pesticide exposure as long as the doors, hatches, and windows are kept **closed at all times** during the application.",
+          "Enclosed cabs are considered a **supplement** to personal protective equipment (PPE), **not a replacement** for it.",
+          "So, you must wear all PPE specified on the label while working inside the enclosed cab.",
+          "However, the labeling of some agricultural use pesticides may allow exceptions to the label-specified PPE requirements for applicators in enclosed cabs.",
+          "Check with your state, tribe, or territory pesticide regulatory agency for any other requirements regarding PPE and enclosed cabs.",
+          "Remember, **outside surfaces** of the application equipment and cab are **contaminated**.",
+          "Be sure to wear appropriate PPE when getting in and out of the cab or performing routine equipment maintenance."
+        ]},
+        {"fig": "p159-cab"}
+      ],
+      "figures": [
+        {"id": "p159-cab", "title": "Enclosed cabs are considered a supplement to PPE, not a replacement for it.", "page": "p. 159", "imgFile": "p159-cab.jpg"}
+      ],
+      "questions": [
+        {"id": "c11-s04-t1", "src": "test", "kind": "tf", "q": "An enclosed cab replaces the PPE listed on the label.", "answer": false,
+         "ref": "p. 159, 'Enclosed Cabs'", "why": "Enclosed cabs are a supplement to PPE, not a replacement for it."},
+        {"id": "c11-s04-t2", "src": "test", "kind": "mc", "style": "scenario", "q": "Mid-application, you climb out of your enclosed tractor cab to clear a clogged nozzle. What does the manual say about this?",
+         "choices": ["No PPE is needed because you were in a cab", "Wear appropriate PPE; the outside surfaces of the equipment and cab are contaminated", "Only gloves are ever needed outside a cab", "Leave the cab door open so the cab airs out"], "answer": 1,
+         "ref": "p. 159, 'Enclosed Cabs'", "why": "Outside surfaces are contaminated, so wear PPE getting in and out and doing maintenance."},
+        {"id": "c11-s04-t3", "src": "test", "kind": "mc", "q": "How is a water-soluble pesticide bag added to the mixing tank?",
+         "choices": ["Cut open and poured in", "Placed unopened into the water or fertilizer in the tank", "Dissolved in a bucket first, then poured in", "Hung above the tank to drip"], "answer": 1,
+         "ref": "p. 159, 'Water-Soluble Packaging'", "why": "The bag goes in unopened, and you allow ample time for it to dissolve."},
+        {"id": "c11-s04-t4", "src": "test", "kind": "mc", "style": "not", "q": "Which statement about water-soluble bags is NOT true?",
+         "choices": ["They are a simple type of closed mixing and loading system", "The pesticide inside is premeasured", "Many manufacturers provide them for small-volume applications", "Ample time is needed during mixing for the bags to dissolve"], "answer": 2,
+         "ref": "p. 159, 'Water-Soluble Packaging'", "why": "The manual says few manufacturers provide them for small-volume applications."},
+        {"id": "c11-s04-t5", "src": "test", "kind": "mc", "q": "An enclosed cab may prevent pesticide exposure only as long as:",
+         "choices": ["The air conditioning is on", "The doors, hatches, and windows are kept closed at all times during the application", "The applicator stays under 1 hour", "The sprayer is moving"], "answer": 1,
+         "ref": "p. 159, 'Enclosed Cabs'", "why": "Protection depends on keeping doors, hatches, and windows closed the whole time."}
+      ]
+    },
+    {
+      "id": "c11-s05",
+      "chapter": "Chapter 11 · Pesticide Application Procedures",
+      "title": "Pesticide containment pads",
+      "pages": [159, 160],
+      "body": [
+        {"h": "Pesticide containment systems"},
+        {"p": [
+          "If you often use the same location to mix and load pesticides or clean equipment, you may have to install a **pesticide containment pad**.",
+          "Check U.S. Environmental Protection Agency and state, tribe, or territory regulations to determine when a containment pad is required.",
+          "Keep spray tanks containing pesticides on a pad.",
+          "These pads are designed to contain spills, leaks, overflows, and wastewater for reuse by the applicator or disposal by a commercial waste management contractor.",
+          "They make it easier to clean up spills and help prevent environmental contamination."
+        ]},
+        {"fig": "p160-pad"},
+        {"p": [
+          "Use a permanently installed containment pad to mix, load, and clean equipment and in areas where **large quantities** of pesticides are handled or stored.",
+          "Generally, the containment pad must be made of **impermeable** material.",
+          "It should be **concave** or have **curbs, berms, or walls** high enough to hold the **largest amount** of spill, leak, or equipment wash water likely to occur at the site.",
+          "It also must be equipped with a system to remove and recover spilled, leaked, or released material by either an **automatic sump system** or a **manually operated pump**.",
+          "Smaller, portable pads and lightweight trays made of heavy-duty plastic may be used when mixing and loading at the application site.",
+          "Again, check regulations for containment pad design requirements."
+        ]}
+      ],
+      "figures": [
+        {"id": "p160-pad", "title": "A mixing and loading pad.", "page": "p. 160", "imgFile": "p160-pad.jpg"}
+      ],
+      "questions": [
+        {"id": "c11-s05-r1", "src": "review", "kind": "mc", "q": "Which statement about containment pads is **true**?",
+         "choices": ["Pads make spill cleanup more difficult.", "Pads should be made of permeable materials.", "Pads should be used where large quantities of pesticides are handled or mixed."], "answer": 2,
+         "ref": "Review question 3, p. 169. Answer in the text: pp. 159 to 160, 'Pesticide Containment Systems'", "why": "Pads make cleanup easier and must be impermeable, so only C is true."},
+        {"id": "c11-s05-t1", "src": "test", "kind": "mc", "q": "Generally, a containment pad must be made of what kind of material?",
+         "choices": ["Permeable", "Impermeable", "Absorbent", "Gravel"], "answer": 1,
+         "ref": "p. 160, 'Pesticide Containment Systems'", "why": "The pad must be impermeable so spills do not soak through."},
+        {"id": "c11-s05-t2", "src": "test", "kind": "tf", "q": "A containment pad's curbs, berms, or walls should be high enough to hold the largest amount of spill, leak, or wash water likely at the site.", "answer": true,
+         "ref": "p. 160, 'Pesticide Containment Systems'", "why": "It must be concave or have curbs, berms, or walls high enough for the largest likely spill."},
+        {"id": "c11-s05-t3", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT a way the manual says a pad recovers spilled material?",
+         "choices": ["An automatic sump system", "A manually operated pump", "Letting it soak into a gravel base", "Either a sump or a pump, as long as it removes and recovers the material"], "answer": 2,
+         "ref": "p. 160, 'Pesticide Containment Systems'", "why": "Recovery is by an automatic sump system or a manually operated pump. Soaking in defeats the pad."},
+        {"id": "c11-s05-t4", "src": "test", "kind": "mc", "style": "scenario", "q": "You mix and load at the same spot behind the shop every week. What should you do?",
+         "choices": ["Nothing; containment is only for airports", "Check EPA and state, tribe, or territory regulations; you may have to install a containment pad", "Move to a new spot each week", "Hose the area down after each use"], "answer": 1,
+         "ref": "p. 159, 'Pesticide Containment Systems'", "why": "Frequent use of the same location may require a pad; regulations decide when."},
+        {"id": "c11-s05-t5", "src": "test", "kind": "mc", "q": "What may be used when mixing and loading at the application site?",
+         "choices": ["Smaller, portable pads and lightweight trays made of heavy-duty plastic", "Cardboard sheets", "Bare soil", "A permanently installed concrete pad only"], "answer": 0,
+         "ref": "p. 160, 'Pesticide Containment Systems'", "why": "Portable pads and heavy-duty plastic trays are for mixing at the application site."}
+      ]
+    },
+    {
+      "id": "c11-s06",
+      "chapter": "Chapter 11 · Pesticide Application Procedures",
+      "title": "Sprayers: hydraulic, manual, and air-blast",
+      "pages": [160, 161],
+      "body": [
+        {"h": "Application equipment"},
+        {"p": [
+          "The application equipment or device must be able to apply the pesticide to the intended target at the proper rate.",
+          "The **label specifies the legal application rate** and may suggest the appropriate equipment for use with the product.",
+          "Application equipment may range from an aerosol can to hand equipment to power equipment, including aircraft.",
+          "The equipment may be carried, towed, or self-propelled."
+        ]},
+        {"h": "Sprayers"},
+        {"p": [
+          "The most common type of pesticide application equipment is the **sprayer**: nearly **90%** of all pesticides are formulated for spraying.",
+          "A **hydraulic (liquid) sprayer** uses water or other liquid carrier for the pesticide.",
+          "However, in the case of **ultra-low-volume** spraying, the pesticide is either applied directly as formulated or with dramatically reduced carrier volumes.",
+          "Hydraulic sprayers range from large agricultural sprayers with multiple-nozzle **booms** and power sprayers to small manual backpack and hand-held compressed-air sprayers.",
+          "In all cases, pressure from either a pump or compressed gas or air is used to **atomize** the spray mix at the nozzle."
+        ]},
+        {"gallery": ["p160-hydraulic", "p160-backpack"]},
+        {"p": [
+          "**Manual sprayers** are designed for spot treatments and for areas unsuitable for larger units.",
+          "They are relatively inexpensive, simple to operate, maneuverable, and easy to clean and store.",
+          "Adjustable spray guns are often used with these units, but some models have the option for a spray boom."
+        ]},
+        {"p": [
+          "The **air-blast (or mist) sprayer** uses both **water and air** as carriers.",
+          "Spray droplets are formed by the nozzles and delivered to the target by an airstream.",
+          "Air-blast sprayers are typically used for disease and insect control on **fruit trees, vineyards, vegetables, and Christmas trees**."
+        ]},
+        {"fig": "p161-airblast"}
+      ],
+      "figures": [
+        {"id": "p160-hydraulic", "title": "A hydraulic sprayer with a spray boom.", "page": "p. 160", "imgFile": "p160-hydraulic.jpg"},
+        {"id": "p160-backpack", "title": "A backpack sprayer is a type of hydraulic sprayer.", "page": "p. 160", "imgFile": "p160-backpack.jpg"},
+        {"id": "p161-airblast", "title": "An air blast sprayer uses both water and air as carriers.", "page": "p. 161", "imgFile": "p161-airblast.jpg"}
+      ],
+      "questions": [
+        {"id": "c11-s06-t1", "src": "test", "kind": "mc", "q": "About what share of all pesticides are formulated for spraying?",
+         "choices": ["Nearly 50%", "Nearly 70%", "Nearly 90%", "Nearly 100%"], "answer": 2,
+         "ref": "p. 160, 'Sprayers'", "why": "Nearly 90% of all pesticides are formulated for spraying."},
+        {"id": "c11-s06-t2", "src": "test", "kind": "tf", "q": "The label specifies the legal application rate.", "answer": true,
+         "ref": "p. 160, 'Application Equipment'", "why": "The label sets the legal rate and may suggest equipment."},
+        {"id": "c11-s06-t3", "src": "test", "kind": "mc", "style": "scenario", "q": "An orchard manager needs disease and insect control in fruit trees, using water and an airstream to carry the spray. Which sprayer fits?",
+         "choices": ["Air-blast (mist) sprayer", "Hand-held compressed-air sprayer", "Drop spreader", "Rope-wick applicator"], "answer": 0,
+         "ref": "p. 161, 'Sprayers'", "why": "Air-blast sprayers use water and air as carriers and are typical for fruit trees, vineyards, vegetables, and Christmas trees."},
+        {"id": "c11-s06-t4", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT how the manual describes manual sprayers?",
+         "choices": ["Relatively inexpensive", "Simple to operate and maneuverable", "Designed mainly for treating large fields", "Easy to clean and store"], "answer": 2,
+         "ref": "pp. 160 to 161, 'Sprayers'", "why": "Manual sprayers are for spot treatments and areas unsuitable for larger units."},
+        {"id": "c11-s06-t5", "src": "test", "kind": "mc", "q": "In ultra-low-volume spraying, the pesticide is:",
+         "choices": ["Always mixed with large amounts of water", "Applied directly as formulated or with dramatically reduced carrier volumes", "Applied only as granules", "Applied only with air and no liquid"], "answer": 1,
+         "ref": "p. 160, 'Sprayers'", "why": "Ultra-low-volume means little or no carrier."},
+        {"id": "c11-s06-t6", "src": "test", "kind": "mc", "q": "In all hydraulic sprayers, what atomizes the spray mix at the nozzle?",
+         "choices": ["Gravity", "Pressure from a pump or compressed gas or air", "A spinning disk", "Heat"], "answer": 1,
+         "ref": "p. 160, 'Sprayers'", "why": "Pressure from a pump or compressed gas or air atomizes the spray."}
+      ]
+    },
+    {
+      "id": "c11-s07",
+      "chapter": "Chapter 11 · Pesticide Application Procedures",
+      "title": "Sprayer tanks, agitation, and pumps",
+      "pages": [161, 161],
+      "body": [
+        {"h": "Sprayer components"},
+        {"p": [
+          "Because sprayers use water or other liquids to dilute and carry a pesticide, a **tank** is necessary to contain the spray mix.",
+          "Choose a tank made of or coated with a material that **does not corrode** and can be easily cleaned.",
+          "Corrosion and dirt clog screens and nozzles and increase wear on the equipment.",
+          "Large tanks require an **opening in the bottom** to aid in cleaning and draining.",
+          "A large **top opening** is useful for filling, cleaning, and inspecting the tank.",
+          "The opening must have a **watertight cover** to prevent spillage."
+        ]},
+        {"p": [
+          "A tank **agitation** system or device is useful for most sprayable formulations, especially for **wettable powders** or **dry flowables**.",
+          "Constant mixing of a pesticide and liquid carrier produces a uniform spray mixture (suspension or solution), resulting in an even application of the chemical."
+        ]},
+        {"fig": "p161-ground"},
+        {"p": [
+          "Sprayers use a **pump** to produce the flow of spray material to the nozzles and for agitation.",
+          "The pump parts must **resist corrosion** and be **abrasion-resistant**, especially when wettable powders or other abrasive formulations are used.",
+          "**Never** operate a sprayer pump at speeds or pressures above those recommended by the manufacturer.",
+          "You may damage the pump if it is operated **dry** or with a **restricted flow** at the inlet or outlet.",
+          "Pumps depend on the spray liquid for **lubrication** and to prevent **overheating**."
+        ]}
+      ],
+      "figures": [
+        {"id": "p161-ground", "title": "Ground sprayer.", "page": "p. 161", "imgFile": "p161-ground.jpg"}
+      ],
+      "questions": [
+        {"id": "c11-s07-t1", "src": "test", "kind": "mc", "q": "Why do large sprayer tanks need an opening in the bottom?",
+         "choices": ["To add pesticide concentrate", "To aid in cleaning and draining", "To let air in during spraying", "To attach the boom"], "answer": 1,
+         "ref": "p. 161, 'Sprayer Components'", "why": "The bottom opening aids cleaning and draining; the top opening is for filling, cleaning, and inspecting."},
+        {"id": "c11-s07-t2", "src": "test", "kind": "mc", "q": "Tank agitation is especially important for which formulations?",
+         "choices": ["Wettable powders and dry flowables", "Baits", "Fumigants", "Water-soluble bags only"], "answer": 0,
+         "ref": "p. 161, 'Sprayer Components'", "why": "Agitation keeps wettable powders and dry flowables evenly mixed."},
+        {"id": "c11-s07-t3", "src": "test", "kind": "mc", "style": "scenario", "q": "A worker runs the sprayer pump with an empty tank to 'test it.' What is the risk?",
+         "choices": ["None; pumps are designed to run dry", "The pump may be damaged, because pumps depend on spray liquid for lubrication and to prevent overheating", "The nozzles will spray too large droplets", "The tank will corrode"], "answer": 1,
+         "ref": "p. 161, 'Sprayer Components'", "why": "Running dry or with restricted flow can damage the pump."},
+        {"id": "c11-s07-t4", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT something the manual says about sprayer tanks?",
+         "choices": ["Made of or coated with a material that does not corrode", "Easy to clean", "Top opening with a watertight cover", "Must have a clear wall so you can see the mix level"], "answer": 3,
+         "ref": "p. 161, 'Sprayer Components'", "why": "Nothing on these pages calls for a clear tank wall."},
+        {"id": "c11-s07-t5", "src": "test", "kind": "tf", "q": "You may run a sprayer pump above the manufacturer's recommended pressure if you need more output.", "answer": false,
+         "ref": "p. 161, 'Sprayer Components'", "why": "Never operate a pump at speeds or pressures above those recommended by the manufacturer."}
+      ]
+    },
+    {
+      "id": "c11-s08",
+      "chapter": "Chapter 11 · Pesticide Application Procedures",
+      "title": "Nozzles: patterns, droplets, and materials",
+      "pages": [161, 162],
+      "body": [
+        {"h": "Nozzles"},
+        {"p": [
+          "Nozzles control the **amount of material applied**, **droplet formation and size** (coverage and drift), and the **distribution and pattern** of the droplets.",
+          "A nozzle's spray pattern is made up of a wide variety of spray droplet sizes.",
+          "Nozzles are classified based on the **spray pattern** they produce (see Figure 11.1).",
+          "The size of the nozzle opening (**orifice**) affects the droplet size and flow rate.",
+          "A nozzle that primarily produces **larger droplets** is most likely to **minimize off-target drift**.",
+          "A nozzle that mainly produces **smaller droplets** will **maximize surface coverage** of the target.",
+          "See Chapter 7 (Pesticides in the Environment) for a more detailed discussion of droplet size classification.",
+          "Choose nozzles based on the target pest, type of application, coverage desired, and drift potential."
+        ]},
+        {"fig": "p161-nozzles"},
+        {"fig": "p161-turret"},
+        {"p": [
+          "Nozzles are available in various materials: brass, aluminum, plastic, stainless steel, hardened stainless steel, and ceramic.",
+          "Select the nozzle material best suited for the pesticide formulation.",
+          "**Never use brass or aluminum** tips to apply abrasive materials (such as wettable powders and dry flowables) because they **wear too fast**.",
+          "Since wear destroys the proper working of a nozzle, **replace worn nozzles**.",
+          "To reduce wear, use nozzle tips made of a hard, wear-resistant material, such as **plastic, hardened stainless steel, or ceramic**.",
+          "Also, be sure you have the correct nozzle screen size for each nozzle."
+        ]},
+        {"p": [
+          "**Flow meters** and other devices measure nozzle flow rate and the uniformity of flow from nozzles along a boom.",
+          "Figure 11.2 is a device that measures flow over time.",
+          "It can be used to check nozzles for output and is also useful during calibration, particularly when sprayers are set up with multiple nozzles."
+        ]},
+        {"fig": "p162-flow"}
+      ],
+      "figures": [
+        {"id": "p161-nozzles", "title": "Figure 11.1: Nozzle spray patterns.", "page": "p. 161", "imgFile": "p161-nozzles.jpg", "explain": [
+          "Top row: Extended Range Flat-Fan, Turbo Flat-Fan (front), Air Induction Flat-Fan with its air induction insert, Even Flat-Fan, Off-Center Flat-Fan, and Wide Angle Full-Cone.",
+          "Bottom row: Flooding Flat-Fan (front), Turbo Flood Flat-Fan, Hollow Cone (Disc-Core), Hollow Cone (One Piece), Twin Cap, and Twin Orifice Flat-Fan.",
+          "Each nozzle is named for the spray pattern it makes, which is how nozzles are classified."
+        ]},
+        {"id": "p161-turret", "title": "Rotating turret nozzle body with five nozzle positions. The position pointing down is the active nozzle.", "page": "p. 161", "imgFile": "p161-turret.jpg"},
+        {"id": "p162-flow", "title": "Figure 11.2: A device to measure nozzle flow.", "page": "p. 162", "imgFile": "p162-flow.jpg"}
+      ],
+      "questions": [
+        {"id": "c11-s08-r1", "src": "review", "kind": "mc", "q": "Which statement about sprayer nozzles is **true**?",
+         "choices": ["A nozzle that mainly produces fine droplets is likely to minimize off-target drift.", "Coarse-sized droplets provide maximum coverage of the target.", "Nozzles control the amount of material applied and type of pattern created."], "answer": 2,
+         "ref": "Review question 4, p. 169. Answer in the text: pp. 161 to 162, 'Sprayer Components'", "why": "A and B are backwards: large droplets cut drift, small droplets maximize coverage."},
+        {"id": "c11-s08-t1", "src": "test", "kind": "mc", "q": "A nozzle that primarily produces larger droplets is most likely to:",
+         "choices": ["Maximize surface coverage", "Minimize off-target drift", "Increase the flow rate", "Wear out faster"], "answer": 1,
+         "ref": "p. 162, 'Sprayer Components'", "why": "Larger droplets minimize drift; smaller droplets maximize coverage."},
+        {"id": "c11-s08-t2", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT one of the hard, wear-resistant nozzle tip materials the manual recommends?",
+         "choices": ["Plastic", "Hardened stainless steel", "Ceramic", "Brass"], "answer": 3,
+         "ref": "p. 162, 'Sprayer Components'", "why": "Brass and aluminum wear too fast with abrasive materials."},
+        {"id": "c11-s08-t3", "src": "test", "kind": "mc", "style": "scenario", "q": "You will spray a wettable powder, and your sprayer has aluminum tips. What should you do?",
+         "choices": ["Use them; tip material does not matter", "Switch to tips of a hard, wear-resistant material such as plastic, hardened stainless steel, or ceramic", "Raise the pressure to push the powder through", "Add more water"], "answer": 1,
+         "ref": "p. 162, 'Sprayer Components'", "why": "Never use brass or aluminum tips for abrasive materials like wettable powders."},
+        {"id": "c11-s08-t4", "src": "test", "kind": "mc", "q": "Nozzles are classified based on:",
+         "choices": ["Their color", "The spray pattern they produce", "Their price", "The pump they use"], "answer": 1,
+         "ref": "p. 161, 'Sprayer Components' and Figure 11.1", "why": "Nozzles are classified by spray pattern, as Figure 11.1 shows."},
+        {"id": "c11-s08-t5", "src": "test", "kind": "mc", "q": "The size of the nozzle opening (orifice) affects:",
+         "choices": ["Droplet size and flow rate", "Tank agitation", "Pump lubrication", "Only the spray angle"], "answer": 0,
+         "ref": "p. 162, 'Sprayer Components'", "why": "Orifice size affects droplet size and flow rate."},
+        {"id": "c11-s08-t6", "src": "test", "kind": "tf", "q": "Flow meters can measure the uniformity of flow from nozzles along a boom.", "answer": true,
+         "ref": "p. 162, 'Sprayer Components'", "why": "Flow meters measure nozzle flow rate and uniformity along a boom."}
+      ]
+    },
+    {
+      "id": "c11-s09",
+      "chapter": "Chapter 11 · Pesticide Application Procedures",
+      "title": "Granular applicators and other equipment",
+      "pages": [162, 162],
+      "body": [
+        {"h": "Granular applicators"},
+        {"p": [
+          "Granular applicators are available for either **band** or **broadcast** application.",
+          "They may be operated as separate units.",
+          "However, they are often attached to other equipment (such as planters or cultivating equipment) to combine two or more operations.",
+          "Granular applicators usually operate by **gravity feed** and have an adjustable opening to regulate the flow."
+        ]},
+        {"p": [
+          "**Band applicators** use hoses or tubes with **deflectors** on the bottom.",
+          "**Broadcast applicators** use a system of tubes and deflectors or a **spinner** to spread the granules.",
+          "The application rate is affected by **ground speed**; granule **size, shape, and density**; **field terrain**; and even **relative humidity and air temperature**.",
+          "When multiple band applicators are used, **each individual unit must be calibrated** with the specific material to be applied to ensure accurate application."
+        ]},
+        {"p": [
+          "**Rotary** and **drop spreaders** are two common types of granular applicators.",
+          "Rotary spreaders distribute the granules to the **front and sides** of the spreader, usually by means of a spinning disk or fan.",
+          "In a drop spreader, an adjustable sliding gate opens holes in the bottom of the hopper.",
+          "Granules flow out by gravity feed.",
+          "**Drop spreaders are superior to rotary spreaders when more precise placement** of the pesticide is desired."
+        ]},
+        {"gallery": ["p162-rotary", "p162-drop"]},
+        {"h": "Other application equipment"},
+        {"p": ["Additional types of application equipment include:"]},
+        {"list": [
+          "**Rubs, walk-through sprayers, and dipping vats** to control pests on animals.",
+          "**Bait dispensers** to control rodents, insects, and predators.",
+          "**Foggers** for indoor pest control and for some outdoor insect control.",
+          "**Chemigation systems** for greenhouses and field crops.",
+          "**Dusters** for small-scale disease and insect control."
+        ]},
+        {"fig": "p162-rubs"}
+      ],
+      "figures": [
+        {"id": "p162-rotary", "title": "A rotary spreader.", "page": "p. 162", "imgFile": "p162-rotary.jpg"},
+        {"id": "p162-drop", "title": "A drop spreader.", "page": "p. 162", "imgFile": "p162-drop.jpg"},
+        {"id": "p162-rubs", "title": "Rubs are used for applying pesticides to livestock.", "page": "p. 162", "imgFile": "p162-rubs.jpg"}
+      ],
+      "questions": [
+        {"id": "c11-s09-r1", "src": "review", "kind": "mc", "q": "Which statement about granular applicators is **true**?",
+         "choices": ["Ground speed has no effect on the application rate.", "In a rotary spreader, lighter granules are thrown farther than heavier ones.", "Drop spreaders are superior to rotary spreaders when more precise placement of the pesticide is desired."], "answer": 2,
+         "ref": "Review question 5, p. 169. Answer in the text: p. 162, 'Granular Applicators'", "why": "The manual states C word for word, and it lists ground speed as affecting the rate, so A is false."},
+        {"id": "c11-s09-t1", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT listed as affecting the application rate of a granular applicator?",
+         "choices": ["Ground speed", "Granule size, shape, and density", "Relative humidity and air temperature", "The color of the granules"], "answer": 3,
+         "ref": "p. 162, 'Granular Applicators'", "why": "The list is ground speed, granule size, shape, density, field terrain, humidity, and air temperature."},
+        {"id": "c11-s09-t2", "src": "test", "kind": "mc", "style": "scenario", "q": "You run four band applicators on one planter. How should they be calibrated?",
+         "choices": ["Calibrate one and copy the setting to the rest", "Calibrate each individual unit with the specific material to be applied", "No calibration is needed for gravity feed", "Calibrate with water only"], "answer": 1,
+         "ref": "p. 162, 'Granular Applicators'", "why": "Each individual unit must be calibrated with the specific material."},
+        {"id": "c11-s09-t3", "src": "test", "kind": "mc", "q": "How does a rotary spreader distribute granules?",
+         "choices": ["Straight down through holes in the hopper", "To the front and sides, usually by a spinning disk or fan", "Through hoses with deflectors", "Under pressure into the soil"], "answer": 1,
+         "ref": "p. 162, 'Granular Applicators'", "why": "Rotary spreaders throw granules to the front and sides with a spinning disk or fan."},
+        {"id": "c11-s09-t4", "src": "test", "kind": "mc", "q": "Rubs, walk-through sprayers, and dipping vats are used to:",
+         "choices": ["Control pests on animals", "Fog greenhouses", "Treat soil", "Bait rodents"], "answer": 0,
+         "ref": "p. 162, 'Other Application Equipment'", "why": "These three control pests on animals."},
+        {"id": "c11-s09-t5", "src": "test", "kind": "tf", "q": "Granular applicators usually operate by gravity feed and have an adjustable opening to regulate the flow.", "answer": true,
+         "ref": "p. 162, 'Granular Applicators'", "why": "That is how the manual describes them."}
+      ]
+    },
+    {
+      "id": "c11-s10",
+      "chapter": "Chapter 11 · Pesticide Application Procedures",
+      "title": "Equipment calibration",
+      "pages": [163, 163],
+      "body": [
+        {"h": "Equipment calibration"},
+        {"p": [
+          "**Calibration** is the process of measuring and adjusting the amount of pesticide your equipment applies or delivers to a specific area.",
+          "The purpose of calibration is to ensure that your equipment is applying the **correct amount** of material **uniformly** over a given area.",
+          "Equipment is made to be adjustable.",
+          "Charts or tables assist the operator in adjusting the settings.",
+          "These recommended settings, however, are **only approximate** and may not be appropriate for all situations.",
+          "Therefore, your equipment must be calibrated **periodically**.",
+          "How often depends on the type of equipment and the frequency of use.",
+          "The application rate of a sprayer is affected by **travel speed**, **nozzle size**, and **sprayer pressure**.",
+          "Even with the widespread use of electronics to monitor and control the pesticide application, a thorough sprayer calibration procedure is essential to avoid misapplication."
+        ]},
+        {"p": [
+          "Equipment can be calibrated by making a **trial run** on some premeasured area and measuring the output.",
+          "For example, using a hand-held sprayer, spray a premeasured test area with **water** using the same pressure and techniques (that is, travel speed and equipment) you would use when applying the pesticide.",
+          "After spraying the test area, determine how much water was used.",
+          "This volume can then be used to calculate the amount of water and pesticide needed to cover the intended application area."
+        ]},
+        {"fig": "p163-calibrate"},
+        {"p": ["When calibrating a boom sprayer, there are three variables that affect the amount of spray material applied per area of measurement (that is, gallons per acre or gallons per 1,000 square feet):"]},
+        {"ol": ["**Nozzle flow rate**.", "**Ground speed** of the sprayer.", "**Width sprayed** per nozzle."]},
+        {"p": [
+          "To calibrate and operate a sprayer properly, it is important to understand how each of these variables affects sprayer output.",
+          "The nozzle flow rate varies according to the size of the **orifice**, the nozzle **pressure**, and the **density** of the spray liquid.",
+          "The spray application rate varies **inversely** with the ground speed.",
+          "**Doubling the ground speed** of the sprayer reduces the gallons of spray applied per acre **by one-half**.",
+          "Likewise, **doubling the effective width** sprayed per nozzle decreases the applied amount **by one-half**."
+        ]},
+        {"p": [
+          "The time invested in calibrating your equipment is time well-spent.",
+          "Accurate calibration to determine the application volume under your operating conditions is important for **cost, efficiency, and safety**.",
+          "Without properly calibrating the sprayer to deliver the correct application volume, you will not be able to apply the pesticide at the proper rate to control the pest.",
+          "Your category-specific manual will explain in detail how to calibrate your application equipment."
+        ]},
+        {"box": "Why calibrate?", "p": [
+          "The purpose of calibration is to ensure that your equipment is applying the correct amount of pesticide material uniformly over a given area.",
+          "**Too little** pesticide may fail to control the target pest.",
+          "**Too much** pesticide is **illegal** and can result in damage to the treated plant, animal, or surface; can produce illegal residues on treated crops and animals; and can cause adverse effects to the environment and non-target organisms."
+        ]}
+      ],
+      "figures": [
+        {"id": "p163-calibrate", "title": "Calibrating a backpack sprayer.", "page": "p. 163", "imgFile": "p163-calibrate.jpg"}
+      ],
+      "questions": [
+        {"id": "c11-s10-t1", "src": "test", "kind": "short", "q": "Type the manual's definition of calibration.",
+         "answer": "The process of measuring and adjusting the amount of pesticide your equipment applies or delivers to a specific area.",
+         "keys": [["measuring", "measure", "measures"], ["adjusting", "adjust", "adjusts"], ["amount", "how much", "quantity"], ["area"]],
+         "ref": "p. 163, 'Equipment Calibration'", "why": "Calibration is measuring and adjusting the amount your equipment delivers to a specific area."},
+        {"id": "c11-s10-t2", "src": "test", "kind": "mc", "style": "not", "q": "When calibrating a boom sprayer, which of these is NOT one of the three variables that affect the amount applied per area?",
+         "choices": ["Nozzle flow rate", "Ground speed of the sprayer", "Width sprayed per nozzle", "Size of the spray tank"], "answer": 3,
+         "ref": "p. 163, 'Equipment Calibration'", "why": "The three are nozzle flow rate, ground speed, and width sprayed per nozzle."},
+        {"id": "c11-s10-t3", "src": "test", "kind": "mc", "style": "scenario", "q": "Your boom sprayer was calibrated to put out 20 gallons per acre. With nothing else changed, you double your ground speed. About how much will you now apply?",
+         "choices": ["40 gallons per acre", "20 gallons per acre", "10 gallons per acre", "5 gallons per acre"], "answer": 2,
+         "ref": "p. 163, 'Equipment Calibration'", "why": "Doubling the ground speed reduces the gallons per acre by one-half."},
+        {"id": "c11-s10-t4", "src": "test", "kind": "tf", "q": "Applying too much pesticide is illegal.", "answer": true,
+         "ref": "p. 163, box 'Why Calibrate?'", "why": "Too much is illegal and can damage the treated site, leave illegal residues, and harm the environment."},
+        {"id": "c11-s10-t5", "src": "test", "kind": "mc", "q": "Nozzle flow rate varies according to:",
+         "choices": ["Orifice size, nozzle pressure, and density of the spray liquid", "Tank size, boom height, and wind", "Ground speed only", "The color of the nozzle"], "answer": 0,
+         "ref": "p. 163, 'Equipment Calibration'", "why": "Orifice size, nozzle pressure, and liquid density set the nozzle flow rate."},
+        {"id": "c11-s10-t6", "src": "test", "kind": "mc", "style": "scenario", "q": "The dealer's chart says setting 4 gives your target rate. What should you do?",
+         "choices": ["Trust the chart; calibration is not needed", "Use the chart as a starting point, then calibrate, because chart settings are only approximate", "Double the setting to be safe", "Use setting 4 only on calm days"], "answer": 1,
+         "ref": "p. 163, 'Equipment Calibration'", "why": "Chart settings are only approximate, so equipment must be calibrated periodically."}
+      ]
+    },
+    {
+      "id": "c11-s11",
+      "chapter": "Chapter 11 · Pesticide Application Procedures",
+      "title": "Calculating area",
+      "pages": [164, 164],
+      "body": [
+        {"h": "Calculating area"},
+        {"p": [
+          "For precise application, you need to know the size of the area to be treated.",
+          "The following examples show how to determine the size of rectangular, triangular, and circular areas.",
+          "Note: **1 acre equals 43,560 square feet**."
+        ]},
+        {"fig": "fig-11-area"},
+        {"h": "Rectangular areas"},
+        {"p": [
+          "You want to apply a pesticide to an area that measures 1,320 feet by 120 feet.",
+          "What is the area in square feet and in acres?",
+          "**Area equals length times width.**",
+          "1,320 feet times 120 feet equals 158,400 square feet.",
+          "158,400 square feet divided by 43,560 square feet per acre equals **3.6 acres**."
+        ]},
+        {"h": "Triangular areas"},
+        {"p": [
+          "You are applying a pesticide to a triangular area that has a base of 325 feet and a height of 150 feet.",
+          "What is the area?",
+          "**Area equals base times height, divided by 2.**",
+          "325 feet times 150 feet, divided by 2, equals 24,375 square feet.",
+          "24,375 square feet divided by 43,560 square feet per acre equals **0.6 acre**."
+        ]},
+        {"h": "Circular areas"},
+        {"p": [
+          "If you have a circular area that has a 90-foot diameter, the radius is 45 feet.",
+          "What is the area?",
+          "**Area equals 3.14 times the radius squared.**",
+          "Note: 3.14 (pi) is a constant. The **radius is one-half the diameter**.",
+          "3.14 times 45 squared equals 6,358.5 square feet.",
+          "6,358.5 square feet divided by 43,560 square feet per acre equals **0.15 acre**."
+        ]}
+      ],
+      "figures": [
+        {"id": "fig-11-area", "title": "Rectangular, triangular, and circular areas.", "page": "p. 164", "svgFile": "fig-11-area.svg", "explain": [
+          "Each shape shows the manual's example measurements, the formula, the answer in square feet, and the answer in acres.",
+          "To get acres, always divide square feet by 43,560."
+        ]}
+      ],
+      "questions": [
+        {"id": "c11-s11-r1", "src": "review", "kind": "mc", "q": "You are applying a pesticide to a triangular area that has a base of 60 feet and a height of 30 feet. How many square feet is the area?",
+         "choices": ["450.", "900.", "1,800."], "answer": 1,
+         "ref": "Review question 7, p. 169. Answer in the text: p. 164, 'Triangular Areas'", "why": "60 times 30 is 1,800, divided by 2 is 900. 1,800 is the trap for forgetting to halve."},
+        {"id": "c11-s11-r2", "src": "review", "kind": "mc", "q": "You are applying a pesticide to a circular area with a 20-foot diameter. How many square feet is the area?",
+         "choices": ["128.", "314.", "400."], "answer": 1,
+         "ref": "Review question 8, p. 169. Answer in the text: p. 164, 'Circular Areas'", "why": "Radius is 10 feet; 3.14 times 10 squared (100) is 314."},
+        {"id": "c11-s11-t1", "src": "test", "kind": "mc", "q": "How many square feet are in 1 acre?",
+         "choices": ["4,356", "43,560", "1,000", "5,280"], "answer": 1,
+         "ref": "p. 164, 'Calculating Area'", "why": "1 acre equals 43,560 square feet."},
+        {"id": "c11-s11-t2", "src": "test", "kind": "mc", "style": "scenario", "q": "A rectangular lot measures 200 feet by 100 feet. What is its area in square feet?",
+         "choices": ["300", "10,000", "20,000", "40,000"], "answer": 2,
+         "ref": "p. 164, 'Rectangular Areas'", "why": "Length times width: 200 times 100 equals 20,000 square feet."},
+        {"id": "c11-s11-t3", "src": "test", "kind": "mc", "style": "not", "q": "Which of these statements about the area formulas is NOT correct?",
+         "choices": ["Rectangle: length times width", "Triangle: base times height, divided by 2", "Circle: 3.14 times the radius squared", "The radius is twice the diameter"], "answer": 3,
+         "ref": "p. 164, 'Circular Areas'", "why": "The radius is one-half the diameter."},
+        {"id": "c11-s11-t4", "src": "test", "kind": "mc", "style": "scenario", "q": "A field measures 87,120 square feet. How many acres is that?",
+         "choices": ["0.5 acre", "1 acre", "2 acres", "8.7 acres"], "answer": 2,
+         "ref": "p. 164, 'Calculating Area'", "why": "87,120 divided by 43,560 equals 2 acres."}
+      ]
+    },
+    {
+      "id": "c11-s12",
+      "chapter": "Chapter 11 · Pesticide Application Procedures",
+      "title": "Application rate: the small-area example",
+      "pages": [165, 166],
+      "body": [
+        {"h": "Calculating the application rate"},
+        {"p": [
+          "Use the volume from your **calibration test area** to determine the amount of pesticide product and total spray mixture needed for your application area.",
+          "First, convert your calibrated rate to one based on the **area units found on the label**.",
+          "For example, assume that when you calibrated the sprayer, it delivered **2 gallons** of water over a **250-square-foot** test area.",
+          "Your application area measures **1,000 square feet**, that is, four times the test area.",
+          "Therefore, you need to use **8 gallons** of spray mixture to cover 1,000 square feet (multiplying 2 gallons of water by 4)."
+        ]},
+        {"p": [
+          "Check the pesticide label to determine the amount of pesticide to add to the spray mixture.",
+          "For example, if the label recommends adding **4 ounces** of a liquid pesticide product to give a desired finished spray mixture of **1 gallon**, you would add 4 ounces of product to **124 ounces of water** (1 gallon equals **128 fluid ounces**).",
+          "If you needed to apply 8 gallons of spray mixture to cover 1,000 square feet, then you must add **32 ounces** (8 times 4 ounces) of pesticide product to **7.75 gallons** of water.",
+          "If the tank capacity of the sprayer is **4 gallons**, you need to fill up the tank **twice**, using **16 fluid ounces** of product each time."
+        ]},
+        {"fig": "p165-cylinder"}
+      ],
+      "figures": [
+        {"id": "p165-cylinder", "title": "Calculate the application rate and measure the amount of pesticide needed.", "page": "p. 165", "imgFile": "p165-cylinder.jpg"}
+      ],
+      "questions": [
+        {"id": "c11-s12-t1", "src": "test", "kind": "mc", "style": "scenario", "q": "Your sprayer delivered 2 gallons of water over a 250-square-foot test area. Your job is 1,000 square feet. How much spray mixture do you need?",
+         "choices": ["2 gallons", "4 gallons", "8 gallons", "16 gallons"], "answer": 2,
+         "ref": "p. 165, 'Calculating the Application Rate'", "why": "1,000 is four times 250, so 2 gallons times 4 equals 8 gallons."},
+        {"id": "c11-s12-t2", "src": "test", "kind": "mc", "q": "How many fluid ounces are in 1 gallon?",
+         "choices": ["64", "100", "124", "128"], "answer": 3,
+         "ref": "p. 166, 'Calculating the Application Rate'", "why": "1 gallon equals 128 fluid ounces."},
+        {"id": "c11-s12-t3", "src": "test", "kind": "mc", "q": "The label says 4 ounces of product makes 1 gallon of finished spray. How much water goes with the 4 ounces?",
+         "choices": ["128 ounces", "124 ounces", "132 ounces", "4 ounces"], "answer": 1,
+         "ref": "p. 166, 'Calculating the Application Rate'", "why": "128 ounces in a gallon, minus 4 ounces of product, leaves 124 ounces of water."},
+        {"id": "c11-s12-t4", "src": "test", "kind": "mc", "style": "scenario", "q": "You need 8 gallons of spray mix with 32 ounces of product, but your sprayer tank holds 4 gallons. What do you do?",
+         "choices": ["Put all 32 ounces in the first tank", "Fill the tank twice, using 16 fluid ounces of product each time", "Fill the tank once and spray half the area", "Use 8 ounces per tank"], "answer": 1,
+         "ref": "p. 166, 'Calculating the Application Rate'", "why": "Two 4-gallon tanks, each with half the product: 16 ounces each."},
+        {"id": "c11-s12-t5", "src": "test", "kind": "mc", "style": "not", "q": "In the manual's 8-gallon example, which of these is NOT correct?",
+         "choices": ["32 ounces of product are needed", "The product goes into 7.75 gallons of water", "The test area was 250 square feet", "The product goes into 8 full gallons of water"], "answer": 3,
+         "ref": "p. 166, 'Calculating the Application Rate'", "why": "The product takes up some of the volume, so it goes into 7.75 gallons of water to make 8 gallons."}
+      ]
+    },
+    {
+      "id": "c11-s13",
+      "chapter": "Chapter 11 · Pesticide Application Procedures",
+      "title": "Application rate: the 10-acre example",
+      "pages": [165, 166],
+      "body": [
+        {"box": "Calculating the application rate", "p": [
+          "You determined from a calibration test that your boom sprayer delivered **10 gallons** of water over a **one-quarter (0.25) acre** test area.",
+          "You need to apply a pesticide product to a **10-acre** field (43,560 square feet equals 1 acre).",
+          "The pesticide label recommends that **4 ounces** of liquid product be added to give a desired finished spray mixture of **1 gallon** (there are 128 fluid ounces in 1 gallon).",
+          "How much spray volume and how much product are needed?"
+        ]},
+        {"h": "Step 1"},
+        {"p": [
+          "How much spray mixture is needed for the 10-acre application area?",
+          "Always use information from the calibration test.",
+          "In this example, 10 gallons of water was used over a 0.25-acre calibration test area.",
+          "Set it up as 10 gallons over 0.25 acre equals Y gallons over 10 acres.",
+          "Cross multiplication: Y equals 10 gallons times 10 acres, divided by 0.25 acre.",
+          "Y equals **400 gallons** of spray mixture needed."
+        ]},
+        {"h": "Step 2"},
+        {"p": [
+          "How much pesticide product is needed to make up 400 gallons of spray mixture?",
+          "Use the label rate of 4 ounces of product per 1 gallon of spray.",
+          "400 gallons of spray mixture times 4 ounces of liquid pesticide product per gallon equals **1,600 ounces** of product needed."
+        ]},
+        {"h": "Step 3"},
+        {"p": [
+          "How many gallons of product are needed?",
+          "Remember, 128 ounces equals 1 gallon.",
+          "1,600 ounces of product divided by 128 ounces per gallon equals **12.5 gallons** of product."
+        ]},
+        {"p": [
+          "**Final result**: to treat 10 acres, you need a total final spray mix of **400 gallons** that includes **12.5 gallons** of the concentrated product."
+        ]},
+        {"h": "Labels vary"},
+        {"p": [
+          "Labels vary in how they recommend pesticide application rates.",
+          "Some examples include **ounces of product per 1,000 square feet**, **pints, quarts, or gallons per 100 gallons**, **pounds of product per acre**, or **percent product in the tank**.",
+          "Be sure you understand how to calculate the correct amount of pesticide product and diluent needed before making the final mixture.",
+          "See Appendix C, Conversions and Calculations, for more information."
+        ]}
+      ],
+      "questions": [
+        {"id": "c11-s13-r1", "src": "review", "kind": "mc", "q": "You have calibrated your equipment to spray 50 gallons per acre. You need to spray 1 acre. The label calls for 3 pounds of formulation per 100 gallons of water. How many pounds of formulation should you add to the tank to make 50 gallons of finished spray?",
+         "choices": ["1.5.", "3.", "6."], "answer": 0,
+         "ref": "Review question 9, p. 169. Method in the text: pp. 165 to 166, 'Calculating the Application Rate'", "why": "50 gallons is half of 100 gallons, so you need half of 3 pounds: 1.5 pounds."},
+        {"id": "c11-s13-t1", "src": "test", "kind": "mc", "q": "In the manual's example, the sprayer put out 10 gallons over 0.25 acre. How much spray mixture is needed for 10 acres?",
+         "choices": ["40 gallons", "100 gallons", "250 gallons", "400 gallons"], "answer": 3,
+         "ref": "p. 165, box 'Calculating the Application Rate', Step 1", "why": "10 gallons times 10 acres, divided by 0.25 acre, equals 400 gallons."},
+        {"id": "c11-s13-t2", "src": "test", "kind": "mc", "q": "At 4 ounces of product per gallon, 400 gallons of spray mix needs how much product?",
+         "choices": ["100 ounces, about 0.8 gallon", "1,600 ounces, which is 12.5 gallons", "1,600 ounces, which is 16 gallons", "400 ounces, which is 3.1 gallons"], "answer": 1,
+         "ref": "p. 165, box 'Calculating the Application Rate', Steps 2 and 3", "why": "400 times 4 is 1,600 ounces; 1,600 divided by 128 is 12.5 gallons."},
+        {"id": "c11-s13-t3", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT one of the ways the manual says labels may state application rates?",
+         "choices": ["Ounces of product per 1,000 square feet", "Pounds of product per acre", "Percent product in the tank", "Number of nozzles per boom"], "answer": 3,
+         "ref": "p. 166, 'Calculating the Application Rate'", "why": "The examples are ounces per 1,000 square feet, pints, quarts, or gallons per 100 gallons, pounds per acre, and percent in the tank."},
+        {"id": "c11-s13-t4", "src": "test", "kind": "mc", "style": "scenario", "q": "Your calibration run used 5 gallons over 0.5 acre. You must treat 4 acres. How many gallons of spray mixture do you need?",
+         "choices": ["10 gallons", "20 gallons", "40 gallons", "80 gallons"], "answer": 2,
+         "ref": "p. 165, box 'Calculating the Application Rate', Step 1 method", "why": "5 gallons over 0.5 acre is 10 gallons per acre; 10 times 4 acres equals 40 gallons."},
+        {"id": "c11-s13-t5", "src": "test", "kind": "tf", "q": "For Step 1, the manual says to always use information from the calibration test.", "answer": true,
+         "ref": "p. 165, box 'Calculating the Application Rate', Step 1", "why": "The spray volume comes from what your sprayer actually put out in the test."}
+      ]
+    },
+    {
+      "id": "c11-s14",
+      "chapter": "Chapter 11 · Pesticide Application Procedures",
+      "title": "Drift: nozzles, pressure, speed, and height",
+      "pages": [166, 167],
+      "body": [
+        {"h": "Techniques to minimize drift"},
+        {"p": [
+          "Application techniques and equipment greatly influence the amount of spray drift that occurs.",
+          "Off-target movement is affected by the **type of nozzle**, **nozzle orifice size**, **sprayer pressure**, and the **height or distance** of the nozzles from the target.",
+          "It is important to review the pesticide label for specific information on drift reduction techniques or requirements.",
+          "You must also check weather conditions (such as **air stability, wind direction, and speed**) at the time and place of the application and follow all weather-related restrictions on the label."
+        ]},
+        {"fig": "p166-wind"},
+        {"p": [
+          "Of the many nozzle types available for applying pesticides, several are specifically designed to reduce drift.",
+          "Select nozzles to give the **largest droplet size that provides adequate coverage** at the intended application volume and pressure.",
+          "In addition to the size of the nozzle orifice, some new nozzle designs help reduce drift by incorporating air into the spray to form an air-fluid mix.",
+          "These **air-induction nozzles**, known as **venturi nozzles**, form a larger spray droplet, produce fewer fine particles, and provide energy to help transport the droplets to the target.",
+          "These nozzles, however, require higher spray pressures (**40 to 100 pounds per square inch**) to be effective.",
+          "Even at these higher pressures, venturi nozzles still dramatically reduce the likelihood of drift."
+        ]},
+        {"p": [
+          "Operating pressure also affects the droplet size and output volume of the sprayer.",
+          "**Doubling the pressure does not double the flow rate.**",
+          "To double the flow rate, you must increase the pressure **four times**.",
+          "Pressure **cannot** be used to make major changes in application rate, but it can be used to correct minor changes due to nozzle wear.",
+          "To obtain a uniform spray pattern and to minimize drift, keep the operating pressure within the recommended range for each nozzle tip.",
+          "Exceeding the recommended pressure range often results in more drift potential.",
+          "To maintain a proper spray pattern, adjust nozzles according to the manufacturer's recommendations on nozzle spacing and spray angle."
+        ]},
+        {"p": [
+          "Applications made with an **electronic rate controller** are subject to pressure changes as the operating speed varies.",
+          "Even though the purpose of the rate controller is to help make application volumes more uniform as sprayer speed changes, major adjustments in speed can affect pressure.",
+          "For example, **doubling the speed will result in a fourfold pressure increase** in an attempt to maintain the correct volume.",
+          "The increased pressure without changing nozzle orifice size will dramatically increase the potential for drift.",
+          "Likewise, reduced speed can lower the pressure, which may affect coverage and, ultimately, pattern quality."
+        ]},
+        {"p": [
+          "**Spray height**, or distance from the target site, is also an important factor in reducing drift.",
+          "The **closer** the boom or spray nozzle is to the ground or target site, the **less chance for drift**.",
+          "However, watch for pattern uniformity."
+        ]},
+        {"fig": "p166-uniformity"}
+      ],
+      "figures": [
+        {"id": "p166-wind", "title": "A wind meter is useful for determining when to spray.", "page": "p. 166", "imgFile": "p166-wind.jpg"},
+        {"id": "p166-uniformity", "title": "A demonstration of a method to determine the uniformity of a nozzle spray pattern.", "page": "p. 166", "imgFile": "p166-uniformity.jpg"}
+      ],
+      "questions": [
+        {"id": "c11-s14-t1", "src": "test", "kind": "mc", "q": "Air-induction (venturi) nozzles need what spray pressure range to be effective?",
+         "choices": ["5 to 15 pounds per square inch", "15 to 30 pounds per square inch", "40 to 100 pounds per square inch", "150 to 300 pounds per square inch"], "answer": 2,
+         "ref": "p. 166, 'Techniques to Minimize Drift'", "why": "Venturi nozzles require 40 to 100 psi, yet still dramatically reduce drift."},
+        {"id": "c11-s14-t2", "src": "test", "kind": "mc", "q": "To double a nozzle's flow rate, you must increase the pressure by how much?",
+         "choices": ["Two times", "Three times", "Four times", "Ten times"], "answer": 2,
+         "ref": "p. 166, 'Techniques to Minimize Drift'", "why": "Doubling pressure does not double flow; you need four times the pressure."},
+        {"id": "c11-s14-t3", "src": "test", "kind": "mc", "style": "scenario", "q": "Your sprayer has an electronic rate controller. You double your speed across the field. What happens?",
+         "choices": ["Nothing; the controller handles it with no side effects", "Pressure rises about fourfold, which dramatically increases drift potential", "Pressure drops by half", "Droplets get larger"], "answer": 1,
+         "ref": "pp. 166 to 167, 'Techniques to Minimize Drift'", "why": "Doubling speed gives a fourfold pressure increase, and without changing orifice size that raises drift potential."},
+        {"id": "c11-s14-t4", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT listed as affecting off-target movement of spray?",
+         "choices": ["Type of nozzle", "Nozzle orifice size", "Sprayer pressure", "The brand name of the pesticide"], "answer": 3,
+         "ref": "p. 166, 'Techniques to Minimize Drift'", "why": "The list is nozzle type, orifice size, sprayer pressure, and height or distance from the target."},
+        {"id": "c11-s14-t5", "src": "test", "kind": "tf", "q": "Pressure can be used to make major changes in application rate.", "answer": false,
+         "ref": "p. 166, 'Techniques to Minimize Drift'", "why": "Pressure is only for correcting minor changes due to nozzle wear."},
+        {"id": "c11-s14-t6", "src": "test", "kind": "tf", "q": "The closer the boom or nozzle is to the ground or target, the less chance for drift.", "answer": true,
+         "ref": "p. 167, 'Techniques to Minimize Drift'", "why": "Lower spray height means less drift, but watch pattern uniformity."}
+      ]
+    },
+    {
+      "id": "c11-s15",
+      "chapter": "Chapter 11 · Pesticide Application Procedures",
+      "title": "Table 11.1: Recommended techniques to reduce drift",
+      "pages": [167, 167],
+      "body": [
+        {"box": "Table 11.1. Recommended techniques to reduce drift", "list": [
+          "**Follow label directions for reducing drift.** Read the label and reference the nozzle manufacturer's guide to determine which nozzle and pressure combinations are needed.",
+          "**Select a nozzle to increase droplet size.** Large droplets are less prone to drift. Use the largest droplets that provide necessary coverage.",
+          "**Increase nozzle size resulting in higher application volumes.** Larger capacity nozzles can reduce the amount of spray deposited off-target.",
+          "**Consider using new technologies.** Certain nozzles, for example, air-induction and venturi nozzles, may help reduce drift.",
+          "**Lower boom height.** The higher the boom height is above the target, the greater the potential for drift. Lowering the boom height a few inches can reduce off-target drift.",
+          "**Maintain appropriate travel speed.** High travel speeds may result in an unstable boom, high boom positions, and increased drift potential.",
+          "**Keep nozzle close to the target.** When using hand-held equipment, keeping the nozzle close reduces the potential for drift.",
+          "**Avoid high application ground speeds or major speed changes across the field.** Speed changes may result in pressure adjustments, causing droplet size variability. Sudden increases in speed may create high pressure that results in more drift potential.",
+          "**Avoid applications during times of high wind speeds.** More of the spray volume moves off-target as wind increases. Wind currents can drastically affect spray droplet deposition.",
+          "**Do not spray in the presence of a temperature inversion.** Temperature inversions prevent the dissipation of spray particles.",
+          "**Consider using buffer zones or no-spray zones near sensitive areas.** Leave a buffer zone or no-spray zone if sensitive areas are downwind.",
+          "**Use a drift-control additive when needed.** Drift-control additives increase the average droplet size produced by the nozzles. These additives must not become your only drift reducing technique. They do not make up for poor spraying practices."
+        ]}
+      ],
+      "questions": [
+        {"id": "c11-s15-r1", "src": "review", "kind": "mc", "q": "Which technique would help minimize off-target drift?",
+         "choices": ["Spraying during a temperature inversion.", "Using the largest droplets practical to provide necessary coverage.", "Increasing the height of the nozzles above the target."], "answer": 1,
+         "ref": "Review question 6, p. 169. Answer in the text: p. 167, Table 11.1", "why": "Large droplets drift less. Inversions and higher nozzles both increase drift."},
+        {"id": "c11-s15-t1", "src": "test", "kind": "mc", "q": "Why should you not spray during a temperature inversion?",
+         "choices": ["Inversions prevent the dissipation of spray particles", "Inversions make droplets too large", "Inversions clog nozzles", "Inversions corrode the tank"], "answer": 0,
+         "ref": "p. 167, Table 11.1", "why": "Temperature inversions prevent the dissipation of spray particles."},
+        {"id": "c11-s15-t2", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT a recommended technique in Table 11.1?",
+         "choices": ["Lower boom height", "Select a nozzle to increase droplet size", "Raise boom height to spread the spray more evenly", "Maintain appropriate travel speed"], "answer": 2,
+         "ref": "p. 167, Table 11.1", "why": "The higher the boom, the greater the drift potential. The table says lower it."},
+        {"id": "c11-s15-t3", "src": "test", "kind": "mc", "style": "scenario", "q": "You are spraying a field, and a school garden is downwind. Which Table 11.1 technique applies most directly?",
+         "choices": ["Leave a buffer zone or no-spray zone", "Increase travel speed to finish faster", "Use smaller droplets for coverage", "Raise the boom"], "answer": 0,
+         "ref": "p. 167, Table 11.1", "why": "Leave a buffer zone or no-spray zone if sensitive areas are downwind."},
+        {"id": "c11-s15-t4", "src": "test", "kind": "tf", "q": "A drift-control additive can make up for poor spraying practices.", "answer": false,
+         "ref": "p. 167, Table 11.1", "why": "Additives must not be your only technique, and they do not make up for poor practices."},
+        {"id": "c11-s15-t5", "src": "test", "kind": "mc", "q": "According to Table 11.1, high travel speeds may result in:",
+         "choices": ["An unstable boom, high boom positions, and increased drift potential", "Larger droplets and less drift", "Lower pump pressure", "Better coverage"], "answer": 0,
+         "ref": "p. 167, Table 11.1", "why": "High travel speed destabilizes the boom and raises drift potential."}
+      ]
+    },
+    {
+      "id": "c11-s16",
+      "chapter": "Chapter 11 · Pesticide Application Procedures",
+      "title": "Overlap, drift additives, and chapter summary",
+      "pages": [168, 168],
+      "body": [
+        {"p": [
+          "To maintain uniformity, most nozzle types require some amount of **overlap**.",
+          "Maintaining a **1:1 ratio** of boom height above the target to the nozzle spacing on the boom will satisfy most overlap requirements.",
+          "For **air-blast sprayers**, reduce drift by minimizing spraying over the **canopy top**.",
+          "Use the **minimum airspeed** that will still give good penetration into the canopy, and consider the use of **tower sprayers**."
+        ]},
+        {"p": [
+          "Another way to minimize drift is to use **drift control additives**.",
+          "Tests indicate that the use of some additives reduces downwind drift deposits by **50% to 80%**.",
+          "Drift control additives are a specific type of **chemical adjuvant**.",
+          "They must be mixed and applied according to label directions to be effective.",
+          "Research, however, has shown that some products intended to reduce drift **in fact increase drift potential**.",
+          "This research also shows that although some of these additives dramatically increase droplet size, they may also **reduce coverage** and lessen the overall effectiveness of the pesticide.",
+          "Thoroughly evaluate drift control additives before using them.",
+          "Using approved application techniques and adopting new technologies designed to reduce spray drift can improve the performance of spray mixes, benefit the environment, and be more cost-effective.",
+          "Any one practice used alone may not sufficiently reduce drift.",
+          "Therefore, incorporate **as many drift-reduction techniques as practical** into your spray program (Table 11.1)."
+        ]},
+        {"h": "Summary"},
+        {"p": [
+          "To choose the most suitable pesticide application method, you must consider factors such as the target site, target pest, and which pesticide formulation you intend to use.",
+          "Further, you must wear all PPE specified on the label for a specific task and, when required, use closed mixing and loading systems, enclosed cabs, and pesticide containment systems.",
+          "**Even if not required**, using these safety systems will help protect humans and the environment from exposure to pesticides.",
+          "Your application equipment must be able to deliver the correct amount of pesticide to the intended target.",
+          "The most common type of application equipment used in pest management is the **hydraulic sprayer**.",
+          "Regardless of what type of sprayer you use, you must understand its parts and how they work.",
+          "This includes how to adjust nozzles, spray volume, and pressure to reduce off-target drift.",
+          "Spraying under the right weather conditions using proper application procedures can help reduce drift.",
+          "Before making an application, be sure your equipment is properly calibrated and know how to use the label information to calculate the correct amount of pesticide."
+        ]}
+      ],
+      "questions": [
+        {"id": "c11-s16-t1", "src": "test", "kind": "mc", "q": "What ratio of boom height above the target to nozzle spacing satisfies most overlap requirements?",
+         "choices": ["1:1", "1:2", "2:1", "4:1"], "answer": 0,
+         "ref": "p. 168, 'Techniques to Minimize Drift'", "why": "A 1:1 ratio of boom height to nozzle spacing satisfies most overlap needs."},
+        {"id": "c11-s16-t2", "src": "test", "kind": "mc", "q": "Tests indicate some drift control additives reduce downwind drift deposits by:",
+         "choices": ["5% to 10%", "20% to 40%", "50% to 80%", "90% to 100%"], "answer": 2,
+         "ref": "p. 168, 'Techniques to Minimize Drift'", "why": "Some additives cut downwind drift deposits by 50% to 80%."},
+        {"id": "c11-s16-t3", "src": "test", "kind": "tf", "q": "Research has shown that some products intended to reduce drift in fact increase drift potential.", "answer": true,
+         "ref": "p. 168, 'Techniques to Minimize Drift'", "why": "That is why you must thoroughly evaluate additives before using them."},
+        {"id": "c11-s16-t4", "src": "test", "kind": "mc", "style": "scenario", "q": "You run an air-blast sprayer in an orchard and want to cut drift. What does the manual recommend?",
+         "choices": ["Spray mostly over the canopy top", "Use maximum airspeed", "Minimize spraying over the canopy top, use the minimum airspeed that still penetrates the canopy, and consider tower sprayers", "Add more water and raise the pressure"], "answer": 2,
+         "ref": "p. 168, 'Techniques to Minimize Drift'", "why": "Those are the three air-blast drift tips on p. 168."},
+        {"id": "c11-s16-t5", "src": "test", "kind": "mc", "style": "not", "q": "Which statement is NOT consistent with the chapter summary?",
+         "choices": ["The hydraulic sprayer is the most common application equipment in pest management", "Safety systems help protect people and the environment even when not required", "Safety systems are only worth using when the label requires them", "Calibrate before making an application"], "answer": 2,
+         "ref": "p. 168, 'Summary'", "why": "The summary says even if not required, these safety systems help protect humans and the environment."},
+        {"id": "c11-s16-t6", "src": "test", "kind": "mc", "q": "Drift control additives are a specific type of:",
+         "choices": ["Chemical adjuvant", "Nozzle", "Formulation carrier", "Containment system"], "answer": 0,
+         "ref": "p. 168, 'Techniques to Minimize Drift'", "why": "Drift control additives are a specific type of chemical adjuvant."}
+      ]
+    }
+  ]
+}

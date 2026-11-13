@@ -20,7 +20,11 @@ session's network could not open directly): 50 multiple-choice questions, 35 cor
   first in the card that holds the answer. The manual's key is in **Appendix A**, which the user has
   not sent. The answers were taken from the chapter text. When Appendix A arrives, check every
   review answer against it and report any disagreement.
-- Next: Chapter 2 pages. Ask for the manual's total page count (still unknown).
+- Chapter 11, Pesticide Application Procedures (pp. 157–168): 16 cards (`c11-s01` to `c11-s16`), 9 review
+  questions from p. 169 (Appendix A key not seen; answers taken from the chapter text, and #9 is a computed answer,
+  1.5 lb). Photo crops: `tools/crop_photos_ch11.py`. Area figure: `content/figures/fig-11-area.svg`.
+  Figure 11.1 (nozzle patterns) is a photo crop with every label typed into `explain`.
+- Chapters 2 to 10 not sent yet. The user jumped to Chapter 11. Ask for the manual's total page count (still unknown).
 
 ## Rules for every session (the user's own rules)
 1. The user sends photos of manual pages. Work **only** from those pages.

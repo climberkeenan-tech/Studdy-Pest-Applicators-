@@ -220,7 +220,7 @@
       "The operator (driver) is not held responsible if a pesticide spill or accident occurs."
      ],
      "answer": 1,
-     "ref": "Review question 1. Answer in the text: p. 124, 'Transport Vehicle' and 'Vehicle Operator'",
+     "ref": "p. 124, 'Transport Vehicle' and 'Vehicle Operator'",
      "why": "Enclosed cargo boxes provide extra security, pesticides never go in the passenger area, and the driver is accountable."
     },
     {
@@ -700,7 +700,7 @@
       "The floor should remain as bare soil to absorb any spilled material."
      ],
      "answer": 1,
-     "ref": "Review question 2. Answer in the text: p. 126, 'Prevent Water Damage'",
+     "ref": "p. 126, 'Prevent Water Damage'",
      "why": "Consider soil and land surface characteristics. Venting to an adjoining room does little, and floors should be impervious."
     },
     {
@@ -1180,7 +1180,7 @@
       "Clean up any spilled material."
      ],
      "answer": 0,
-     "ref": "Review question 3. Answer in the text: p. 128, 'Look for Damage'",
+     "ref": "p. 128, 'Look for Damage'",
      "why": "If you find a damaged container, put on appropriate PPE first."
     },
     {
@@ -1193,10 +1193,9 @@
       "Purchase more than you need to ensure availability of the product.",
       "Store metal pesticide containers on the higher shelves to prevent rusting."
      ],
-     "answer": 0,
-     "ref": "Review question 4. Answer in the text: p. 128, 'Note Shelf Life of Pesticides'",
-     "why": "Buy only as much as you need for the season. Heaviest containers go on lower shelves.",
-     "keyDispute": true
+     "answer": 2,
+     "ref": "pp. 126 and 128, 'Prevent Water Damage' and 'Note Shelf Life of Pesticides' (Appendix A: C)",
+     "why": "Appendix A says C: water makes metal containers rust, so store pesticides on raised pallets or shelves."
     },
     {
      "id": "c08-s08-t1",
@@ -1483,7 +1482,7 @@
       "Train employees on security measures."
      ],
      "answer": 1,
-     "ref": "Review question 5. Answer in the text: p. 129, 'Risk Assessment'",
+     "ref": "p. 129, 'Risk Assessment'",
      "why": "The first step in developing a security program is a risk assessment."
     },
     {
@@ -1621,7 +1620,7 @@
       "Back up confidential data daily and keep it at the facility."
      ],
      "answer": 0,
-     "ref": "Review question 6. Answer in the text: p. 130, 'Employee Training and Security Awareness'",
+     "ref": "p. 130, 'Employee Training and Security Awareness'",
      "why": "At a minimum, instruct all employees on pesticide inventory control."
     },
     {

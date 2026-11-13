@@ -5,8 +5,6 @@ Cards are written in their original 24-card order, then three short pairs are me
 test questions trimmed to 5 per card (see MERGE and DROP at the bottom). Run, then tools/build.py."""
 CH = "Chapter 6 · Personal Protective Equipment"
 def mc(i, q, choices, ans, ref, why, style=None, src="test", fixed=False):
-    if src == "review":  # build.py checks review answers against Appendix A via "Review question N" in ref
-        ref = f"Review question {int(i.rsplit('-r', 1)[1])}, p. 103. Answer in the text: {ref}"
     d = {"id": i, "src": src, "kind": "mc", "q": q, "choices": choices, "answer": ans, "ref": ref, "why": why}
     if style: d["style"] = style
     if fixed: d["fixed"] = True

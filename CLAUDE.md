@@ -20,7 +20,10 @@ session's network could not open directly): 50 multiple-choice questions, 35 cor
   first in the card that holds the answer. All 10 checked against Appendix A: all match.
 - **Appendix A answer key (all 11 chapters) is in `content/answer-key.json`.** `tools/build.py` fails if any
   review question's answer disagrees with it. Review choices must stay in the manual's A, B, C order
-  (index 0 = A), and each review `ref` must contain "Review question N".
+  (index 0 = A). The question number comes from "Review question N" in the `ref`, or else from the id's `-rN`
+  suffix (Chapters 3 to 9 number `rK` by manual question; Chapters 1 and 10 put "Review question N" in the ref).
+  All 84 review answers in Chapters 1 to 10 now match. Chapter 8 Q4 (`c08-s08-r4`) was A and was changed to
+  Appendix A's C; the "Review answers taken from the chapter text" notes below are now superseded.
 - Chapter 2, Federal Pesticide Laws and Regulations (pp. 19–28): 15 cards (`c02-s01` to `c02-s15`),
   75 test-style questions, plus the 7 review questions from p. 29 (ids `c02-sNN-rK`). Review answers again
   taken from the chapter text, pending Appendix A. Review Q1 sits in card 2, Q2 card 4, Q3 card 7,
@@ -69,16 +72,14 @@ session's network could not open directly): 50 multiple-choice questions, 35 cor
   redrawn simplified as `fig-9-1.svg` by `tools/fig_9_1.py`. The NFPA diamond is `fig-9-nfpa.svg` (its drawing labels the
   right box "reactivity", the box text says "instability"). Crops: `tools/crop_photos_ch09.py` (grayscale).
   Check review answers against Appendix A when it arrives.
-- Chapter 10 not sent yet.
+- Chapter 10, Planning the Pesticide Application (pp. 143–154, review questions pp. 155–156): 17 cards
+  (`c10-s01` to `c10-s17`), 10 review + 78 test questions. Review Q1 card 1, Q2 and Q3 card 2, Q4 card 4,
+  Q5 card 6, Q6 card 7, Q7 card 8, Q8 card 9, Q9 card 12, Q10 card 14. All match Appendix A. Built by `tools/gen_ch10.py` (edit there,
+  rerun with `content/chapters/ch10.json` as the argument, then build). Diagrams: `fig-10-jar.svg` (jar test),
+  `fig-10-sump.svg` (containment pad and sump). Crops: `tools/crop_photos_ch10.py` (grayscale).
 - Chapter 11, Pesticide Application Procedures (pp. 157–168): 16 cards (`c11-s01` to `c11-s16`), 9 review
   questions from p. 169, all checked against Appendix A: all match (A, C, C, C, C, B, B, B, A). Photo crops: `tools/crop_photos_ch11.py` (grayscale). Area figure: `content/figures/fig-11-area.svg`.
   Figure 11.1 (nozzle patterns) is a photo crop with every label typed into `explain`.
-- **Open dispute, Chapter 8 review Q4** (`c08-s08-r4`, "Which recommended practice will minimize pesticide storage
-  problems?"): the transcribed Appendix A key says C (metal containers on higher shelves); the chapter text (p. 128,
-  buy only what you need; heaviest containers on lower shelves) supports A. The card keeps A with `"keyDispute": true`,
-  which makes build.py warn instead of fail. Ask the user to re-photograph Appendix A (Chapter 8) and the Chapter 8
-  review page, then resolve and remove the flag (`KEY_DISPUTE` in `tools/gen_ch08.py`).
-- Chapter 6 and 8 review refs now carry "Review question N" (set in `tools/gen_ch06.py` and `tools/gen_ch08.py`).
 - Ask for the manual's total page count (still unknown).
 - Two sessions once worked in parallel on different branches. Before publishing, check the live artifact
   (and `git branch -r`) for chapters this branch lacks, and merge them first.

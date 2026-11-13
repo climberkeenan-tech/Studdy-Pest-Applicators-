@@ -488,7 +488,7 @@
       "Wearing the PPE listed on the label eliminates your exposure to pesticides."
      ],
      "answer": 0,
-     "ref": "Review question 1, p. 103. Answer in the text: p. 91, 'Protect Yourself from Pesticides'",
+     "ref": "p. 91, 'Protect Yourself from Pesticides'",
      "why": "One label can set one PPE list for applicators and another for early-entry workers."
     },
     {
@@ -1231,7 +1231,7 @@
       "Solvents."
      ],
      "answer": 2,
-     "ref": "Review question 2, p. 103. Answer in the text: p. 94, 'Gloves'",
+     "ref": "p. 94, 'Gloves'",
      "why": "The solvent in a formulation determines the protective glove type."
     },
     {
@@ -1929,7 +1929,7 @@
       "Dust mask."
      ],
      "answer": 1,
-     "ref": "Review question 4, p. 103. Answer in the text: p. 98, 'Particulate Filters'",
+     "ref": "p. 98, 'Particulate Filters'",
      "why": "N-series is not oil-resistant. P-series is oil-proof."
     },
     {
@@ -2098,7 +2098,7 @@
       "At the end of each workday."
      ],
      "answer": 2,
-     "ref": "Review question 3, p. 103. Answer in the text: p. 98, 'Chemical Cartridges or Canisters'",
+     "ref": "p. 98, 'Chemical Cartridges or Canisters'",
      "why": "Trapped pesticide can desorb overnight, so cartridges go at the end of each workday."
     },
     {
@@ -2112,7 +2112,7 @@
       "Neutralizing the pesticide."
      ],
      "answer": 0,
-     "ref": "Review question 5, p. 103. Answer in the text: p. 97-98, 'Purifying Elements' and 'Chemical Cartridges or Canisters'",
+     "ref": "p. 97-98, 'Purifying Elements' and 'Chemical Cartridges or Canisters'",
      "why": "Filters trap particulates and sorbents in cartridges take up vapors."
     },
     {
@@ -2388,7 +2388,7 @@
       "If you have a significant change in weight."
      ],
      "answer": 2,
-     "ref": "Review question 6, p. 103. Answer in the text: p. 99-100, 'Fit Tests'",
+     "ref": "p. 99-100, 'Fit Tests'",
      "why": "Refit whenever something physical changes, such as a significant weight change. Routine tests are annual."
     },
     {
@@ -2534,7 +2534,7 @@
       "Put Vaseline® on the edges of the respirator to enhance the seal."
      ],
      "answer": 0,
-     "ref": "Review question 7, p. 103. Answer in the text: p. 100, 'User Seal Checks for Tight-Fitting Respirators'",
+     "ref": "p. 100, 'User Seal Checks for Tight-Fitting Respirators'",
      "why": "Seal checks every time you put the mask on. Fit tests are annual."
     },
     {
@@ -2699,7 +2699,7 @@
       "Do not attempt to wash it. Dispose of it immediately."
      ],
      "answer": 2,
-     "ref": "Review question 8, p. 103. Answer in the text: p. 101, 'Woven Work Clothes and Coveralls'",
+     "ref": "p. 101, 'Woven Work Clothes and Coveralls'",
      "why": "Never wash absorbent garments soaked with undiluted pesticide. Remove and dispose of them."
     },
     {
@@ -2713,7 +2713,7 @@
       "When they have a strong odor like the pesticide."
      ],
      "answer": 0,
-     "ref": "Review question 9, p. 103. Answer in the text: p. 100, 'Woven Work Clothes and Coveralls'",
+     "ref": "p. 100, 'Woven Work Clothes and Coveralls'",
      "why": "Launder fabric coveralls and work clothing after each day's use."
     },
     {

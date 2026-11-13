@@ -1,0 +1,2420 @@
+{
+ "chapter": "Chapter 10 · Planning the Pesticide Application",
+ "pages": [
+  143,
+  156
+ ],
+ "sections": [
+  {
+   "id": "c10-s01",
+   "chapter": "Chapter 10 · Planning the Pesticide Application",
+   "title": "Planning and selecting the pesticide",
+   "pages": [
+    143,
+    144
+   ],
+   "body": [
+    {
+     "h": "Planning the pesticide application"
+    },
+    {
+     "box": "Learning objectives",
+     "p": [
+      "After studying this chapter, you should be able to:"
+     ],
+     "list": [
+      "Explain how to select appropriate pesticides and additives (if needed).",
+      "Follow all label instructions and other legal restrictions pertaining to a pesticide application.",
+      "Determine whether two or more pesticides may be tank-mixed.",
+      "Follow the label for safe mixing and loading.",
+      "Describe how to prevent pesticide contamination of water sources during mixing, loading, and cleaning.",
+      "List what personal protective equipment to wear during mixing, loading, and cleaning.",
+      "Explain how to open pesticide containers and transfer the contents safely.",
+      "Measure pesticides accurately using proper utensils and devices.",
+      "Discuss how to rinse and dispose of pesticide containers properly.",
+      "State some basic procedures that ensure the correct application of pesticides.",
+      "Describe how to clean and properly store application equipment after use.",
+      "Explain the basics of professionalism for pesticide applicators."
+     ]
+    },
+    {
+     "p": [
+      "Planning is essential before beginning a pesticide application.",
+      "To help plan, you should know how to:"
+     ]
+    },
+    {
+     "list": [
+      "Select the right pesticide for the job.",
+      "Review the label.",
+      "Test for pesticide compatibility before mixing.",
+      "Choose what personal protective equipment to wear.",
+      "Transfer pesticides safely.",
+      "Clean up after an application."
+     ]
+    },
+    {
+     "p": [
+      "Careful planning and consideration of all details is the **hallmark of professionalism**."
+     ]
+    },
+    {
+     "h": "Selecting the pesticide"
+    },
+    {
+     "p": [
+      "Choosing the right pesticide for your particular situation is critical to determine whether the pesticide can be used safely under the application conditions.",
+      "You also need to determine how much product is required for the area you are treating.",
+      "Before purchasing or applying the pesticide, read the label to determine:"
+     ]
+    },
+    {
+     "list": [
+      "The **safety measures** to follow.",
+      "**Where** you can legally use it (that is, target sites).",
+      "**When** to apply it (considering factors such as the **life cycle of the pest, weather conditions**, preharvest and/or grazing interval, and the rotational or replanting interval).",
+      "**How** to apply it (for example, selecting and setting up equipment, and following label directions).",
+      "If there are any **special use restrictions** (for example, restricted-entry intervals or prohibitions against certain types of application methods or equipment).",
+      "Whether there are **other restrictions** (for example, environmental conditions, setbacks or buffers, and drift warnings)."
+     ]
+    },
+    {
+     "p": [
+      "Some labels require you to add an **adjuvant** (or additive) to the spray mixture to improve mixing or application, or to enhance pesticidal performance.",
+      "See Chapter 4 (Pesticide Formulations) for a more detailed discussion of spray adjuvants."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c10-s01-r1",
+     "src": "review",
+     "kind": "mc",
+     "q": "Determining **when** to apply a pesticide includes considering the:",
+     "choices": [
+      "Life cycle of the pest and weather conditions.",
+      "Percent active ingredient.",
+      "Need for additives or adjuvants."
+     ],
+     "answer": 0,
+     "ref": "Review question 1, p. 155. Answer in the text: p. 144, 'Selecting the Pesticide'",
+     "why": "The 'when' item names the pest's life cycle, weather, preharvest or grazing interval, and rotational or replanting interval."
+    },
+    {
+     "id": "c10-s01-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "According to the manual, what is the hallmark of professionalism?",
+     "choices": [
+      "Careful planning and consideration of all details",
+      "Using the strongest pesticide available",
+      "Finishing applications as quickly as possible",
+      "Holding certification in several categories"
+     ],
+     "answer": 0,
+     "ref": "p. 143, chapter introduction",
+     "why": "The intro ends: careful planning and consideration of all details is the hallmark of professionalism."
+    },
+    {
+     "id": "c10-s01-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT something the manual says to read the label for before buying or applying a pesticide?",
+     "choices": [
+      "Where you can legally use it",
+      "The safety measures to follow",
+      "The product's retail price",
+      "Special use restrictions, such as restricted-entry intervals"
+     ],
+     "answer": 2,
+     "ref": "p. 144, 'Selecting the Pesticide'",
+     "why": "Price is not on the list."
+    },
+    {
+     "id": "c10-s01-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A label sets a restricted-entry interval and bans application with a certain type of equipment. Which label item does the manual file these under?",
+     "choices": [
+      "Special use restrictions",
+      "Where you can legally use it",
+      "When to apply it",
+      "Other restrictions, such as setbacks or buffers"
+     ],
+     "answer": 0,
+     "ref": "p. 144, 'Selecting the Pesticide'",
+     "why": "Restricted-entry intervals and prohibited methods or equipment are the manual's examples of special use restrictions."
+    },
+    {
+     "id": "c10-s01-t4",
+     "src": "test",
+     "kind": "mc",
+     "q": "The preharvest or grazing interval is a factor in deciding:",
+     "choices": [
+      "When to apply the pesticide",
+      "Where you can legally use it",
+      "How to set up the equipment",
+      "Which signal word applies"
+     ],
+     "answer": 0,
+     "ref": "p. 144, 'Selecting the Pesticide'",
+     "why": "It is listed under when to apply, with life cycle, weather, and the rotational or replanting interval."
+    }
+   ]
+  },
+  {
+   "id": "c10-s02",
+   "chapter": "Chapter 10 · Planning the Pesticide Application",
+   "title": "Label review and physical incompatibility",
+   "pages": [
+    144,
+    145
+   ],
+   "body": [
+    {
+     "h": "Reviewing the pesticide label"
+    },
+    {
+     "p": [
+      "As you learned in Chapter 3 (Pesticide Labeling), it is important to review the label carefully and to apply the pesticide as directed on the product label.",
+      "The **\"Directions for Use\"** section lists the various **crops, animals, or sites** on which you may legally use the pesticide.",
+      "Under this subheading, the label lists the **target pests, application rates, spray quality (droplet size)** specifications, and general **application methods**.",
+      "You should also consult the label on **sprayer cleanout** as well as proper storage and disposal of the pesticide and empty containers."
+     ]
+    },
+    {
+     "h": "Determining pesticide compatibility"
+    },
+    {
+     "p": [
+      "As discussed in Chapter 4, **tank mixing** two or more pesticides saves time and labor.",
+      "In some cases, however, it can impair the effectiveness of one or more of the products.",
+      "For this reason, you should determine the compatibility of your products before mixing them."
+     ]
+    },
+    {
+     "p": [
+      "Pesticides are **compatible** when they can be mixed and applied in combination without reducing the effectiveness or changing the physical and chemical properties of the mixture.",
+      "When problems develop from mixing two or more products together, the chemicals are **incompatible**.",
+      "There are two main types of incompatibility: **physical** and **chemical**."
+     ]
+    },
+    {
+     "h": "Physical incompatibility"
+    },
+    {
+     "p": [
+      "**Physical incompatibility** is the failure of pesticide products to stay uniformly mixed in the spray tank.",
+      "Physical incompatibility may result in a **putty or paste** formation, a **separation into layers**, or a mixture that looks like **cottage cheese** (precipitates).",
+      "This mixture may clog screens and nozzles and will not control target pests.",
+      "Physical incompatibility may be caused by:"
+     ]
+    },
+    {
+     "list": [
+      "Improper mixing procedures.",
+      "Inadequate agitation.",
+      "Lack of stable emulsifiers in some emulsifiable concentrates.",
+      "Mixing with liquid fertilizers.",
+      "Mixing pesticides with **hard water** (a **pH greater than 7**)."
+     ]
+    },
+    {
+     "fig": "p145-foaming"
+    }
+   ],
+   "figures": [
+    {
+     "id": "p145-foaming",
+     "title": "Physical incompatibility results in an unsprayable mixture, in this case, excessive foaming.",
+     "page": "p. 145",
+     "imgFile": "p145-foaming.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c10-s02-r1",
+     "src": "review",
+     "kind": "mc",
+     "q": "The \"Directions for Use\" section of a pesticide label indicates the:",
+     "choices": [
+      "Various crops or areas on which the pesticide may be legally used.",
+      "Disposal of pesticide waste.",
+      "Environmental, physical, and chemical hazards."
+     ],
+     "answer": 0,
+     "ref": "Review question 2, p. 155. Answer in the text: p. 144, 'Reviewing the Pesticide Label'",
+     "why": "Directions for Use lists the crops, animals, or sites where you may legally use the pesticide."
+    },
+    {
+     "id": "c10-s02-r2",
+     "src": "review",
+     "kind": "mc",
+     "q": "When two or more pesticides mixed together form a putty or paste, separate into layers, or look like cottage cheese, it is an example of:",
+     "choices": [
+      "Limited agitation.",
+      "Chemical incompatibility.",
+      "Physical incompatibility."
+     ],
+     "answer": 2,
+     "ref": "Review question 3, p. 155. Answer in the text: pp. 144–145, 'Determining Pesticide Compatibility'",
+     "why": "Putty, layers, and cottage cheese are the manual's signs of physical incompatibility."
+    },
+    {
+     "id": "c10-s02-t1",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT listed as a cause of physical incompatibility?",
+     "choices": [
+      "Inadequate agitation",
+      "Mixing with liquid fertilizers",
+      "Mixing pesticides with hard water",
+      "Adding a compatibility agent"
+     ],
+     "answer": 3,
+     "ref": "pp. 144–145, 'Determining Pesticide Compatibility'",
+     "why": "Compatibility agents may improve mixing (p. 146); the other three are listed causes."
+    },
+    {
+     "id": "c10-s02-t2",
+     "src": "test",
+     "kind": "mc",
+     "q": "Hard water, a cause of physical incompatibility, is water with a pH:",
+     "choices": [
+      "Greater than 7",
+      "Less than 7",
+      "Of exactly 7",
+      "Less than 5"
+     ],
+     "answer": 0,
+     "ref": "p. 145, causes of physical incompatibility",
+     "why": "The manual defines it as a pH greater than 7."
+    },
+    {
+     "id": "c10-s02-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "You add two products to the tank and the mixture separates into layers. Which statement is correct?",
+     "choices": [
+      "It is physical incompatibility, and it may clog screens and nozzles and will not control target pests",
+      "It is chemical incompatibility, so a new substance has formed",
+      "It is fine as long as you spray it right away",
+      "It means the products are compatible but need more water"
+     ],
+     "answer": 0,
+     "ref": "pp. 144–145, 'Determining Pesticide Compatibility'",
+     "why": "Separation into layers is physical incompatibility."
+    },
+    {
+     "id": "c10-s02-t4",
+     "src": "test",
+     "kind": "tf",
+     "q": "Under 'Directions for Use,' the label lists target pests, application rates, and spray quality (droplet size) specifications.",
+     "answer": true,
+     "ref": "p. 144, 'Reviewing the Pesticide Label'",
+     "why": "It also lists general application methods."
+    }
+   ]
+  },
+  {
+   "id": "c10-s03",
+   "chapter": "Chapter 10 · Planning the Pesticide Application",
+   "title": "Chemical incompatibility and tank-mix rules",
+   "pages": [
+    145,
+    145
+   ],
+   "body": [
+    {
+     "h": "Chemical incompatibility"
+    },
+    {
+     "p": [
+      "**Chemical incompatibility** occurs when mixing certain pesticides in the spray tank alters the activity of one or more of them.",
+      "In other words, a **chemical reaction** takes place and produces **new substances**.",
+      "Clues indicating chemical incompatibility may include **heat**, a **color change**, the formation of a **gas** or a **precipitate**, the appearance of **surface scum or foam**, or the formation of **gel or \"sludge.\"**",
+      "The resulting mixture is different from the products applied separately."
+     ]
+    },
+    {
+     "p": [
+      "There are **two types** of chemical incompatibility.",
+      "In the first type, the pesticidal activity of at least one of the components is **reduced** when two or more products are mixed.",
+      "In the second type, the activity of two or more products applied together may be **greater** than if each pesticide were applied separately.",
+      "This added effectiveness may weaken the **selective nature** of the individual products and **damage target plants**."
+     ]
+    },
+    {
+     "fig": "p145-corn"
+    },
+    {
+     "h": "Label information and the law"
+    },
+    {
+     "p": [
+      "Some pesticide product labels list pesticides (and other chemicals) known to be compatible with that formulation.",
+      "Many have very helpful tank-mixing instructions.",
+      "If you cannot find information about tank mixing on one or more products you wish to combine, do a **\"jar test\"** with a small amount of the mixture before you mix a large quantity."
+     ]
+    },
+    {
+     "p": [
+      "Remember, it is **illegal** to mix pesticides with other products (for example, other pesticides, adjuvants, or carriers) when such mixtures are **expressly prohibited on the label**.",
+      "Also, if a tank mix contains a pesticide that has a higher toxicity level (for example, DANGER) than the other pesticides (for example, WARNING or CAUTION), treat the entire mixture according to the **more restrictive signal word** (for example, as a DANGER pesticide).",
+      "You must use the required safety equipment and follow all other label requirements found on the label with the **greatest restrictions**."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "p145-corn",
+     "title": "In this case of chemical incompatibility, mixing pesticides reduced their effectiveness, allowing weeds to grow along with the corn.",
+     "page": "p. 145",
+     "imgFile": "p145-corn.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c10-s03-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "What is chemical incompatibility?",
+     "choices": [
+      "Mixing pesticides alters the activity of one or more of them through a chemical reaction that produces new substances",
+      "Products fail to stay uniformly mixed in the spray tank",
+      "A pest population becomes resistant to a pesticide",
+      "A pesticide breaks down in sunlight"
+     ],
+     "answer": 0,
+     "ref": "p. 145, 'Chemical incompatibility'",
+     "why": "Option B is physical incompatibility."
+    },
+    {
+     "id": "c10-s03-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "You tank-mix a DANGER product with a CAUTION product. How must you treat the whole mixture?",
+     "choices": [
+      "As a DANGER pesticide",
+      "As a CAUTION pesticide",
+      "As a WARNING pesticide, the middle level",
+      "By whichever product makes up the most volume"
+     ],
+     "answer": 0,
+     "ref": "p. 145, tank mix and signal words",
+     "why": "Treat the entire mixture by the more restrictive signal word."
+    },
+    {
+     "id": "c10-s03-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT listed as a clue to chemical incompatibility?",
+     "choices": [
+      "Heat",
+      "A color change",
+      "Formation of a gas or precipitate",
+      "The mixture staying smooth and uniform"
+     ],
+     "answer": 3,
+     "ref": "p. 145, 'Chemical incompatibility'",
+     "why": "A smooth, uniform mixture is the sign of compatibility."
+    },
+    {
+     "id": "c10-s03-t4",
+     "src": "test",
+     "kind": "mc",
+     "q": "In the second type of chemical incompatibility, products are more active together than apart. What problem can that cause?",
+     "choices": [
+      "It may weaken the selective nature of the products and damage target plants",
+      "None, stronger is always better",
+      "It makes the mixture separate into layers",
+      "It lowers the signal word of the mixture"
+     ],
+     "answer": 0,
+     "ref": "p. 145, 'Chemical incompatibility'",
+     "why": "Added effectiveness can weaken selectivity and damage target plants."
+    },
+    {
+     "id": "c10-s03-t5",
+     "src": "test",
+     "kind": "tf",
+     "q": "If a jar test shows two products are compatible, you may mix them even when the label expressly prohibits that mixture.",
+     "answer": false,
+     "ref": "p. 145, tank mix rules",
+     "why": "Mixing is illegal when the label expressly prohibits it."
+    }
+   ]
+  },
+  {
+   "id": "c10-s04",
+   "chapter": "Chapter 10 · Planning the Pesticide Application",
+   "title": "The jar test and the tank mixing order",
+   "pages": [
+    145,
+    146
+   ],
+   "body": [
+    {
+     "h": "Conducting a compatibility test"
+    },
+    {
+     "p": [
+      "To conduct a **jar (compatibility) test**, use a small **glass or plastic** container.",
+      "Mix **proportionate amounts** of all the carrier and products you intend to combine in the spray tank.",
+      "Start by filling the jar **one-fifth to one-half full** with the carrier (water or liquid fertilizer).",
+      "Then add proportionate amounts of each product, **one at a time**, in the order suggested under \"Making Tank Mixes\" (below).",
+      "**Shake** the jar thoroughly after each product is added.",
+      "Allow the mixture to stand for **10 to 15 minutes**.",
+      "If flakes, sludge, gel, precipitates, or other solids form, the products separate into layers, or heat is given off, the products **cannot be safely tank-mixed**."
+     ]
+    },
+    {
+     "fig": "fig-10-jar"
+    },
+    {
+     "p": [
+      "Adding **compatibility agents** may improve the mixing of the ingredients.",
+      "Certain kits can help you test for compatibility.",
+      "There are also online sources as well as smartphone apps to help you determine the proper mixing order for various tank mix components."
+     ]
+    },
+    {
+     "h": "Making tank mixes"
+    },
+    {
+     "p": [
+      "To minimize compatibility problems with tank mixes, follow correct mixing procedures (see inset).",
+      "Add and thoroughly mix the products, **one at a time**, beginning with those **hardest to mix**."
+     ]
+    },
+    {
+     "p": [
+      "To ensure thorough mixing of dry formulations before adding them to the mixture, make a **preslurry**: mix the products with a little water to form a paste before adding them to the tank mix.",
+      "To be certain you have a uniform spray mixture at all times, keep the mixture **agitated during the entire application** until the tank is empty."
+     ]
+    },
+    {
+     "box": "Tank Mixing Order",
+     "ol": [
+      "Fill tank **one-fifth to one-half full** with carrier (for example, water or liquid fertilizer). Start agitation.",
+      "Add **compatibility agent** (if needed).",
+      "Add **suspension products**: first, dry formulations, which are wettable powders (WP), dry flowables (DF), and water-dispersible granules (WDG) (as a preslurry, if necessary), then liquids, which are flowables (F), liquids (L), and microencapsulated (ME).",
+      "Add **solution products**: solutions (S) and soluble powders (SP).",
+      "Add **surfactants** or other adjuvants (if needed).",
+      "Last, add **emulsion products**: emulsifiable concentrates (EC)."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "fig-10-jar",
+     "title": "A jar test indicates whether two or more pesticides can be safely mixed.",
+     "page": "p. 145",
+     "svgFile": "fig-10-jar.svg",
+     "explain": [
+      "The left jar shows clumping and separation, labeled INCOMPATIBLE.",
+      "The right jar shows particles spread evenly, labeled smooth, uniform mixture, COMPATIBLE."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c10-s04-r1",
+     "src": "review",
+     "kind": "mc",
+     "q": "After filling a tank one-fifth to one-half full with carrier, what is the usual order for tank mixing the remaining products?",
+     "choices": [
+      "Add suspension products, add emulsion products, add solution products, add surfactants (if needed), add compatibility agent (if needed).",
+      "Add compatibility agent (if needed), add suspension products, add solution products, add surfactants (if needed), add emulsion products.",
+      "Add surfactants (if needed), add suspension products, add emulsion products, add solution products, add compatibility agent (if needed)."
+     ],
+     "answer": 1,
+     "ref": "Review question 4, p. 155. Answer in the text: p. 146, 'Tank Mixing Order' box",
+     "why": "Compatibility agent, suspensions, solutions, surfactants, then emulsions last."
+    },
+    {
+     "id": "c10-s04-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "How full do you fill the jar with carrier at the start of a jar test?",
+     "choices": [
+      "One-fifth to one-half full",
+      "Completely full",
+      "One-quarter full",
+      "Three-quarters full"
+     ],
+     "answer": 0,
+     "ref": "p. 145, 'Conducting a Compatibility Test'",
+     "why": "Same as the first step of the tank mixing order."
+    },
+    {
+     "id": "c10-s04-t2",
+     "src": "test",
+     "kind": "mc",
+     "q": "After all products are added, how long should the jar test mixture stand?",
+     "choices": [
+      "10 to 15 minutes",
+      "30 seconds",
+      "1 hour",
+      "24 hours"
+     ],
+     "answer": 0,
+     "ref": "p. 145, 'Conducting a Compatibility Test'",
+     "why": "Let it stand 10 to 15 minutes, then look for solids, layers, or heat."
+    },
+    {
+     "id": "c10-s04-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "During a jar test the jar gets warm and gel forms. What do you conclude?",
+     "choices": [
+      "The products cannot be safely tank-mixed",
+      "The products are compatible",
+      "Add more water and spray anyway",
+      "Shake harder and it will be fine"
+     ],
+     "answer": 0,
+     "ref": "pp. 145–146, 'Conducting a Compatibility Test'",
+     "why": "Heat or gel means they cannot be safely tank-mixed."
+    },
+    {
+     "id": "c10-s04-t4",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT a suspension product in the tank mixing order?",
+     "choices": [
+      "Wettable powders (WP)",
+      "Dry flowables (DF)",
+      "Microencapsulated (ME)",
+      "Soluble powders (SP)"
+     ],
+     "answer": 3,
+     "ref": "p. 146, 'Tank Mixing Order' box",
+     "why": "Soluble powders are solution products, step 4."
+    },
+    {
+     "id": "c10-s04-t5",
+     "src": "test",
+     "kind": "tf",
+     "q": "Once all products are in the tank, you can stop agitating.",
+     "answer": false,
+     "ref": "p. 146, 'Making Tank Mixes'",
+     "why": "Keep it agitated during the entire application until the tank is empty."
+    }
+   ]
+  },
+  {
+   "id": "c10-s05",
+   "chapter": "Chapter 10 · Planning the Pesticide Application",
+   "title": "Mixing and loading area and water protection",
+   "pages": [
+    146,
+    147
+   ],
+   "body": [
+    {
+     "h": "Following safe mixing and loading practices"
+    },
+    {
+     "p": [
+      "People who mix and load **concentrated pesticides** have an especially **high risk** of accidental exposure and poisoning.",
+      "Observe the following precautions to reduce the risks involved with this part of the job."
+     ]
+    },
+    {
+     "fig": "p146-pouring"
+    },
+    {
+     "h": "Select an appropriate mixing and loading area"
+    },
+    {
+     "p": [
+      "Locate the pesticide mixing and loading area in a **well-ventilated** (if indoors), **well-lighted** place away from people, animals, food, and other items that might be contaminated."
+     ]
+    },
+    {
+     "fig": "p146-site"
+    },
+    {
+     "h": "Protect water sources"
+    },
+    {
+     "p": [
+      "Ensure that no tank mixture can **back-siphon** into a water source.",
+      "When filling a mix tank using a water pipe or hose, place the pipe or hose end **well above the surface** of the pesticide mixture, leaving a distinct **air gap** between the two.",
+      "If water is pumped directly from the source into a mix tank, use a **check valve, anti-siphoning device, or backflow preventer** to prevent back-siphoning if the pump fails.",
+      "The backflow preventer has a mechanism that **automatically closes** if a drop or loss of water pressure occurs.",
+      "Check valves are crucial for **chemigation** and similar systems where pesticides are injected into irrigation water."
+     ]
+    },
+    {
+     "gallery": [
+      "p147-airgap",
+      "p147-backflow"
+     ]
+    },
+    {
+     "p": [
+      "Mix pesticides in areas where any spills, leaks, and overflows cannot flow toward a drain or into water sources.",
+      "If using a permanent mixing and loading site, use a **containment pad** (see Chapter 11, Pesticide Application Procedures).",
+      "When possible, mix and load the pesticides **at the application site**.",
+      "Be careful not to use the same site repeatedly, and do not contaminate any water sources."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "p146-pouring",
+     "title": "Observe all precautions when mixing and loading pesticides.",
+     "page": "p. 146",
+     "imgFile": "p146-pouring.jpg"
+    },
+    {
+     "id": "p146-site",
+     "title": "Locate the pesticide mixing and loading site outdoors or in a well ventilated area.",
+     "page": "p. 146",
+     "imgFile": "p146-site.jpg"
+    },
+    {
+     "id": "p147-airgap",
+     "title": "Leave a distinct air gap between the hose and the surface of the pesticide mixture to prevent back-siphoning.",
+     "page": "p. 147",
+     "imgFile": "p147-airgap.jpg"
+    },
+    {
+     "id": "p147-backflow",
+     "title": "Use a backflow device when water is pumped directly from the source.",
+     "page": "p. 147",
+     "imgFile": "p147-backflow.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c10-s05-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "When filling a mix tank with a hose, how do you prevent back-siphoning?",
+     "choices": [
+      "Keep the hose end well above the mixture, leaving a distinct air gap",
+      "Keep the hose end under the surface so it does not splash",
+      "Fill the tank as fast as possible",
+      "Add the pesticide before any water"
+     ],
+     "answer": 0,
+     "ref": "p. 147, 'Protect Water Sources'",
+     "why": "The air gap keeps the mixture from being pulled back into the water source."
+    },
+    {
+     "id": "c10-s05-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "Water is pumped straight from a well into your mix tank, and the pump fails. What should already be in place to keep the mixture out of the well?",
+     "choices": [
+      "A check valve, anti-siphoning device, or backflow preventer",
+      "A preslurry",
+      "A compatibility agent",
+      "A containment tray under the hose"
+     ],
+     "answer": 0,
+     "ref": "p. 147, 'Protect Water Sources'",
+     "why": "These devices prevent back-siphoning if the pump fails."
+    },
+    {
+     "id": "c10-s05-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT a guideline for the mixing and loading area?",
+     "choices": [
+      "Well-ventilated, if indoors",
+      "Well-lighted",
+      "Away from people, animals, and food",
+      "Next to a floor drain so spills wash away"
+     ],
+     "answer": 3,
+     "ref": "pp. 146–147, mixing and loading area",
+     "why": "Spills must not be able to flow toward a drain."
+    },
+    {
+     "id": "c10-s05-t4",
+     "src": "test",
+     "kind": "mc",
+     "q": "Check valves are described as crucial for which kind of system?",
+     "choices": [
+      "Chemigation, where pesticides are injected into irrigation water",
+      "Backpack sprayers",
+      "Dust shakers",
+      "Granular spreaders"
+     ],
+     "answer": 0,
+     "ref": "p. 147, 'Protect Water Sources'",
+     "why": "Chemigation and similar systems inject pesticide into irrigation water."
+    },
+    {
+     "id": "c10-s05-t5",
+     "src": "test",
+     "kind": "tf",
+     "q": "When possible, mix and load at the application site, but avoid using the same site repeatedly.",
+     "answer": true,
+     "ref": "p. 147, 'Protect Water Sources'",
+     "why": "Also do not contaminate any water sources."
+    }
+   ]
+  },
+  {
+   "id": "c10-s06",
+   "chapter": "Chapter 10 · Planning the Pesticide Application",
+   "title": "PPE for mixing and opening containers",
+   "pages": [
+    147,
+    147
+   ],
+   "body": [
+    {
+     "h": "Use personal protective equipment"
+    },
+    {
+     "p": [
+      "Be sure to wear appropriate personal protective equipment (PPE) when handling pesticide containers, **even before opening them**.",
+      "Pesticide handlers must wear **all of the PPE that the pesticide labeling requires**.",
+      "This may include:"
+     ]
+    },
+    {
+     "list": [
+      "**Body protection**: Wear a **bib-top apron** made of **butyl, nitrile, or foil-laminate** material in case you get splashed while mixing and loading or come in direct contact with contaminated equipment. The style that includes built-in gloves and sleeves is especially protective.",
+      "**Face protection**: Wear a **face shield** to keep splashes and dusts off your face, nose, and mouth while pouring liquid pesticides or adding dry pesticides to a liquid.",
+      "**Respiratory protection**: Wear the appropriate respirator when handling pesticides. Choose one with the National Institute for Occupational Safety and Health (**NIOSH**) code given on the pesticide product label.",
+      "**Eye protection**: Wear shielded safety glasses, goggles, or a face shield to protect your eyes."
+     ]
+    },
+    {
+     "h": "Open containers carefully"
+    },
+    {
+     "p": [
+      "**Do not tear open** paper or cardboard containers.",
+      "Use a **sharp knife or scissors**.",
+      "This reduces the danger of spilling and makes bags easier to close after use.",
+      "Clean the knife or scissors afterward, and do not use them for other purposes.",
+      "To prevent spills, **close containers after each use** even if you plan to mix more of the same pesticide."
+     ]
+    },
+    {
+     "fig": "p147-knife"
+    }
+   ],
+   "figures": [
+    {
+     "id": "p147-knife",
+     "title": "Use a sharp knife to open pesticide bags and wear appropriate PPE.",
+     "page": "p. 147",
+     "imgFile": "p147-knife.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c10-s06-r1",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which statement about the proper technique for opening pesticide containers is **true**?",
+     "choices": [
+      "Put on the appropriate PPE after the containers have been opened.",
+      "Use a sharp knife or scissors to open paper or cardboard containers.",
+      "Leave the container open until you have finished mixing pesticides for the day."
+     ],
+     "answer": 1,
+     "ref": "Review question 5, p. 155. Answer in the text: p. 147, 'Open Containers Carefully'",
+     "why": "PPE goes on before opening, and containers are closed after each use."
+    },
+    {
+     "id": "c10-s06-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "Which materials does the manual list for a bib-top apron?",
+     "choices": [
+      "Butyl, nitrile, or foil-laminate",
+      "Cotton or canvas",
+      "Leather",
+      "Paper or Tyvek only"
+     ],
+     "answer": 0,
+     "ref": "p. 147, 'Use Personal Protective Equipment'",
+     "why": "The style with built-in gloves and sleeves is especially protective."
+    },
+    {
+     "id": "c10-s06-t2",
+     "src": "test",
+     "kind": "mc",
+     "q": "The respirator you choose should carry which code given on the product label?",
+     "choices": [
+      "The NIOSH code",
+      "The EPA registration number",
+      "The restricted-entry code",
+      "The signal word"
+     ],
+     "answer": 0,
+     "ref": "p. 147, 'Use Personal Protective Equipment'",
+     "why": "NIOSH is the National Institute for Occupational Safety and Health."
+    },
+    {
+     "id": "c10-s06-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "You open a bag of wettable powder, measure what you need, and will mix a second load in an hour. What do you do with the bag?",
+     "choices": [
+      "Close it now, even though you will mix more",
+      "Leave it open since you will use it soon",
+      "Pour the rest into the tank now",
+      "Tear the opening wider so it pours faster"
+     ],
+     "answer": 0,
+     "ref": "p. 147, 'Open Containers Carefully'",
+     "why": "Close containers after each use even if you plan to mix more."
+    },
+    {
+     "id": "c10-s06-t4",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT correct about opening pesticide containers?",
+     "choices": [
+      "Use a sharp knife or scissors",
+      "Clean the knife or scissors afterward",
+      "Do not use the knife or scissors for other purposes",
+      "Tear paper bags by hand to avoid contaminating tools"
+     ],
+     "answer": 3,
+     "ref": "p. 147, 'Open Containers Carefully'",
+     "why": "Do not tear open paper or cardboard containers."
+    },
+    {
+     "id": "c10-s06-t5",
+     "src": "test",
+     "kind": "tf",
+     "q": "You only need PPE once a pesticide container has been opened.",
+     "answer": false,
+     "ref": "p. 147, 'Use Personal Protective Equipment'",
+     "why": "Wear PPE when handling containers, even before opening them."
+    }
+   ]
+  },
+  {
+   "id": "c10-s07",
+   "chapter": "Chapter 10 · Planning the Pesticide Application",
+   "title": "Measuring and transferring pesticides",
+   "pages": [
+    148,
+    148
+   ],
+   "body": [
+    {
+     "h": "Measure accurately"
+    },
+    {
+     "p": [
+      "**Liquids** and some granular pesticides are measured by **volume**.",
+      "**Dusts, powders, and most dry formulations** are measured by **weight**.",
+      "Pesticide labels use the **English system** of measurement (that is, fluid ounces, pints, quarts, and gallons for liquids, and pounds and ounces for dry materials).",
+      "Use an assortment of **glass or plastic** measuring utensils, from **1 cup to 1 gallon**, to accurately measure liquids.",
+      "Some pesticides **react with metal**, especially **aluminum and iron**, so avoid using metal measuring utensils.",
+      "Use an accurate **scale** and a set of measuring cups and spoons to measure and weigh dry pesticides."
+     ]
+    },
+    {
+     "p": [
+      "Mark each pesticide measuring item clearly to avoid using it for other purposes.",
+      "To prevent accidental poisonings, paint handles with **brightly colored waterproof paint** or attach waterproof warning labels.",
+      "After each use, clean and wash utensils before storing them to prevent contaminating future mixtures.",
+      "When you are not using them, keep all measuring and weighing equipment and utensils **locked in the pesticide storage area**."
+     ]
+    },
+    {
+     "fig": "p148-measure"
+    },
+    {
+     "h": "Transfer pesticides carefully"
+    },
+    {
+     "p": [
+      "After measuring or weighing the correct amount of pesticide, carefully add it to the **partially filled** spray tank.",
+      "When pouring, keep the container and pesticide **below face level**.",
+      "If there is a breeze outdoors or strong air current indoors, stand so the pesticide cannot blow back on you.",
+      "**Rinse the measuring container** thoroughly and **pour the rinsate into the spray tank**.",
+      "Use caution while rinsing to prevent splashing.",
+      "**Never leave the spray tank unattended** while it is being filled."
+     ]
+    },
+    {
+     "p": [
+      "When transferring wettable powders, dusts, or other dry formulations, avoid spillage and **inhalation of dusts**."
+     ]
+    },
+    {
+     "fig": "p148-transfer"
+    }
+   ],
+   "figures": [
+    {
+     "id": "p148-measure",
+     "title": "Accurately measure pesticides.",
+     "page": "p. 148",
+     "imgFile": "p148-measure.jpg"
+    },
+    {
+     "id": "p148-transfer",
+     "title": "When transferring wettable powders, dusts, or other dry formulations, avoid inhalation of dusts.",
+     "page": "p. 148",
+     "imgFile": "p148-transfer.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c10-s07-r1",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which statement about measuring and/or transferring pesticides is **true**?",
+     "choices": [
+      "Metal measuring utensils are recommended over plastic.",
+      "Most dusts, powders, and dry formulations are measured by volume.",
+      "After adding the pesticide to the partially filled spray tank, rinse the measuring container and pour the rinse solution into the tank."
+     ],
+     "answer": 2,
+     "ref": "Review question 6, p. 155. Answer in the text: p. 148, 'Measure Accurately' and 'Transfer Pesticides Carefully'",
+     "why": "Avoid metal utensils, and dry formulations are measured by weight."
+    },
+    {
+     "id": "c10-s07-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "Which metals does the manual single out as reacting with some pesticides?",
+     "choices": [
+      "Aluminum and iron",
+      "Copper and zinc",
+      "Stainless steel and tin",
+      "Lead and silver"
+     ],
+     "answer": 0,
+     "ref": "p. 148, 'Measure Accurately'",
+     "why": "That is why you avoid metal measuring utensils."
+    },
+    {
+     "id": "c10-s07-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "You are pouring a liquid concentrate outdoors and a breeze is blowing toward you. What should you do?",
+     "choices": [
+      "Stand so it cannot blow back on you, and keep the container below face level",
+      "Hold the container at eye level to read the measure",
+      "Pour faster to finish before the wind shifts",
+      "Turn your face away and keep pouring at shoulder height"
+     ],
+     "answer": 0,
+     "ref": "p. 148, 'Transfer Pesticides Carefully'",
+     "why": "Keep it below face level and stand so it cannot blow back on you."
+    },
+    {
+     "id": "c10-s07-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT a recommended practice for pesticide measuring utensils?",
+     "choices": [
+      "Mark each one clearly",
+      "Paint handles with brightly colored waterproof paint",
+      "Keep them locked in the pesticide storage area",
+      "Use them in the kitchen between jobs"
+     ],
+     "answer": 3,
+     "ref": "p. 148, 'Measure Accurately'",
+     "why": "Never use them for other purposes."
+    },
+    {
+     "id": "c10-s07-t4",
+     "src": "test",
+     "kind": "mc",
+     "q": "On pesticide labels, dry materials are measured in:",
+     "choices": [
+      "Pounds and ounces",
+      "Grams and kilograms",
+      "Fluid ounces and pints",
+      "Liters"
+     ],
+     "answer": 0,
+     "ref": "p. 148, 'Measure Accurately'",
+     "why": "Labels use the English system; fluid ounces through gallons are for liquids."
+    },
+    {
+     "id": "c10-s07-t5",
+     "src": "test",
+     "kind": "tf",
+     "q": "You should never leave the spray tank unattended while it is being filled.",
+     "answer": true,
+     "ref": "p. 148, 'Transfer Pesticides Carefully'",
+     "why": "The manual says never leave it unattended while filling."
+    }
+   ]
+  },
+  {
+   "id": "c10-s08",
+   "chapter": "Chapter 10 · Planning the Pesticide Application",
+   "title": "Cleaning and disposing of containers",
+   "pages": [
+    148,
+    149
+   ],
+   "body": [
+    {
+     "h": "Cleaning and disposing of pesticide containers"
+    },
+    {
+     "p": [
+      "Follow the **container-handling instructions** on the pesticide label.",
+      "The instructions will tell you how to clean and dispose of an empty container.",
+      "**Not all containers** must be **triple-rinsed** or **pressure-rinsed**.",
+      "If rinsing is required, follow the directions on the label and **rinse immediately** after emptying the container.",
+      "Otherwise, residues may become difficult to remove if allowed to dry.",
+      "If possible, add the rinsate to the next application."
+     ]
+    },
+    {
+     "fig": "p148-triplerinse"
+    },
+    {
+     "p": [
+      "Do not leave pesticide containers **unattended** at a mixing, loading, or application site.",
+      "Return them to a **secured storage area** until they can be recycled or disposed of properly.",
+      "Clearly mark and safely store them.",
+      "Follow the label directions on what to do with an empty container."
+     ]
+    },
+    {
+     "p": [
+      "If a pesticide label says it is a **\"refillable\"** container, it will have instructions to return the container to the pesticide dealer or manufacturer for refilling.",
+      "**Never tamper** with a container designed to be returned and refilled.",
+      "If it is a **\"nonrefillable\"** container, the label will tell you whether you can recycle, recondition, or dispose of the container and the manner of disposal.",
+      "**Never reuse pesticide containers.**",
+      "If recycling is an option, check with your state, tribe, or territory pesticide regulatory agency or the **Ag Container Recycling Council** (www.acrecycle.org or 877-952-2272) to locate a pesticide container recycling program."
+     ]
+    },
+    {
+     "fig": "p149-recycling"
+    }
+   ],
+   "figures": [
+    {
+     "id": "p148-triplerinse",
+     "title": "Triple-rinse containers.",
+     "page": "p. 148",
+     "imgFile": "p148-triplerinse.jpg"
+    },
+    {
+     "id": "p149-recycling",
+     "title": "A pesticide container recycling center.",
+     "page": "p. 149",
+     "imgFile": "p149-recycling.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c10-s08-r1",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which statement about cleaning and disposing of pesticide containers is **true**?",
+     "choices": [
+      "Do not puncture rinsed pesticide containers.",
+      "Pesticide containers that cannot be recycled or returned to the manufacturer should be reused.",
+      "Containers must be disposed of in accordance with label directions and current regulations."
+     ],
+     "answer": 2,
+     "ref": "Review question 7, p. 155. Answer in the text: pp. 148–149, 'Cleaning and Disposing of Pesticide Containers'",
+     "why": "Follow the label for disposal, and never reuse pesticide containers."
+    },
+    {
+     "id": "c10-s08-t1",
+     "src": "test",
+     "kind": "tf",
+     "q": "Every pesticide container must be triple-rinsed or pressure-rinsed.",
+     "answer": false,
+     "ref": "p. 148, 'Cleaning and Disposing of Pesticide Containers'",
+     "why": "Not all containers must be; follow the label."
+    },
+    {
+     "id": "c10-s08-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "You finish loading at one field and have three empty jugs, with two more fields to spray today. What do you do with the jugs?",
+     "choices": [
+      "Return them to a secured storage area until they can be recycled or disposed of properly",
+      "Leave them at the loading site to pick up tomorrow",
+      "Give them to a neighbor for water storage",
+      "Leave them in the open truck bed for the rest of the day"
+     ],
+     "answer": 0,
+     "ref": "p. 148, 'Cleaning and Disposing of Pesticide Containers'",
+     "why": "Never leave containers unattended at a mixing, loading, or application site."
+    },
+    {
+     "id": "c10-s08-t3",
+     "src": "test",
+     "kind": "mc",
+     "q": "What do you do with a container whose label says it is 'refillable'?",
+     "choices": [
+      "Return it to the dealer or manufacturer for refilling, and never tamper with it",
+      "Triple-rinse it and reuse it for water",
+      "Recondition it yourself",
+      "Refill it yourself from bulk stock"
+     ],
+     "answer": 0,
+     "ref": "p. 148, 'Cleaning and Disposing of Pesticide Containers'",
+     "why": "The label will have instructions to return it for refilling."
+    },
+    {
+     "id": "c10-s08-t4",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT true about rinsing containers?",
+     "choices": [
+      "Follow the label's directions",
+      "Rinse immediately after emptying",
+      "If possible, add the rinsate to the next application",
+      "Let residues dry first so they flake off"
+     ],
+     "answer": 3,
+     "ref": "p. 148, 'Cleaning and Disposing of Pesticide Containers'",
+     "why": "Dried residues become difficult to remove."
+    }
+   ]
+  },
+  {
+   "id": "c10-s09",
+   "chapter": "Chapter 10 · Planning the Pesticide Application",
+   "title": "Container rinsing procedures",
+   "pages": [
+    149,
+    149
+   ],
+   "body": [
+    {
+     "h": "Container rinsing procedures"
+    },
+    {
+     "p": [
+      "For **small containers 5 gallons or less**, triple rinse as follows:"
+     ]
+    },
+    {
+     "ol": [
+      "Empty the remaining contents into application equipment or a mix tank (**drain for 10 seconds** after the flow begins to drip).",
+      "Fill the container **one quarter full** with water and recap.",
+      "**Shake for 10 seconds.**",
+      "Pour rinsate into application equipment or a mix tank or store rinsate for later use or disposal.",
+      "Drain for 10 seconds after the flow begins to drip.",
+      "Repeat this procedure **two more times**."
+     ]
+    },
+    {
+     "p": [
+      "For **containers too large to shake** (that is, with capacities **more than 5 gallons or 50 pounds**), triple rinse as follows:"
+     ]
+    },
+    {
+     "ol": [
+      "Empty the remaining contents into application equipment or a mix tank.",
+      "Fill the container **one-quarter full** with water.",
+      "Replace and tighten closures.",
+      "Tip container on its side and **roll it back and forth**, making at least **one complete revolution**, for **30 seconds**.",
+      "Stand the container on its end and tip it back and forth several times.",
+      "Turn the container over onto its other end and tip it back and forth several times.",
+      "Empty the rinsate into application equipment or a mix tank or store rinsate for later use or disposal.",
+      "Repeat this procedure two more times."
+     ]
+    },
+    {
+     "p": [
+      "For **bags or liners**: Completely empty bag or liner by **shaking and tapping** sides and bottom to loosen clinging particles.",
+      "Empty residue into application equipment or a mix tank or store for later use or disposal."
+     ]
+    },
+    {
+     "p": [
+      "To **pressure rinse** containers:"
+     ]
+    },
+    {
+     "ol": [
+      "Empty the remaining contents into application equipment or a mix tank (drain for 10 seconds after the flow begins to drip).",
+      "Hold container **upside down** over application equipment or a mix tank or collect rinsate for later use or disposal.",
+      "Insert pressure-rinsing nozzle in the **side** of the container and rinse at about **40 pounds per square inch** for **at least 30 seconds**.",
+      "Drain for 10 seconds after the flow begins to drip."
+     ]
+    },
+    {
+     "fig": "p149-pressure"
+    }
+   ],
+   "figures": [
+    {
+     "id": "p149-pressure",
+     "title": "Pressure rinsing directs high-pressure water into the container.",
+     "page": "p. 149",
+     "imgFile": "p149-pressure.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c10-s09-r1",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which statement about triple-rinsing and pressure-rinsing pesticide containers is **true**?",
+     "choices": [
+      "Triple rinsing is a more effective method than pressure rinsing.",
+      "All containers must be either triple-rinsed or pressure-rinsed.",
+      "Rinsate from triple rinsing or pressure rinsing may be stored for later use."
+     ],
+     "answer": 2,
+     "ref": "Review question 8, p. 156. Answer in the text: p. 149, 'Container Rinsing Procedures', and p. 148",
+     "why": "Both procedures allow storing rinsate for later use or disposal, and not all containers must be rinsed."
+    },
+    {
+     "id": "c10-s09-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "When triple rinsing a small container, how long do you shake it each time?",
+     "choices": [
+      "10 seconds",
+      "30 seconds",
+      "1 minute",
+      "5 seconds"
+     ],
+     "answer": 0,
+     "ref": "p. 149, 'Container Rinsing Procedures'",
+     "why": "Shake 10 seconds, and drain 10 seconds after the flow begins to drip."
+    },
+    {
+     "id": "c10-s09-t2",
+     "src": "test",
+     "kind": "mc",
+     "q": "Pressure rinsing is done at about what pressure, for how long?",
+     "choices": [
+      "About 40 pounds per square inch, for at least 30 seconds",
+      "About 10 psi, for 10 seconds",
+      "About 100 psi, for 5 minutes",
+      "About 40 psi, for 10 seconds"
+     ],
+     "answer": 0,
+     "ref": "p. 149, 'Container Rinsing Procedures'",
+     "why": "About 40 psi for at least 30 seconds, nozzle in the side of the container."
+    },
+    {
+     "id": "c10-s09-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "You need to triple rinse an empty 30-gallon drum. How do you move the rinse water around inside it?",
+     "choices": [
+      "Roll it on its side, at least one full revolution, for 30 seconds, then tip it back and forth on each end",
+      "Shake it for 10 seconds",
+      "Shake and tap the sides and bottom",
+      "Leave it to soak overnight"
+     ],
+     "answer": 0,
+     "ref": "p. 149, 'Container Rinsing Procedures'",
+     "why": "Containers over 5 gallons or 50 pounds are too large to shake, so you roll and tip them."
+    },
+    {
+     "id": "c10-s09-t4",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT a step in pressure rinsing?",
+     "choices": [
+      "Drain for 10 seconds after the flow begins to drip",
+      "Hold the container upside down",
+      "Insert the nozzle in the side of the container",
+      "Fill it one-quarter full, recap, and shake for 10 seconds"
+     ],
+     "answer": 3,
+     "ref": "p. 149, 'Container Rinsing Procedures'",
+     "why": "That last one is small-container triple rinsing."
+    },
+    {
+     "id": "c10-s09-t5",
+     "src": "test",
+     "kind": "tf",
+     "q": "A container with a capacity of more than 5 gallons or 50 pounds counts as too large to shake.",
+     "answer": true,
+     "ref": "p. 149, 'Container Rinsing Procedures'",
+     "why": "Those get the roll-and-tip triple rinse."
+    }
+   ]
+  },
+  {
+   "id": "c10-s10",
+   "chapter": "Chapter 10 · Planning the Pesticide Application",
+   "title": "Applying pesticides: PPE and high-exposure jobs",
+   "pages": [
+    149,
+    150
+   ],
+   "body": [
+    {
+     "h": "Applying pesticides correctly"
+    },
+    {
+     "p": [
+      "Applicators have many important responsibilities when applying pesticides: protecting themselves, others, and the environment and making sure the pesticide is applied correctly.",
+      "This means using proper PPE and following correct application procedures."
+     ]
+    },
+    {
+     "h": "Personal protective equipment"
+    },
+    {
+     "p": [
+      "**By law**, applicators must wear the PPE and other clothing the pesticide **labeling requires**.",
+      "Consider using **additional protection** for some types of pesticide application tasks."
+     ]
+    },
+    {
+     "h": "Hand-carried and backpack applications"
+    },
+    {
+     "p": [
+      "Exposure is quite likely when applying pesticides using **hand-held equipment** or **dust shakers**.",
+      "Dripping or partially clogged nozzles, leaky hoses, and loose equipment connections are other potential sources of exposure."
+     ]
+    },
+    {
+     "p": [
+      "Many applications performed on foot cause the applicator to walk into the path of the pesticide being applied.",
+      "Whenever possible, apply pesticides so you are **backing out of the treated area**.",
+      "If you must walk into the path of the pesticide, consider wearing **shin-high or knee-high rubber boots** (or other protective footwear) with **spray-resistant or waterproof pants**.",
+      "Wear appropriate protective clothing and equipment when entering treated areas to fix clogged nozzles or other malfunctioning equipment parts."
+     ]
+    },
+    {
+     "fig": "p150-walkpath"
+    },
+    {
+     "h": "High-exposure applications"
+    },
+    {
+     "p": [
+      "Certain types of pesticide applications are especially risky because they may expose the applicator to **large amounts** of pesticide.",
+      "These include:"
+     ]
+    },
+    {
+     "list": [
+      "**Mist blower or air-blast sprayers.**",
+      "**Aerosol and fog generators.**",
+      "**High-pressure sprayers and power dusters.**",
+      "Equipment that directs applications **overhead**, such as to tree canopies or roof eaves."
+     ]
+    },
+    {
+     "p": [
+      "Pesticide exposure is likely whenever you are working in these situations.",
+      "For high-exposure applications, use appropriate **gloves**, protective **coveralls with a hood**, **footwear with sealed cuffs**, and a **full-face respirator** or **half-face respirator with sealed goggles**."
+     ]
+    },
+    {
+     "fig": "p150-highpressure"
+    },
+    {
+     "h": "Enclosed spaces"
+    },
+    {
+     "p": [
+      "Pesticides are sometimes applied in **enclosed spaces**, such as warehouses, factories, restaurants, and homes; railcars; ship and truck cargo areas; silos, elevators, and other grain storage areas; and greenhouses.",
+      "This increases the risk of **inhalation and dermal exposure**.",
+      "Wear an **approved respirator** and additional protective clothing, **even if you would not need them for the same application outdoors**."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "p150-walkpath",
+     "title": "Wear appropriate protective PPE whenever you must walk into the path of a pesticide application.",
+     "page": "p. 150",
+     "imgFile": "p150-walkpath.jpg"
+    },
+    {
+     "id": "p150-highpressure",
+     "title": "In high-pressure spray applications, consider wearing more PPE than the label has listed.",
+     "page": "p. 150",
+     "imgFile": "p150-highpressure.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c10-s10-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "Whenever possible, how should you move during an on-foot application?",
+     "choices": [
+      "Backing out of the treated area",
+      "Walking forward into the spray",
+      "Walking crosswind through the spray",
+      "Standing still and spraying in a circle"
+     ],
+     "answer": 0,
+     "ref": "p. 150, 'Hand-Carried and Backpack Applications'",
+     "why": "Backing out keeps you from walking into what you just sprayed."
+    },
+    {
+     "id": "c10-s10-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT on the manual's list of high-exposure applications?",
+     "choices": [
+      "Mist blower or air-blast sprayers",
+      "Aerosol and fog generators",
+      "Equipment that sprays into tree canopies",
+      "A drop spreader for granules"
+     ],
+     "answer": 3,
+     "ref": "p. 150, 'High-Exposure Applications'",
+     "why": "The list is air-blast, aerosol and fog, high-pressure and power dusters, and overhead equipment."
+    },
+    {
+     "id": "c10-s10-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A label calls for no respirator outdoors. You will apply the same product inside a grain silo. What does the manual say?",
+     "choices": [
+      "Wear an approved respirator and additional protective clothing anyway",
+      "Use the outdoor PPE, since the label is the law and says no respirator",
+      "Wear less PPE, since there is no wind drift indoors",
+      "Wear gloves only"
+     ],
+     "answer": 0,
+     "ref": "p. 150, enclosed spaces",
+     "why": "Enclosed spaces raise inhalation and dermal exposure, so you add protection."
+    },
+    {
+     "id": "c10-s10-t4",
+     "src": "test",
+     "kind": "mc",
+     "q": "For high-exposure applications, which respirator setup does the manual name?",
+     "choices": [
+      "A full-face respirator, or a half-face respirator with sealed goggles",
+      "A dust mask",
+      "None, if you stay upwind",
+      "A half-face respirator with no eye protection"
+     ],
+     "answer": 0,
+     "ref": "p. 150, 'High-Exposure Applications'",
+     "why": "Along with gloves, hooded coveralls, and footwear with sealed cuffs."
+    },
+    {
+     "id": "c10-s10-t5",
+     "src": "test",
+     "kind": "tf",
+     "q": "By law, applicators must wear the PPE and other clothing the pesticide labeling requires.",
+     "answer": true,
+     "ref": "p. 149, 'Personal Protective Equipment'",
+     "why": "And consider extra protection for some tasks."
+    }
+   ]
+  },
+  {
+   "id": "c10-s11",
+   "chapter": "Chapter 10 · Planning the Pesticide Application",
+   "title": "Application procedures",
+   "pages": [
+    150,
+    151
+   ],
+   "body": [
+    {
+     "h": "Application procedures"
+    },
+    {
+     "p": [
+      "To ensure that pesticides are being applied properly, follow these basic procedures:"
+     ]
+    },
+    {
+     "ol": [
+      "Before applying a pesticide, **clear all people and pets** from the area. Remove toys and pet dishes from the application area and cover garden furniture, swimming pools, and birdbaths. Even for narrowly directed pesticide applications (such as crack-and-crevice treatments), keep people and animals out of the immediate area during the application. Check the pesticide label to find out when it is safe to return to the application area. If the label does not include specific restricted-entry statements, keep people and nontarget animals out of the treated area **until the spray has dried or the dust has settled**.",
+      "Ensure that the pesticide is **reaching the target** surface or area. Be sure to remove granules from sidewalks and other nontarget areas.",
+      "Apply the pesticide **evenly and in the correct amounts**. Do not allow liquid pesticides to form puddles or dry pesticides to pile up in the application area. Be especially careful in places where you **turn or pause** your equipment. You may have to shut off your equipment in these areas. After applying the pesticide to the first part of the target site, check to be sure the right amount of pesticide has been used.",
+      "Ensure that the pesticide maintains a **uniform mix** or appearance during the application. Several pesticide formulations mixed with liquid require agitation to remain in suspension. Granules and dusts should appear dry and not form clumps on the target site.",
+      "**Check hoses, valves, nozzles, hoppers**, and other equipment parts often during the application.",
+      "**Turn spray equipment off** when you pause for any reason. Agitation must be maintained if the spray mix is a suspension of particles (such as wettable powders, flowables, or dry flowable formulations). Whenever you stop an application, **depressurize** spray tanks. Turn off the main pressure valve on the tank and release the pressure remaining at the nozzles.",
+      "Check the label for any **postapplication requirements**, such as incorporating the pesticide into the soil."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c10-s11-t1",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A label has no specific restricted-entry statement. When can people and nontarget animals go back into the treated area?",
+     "choices": [
+      "When the spray has dried or the dust has settled",
+      "Immediately after the application",
+      "After 48 hours in every case",
+      "Never"
+     ],
+     "answer": 0,
+     "ref": "p. 150, 'Application Procedures', step 1",
+     "why": "With no restricted-entry statement, wait until spray dries or dust settles."
+    },
+    {
+     "id": "c10-s11-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT one of the basic application procedures?",
+     "choices": [
+      "Remove granules from sidewalks",
+      "Turn spray equipment off when you pause",
+      "Keep the tank pressurized during breaks so you can restart quickly",
+      "Check hoses, valves, and nozzles often"
+     ],
+     "answer": 2,
+     "ref": "pp. 150–151, 'Application Procedures'",
+     "why": "Whenever you stop, depressurize the tank and release pressure at the nozzles."
+    },
+    {
+     "id": "c10-s11-t3",
+     "src": "test",
+     "kind": "mc",
+     "q": "You pause with a wettable powder in the tank. What must keep going?",
+     "choices": [
+      "Agitation",
+      "Spraying at the nozzles",
+      "Tank pressure",
+      "Filling the tank"
+     ],
+     "answer": 0,
+     "ref": "p. 151, 'Application Procedures', step 6",
+     "why": "Suspensions of particles need agitation maintained."
+    },
+    {
+     "id": "c10-s11-t4",
+     "src": "test",
+     "kind": "mc",
+     "q": "Where does the manual say to be especially careful about puddles or piles of pesticide?",
+     "choices": [
+      "Where you turn or pause your equipment",
+      "The middle of long straight passes",
+      "Uphill slopes only",
+      "Shaded areas"
+     ],
+     "answer": 0,
+     "ref": "p. 150, 'Application Procedures', step 3",
+     "why": "You may have to shut off equipment in those spots."
+    },
+    {
+     "id": "c10-s11-t5",
+     "src": "test",
+     "kind": "tf",
+     "q": "Even for crack-and-crevice treatments, people and animals should be kept out of the immediate area during the application.",
+     "answer": true,
+     "ref": "p. 150, 'Application Procedures', step 1",
+     "why": "Narrowly directed applications still require clearing the immediate area."
+    }
+   ]
+  },
+  {
+   "id": "c10-s12",
+   "chapter": "Chapter 10 · Planning the Pesticide Application",
+   "title": "Cleaning up and rinsates",
+   "pages": [
+    151,
+    152
+   ],
+   "body": [
+    {
+     "h": "Cleaning up after mixing, loading, and application"
+    },
+    {
+     "p": [
+      "After mixing, loading, or applying a pesticide, clean the pesticide equipment and yourself thoroughly.",
+      "While the facts are still fresh in your mind, **record all information** about the application to comply with pesticide recordkeeping laws."
+     ]
+    },
+    {
+     "p": [
+      "Do not leave equipment containing pesticides at the mixing and loading or application sites.",
+      "Avoid washing equipment repeatedly in the same location unless you use a **containment pad or tray**."
+     ]
+    },
+    {
+     "p": [
+      "Instruct everyone who cleans pesticide-contaminated equipment on proper safety procedures.",
+      "Equipment cleaning presents **as great a risk** of pesticide exposure as do many other pesticide-handling tasks.",
+      "When cleaning pesticide-contaminated equipment, wear **the same PPE that the labeling requires for making applications**, plus a **chemical-resistant apron** or other appropriate protective equipment.",
+      "Consider wearing **eye protection** even if not required by the label."
+     ]
+    },
+    {
+     "fig": "p151-cleaning"
+    },
+    {
+     "h": "Cleaning procedures"
+    },
+    {
+     "p": [
+      "After the equipment is empty, clean **both inside and outside** thoroughly, including nozzles or hopper openings.",
+      "Certain pesticides (for example, **petroleum-based products**) use a carrier that may require **special cleaning agents or high water pressure** to get the equipment clean."
+     ]
+    },
+    {
+     "h": "Rinsates"
+    },
+    {
+     "p": [
+      "**Rinsates** from equipment that has been cleaned **contain pesticides** and can harm people and the environment.",
+      "Do not allow rinsates to flow into water systems, including sink or floor drains, storm sewers, wells, streams, lakes, or rivers.",
+      "If possible, rinse your equipment **at the application site**.",
+      "Also, collect and apply rinsates to **labeled sites at or below label rates**."
+     ]
+    },
+    {
+     "p": [
+      "Equipment rinsate may also be used as a **diluent** for future pesticide mixtures provided the:"
+     ]
+    },
+    {
+     "list": [
+      "Pesticide in the rinsate is **labeled for use on the target site** where the new mixture will be applied.",
+      "Amount of pesticide in the rinsate plus the amount of pesticide product in the new mixture **does not exceed the label rate** for the target site.",
+      "Rinsate is used to dilute a mixture containing the **same or a compatible** pesticide."
+     ]
+    },
+    {
+     "p": [
+      "Rinsate **may not** be added to a pesticide mixture if it:"
+     ]
+    },
+    {
+     "list": [
+      "Contains **strong cleaning agents** (such as bleach or ammonia) that might harm the plant, animal, or surface to which the pesticide will be applied.",
+      "Would alter the pesticide mixture and make it unusable, for example, if the pesticides are physically or chemically incompatible."
+     ]
+    },
+    {
+     "p": [
+      "If rinsates cannot be used, dispose of them according to the label **as you would waste pesticides**."
+     ]
+    },
+    {
+     "fig": "fig-10-sump"
+    }
+   ],
+   "figures": [
+    {
+     "id": "p151-cleaning",
+     "title": "Be sure to wear appropriate PPE when cleaning application equipment.",
+     "page": "p. 151",
+     "imgFile": "p151-cleaning.jpg"
+    },
+    {
+     "id": "fig-10-sump",
+     "title": "A mixing and washing pad may require a sump that can be pumped out to collect rinsate after each use.",
+     "page": "p. 152",
+     "svgFile": "fig-10-sump.svg",
+     "explain": [
+      "The containment pad has raised edges and a drain in the middle.",
+      "The drain leads down into a sump under the pad, which holds the rinsate until it is pumped out."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c10-s12-r1",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which statement about pesticide rinsates is **true**?",
+     "choices": [
+      "Rinsates may be applied to labeled target sites at or below labeled rates.",
+      "Rinsates containing strong cleaning agents may be reused in pesticide mixtures.",
+      "The amount of pesticide in the rinsate plus the amount of pesticide product in the new mixture may exceed the label rate for the target site."
+     ],
+     "answer": 0,
+     "ref": "Review question 9, p. 156. Answer in the text: pp. 151–152, 'Rinsates'",
+     "why": "Rinsate with strong cleaners may not be added, and the total may not exceed the label rate."
+    },
+    {
+     "id": "c10-s12-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "What PPE do you wear when cleaning pesticide-contaminated equipment?",
+     "choices": [
+      "The PPE the labeling requires for making applications, plus a chemical-resistant apron or other appropriate protection",
+      "Only gloves, since the tank is empty",
+      "None, if the equipment was already rinsed once",
+      "Eye protection only"
+     ],
+     "answer": 0,
+     "ref": "p. 151, 'Cleaning Up After Mixing, Loading, and Application'",
+     "why": "Cleaning is as risky as many other handling tasks."
+    },
+    {
+     "id": "c10-s12-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "You finish spraying and plan to write up your application records at the end of the week. What does the manual say?",
+     "choices": [
+      "Record all the information while the facts are still fresh in your mind",
+      "End of the week is fine if it is before the next job",
+      "Write records only if a customer complains",
+      "Records are optional for small jobs"
+     ],
+     "answer": 0,
+     "ref": "p. 151, 'Cleaning Up After Mixing, Loading, and Application'",
+     "why": "Record it while fresh, to comply with recordkeeping laws."
+    },
+    {
+     "id": "c10-s12-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT a condition for reusing rinsate as a diluent?",
+     "choices": [
+      "The pesticide in the rinsate is labeled for the target site",
+      "Rinsate pesticide plus new product does not exceed the label rate",
+      "The new mixture has the same or a compatible pesticide",
+      "The rinsate contains bleach to help clean the nozzles"
+     ],
+     "answer": 3,
+     "ref": "pp. 151–152, 'Rinsates'",
+     "why": "Rinsate with strong cleaning agents such as bleach may not be added."
+    },
+    {
+     "id": "c10-s12-t4",
+     "src": "test",
+     "kind": "mc",
+     "q": "Petroleum-based products may need what to get equipment clean?",
+     "choices": [
+      "Special cleaning agents or high water pressure",
+      "Only cold water",
+      "Nothing, they evaporate",
+      "Sanding the tank walls"
+     ],
+     "answer": 0,
+     "ref": "p. 151, 'Cleaning Procedures'",
+     "why": "Their carrier may need special cleaning agents or high water pressure."
+    },
+    {
+     "id": "c10-s12-t5",
+     "src": "test",
+     "kind": "mc",
+     "q": "What does the sump under a mixing and washing pad do?",
+     "choices": [
+      "Collects rinsate so it can be pumped out after each use",
+      "Supplies water for filling tanks",
+      "Stores pesticide concentrate",
+      "Vents fumes away from the pad"
+     ],
+     "answer": 0,
+     "ref": "p. 152, containment pad figure",
+     "why": "The caption says the sump is pumped out to collect rinsate after each use."
+    }
+   ]
+  },
+  {
+   "id": "c10-s13",
+   "chapter": "Chapter 10 · Planning the Pesticide Application",
+   "title": "Cleaning the whole spray system",
+   "pages": [
+    152,
+    152
+   ],
+   "body": [
+    {
+     "h": "Equipment cleanup"
+    },
+    {
+     "p": [
+      "Clean your equipment thoroughly **after each use or when changing chemicals**.",
+      "Pesticide residues can corrode metal, plug hoses, or damage pumps and valves unless removed immediately after use.",
+      "Sometimes residues react with pesticides used later, reducing the effectiveness of the pesticides.",
+      "Special **tank-cleaning nozzles** are available to clean the interior walls of spray tanks."
+     ]
+    },
+    {
+     "p": [
+      "For all application scenarios, make sure the **entire spray system** is cleaned, **not just the tank**.",
+      "This is especially true for commercial row-crop boom sprayers.",
+      "Besides the spray tank, problem spots for pesticide contamination include the **eductor** (sometimes called an **inductor**); plumbing, which includes valves and hoses; filters and screens; boom segments; nozzle bodies; and nozzles and screens."
+     ]
+    },
+    {
+     "p": [
+      "When possible, thoroughly rinse equipment with a strong **water-detergent solution** (**8 to 16 ounces** of detergent in **30 to 40 gallons** of water).",
+      "Allow the water-detergent solution to **circulate** through the system for **several minutes**.",
+      "Remove the nozzles and screens, then **flush** the sprayer system **twice** with clean water.",
+      "Some pesticide labels may require triple rinsing to rid the spray system of any possible pesticide contamination.",
+      "Regardless of how the spray system is cleaned, make sure **all visible deposits** are removed."
+     ]
+    },
+    {
+     "p": [
+      "**Sloppy cleanup** practices are one of the main causes of equipment failure or malfunction.",
+      "Pesticides allowed to dry in the application equipment tend to clump and stick and cannot be easily removed.",
+      "These deposits may eventually dissolve into the spray solution.",
+      "Thus, improper cleanout may lead to **contamination of tank mixes** and **damage to susceptible crops**."
+     ]
+    },
+    {
+     "p": [
+      "Several **commercial compounds** will aid in tank cleaning.",
+      "These can neutralize and remove pesticide residues, remove mineral deposits and rust, and leave a protective film on tank walls to help prevent corrosion."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c10-s13-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "What water-detergent solution does the manual give for rinsing a sprayer?",
+     "choices": [
+      "8 to 16 ounces of detergent in 30 to 40 gallons of water",
+      "1 to 5 gallons of detergent in 100 gallons of water",
+      "1 cup of detergent per gallon of water",
+      "8 to 16 ounces of detergent in 5 gallons of water"
+     ],
+     "answer": 0,
+     "ref": "p. 152, 'Equipment Cleanup'",
+     "why": "Let it circulate several minutes, then remove nozzles and screens and flush twice."
+    },
+    {
+     "id": "c10-s13-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT named as a contamination problem spot besides the tank?",
+     "choices": [
+      "The eductor (inductor)",
+      "Filters and screens",
+      "Boom segments and nozzle bodies",
+      "The tractor seat"
+     ],
+     "answer": 3,
+     "ref": "p. 152, 'Equipment Cleanup'",
+     "why": "The list is eductor, plumbing, filters and screens, boom segments, nozzle bodies, and nozzles and screens."
+    },
+    {
+     "id": "c10-s13-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "You switch from an herbicide to an insecticide in the same sprayer and rinse only the tank. What risk does the manual describe?",
+     "choices": [
+      "Dried deposits elsewhere in the system can dissolve into the new mix, contaminating it and damaging susceptible crops",
+      "None, because only the tank holds pesticide",
+      "The insecticide becomes more selective",
+      "The tank will rust faster from the rinse water"
+     ],
+     "answer": 0,
+     "ref": "p. 152, 'Equipment Cleanup'",
+     "why": "Clean the entire system, not just the tank."
+    },
+    {
+     "id": "c10-s13-t4",
+     "src": "test",
+     "kind": "tf",
+     "q": "After circulating the detergent solution, you remove the nozzles and screens, then flush the system twice with clean water.",
+     "answer": true,
+     "ref": "p. 152, 'Equipment Cleanup'",
+     "why": "That is the manual's sequence."
+    },
+    {
+     "id": "c10-s13-t5",
+     "src": "test",
+     "kind": "mc",
+     "q": "What does the manual call one of the main causes of equipment failure or malfunction?",
+     "choices": [
+      "Sloppy cleanup practices",
+      "Using plastic measuring cups",
+      "Hard water",
+      "Spraying in the morning"
+     ],
+     "answer": 0,
+     "ref": "p. 152, 'Equipment Cleanup'",
+     "why": "Dried pesticide clumps, sticks, and is hard to remove."
+    }
+   ]
+  },
+  {
+   "id": "c10-s14",
+   "chapter": "Chapter 10 · Planning the Pesticide Application",
+   "title": "Storing the sprayer and cleaning yourself",
+   "pages": [
+    152,
+    153
+   ],
+   "body": [
+    {
+     "h": "Preparing the sprayer for storage"
+    },
+    {
+     "p": [
+      "When preparing to store your sprayer, add **1 to 5 gallons of lightweight oil** (depending on the size of the tank) **before the final flushing**.",
+      "As water is pumped from the sprayer, the oil leaves a **protective coating** on the inside of the tank, pump, and plumbing.",
+      "To prevent corrosion, remove nozzle tips and screens and store them in a can of light oil, such as **diesel fuel or kerosene**.",
+      "In addition, add a small amount of oil and **rotate the pump four or five revolutions by hand** to coat interior surfaces completely."
+     ]
+    },
+    {
+     "p": [
+      "It may be necessary to **winterize** the spray system to prevent damage from freezing temperatures.",
+      "Be sure to either **drain all water** from the spray system or replace the water in the pump and other critical parts with an **antifreeze** material (**RV antifreeze** is commonly used)."
+     ]
+    },
+    {
+     "p": [
+      "After thoroughly cleaning and draining the equipment, store it in a **dry, clean building**.",
+      "Replace worn-out, deteriorated, or broken parts.",
+      "If you store the sprayer outside, remove the hoses, wipe them clean of oil, and store them inside where they will not become damaged.",
+      "When using trailer sprayers, you may want to put **blocks under the frame or axle** to reduce tire pressure during storage."
+     ]
+    },
+    {
+     "h": "Cleaning yourself"
+    },
+    {
+     "p": [
+      "As with any pesticide-related procedure, remove contaminated clothes and **take a shower immediately** after cleaning equipment.",
+      "Waiting until the end of the day to clean up may allow **additional absorption** of the pesticide through the skin.",
+      "See Chapter 6 (Personal Protective Equipment) for detailed information on how to clean pesticide-contaminated clothing."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c10-s14-r1",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which statement about pesticide equipment cleanup is **false**?",
+     "choices": [
+      "Sprayers should be thoroughly rinsed with a water-detergent solution for several minutes.",
+      "When getting ready to store your sprayer, add some lightweight oil to the tank before the final flushing.",
+      "Leftover pesticide residue in the spray tank is permitted when changing products."
+     ],
+     "answer": 2,
+     "ref": "Review question 10, p. 156. Answer in the text: p. 152, 'Equipment Cleanup'",
+     "why": "Clean thoroughly after each use or when changing chemicals."
+    },
+    {
+     "id": "c10-s14-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "How much lightweight oil do you add before the final flushing when preparing to store a sprayer?",
+     "choices": [
+      "1 to 5 gallons, depending on the size of the tank",
+      "8 to 16 ounces",
+      "One quart",
+      "30 to 40 gallons"
+     ],
+     "answer": 0,
+     "ref": "p. 152, 'Equipment Cleanup'",
+     "why": "The oil coats the inside of the tank, pump, and plumbing."
+    },
+    {
+     "id": "c10-s14-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "Your sprayer will sit in an unheated shed all winter. What does the manual say to do about freezing?",
+     "choices": [
+      "Drain all water, or replace the water in the pump and critical parts with antifreeze, such as RV antifreeze",
+      "Leave it full of water so the seals stay wet",
+      "Add extra detergent to lower the freezing point",
+      "Nothing, freezing does not hurt sprayers"
+     ],
+     "answer": 0,
+     "ref": "p. 152, 'Equipment Cleanup'",
+     "why": "Winterize to prevent damage from freezing temperatures."
+    },
+    {
+     "id": "c10-s14-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT a storage step from the manual?",
+     "choices": [
+      "Store nozzle tips and screens in a can of light oil",
+      "Add a little oil and turn the pump four or five revolutions by hand",
+      "Store hoses inside if the sprayer is kept outside",
+      "Inflate trailer tires to maximum pressure during storage"
+     ],
+     "answer": 3,
+     "ref": "p. 152–153, 'Equipment Cleanup'",
+     "why": "Blocks under the frame or axle reduce tire pressure during storage."
+    },
+    {
+     "id": "c10-s14-t4",
+     "src": "test",
+     "kind": "tf",
+     "q": "It is fine to wait until the end of the day to shower after cleaning equipment.",
+     "answer": false,
+     "ref": "p. 153, cleanup",
+     "why": "Waiting may allow additional absorption of the pesticide through the skin."
+    }
+   ]
+  },
+  {
+   "id": "c10-s15",
+   "chapter": "Chapter 10 · Planning the Pesticide Application",
+   "title": "Professionalism",
+   "pages": [
+    153,
+    153
+   ],
+   "body": [
+    {
+     "h": "Professionalism"
+    },
+    {
+     "p": [
+      "As a pesticide applicator, you do important work and provide valuable services.",
+      "These services include:"
+     ]
+    },
+    {
+     "list": [
+      "Producing a safe and plentiful food and fiber supply.",
+      "Protecting public health from **vector-borne diseases**.",
+      "Creating value for property owners through their landscapes and structures.",
+      "Protecting land and water ecosystems from **invasive species**.",
+      "Enhancing the public's quality of life through parks and other recreation venues.",
+      "Creating safe roadways and other rights-of-way."
+     ]
+    },
+    {
+     "p": [
+      "So far, this manual has provided you with information on how to safely, properly, and effectively manage pests and use application equipment.",
+      "Another consideration is your professionalism as a pesticide applicator.",
+      "What you do and how well you handle yourself while on the job will leave an impression on others.",
+      "These expectations of conduct and your actions in specific situations create your professional image, best summed up as \"professionalism.\""
+     ]
+    },
+    {
+     "h": "What is professionalism?"
+    },
+    {
+     "p": [
+      "Merriam-Webster defines professionalism as **\"the skill, good judgment, and polite behavior that is expected from a person who is trained to do a job well.\"**",
+      "The heart of professionalism for a pesticide applicator is **exercising good judgment when there are no clear-cut right or wrong options**.",
+      "Professionalism includes fair treatment of customers, respect for others, and being an asset to your community."
+     ]
+    },
+    {
+     "p": [
+      "While regulatory compliance is necessary, you as an applicator or supervisor will need the expertise and good judgment to make decisions on issues affecting security, safety, health, or the environment **not addressed by regulations or the pesticide label**.",
+      "You should:"
+     ]
+    },
+    {
+     "list": [
+      "Study this manual to help you acquire the basic knowledge needed to educate your customers and others who are concerned about pesticides.",
+      "Educate others about the work you do.",
+      "Know how to minimize risks to yourself, coworkers, the public, and the environment.",
+      "Learn how to communicate the benefits and risks of pesticide use with your customers, coworkers, and the public."
+     ]
+    },
+    {
+     "p": [
+      "The impression you make on others depends on your ability to answer questions from customers, neighbors, and others about the work you do."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c10-s15-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "According to the manual, what is the heart of professionalism for a pesticide applicator?",
+     "choices": [
+      "Exercising good judgment when there are no clear-cut right or wrong options",
+      "Following the label word for word and nothing more",
+      "Applying extra product to be safe",
+      "Avoiding contact with customers"
+     ],
+     "answer": 0,
+     "ref": "p. 153, 'What Is Professionalism?'",
+     "why": "Good judgment where the rules do not give a clear answer."
+    },
+    {
+     "id": "c10-s15-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT listed as a valuable service pesticide applicators provide?",
+     "choices": [
+      "Protecting public health from vector-borne diseases",
+      "Protecting land and water ecosystems from invasive species",
+      "Creating safe roadways and other rights-of-way",
+      "Setting pesticide prices for the state"
+     ],
+     "answer": 3,
+     "ref": "p. 153, 'Professionalism'",
+     "why": "The other three are on the list of six services."
+    },
+    {
+     "id": "c10-s15-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A customer raises a safety concern that neither the label nor the regulations address. What does the manual expect of you?",
+     "choices": [
+      "Use your expertise and good judgment to decide",
+      "Say it is not your problem since the label is silent",
+      "Do whatever is cheapest for the customer",
+      "Refuse to discuss it"
+     ],
+     "answer": 0,
+     "ref": "p. 153, 'What Is Professionalism?'",
+     "why": "Compliance is necessary, but you also need judgment on issues the rules do not cover."
+    },
+    {
+     "id": "c10-s15-t4",
+     "src": "test",
+     "kind": "tf",
+     "q": "Merriam-Webster defines professionalism as the skill, good judgment, and polite behavior expected from a person trained to do a job well.",
+     "answer": true,
+     "ref": "p. 153, 'What Is Professionalism?'",
+     "why": "That is the quoted definition."
+    }
+   ]
+  },
+  {
+   "id": "c10-s16",
+   "chapter": "Chapter 10 · Planning the Pesticide Application",
+   "title": "Ethics, communication, and records",
+   "pages": [
+    153,
+    154
+   ],
+   "body": [
+    {
+     "h": "Demonstrate professional ethical standards"
+    },
+    {
+     "p": [
+      "A professional demonstrates **ethical behavior** in all aspects of his or her work.",
+      "This means **not taking shortcuts** that may harm your customers, the public, or the environment.",
+      "Offer **honest and knowledgeable advice**, keeping in mind the best interests of others.",
+      "**Integrated pest management** is also part of your professional training because it helps you make sound pest management decisions, apply pesticides only when needed, and protect sensitive sites from harm."
+     ]
+    },
+    {
+     "h": "Communicate with customers, neighbors, and the public"
+    },
+    {
+     "p": [
+      "Being a professional involves knowing the **correct terminology** when discussing your work and communicating with others.",
+      "When speaking with the public, it is better to use **simple, direct language** than to use technical jargon.",
+      "Be **proactive** and reach out to neighbors, customers, and others who may have concerns about a nearby sensitive site where you are applying pesticides.",
+      "Inform others that you are a professionally certified and trained pesticide applicator.",
+      "Explain what that means because many people will not know.",
+      "Be familiar with your company or organization policy for talking to customers, neighbors, or the media."
+     ]
+    },
+    {
+     "p": [
+      "Keep **accurate records** of all your pesticide applications.",
+      "Good records provide the facts of what you did and demonstrate your care in the work you do.",
+      "If there is a complaint or legal action following an application, having good records may be your **most valuable defense**.",
+      "Having no or insufficient records makes you vulnerable to baseless accusations and additional scrutiny."
+     ]
+    },
+    {
+     "p": [
+      "In a nutshell, being an effective pesticide applicator is more than just the skills and knowledge needed to conduct an application.",
+      "It also requires **good judgment, polite behavior, and a professional demeanor**."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c10-s16-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "When speaking with the public, what kind of language should you use?",
+     "choices": [
+      "Simple, direct language instead of technical jargon",
+      "Technical jargon, to show expertise",
+      "Only the exact wording on the label",
+      "As few words as possible"
+     ],
+     "answer": 0,
+     "ref": "p. 154, 'Communicate with Customers, Neighbors, and the Public'",
+     "why": "Simple, direct language beats jargon with the public."
+    },
+    {
+     "id": "c10-s16-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A neighbor files a complaint that your application drifted onto their garden. What does the manual say may be your most valuable defense?",
+     "choices": [
+      "Good records of the application",
+      "Your years of experience",
+      "A letter from your employer",
+      "The product's signal word"
+     ],
+     "answer": 0,
+     "ref": "p. 154, 'Communicate with Customers, Neighbors, and the Public'",
+     "why": "Good records provide the facts of what you did."
+    },
+    {
+     "id": "c10-s16-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT part of professional ethical behavior as the manual describes it?",
+     "choices": [
+      "Not taking shortcuts that may harm customers, the public, or the environment",
+      "Offering honest and knowledgeable advice",
+      "Using IPM to apply pesticides only when needed",
+      "Skipping steps on small jobs to save the customer money"
+     ],
+     "answer": 3,
+     "ref": "pp. 153–154, 'Demonstrate Professional Ethical Standards'",
+     "why": "Shortcuts that may cause harm are exactly what ethics rules out."
+    },
+    {
+     "id": "c10-s16-t4",
+     "src": "test",
+     "kind": "tf",
+     "q": "Having no or insufficient records makes you vulnerable to baseless accusations and additional scrutiny.",
+     "answer": true,
+     "ref": "p. 154, 'Communicate with Customers, Neighbors, and the Public'",
+     "why": "That is the manual's wording."
+    }
+   ]
+  },
+  {
+   "id": "c10-s17",
+   "chapter": "Chapter 10 · Planning the Pesticide Application",
+   "title": "Chapter 10 summary",
+   "pages": [
+    154,
+    154
+   ],
+   "body": [
+    {
+     "h": "Summary"
+    },
+    {
+     "p": [
+      "Applying pesticides correctly requires **careful planning**, especially when making tank mixes.",
+      "Pesticide labels do **not always specify** whether products can be tank-mixed.",
+      "Therefore, applicators must know how to conduct a **compatibility test** to determine which products can be safely mixed."
+     ]
+    },
+    {
+     "p": [
+      "Safe mixing and loading practices include selecting an appropriate mixing and loading area, protecting water sources, and using appropriate PPE.",
+      "Rinsable containers must be **triple- or pressure-rinsed**, properly disposed of, or recycled.",
+      "Empty **nonrinsable** containers as completely as possible before disposing of, recycling, or refilling them."
+     ]
+    },
+    {
+     "p": [
+      "When applying pesticides, protect yourself and the environment by wearing appropriate PPE and removing all people and pets (**nontarget organisms**) from the area to be treated."
+     ]
+    },
+    {
+     "p": [
+      "After mixing, loading, and applying pesticides, be sure to clean equipment and yourself properly.",
+      "If possible, reuse application equipment rinsates as a **diluent** in a spray mixture containing the same or a compatible pesticide.",
+      "Apply the rinsates to a labeled site **at or below the label rate**."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c10-s17-t1",
+     "src": "test",
+     "kind": "tf",
+     "q": "Pesticide labels always state whether products can be tank-mixed.",
+     "answer": false,
+     "ref": "p. 154, 'Summary'",
+     "why": "They do not always specify, which is why you need the compatibility test."
+    },
+    {
+     "id": "c10-s17-t2",
+     "src": "test",
+     "kind": "mc",
+     "q": "What do you do with empty nonrinsable containers before disposing of, recycling, or refilling them?",
+     "choices": [
+      "Empty them as completely as possible",
+      "Triple rinse them",
+      "Pressure rinse them at about 40 psi",
+      "Fill them with antifreeze"
+     ],
+     "answer": 0,
+     "ref": "p. 154, 'Summary'",
+     "why": "Nonrinsable containers are emptied as completely as possible."
+    },
+    {
+     "id": "c10-s17-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT listed in the summary as a safe mixing and loading practice?",
+     "choices": [
+      "Selecting an appropriate mixing and loading area",
+      "Protecting water sources",
+      "Using appropriate PPE",
+      "Mixing beside a storm drain for easy cleanup"
+     ],
+     "answer": 3,
+     "ref": "p. 154, 'Summary'",
+     "why": "Spills must never be able to reach a drain or water source."
+    },
+    {
+     "id": "c10-s17-t4",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "You have rinsate from a fungicide you applied to roses. According to the summary, what is the preferred use for it?",
+     "choices": [
+      "Reuse it as a diluent in a mix with the same or a compatible pesticide, applied to a labeled site at or below the label rate",
+      "Pour it out on gravel",
+      "Store it indefinitely",
+      "Wash it down a sink"
+     ],
+     "answer": 0,
+     "ref": "p. 154, 'Summary'",
+     "why": "Reuse as a diluent if possible, at or below the label rate."
+    }
+   ]
+  }
+ ]
+}

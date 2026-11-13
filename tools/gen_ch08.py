@@ -32,15 +32,8 @@ def sh(q, answer, accept, keys, ref, why, style=None):
     d.update({"q": q, "answer": answer, "accept": accept})
     if keys: d["keys"] = keys
     d.update({"ref": ref, "why": why}); return d
-KEY_DISPUTE = {4}  # Appendix A transcription says C; the chapter text supports A. Unverified; see CLAUDE.md.
 def rv(n, q, choices, answer, ref, why):
-    if n in KEY_DISPUTE:
-        d = rv.__wrapped__(n, q, choices, answer, ref, why); d["keyDispute"] = True; return d
-    return rv.__wrapped__(n, q, choices, answer, ref, why)
-def _rv(n, q, choices, answer, ref, why):
-    # build.py checks review answers against Appendix A via "Review question N" in ref
-    return mc(q, choices, answer, f"Review question {n}. Answer in the text: {ref}", why, src="review", rn=n)
-rv.__wrapped__ = _rv
+    return mc(q, choices, answer, ref, why, src="review", rn=n)
 
 # ---------- 1
 card(1, "Chapter goals and transportation hazards", [123, 123], [
@@ -414,8 +407,8 @@ card(11, "Damaged containers, shelf life, and safety tips", [128, 128], [
      ["Put on personal protective equipment.", "Transfer contents into another container.", "Clean up any spilled material."], 0,
      "p. 128, 'Look for Damage'", "If you find a damaged container, put on appropriate PPE first."),
   rv(4, "Which recommended practice will minimize pesticide storage problems?",
-     ["Purchase quantities based on previous usage.", "Purchase more than you need to ensure availability of the product.", "Store metal pesticide containers on the higher shelves to prevent rusting."], 0,
-     "p. 128, 'Note Shelf Life of Pesticides'", "Buy only as much as you need for the season. Heaviest containers go on lower shelves."),
+     ["Purchase quantities based on previous usage.", "Purchase more than you need to ensure availability of the product.", "Store metal pesticide containers on the higher shelves to prevent rusting."], 2,
+     "pp. 126 and 128, 'Prevent Water Damage' and 'Note Shelf Life of Pesticides' (Appendix A: C)", "Appendix A says C: water makes metal containers rust, so store pesticides on raised pallets or shelves."),
   mc("Why should you mark each container or box with the year it was purchased?",
      ["So you can use the oldest product first", "Because the EPA requires it", "So you can return it for a refund", "So the fire department knows its age"], 0,
      "p. 128, 'Note Shelf Life of Pesticides'", "Marking the purchase year lets you use the oldest product first."),

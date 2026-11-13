@@ -198,7 +198,7 @@ def check_answer_key(data):
                 continue
             qw = f"review question {q.get('id')!r}"
             m = re.match(r"c(\d+)-", q.get("id", ""))
-            n = re.search(r"Review question (\d+)", q.get("ref", ""))
+            n = re.search(r"Review question (\d+)", q.get("ref", "")) or re.search(r"-r(\d+)$", q.get("id", ""))
             if not m or not n:
                 err(f"{qw}: cannot read chapter from id or 'Review question N' from ref")
                 continue
@@ -213,7 +213,7 @@ def check_answer_key(data):
             want = ord(ch["answers"][num - 1]) - ord("A")
             if q.get("answer") != want:
                 got = chr(ord("A") + q["answer"]) if isinstance(q.get("answer"), int) else q.get("answer")
-                (warn if q.get("keyDispute") else err)(f"{qw}: answer {got} disagrees with Appendix A ({ch['answers'][num - 1]})")
+                err(f"{qw}: answer {got} disagrees with Appendix A ({ch['answers'][num - 1]})")
 
 
 def main():

@@ -1193,9 +1193,9 @@
       "Purchase more than you need to ensure availability of the product.",
       "Store metal pesticide containers on the higher shelves to prevent rusting."
      ],
-     "answer": 0,
-     "ref": "p. 128, 'Note Shelf Life of Pesticides'",
-     "why": "Buy only as much as you need for the season. Heaviest containers go on lower shelves."
+     "answer": 2,
+     "ref": "pp. 126 and 128, 'Prevent Water Damage' and 'Note Shelf Life of Pesticides' (Appendix A: C)",
+     "why": "Appendix A says C: water makes metal containers rust, so store pesticides on raised pallets or shelves."
     },
     {
      "id": "c08-s08-t1",

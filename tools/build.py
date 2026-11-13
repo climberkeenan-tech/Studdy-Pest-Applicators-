@@ -186,9 +186,40 @@ def check(data):
                 err(f"{qw}: style must be recall, scenario, or not")
 
 
+def check_answer_key(data):
+    """Every review question must match Appendix A (content/answer-key.json)."""
+    path = CONTENT / "answer-key.json"
+    if not path.exists():
+        return
+    key = json.loads(path.read_text(encoding="utf-8"))["chapters"]
+    for s in data["sections"]:
+        for q in s.get("questions", []):
+            if q.get("src") != "review":
+                continue
+            qw = f"review question {q.get('id')!r}"
+            m = re.match(r"c(\d+)-", q.get("id", ""))
+            n = re.search(r"Review question (\d+)", q.get("ref", "")) or re.search(r"-r(\d+)$", q.get("id", ""))
+            if not m or not n:
+                err(f"{qw}: cannot read chapter from id or 'Review question N' from ref")
+                continue
+            ch = key.get(str(int(m.group(1))))
+            num = int(n.group(1))
+            if not ch or num > len(ch["answers"]):
+                warn(f"{qw}: no Appendix A answer for chapter {int(m.group(1))} question {num}")
+                continue
+            if q.get("kind") != "mc":
+                err(f"{qw}: review questions must be mc to check against Appendix A")
+                continue
+            want = ord(ch["answers"][num - 1]) - ord("A")
+            if q.get("answer") != want:
+                got = chr(ord("A") + q["answer"]) if isinstance(q.get("answer"), int) else q.get("answer")
+                err(f"{qw}: answer {got} disagrees with Appendix A ({ch['answers'][num - 1]})")
+
+
 def main():
     data = load()
     check(data)
+    check_answer_key(data)
     for w in warnings:
         print("warning:", w)
     if errors:

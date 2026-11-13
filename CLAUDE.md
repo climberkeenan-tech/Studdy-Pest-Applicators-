@@ -17,9 +17,13 @@ session's network could not open directly): 50 multiple-choice questions, 35 cor
 ## Status
 - Chapter 1, Pest Management (pp. 1–15): 25 cards (`c01-s01` to `c01-s25`), 124 test-style questions.
 - Chapter 1 review questions (pp. 17–18, 10 questions) added as `"src": "review"` (ids `c01-sNN-rK`),
-  first in the card that holds the answer. The manual's key is in **Appendix A**, which the user has
-  not sent. The answers were taken from the chapter text. When Appendix A arrives, check every
-  review answer against it and report any disagreement.
+  first in the card that holds the answer. All 10 checked against Appendix A: all match.
+- **Appendix A answer key (all 11 chapters) is in `content/answer-key.json`.** `tools/build.py` fails if any
+  review question's answer disagrees with it. Review choices must stay in the manual's A, B, C order
+  (index 0 = A). The question number comes from "Review question N" in the `ref`, or else from the id's `-rN`
+  suffix (Chapters 3 to 9 number `rK` by manual question; Chapters 1 and 10 put "Review question N" in the ref).
+  All 84 review answers in Chapters 1 to 10 now match. Chapter 8 Q4 (`c08-s08-r4`) was A and was changed to
+  Appendix A's C; the "Review answers taken from the chapter text" notes below are now superseded.
 - Chapter 2, Federal Pesticide Laws and Regulations (pp. 19–28): 15 cards (`c02-s01` to `c02-s15`),
   75 test-style questions, plus the 7 review questions from p. 29 (ids `c02-sNN-rK`). Review answers again
   taken from the chapter text, pending Appendix A. Review Q1 sits in card 2, Q2 card 4, Q3 card 7,
@@ -70,7 +74,7 @@ session's network could not open directly): 50 multiple-choice questions, 35 cor
   Check review answers against Appendix A when it arrives.
 - Chapter 10, Planning the Pesticide Application (pp. 143–154, review questions pp. 155–156): 17 cards
   (`c10-s01` to `c10-s17`), 10 review + 78 test questions. Review Q1 card 1, Q2 and Q3 card 2, Q4 card 4,
-  Q5 card 6, Q6 card 7, Q7 card 8, Q8 card 9, Q9 card 12, Q10 card 14. Built by `tools/gen_ch10.py` (edit there,
+  Q5 card 6, Q6 card 7, Q7 card 8, Q8 card 9, Q9 card 12, Q10 card 14. All match Appendix A. Built by `tools/gen_ch10.py` (edit there,
   rerun with `content/chapters/ch10.json` as the argument, then build). Diagrams: `fig-10-jar.svg` (jar test),
   `fig-10-sump.svg` (containment pad and sump). Crops: `tools/crop_photos_ch10.py` (grayscale).
 - Ask for the manual's total page count (still unknown).
@@ -103,6 +107,7 @@ session's network could not open directly): 50 multiple-choice questions, 35 cor
 
 ## Files
 - `content/study.json`: manual metadata and the practice card.
+- `content/answer-key.json`: Appendix A answers to the review questions, by chapter.
 - `content/chapters/chNN.json`: `{"chapter", "pages", "sections": [...]}` for each chapter, merged in file-name order.
 - `content/figures/*.svg`: diagrams. Referenced from a figure as `"svgFile": "fig-1-1.svg"`.
 - `content/images/*.jpg`: photo crops. Referenced as `"imgFile": "p4-thistle.jpg"`.

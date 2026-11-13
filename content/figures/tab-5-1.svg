@@ -1,0 +1,56 @@
+<svg viewBox="0 0 580 360" role="img" aria-label="Table 5.1 Toxicity Categories: signal word, hazard class, and LD50 and LC50 ranges">
+<rect class="f-field" x="0" y="0" width="580" height="54" rx="4"/>
+<text class="f-on" x="88" y="32" text-anchor="middle" font-size="14" font-weight="700" font-family="var(--f-display)">Signal word</text>
+<text class="f-on" x="205" y="32" text-anchor="middle" font-size="14" font-weight="700" font-family="var(--f-display)">Class</text>
+<text class="f-on" x="290" y="23" text-anchor="middle" font-size="14" font-weight="700" font-family="var(--f-display)">Oral LD50</text>
+<text class="f-on" x="290" y="41" text-anchor="middle" font-size="14" font-weight="700" font-family="var(--f-display)">(mg/kg)</text>
+<text class="f-on" x="405" y="23" text-anchor="middle" font-size="14" font-weight="700" font-family="var(--f-display)">Dermal LD50</text>
+<text class="f-on" x="405" y="41" text-anchor="middle" font-size="14" font-weight="700" font-family="var(--f-display)">(mg/kg)</text>
+<text class="f-on" x="522" y="23" text-anchor="middle" font-size="14" font-weight="700" font-family="var(--f-display)">Inhalation</text>
+<text class="f-on" x="522" y="41" text-anchor="middle" font-size="14" font-weight="700" font-family="var(--f-display)">LC50 (mg/l)</text>
+<rect class="f-field" fill-opacity="0.1" x="0" y="60" width="580" height="54" rx="4"/>
+<text class="f-ink" x="88" y="83" text-anchor="middle" font-size="15" font-weight="700" font-family="var(--f-display)">DANGER, POISON,</text>
+<text class="f-ink" x="88" y="101" text-anchor="middle" font-size="15" font-weight="700" font-family="var(--f-display)">PELIGRO + skull</text>
+<text class="f-ink" x="205" y="92" text-anchor="middle" font-size="15" font-weight="700" font-family="var(--f-display)">I</text>
+<text class="f-ink" x="290" y="83" text-anchor="middle" font-size="15" font-family="var(--f-display)">Trace</text>
+<text class="f-ink" x="290" y="101" text-anchor="middle" font-size="15" font-family="var(--f-display)">to 50</text>
+<text class="f-ink" x="405" y="83" text-anchor="middle" font-size="15" font-family="var(--f-display)">Trace</text>
+<text class="f-ink" x="405" y="101" text-anchor="middle" font-size="15" font-family="var(--f-display)">to 200</text>
+<text class="f-ink" x="522" y="83" text-anchor="middle" font-size="15" font-family="var(--f-display)">Trace</text>
+<text class="f-ink" x="522" y="101" text-anchor="middle" font-size="15" font-family="var(--f-display)">to 0.2</text>
+<rect class="f-field" fill-opacity="0.04" x="0" y="120" width="580" height="54" rx="4"/>
+<text class="f-ink" x="88" y="143" text-anchor="middle" font-size="15" font-weight="700" font-family="var(--f-display)">DANGER,</text>
+<text class="f-ink" x="88" y="161" text-anchor="middle" font-size="15" font-weight="700" font-family="var(--f-display)">PELIGRO</text>
+<text class="f-ink" x="205" y="152" text-anchor="middle" font-size="15" font-weight="700" font-family="var(--f-display)">I</text>
+<text class="f-muted" x="408" y="143" text-anchor="middle" font-size="14" font-family="var(--f-display)">Blank in the manual. Based on the</text>
+<text class="f-muted" x="408" y="161" text-anchor="middle" font-size="14" font-family="var(--f-display)">corrosive or irritant properties</text>
+<rect class="f-field" fill-opacity="0.1" x="0" y="180" width="580" height="54" rx="4"/>
+<text class="f-ink" x="88" y="203" text-anchor="middle" font-size="15" font-weight="700" font-family="var(--f-display)">WARNING,</text>
+<text class="f-ink" x="88" y="221" text-anchor="middle" font-size="15" font-weight="700" font-family="var(--f-display)">AVISO</text>
+<text class="f-ink" x="205" y="212" text-anchor="middle" font-size="15" font-weight="700" font-family="var(--f-display)">II</text>
+<text class="f-ink" x="290" y="203" text-anchor="middle" font-size="15" font-family="var(--f-display)">50</text>
+<text class="f-ink" x="290" y="221" text-anchor="middle" font-size="15" font-family="var(--f-display)">to 500</text>
+<text class="f-ink" x="405" y="203" text-anchor="middle" font-size="15" font-family="var(--f-display)">200</text>
+<text class="f-ink" x="405" y="221" text-anchor="middle" font-size="15" font-family="var(--f-display)">to 2,000</text>
+<text class="f-ink" x="522" y="203" text-anchor="middle" font-size="15" font-family="var(--f-display)">0.2</text>
+<text class="f-ink" x="522" y="221" text-anchor="middle" font-size="15" font-family="var(--f-display)">to 2</text>
+<rect class="f-field" fill-opacity="0.04" x="0" y="240" width="580" height="54" rx="4"/>
+<text class="f-ink" x="88" y="272" text-anchor="middle" font-size="15" font-weight="700" font-family="var(--f-display)">CAUTION</text>
+<text class="f-ink" x="205" y="272" text-anchor="middle" font-size="15" font-weight="700" font-family="var(--f-display)">III</text>
+<text class="f-ink" x="290" y="263" text-anchor="middle" font-size="15" font-family="var(--f-display)">500</text>
+<text class="f-ink" x="290" y="281" text-anchor="middle" font-size="15" font-family="var(--f-display)">to 5,000</text>
+<text class="f-ink" x="405" y="263" text-anchor="middle" font-size="15" font-family="var(--f-display)">2,000</text>
+<text class="f-ink" x="405" y="281" text-anchor="middle" font-size="15" font-family="var(--f-display)">to 20,000</text>
+<text class="f-ink" x="522" y="263" text-anchor="middle" font-size="15" font-family="var(--f-display)">2</text>
+<text class="f-ink" x="522" y="281" text-anchor="middle" font-size="15" font-family="var(--f-display)">to 20</text>
+<rect class="f-field" fill-opacity="0.1" x="0" y="300" width="580" height="54" rx="4"/>
+<text class="f-ink" x="88" y="323" text-anchor="middle" font-size="15" font-weight="700" font-family="var(--f-display)">CAUTION or</text>
+<text class="f-ink" x="88" y="341" text-anchor="middle" font-size="15" font-weight="700" font-family="var(--f-display)">no signal word</text>
+<text class="f-ink" x="205" y="332" text-anchor="middle" font-size="15" font-weight="700" font-family="var(--f-display)">IV</text>
+<text class="f-ink" x="290" y="323" text-anchor="middle" font-size="15" font-family="var(--f-display)">Greater than</text>
+<text class="f-ink" x="290" y="341" text-anchor="middle" font-size="15" font-family="var(--f-display)">5,000</text>
+<text class="f-ink" x="405" y="323" text-anchor="middle" font-size="15" font-family="var(--f-display)">Greater than</text>
+<text class="f-ink" x="405" y="341" text-anchor="middle" font-size="15" font-family="var(--f-display)">20,000</text>
+<text class="f-ink" x="522" y="323" text-anchor="middle" font-size="15" font-family="var(--f-display)">Greater than</text>
+<text class="f-ink" x="522" y="341" text-anchor="middle" font-size="15" font-family="var(--f-display)">20</text>
+</svg>

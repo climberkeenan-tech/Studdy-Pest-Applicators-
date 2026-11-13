@@ -1,0 +1,28 @@
+<svg viewBox="0 0 640 410" role="img" aria-label="NFPA hazard diamond example: health 1 in blue on the left, flammability 4 in red on top, reactivity or instability 3 in yellow on the right, special notice in white on the bottom">
+  <g stroke="#1b1b1b" stroke-width="3" stroke-linejoin="round">
+    <path fill="#d84a4a" d="M320 30 L405 115 L320 200 L235 115 Z"/>
+    <path fill="#3f73d6" d="M235 115 L320 200 L235 285 L150 200 Z"/>
+    <path fill="#efcb45" d="M405 115 L490 200 L405 285 L320 200 Z"/>
+    <path fill="#ffffff" d="M320 200 L405 285 L320 370 L235 285 Z"/>
+  </g>
+  <g font-family="var(--f-display)" font-weight="800" font-size="64" text-anchor="middle" fill="#111">
+    <text x="320" y="138">4</text>
+    <text x="235" y="223">1</text>
+    <text x="405" y="223">3</text>
+  </g>
+  <text x="320" y="300" font-family="var(--f-body)" font-size="13" text-anchor="middle" fill="#333">(blank)</text>
+  <g font-family="var(--f-body)" font-size="15">
+    <text class="f-ink" x="420" y="48" font-weight="700">Top: FLAMMABILITY</text>
+    <text class="f-muted" x="420" y="68">red section, 0 to 4</text>
+    <text class="f-ink" x="20" y="150" font-weight="700">Left: HEALTH</text>
+    <text class="f-muted" x="20" y="170">blue section, 0 to 4</text>
+    <text class="f-ink" x="500" y="150" font-weight="700">Right:</text>
+    <text class="f-ink" x="500" y="170" font-weight="700">REACTIVITY</text>
+    <text class="f-muted" x="500" y="190">(instability)</text>
+    <text class="f-muted" x="500" y="210">yellow, 0 to 4</text>
+    <text class="f-ink" x="420" y="340" font-weight="700">Bottom: SPECIAL NOTICE</text>
+    <text class="f-muted" x="420" y="360">white section</text>
+    <text class="f-muted" x="420" y="380">OX = oxidizer, struck-out W =</text>
+    <text class="f-muted" x="420" y="398">avoid use of water</text>
+  </g>
+</svg>

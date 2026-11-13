@@ -1,0 +1,3317 @@
+{
+ "chapter": "Chapter 7 · Pesticides in the Environment",
+ "pages": [
+  105,
+  120
+ ],
+ "sections": [
+  {
+   "id": "c07-s01",
+   "chapter": "Chapter 7 · Pesticides in the Environment",
+   "title": "Chapter goals and what the environment is",
+   "pages": [
+    105,
+    105
+   ],
+   "body": [
+    {
+     "box": "Learning objectives",
+     "p": [
+      "After studying this chapter, you should be able to do the following."
+     ],
+     "list": [
+      "Describe how pesticide applications can affect the environment.",
+      "Explain how to prevent pesticide drift, runoff, and movement to nontarget areas.",
+      "Identify sensitive areas that could be harmed by pesticides.",
+      "Discuss how to prevent pesticide residue accumulation associated with mixing, loading, and equipment washing.",
+      "State when to adjust or delay an application to minimize environmental impact and maximize effectiveness."
+     ]
+    },
+    {
+     "p": [
+      "Applicators and the public share concerns about how pesticides may harm the environment.",
+      "Initially, **hazards to humans** were the primary reason the U.S. Environmental Protection Agency (**EPA**) decided to classify a pesticide as a **restricted-use** product.",
+      "Now, more and more pesticide labels list **environmental effects** as reasons for restriction. For example, contamination of groundwater, or toxicity to birds or aquatic organisms.",
+      "To register new pesticides, EPA requires manufacturers to submit **extensive environmental tests**.",
+      "The agency also reviews environmental effects when **reevaluating existing pesticide registrations**."
+     ]
+    },
+    {
+     "h": "The environment"
+    },
+    {
+     "p": [
+      "The **environment** comprises everything that is around us.",
+      "It includes not only the natural elements that the word \"environment\" usually brings to mind, but also **people**, the **manufactured parts** of our world, and the **indoor areas** in which we live and work.",
+      "The environment is air, soil, water, plants, animals, houses, restaurants, office buildings, factories, and all that they contain.",
+      "Anyone who uses a pesticide, indoors or outdoors, in a city or on a farm, must consider how that pesticide affects the environment.",
+      "Applicators must ask **three questions**."
+     ]
+    },
+    {
+     "ol": [
+      "Where will the pesticide go after it leaves its container or application equipment?",
+      "What effects could this pesticide have on those nontarget sites it may reach?",
+      "What can I do to minimize harmful effects?"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c07-s01-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "What was initially the primary reason EPA classified a pesticide as restricted-use?",
+     "choices": [
+      "Hazards to humans",
+      "Contamination of groundwater",
+      "Toxicity to birds",
+      "Toxicity to aquatic organisms"
+     ],
+     "answer": 0,
+     "ref": "p. 105, chapter introduction",
+     "why": "Initially, hazards to humans were the primary reason; environmental effects are listed more and more now."
+    },
+    {
+     "id": "c07-s01-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT part of the environment, as the manual defines it?",
+     "choices": [
+      "Office buildings and factories",
+      "People",
+      "Indoor areas where we live and work",
+      "None of the above; all of these are part of it"
+     ],
+     "answer": 3,
+     "fixed": true,
+     "ref": "p. 105, 'The Environment'",
+     "why": "The environment comprises everything around us, including people, manufactured parts, and indoor areas."
+    },
+    {
+     "id": "c07-s01-t3",
+     "src": "test",
+     "kind": "tf",
+     "q": "A pest control operator who only treats indoor spaces in a city does not need to consider how a pesticide affects the environment.",
+     "answer": false,
+     "ref": "p. 105, 'The Environment'",
+     "why": "Anyone who uses a pesticide, indoors or outdoors, in a city or on a farm, must consider it."
+    },
+    {
+     "id": "c07-s01-t4",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "Before a lawn treatment, an applicator asks, \"Where will this pesticide go after it leaves my sprayer?\" Which question from the manual's list of three should come next?",
+     "choices": [
+      "What effects could this pesticide have on those nontarget sites it may reach?",
+      "How much does the pesticide cost per acre?",
+      "Is the pesticide a restricted-use product?",
+      "Which formulation mixes fastest?"
+     ],
+     "answer": 0,
+     "ref": "p. 105, 'The Environment'",
+     "why": "The three questions are: where will it go, what effects could it have on nontarget sites, and what can I do to minimize harmful effects."
+    },
+    {
+     "id": "c07-s01-t5",
+     "src": "test",
+     "kind": "mc",
+     "q": "What does EPA require manufacturers to submit to register a new pesticide, according to this chapter?",
+     "choices": [
+      "Extensive environmental tests",
+      "A list of applicators who will use it",
+      "A county bulletin",
+      "Proof of state registration only"
+     ],
+     "answer": 0,
+     "ref": "p. 105, chapter introduction",
+     "why": "To register new pesticides, EPA requires manufacturers to submit extensive environmental tests."
+    }
+   ]
+  },
+  {
+   "id": "c07-s02",
+   "chapter": "Chapter 7 · Pesticides in the Environment",
+   "title": "Solubility, adsorption, and persistence",
+   "pages": [
+    106,
+    106
+   ],
+   "body": [
+    {
+     "h": "Pesticide characteristics"
+    },
+    {
+     "p": [
+      "To understand how pesticides move in the environment, you must first understand certain physical and chemical characteristics of pesticides, and how they determine a pesticide's interaction with the environment.",
+      "These characteristics are **solubility**, **adsorption**, **persistence**, and **volatility**."
+     ]
+    },
+    {
+     "h": "Solubility"
+    },
+    {
+     "p": [
+      "**Solubility** is a measure of the ability of a pesticide to dissolve in a solvent, usually **water**.",
+      "Pesticides that are highly soluble in water dissolve easily.",
+      "These products are **more likely** than less-soluble pesticides to move with water in **surface runoff** or **through the soil**."
+     ]
+    },
+    {
+     "h": "Adsorption"
+    },
+    {
+     "p": [
+      "**Adsorption** is the process whereby a pesticide **binds to soil particles**.",
+      "Adsorption occurs because of an attraction between the chemical and soil particles.",
+      "Typically, **oil-soluble** pesticides are more attracted than water-soluble pesticides to **clay particles and organic matter** in soil.",
+      "Also, pesticide molecules with a **positive charge** are tightly adsorbed to **negatively charged** soil particles.",
+      "A pesticide that adsorbs to soil particles is **less likely** than one that does not adsorb tightly to soil to move from the spray site."
+     ]
+    },
+    {
+     "h": "Persistence"
+    },
+    {
+     "p": [
+      "**Persistence** is the ability of a pesticide to remain present and active in its original form for an extended period before breaking down.",
+      "A chemical's persistence is described in terms of its **half-life**: a comparative measure of the time needed for the chemical to break down, or degrade.",
+      "**The longer the half-life, the more persistent the pesticide.**",
+      "The pesticide that remains in the environment after an application or spill is called **residue**.",
+      "Sometimes residue is **desirable** because it provides long-term pest control and reduces the need for repeated applications.",
+      "However, some persistent pesticides can harm sensitive plants or animals, including humans.",
+      "Therefore, it is especially important to prevent persistent pesticides from moving offsite through improper handling, application, drift, leaching, or runoff."
+     ]
+    },
+    {
+     "p": [
+      "Besides presenting a hazard to persons and nontarget animals entering a treated area, the application of persistent pesticides may produce **illegal residues on rotational food or feed crops**.",
+      "To protect consumers, there are **legal limits** on how much residue may remain on products sold for food or feed.",
+      "Check the label for statements about the persistence of the pesticide and for **replanting restrictions**.",
+      "The rate of pesticide breakdown relates to the persistence of the pesticide."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c07-s02-r1",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which property of a pesticide would make it more likely to move in surface water runoff?",
+     "choices": [
+      "High solubility.",
+      "High adsorption.",
+      "High volatility."
+     ],
+     "answer": 0,
+     "ref": "p. 121, Review question 1; answer from p. 106, 'Solubility'",
+     "why": "Highly water-soluble pesticides are more likely to move with water in surface runoff."
+    },
+    {
+     "id": "c07-s02-t1",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT one of the four pesticide characteristics the manual says determine how a pesticide interacts with the environment?",
+     "choices": [
+      "Solubility",
+      "Adsorption",
+      "Toxicity",
+      "Volatility"
+     ],
+     "answer": 2,
+     "ref": "p. 106, 'Pesticide Characteristics'",
+     "why": "The four are solubility, adsorption, persistence, and volatility."
+    },
+    {
+     "id": "c07-s02-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "Two herbicides are equal in every way except that Product A is highly water-soluble and Product B is not. Which is more likely to move in surface runoff or through the soil?",
+     "choices": [
+      "Product A",
+      "Product B",
+      "Both equally",
+      "Neither; solubility does not affect movement"
+     ],
+     "answer": 0,
+     "ref": "p. 106, 'Solubility'",
+     "why": "Highly water-soluble pesticides are more likely to move with water in runoff or through the soil."
+    },
+    {
+     "id": "c07-s02-t3",
+     "src": "test",
+     "kind": "tf",
+     "q": "Typically, water-soluble pesticides are more attracted than oil-soluble pesticides to clay particles and organic matter in soil.",
+     "answer": false,
+     "ref": "p. 106, 'Adsorption'",
+     "why": "It is the reverse: oil-soluble pesticides are typically more attracted to clay and organic matter."
+    },
+    {
+     "id": "c07-s02-t4",
+     "src": "test",
+     "kind": "mc",
+     "q": "A pesticide with a longer half-life is:",
+     "choices": [
+      "More persistent",
+      "Less persistent",
+      "More water-soluble",
+      "More volatile"
+     ],
+     "answer": 0,
+     "ref": "p. 106, 'Persistence'",
+     "why": "The longer the half-life, the more persistent the pesticide."
+    },
+    {
+     "id": "c07-s02-t5",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A grower used a persistent herbicide on a field and plans to plant a different food crop there next season. What should the grower check on the label?",
+     "choices": [
+      "Replanting restrictions and persistence statements",
+      "The bee hazard icon",
+      "The droplet size category",
+      "The groundwater percentage"
+     ],
+     "answer": 0,
+     "ref": "p. 106, 'Persistence'",
+     "why": "Persistent pesticides may leave illegal residues on rotational crops, so check persistence statements and replanting restrictions."
+    },
+    {
+     "id": "c07-s02-t6",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "The manual says it is especially important to prevent persistent pesticides from moving offsite through several routes. Which of these is NOT one it lists?",
+     "choices": [
+      "Drift",
+      "Leaching",
+      "Runoff",
+      "Photodegradation"
+     ],
+     "answer": 3,
+     "ref": "p. 106, 'Persistence'",
+     "why": "The routes listed are improper handling, application, drift, leaching, or runoff; photodegradation is breakdown, not movement."
+    }
+   ]
+  },
+  {
+   "id": "c07-s03",
+   "chapter": "Chapter 7 · Pesticides in the Environment",
+   "title": "Pesticide breakdown and volatility",
+   "pages": [
+    106,
+    107
+   ],
+   "body": [
+    {
+     "h": "Pesticide breakdown"
+    },
+    {
+     "p": [
+      "Several processes break down pesticide compounds into simpler and often less toxic chemicals.",
+      "Some pesticides break down very rapidly, in a matter of **days or even hours**.",
+      "Others linger in the environment for **a year or more**.",
+      "Pesticides are broken down, or degraded, by the following processes. See Figure 7.1."
+     ]
+    },
+    {
+     "list": [
+      "**Chemical degradation**: the breakdown of chemicals that does not involve living organisms, usually by a **chemical reaction with water**.",
+      "**Microbial action**: the breakdown of chemicals by **soil microorganisms**, such as fungi or bacteria.",
+      "**Photodegradation**: the breakdown of chemicals in reaction to **sunlight**."
+     ]
+    },
+    {
+     "fig": "fig-7-1"
+    },
+    {
+     "p": [
+      "**Water and temperature** both affect the breakdown of pesticides.",
+      "**Warm, wet** conditions can **increase** the speed of pesticide breakdown.",
+      "**Cool, dry** conditions **slow down** the degradation process."
+     ]
+    },
+    {
+     "h": "Volatility"
+    },
+    {
+     "p": [
+      "**Volatility** is the tendency of a pesticide to turn into a **gas or vapor**.",
+      "Some pesticides are more volatile than others.",
+      "The chance of volatilization **increases as temperatures and wind increase**.",
+      "Volatility is also more likely under conditions of **low relative humidity**, because evaporation increases in drier conditions."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "fig-7-1",
+     "title": "Figure 7.1: Breakdown of pesticides in the environment.",
+     "page": "p. 106",
+     "svgFile": "fig-7-1.svg",
+     "explain": [
+      "Sunlight breaks pesticides down by photodegradation.",
+      "Water breaks them down by chemical degradation, both above ground and in the soil.",
+      "In the soil, microorganisms break them down by microbial degradation."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c07-s03-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "Which breakdown process involves soil microorganisms such as fungi or bacteria?",
+     "choices": [
+      "Microbial action",
+      "Chemical degradation",
+      "Photodegradation",
+      "Volatilization"
+     ],
+     "answer": 0,
+     "ref": "p. 107, 'Pesticide Breakdown'",
+     "why": "Microbial action is breakdown by soil microorganisms such as fungi or bacteria."
+    },
+    {
+     "id": "c07-s03-t2",
+     "src": "test",
+     "kind": "short",
+     "q": "What is the breakdown of chemicals in reaction to sunlight called?",
+     "answer": "photodegradation",
+     "accept": [
+      "photo degradation",
+      "photodecomposition"
+     ],
+     "ref": "p. 107, 'Pesticide Breakdown'",
+     "why": "Photodegradation is breakdown in reaction to sunlight."
+    },
+    {
+     "id": "c07-s03-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "The same pesticide is applied in two places. Site A is warm and wet. Site B is cool and dry. Where will the pesticide most likely break down faster?",
+     "choices": [
+      "Site A",
+      "Site B",
+      "Equally fast at both sites",
+      "It cannot break down at either site"
+     ],
+     "answer": 0,
+     "ref": "p. 107, 'Pesticide Breakdown'",
+     "why": "Warm, wet conditions can increase breakdown speed; cool, dry conditions slow it."
+    },
+    {
+     "id": "c07-s03-t4",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these conditions does NOT make volatilization more likely?",
+     "choices": [
+      "Higher temperatures",
+      "More wind",
+      "Low relative humidity",
+      "High relative humidity"
+     ],
+     "answer": 3,
+     "ref": "p. 107, 'Volatility'",
+     "why": "Volatility rises with temperature and wind and is more likely under low relative humidity."
+    },
+    {
+     "id": "c07-s03-t5",
+     "src": "test",
+     "kind": "tf",
+     "q": "Chemical degradation is breakdown that does not involve living organisms, usually by a chemical reaction with water.",
+     "answer": true,
+     "ref": "p. 107, 'Pesticide Breakdown'",
+     "why": "That is the manual's definition of chemical degradation."
+    }
+   ]
+  },
+  {
+   "id": "c07-s04",
+   "chapter": "Chapter 7 · Pesticides in the Environment",
+   "title": "How pesticides move: air and water",
+   "pages": [
+    107,
+    108
+   ],
+   "body": [
+    {
+     "h": "How pesticides move in the environment"
+    },
+    {
+     "p": [
+      "Pesticides may move from the targeted application site in several ways: **in air**, **in water**, **attached to soil particles**, and **on or in objects**. See Figure 7.2."
+     ]
+    },
+    {
+     "fig": "fig-7-2"
+    },
+    {
+     "h": "Movement in air"
+    },
+    {
+     "p": [
+      "Pesticide movement away from the application site by wind or air currents is called **drift**.",
+      "People who mix, load, and apply pesticides outdoors are usually aware of how easily pesticides may drift offsite.",
+      "Those who handle pesticides indoors may not realize how readily some pesticides move offsite in the air currents created by **ventilation systems** and by **forced-air heating and cooling systems**.",
+      "Pesticides may travel offsite as spray droplets, vapors, dusts or solid particles, and even on blowing soil particles."
+     ]
+    },
+    {
+     "h": "Movement in water"
+    },
+    {
+     "p": [
+      "Most pesticide movement in water is either by surface movement off the treated site, called **runoff**, or by downward movement through the soil, called **leaching**.",
+      "Runoff and leaching may occur when:"
+     ]
+    },
+    {
+     "list": [
+      "Too much pesticide is applied or spilled onto a surface.",
+      "Too much rainwater or irrigation water moves pesticide through the soil offsite or into groundwater.",
+      "Highly water-soluble or persistent pesticides are used."
+     ]
+    },
+    {
+     "p": [
+      "Runoff water in an outdoor environment may move into drainage systems, streams, ponds, or other surface water, where the pesticides can travel great distances.",
+      "Pesticides that leach downward through the soil may reach **groundwater**.",
+      "In an indoor environment, water containing pesticides can flow into **floor drains** and contaminate water systems.",
+      "A careless act, such as dumping a pesticide or rinsate down a sink or toilet, may contaminate an **entire sewage or water-treatment facility**.",
+      "Some pesticides can **leach indoors**. In a greenhouse, for example, pesticides may leach through the soil or other planting medium and contaminate other greenhouse surfaces.",
+      "Look for special instructions on the label that warn of pesticide hazards caused by the movement of pesticides in water.",
+      "Sometimes labels require **buffers or setbacks** from water and wells."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "fig-7-2",
+     "title": "Figure 7.2: Movement of pesticides in the environment.",
+     "page": "p. 108",
+     "svgFile": "fig-7-2.svg",
+     "explain": [
+      "Spray can go up by evaporation or volatilization, or sideways as drift.",
+      "On the ground, pesticide can be taken up by plants, degraded in the soil, or carried down by percolation and leaching to groundwater below the water table.",
+      "Rain can carry it across the surface by runoff and erosion into surface water, and sunlight breaks it down by photodegradation."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c07-s04-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "What is the downward movement of a pesticide through the soil called?",
+     "choices": [
+      "Leaching",
+      "Runoff",
+      "Drift",
+      "Adsorption"
+     ],
+     "answer": 0,
+     "ref": "p. 107, 'Movement in Water'",
+     "why": "Runoff is surface movement off the site; leaching is downward movement through the soil."
+    },
+    {
+     "id": "c07-s04-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT listed as a condition under which runoff and leaching may occur?",
+     "choices": [
+      "Too much pesticide is applied or spilled",
+      "Too much rainwater or irrigation water",
+      "Highly water-soluble or persistent pesticides are used",
+      "A pesticide that binds tightly to soil is used"
+     ],
+     "answer": 3,
+     "ref": "p. 107, 'Movement in Water'",
+     "why": "The three listed conditions are too much pesticide, too much water, and highly water-soluble or persistent pesticides."
+    },
+    {
+     "id": "c07-s04-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "After treating a kitchen, a technician pours leftover rinsate into the building's toilet. What does the manual warn this careless act may do?",
+     "choices": [
+      "Contaminate an entire sewage or water-treatment facility",
+      "Nothing, because sewage plants remove all pesticides",
+      "Only harm the toilet fixtures",
+      "Cause photodegradation"
+     ],
+     "answer": 0,
+     "ref": "p. 107, 'Movement in Water'",
+     "why": "Dumping pesticide or rinsate down a sink or toilet may contaminate an entire sewage or water-treatment facility."
+    },
+    {
+     "id": "c07-s04-t4",
+     "src": "test",
+     "kind": "tf",
+     "q": "Indoors, pesticides can move offsite in air currents created by ventilation systems and forced-air heating and cooling systems.",
+     "answer": true,
+     "ref": "p. 107, 'Movement in Air'",
+     "why": "Indoor handlers may not realize how readily pesticides move in those air currents."
+    },
+    {
+     "id": "c07-s04-t5",
+     "src": "test",
+     "kind": "short",
+     "q": "What is pesticide movement away from the application site by wind or air currents called?",
+     "answer": "drift",
+     "accept": [
+      "pesticide drift",
+      "drifting"
+     ],
+     "ref": "p. 107, 'Movement in Air'",
+     "why": "Movement away from the site by wind or air currents is called drift."
+    }
+   ]
+  },
+  {
+   "id": "c07-s05",
+   "chapter": "Chapter 7 · Pesticides in the Environment",
+   "title": "Movement on objects, spray drift, and droplet size",
+   "pages": [
+    108,
+    109
+   ],
+   "body": [
+    {
+     "h": "Movement on or in objects, plants, or animals"
+    },
+    {
+     "p": [
+      "Pesticides can also move away from the application site when they are on or in objects or organisms that move, or are moved, offsite.",
+      "When pesticide handlers bring or wear home **contaminated personal protective equipment, work clothing, or other items**, pesticide residues may rub off on carpeting, furniture, and laundry items, and onto pets and people."
+     ]
+    },
+    {
+     "h": "Preventing pesticide drift"
+    },
+    {
+     "p": [
+      "Studies have shown that a **sizable percentage** of pesticides may never reach the intended target site because of drift.",
+      "Significant drift can damage or contaminate sensitive crops, poison bees, pose health risks to humans and animals, and contaminate soil and water in adjacent areas.",
+      "**It is impossible to eliminate drift**, but it is possible to **reduce it to a tolerable level**."
+     ]
+    },
+    {
+     "h": "Spray drift"
+    },
+    {
+     "p": [
+      "**Spray drift** refers to the off-target movement of a pesticide during a **liquid application**.",
+      "This is the result of small spray droplets traveling offsite on air currents.",
+      "Spray drift occurs **more frequently** than vapor drift or particle (dust) drift.",
+      "You can avoid most spray drift problems by paying close attention to **spray droplet size**, **wind direction**, and **wind speed**.",
+      "**Large** spray droplets are **less likely** to drift than smaller ones.",
+      "Selecting the proper nozzle and pressure is important to reduce drift.",
+      "**High pressure** and nozzles with **smaller orifices**, or openings, produce **small droplets** likely to drift.",
+      "Conversely, **large nozzle orifices** and **low pressures** produce **larger droplets**."
+     ]
+    },
+    {
+     "h": "Classification of droplet size"
+    },
+    {
+     "p": [
+      "Nozzles produce a range of droplet sizes, known as the **droplet size spectrum**.",
+      "Regardless of the type of nozzle used, a percentage of droplets created by a nozzle will be small enough to drift.",
+      "Modern nozzle designs are excellent options because they reduce the amount of droplets prone to drift during an application."
+     ]
+    },
+    {
+     "p": [
+      "A droplet size classification system can help describe the droplet sizes produced by a nozzle.",
+      "This standard, **S-572.1, Spray Nozzle Classification by Droplet Size**, was established by the **American Society of Agricultural and Biological Engineers**.",
+      "It classifies nozzles into **eight categories**. See Table 7.1.",
+      "Using these categories, you can select a nozzle, orifice size, and operating pressure that produce a **label-recommended droplet size spectrum**.",
+      "Consult the label for the droplet size specifications that may be in place for a particular application."
+     ]
+    },
+    {
+     "fig": "tab-7-1"
+    }
+   ],
+   "figures": [
+    {
+     "id": "tab-7-1",
+     "title": "Table 7.1: Spray Droplet Spectrum Categories.",
+     "page": "p. 109",
+     "svgFile": "tab-7-1.svg",
+     "explain": [
+      "From smallest to largest droplets: Extra Fine is purple, Very Fine is red, Fine is orange, Medium is yellow, Coarse is blue, Very Coarse is green, Extra Coarse is white, and Ultra Coarse is black.",
+      "The classification is primarily to indicate off-site spray drift potential, and secondarily for application efficacy.",
+      "The manual's table prints the seventh row as Extra Course; it means Extra Coarse, symbol X C."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c07-s05-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "Which combination produces small spray droplets that are likely to drift?",
+     "choices": [
+      "High pressure and small nozzle orifices",
+      "Low pressure and large nozzle orifices",
+      "Low pressure and small nozzle orifices only",
+      "High pressure and large nozzle orifices only"
+     ],
+     "answer": 0,
+     "ref": "p. 108, 'Spray Drift'",
+     "why": "High pressure and smaller orifices produce small droplets likely to drift."
+    },
+    {
+     "id": "c07-s05-t2",
+     "src": "test",
+     "kind": "tf",
+     "q": "With the right equipment, it is possible to eliminate drift completely.",
+     "answer": false,
+     "ref": "p. 108, 'Preventing Pesticide Drift'",
+     "why": "It is impossible to eliminate drift, but it can be reduced to a tolerable level."
+    },
+    {
+     "id": "c07-s05-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "You can avoid most spray drift by paying close attention to three things. Which of these is NOT one of them?",
+     "choices": [
+      "Spray droplet size",
+      "Wind direction",
+      "Wind speed",
+      "Soil texture"
+     ],
+     "answer": 3,
+     "ref": "p. 108, 'Spray Drift'",
+     "why": "The three are spray droplet size, wind direction, and wind speed."
+    },
+    {
+     "id": "c07-s05-t4",
+     "src": "test",
+     "kind": "mc",
+     "q": "Into how many droplet size categories does ASABE Standard S-572.1 classify nozzles?",
+     "choices": [
+      "Eight",
+      "Five",
+      "Six",
+      "Ten"
+     ],
+     "answer": 0,
+     "ref": "p. 109, 'Classification of Droplet Size' and Table 7.1",
+     "why": "The standard classifies nozzles into eight categories."
+    },
+    {
+     "id": "c07-s05-t5",
+     "src": "test",
+     "kind": "mc",
+     "q": "According to Table 7.1, what is the primary purpose of classifying nozzles by droplet size?",
+     "choices": [
+      "To indicate off-site spray drift potential",
+      "To set the price of nozzles",
+      "To measure pesticide toxicity",
+      "To measure the half-life of a pesticide"
+     ],
+     "answer": 0,
+     "ref": "p. 109, Table 7.1 footnote a",
+     "why": "The purpose is primarily to indicate off-site spray drift potential and secondarily application efficacy."
+    },
+    {
+     "id": "c07-s05-t6",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A label requires a Coarse droplet spectrum. Using the standard color code, which nozzle color should you look for?",
+     "choices": [
+      "Blue",
+      "Yellow",
+      "Red",
+      "Green"
+     ],
+     "answer": 0,
+     "ref": "p. 109, Table 7.1",
+     "why": "In Table 7.1, Coarse (C) is blue."
+    }
+   ]
+  },
+  {
+   "id": "c07-s06",
+   "chapter": "Chapter 7 · Pesticides in the Environment",
+   "title": "Other drift factors: thickness, additives, wind, time of day",
+   "pages": [
+    109,
+    110
+   ],
+   "body": [
+    {
+     "h": "Other factors"
+    },
+    {
+     "p": [
+      "The **thickness of the liquid** also affects droplet size.",
+      "As the thickness increases, so does droplet size, thus reducing the chance of off-target movement.",
+      "Fine spray droplets may begin to **evaporate** before reaching their target. These droplets become very small and light and may move offsite.",
+      "Modern **drift control additives** will decrease drift potential without dramatically shifting the droplets to a larger size.",
+      "Remember, however, to always follow the label directions about using a spray adjuvant intended to minimize drift.",
+      "Some drift control additives may actually **increase** the drift potential of an applied tank mix.",
+      "Also be aware that **large spray droplets may reduce coverage**, resulting in less pest control."
+     ]
+    },
+    {
+     "p": [
+      "**Wind speed and direction** are the **most important environmental factors** influencing spray drift.",
+      "Labels may indicate maximum and minimum wind speeds for application.",
+      "Except in the case of temperature inversions, the **early morning and evening** are often the best times to apply pesticides.",
+      "This is because windy conditions are more likely to occur around **midday**, when the temperature near the ground increases.",
+      "This causes hot air to rise quickly and mix rapidly with the cooler air above it, favoring drift.",
+      "The best time to spray is when spray droplets **move slowly upward** in the absence of windy or inversion conditions."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c07-s06-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "What does the manual call the most important environmental factors influencing spray drift?",
+     "choices": [
+      "Wind speed and direction",
+      "Temperature and humidity",
+      "Soil texture and organic matter",
+      "Sunlight and rainfall"
+     ],
+     "answer": 0,
+     "ref": "p. 109, 'Other Factors'",
+     "why": "Wind speed and direction are the most important environmental factors influencing spray drift."
+    },
+    {
+     "id": "c07-s06-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "There is no temperature inversion, and the applicator can choose any time of day. When are conditions often best for spraying, according to the manual?",
+     "choices": [
+      "Early morning or evening",
+      "Around midday",
+      "Early afternoon on a hot day",
+      "Any time; time of day does not matter"
+     ],
+     "answer": 0,
+     "ref": "p. 109, 'Other Factors'",
+     "why": "Except with inversions, early morning and evening are often best because wind is more likely around midday."
+    },
+    {
+     "id": "c07-s06-t3",
+     "src": "test",
+     "kind": "tf",
+     "q": "Every drift control additive reduces the drift potential of a tank mix.",
+     "answer": false,
+     "ref": "p. 109, 'Other Factors'",
+     "why": "Some drift control additives may actually increase drift potential, so follow the label."
+    },
+    {
+     "id": "c07-s06-t4",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these statements about droplet size is NOT true, according to the manual?",
+     "choices": [
+      "Large droplets always give better pest control",
+      "Thicker liquids produce larger droplets",
+      "Fine droplets may evaporate before reaching the target",
+      "Large droplets may reduce coverage"
+     ],
+     "answer": 0,
+     "ref": "p. 109, 'Other Factors'",
+     "why": "Large spray droplets may reduce coverage, resulting in less pest control."
+    },
+    {
+     "id": "c07-s06-t5",
+     "src": "test",
+     "kind": "mc",
+     "q": "Why are windy conditions more likely around midday?",
+     "choices": [
+      "The ground warms, so hot air rises quickly and mixes with cooler air above",
+      "Cool air settles near the ground",
+      "Humidity is highest at midday",
+      "Inversions always form at midday"
+     ],
+     "answer": 0,
+     "ref": "pp. 109 to 110, 'Other Factors'",
+     "why": "Ground temperature rises, hot air rises quickly and mixes rapidly with cooler air above, favoring drift."
+    }
+   ]
+  },
+  {
+   "id": "c07-s07",
+   "chapter": "Chapter 7 · Pesticides in the Environment",
+   "title": "Humidity, release height, and ways to cut drift",
+   "pages": [
+    110,
+    110
+   ],
+   "body": [
+    {
+     "p": [
+      "**Low relative humidity and/or high temperatures** also can increase the potential for spray drift.",
+      "Under these conditions, the evaporation rate of water increases, resulting in smaller spray droplets that drift more easily.",
+      "Avoid spraying during these times."
+     ]
+    },
+    {
+     "p": [
+      "The **height** at which the pesticide is released above the ground or target may also affect drift.",
+      "Applications that use large droplets close to the ground often produce little drift.",
+      "**Aerial spraying** and **tall tree spraying**, on the other hand, are more likely to produce spray drift because they intersect large distances of air far from the ground.",
+      "Drift from boom sprayers can be reduced by lowering the boom height to within **20 to 24 inches** of the target crop."
+     ]
+    },
+    {
+     "box": "Decrease outdoor drift by:",
+     "list": [
+      "Spraying when the wind speed is between **3 and 10 miles per hour**.",
+      "Spraying **downwind from sensitive areas**, such as residential properties, schools, crops, waterways, or beehives.",
+      "Using proper nozzles and pressures.",
+      "Using drift control additives, if appropriate.",
+      "Lowering boom height.",
+      "Leaving an **untreated border or buffer area** in the downwind target area."
+     ]
+    },
+    {
+     "p": [
+      "To reduce **drift indoors**, pest control operators must consider the air circulation patterns inside buildings.",
+      "Turn fans and air conditioners off, and close vents where necessary to prevent pesticides from drifting to other parts of the building.",
+      "Use **low-volatile or nonvolatile** pesticides and **low-pressure** treatments to reduce indoor pesticide drift."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c07-s07-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "To decrease outdoor drift, the manual says to spray when the wind speed is between:",
+     "choices": [
+      "3 and 10 miles per hour",
+      "0 and 2 miles per hour",
+      "10 and 15 miles per hour",
+      "5 and 20 miles per hour"
+     ],
+     "answer": 0,
+     "ref": "p. 110, list under 'Decrease outdoor drift by'",
+     "why": "Spray when wind speed is between 3 and 10 miles per hour."
+    },
+    {
+     "id": "c07-s07-t2",
+     "src": "test",
+     "kind": "short",
+     "q": "To reduce boom sprayer drift, lower the boom to within how many inches of the target crop?",
+     "answer": "20 to 24 inches",
+     "accept": [
+      "20-24 inches",
+      "20 to 24",
+      "20-24"
+     ],
+     "keys": [
+      [
+       "20"
+      ],
+      [
+       "24"
+      ]
+     ],
+     "ref": "p. 110, paragraph on release height",
+     "why": "Lower the boom height to within 20 to 24 inches of the target crop."
+    },
+    {
+     "id": "c07-s07-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A field borders a school on its east side. The wind is blowing from west to east. Following the manual, what is the problem?",
+     "choices": [
+      "The applicator would be spraying upwind of the school, so drift would blow toward it",
+      "There is no problem; wind direction does not matter",
+      "The applicator should speed up to finish faster",
+      "The applicator should raise the boom"
+     ],
+     "answer": 0,
+     "ref": "p. 110, list under 'Decrease outdoor drift by'",
+     "why": "Spray downwind from sensitive areas; here the wind carries drift toward the school."
+    },
+    {
+     "id": "c07-s07-t4",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT on the manual's list of ways to decrease outdoor drift?",
+     "choices": [
+      "Raising the boom for wider coverage",
+      "Using proper nozzles and pressures",
+      "Leaving an untreated buffer in the downwind target area",
+      "Using drift control additives, if appropriate"
+     ],
+     "answer": 0,
+     "ref": "p. 110, list under 'Decrease outdoor drift by'",
+     "why": "The list says lowering boom height, not raising it."
+    },
+    {
+     "id": "c07-s07-t5",
+     "src": "test",
+     "kind": "tf",
+     "q": "Aerial spraying and tall tree spraying are more likely to produce spray drift because they intersect large distances of air far from the ground.",
+     "answer": true,
+     "ref": "p. 110, paragraph on release height",
+     "why": "That is the manual's stated reason."
+    },
+    {
+     "id": "c07-s07-t6",
+     "src": "test",
+     "kind": "mc",
+     "q": "To reduce drift indoors, what should a pest control operator do?",
+     "choices": [
+      "Turn fans and air conditioners off, and close vents where necessary",
+      "Turn on fans to dilute the pesticide",
+      "Use high-pressure treatments",
+      "Use the most volatile product available"
+     ],
+     "answer": 0,
+     "ref": "p. 110, paragraph on indoor drift",
+     "why": "Turn fans and air conditioners off, close vents, and use low-volatile products and low-pressure treatments."
+    }
+   ]
+  },
+  {
+   "id": "c07-s08",
+   "chapter": "Chapter 7 · Pesticides in the Environment",
+   "title": "Temperature inversions",
+   "pages": [
+    110,
+    111
+   ],
+   "body": [
+    {
+     "h": "Temperature inversions"
+    },
+    {
+     "p": [
+      "Applications made under **low-wind** conditions can sometimes produce **more extensive drift** than under high winds.",
+      "Drift that occurs over long distances, **more than a mile**, is most often the result of applications made during a **temperature inversion**, under stable atmospheric conditions.",
+      "A temperature inversion exists when the air at **ground level is cooler** than the air above it.",
+      "Under these conditions, the air is considered **stable** because there is little or no vertical air movement.",
+      "Almost all air movement during an inversion is **sideways**, or lateral.",
+      "This causes a high concentration of small spray droplets to be suspended in this layer of cool air near the ground.",
+      "These droplets can then be carried long distances, especially if wind speeds increase.",
+      "When the spray droplets settle out, they may still be concentrated enough to cause damage or harm."
+     ]
+    },
+    {
+     "fig": "fig-7-3"
+    },
+    {
+     "p": [
+      "Inversions may occur at any time of the day and at any height above the ground.",
+      "However, they most often develop during the **early evening hours** as the ground temperature begins to cool and the warm air has already risen.",
+      "Inversion conditions **intensify during the night** and may persist until **mid-morning**, when the ground has warmed enough to start the vertical mixing of air, that is, when the wind starts to blow.",
+      "This causes a dilution and separation of suspended spray droplets.",
+      "Consequently, applications made during early evening, night, or morning hours under seemingly ideal conditions may result in highly damaging drift that can move long distances.",
+      "This is especially true if the **humidity is high**.",
+      "Such movement could occur up to **one to three hours** after the application."
+     ]
+    },
+    {
+     "p": [
+      "You can recognize these stable air conditions by observing the movement of **dust or smoke**.",
+      "If dust or smoke rises little from its source and tends to **hang in the air**, an inversion may be present or developing. See Figure 7.3.",
+      "Another way of detecting inversions is to place **one thermometer at ground level** and a **second thermometer high above the ground**, then compare the difference in temperature.",
+      "If the temperature at ground level is **below** that found at the elevated thermometer, a temperature inversion exists.",
+      "**Do not apply pesticides under such conditions.**"
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "fig-7-3",
+     "title": "Figure 7.3: Dispersion of smoke particles under normal and inversion conditions.",
+     "page": "p. 110",
+     "svgFile": "fig-7-3.svg",
+     "explain": [
+      "Normal condition: cool air sits above warm air, so smoke rises and disperses.",
+      "Inversion condition: warm air sits above cool air, so smoke flattens into a layer and concentrates near the ground."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c07-s08-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "A temperature inversion exists when:",
+     "choices": [
+      "The air at ground level is cooler than the air above it",
+      "The air at ground level is warmer than the air above it",
+      "Wind speed is above 10 miles per hour",
+      "Relative humidity is very low"
+     ],
+     "answer": 0,
+     "ref": "p. 110, 'Temperature Inversions'",
+     "why": "In an inversion, ground-level air is cooler than the air above it."
+    },
+    {
+     "id": "c07-s08-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "At dusk, the air is calm. Smoke from a nearby burn pile rises a little, then hangs flat in the air. What should the applicator conclude?",
+     "choices": [
+      "An inversion may be present or developing, so do not spray",
+      "Calm air is ideal, so spray now",
+      "The smoke means wind is too high",
+      "Spray only with fine droplets"
+     ],
+     "answer": 0,
+     "ref": "p. 111, paragraph on recognizing inversions; Figure 7.3",
+     "why": "Smoke that rises little and hangs in the air signals an inversion."
+    },
+    {
+     "id": "c07-s08-t3",
+     "src": "test",
+     "kind": "mc",
+     "q": "When do inversions most often develop?",
+     "choices": [
+      "During the early evening hours",
+      "At midday",
+      "Early afternoon",
+      "Only during rainstorms"
+     ],
+     "answer": 0,
+     "ref": "p. 110, 'Temperature Inversions'",
+     "why": "They most often develop in early evening as the ground cools and warm air has already risen."
+    },
+    {
+     "id": "c07-s08-t4",
+     "src": "test",
+     "kind": "tf",
+     "q": "Low-wind conditions always produce less drift than high winds.",
+     "answer": false,
+     "ref": "p. 110, 'Temperature Inversions'",
+     "why": "Low-wind applications can sometimes produce more extensive drift, because of inversions."
+    },
+    {
+     "id": "c07-s08-t5",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "An applicator places one thermometer at ground level and one high above the ground. Ground level reads 58 degrees. The high one reads 64 degrees. What should the applicator do?",
+     "choices": [
+      "Not apply, because an inversion exists",
+      "Apply, because the air is stable",
+      "Apply with smaller droplets",
+      "Apply only if humidity is high"
+     ],
+     "answer": 0,
+     "ref": "p. 111, paragraph on detecting inversions",
+     "why": "Ground temperature below the elevated reading means an inversion exists. Do not apply."
+    },
+    {
+     "id": "c07-s08-t6",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these statements about inversions is NOT true?",
+     "choices": [
+      "Inversions can only occur at night",
+      "Almost all air movement during an inversion is sideways",
+      "Inversions can persist until mid-morning",
+      "Drift damage could occur up to one to three hours after the application"
+     ],
+     "answer": 0,
+     "ref": "pp. 110 to 111, 'Temperature Inversions'",
+     "why": "Inversions may occur at any time of the day and at any height above the ground."
+    }
+   ]
+  },
+  {
+   "id": "c07-s09",
+   "chapter": "Chapter 7 · Pesticides in the Environment",
+   "title": "Vapor drift and particle drift",
+   "pages": [
+    111,
+    111
+   ],
+   "body": [
+    {
+     "h": "Vapor drift"
+    },
+    {
+     "p": [
+      "**Vapor drift** refers to the movement of pesticides as **gaseous vapors** from the target area.",
+      "Some pesticides are volatile: they change readily from a solid or liquid form into a gas under the right conditions. This usually occurs in **hot weather**.",
+      "Pesticides that have volatilized into a vapor or gas may drift **farther and for a longer time** than they would have as spray droplets.",
+      "**Only those pesticides that are able to volatilize** are susceptible to vapor drift.",
+      "As air temperatures increase, the likelihood that these pesticides will volatilize and drift also increases."
+     ]
+    },
+    {
+     "p": [
+      "Whenever possible, choose a pesticide formulated as a **low-volatility** product.",
+      "Do not apply volatile pesticides on hot days.",
+      "Some products may even volatilize **several hours after application**, so beware if high temperatures are predicted for later in the day. See Figure 7.4.",
+      "Many product labels advise against applying these products when temperatures are **at or above 85 degrees Fahrenheit**.",
+      "Remember to check label precautions for product-specific concerns about vapor drift."
+     ]
+    },
+    {
+     "fig": "fig-7-4"
+    },
+    {
+     "h": "Particle drift (dust drift)"
+    },
+    {
+     "p": [
+      "**Particle drift** refers to the movement of **solid particles** from the target area in the air during or just after an application.",
+      "These solid particles may include pesticides formulated as **dust**, or **soil particles** to which pesticides are attached.",
+      "Some pesticides can remain active on soil particles long after they are applied.",
+      "If particles are blown off the target site, sensitive areas may be contaminated or damaged.",
+      "To prevent particle drift from outdoor pesticide applications from entering nearby buildings, be sure to **close all windows and vents**. Turn off all circulating fans, forced-air heating systems, and air-conditioning units.",
+      "For indoor pesticide applications, reduce particle drift by turning off fans, forced-air heating systems, and other air-circulating equipment.",
+      "Check pesticide labels for statements related to these concerns."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "fig-7-4",
+     "title": "Figure 7.4: Vapor drift of pesticides is more likely as heat and wind increase and the relative humidity decreases.",
+     "page": "p. 111",
+     "svgFile": "fig-7-4.svg",
+     "explain": [
+      "Vapor rises from the treated plants, wind carries it as drift across a road, and it reaches a non-target sensitive crop.",
+      "The thermometer shows that heat drives the process."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c07-s09-r6",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which two factors are most important in avoiding vapor drift?",
+     "choices": [
+      "Droplet size and wind speed.",
+      "Air stability and temperature.",
+      "Temperature and pesticide volatility."
+     ],
+     "answer": 2,
+     "ref": "p. 121, Review question 6; answer from p. 111, 'Vapor Drift'",
+     "why": "Only volatile pesticides can vapor drift, and the risk rises as temperature rises."
+    },
+    {
+     "id": "c07-s09-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "Many product labels advise against applying volatile products when temperatures are at or above:",
+     "choices": [
+      "85 degrees Fahrenheit",
+      "70 degrees Fahrenheit",
+      "95 degrees Fahrenheit",
+      "100 degrees Fahrenheit"
+     ],
+     "answer": 0,
+     "ref": "p. 111, 'Vapor Drift'",
+     "why": "Many labels advise against applying at or above 85 degrees Fahrenheit."
+    },
+    {
+     "id": "c07-s09-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "It is 72 degrees at 8 a.m., but the forecast calls for 91 degrees by afternoon. You plan to apply a volatile herbicide in the morning. What is the risk?",
+     "choices": [
+      "The product may volatilize hours after application when it gets hot",
+      "None, because it was applied while cool",
+      "Only particle drift is possible",
+      "The heat will make it adsorb tightly to soil"
+     ],
+     "answer": 0,
+     "ref": "p. 111, 'Vapor Drift'",
+     "why": "Some products volatilize several hours after application, so beware of high temperatures predicted later in the day."
+    },
+    {
+     "id": "c07-s09-t3",
+     "src": "test",
+     "kind": "tf",
+     "q": "Any pesticide can undergo vapor drift.",
+     "answer": false,
+     "ref": "p. 111, 'Vapor Drift'",
+     "why": "Only pesticides that are able to volatilize are susceptible to vapor drift."
+    },
+    {
+     "id": "c07-s09-t4",
+     "src": "test",
+     "kind": "short",
+     "q": "What is the movement of solid particles, such as dusts or pesticide-coated soil, from the target area in the air called?",
+     "answer": "particle drift",
+     "accept": [
+      "dust drift",
+      "particle drift or dust drift"
+     ],
+     "keys": [
+      [
+       "particle",
+       "dust"
+      ],
+      [
+       "drift"
+      ]
+     ],
+     "ref": "p. 111, 'Particle Drift (Dust Drift)'",
+     "why": "Particle drift, also called dust drift, is the movement of solid particles in the air."
+    },
+    {
+     "id": "c07-s09-t5",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "To keep particle drift from an outdoor application out of a nearby building, which of these is NOT a step the manual gives?",
+     "choices": [
+      "Open windows to let the dust clear",
+      "Close all windows and vents",
+      "Turn off all circulating fans",
+      "Turn off forced-air heating and air-conditioning units"
+     ],
+     "answer": 0,
+     "ref": "p. 111, 'Particle Drift (Dust Drift)'",
+     "why": "Close all windows and vents, and turn off fans, forced-air heating, and air conditioning."
+    }
+   ]
+  },
+  {
+   "id": "c07-s10",
+   "chapter": "Chapter 7 · Pesticides in the Environment",
+   "title": "Applicator responsibility and sources of water contamination",
+   "pages": [
+    111,
+    112
+   ],
+   "body": [
+    {
+     "h": "Applicator responsibility"
+    },
+    {
+     "p": [
+      "As an applicator, **you are legally responsible** for any damages resulting from the off-target movement of pesticides.",
+      "Assess the vulnerability of neighboring properties and those areas downwind of the application site.",
+      "Evaluate weather conditions for **temperature inversions, wind direction, and wind speed** before making the all-important decision about whether to spray.",
+      "You may have to adjust your application equipment to reduce spray drift.",
+      "Consider using low-volatile formulations, or adding a drift control agent or thickener to help minimize drift.",
+      "For further discussion on equipment designed to minimize drift, see Chapter 11, Pesticide Application Procedures.",
+      "A good drift management program includes a **combination of all drift reducing techniques** available for a particular application."
+     ]
+    },
+    {
+     "fig": "p112-particle"
+    },
+    {
+     "p": [
+      "If you apply pesticides indoors, you are also responsible for preventing drift. Ensure that:"
+     ]
+    },
+    {
+     "list": [
+      "Pesticides do not move beyond the target site.",
+      "All people and animals are kept out of the treatment area according to label instructions."
+     ]
+    },
+    {
+     "h": "Sources of water contamination"
+    },
+    {
+     "p": [
+      "Surface water or groundwater contamination results from either **point-source** or **nonpoint-source** pollution. See Figure 7.5.",
+      "Nonpoint-source pollution from pesticide applications is usually blamed for pesticide contamination of the outdoor environment.",
+      "However, studies show that water contamination may also result from point-source pollution.",
+      "**Point-source pollution** comes from a **specific, identifiable location**, such as:"
+     ]
+    },
+    {
+     "list": [
+      "A pesticide spill entering a storm sewer.",
+      "Back-siphoning of pesticides into water supplies.",
+      "Contaminated surface water entering sinkholes.",
+      "Repeated spilling of pesticides at mixing and loading sites.",
+      "Careless spilling of wash water at equipment cleanup sites.",
+      "Improper handling of spills and leaks at storage sites.",
+      "Improper disposal of containers, rinsate from containers, and excess pesticides."
+     ]
+    },
+    {
+     "p": [
+      "**Nonpoint-source pollution** comes from a **widespread area**.",
+      "An example is the movement of pesticides into streams or groundwater after **broadcast applications** to large agricultural fields, rights-of-way, or turf areas."
+     ]
+    },
+    {
+     "fig": "fig-7-5"
+    }
+   ],
+   "figures": [
+    {
+     "id": "p112-particle",
+     "title": "Particle drift in a field.",
+     "page": "p. 112",
+     "imgFile": "p112-particle.jpg"
+    },
+    {
+     "id": "fig-7-5",
+     "title": "Figure 7.5: Non-point-source pollution comes from a widespread area, while point-source pollution comes from a specific, identifiable location.",
+     "page": "p. 113",
+     "svgFile": "fig-7-5.svg",
+     "explain": [
+      "On the left, a sprayer covers a whole field, and pesticide spreads through the soil and into a stream and the aquifer.",
+      "On the right, a single spilled drum next to a well sends a concentrated plume straight down, and a sinkhole is another direct path."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c07-s10-r3",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which is an example of nonpoint-source contamination of groundwater?",
+     "choices": [
+      "Back-siphoning of pesticide spills at a wellhead.",
+      "Leaching from a pesticide mixing area.",
+      "Pesticides that dissolve and leach through soil after it rains."
+     ],
+     "answer": 2,
+     "ref": "p. 121, Review question 3; answer from p. 112, 'Sources of Water Contamination'",
+     "why": "Back-siphoning and mixing sites are specific locations (point source); leaching from a widespread area after rain is nonpoint."
+    },
+    {
+     "id": "c07-s10-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "Who is legally responsible for damages resulting from the off-target movement of pesticides?",
+     "choices": [
+      "The applicator",
+      "The pesticide manufacturer",
+      "The EPA",
+      "The neighboring property owner"
+     ],
+     "answer": 0,
+     "ref": "p. 111, 'Applicator Responsibility'",
+     "why": "As an applicator, you are legally responsible for damages from off-target movement."
+    },
+    {
+     "id": "c07-s10-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT an example of point-source pollution?",
+     "choices": [
+      "Pesticides moving into streams after broadcast applications to large fields",
+      "A pesticide spill entering a storm sewer",
+      "Back-siphoning of pesticides into water supplies",
+      "Repeated spilling at a mixing and loading site"
+     ],
+     "answer": 0,
+     "ref": "p. 112, 'Sources of Water Contamination'",
+     "why": "Broadcast applications to large fields are the manual's example of nonpoint-source pollution."
+    },
+    {
+     "id": "c07-s10-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "Groundwater testing finds a pesticide plume traced to a farm's equipment wash area, where rinse water has been dumped on the same spot for years. What type of pollution is this?",
+     "choices": [
+      "Point-source pollution",
+      "Nonpoint-source pollution",
+      "Vapor drift",
+      "Photodegradation"
+     ],
+     "answer": 0,
+     "ref": "p. 112, 'Sources of Water Contamination'",
+     "why": "It comes from a specific, identifiable location: careless spilling of wash water at a cleanup site."
+    },
+    {
+     "id": "c07-s10-t4",
+     "src": "test",
+     "kind": "tf",
+     "q": "A good drift management program relies on one main drift-reducing technique.",
+     "answer": false,
+     "ref": "p. 112, 'Applicator Responsibility'",
+     "why": "It includes a combination of all drift-reducing techniques available for the application."
+    },
+    {
+     "id": "c07-s10-t5",
+     "src": "test",
+     "kind": "short",
+     "q": "What type of pollution comes from a widespread area rather than a specific location?",
+     "answer": "nonpoint-source pollution",
+     "accept": [
+      "nonpoint source",
+      "non-point-source",
+      "nonpoint"
+     ],
+     "keys": [
+      [
+       "nonpoint",
+       "non-point",
+       "non point"
+      ]
+     ],
+     "ref": "p. 112, 'Sources of Water Contamination'",
+     "why": "Nonpoint-source pollution comes from a widespread area."
+    }
+   ]
+  },
+  {
+   "id": "c07-s11",
+   "chapter": "Chapter 7 · Pesticides in the Environment",
+   "title": "Pesticide contamination of surface water",
+   "pages": [
+    112,
+    113
+   ],
+   "body": [
+    {
+     "h": "Pesticide contamination of surface water"
+    },
+    {
+     "p": [
+      "Surface water is often a **source of drinking water**.",
+      "Therefore, pesticide contamination of surface water, such as ditches, streams, rivers, ponds, and lakes, is a **health concern**.",
+      "Pesticides that move in runoff water or with eroded sediment may contaminate plants and animals located downslope and reach sources of surface water."
+     ]
+    },
+    {
+     "p": [
+      "Factors affecting runoff and erosion rates include **slope**, **vegetative cover**, **soil characteristics**, **volume and rate of water moving downslope**, **temperature**, and **rainfall amount and intensity**.",
+      "These factors influence how much water runs off and how much moves into the soil, called **infiltration**.",
+      "In urban areas, runoff may occur on hard surfaces when **granules are left on sidewalks and streets**."
+     ]
+    },
+    {
+     "p": [
+      "Runoff is a potential problem for most outdoor application sites.",
+      "In areas treated with any type of pesticide, it is critical that runoff does not carry the pesticide into water sources or other vulnerable areas.",
+      "Generally, runoff risk is **greatest** when **heavy rains immediately follow** pesticide applications, or when the ground is **saturated or frozen**.",
+      "Although surface waters are most likely to be contaminated by runoff, groundwater may also be affected when surface streams connect with shallow groundwater."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c07-s11-r2",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which statement about movement of pesticides from the application site is true?",
+     "choices": [
+      "Drift is seldom an issue with indoor applications.",
+      "Runoff and erosion are sources of surface water contamination by pesticides.",
+      "Leaching is the main way that pesticides move great distances."
+     ],
+     "answer": 1,
+     "ref": "p. 121, Review question 2; answer from p. 112, 'Pesticide Contamination of Surface Water'",
+     "why": "Pesticides moving in runoff water or with eroded sediment reach surface water; indoor drift is real, and runoff water carries pesticides great distances."
+    },
+    {
+     "id": "c07-s11-t1",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "An applicator treats a field on a Tuesday. Which forecast creates the greatest runoff risk?",
+     "choices": [
+      "Heavy rain starting an hour after the application",
+      "Light breeze and sun for three days",
+      "Cool, dry weather all week",
+      "A light shower a week later"
+     ],
+     "answer": 0,
+     "ref": "p. 113, runoff paragraph",
+     "why": "Runoff risk is greatest when heavy rains immediately follow an application."
+    },
+    {
+     "id": "c07-s11-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT listed as a factor affecting runoff and erosion rates?",
+     "choices": [
+      "Pesticide color",
+      "Slope",
+      "Vegetative cover",
+      "Rainfall amount and intensity"
+     ],
+     "answer": 0,
+     "ref": "p. 112, 'Pesticide Contamination of Surface Water'",
+     "why": "Factors are slope, vegetative cover, soil characteristics, water volume and rate, temperature, and rainfall."
+    },
+    {
+     "id": "c07-s11-t3",
+     "src": "test",
+     "kind": "short",
+     "q": "What is the term for water moving into the soil rather than running off?",
+     "answer": "infiltration",
+     "accept": [
+      "infiltrate"
+     ],
+     "ref": "p. 112, 'Pesticide Contamination of Surface Water'",
+     "why": "Movement of water into the soil is called infiltration."
+    },
+    {
+     "id": "c07-s11-t4",
+     "src": "test",
+     "kind": "tf",
+     "q": "Runoff risk is lower when the ground is frozen, because frozen soil holds pesticides in place.",
+     "answer": false,
+     "ref": "p. 113, runoff paragraph",
+     "why": "Runoff risk is greatest when the ground is saturated or frozen."
+    },
+    {
+     "id": "c07-s11-t5",
+     "src": "test",
+     "kind": "mc",
+     "q": "In urban areas, what does the manual say can cause runoff from hard surfaces?",
+     "choices": [
+      "Granules left on sidewalks and streets",
+      "Applying pesticides indoors",
+      "Using low-pressure nozzles",
+      "Closing windows and vents"
+     ],
+     "answer": 0,
+     "ref": "p. 112, 'Pesticide Contamination of Surface Water'",
+     "why": "Runoff may occur on hard surfaces when granules are left on sidewalks and streets."
+    }
+   ]
+  },
+  {
+   "id": "c07-s12",
+   "chapter": "Chapter 7 · Pesticides in the Environment",
+   "title": "Groundwater and leaching",
+   "pages": [
+    113,
+    114
+   ],
+   "body": [
+    {
+     "h": "Pesticide contamination of groundwater"
+    },
+    {
+     "p": [
+      "Groundwater provides **70 percent** of the water used for public and private water supplies, irrigation, and industry.",
+      "Like surface water, groundwater must be protected from contamination.",
+      "Once groundwater is contaminated, correcting the problem is **difficult or even impossible**.",
+      "Groundwater is found underground in cracks in the bedrock and in the spaces between soil particles, gravel, and rocks.",
+      "It is the source of water for **wells and springs**."
+     ]
+    },
+    {
+     "p": [
+      "The layer of soil, sand, gravel, or fractured bedrock in which all available spaces are filled with water is the **saturated zone**.",
+      "The boundary between the saturated zone and the overlying unsaturated rock and soil is known as the **water table**.",
+      "The overall geologic formation from which groundwater can be drawn is called an **aquifer**. See Figure 7.6."
+     ]
+    },
+    {
+     "fig": "fig-7-6"
+    },
+    {
+     "h": "Leaching"
+    },
+    {
+     "p": [
+      "Some pesticides reach groundwater by moving through the soil in a process called **leaching**.",
+      "A pesticide that leaches into groundwater must move down through the soil in water, and resist binding to soil particles and breaking down into nontoxic compounds.",
+      "Pesticides that have **high solubility**, **low adsorption**, and/or are **persistent** are more likely to leach.",
+      "They typically have a label statement describing these concerns.",
+      "A pesticide that adsorbs or binds itself strongly to soil particles will not leach as easily.",
+      "Besides the characteristics of the pesticide, soil properties and environmental conditions also affect whether and to what extent a pesticide will leach."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "fig-7-6",
+     "title": "Figure 7.6: Where groundwater occurs.",
+     "page": "p. 114",
+     "svgFile": "fig-7-6.svg",
+     "explain": [
+      "Below the surface is the unsaturated zone. The water table marks the top of the saturated zone, or aquifer, here in gravel above fractured bedrock.",
+      "A well draws from the aquifer, and groundwater connects to surface water."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c07-s12-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "Groundwater provides what percentage of the water used for public and private water supplies, irrigation, and industry?",
+     "choices": [
+      "70 percent",
+      "50 percent",
+      "30 percent",
+      "90 percent"
+     ],
+     "answer": 0,
+     "ref": "p. 113, 'Pesticide Contamination of Groundwater'",
+     "why": "Groundwater provides 70 percent of that water."
+    },
+    {
+     "id": "c07-s12-t2",
+     "src": "test",
+     "kind": "short",
+     "q": "What is the boundary between the saturated zone and the overlying unsaturated rock and soil called?",
+     "answer": "water table",
+     "accept": [
+      "the water table"
+     ],
+     "ref": "p. 113, 'Pesticide Contamination of Groundwater'",
+     "why": "That boundary is the water table."
+    },
+    {
+     "id": "c07-s12-t3",
+     "src": "test",
+     "kind": "mc",
+     "q": "What is the overall geologic formation from which groundwater can be drawn?",
+     "choices": [
+      "An aquifer",
+      "The water table",
+      "A sinkhole",
+      "The root zone"
+     ],
+     "answer": 0,
+     "ref": "p. 113, 'Pesticide Contamination of Groundwater'",
+     "why": "The overall geologic formation from which groundwater can be drawn is an aquifer."
+    },
+    {
+     "id": "c07-s12-t4",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "You must choose between four insecticides near a shallow well. Which one is most likely to leach?",
+     "choices": [
+      "High solubility, low adsorption, persistent",
+      "Low solubility, high adsorption, short half-life",
+      "Low solubility, high adsorption, persistent",
+      "High adsorption, breaks down in hours"
+     ],
+     "answer": 0,
+     "ref": "p. 113, 'Leaching'",
+     "why": "High solubility, low adsorption, and persistence make leaching more likely."
+    },
+    {
+     "id": "c07-s12-t5",
+     "src": "test",
+     "kind": "tf",
+     "q": "Once groundwater is contaminated, the problem is usually easy to correct.",
+     "answer": false,
+     "ref": "p. 113, 'Pesticide Contamination of Groundwater'",
+     "why": "Correcting it is difficult or even impossible."
+    },
+    {
+     "id": "c07-s12-t6",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT a place the manual says groundwater is found?",
+     "choices": [
+      "Only in underground lakes and rivers",
+      "In cracks in the bedrock",
+      "In spaces between soil particles",
+      "In spaces between gravel and rocks"
+     ],
+     "answer": 0,
+     "ref": "p. 113, 'Pesticide Contamination of Groundwater'",
+     "why": "It is found in bedrock cracks and in spaces between soil particles, gravel, and rocks."
+    }
+   ]
+  },
+  {
+   "id": "c07-s13",
+   "chapter": "Chapter 7 · Pesticides in the Environment",
+   "title": "Soil properties that affect leaching",
+   "pages": [
+    113,
+    115
+   ],
+   "body": [
+    {
+     "h": "Soil properties"
+    },
+    {
+     "p": [
+      "**Four** soil properties affect a pesticide's potential for leaching: **texture and structure**, **organic matter**, **depth to groundwater**, and **geology**."
+     ]
+    },
+    {
+     "h": "Texture and structure"
+    },
+    {
+     "p": [
+      "**Soil texture** is the relative proportions of sand, silt, and clay-sized particles.",
+      "Percolating water moves **faster in sandy soils**.",
+      "Sand also has **fewer binding sites** available for the adsorption of dissolved chemicals than do clay or silt soils.",
+      "Though sandy soils are more prone to pesticide movement, leaching may also occur in clay or silt soils.",
+      "**Soil structure** is the shape or arrangement of soil particles. It plays a big role in determining the size and shape of the pores through which water moves.",
+      "Small amounts of pesticides may also move through soil cracks, worm holes, and root channels. These features are called **macropores**."
+     ]
+    },
+    {
+     "fig": "fig-p114-soil"
+    },
+    {
+     "h": "Organic matter"
+    },
+    {
+     "p": [
+      "Organic matter consists of decaying plant material.",
+      "The **higher** the soil organic matter content, the **greater** the ability of the soil to hold both water and adsorbed pesticides.",
+      "Pesticides held in the **root zone** are less likely to leach into groundwater and may be taken up by plants."
+     ]
+    },
+    {
+     "h": "Depth to groundwater"
+    },
+    {
+     "p": [
+      "Areas with a **shallow water table** have a greater chance for groundwater contamination, because less soil is available to act as a filter.",
+      "There are fewer opportunities for pesticide degradation or adsorption.",
+      "When using pesticides in areas where the groundwater is close to the surface, choose a product with a **low leaching potential**.",
+      "Take extra precautions during mixing, application, and cleanup."
+     ]
+    },
+    {
+     "h": "Geology"
+    },
+    {
+     "p": [
+      "The **permeability** of the geologic layers lying between the surface of the soil and the groundwater is also an important factor.",
+      "Highly permeable materials, such as **gravel deposits**, allow water and dissolved pesticides to move freely downward to groundwater.",
+      "**Layers of clay**, which are much less permeable, can inhibit and slow the downward movement of water."
+     ]
+    },
+    {
+     "fig": "tab-7-2"
+    }
+   ],
+   "figures": [
+    {
+     "id": "fig-p114-soil",
+     "title": "Sandy soil has large pores. Clay soil has small pores.",
+     "page": "p. 114",
+     "svgFile": "fig-p114-soil.svg",
+     "explain": [
+      "Pesticide moves easily through the large pores between sand grains, and more slowly through the small pores between flat clay particles."
+     ]
+    },
+    {
+     "id": "tab-7-2",
+     "title": "Table 7.2: Soil Properties.",
+     "page": "p. 114",
+     "svgFile": "tab-7-2.svg",
+     "explain": [
+      "Coarse sand: low organic content, meaning faster water flow and little adsorption of pesticides, and high permeability, meaning fast flow.",
+      "Smooth clay or silt: high organic content, meaning higher water retention and greater adsorption of pesticides, and low permeability, meaning slow flow."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c07-s13-r4",
+     "src": "review",
+     "kind": "mc",
+     "q": "Under which conditions are pesticides more likely to leach through soil?",
+     "choices": [
+      "Heavy clay soil, high in organic matter.",
+      "Sandy soil, high in organic matter.",
+      "Sandy soil, low in organic matter."
+     ],
+     "answer": 2,
+     "ref": "p. 121, Review question 4; answer from pp. 113 to 114, 'Texture and Structure', 'Organic Matter', Table 7.2",
+     "why": "Sand moves water fast with few binding sites, and low organic matter means little adsorption."
+    },
+    {
+     "id": "c07-s13-t1",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT one of the four soil properties that affect a pesticide's leaching potential?",
+     "choices": [
+      "Soil color",
+      "Texture and structure",
+      "Organic matter",
+      "Depth to groundwater"
+     ],
+     "answer": 0,
+     "ref": "p. 113, 'Soil Properties'",
+     "why": "The four are texture and structure, organic matter, depth to groundwater, and geology."
+    },
+    {
+     "id": "c07-s13-t2",
+     "src": "test",
+     "kind": "mc",
+     "q": "What are soil cracks, worm holes, and root channels called?",
+     "ref": "p. 114, 'Texture and Structure'",
+     "why": "These features are called macropores.",
+     "choices": [
+      "Macropores",
+      "Micropores",
+      "Aquifers",
+      "Binding sites"
+     ],
+     "answer": 0
+    },
+    {
+     "id": "c07-s13-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A golf course has sandy soil and a shallow water table. Which product choice does the manual point to?",
+     "choices": [
+      "A product with a low leaching potential",
+      "The most water-soluble product",
+      "The most persistent product",
+      "Any product, as long as it is applied at midday"
+     ],
+     "answer": 0,
+     "ref": "p. 114, 'Depth to Groundwater'",
+     "why": "Where groundwater is close to the surface, choose a product with a low leaching potential."
+    },
+    {
+     "id": "c07-s13-t4",
+     "src": "test",
+     "kind": "mc",
+     "q": "According to Table 7.2, a coarse, sandy soil has:",
+     "choices": [
+      "Low organic content and high permeability",
+      "High organic content and low permeability",
+      "High organic content and high permeability",
+      "Low organic content and low permeability"
+     ],
+     "answer": 0,
+     "ref": "p. 114, Table 7.2",
+     "why": "Coarse sand: low organic content, faster flow, little adsorption, high permeability."
+    },
+    {
+     "id": "c07-s13-t5",
+     "src": "test",
+     "kind": "tf",
+     "q": "Leaching can occur only in sandy soils, never in clay or silt soils.",
+     "answer": false,
+     "ref": "p. 113, 'Texture and Structure'",
+     "why": "Sandy soils are more prone, but leaching may also occur in clay or silt soils."
+    },
+    {
+     "id": "c07-s13-t6",
+     "src": "test",
+     "kind": "mc",
+     "q": "Which geologic material can inhibit and slow the downward movement of water?",
+     "choices": [
+      "Layers of clay",
+      "Gravel deposits",
+      "Sand",
+      "Fractured bedrock"
+     ],
+     "answer": 0,
+     "ref": "p. 115, 'Geology'",
+     "why": "Layers of clay are much less permeable and can slow downward water movement."
+    }
+   ]
+  },
+  {
+   "id": "c07-s14",
+   "chapter": "Chapter 7 · Pesticides in the Environment",
+   "title": "Preventing water contamination: label statements, BMPs, IPM",
+   "pages": [
+    115,
+    115
+   ],
+   "body": [
+    {
+     "h": "Preventing surface water and groundwater contamination"
+    },
+    {
+     "p": [
+      "To help prevent surface water and groundwater contamination, **EPA requires all pesticide products labeled for outdoor uses** to include the following environmental hazard statement on the label."
+     ]
+    },
+    {
+     "box": "Required environmental hazard statement",
+     "p": [
+      "\"Do not apply directly to water, or to areas where surface water is present, or to intertidal areas below the mean high water mark. Do not contaminate water supplies when cleaning equipment or disposing of equipment wash waters.\""
+     ]
+    },
+    {
+     "p": [
+      "Pesticides that could contaminate groundwater must bear **groundwater warning statements** on their labels.",
+      "When such statements appear on product labels, choose pesticides appropriate for use in sandy soils, or where extra precautions are needed to reduce the risk of water contamination."
+     ]
+    },
+    {
+     "p": [
+      "You can minimize the risk of point-source or nonpoint-source contamination by following **best management practices**, or **BMPs**.",
+      "BMPs are effective, commonsense procedures that emphasize proper **mixing, loading, application, and disposal** of pesticides.",
+      "Following BMPs reduces the chance that pesticides will harm the environment."
+     ]
+    },
+    {
+     "h": "Use integrated pest management principles"
+    },
+    {
+     "p": [
+      "Apply pesticides **only when and where necessary**, and only in amounts adequate to control pests.",
+      "Use **nonchemical control methods** whenever possible.",
+      "When using pesticides:"
+     ]
+    },
+    {
+     "list": [
+      "Determine the type of pest, the density of the pest population, and the proper control method.",
+      "If a pesticide is necessary, choose the **least toxic product** that will do the job.",
+      "**Calibrate** pesticide application equipment regularly.",
+      "Use **spot treatments or band applications**, if possible, to reduce pesticide use."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c07-s14-r5",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which best management practice will help prevent contamination of surface water and groundwater by pesticides?",
+     "choices": [
+      "Using pesticides that are highly water-soluble.",
+      "Following IPM principles.",
+      "Selecting persistent pesticides."
+     ],
+     "answer": 1,
+     "ref": "p. 121, Review question 5; answer from p. 115, 'Use Integrated Pest Management Principles'",
+     "why": "Following IPM is listed as a way to prevent water contamination; soluble and persistent pesticides are more likely to leach."
+    },
+    {
+     "id": "c07-s14-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "Which pesticide products must carry the statement \"Do not apply directly to water, or to areas where surface water is present...\"?",
+     "choices": [
+      "All pesticide products labeled for outdoor uses",
+      "Only restricted-use products",
+      "Only herbicides",
+      "Only products used near wells"
+     ],
+     "answer": 0,
+     "ref": "p. 115, 'Preventing Surface Water and Groundwater Contamination'",
+     "why": "EPA requires it on all pesticide products labeled for outdoor uses."
+    },
+    {
+     "id": "c07-s14-t2",
+     "src": "test",
+     "kind": "short",
+     "q": "What does BMPs stand for?",
+     "answer": "best management practices",
+     "accept": [
+      "best management practice"
+     ],
+     "keys": [
+      [
+       "best"
+      ],
+      [
+       "management"
+      ],
+      [
+       "practice",
+       "practices"
+      ]
+     ],
+     "ref": "p. 115, 'Preventing Surface Water and Groundwater Contamination'",
+     "why": "BMPs are best management practices."
+    },
+    {
+     "id": "c07-s14-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT an IPM step the manual lists for using pesticides?",
+     "choices": [
+      "Choose the most toxic product to be sure the pest dies",
+      "Determine the type of pest, its density, and the proper control method",
+      "Calibrate application equipment regularly",
+      "Use spot treatments or band applications, if possible"
+     ],
+     "answer": 0,
+     "ref": "p. 115, 'Use Integrated Pest Management Principles'",
+     "why": "If a pesticide is necessary, choose the least toxic product that will do the job."
+    },
+    {
+     "id": "c07-s14-t4",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "Weeds are only in a few patches along a fence line. Which approach fits the manual's IPM guidance?",
+     "choices": [
+      "Spot treat the patches",
+      "Broadcast the whole field to be safe",
+      "Double the label rate on the patches",
+      "Apply to the whole field twice"
+     ],
+     "answer": 0,
+     "ref": "p. 115, 'Use Integrated Pest Management Principles'",
+     "why": "Use spot treatments or band applications, if possible, to reduce pesticide use."
+    },
+    {
+     "id": "c07-s14-t5",
+     "src": "test",
+     "kind": "tf",
+     "q": "BMPs are commonsense procedures that emphasize proper mixing, loading, application, and disposal of pesticides.",
+     "answer": true,
+     "ref": "p. 115, 'Preventing Surface Water and Groundwater Contamination'",
+     "why": "That is the manual's description of BMPs."
+    }
+   ]
+  },
+  {
+   "id": "c07-s15",
+   "chapter": "Chapter 7 · Pesticides in the Environment",
+   "title": "Vulnerable areas, mixing sites, and wells",
+   "pages": [
+    115,
+    116
+   ],
+   "body": [
+    {
+     "h": "Identify vulnerable areas"
+    },
+    {
+     "p": [
+      "The presence of **sandy soil, sinkholes, wells, streams, ponds, and shallow groundwater** increases the chance of groundwater contamination.",
+      "**Never** dispose of empty pesticide containers in sinkholes, or dump or rinse sprayers into or near sinkholes. See Chapter 10, Planning the Pesticide Application.",
+      "Also take care to avoid contaminating drainage ditches and other potential sources of runoff to streams and waterways.",
+      "**Never** clean tanks or intentionally discharge water from a tank of any vehicle into a **street**, along a **road**, or into a **storm drain**."
+     ]
+    },
+    {
+     "h": "Do not mix and load near water"
+    },
+    {
+     "p": [
+      "Mix and load as far as possible, **at least 50 feet**, from wells, lakes, streams, rivers, and storm drains.",
+      "When possible, do so **at the application site**.",
+      "Consider using a **sealed permanent or portable mixing and loading pad** to prevent seepage into soil."
+     ]
+    },
+    {
+     "h": "Keep pesticides away from wells"
+    },
+    {
+     "p": [
+      "**Do not store or mix pesticides around wells.**",
+      "Poorly constructed, or improperly capped or abandoned wells, may allow surface water containing pesticides and other contaminants **direct entry into groundwater**.",
+      "Note that wells are sometimes located in or near treated fields and other application sites."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c07-s15-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "How far, at least, should you mix and load from wells, lakes, streams, rivers, and storm drains?",
+     "choices": [
+      "50 feet",
+      "10 feet",
+      "25 feet",
+      "100 feet"
+     ],
+     "answer": 0,
+     "ref": "p. 115, 'Do Not Mix and Load Near Water'",
+     "why": "Mix and load as far as possible, at least 50 feet, from those sites."
+    },
+    {
+     "id": "c07-s15-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A crew finishes a job and wants to drain leftover water from the spray tank. The nearest spot is a storm drain at the curb. What does the manual say?",
+     "choices": [
+      "Never discharge tank water into a storm drain, street, or along a road",
+      "It is fine if the water looks clear",
+      "It is fine if the tank was triple-rinsed",
+      "Only do it at night"
+     ],
+     "answer": 0,
+     "ref": "p. 115, 'Identify Vulnerable Areas'",
+     "why": "Never clean tanks or intentionally discharge tank water into a street, along a road, or into a storm drain."
+    },
+    {
+     "id": "c07-s15-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these does NOT increase the chance of groundwater contamination, according to the manual?",
+     "choices": [
+      "Thick layers of clay",
+      "Sandy soil",
+      "Sinkholes",
+      "Shallow groundwater"
+     ],
+     "answer": 0,
+     "ref": "p. 115, 'Identify Vulnerable Areas' and 'Geology'",
+     "why": "Sandy soil, sinkholes, wells, streams, ponds, and shallow groundwater raise the risk; clay slows downward water movement."
+    },
+    {
+     "id": "c07-s15-t4",
+     "src": "test",
+     "kind": "tf",
+     "q": "An improperly capped or abandoned well can let surface water carrying pesticides go directly into groundwater.",
+     "answer": true,
+     "ref": "pp. 115 to 116, 'Keep Pesticides Away from Wells'",
+     "why": "Such wells may allow direct entry into groundwater."
+    },
+    {
+     "id": "c07-s15-t5",
+     "src": "test",
+     "kind": "short",
+     "q": "What can you use at a mixing site to prevent seepage into the soil?",
+     "answer": "a sealed mixing and loading pad",
+     "accept": [
+      "mixing pad",
+      "loading pad",
+      "sealed pad",
+      "mixing and loading pad"
+     ],
+     "keys": [
+      [
+       "pad"
+      ]
+     ],
+     "ref": "p. 115, 'Do Not Mix and Load Near Water'",
+     "why": "Consider a sealed permanent or portable mixing and loading pad."
+    }
+   ]
+  },
+  {
+   "id": "c07-s16",
+   "chapter": "Chapter 7 · Pesticides in the Environment",
+   "title": "Back-siphoning and land use",
+   "pages": [
+    116,
+    116
+   ],
+   "body": [
+    {
+     "h": "Avoid back-siphoning"
+    },
+    {
+     "p": [
+      "**Back-siphoning** is the reverse flow of liquids into a fill hose.",
+      "It sucks tank contents, including pesticides, back into the water supply.",
+      "Back-siphoning starts with a **reduction in water pressure** and can draw very large quantities of pesticide directly into the water source.",
+      "This happens when the end of the water hose is allowed to extend **below the surface of the spray mixture** when filling a spray tank.",
+      "The simplest way to prevent backflow is to maintain an **air gap** between the discharge end of the water supply line and the pesticide solution in the spray tank.",
+      "An air gap prevents contamination of the hose and keeps pesticides from back-siphoning into the water source if a drop or loss of water pressure occurs.",
+      "Keep the air gap at least **twice the diameter of the discharge pipe**.",
+      "Another method to prevent back-siphoning is to use a **backflow prevention device or check valve**. See Chapter 10."
+     ]
+    },
+    {
+     "gallery": [
+      "p116-airgap",
+      "p116-checkvalve"
+     ]
+    },
+    {
+     "h": "Improve land use and application methods"
+    },
+    {
+     "p": [
+      "**Terraces** and **conservation tillage** practices can reduce water runoff and soil erosion.",
+      "Ideally, growers should leave as much **plant residue** as possible on the soil surface to lessen erosion.",
+      "Where conservation tillage is not possible, decrease runoff potential by **incorporating a low concentration** of the pesticide into the soil.",
+      "In ornamental plantings, consider using **mulches** to reduce water runoff and soil erosion.",
+      "**Grass buffer strips** are very effective in reducing pesticide runoff because they trap sediment containing pesticides and slow runoff water. This allows more runoff water to infiltrate the soil.",
+      "Leaving untreated grass strips next to streams, ponds, and other sensitive areas can trap much of the pesticide running off of treated areas."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "p116-airgap",
+     "title": "Maintain an air gap between the discharge end of the water supply line and the spray tank to prevent backflow of pesticides.",
+     "page": "p. 116",
+     "imgFile": "p116-airgap.jpg"
+    },
+    {
+     "id": "p116-checkvalve",
+     "title": "Use an anti-backflow device (check valve) to prevent back-siphoning.",
+     "page": "p. 116",
+     "imgFile": "p116-checkvalve.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c07-s16-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "How large should the air gap be when filling a spray tank?",
+     "choices": [
+      "At least twice the diameter of the discharge pipe",
+      "At least 1 inch",
+      "At least the diameter of the tank opening",
+      "At least 6 inches"
+     ],
+     "answer": 0,
+     "ref": "p. 116, 'Avoid Back-siphoning'",
+     "why": "Keep the air gap at least twice the diameter of the discharge pipe."
+    },
+    {
+     "id": "c07-s16-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "While filling a tank, a worker drops the hose end into the spray mix to cut down on foam. City water pressure then drops. What can happen?",
+     "choices": [
+      "Back-siphoning can draw pesticide into the water supply",
+      "Nothing, because water only flows one way",
+      "The tank will overflow",
+      "The pesticide will photodegrade"
+     ],
+     "answer": 0,
+     "ref": "p. 116, 'Avoid Back-siphoning'",
+     "why": "A hose below the mix surface plus a pressure drop can suck pesticide back into the water source."
+    },
+    {
+     "id": "c07-s16-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these does NOT help reduce runoff or prevent back-siphoning, according to the manual?",
+     "choices": [
+      "Removing all plant residue from the soil surface",
+      "Grass buffer strips",
+      "A check valve",
+      "Mulches in ornamental plantings"
+     ],
+     "answer": 0,
+     "ref": "p. 116, 'Improve Land Use and Application Methods'",
+     "why": "Growers should leave as much plant residue as possible on the surface to lessen erosion."
+    },
+    {
+     "id": "c07-s16-t4",
+     "src": "test",
+     "kind": "tf",
+     "q": "Grass buffer strips reduce runoff because they trap sediment containing pesticides and slow runoff water.",
+     "answer": true,
+     "ref": "p. 116, 'Improve Land Use and Application Methods'",
+     "why": "They trap sediment, slow the water, and let more of it infiltrate."
+    },
+    {
+     "id": "c07-s16-t5",
+     "src": "test",
+     "kind": "short",
+     "q": "What is the reverse flow of liquids into a fill hose, which sucks tank contents back into the water supply, called?",
+     "answer": "back-siphoning",
+     "accept": [
+      "backsiphoning",
+      "back siphoning",
+      "backflow",
+      "back-siphonage",
+      "back siphon",
+      "backsiphon",
+      "back-siphon"
+     ],
+     "ref": "p. 116, 'Avoid Back-siphoning'",
+     "why": "That reverse flow is back-siphoning."
+    }
+   ]
+  },
+  {
+   "id": "c07-s17",
+   "chapter": "Chapter 7 · Pesticides in the Environment",
+   "title": "Weather timing, product choice, safe handling",
+   "pages": [
+    116,
+    116
+   ],
+   "body": [
+    {
+     "h": "Time pesticide applications according to the weather forecast"
+    },
+    {
+     "p": [
+      "Pesticides are most susceptible to runoff from heavy rains or irrigation during the **first several hours after application**.",
+      "Do not apply to **saturated or frozen ground**.",
+      "To avoid overspraying an area and causing drift, check the pesticide label for application precautions or restrictions during windy conditions.",
+      "**Wind speed, temperature, and humidity** all affect the off-target movement of pesticides."
+     ]
+    },
+    {
+     "h": "Select products wisely"
+    },
+    {
+     "p": [
+      "Whenever possible, use pesticides that are **less likely to leach**. Read labels for such warnings."
+     ]
+    },
+    {
+     "h": "Handle pesticides safely"
+    },
+    {
+     "p": [
+      "Follow these guidelines to prevent surface water or groundwater contamination."
+     ]
+    },
+    {
+     "list": [
+      "Immediately contain and control pesticide spills.",
+      "Check application equipment regularly for leaks or damage.",
+      "Mix and load pesticides away from water sources.",
+      "After the pesticide application is complete, follow label directions for proper equipment cleanup and container disposal.",
+      "After applying granular pesticides, **sweep or blow any granules** from sidewalks, driveways, or patios **onto the treatment area**."
+     ]
+    },
+    {
+     "p": [
+      "Whenever possible, **clean sprayers at the application site**, at a safe distance from wells, ponds, streams, and storm drains.",
+      "**Spray the rinsate on the treated area**, or on another site listed on the pesticide label, or **use it in the next tank mix**.",
+      "Be sure **not to exceed label rates**."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c07-s17-t1",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "After a granular lawn treatment, granules are scattered on the driveway. What should the applicator do?",
+     "choices": [
+      "Sweep or blow them onto the treatment area",
+      "Hose them into the street",
+      "Leave them; rain will wash them away",
+      "Sweep them into the storm drain"
+     ],
+     "answer": 0,
+     "ref": "p. 116, 'Handle Pesticides Safely'",
+     "why": "Sweep or blow granules from sidewalks, driveways, or patios onto the treatment area."
+    },
+    {
+     "id": "c07-s17-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT an acceptable use of sprayer rinsate, according to the manual?",
+     "choices": [
+      "Pour it down a storm drain",
+      "Spray it on the treated area",
+      "Spray it on another site listed on the label",
+      "Use it in the next tank mix"
+     ],
+     "answer": 0,
+     "ref": "p. 116, 'Handle Pesticides Safely'",
+     "why": "Spray rinsate on the treated area or a labeled site, or use it in the next tank mix, without exceeding label rates."
+    },
+    {
+     "id": "c07-s17-t3",
+     "src": "test",
+     "kind": "mc",
+     "q": "When are pesticides most susceptible to runoff from heavy rain or irrigation?",
+     "choices": [
+      "During the first several hours after application",
+      "Several weeks after application",
+      "Only before application",
+      "Only in winter"
+     ],
+     "answer": 0,
+     "ref": "p. 116, 'Time Pesticide Applications According to the Weather Forecast'",
+     "why": "They are most susceptible during the first several hours after application."
+    },
+    {
+     "id": "c07-s17-t4",
+     "src": "test",
+     "kind": "tf",
+     "q": "When you put rinsate into the next tank mix, you can go over the label rate, because rinsate is diluted.",
+     "answer": false,
+     "ref": "p. 116, 'Handle Pesticides Safely'",
+     "why": "Be sure not to exceed label rates."
+    },
+    {
+     "id": "c07-s17-t5",
+     "src": "test",
+     "kind": "mc",
+     "q": "Where does the manual say to clean sprayers whenever possible?",
+     "choices": [
+      "At the application site, at a safe distance from wells, ponds, streams, and storm drains",
+      "At a car wash",
+      "Next to the nearest stream for easy water access",
+      "In the shop sink"
+     ],
+     "answer": 0,
+     "ref": "p. 116, 'Handle Pesticides Safely'",
+     "why": "Clean sprayers at the application site, a safe distance from water and storm drains."
+    }
+   ]
+  },
+  {
+   "id": "c07-s18",
+   "chapter": "Chapter 7 · Pesticides in the Environment",
+   "title": "Sensitive areas",
+   "pages": [
+    117,
+    117
+   ],
+   "body": [
+    {
+     "h": "Preventing harmful effects on sensitive areas and nontarget organisms"
+    },
+    {
+     "p": [
+      "To avoid harming the environment, you must be aware of sensitive areas, nontarget plants and animals, especially **endangered species**, and damaging effects on habitat."
+     ]
+    },
+    {
+     "h": "Sensitive areas"
+    },
+    {
+     "p": [
+      "In addition to water sources, **sensitive areas** include sites where living things could easily be injured by a pesticide.",
+      "Outdoor sensitive areas include:"
+     ]
+    },
+    {
+     "list": [
+      "School grounds, playgrounds, and recreational areas.",
+      "Habitats of endangered species.",
+      "Apiaries, which are honey bee sites, wildlife refuges, and parks.",
+      "Areas where domestic animals and livestock are kept.",
+      "Ornamental plantings, public gardens, and sensitive food or feed crops."
+     ]
+    },
+    {
+     "p": [
+      "Indoor sensitive areas include places where:"
+     ]
+    },
+    {
+     "list": [
+      "People live, work, shop, or are cared for, such as hospitals and daycare centers.",
+      "Food or feed is processed, prepared, stored, or served.",
+      "Domestic or confined animals live, eat, or are otherwise cared for.",
+      "Ornamental or other sensitive plants are grown or maintained, such as in malls and buildings."
+     ]
+    },
+    {
+     "gallery": [
+      "p117-apiary",
+      "p117-wildlife",
+      "p117-playground"
+     ]
+    },
+    {
+     "p": [
+      "Sometimes pesticides must be **deliberately applied to a sensitive area** to control a regulated pest, such as mosquito abatement or gypsy moth forest treatments.",
+      "**Only well-trained applicators** should perform these applications.",
+      "At other times, the sensitive area may be part of a larger target site. Whenever possible, take special precautions to avoid treating the sensitive area.",
+      "Leaving an **untreated buffer zone** around a sensitive area is a practical way to avoid contaminating it.",
+      "In still other instances, the sensitive area may be near a site used for mixing and loading, storage, disposal, or equipment washing. Be very careful to avoid contaminating the sensitive area.",
+      "Check the label for statements that alert you to special restrictions around sensitive areas."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "p117-apiary",
+     "title": "Sensitive area: apiary.",
+     "page": "p. 117",
+     "imgFile": "p117-apiary.jpg"
+    },
+    {
+     "id": "p117-wildlife",
+     "title": "Sensitive area: wildlife habitat.",
+     "page": "p. 117",
+     "imgFile": "p117-wildlife.jpg"
+    },
+    {
+     "id": "p117-playground",
+     "title": "Sensitive area: playground.",
+     "page": "p. 117",
+     "imgFile": "p117-playground.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c07-s18-r7",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which statement about sensitive areas is true?",
+     "choices": [
+      "Do not spray a larger target site if it contains a sensitive area.",
+      "Pesticide labels may list special precautions around sensitive areas.",
+      "Endangered species' habitats are not considered sensitive areas."
+     ],
+     "answer": 1,
+     "ref": "p. 121, Review question 7; answer from p. 117, 'Sensitive Areas'",
+     "why": "Check the label for statements about special restrictions around sensitive areas."
+    },
+    {
+     "id": "c07-s18-t1",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT listed as an outdoor sensitive area?",
+     "choices": [
+      "A gravel parking lot",
+      "School grounds and playgrounds",
+      "Apiaries",
+      "Areas where livestock are kept"
+     ],
+     "answer": 0,
+     "ref": "p. 117, 'Sensitive Areas'",
+     "why": "The list includes schools, playgrounds, endangered species habitats, apiaries, refuges, parks, livestock areas, and ornamental or sensitive crops."
+    },
+    {
+     "id": "c07-s18-t2",
+     "src": "test",
+     "kind": "mc",
+     "q": "What is an apiary?",
+     "choices": [
+      "A honey bee site",
+      "A wildlife refuge",
+      "A bird nesting area",
+      "A fish hatchery"
+     ],
+     "answer": 0,
+     "ref": "p. 117, 'Sensitive Areas'",
+     "why": "The manual defines apiaries as honey bee sites."
+    },
+    {
+     "id": "c07-s18-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A park you are treating includes a small public garden in the middle. What practical step does the manual suggest?",
+     "choices": [
+      "Leave an untreated buffer zone around the garden",
+      "Treat the garden at double rate to protect it",
+      "Treat it the same as the rest of the park",
+      "Spray it only at noon"
+     ],
+     "answer": 0,
+     "ref": "p. 117, 'Sensitive Areas'",
+     "why": "An untreated buffer zone around a sensitive area is a practical way to avoid contaminating it."
+    },
+    {
+     "id": "c07-s18-t4",
+     "src": "test",
+     "kind": "tf",
+     "q": "Mosquito abatement and gypsy moth forest treatments are examples of deliberate applications to sensitive areas, which only well-trained applicators should perform.",
+     "answer": true,
+     "ref": "p. 117, 'Sensitive Areas'",
+     "why": "These control regulated pests, and only well-trained applicators should do them."
+    },
+    {
+     "id": "c07-s18-t5",
+     "src": "test",
+     "kind": "mc",
+     "q": "Which of these is an indoor sensitive area named in the manual?",
+     "choices": [
+      "A daycare center",
+      "A storage shed for lawn mowers",
+      "An empty warehouse",
+      "A parking garage"
+     ],
+     "answer": 0,
+     "ref": "p. 117, 'Sensitive Areas'",
+     "why": "Indoor sensitive areas include places where people are cared for, such as hospitals and daycare centers."
+    }
+   ]
+  },
+  {
+   "id": "c07-s19",
+   "chapter": "Chapter 7 · Pesticides in the Environment",
+   "title": "Nontarget organisms and nontarget plants",
+   "pages": [
+    117,
+    117
+   ],
+   "body": [
+    {
+     "h": "Pesticide effects on nontarget organisms"
+    },
+    {
+     "p": [
+      "Pesticides may affect nontarget organisms **directly**, causing immediate injury.",
+      "Or they may produce **long-term consequences** through environmental pollution.",
+      "Pesticides may build up in the bodies of animals or in the soil.",
+      "For example, if you use the **same mixing and loading site or equipment cleaning site over a long period**, pesticides are likely to accumulate in the soil.",
+      "When this occurs, plants and animals that come into contact with the soil may be harmed.",
+      "The following sections discuss the effects of pesticides on nontarget plants; bees and other beneficial insects; and fish, wildlife, and livestock."
+     ]
+    },
+    {
+     "h": "Nontarget plants"
+    },
+    {
+     "p": [
+      "Nearly all pesticides can cause plant injury, called **phytotoxicity**, due to chemical exposure.",
+      "This is particularly likely if applied at **too high a rate**, at the **wrong time**, or under **unfavorable environmental conditions**.",
+      "Phytotoxicity can occur on **any part** of a plant: roots, stems, leaves, flowers, or fruits.",
+      "**Most phytotoxic injury is due to herbicides.**",
+      "Although damage to crops or other nearby plants is **primarily caused by drift**, it may sometimes be a consequence of surface runoff and root uptake."
+     ]
+    },
+    {
+     "fig": "p117-plants"
+    }
+   ],
+   "figures": [
+    {
+     "id": "p117-plants",
+     "title": "Avoid pesticide effects on non-target plants.",
+     "page": "p. 117",
+     "imgFile": "p117-plants.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c07-s19-t1",
+     "src": "test",
+     "kind": "short",
+     "q": "What is the term for plant injury caused by chemical exposure?",
+     "answer": "phytotoxicity",
+     "accept": [
+      "phytotoxic injury",
+      "phytotoxic"
+     ],
+     "ref": "p. 117, 'Nontarget Plants'",
+     "why": "Plant injury from chemical exposure is phytotoxicity."
+    },
+    {
+     "id": "c07-s19-t2",
+     "src": "test",
+     "kind": "mc",
+     "q": "Which type of pesticide causes most phytotoxic injury?",
+     "choices": [
+      "Herbicides",
+      "Insecticides",
+      "Fungicides",
+      "Rodenticides"
+     ],
+     "answer": 0,
+     "ref": "p. 117, 'Nontarget Plants'",
+     "why": "Most phytotoxic injury is due to herbicides."
+    },
+    {
+     "id": "c07-s19-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A company has used the same corner of its yard to mix, load, and rinse equipment for ten years. Grass there has died, and a dog that digs there got sick. What does the manual say is the likely cause?",
+     "choices": [
+      "Pesticides accumulated in the soil from repeated use of the same site",
+      "Photodegradation of the pesticides",
+      "Vapor drift from distant fields",
+      "Normal soil microorganisms"
+     ],
+     "answer": 0,
+     "ref": "p. 117, 'Pesticide Effects on Nontarget Organisms'",
+     "why": "Using the same mixing, loading, or cleaning site for a long time lets pesticides accumulate in the soil."
+    },
+    {
+     "id": "c07-s19-t4",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT a condition the manual names as making phytotoxicity more likely?",
+     "choices": [
+      "Applying at the label rate under good conditions",
+      "Applying at too high a rate",
+      "Applying at the wrong time",
+      "Applying under unfavorable environmental conditions"
+     ],
+     "answer": 0,
+     "ref": "p. 117, 'Nontarget Plants'",
+     "why": "Phytotoxicity is more likely at too high a rate, the wrong time, or under unfavorable conditions."
+    },
+    {
+     "id": "c07-s19-t5",
+     "src": "test",
+     "kind": "tf",
+     "q": "Damage to crops or other nearby plants is primarily caused by drift.",
+     "answer": true,
+     "ref": "p. 117, 'Nontarget Plants'",
+     "why": "Drift is the primary cause, though runoff and root uptake can also cause it."
+    }
+   ]
+  },
+  {
+   "id": "c07-s20",
+   "chapter": "Chapter 7 · Pesticides in the Environment",
+   "title": "Bees and other beneficial insects",
+   "pages": [
+    118,
+    118
+   ],
+   "body": [
+    {
+     "h": "Bees and other beneficial insects"
+    },
+    {
+     "p": [
+      "Besides making honey and beeswax, bees **pollinate** many fruit, nut, seed, vegetable, and field crops.",
+      "You must be aware of bee activity when planning pesticide applications.",
+      "There has been increasing concern about the decline of bee colonies and the role pesticides may play.",
+      "Preventing bee loss is the **joint responsibility** of the **applicator, the grower, and the beekeeper**.",
+      "Bees may travel as far as **3 miles** from their hive to find blooming flowers.",
+      "Before applying pesticides labeled as toxic to bees, **notify beekeepers** in the area so they can protect or move their bee colonies.",
+      "Some states have laws requiring notification and registries for beekeepers."
+     ]
+    },
+    {
+     "fig": "p118-beeicon"
+    },
+    {
+     "p": [
+      "Bees and other insect pollinators may be exposed to pesticides through different routes, including:"
+     ]
+    },
+    {
+     "ol": [
+      "Direct contact during foliar applications.",
+      "Contact with residues on plant surfaces after applications.",
+      "Drift from the application into the hive entrance.",
+      "Ingestion of residues in nectar, pollen, or guttation water, which is dew, when the pesticide is applied as a seed treatment, soil or tree injection, or foliar application."
+     ]
+    },
+    {
+     "p": [
+      "**Insecticides** are generally toxic to bees, but some are more hazardous than others.",
+      "**Herbicides** are unlikely to harm bees directly.",
+      "**Fungicides** do not appear to affect adult bees but may affect **larval development**.",
+      "**Tank mixing insecticides and fungicides** may create a mixture that is **more toxic** to bees than either product used alone."
+     ]
+    },
+    {
+     "p": [
+      "Minimize bee kills from insecticide poisoning by following a few basic principles."
+     ]
+    },
+    {
+     "list": [
+      "Pay careful attention to pesticide labels. For each application site, look for the **bee hazard icon** in the **\"Directions for Use\"** section for specific use restrictions and instructions to protect bees and other pollinators.",
+      "**Do not apply insecticides to crops in bloom.**",
+      "Apply insecticides in the **evening or at night** when bees are not foraging.",
+      "Early morning application may protect honey bees, but **wild bees forage at or before dawn**.",
+      "Do not apply insecticides when **weeds or other plants around the treatment site are in bloom**.",
+      "Do not allow the pesticide to drift onto attractive habitat, natural areas, or beehives.",
+      "Choose the **least hazardous** insecticide, formulation, and application method."
+     ]
+    },
+    {
+     "fig": "p118-bee"
+    },
+    {
+     "p": [
+      "Pesticides can harm **other beneficial insects** in addition to bees.",
+      "These beneficials may be valuable allies in keeping pest populations below damaging levels.",
+      "A pesticide application often harms the beneficial insect population **as much as the target pest**.",
+      "So do not spray when beneficial insects are in the target area unless it is unavoidable.",
+      "Alternatively, choose a product that does not harm beneficials."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "p118-beeicon",
+     "title": "Bee hazard icon on labels indicate use restrictions.",
+     "page": "p. 118",
+     "imgFile": "p118-beeicon.jpg"
+    },
+    {
+     "id": "p118-bee",
+     "title": "Avoid spraying when bees are actively foraging.",
+     "page": "p. 118",
+     "imgFile": "p118-bee.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c07-s20-r8",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which statement about protecting bees from pesticide injury is true?",
+     "choices": [
+      "Use foliar applications when possible.",
+      "Spray crops when they are in bloom.",
+      "Apply insecticides in the evening or at night."
+     ],
+     "answer": 2,
+     "ref": "p. 121, Review question 8; answer from p. 118, bee protection principles",
+     "why": "Apply insecticides in the evening or at night when bees are not foraging."
+    },
+    {
+     "id": "c07-s20-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "How far may bees travel from their hive to find blooming flowers?",
+     "choices": [
+      "As far as 3 miles",
+      "As far as half a mile",
+      "As far as 1 mile",
+      "As far as 10 miles"
+     ],
+     "answer": 0,
+     "ref": "p. 118, 'Bees and Other Beneficial Insects'",
+     "why": "Bees may travel as far as 3 miles from their hive."
+    },
+    {
+     "id": "c07-s20-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Preventing bee loss is a joint responsibility. Which of these is NOT one of the three parties the manual names?",
+     "choices": [
+      "The pesticide manufacturer",
+      "The applicator",
+      "The grower",
+      "The beekeeper"
+     ],
+     "answer": 0,
+     "ref": "p. 118, 'Bees and Other Beneficial Insects'",
+     "why": "It is the joint responsibility of the applicator, the grower, and the beekeeper."
+    },
+    {
+     "id": "c07-s20-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A grower wants to tank mix an insecticide with a fungicide on an orchard near hives. What does the manual warn?",
+     "choices": [
+      "The mixture may be more toxic to bees than either product alone",
+      "Fungicides cancel out insecticide toxicity",
+      "The mix is safe because fungicides do not affect bees at all",
+      "Tank mixes are always less toxic"
+     ],
+     "answer": 0,
+     "ref": "p. 118, 'Bees and Other Beneficial Insects'",
+     "why": "Tank mixing insecticides and fungicides may create a mixture more toxic to bees than either alone."
+    },
+    {
+     "id": "c07-s20-t4",
+     "src": "test",
+     "kind": "mc",
+     "q": "Where on the label should you look for the bee hazard icon?",
+     "choices": [
+      "The \"Directions for Use\" section",
+      "The signal word",
+      "The first aid statement",
+      "The ingredient statement"
+     ],
+     "answer": 0,
+     "ref": "p. 118, bee protection principles",
+     "why": "Look for the bee hazard icon in the Directions for Use section for each application site."
+    },
+    {
+     "id": "c07-s20-t5",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "An applicator needs to spray an insecticide on a field near hives, and wild bees are known to be active nearby. Which timing best follows the manual?",
+     "choices": [
+      "Evening or at night, when bees are not foraging",
+      "Right at dawn",
+      "Midday, when bees are in the hive",
+      "Whenever the crop is in full bloom"
+     ],
+     "answer": 0,
+     "ref": "p. 118, bee protection principles",
+     "why": "Apply in the evening or at night; early morning may protect honey bees, but wild bees forage at or before dawn."
+    },
+    {
+     "id": "c07-s20-t6",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT one of the manual's principles for minimizing bee kills?",
+     "choices": [
+      "Spray crops while they are in bloom so bees carry the insecticide to pests",
+      "Do not apply insecticides to crops in bloom",
+      "Do not apply when weeds around the site are in bloom",
+      "Choose the least hazardous insecticide, formulation, and method"
+     ],
+     "answer": 0,
+     "ref": "p. 118, bee protection principles",
+     "why": "Do not apply insecticides to crops in bloom."
+    }
+   ]
+  },
+  {
+   "id": "c07-s21",
+   "chapter": "Chapter 7 · Pesticides in the Environment",
+   "title": "Fish, wildlife, and livestock",
+   "pages": [
+    118,
+    119
+   ],
+   "body": [
+    {
+     "h": "Fish, wildlife, and livestock"
+    },
+    {
+     "p": [
+      "Pesticides can harm all kinds of animals.",
+      "Most injuries occur from the direct effects of **acute poisoning**.",
+      "**Fish kills** often result from water pollution by a pesticide.",
+      "**Insecticides** are the most likely cause, especially when **small ponds or streams** are under conditions of **low water flow or volume**."
+     ]
+    },
+    {
+     "p": [
+      "**Bird kills** resulting from pesticide exposure may happen in a number of ways.",
+      "Birds may ingest pesticide granules, baits, or treated seeds; be exposed directly to sprays; consume treated crops or drink contaminated water; or feed on pesticide-contaminated insects and other prey.",
+      "**Granular or pelleted formulations** are a particular concern because birds and other animals often **mistake them for food**.",
+      "Liquid formulations may be safer when birds and other wildlife are in or near the treated area.",
+      "Remove pet dishes from spray areas.",
+      "Place baits properly so they are inaccessible to pets, birds, and other wildlife."
+     ]
+    },
+    {
+     "p": [
+      "Animals may also be harmed when they eat plants or animals carrying pesticide residues.",
+      "Predatory birds or mammals feeding on animals killed by pesticides are a special concern.",
+      "Pesticide residues remaining on or in the bodies of the dead animal may harm predators. This is called **secondary poisoning**.",
+      "Check the pesticide label for statements about secondary poisoning."
+     ]
+    },
+    {
+     "p": [
+      "The less obvious effects resulting from **long-term exposure** to pesticides are a major concern.",
+      "For example, certain pesticides have been banned because of fish and bird kills and the **reproductive failures** of several bird species.",
+      "The most important source of **livestock** pesticide poisoning has been through **contaminated feed, forage, and drinking water**.",
+      "Contamination often occurs as a result of improper or careless transportation, storage, handling, application, or disposal of pesticides."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c07-s21-t1",
+     "src": "test",
+     "kind": "short",
+     "q": "A hawk eats a mouse that was killed by a rodenticide, and the hawk is harmed. What is this called?",
+     "answer": "secondary poisoning",
+     "accept": [
+      "secondary"
+     ],
+     "keys": [
+      [
+       "secondary"
+      ]
+     ],
+     "ref": "p. 119, 'Fish, Wildlife, and Livestock'",
+     "why": "Harm to predators from residues in a dead animal is called secondary poisoning."
+    },
+    {
+     "id": "c07-s21-t2",
+     "src": "test",
+     "kind": "mc",
+     "q": "Which type of pesticide is the most likely cause of fish kills?",
+     "choices": [
+      "Insecticides",
+      "Herbicides",
+      "Fungicides",
+      "Disinfectants"
+     ],
+     "answer": 0,
+     "ref": "p. 118, 'Fish, Wildlife, and Livestock'",
+     "why": "Insecticides are the most likely cause, especially in small ponds or streams with low flow."
+    },
+    {
+     "id": "c07-s21-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "Wild turkeys are feeding in a field you need to treat. The product comes as granules and as a liquid. Which does the manual suggest may be safer?",
+     "choices": [
+      "The liquid formulation",
+      "The granular formulation",
+      "Either; they are equally safe",
+      "Granules spread more heavily"
+     ],
+     "answer": 0,
+     "ref": "p. 118, 'Fish, Wildlife, and Livestock'",
+     "why": "Birds often mistake granules for food; liquids may be safer when birds are in or near the area."
+    },
+    {
+     "id": "c07-s21-t4",
+     "src": "test",
+     "kind": "mc",
+     "q": "What has been the most important source of livestock pesticide poisoning?",
+     "choices": [
+      "Contaminated feed, forage, and drinking water",
+      "Vapor drift from neighboring fields",
+      "Direct spraying of animals",
+      "Secondary poisoning"
+     ],
+     "answer": 0,
+     "ref": "p. 119, 'Fish, Wildlife, and Livestock'",
+     "why": "The most important source has been contaminated feed, forage, and drinking water."
+    },
+    {
+     "id": "c07-s21-t5",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT a way the manual says birds can be exposed to pesticides?",
+     "choices": [
+      "Absorbing pesticides through their eggs from the air",
+      "Eating granules, baits, or treated seeds",
+      "Drinking contaminated water",
+      "Feeding on pesticide-contaminated insects and prey"
+     ],
+     "answer": 0,
+     "ref": "p. 118, 'Fish, Wildlife, and Livestock'",
+     "why": "The manual lists ingesting granules, baits, or seeds; direct spray; treated crops or water; and contaminated prey."
+    }
+   ]
+  },
+  {
+   "id": "c07-s22",
+   "chapter": "Chapter 7 · Pesticides in the Environment",
+   "title": "Protecting endangered species",
+   "pages": [
+    119,
+    119
+   ],
+   "body": [
+    {
+     "h": "Protecting endangered species"
+    },
+    {
+     "p": [
+      "Certain plants and animals have been identified as endangered or threatened species. Be very careful not to harm these populations.",
+      "Because all living things are part of a complex, delicately balanced network, removing a single species may set off a **chain reaction** that affects many other species.",
+      "The full significance of extinction is not always readily apparent, and the long-term effects are often difficult to predict.",
+      "An **endangered species** is one on the **brink of extinction** throughout all or a significant part of its range.",
+      "A **threatened species** is one **likely to become endangered**.",
+      "The reasons for a species' decline are usually complex, and thus recovery is difficult.",
+      "A major problem for most wildlife is the **destruction of habitat**, usually the result of industrial, agricultural, residential, or recreational development."
+     ]
+    },
+    {
+     "p": [
+      "**Each state** is responsible for implementing the federal **Endangered Species Protection Program** in cooperation with **EPA**, to protect endangered and threatened species from the harmful effects of pesticides.",
+      "Under this program, pesticide products that might harm an endangered species carry a label statement instructing applicators to consult a **county bulletin** to determine if they must take any special precautionary measures when using the product.",
+      "**EPA develops these bulletins**, which identify precautionary measures required in each county where one or more pesticides could affect an endangered or threatened species.",
+      "Precautionary measures may include **buffer strips, reduced application rates, and timing restrictions**.",
+      "Or an applicator might be **prohibited** from using the pesticide within the identified habitat altogether.",
+      "Check with your state, tribe, or territory department of agriculture; local Extension Service; or the EPA website, www.epa.gov, to find out the status of available county bulletins."
+     ]
+    },
+    {
+     "gallery": [
+      "p119-falcon",
+      "p119-bulletin"
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "p119-falcon",
+     "title": "Pesticides can be harmful to all kinds of animals.",
+     "page": "p. 119",
+     "imgFile": "p119-falcon.jpg"
+    },
+    {
+     "id": "p119-bulletin",
+     "title": "Consulting a county bulletin is necessary for pesticides that might adversely affect endangered species.",
+     "page": "p. 119",
+     "imgFile": "p119-bulletin.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c07-s22-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "What is the difference between an endangered species and a threatened species?",
+     "choices": [
+      "Endangered is on the brink of extinction; threatened is likely to become endangered",
+      "Threatened is on the brink of extinction; endangered is likely to become threatened",
+      "They mean the same thing",
+      "Endangered applies only to animals; threatened applies only to plants"
+     ],
+     "answer": 0,
+     "ref": "p. 119, 'Protecting Endangered Species'",
+     "why": "Endangered is on the brink of extinction; threatened is likely to become endangered."
+    },
+    {
+     "id": "c07-s22-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A label tells you to consult a county bulletin before use. What is that bulletin for?",
+     "choices": [
+      "To see if you must take special precautions to protect endangered or threatened species",
+      "To find the local price of the product",
+      "To get the droplet size category",
+      "To find the nearest disposal site"
+     ],
+     "answer": 0,
+     "ref": "p. 119, 'Protecting Endangered Species'",
+     "why": "County bulletins identify precautionary measures needed where pesticides could affect endangered or threatened species."
+    },
+    {
+     "id": "c07-s22-t3",
+     "src": "test",
+     "kind": "mc",
+     "q": "Who develops the county bulletins for endangered species protection?",
+     "choices": [
+      "EPA",
+      "The pesticide manufacturer",
+      "The county commissioners",
+      "The applicator"
+     ],
+     "answer": 0,
+     "ref": "p. 119, 'Protecting Endangered Species'",
+     "why": "EPA develops these bulletins."
+    },
+    {
+     "id": "c07-s22-t4",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT a precautionary measure a county bulletin may require?",
+     "choices": [
+      "Doubling the application rate",
+      "Buffer strips",
+      "Timing restrictions",
+      "Not using the pesticide within the habitat at all"
+     ],
+     "answer": 0,
+     "ref": "p. 119, 'Protecting Endangered Species'",
+     "why": "Measures include buffer strips, reduced rates, timing restrictions, or prohibition in the habitat."
+    },
+    {
+     "id": "c07-s22-t5",
+     "src": "test",
+     "kind": "tf",
+     "q": "According to the manual, a major problem for most wildlife is the destruction of habitat.",
+     "answer": true,
+     "ref": "p. 119, 'Protecting Endangered Species'",
+     "why": "Habitat destruction, usually from development, is a major problem for most wildlife."
+    }
+   ]
+  },
+  {
+   "id": "c07-s23",
+   "chapter": "Chapter 7 · Pesticides in the Environment",
+   "title": "Chapter 7 summary",
+   "pages": [
+    120,
+    120
+   ],
+   "body": [
+    {
+     "h": "Summary"
+    },
+    {
+     "p": [
+      "An important part of using pesticides legally and responsibly is considering where the pesticide may end up once it leaves the container, and whether it might harm or damage nontarget sites, plants, or animals.",
+      "By applying pesticides **at the right time, in the right place, and with the proper application technique**, you can greatly reduce, or even prevent, drift, runoff, and leaching.",
+      "Pesticides that enter groundwater and surface water are hazardous to aquatic organisms, plants, and wildlife.",
+      "Therefore, you should implement **best management practices** to prevent runoff and leaching of pesticides.",
+      "**Sensitive areas** include places such as schools, playgrounds, endangered species' habitats, and ornamental plantings.",
+      "**Nontarget organisms** include plants, bees and other beneficial insects, fish, wildlife, and livestock.",
+      "Because of the greater risk of injury to people, plants, and animals, you must know when and how to properly apply pesticides in or near such areas.",
+      "Always check the label for statements on endangered and threatened species. You may need to consult a **county bulletin** that details the procedures for protecting them.",
+      "It is your responsibility not only to follow label directions, but also to use the best management practices that present the **least risk to the environment** while achieving effective pest control."
+     ]
+    },
+    {
+     "fig": "p120-manatee"
+    }
+   ],
+   "figures": [
+    {
+     "id": "p120-manatee",
+     "title": "Endangered species need to be protected from pesticides.",
+     "page": "p. 120",
+     "imgFile": "p120-manatee.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c07-s23-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "According to the summary, which three things let you greatly reduce, or even prevent, drift, runoff, and leaching?",
+     "choices": [
+      "Right time, right place, and proper application technique",
+      "Highest rate, finest droplets, and midday spraying",
+      "Granular formulations, high pressure, and tall booms",
+      "Any product, any time, with a buffer"
+     ],
+     "answer": 0,
+     "ref": "p. 120, 'Summary'",
+     "why": "Applying at the right time, in the right place, and with the proper technique."
+    },
+    {
+     "id": "c07-s23-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT listed as a nontarget organism in the summary?",
+     "choices": [
+      "The target pest",
+      "Bees and other beneficial insects",
+      "Fish and wildlife",
+      "Livestock"
+     ],
+     "answer": 0,
+     "ref": "p. 120, 'Summary'",
+     "why": "Nontarget organisms include plants, bees and other beneficials, fish, wildlife, and livestock."
+    },
+    {
+     "id": "c07-s23-t3",
+     "src": "test",
+     "kind": "tf",
+     "q": "Following label directions is your only responsibility; best management practices are optional.",
+     "answer": false,
+     "ref": "p. 120, 'Summary'",
+     "why": "It is your responsibility both to follow label directions and to use the best management practices with the least environmental risk."
+    },
+    {
+     "id": "c07-s23-t4",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "You pick up a new insecticide for a job near a river in a county you have not worked in before. Which label item from this chapter points you to extra local restrictions to protect rare wildlife?",
+     "choices": [
+      "A statement telling you to consult a county bulletin for endangered species",
+      "The droplet size color code",
+      "The half-life value",
+      "The signal word"
+     ],
+     "answer": 0,
+     "ref": "p. 120, 'Summary'; p. 119, 'Protecting Endangered Species'",
+     "why": "Check the label for endangered species statements; you may need to consult a county bulletin."
+    }
+   ]
+  }
+ ]
+}

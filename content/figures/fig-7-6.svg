@@ -1,0 +1,26 @@
+<svg viewBox="0 0 660 300" role="img" aria-label="Figure 7.6: Where groundwater occurs. Under the surface is an unsaturated zone, then the water table, then the saturated zone or aquifer in gravel, above fractured bedrock. A well reaches down into the aquifer, and groundwater connects to surface water">
+<defs><marker id="a76" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="f-ink" d="M0 0 L10 5 L0 10 Z"/></marker></defs>
+<g font-family="var(--f-body)" font-size="15" font-weight="700">
+<path class="f-muted" d="M70 50 L95 30 L120 50 V70 H70 Z"/>
+<g class="f-field"><path d="M200 70 l14 -40 l14 40 Z M250 70 l14 -44 l14 44 Z M330 70 l14 -40 l14 40 Z M400 70 l14 -36 l14 36 Z"/></g>
+<path class="f-field" fill-opacity=".15" d="M10 70 H500 L560 100 H650 V290 H10 Z"/>
+<path class="s-ink" stroke-width="2" fill="none" d="M10 70 H500 L560 100 H650"/>
+<path class="f-field" fill-opacity=".7" d="M560 100 H650 V112 H580 Z"/>
+<text class="f-ink" x="648" y="92" text-anchor="end">Surface water</text>
+<text class="f-ink" x="160" y="98">Unsaturated zone</text>
+<path class="s-ink" stroke-width="2" stroke-dasharray="7 4" d="M10 112 H650"/>
+<text class="f-ink" x="420" y="108" font-size="13">Water table</text>
+<rect class="f-field" fill-opacity=".35" x="10" y="112" width="640" height="50"/>
+<g class="f-muted" fill-opacity=".7"><circle cx="40" cy="130" r="5"/><circle cx="80" cy="150" r="4"/><circle cx="560" cy="130" r="5"/><circle cx="610" cy="148" r="4"/><circle cx="450" cy="150" r="4"/></g>
+<text class="f-ink" x="190" y="143">Saturated zone (aquifer)</text>
+<text class="f-ink" x="300" y="180" font-size="13">Gravel</text>
+<rect class="f-muted" fill-opacity=".35" x="10" y="162" width="640" height="128"/>
+<g class="s-ink" stroke-width="1" fill="none"><path d="M40 162 L90 290 M120 162 L170 290 M200 162 L250 290 M280 162 L330 290 M360 162 L410 290 M440 162 L490 290 M520 162 L570 290 M600 162 L650 270 M10 210 H650 M10 250 H650"/></g>
+<text class="f-ink" x="100" y="200">Fractured bedrock</text>
+<path class="s-ink" stroke-width="2" marker-start="url(#a76)" marker-end="url(#a76)" d="M200 270 H460"/>
+<rect class="f-card" x="275" y="258" width="110" height="24" rx="4" style="stroke:none"/>
+<text class="f-ink" x="330" y="276" text-anchor="middle">Groundwater</text>
+<path class="s-ink" stroke-width="4" d="M40 40 V170"/>
+<text class="f-ink" x="26" y="32">Well</text>
+</g>
+</svg>

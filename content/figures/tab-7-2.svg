@@ -1,0 +1,20 @@
+<svg viewBox="0 0 640 330" role="img" aria-label="Table 7.2 Soil Properties: coarse sand has low organic content and high permeability (fast flow); smooth clay and silt have high organic content and low permeability (slow flow)">
+<g font-family="var(--f-body)" class="f-ink">
+<rect class="f-field" x="10" y="10" width="620" height="40" rx="4"/>
+<text class="f-on" x="320" y="37" text-anchor="middle" font-family="var(--f-display)" font-weight="700" font-size="19">Table 7.2 Soil Properties</text>
+<rect class="f-line" x="10" y="50" width="620" height="90"/>
+<g font-weight="700" font-size="16"><text x="100" y="76" text-anchor="middle">TEXTURE</text><text x="320" y="76" text-anchor="middle">ORGANIC CONTENT</text><text x="535" y="76" text-anchor="middle">PERMEABILITY</text></g>
+<g font-size="13"><text x="100" y="98" text-anchor="middle">(affects movement</text><text x="100" y="116" text-anchor="middle">of water particles)</text>
+<text x="320" y="98" text-anchor="middle">(measures volume of water</text><text x="320" y="116" text-anchor="middle">and soil's ability</text><text x="320" y="134" text-anchor="middle">to adsorb pesticides)</text>
+<text x="535" y="98" text-anchor="middle">(measures speed of</text><text x="535" y="116" text-anchor="middle">water's downward</text><text x="535" y="134" text-anchor="middle">movement)</text></g>
+<g font-size="14"><text x="100" y="196" text-anchor="middle">coarse</text><text x="100" y="216" text-anchor="middle">(sand)</text>
+<text x="200" y="180" font-weight="700">low organic content =</text><text x="200" y="200">faster water flow and</text><text x="200" y="220">little adsorption of pesticides</text>
+<path class="f-card" d="M452 170 h16 v30 h10 l-18 26 l-18 -26 h10 Z" style="stroke-width:1.5"/>
+<text x="490" y="190" font-weight="700">high permeability</text><text x="490" y="210">(fast flow)</text>
+<text x="100" y="286" text-anchor="middle">smooth</text><text x="100" y="306" text-anchor="middle">(clay, silt)</text>
+<text x="200" y="270" font-weight="700">high organic content =</text><text x="200" y="290">higher water retention and</text><text x="200" y="310">greater adsorption of pesticides</text>
+<path class="f-ink" d="M452 262 h16 v30 h10 l-18 26 l-18 -26 h10 Z"/>
+<text x="490" y="280" font-weight="700">low permeability</text><text x="490" y="300">(slow flow)</text></g>
+<path class="s-ink" stroke-width="1.5" fill="none" d="M10 50 H630 V325 H10 Z M190 50 V325 M440 50 V325 M10 140 H630 M10 235 H630"/>
+</g>
+</svg>

@@ -12,10 +12,10 @@
 <text class="f-ink" x="420" y="108" font-size="13">Water table</text>
 <rect class="f-field" fill-opacity=".35" x="10" y="112" width="640" height="50"/>
 <g class="f-muted" fill-opacity=".7"><circle cx="40" cy="130" r="5"/><circle cx="80" cy="150" r="4"/><circle cx="560" cy="130" r="5"/><circle cx="610" cy="148" r="4"/><circle cx="450" cy="150" r="4"/></g>
-<text class="f-ink" x="190" y="143">Saturated zone (aquifer)</text>
-<text class="f-ink" x="300" y="180" font-size="13">Gravel</text>
+<text class="f-ink" x="150" y="143">Saturated zone (aquifer), in gravel</text>
 <rect class="f-muted" fill-opacity=".35" x="10" y="162" width="640" height="128"/>
 <g class="s-ink" stroke-width="1" fill="none"><path d="M40 162 L90 290 M120 162 L170 290 M200 162 L250 290 M280 162 L330 290 M360 162 L410 290 M440 162 L490 290 M520 162 L570 290 M600 162 L650 270 M10 210 H650 M10 250 H650"/></g>
+<rect class="f-card" x="92" y="182" width="162" height="24" rx="4" style="stroke:none"/>
 <text class="f-ink" x="100" y="200">Fractured bedrock</text>
 <path class="s-ink" stroke-width="2" marker-start="url(#a76)" marker-end="url(#a76)" d="M200 270 H460"/>
 <rect class="f-card" x="275" y="258" width="110" height="24" rx="4" style="stroke:none"/>

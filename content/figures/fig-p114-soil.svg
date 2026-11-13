@@ -6,6 +6,7 @@
 <g class="f-field"><circle cx="118" cy="150" r="5"/><circle cx="178" cy="150" r="5"/><circle cx="140" cy="190" r="4"/></g>
 <rect class="f-card" x="380" y="100" width="180" height="100"/>
 <g class="f-muted"><rect x="388" y="108" width="40" height="10"/><rect x="434" y="110" width="44" height="10"/><rect x="484" y="108" width="68" height="10"/><rect x="390" y="124" width="60" height="10"/><rect x="456" y="124" width="50" height="10"/><rect x="512" y="126" width="40" height="10"/><rect x="388" y="140" width="34" height="10"/><rect x="428" y="142" width="64" height="10"/><rect x="498" y="140" width="54" height="10"/><rect x="392" y="158" width="56" height="10"/><rect x="454" y="158" width="44" height="10"/><rect x="504" y="160" width="48" height="10"/><rect x="388" y="176" width="44" height="10"/><rect x="438" y="176" width="60" height="10"/><rect x="504" y="178" width="48" height="10"/></g>
+<path class="s-ink" stroke-width="1.5" fill="none" d="M246 135 L185 148 M246 166 L198 172"/>
 <text class="f-ink" x="250" y="140">pesticide</text>
 <text class="f-ink" x="250" y="170">soil particle</text>
 <text class="f-ink" x="150" y="228" text-anchor="middle">sandy soil (large pores)</text>

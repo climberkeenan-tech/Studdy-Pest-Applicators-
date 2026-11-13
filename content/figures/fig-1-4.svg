@@ -25,6 +25,7 @@
 <g transform="rotate(-8 92 240)"><ellipse class="f-field s-field" fill-opacity=".35" stroke-width="1.5" cx="92" cy="240" rx="10" ry="6.5"/><circle class="f-field s-field" fill-opacity=".35" stroke-width="1.5" cx="103" cy="240" r="3.5"/></g>
 <g transform="rotate(9 123 236)"><ellipse class="f-ink" cx="123" cy="236" rx="10" ry="6.5"/><circle class="f-ink" cx="134" cy="236" r="3.5"/></g>
 <path class="s-ink" stroke-width="1.5" fill="none" d="M123 227 L108 132"/>
+<rect class="f-card" x="40" y="112" width="136" height="20" rx="4" style="stroke:none"/>
 <text class="f-ink" x="108" y="126" text-anchor="middle" font-family="var(--f-body)" font-size="13" font-weight="700">resistant individual</text>
 <g transform="rotate(-31 149 237)"><ellipse class="f-field s-field" fill-opacity=".35" stroke-width="1.5" cx="149" cy="237" rx="10" ry="6.5"/><circle class="f-field s-field" fill-opacity=".35" stroke-width="1.5" cx="160" cy="237" r="3.5"/></g>
 <g transform="rotate(-26 174 237)"><ellipse class="f-field s-field" fill-opacity=".35" stroke-width="1.5" cx="174" cy="237" rx="10" ry="6.5"/><circle class="f-field s-field" fill-opacity=".35" stroke-width="1.5" cx="185" cy="237" r="3.5"/></g>
@@ -89,6 +90,7 @@
 <g transform="rotate(29 571 233)"><ellipse class="f-ink" cx="571" cy="233" rx="10" ry="6.5"/><circle class="f-ink" cx="582" cy="233" r="3.5"/></g>
 <g transform="rotate(30 597 240)"><ellipse class="f-field s-field" fill-opacity=".35" stroke-width="1.5" cx="597" cy="240" rx="10" ry="6.5"/><circle class="f-field s-field" fill-opacity=".35" stroke-width="1.5" cx="608" cy="240" r="3.5"/></g>
 <path class="s-ink" stroke-width="1.5" fill="none" d="M597 231 L532 132"/>
+<rect class="f-card" x="457" y="112" width="150" height="20" rx="4" style="stroke:none"/>
 <text class="f-ink" x="532" y="126" text-anchor="middle" font-family="var(--f-body)" font-size="13" font-weight="700">susceptible individual</text>
 <g transform="rotate(-35 613 239)"><ellipse class="f-ink" cx="613" cy="239" rx="10" ry="6.5"/><circle class="f-ink" cx="624" cy="239" r="3.5"/></g>
 <g transform="rotate(-29 454 264)"><ellipse class="f-ink" cx="454" cy="264" rx="10" ry="6.5"/><circle class="f-ink" cx="465" cy="264" r="3.5"/></g>

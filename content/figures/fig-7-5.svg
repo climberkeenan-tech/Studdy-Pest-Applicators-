@@ -8,13 +8,14 @@
 <path class="f-field" fill-opacity=".7" d="M240 120 q40 10 90 0 Z"/>
 <text class="f-ink" x="270" y="104">stream</text>
 <g class="f-muted"><circle cx="40" cy="150" r="3"/><circle cx="90" cy="170" r="3"/><circle cx="150" cy="150" r="3"/><circle cx="200" cy="190" r="3"/><circle cx="60" cy="220" r="3"/><circle cx="250" cy="230" r="3"/><circle cx="300" cy="160" r="3"/></g>
-<text class="f-ink" x="110" y="160">pesticide</text>
-<text class="f-ink" x="270" y="160">soil</text>
+<text class="f-ink" x="160" y="155">pesticide</text>
+<text class="f-ink" x="16" y="140">soil</text>
 <path class="s-muted" stroke-width="1" d="M10 190 H650 M10 215 H650 M10 240 H650"/>
-<text class="f-ink" x="250" y="210">aquifer</text>
+<text class="f-ink" x="90" y="233">aquifer</text>
 <rect class="f-muted" x="410" y="96" width="44" height="24" rx="4" transform="rotate(-12 432 108)"/>
 <g class="f-field"><circle cx="450" cy="140" r="5"/><circle cx="462" cy="165" r="5"/><circle cx="446" cy="190" r="5"/><circle cx="470" cy="215" r="5"/><circle cx="456" cy="240" r="5"/></g>
 <text class="f-ink" x="350" y="160">pesticide</text>
+<path class="s-ink" stroke-width="1.5" d="M420 155 H452"/>
 <path class="s-ink" stroke-width="3" d="M500 70 V250"/>
 <text class="f-ink" x="490" y="62">well</text>
 <path class="f-field" fill-opacity=".8" d="M570 120 q20 18 40 0 Z"/>

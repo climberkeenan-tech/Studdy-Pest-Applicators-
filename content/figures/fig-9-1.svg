@@ -105,7 +105,7 @@
 <path class="s-ink" stroke-width="1" d="M130.0 165 v45"/>
 <path class="s-ink" stroke-width="1" d="M153.3 165 v45"/>
 <path class="s-ink" stroke-width="1" d="M176.7 165 v45"/>
-<text class="f-ink" x="130" y="200" font-size="11" font-weight="700" text-anchor="middle" font-family="var(--f-body)">BULK BINS</text>
+<text class="f-ink" x="130" y="159" font-size="11" font-weight="700" text-anchor="middle" font-family="var(--f-body)">BULK BINS</text>
 <rect class="f-line s-ink" fill-opacity=".35" stroke-width="1.5" x="55" y="335" width="140" height="55"/>
 <path class="s-ink" stroke-width="1" d="M75.0 335 v55"/>
 <path class="s-ink" stroke-width="1" d="M95.0 335 v55"/>

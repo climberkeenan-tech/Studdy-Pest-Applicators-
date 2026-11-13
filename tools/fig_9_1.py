@@ -41,7 +41,7 @@ label(470, 515, "vehicle access", fs=10, w=400, cls="f-muted")
 # west side
 A('<rect class="f-line" fill-opacity=".35" x="35" y="232" width="20" height="200"/>')
 circ(45, 258, "A")
-bins(60, 165, 140, 45, 6); label(130, 200, "BULK BINS")
+bins(60, 165, 140, 45, 6); label(130, 159, "BULK BINS")
 bins(55, 335, 140, 55, 7); circ(110, 362, "O"); label(115, 328, "BULK BINS")
 bins(200, 345, 24, 60, 4, vertical=True); label(212, 418, "BULK BINS", fs=8)
 A('<rect class="f-line s-ink" fill-opacity=".35" stroke-width="1.5" x="155" y="238" width="50" height="20"/>')

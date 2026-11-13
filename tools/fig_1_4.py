@@ -31,9 +31,11 @@ for n, p in enumerate(panels, 1):
             out.append(f'<g transform="rotate({ang:.0f} {bx:.0f} {by:.0f})"><ellipse {body} cx="{bx:.0f}" cy="{by:.0f}" rx="10" ry="6.5"/><circle {body} cx="{bx+11:.0f}" cy="{by:.0f}" r="3.5"/></g>')
             if n == 1 and res:
                 out.append(f'<path class="s-ink" stroke-width="1.5" fill="none" d="M{bx:.0f} {by-9:.0f} L{cx:.0f} 132"/>')
+                out.append(f'<rect class="f-card" x="{cx-68:.0f}" y="112" width="136" height="20" rx="4" style="stroke:none"/>')
                 out.append(f'<text class="f-ink" x="{cx:.0f}" y="126" text-anchor="middle" font-family="var(--f-body)" font-size="13" font-weight="700">resistant individual</text>')
             if n == 3 and not res:
                 out.append(f'<path class="s-ink" stroke-width="1.5" fill="none" d="M{bx:.0f} {by-9:.0f} L{cx:.0f} 132"/>')
+                out.append(f'<rect class="f-card" x="{cx-75:.0f}" y="112" width="150" height="20" rx="4" style="stroke:none"/>')
                 out.append(f'<text class="f-ink" x="{cx:.0f}" y="126" text-anchor="middle" font-family="var(--f-body)" font-size="13" font-weight="700">susceptible individual</text>')
             k += 1
 out.append('<g font-family="var(--f-body)" font-size="14">')

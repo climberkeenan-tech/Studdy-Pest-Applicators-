@@ -1,0 +1,24 @@
+<svg viewBox="0 0 640 400" role="img" aria-label="Figure 7.1: Breakdown of pesticides in the environment. Sunlight causes photodegradation, water causes chemical degradation above and in the soil, and soil microorganisms cause microbial degradation">
+<defs><marker id="a71" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="f-ink" d="M0 0 L10 5 L0 10 Z"/></marker></defs>
+<circle class="f-hi" cx="70" cy="62" r="34"/>
+<g class="s-ink" stroke-width="2"><path d="M70 14 V4 M70 110 V120 M22 62 H12 M118 62 H128 M36 28 L29 21 M104 28 L111 21 M36 96 L29 103 M104 96 L111 103"/></g>
+<text class="f-ink" x="140" y="44" font-family="var(--f-display)" font-weight="700" font-size="20">Photodegradation</text>
+<text class="f-muted" x="140" y="66" font-family="var(--f-body)" font-size="14">breakdown by sunlight</text>
+<path class="s-ink" stroke-width="2" stroke-dasharray="6 5" fill="none" marker-end="url(#a71)" d="M100 90 L200 205"/>
+<path class="f-muted" d="M380 52 q-40 0 -40 -24 q0 -24 40 -22 q14 -18 46 -10 q30 -10 50 10 q34 0 34 22 q0 24 -40 24 Z" fill-opacity=".55"/>
+<g class="s-field" stroke-width="2.5" stroke-dasharray="4 6"><path d="M372 66 V120 M404 66 V128 M436 66 V120 M468 66 V128"/></g>
+<text class="f-ink" x="500" y="84" font-family="var(--f-display)" font-weight="700" font-size="18">Chemical</text>
+<text class="f-ink" x="500" y="106" font-family="var(--f-display)" font-weight="700" font-size="18">degradation</text>
+<text class="f-muted" x="500" y="126" font-family="var(--f-body)" font-size="13">reaction with water</text>
+<g class="s-field" stroke-width="3" fill="none"><path d="M220 210 V140 M220 175 l-18 -14 M220 160 l18 -14 M220 190 l-16 -8"/><path d="M440 210 V140 M440 175 l-18 -14 M440 160 l18 -14 M440 190 l16 -8"/></g>
+<rect class="f-field" fill-opacity=".35" x="10" y="210" width="620" height="90"/>
+<rect class="f-field" fill-opacity=".6" x="10" y="300" width="620" height="90"/>
+<circle class="f-card" cx="140" cy="290" r="40"/>
+<g class="f-ink"><circle cx="128" cy="282" r="5"/><circle cx="146" cy="296" r="4"/><circle cx="152" cy="278" r="4"/><circle cx="130" cy="302" r="3"/></g>
+<text class="f-ink" x="196" y="296" font-family="var(--f-display)" font-weight="700" font-size="18">Microbial degradation</text>
+<text class="f-ink" x="196" y="316" font-family="var(--f-body)" font-size="13">soil microorganisms (fungi, bacteria)</text>
+<circle class="f-card" cx="590" cy="350" r="30"/>
+<circle class="f-field" cx="582" cy="340" r="7"/><circle class="f-field" cx="600" cy="360" r="7"/>
+<path class="s-ink" stroke-width="2" marker-end="url(#a71)" d="M586 346 L596 354"/>
+<text class="f-on" x="250" y="372" font-family="var(--f-display)" font-weight="700" font-size="18">Chemical degradation (in soil)</text>
+</svg>

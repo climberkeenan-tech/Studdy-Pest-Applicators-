@@ -1,0 +1,20 @@
+<svg viewBox="0 0 640 330" role="img" aria-label="Figure 7.3: Dispersion of smoke particles. Normal condition: cool air above warm air, smoke rises and disperses. Inversion condition: warm air above cool air, smoke concentrates in a flat layer near the ground">
+<g font-family="var(--f-body)">
+<rect class="f-card" x="8" y="8" width="300" height="260" rx="6"/>
+<rect class="f-card" x="332" y="8" width="300" height="260" rx="6"/>
+<rect class="f-field" x="9" y="220" width="298" height="47"/>
+<rect class="f-field" x="333" y="220" width="298" height="47"/>
+<path class="s-ink" stroke-width="3" d="M60 220 V190"/>
+<path class="f-muted" fill-opacity=".55" d="M56 192 C50 150 70 120 110 90 C140 66 170 40 230 22 L300 22 L300 40 C230 60 190 90 160 110 C110 140 80 170 66 192 Z"/>
+<text class="f-ink" x="232" y="76" font-weight="700" font-size="17">Cool air</text>
+<text class="f-ink" x="200" y="190" font-weight="700" font-size="17">Warm air</text>
+<path class="s-ink" stroke-width="3" d="M384 220 V190"/>
+<path class="f-muted" fill-opacity=".65" d="M380 192 C376 160 384 130 400 112 C430 100 520 104 630 110 L630 136 C540 132 450 130 420 138 C400 150 392 170 390 192 Z"/>
+<text class="f-ink" x="530" y="50" font-weight="700" font-size="17">Warm air</text>
+<text class="f-ink" x="530" y="190" font-weight="700" font-size="17">Cool air</text>
+<text class="f-ink" x="158" y="292" text-anchor="middle" font-weight="700" font-size="15">Normal Condition:</text>
+<text class="f-ink" x="158" y="312" text-anchor="middle" font-size="15">Smoke rises and disperses</text>
+<text class="f-ink" x="482" y="292" text-anchor="middle" font-weight="700" font-size="15">Inversion Condition:</text>
+<text class="f-ink" x="482" y="312" text-anchor="middle" font-size="15">Smoke concentrates</text>
+</g>
+</svg>

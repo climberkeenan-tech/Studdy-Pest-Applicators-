@@ -20,7 +20,12 @@ session's network could not open directly): 50 multiple-choice questions, 35 cor
   first in the card that holds the answer. The manual's key is in **Appendix A**, which the user has
   not sent. The answers were taken from the chapter text. When Appendix A arrives, check every
   review answer against it and report any disagreement.
-- Next: Chapter 2 pages. Ask for the manual's total page count (still unknown).
+- Chapter 7, Pesticides in the Environment (pp. 105–120): 23 cards (`c07-s01` to `c07-s23`), 121 test-style
+  questions. Figures 7.1 to 7.6, Tables 7.1 and 7.2, and the p. 114 soil drawing redrawn as SVG; 12 photo crops
+  (`tools/crop_photos_ch07.py`, saved grayscale because the photos had a purple cast). The summary page's number
+  was not visible in the photo; 120 is inferred. Table 7.1 prints "Extra Course"; the card says Extra Coarse and notes it.
+  Chapter 7 review questions NOT received yet (should follow the summary, about p. 121). Add them as `src: review`.
+- Chapters 2 to 6 not sent yet. Ask for the manual's total page count (still unknown).
 
 ## Rules for every session (the user's own rules)
 1. The user sends photos of manual pages. Work **only** from those pages.

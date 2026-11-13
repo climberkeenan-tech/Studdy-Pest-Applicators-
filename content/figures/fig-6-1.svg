@@ -1,0 +1,43 @@
+<svg viewBox="0 0 640 360" role="img" aria-label="Figure 6.1: bar chart of pesticide detected, with gloves and without gloves, for glyphosate, chlorpyrifos, and 2,4-D">
+  <g font-family="var(--f-display)" font-weight="800" font-size="17" text-anchor="middle">
+    <text class="f-ink" x="320" y="22">Added Protection from Exposure Provided by Wearing Gloves</text>
+  </g>
+  <g font-family="var(--f-body)" font-size="13">
+    <rect class="f-field" fill-opacity=".3" x="92" y="56" width="14" height="14"/>
+    <text class="f-ink" x="112" y="68">gloves</text>
+    <rect class="f-field" x="92" y="78" width="14" height="14"/>
+    <text class="f-ink" x="112" y="90">no gloves</text>
+  </g>
+  <g class="s-muted" stroke-width="1.5" fill="none">
+    <path d="M80 50 V270 H360"/>
+    <path d="M440 50 V270 H560"/>
+  </g>
+  <g class="s-muted" stroke-width="1" stroke-dasharray="3 4" fill="none" opacity=".6">
+    <path d="M80 226 H360 M80 182 H360 M80 138 H360 M80 94 H360 M80 50 H360"/>
+    <path d="M440 226 H560 M440 182 H560 M440 138 H560 M440 94 H560 M440 50 H560"/>
+  </g>
+  <g font-family="var(--f-body)" font-size="12" text-anchor="end" class="f-muted">
+    <text x="74" y="274">0</text><text x="74" y="230">10</text><text x="74" y="186">20</text><text x="74" y="142">30</text><text x="74" y="98">40</text><text x="74" y="54">50</text>
+    <text x="434" y="274">0</text><text x="434" y="230">50</text><text x="434" y="186">100</text><text x="434" y="142">150</text><text x="434" y="98">200</text><text x="434" y="54">250</text>
+  </g>
+  <g>
+    <rect class="f-field" fill-opacity=".3" x="110" y="265.6" width="36" height="4.4"/>
+    <rect class="f-field" x="146" y="226" width="36" height="44"/>
+    <rect class="f-field" fill-opacity=".3" x="230" y="155.6" width="36" height="114.4"/>
+    <rect class="f-field" x="266" y="98.4" width="36" height="171.6"/>
+    <rect class="f-field" fill-opacity=".3" x="462" y="228.6" width="36" height="41.4"/>
+    <rect class="f-field" x="498" y="63.2" width="36" height="206.8"/>
+  </g>
+  <g font-family="var(--f-body)" font-size="14" text-anchor="middle" class="f-ink">
+    <text x="146" y="292">glyphosate</text>
+    <text x="266" y="292">chlorpyrifos</text>
+    <text x="498" y="292">2,4-D</text>
+  </g>
+  <g font-family="var(--f-display)" font-weight="700" font-size="14" text-anchor="middle" class="f-ink">
+    <text x="320" y="322">Pesticide Type</text>
+    <text x="0" y="0" transform="translate(28 160) rotate(-90)">Amount of Pesticide Detected (ppb)</text>
+  </g>
+  <g font-family="var(--f-body)" font-size="12" text-anchor="middle" class="f-muted">
+    <text x="320" y="348">Left scale: 0 to 50 ppb. Right scale (2,4-D only): 0 to 250 ppb.</text>
+  </g>
+</svg>

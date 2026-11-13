@@ -1,0 +1,31 @@
+<svg viewBox="0 0 640 440" role="img" aria-label="Figure 2.1: Aggregate pesticide residue exposure risk under FQPA. Garden, food, water, pets, and home all pour into one risk cup.">
+  <defs>
+    <marker id="ah-2-1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path class="f-muted" d="M0 0 L10 5 L0 10 Z"/>
+    </marker>
+  </defs>
+  <text class="f-ink" x="320" y="34" text-anchor="middle" font-size="22" font-weight="700" font-family="var(--f-display)">Aggregate Pesticide Residue Exposure Risk under FQPA</text>
+  <g font-family="var(--f-display)" font-weight="700" font-size="20">
+    <rect class="f-card s-field" stroke-width="2" x="30" y="70" width="130" height="48" rx="8"/>
+    <text class="f-ink" x="95" y="101" text-anchor="middle">Garden</text>
+    <rect class="f-card s-field" stroke-width="2" x="195" y="58" width="110" height="48" rx="8"/>
+    <text class="f-ink" x="250" y="89" text-anchor="middle">Food</text>
+    <rect class="f-card s-field" stroke-width="2" x="335" y="58" width="110" height="48" rx="8"/>
+    <text class="f-ink" x="390" y="89" text-anchor="middle">Water</text>
+    <rect class="f-card s-field" stroke-width="2" x="480" y="70" width="130" height="48" rx="8"/>
+    <text class="f-ink" x="545" y="101" text-anchor="middle">Home</text>
+    <rect class="f-card s-field" stroke-width="2" x="30" y="190" width="130" height="48" rx="8"/>
+    <text class="f-ink" x="95" y="221" text-anchor="middle">Pets</text>
+  </g>
+  <g class="s-muted" stroke-width="2.5" fill="none" marker-end="url(#ah-2-1)">
+    <path d="M120 120 L225 240"/>
+    <path d="M250 108 L270 210"/>
+    <path d="M390 108 L370 210"/>
+    <path d="M520 120 L425 225"/>
+    <path d="M162 214 L228 262"/>
+  </g>
+  <path class="f-field" fill-opacity=".25" d="M190 230 H450 V360 Q450 410 400 410 H240 Q190 410 190 360 Z"/>
+  <path class="s-field" stroke-width="4" fill="none" d="M190 230 H450 V360 Q450 410 400 410 H240 Q190 410 190 360 Z"/>
+  <path class="s-field" stroke-width="12" fill="none" d="M450 262 Q520 262 520 312 Q520 360 450 360"/>
+  <text class="f-ink" x="320" y="330" text-anchor="middle" font-size="30" font-weight="700" font-family="var(--f-display)">Risk Cup</text>
+</svg>

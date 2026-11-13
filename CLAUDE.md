@@ -20,13 +20,19 @@ session's network could not open directly): 50 multiple-choice questions, 35 cor
   first in the card that holds the answer. The manual's key is in **Appendix A**, which the user has
   not sent. The answers were taken from the chapter text. When Appendix A arrives, check every
   review answer against it and report any disagreement.
+- Chapter 2, Federal Pesticide Laws and Regulations (pp. 19–28): 15 cards (`c02-s01` to `c02-s15`),
+  75 test-style questions, plus the 7 review questions from p. 29 (ids `c02-sNN-rK`). Review answers again
+  taken from the chapter text, pending Appendix A. Review Q1 sits in card 2, Q2 card 4, Q3 card 7,
+  Q4 and Q6 card 9, Q5 card 6, Q7 card 10. Figure 2.1 redrawn as `fig-2-1.svg`. Crops: `tools/crop_photos_ch02.py`.
+  Page 28 holds only the last 5 lines of the summary; the rest of that page is blank in the user's photo.
 - Chapter 3, Pesticide Labeling (pp. 31–45, review questions p. 47): 25 cards (`c03-s01` to `c03-s25`),
   9 review questions (`c03-sNN-rK`, K = manual question number) plus test questions. Cards 18–21 type out
   Figure 3.1 (sample label, p. 42) panel by panel. Built by `tools/gen_ch03.py` (edit there, rerun, then build).
   Photo crops: `tools/crop_photos_ch03.py`. Page 46 was not sent (likely blank before the review page).
   Review answers again taken from the chapter text; check against Appendix A when it arrives.
-- **Chapter 2 (Federal Pesticide Laws and Regulations, about pp. 19–30) is still missing.** Ask for it.
-- Ask for the manual's total page count (still unknown).
+- Next: Chapter 4 pages. Ask for the manual's total page count (still unknown).
+- Two sessions once worked in parallel on different branches. Before publishing, check the live artifact
+  (and `git branch -r`) for chapters this branch lacks, and merge them first.
 
 ## Rules for every session (the user's own rules)
 1. The user sends photos of manual pages. Work **only** from those pages.

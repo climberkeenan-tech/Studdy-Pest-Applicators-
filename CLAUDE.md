@@ -20,7 +20,13 @@ session's network could not open directly): 50 multiple-choice questions, 35 cor
   first in the card that holds the answer. The manual's key is in **Appendix A**, which the user has
   not sent. The answers were taken from the chapter text. When Appendix A arrives, check every
   review answer against it and report any disagreement.
-- Next: Chapter 2 pages. Ask for the manual's total page count (still unknown).
+- Chapter 3, Pesticide Labeling (pp. 31–45, review questions p. 47): 25 cards (`c03-s01` to `c03-s25`),
+  9 review questions (`c03-sNN-rK`, K = manual question number) plus test questions. Cards 18–21 type out
+  Figure 3.1 (sample label, p. 42) panel by panel. Built by `tools/gen_ch03.py` (edit there, rerun, then build).
+  Photo crops: `tools/crop_photos_ch03.py`. Page 46 was not sent (likely blank before the review page).
+  Review answers again taken from the chapter text; check against Appendix A when it arrives.
+- **Chapter 2 (Federal Pesticide Laws and Regulations, about pp. 19–30) is still missing.** Ask for it.
+- Ask for the manual's total page count (still unknown).
 
 ## Rules for every session (the user's own rules)
 1. The user sends photos of manual pages. Work **only** from those pages.

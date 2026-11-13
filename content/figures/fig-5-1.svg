@@ -1,0 +1,27 @@
+<svg viewBox="0 0 600 368" role="img" aria-label="Figure 5.1: skin absorption by body area: genital area 100%, ear canal 46.5%, forehead 36.3%, scalp 32.1%, abdomen 18.4%, foot 13.6%, palm 11.8%, forearm 8.6%">
+<text class="f-muted" x="10" y="26" font-size="15" font-family="var(--f-body)">Some areas of the skin absorb more pesticide than others (values from Figure 5.1)</text>
+<text class="f-ink" x="140" y="72" text-anchor="end" font-size="17" font-family="var(--f-display)" font-weight="700">genital area</text>
+<rect class="f-hi" fill-opacity="1" x="150" y="54" width="400.0" height="26" rx="4"/>
+<text class="f-ink" x="558.0" y="73" font-size="16" font-family="var(--f-mono)">100%</text>
+<text class="f-ink" x="140" y="110" text-anchor="end" font-size="17" font-family="var(--f-display)" font-weight="700">ear canal</text>
+<rect class="f-field" fill-opacity="0.55" x="150" y="92" width="186.0" height="26" rx="4"/>
+<text class="f-ink" x="344.0" y="111" font-size="16" font-family="var(--f-mono)">46.5%</text>
+<text class="f-ink" x="140" y="148" text-anchor="end" font-size="17" font-family="var(--f-display)" font-weight="700">forehead</text>
+<rect class="f-field" fill-opacity="0.55" x="150" y="130" width="145.2" height="26" rx="4"/>
+<text class="f-ink" x="303.2" y="149" font-size="16" font-family="var(--f-mono)">36.3%</text>
+<text class="f-ink" x="140" y="186" text-anchor="end" font-size="17" font-family="var(--f-display)" font-weight="700">scalp</text>
+<rect class="f-field" fill-opacity="0.55" x="150" y="168" width="128.4" height="26" rx="4"/>
+<text class="f-ink" x="286.4" y="187" font-size="16" font-family="var(--f-mono)">32.1%</text>
+<text class="f-ink" x="140" y="224" text-anchor="end" font-size="17" font-family="var(--f-display)" font-weight="700">abdomen</text>
+<rect class="f-field" fill-opacity="0.55" x="150" y="206" width="73.6" height="26" rx="4"/>
+<text class="f-ink" x="231.6" y="225" font-size="16" font-family="var(--f-mono)">18.4%</text>
+<text class="f-ink" x="140" y="262" text-anchor="end" font-size="17" font-family="var(--f-display)" font-weight="700">foot</text>
+<rect class="f-field" fill-opacity="0.55" x="150" y="244" width="54.4" height="26" rx="4"/>
+<text class="f-ink" x="212.4" y="263" font-size="16" font-family="var(--f-mono)">13.6%</text>
+<text class="f-ink" x="140" y="300" text-anchor="end" font-size="17" font-family="var(--f-display)" font-weight="700">palm</text>
+<rect class="f-field" fill-opacity="0.55" x="150" y="282" width="47.2" height="26" rx="4"/>
+<text class="f-ink" x="205.2" y="301" font-size="16" font-family="var(--f-mono)">11.8%</text>
+<text class="f-ink" x="140" y="338" text-anchor="end" font-size="17" font-family="var(--f-display)" font-weight="700">forearm</text>
+<rect class="f-field" fill-opacity="0.55" x="150" y="320" width="34.4" height="26" rx="4"/>
+<text class="f-ink" x="192.4" y="339" font-size="16" font-family="var(--f-mono)">8.6%</text>
+</svg>

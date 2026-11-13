@@ -1,0 +1,4025 @@
+{
+ "chapter": "Chapter 4 · Pesticide Formulations",
+ "pages": [
+  49,
+  67
+ ],
+ "sections": [
+  {
+   "id": "c04-s01",
+   "chapter": "Chapter 4 · Pesticide Formulations",
+   "title": "What a pesticide formulation is",
+   "pages": [
+    49,
+    49
+   ],
+   "body": [
+    {
+     "box": "Learning objectives",
+     "p": [
+      "After studying this chapter, you should be able to:"
+     ],
+     "list": [
+      "Describe what a pesticide formulation is.",
+      "Explain why pesticides are formulated for end use.",
+      "Distinguish between active and inert ingredients.",
+      "State the meaning of abbreviations used for common types of formulations, for example, WP.",
+      "List the factors to consider when choosing a formulation for a specific site or situation.",
+      "Discuss the properties of common formulations.",
+      "Evaluate the advantages and disadvantages of the formulations described in this chapter.",
+      "Explain the roles of adjuvants."
+     ]
+    },
+    {
+     "p": [
+      "A pesticide **formulation** is a combination of active and inert ingredients that forms an end-use pesticide product.",
+      "Pesticides are formulated to make them safer or easier to use.",
+      "This is because many pesticide **active ingredients**, in \"pure\" (**technical grade**) form, are not suitable for application.",
+      "In their concentrated form, some are extremely toxic, many do not mix well with water, some are unstable, and some are difficult (or unsafe) to handle, transport, or store.",
+      "To address these problems, manufacturers add **inert ingredients** to end-use pesticide products.",
+      "Inert ingredients have **no pesticidal activity**, and some simply serve as **diluents** or **carriers**.",
+      "In many cases, inert ingredients make the formulated product safer, easier to handle and apply, and/or more effective."
+     ]
+    },
+    {
+     "p": [
+      "So, in addition to the active ingredient intended to control the target pest, a formulated product may consist of:"
+     ]
+    },
+    {
+     "list": [
+      "A carrier or diluent, such as an organic solvent of mineral clay.",
+      "Surface-active ingredients, such as **stickers** and **spreaders**.",
+      "Other additives, such as stabilizers, dyes, and chemicals, which make the product safer or enhance pesticidal activity."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "kind": "mc",
+     "q": "What is a pesticide formulation?",
+     "choices": [
+      "A combination of active and inert ingredients that forms an end-use pesticide product",
+      "The pure, technical grade active ingredient",
+      "Any chemical added to a spray tank by the applicator",
+      "The written directions on a pesticide label"
+     ],
+     "answer": 0,
+     "ref": "p. 49, chapter introduction",
+     "why": "The manual defines a formulation as active plus inert ingredients forming an end-use product.",
+     "id": "c04-s01-t1",
+     "src": "test"
+    },
+    {
+     "kind": "tf",
+     "q": "Inert ingredients have no pesticidal activity.",
+     "answer": true,
+     "ref": "p. 49, chapter introduction",
+     "why": "Inert ingredients do not kill pests; some simply serve as diluents or carriers.",
+     "id": "c04-s01-t2",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Which of these is NOT a reason the manual gives for why pure (technical grade) active ingredients are not suitable for application?",
+     "choices": [
+      "Some are extremely toxic in concentrated form",
+      "Many do not mix well with water",
+      "Some are unstable",
+      "They have no pesticidal activity"
+     ],
+     "answer": 3,
+     "ref": "p. 49, chapter introduction",
+     "why": "Active ingredients are what control the pest; having no pesticidal activity describes inert ingredients.",
+     "id": "c04-s01-t3",
+     "src": "test",
+     "style": "not"
+    },
+    {
+     "kind": "mc",
+     "q": "A product label lists a clay that carries the active ingredient but does nothing to the pest itself. What is that clay?",
+     "choices": [
+      "An inert ingredient serving as a carrier or diluent",
+      "A second active ingredient",
+      "A technical grade pesticide",
+      "An emulsifier"
+     ],
+     "answer": 0,
+     "ref": "p. 49, chapter introduction",
+     "why": "Inert ingredients with no pesticidal activity can serve as carriers or diluents.",
+     "id": "c04-s01-t4",
+     "src": "test",
+     "style": "scenario"
+    },
+    {
+     "kind": "mc",
+     "q": "Stickers and spreaders are examples of which kind of ingredient in a formulated product?",
+     "choices": [
+      "Surface-active ingredients",
+      "Active ingredients",
+      "Stabilizers",
+      "Dyes"
+     ],
+     "answer": 0,
+     "ref": "p. 49, chapter introduction",
+     "why": "The manual lists stickers and spreaders as surface-active ingredients.",
+     "id": "c04-s01-t5",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c04-s02",
+   "chapter": "Chapter 4 · Pesticide Formulations",
+   "title": "Where active ingredients come from",
+   "pages": [
+    50,
+    50
+   ],
+   "body": [
+    {
+     "h": "Formulations: an overview"
+    },
+    {
+     "p": [
+      "The active ingredients in pesticide products come from many sources.",
+      "Some, such as **azadirachtin**, **pyrethrum**, and **rotenone**, are extracted from **plants**.",
+      "Others are derived from **microbes or insects**, for example, **Bacillus thuringiensis** and insect growth regulators.",
+      "Still others have a **mineral origin**, for example, **copper** and **sulfur**.",
+      "However, the vast majority of active ingredients used today are **produced in laboratories**.",
+      "These **synthetic** active ingredients may have been designed by a chemist or discovered through screening processes by examining chemicals generated by various industries or found in nature."
+     ]
+    },
+    {
+     "p": [
+      "Regardless of where they come from or how they are produced, pesticide active ingredients vary considerably in their physical and chemical properties.",
+      "One variable is **solubility**.",
+      "Some dissolve in water, but many do not.",
+      "Some are soluble in oils or organic solvents.",
+      "However, many such solvents are not available to applicators or safe to use.",
+      "A few active ingredients do not dissolve readily in any **solvent**.",
+      "**Solubility** and the **intended use** of the pesticide are two factors that determine how an active ingredient is formulated, that is, made into an end-use product."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "kind": "mc",
+     "q": "Azadirachtin, pyrethrum, and rotenone are active ingredients extracted from what source?",
+     "choices": [
+      "Plants",
+      "Microbes",
+      "Minerals",
+      "Insects"
+     ],
+     "answer": 0,
+     "ref": "p. 50, 'Formulations: An Overview'",
+     "why": "The manual names these three as plant extracts.",
+     "id": "c04-s02-t1",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Where do the vast majority of active ingredients used today come from?",
+     "choices": [
+      "They are produced in laboratories",
+      "They are extracted from plants",
+      "They are mined minerals",
+      "They are derived from microbes"
+     ],
+     "answer": 0,
+     "ref": "p. 50, 'Formulations: An Overview'",
+     "why": "Most active ingredients today are synthetic, produced in laboratories.",
+     "id": "c04-s02-t2",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Which of these is NOT an active ingredient of mineral origin named in the manual?",
+     "choices": [
+      "Copper",
+      "Sulfur",
+      "Bacillus thuringiensis"
+     ],
+     "answer": 2,
+     "ref": "p. 50, 'Formulations: An Overview'",
+     "why": "Bacillus thuringiensis is derived from microbes; copper and sulfur are mineral.",
+     "id": "c04-s02-t3",
+     "src": "test",
+     "style": "not"
+    },
+    {
+     "kind": "short",
+     "q": "Name the two factors that determine how an active ingredient is formulated.",
+     "answer": "Solubility and the intended use of the pesticide",
+     "keys": [
+      [
+       "solubility",
+       "soluble",
+       "dissolve",
+       "dissolves"
+      ],
+      [
+       "use",
+       "uses",
+       "intended use",
+       "used"
+      ]
+     ],
+     "ref": "p. 50, 'Formulations: An Overview'",
+     "why": "Solubility and intended use determine how an active ingredient is made into an end-use product.",
+     "id": "c04-s02-t4",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "A company finds a new active ingredient that does not dissolve in water but does dissolve in an organic solvent. Which property is the manual describing that will shape how it is formulated?",
+     "choices": [
+      "Solubility",
+      "Signal word",
+      "Toxicity class",
+      "Color"
+     ],
+     "answer": 0,
+     "ref": "p. 50, 'Formulations: An Overview'",
+     "why": "Solubility is one of the two factors that determine how an active ingredient is formulated.",
+     "id": "c04-s02-t5",
+     "src": "test",
+     "style": "scenario"
+    }
+   ]
+  },
+  {
+   "id": "c04-s03",
+   "chapter": "Chapter 4 · Pesticide Formulations",
+   "title": "Solutions, suspensions, and emulsions",
+   "pages": [
+    50,
+    50
+   ],
+   "body": [
+    {
+     "p": [
+      "Liquid pesticide products are usually one of the following:"
+     ]
+    },
+    {
+     "list": [
+      "A solution.",
+      "A suspension.",
+      "An emulsion."
+     ]
+    },
+    {
+     "h": "Solution"
+    },
+    {
+     "p": [
+      "A **solution** is made by dissolving a substance in a liquid.",
+      "A true solution is a mixture, but it cannot be separated by filtration or other mechanical means.",
+      "Once made, a true solution will not \"settle out\" and does not need shaking or stirring (**agitation**) to keep the mixed components in solution.",
+      "Solutions are **transparent**: they will allow light to pass through them.",
+      "However, this may not be obvious if one or more components of the mixture are dark in color and the solution is very concentrated.",
+      "**Sweetened iced tea** and **saltwater** are examples of solutions."
+     ]
+    },
+    {
+     "h": "Suspension"
+    },
+    {
+     "p": [
+      "A **suspension** is also a liquid mixture.",
+      "However, a suspension is formed by dispersing fine (very small), **solid particles** in a liquid.",
+      "These solid particles do not dissolve in the liquid carrier.",
+      "Suspensions must be **agitated** to maintain uniform particle distribution.",
+      "Otherwise, the undissolved parts of suspension mixtures will settle (or float to the top).",
+      "Most suspensions are **cloudy or opaque**: they will not allow light to pass through them.",
+      "Pesticide products formulated as suspensions are not water-soluble; they form more dilute suspensions when mixed with water to make a finished spray.",
+      "Label directions for suspension formulations will instruct you to **shake well** before measuring and mixing.",
+      "The label will further state to apply these products only with spray equipment that has enough agitation to keep the final mixture evenly distributed in the spray tank during application.",
+      "A mixture of **flour and water** is an example of a suspension."
+     ]
+    },
+    {
+     "h": "Emulsion"
+    },
+    {
+     "p": [
+      "An **emulsion** is a special kind of suspension: a mixture made by suspending **droplets of one liquid in another**.",
+      "Each ingredient retains its unique properties and identity.",
+      "To make an emulsion, an active ingredient is dissolved in an oil-based solvent and then further diluted with water.",
+      "Some agitation may be necessary to keep an emulsion from separating.",
+      "However, most emulsion pesticide product formulations have additives (**emulsifiers** or emulsifying agents) that prevent the product from settling.",
+      "As a rule, emulsions have a **\"milky\" appearance**.",
+      "An **emulsifiable concentrate (E or EC)** is an emulsion.",
+      "**Homogenized milk** is an example of an emulsion."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c04-s03-r2",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which is the pesticide formulation process by which solid particles are dispersed in a liquid?",
+     "choices": [
+      "Emulsion.",
+      "Solution.",
+      "Suspension."
+     ],
+     "answer": 2,
+     "ref": "p. 50, 'Formulations: An Overview'; p. 67, Review question 2",
+     "why": "A suspension is fine solid particles dispersed in a liquid; an emulsion is droplets of one liquid in another."
+    },
+    {
+     "kind": "mc",
+     "q": "Which kind of liquid mixture will not settle out and needs no agitation once made?",
+     "choices": [
+      "A true solution",
+      "A suspension",
+      "An emulsion",
+      "A flowable"
+     ],
+     "answer": 0,
+     "ref": "p. 50, 'Formulations: An Overview'",
+     "why": "A true solution does not settle out and does not need shaking or stirring.",
+     "id": "c04-s03-t1",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Which of these is the manual's example of an emulsion?",
+     "choices": [
+      "Homogenized milk",
+      "Saltwater",
+      "Flour and water",
+      "Sweetened iced tea"
+     ],
+     "answer": 0,
+     "ref": "p. 50, 'Formulations: An Overview'",
+     "why": "Homogenized milk is an emulsion; saltwater and iced tea are solutions; flour and water is a suspension.",
+     "id": "c04-s03-t2",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Which of these is NOT true of a suspension?",
+     "choices": [
+      "It is made of fine solid particles dispersed in a liquid",
+      "It must be agitated to keep particles evenly distributed",
+      "Most are cloudy or opaque",
+      "It is transparent and lets light pass through"
+     ],
+     "answer": 3,
+     "ref": "p. 50, 'Formulations: An Overview'",
+     "why": "Solutions are transparent; most suspensions are cloudy or opaque.",
+     "id": "c04-s03-t3",
+     "src": "test",
+     "style": "not"
+    },
+    {
+     "kind": "mc",
+     "q": "A label says to shake well before measuring and to use only spray equipment with enough agitation to keep the mixture evenly distributed in the tank. What kind of formulation is this most likely?",
+     "choices": [
+      "A suspension",
+      "A true solution",
+      "A fumigant",
+      "A ready-to-use aerosol"
+     ],
+     "answer": 0,
+     "ref": "p. 50, 'Formulations: An Overview'",
+     "why": "Labels for suspension formulations give exactly these shake and agitation directions.",
+     "id": "c04-s03-t4",
+     "src": "test",
+     "style": "scenario"
+    },
+    {
+     "kind": "tf",
+     "q": "An emulsifiable concentrate (E or EC) is an emulsion.",
+     "answer": true,
+     "ref": "p. 50, 'Formulations: An Overview'",
+     "why": "The manual states that an emulsifiable concentrate is an emulsion.",
+     "id": "c04-s03-t5",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "What do emulsifiers do in an emulsion formulation?",
+     "choices": [
+      "Prevent the product from settling",
+      "Kill the target pest",
+      "Make the mixture transparent",
+      "Turn the liquid into a gas"
+     ],
+     "answer": 0,
+     "ref": "p. 50, 'Formulations: An Overview'",
+     "why": "Emulsifiers, or emulsifying agents, are additives that prevent the product from settling.",
+     "id": "c04-s03-t6",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c04-s04",
+   "chapter": "Chapter 4 · Pesticide Formulations",
+   "title": "Dry products, concentrates, and ready-to-use",
+   "pages": [
+    50,
+    51
+   ],
+   "body": [
+    {
+     "p": [
+      "Most **dry products** are made by adhering the active ingredient to some solid carrier, such as **talc**, **clay**, **silica** (the mineral quartz), or **plant residues**, for example, ground corncobs."
+     ]
+    },
+    {
+     "h": "Concentrates"
+    },
+    {
+     "p": [
+      "Some pesticide products are sold in concentrate form and must be mixed or diluted before use.",
+      "**Concentrates** come in both liquid and solid form.",
+      "An emulsifiable concentrate is an example of a **liquid concentrate (LC)**.",
+      "**Wettable powders (WP)**, **soluble powders (SP)**, and **water-dispersible granules/dry flowables (WDG/DF)** are examples of concentrated materials sold in **solid form**."
+     ]
+    },
+    {
+     "h": "Ready-to-use"
+    },
+    {
+     "p": [
+      "Other formulations are sold **ready-to-use**.",
+      "You can apply ready-to-use products with no further dilution or mixing.",
+      "Examples include liquids prepared as end-use dilutions and **aerosol (A)**, **dust (D)**, **pellet (P)**, **granule (G)**, and most **bait (B)** formulation products.",
+      "Manufacturers package many specialized pesticides, including products intended for residential uses by nonoccupational users, in ready-to-use formulations."
+     ]
+    },
+    {
+     "h": "Cost versus risk"
+    },
+    {
+     "p": [
+      "Concentrates are often **less expensive** per treatment/unit area treated than ready-to-use formulations.",
+      "However, this cost savings may be offset by other considerations.",
+      "For example, concentrates are usually **more toxic** than dilute formulations of the same active ingredient.",
+      "**More handling** is required to mix and load them.",
+      "As a result, concentrates present a **higher exposure risk** to the user."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "kind": "mc",
+     "q": "Which of these is a concentrate sold in solid form?",
+     "choices": [
+      "Wettable powder (WP)",
+      "Aerosol (A)",
+      "Emulsifiable concentrate (EC)",
+      "Granule (G)"
+     ],
+     "answer": 0,
+     "ref": "p. 51, 'Formulations: An Overview'",
+     "why": "WP, SP, and WDG/DF are concentrates sold in solid form; granules are ready-to-use.",
+     "id": "c04-s04-t1",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Which of these is NOT one of the manual's examples of a ready-to-use formulation?",
+     "choices": [
+      "Aerosol (A)",
+      "Dust (D)",
+      "Granule (G)",
+      "Soluble powder (SP)"
+     ],
+     "answer": 3,
+     "ref": "p. 51, 'Formulations: An Overview'",
+     "why": "Soluble powders are concentrates sold in solid form and must be mixed before use.",
+     "id": "c04-s04-t2",
+     "src": "test",
+     "style": "not"
+    },
+    {
+     "kind": "mc",
+     "q": "A crew switches from a ready-to-use product to the concentrate of the same active ingredient to save money. What does the manual say about the trade-off?",
+     "choices": [
+      "Concentrates are usually more toxic and need more handling, so they present a higher exposure risk",
+      "Concentrates are safer because they are used in smaller amounts",
+      "There is no difference in risk, only in price",
+      "Concentrates cost more per unit area treated"
+     ],
+     "answer": 0,
+     "ref": "p. 51, 'Formulations: An Overview'",
+     "why": "Cost savings may be offset because concentrates are more toxic and need more mixing and loading.",
+     "id": "c04-s04-t3",
+     "src": "test",
+     "style": "scenario"
+    },
+    {
+     "kind": "tf",
+     "q": "Concentrates are often less expensive per treatment or unit area treated than ready-to-use formulations.",
+     "answer": true,
+     "ref": "p. 51, 'Formulations: An Overview'",
+     "why": "The manual says concentrates are often less expensive per unit area treated.",
+     "id": "c04-s04-t4",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Which of these is NOT named as a solid carrier for dry products?",
+     "choices": [
+      "Talc",
+      "Clay",
+      "Ground corncobs",
+      "Fuel oil"
+     ],
+     "answer": 3,
+     "ref": "p. 50, 'Formulations: An Overview'",
+     "why": "Talc, clay, silica, and plant residues such as ground corncobs are solid carriers; fuel oil is a liquid.",
+     "id": "c04-s04-t5",
+     "src": "test",
+     "style": "not"
+    }
+   ]
+  },
+  {
+   "id": "c04-s05",
+   "chapter": "Chapter 4 · Pesticide Formulations",
+   "title": "Formulation abbreviations and Table 4.1",
+   "pages": [
+    51,
+    51
+   ],
+   "body": [
+    {
+     "p": [
+      "Abbreviations in trade or brand names are often used to describe the formulation, for example, **WP** for wettable powders.",
+      "They may describe how the pesticide is used, for example, **TC** for termiticide concentrate.",
+      "Or they may describe the characteristics of the formulation, for example, **LO** for a low-odor formulation.",
+      "The amount of active ingredient (**a.i.**) and the kind of formulation are listed on the product label.",
+      "Numbers in a product's trade or brand name may also indicate the amount of active ingredient it contains.",
+      "For example, **80 WDG** indicates that this dry product contains **80% by weight** of active ingredient and is a water-dispersible granule.",
+      "In this case, a **10-pound bag** of product contains **8 pounds of a.i.** and **2 pounds of inert ingredient**.",
+      "Liquid formulations usually state the amount of a.i. in **pounds per gallon**.",
+      "For example, **4F** means **4 pounds of the a.i. per gallon** in a flowable formulation.",
+      "Some common formulation abbreviations are listed in Table 4.1."
+     ]
+    },
+    {
+     "box": "Table 4.1 Abbreviations for Common Formulations",
+     "list": [
+      "A: Aerosol.",
+      "AF: Aqueous flowable.",
+      "B: Bait.",
+      "C: Concentrate.",
+      "D: Dust.",
+      "DF: Dry flowables (see WDG).",
+      "E: Emulsifiable concentrate.",
+      "EC: Emulsifiable concentrate.",
+      "F: Flowable.",
+      "G: Granules.",
+      "GL: Gel.",
+      "L: Liquid.",
+      "LC: Liquid concentrate.",
+      "LV: Low volatile.",
+      "M: Microencapsulated.",
+      "P: Pellets.",
+      "PS: Pellets.",
+      "RTU: Ready-to-use.",
+      "S: Solution.",
+      "SP: Soluble powder (or soluble packet; see WSP).",
+      "ULV: Ultra-low volume.",
+      "W: Wettable powder.",
+      "WDG: Water-dispersible granules (see DF).",
+      "WP: Wettable powder.",
+      "WS: Water soluble.",
+      "WSB: Water-soluble bag (see WSP: water-soluble packet).",
+      "WSC: Water-soluble concentrate.",
+      "WSL: Water-soluble liquid.",
+      "WSP: Water-soluble powder (or water-soluble packet; see WSB)."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c04-s05-r1",
+     "src": "review",
+     "kind": "mc",
+     "q": "The name \"X-Pest 5G\" on a pesticide label indicates a:",
+     "choices": [
+      "Granular pesticide with 5% active ingredient.",
+      "Granular pesticide with 5% inert ingredients.",
+      "Gel pesticide with 5% active ingredient."
+     ],
+     "answer": 0,
+     "ref": "p. 51, 'Formulations: An Overview' and Table 4.1; p. 67, Review question 1",
+     "why": "Numbers in a brand name can give percent active ingredient, and G means granules (GL is gel)."
+    },
+    {
+     "kind": "mc",
+     "q": "A 10-pound bag of a product labeled 80 WDG contains how many pounds of active ingredient?",
+     "choices": [
+      "8 pounds",
+      "2 pounds",
+      "10 pounds",
+      "0.8 pounds"
+     ],
+     "answer": 0,
+     "ref": "p. 51, 'Formulations: An Overview'",
+     "why": "80 WDG is 80% active ingredient by weight, so 8 pounds a.i. and 2 pounds inert.",
+     "id": "c04-s05-t1",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "What does 4F mean on a liquid product?",
+     "choices": [
+      "4 pounds of active ingredient per gallon in a flowable formulation",
+      "4% active ingredient in a flowable",
+      "A fourth-generation formulation",
+      "4 gallons of flowable per acre"
+     ],
+     "answer": 0,
+     "ref": "p. 51, 'Formulations: An Overview'",
+     "why": "Liquid formulations state a.i. in pounds per gallon; F is flowable.",
+     "id": "c04-s05-t2",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Which of these abbreviation pairs is NOT correct according to Table 4.1?",
+     "choices": [
+      "LV: Liquid volume",
+      "ULV: Ultra-low volume",
+      "M: Microencapsulated",
+      "GL: Gel"
+     ],
+     "answer": 0,
+     "ref": "p. 51, Table 4.1",
+     "why": "In Table 4.1, LV means low volatile.",
+     "id": "c04-s05-t3",
+     "src": "test",
+     "style": "not"
+    },
+    {
+     "kind": "short",
+     "q": "What does the abbreviation WP stand for?",
+     "answer": "Wettable powder",
+     "keys": [
+      [
+       "wettable",
+       "wetable"
+      ],
+      [
+       "powder",
+       "powders"
+      ]
+     ],
+     "ref": "p. 51, Table 4.1",
+     "why": "WP, and also W, mean wettable powder.",
+     "id": "c04-s05-t4",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "You pick up a 25-pound bag labeled 80 WDG. Using the manual's rule, how much of the bag is inert ingredient?",
+     "choices": [
+      "5 pounds",
+      "20 pounds",
+      "8 pounds",
+      "2 pounds"
+     ],
+     "answer": 0,
+     "ref": "p. 51, 'Formulations: An Overview'",
+     "why": "80% of 25 pounds is 20 pounds a.i., leaving 5 pounds inert.",
+     "id": "c04-s05-t5",
+     "src": "test",
+     "style": "scenario"
+    },
+    {
+     "kind": "mc",
+     "q": "In a brand name, what does TC indicate?",
+     "choices": [
+      "Termiticide concentrate",
+      "Total coverage",
+      "Toxicity category",
+      "Tank compatible"
+     ],
+     "answer": 0,
+     "ref": "p. 51, 'Formulations: An Overview'",
+     "why": "The manual gives TC for termiticide concentrate as an abbreviation describing how the pesticide is used.",
+     "id": "c04-s05-t6",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c04-s06",
+   "chapter": "Chapter 4 · Pesticide Formulations",
+   "title": "Choosing a formulation",
+   "pages": [
+    51,
+    52
+   ],
+   "body": [
+    {
+     "p": [
+      "A single active ingredient is often sold in several kinds of formulations.",
+      "If more than one formulation is available for your pest control site and situation, choose the best one for the job."
+     ]
+    },
+    {
+     "box": "Base your decision on:",
+     "list": [
+      "Legal, labeled uses.",
+      "The signal word.",
+      "Applicator safety.",
+      "Environmental safety.",
+      "Pest biology.",
+      "Site characteristics.",
+      "Target (surface to be treated).",
+      "Appropriate and available application equipment."
+     ]
+    },
+    {
+     "box": "Ask yourself these questions:",
+     "list": [
+      "Is the intended use listed on the product label?",
+      "Do I have the necessary application equipment?",
+      "Can the formulation be applied appropriately under the conditions in the application area?",
+      "Will the formulation reach the intended target and stay in place long enough to control the pest?",
+      "Is the formulation likely to damage the surface?",
+      "Could I choose a less hazardous formulation that would still be as effective?"
+     ]
+    },
+    {
+     "p": [
+      "**Cost** is always a consideration, but **pesticide and pest management concerns should come first**."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "kind": "mc",
+     "q": "Which of these is NOT on the manual's list of things to base your formulation choice on?",
+     "choices": [
+      "The signal word",
+      "Pest biology",
+      "Site characteristics",
+      "The brand name you used last year"
+     ],
+     "answer": 3,
+     "ref": "p. 52, 'Formulations: An Overview'",
+     "why": "The list covers labeled uses, signal word, safety, pest biology, site, target, and equipment.",
+     "id": "c04-s06-t1",
+     "src": "test",
+     "style": "not"
+    },
+    {
+     "kind": "tf",
+     "q": "When choosing a formulation, cost should come before pest management concerns.",
+     "answer": false,
+     "ref": "p. 52, 'Formulations: An Overview'",
+     "why": "Cost is always a consideration, but pesticide and pest management concerns should come first.",
+     "id": "c04-s06-t2",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Two labeled formulations will control your pest equally well. One has a more hazardous profile. What does the manual tell you to ask?",
+     "choices": [
+      "Could I choose a less hazardous formulation that would still be as effective?",
+      "Which one is cheaper per gallon?",
+      "Which one has the strongest odor?",
+      "Which one the supplier recommends most often?"
+     ],
+     "answer": 0,
+     "ref": "p. 52, 'Formulations: An Overview'",
+     "why": "The manual's checklist ends with choosing a less hazardous formulation that is still as effective.",
+     "id": "c04-s06-t3",
+     "src": "test",
+     "style": "scenario"
+    },
+    {
+     "kind": "mc",
+     "q": "What is the first question on the manual's checklist for choosing a formulation?",
+     "choices": [
+      "Is the intended use listed on the product label?",
+      "Is the formulation likely to damage the surface?",
+      "Do I have the necessary application equipment?",
+      "What does it cost?"
+     ],
+     "answer": 0,
+     "ref": "p. 52, 'Formulations: An Overview'",
+     "why": "The first question is whether the intended use is on the label.",
+     "id": "c04-s06-t4",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c04-s07",
+   "chapter": "Chapter 4 · Pesticide Formulations",
+   "title": "Emulsifiable concentrates (E or EC)",
+   "pages": [
+    52,
+    53
+   ],
+   "body": [
+    {
+     "h": "Liquid formulations"
+    },
+    {
+     "p": [
+      "Most liquid formulations are **diluted with water** to make a finished spray.",
+      "However, some labels direct users to mix the product with another solvent such as **crop oil** or other light oil as a carrier."
+     ]
+    },
+    {
+     "h": "Emulsifiable concentrates (E or EC)"
+    },
+    {
+     "p": [
+      "An emulsifiable concentrate formulation usually contains an **oil-soluble liquid active ingredient**, one or more **petroleum-based solvents**, and a **mixing agent**.",
+      "The mixing agent allows the formulation to be mixed with water to form an emulsion.",
+      "Most ECs contain between **2 and 6 pounds of active ingredient per gallon**.",
+      "ECs are among the **most versatile** formulations.",
+      "They are used against pests in agricultural, ornamental and turf, forestry, structural, food processing, livestock, and public health settings.",
+      "ECs are adaptable to many types of application equipment, from small, portable sprayers to hydraulic sprayers, low-volume ground sprayers, mist blowers, and low-volume aircraft sprayers."
+     ]
+    },
+    {
+     "box": "Advantages",
+     "list": [
+      "Relatively easy to handle, transport, and store.",
+      "Easy to pour and measure.",
+      "Little agitation required; will not settle out or separate when equipment is running.",
+      "Not abrasive; does not cause excessive equipment wear.",
+      "Will not usually plug screens or nozzles.",
+      "Leave little visible residue on treated surfaces."
+     ]
+    },
+    {
+     "box": "Disadvantages",
+     "list": [
+      "High concentration of active ingredient(s) makes it easy to overdose or underdose through mixing or calibration errors.",
+      "May damage treated plants or surfaces (petroleum-based solvents or overdosing may cause **phytotoxicity**).",
+      "Easily absorbed through skin of humans or animals.",
+      "Splashes and spills are relatively difficult to clean up and/or decontaminate.",
+      "Many have a strong odor.",
+      "Solvents may cause equipment \"wear and tear.\" For example, rubber or plastic hoses, gaskets, pump parts, and other exposed surfaces may deteriorate.",
+      "May cause pitting or discoloration of painted finishes or other treated surfaces.",
+      "**Flammable**; should be used and stored away from heat or open flame.",
+      "May be corrosive."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "kind": "mc",
+     "q": "Most emulsifiable concentrates contain how much active ingredient?",
+     "choices": [
+      "Between 2 and 6 pounds per gallon",
+      "Almost 100%",
+      "1% or less",
+      "Between 15% and 95%"
+     ],
+     "answer": 0,
+     "ref": "p. 52, 'Emulsifiable Concentrates (E or EC)'",
+     "why": "Most ECs contain 2 to 6 pounds of active ingredient per gallon.",
+     "id": "c04-s07-t1",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Which of these is NOT an advantage of emulsifiable concentrates?",
+     "choices": [
+      "Easy to pour and measure",
+      "Not abrasive to equipment",
+      "Leave little visible residue",
+      "Not flammable, so storage near heat is safe"
+     ],
+     "answer": 3,
+     "ref": "pp. 52–53, 'Emulsifiable Concentrates (E or EC)'",
+     "why": "ECs are flammable and should be used and stored away from heat or open flame.",
+     "id": "c04-s07-t2",
+     "src": "test",
+     "style": "not"
+    },
+    {
+     "kind": "mc",
+     "q": "While mixing an EC, a worker splashes concentrate on bare forearms. Which EC disadvantage makes this especially serious?",
+     "choices": [
+      "ECs are easily absorbed through skin of humans or animals",
+      "ECs plug nozzles",
+      "ECs are abrasive",
+      "ECs settle out quickly"
+     ],
+     "answer": 0,
+     "ref": "p. 53, 'Emulsifiable Concentrates (E or EC)'",
+     "why": "Easy skin absorption is a listed EC disadvantage.",
+     "id": "c04-s07-t3",
+     "src": "test",
+     "style": "scenario"
+    },
+    {
+     "kind": "short",
+     "q": "What is the term for damage to plants caused by a pesticide, such as from petroleum-based solvents or overdosing?",
+     "answer": "Phytotoxicity",
+     "keys": [
+      [
+       "phytotoxicity",
+       "phytotoxic"
+      ]
+     ],
+     "ref": "p. 53, 'Emulsifiable Concentrates (E or EC)'",
+     "why": "Petroleum-based solvents or overdosing may cause phytotoxicity.",
+     "accept": [
+      "phytotoxic"
+     ],
+     "id": "c04-s07-t4",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Why is it easy to overdose or underdose with an EC?",
+     "choices": [
+      "Its high concentration of active ingredient makes mixing or calibration errors matter more",
+      "It settles out in the tank",
+      "It plugs screens and nozzles",
+      "It cannot be measured by volume"
+     ],
+     "answer": 0,
+     "ref": "p. 52, 'Emulsifiable Concentrates (E or EC)'",
+     "why": "The high concentration makes it easy to overdose or underdose through mixing or calibration errors.",
+     "id": "c04-s07-t5",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c04-s08",
+   "chapter": "Chapter 4 · Pesticide Formulations",
+   "title": "Solutions (S) and ready-to-use solutions",
+   "pages": [
+    53,
+    53
+   ],
+   "body": [
+    {
+     "h": "Solutions (S)"
+    },
+    {
+     "p": [
+      "Some pesticide active ingredients dissolve readily in a liquid solvent, such as water or a petroleum-based diluent.",
+      "When mixed, they form a solution that **does not settle out or separate**.",
+      "Formulations of these pesticides usually contain the active ingredient, solvent (carrier or diluent), and one or more other ingredients.",
+      "Solutions are suitable for **any type of sprayer, indoors or outdoors**.",
+      "Consequently, they are registered for many sites, including structural, institutional, public health, and household pest control; livestock and poultry pest management; space sprays in barns and warehouses; and treatment of food and fiber crops, turf, and ornamental plants."
+     ]
+    },
+    {
+     "h": "Ready-to-use (RTU) low-concentrate solutions"
+    },
+    {
+     "p": [
+      "Ready-to-use formulations require **no further dilution** before application.",
+      "They consist of a small amount of active ingredient (often **1% or less** per unit volume).",
+      "Some ready-to-use products contain petroleum-based solvents; others are water-based.",
+      "Many RTU products are produced for pest management professionals (who treat structural and institutional pests) and for nonoccupational users."
+     ]
+    },
+    {
+     "box": "Advantages",
+     "list": [
+      "Convenient; neither measuring nor mixing is required.",
+      "Some are packaged and sold in, or with, an application device. If this is the case, no loading is required.",
+      "Less personal exposure risk due to reduced toxicity and handling."
+     ]
+    },
+    {
+     "box": "Disadvantages",
+     "list": [
+      "Limited availability.",
+      "High cost per unit of active ingredient."
+     ]
+    },
+    {
+     "p": [
+      "The time saved and convenience of using RTU products may outweigh the product cost."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c04-s08-r3",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which liquid pesticide formulation consists of a small amount of active ingredient (often 1% or less per unit volume)?",
+     "choices": [
+      "Microencapsulated (M).",
+      "Ready-to-use (low-concentrate) solution (RTU).",
+      "Ultra-low volume (ULV)."
+     ],
+     "answer": 1,
+     "ref": "p. 53, 'Ready-to-Use (RTU) Low-Concentrate Solutions'; p. 67, Review question 3",
+     "why": "RTU low-concentrate solutions are often 1% or less active ingredient."
+    },
+    {
+     "kind": "mc",
+     "q": "Ready-to-use low-concentrate solutions often contain how much active ingredient?",
+     "choices": [
+      "1% or less per unit volume",
+      "Between 2 and 6 pounds per gallon",
+      "Almost 100%",
+      "At least 50%"
+     ],
+     "answer": 0,
+     "ref": "p. 53, 'Ready-to-Use (RTU) Low-Concentrate Solutions'",
+     "why": "RTU solutions consist of a small amount of a.i., often 1% or less.",
+     "id": "c04-s08-t1",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Which of these is NOT true of solution (S) formulations?",
+     "choices": [
+      "They do not settle out or separate",
+      "They are suitable for any type of sprayer, indoors or outdoors",
+      "They are registered for many sites",
+      "They must be constantly agitated in the tank"
+     ],
+     "answer": 3,
+     "ref": "p. 53, 'Solutions (S)'",
+     "why": "Solutions do not settle out, so they do not need constant agitation.",
+     "id": "c04-s08-t2",
+     "src": "test",
+     "style": "not"
+    },
+    {
+     "kind": "mc",
+     "q": "Which is a listed disadvantage of RTU low-concentrate solutions?",
+     "choices": [
+      "High cost per unit of active ingredient",
+      "High exposure risk from mixing",
+      "They settle in the tank",
+      "They are abrasive"
+     ],
+     "answer": 0,
+     "ref": "p. 53, 'Ready-to-Use (RTU) Low-Concentrate Solutions'",
+     "why": "RTU disadvantages are limited availability and high cost per unit of a.i.",
+     "id": "c04-s08-t3",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "A homeowner wants to treat a few ants on a patio without measuring or mixing anything. Which formulation fits, according to the manual's description?",
+     "choices": [
+      "A ready-to-use (RTU) low-concentrate solution",
+      "An emulsifiable concentrate",
+      "A wettable powder",
+      "An ultra-low-volume concentrate"
+     ],
+     "answer": 0,
+     "ref": "p. 53, 'Ready-to-Use (RTU) Low-Concentrate Solutions'",
+     "why": "RTU products need no measuring or mixing and are made for nonoccupational users.",
+     "id": "c04-s08-t4",
+     "src": "test",
+     "style": "scenario"
+    }
+   ]
+  },
+  {
+   "id": "c04-s09",
+   "chapter": "Chapter 4 · Pesticide Formulations",
+   "title": "Concentrate solutions and liquid baits",
+   "pages": [
+    53,
+    54
+   ],
+   "body": [
+    {
+     "h": "Concentrate solutions (C, LC, or WSC/WSL)"
+    },
+    {
+     "p": [
+      "Other solutions are available as concentrates that require dilution with a liquid solvent before you apply them.",
+      "Often the solvent is water, but it may also be a refined oil or petroleum-based solvent.",
+      "When diluted with the label-specified carrier, these formulations form **true solutions**."
+     ]
+    },
+    {
+     "box": "Advantages",
+     "list": [
+      "Relatively easy to handle, transport, and store; easy to pour and measure.",
+      "No agitation necessary.",
+      "Not abrasive; do not cause excessive equipment wear.",
+      "Do not plug screens or nozzles.",
+      "Do not usually leave visible residues on treated surfaces."
+     ]
+    },
+    {
+     "box": "Disadvantages",
+     "list": [
+      "Limited availability, especially water-based solutions.",
+      "Spills and splashes may be difficult to clean up and/or decontaminate.",
+      "Some are easily absorbed through skin of humans or animals."
+     ]
+    },
+    {
+     "p": [
+      "The other benefits and drawbacks of concentrated solutions vary.",
+      "They depend on the concentration of active ingredient, solvent or diluent used, application site, and application equipment."
+     ]
+    },
+    {
+     "h": "Liquid baits"
+    },
+    {
+     "p": [
+      "Some insecticides and rodenticides are now formulated as **liquid baits**.",
+      "Most liquid insecticides are **concentrated sugar solutions**.",
+      "They are packaged in ready-to-use bait stations to kill **ants and cockroaches**.",
+      "As a rule, **liquid rodenticide baits** are mixed with water and placed in specially designed bait stations.",
+      "They are useful in sites where **sanitation is poor** because traditional food-based baits \"compete\" with other food sources.",
+      "As is the case with solid baits, you must place bait stations in safe, strategic locations while following label directions and taking care to protect children and nontarget organisms."
+     ]
+    },
+    {
+     "box": "Advantages",
+     "list": [
+      "Liquid ant baits are very useful in controlling sugar-feeding ants.",
+      "Ants that will feed on liquid baits carry this material to the colony.",
+      "Liquid rodenticide baits will often control rodents in areas where **food is abundant, but water is scarce** or lacking altogether."
+     ]
+    },
+    {
+     "box": "Disadvantages",
+     "list": [
+      "Not all ants, cockroaches, and rodents will feed on liquid baits.",
+      "You must refill or replace liquid-containing bait stations frequently."
+     ]
+    },
+    {
+     "fig": "p54-baitstation"
+    },
+    {
+     "p": [
+      "For information about solid-formulation baits, refer to \"Baits\" in the \"Dry or Solid Formulations\" section."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "p54-baitstation",
+     "title": "A bait station used in rodent control in the closed and open positions. Bait formulations are placed inside the tamper-resistant station.",
+     "page": "p. 54",
+     "imgFile": "p54-baitstation.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "kind": "mc",
+     "q": "A grain warehouse has plenty of spilled food but almost no water. Which formulation does the manual say often controls rodents in this kind of area?",
+     "choices": [
+      "Liquid rodenticide baits",
+      "Dust formulations",
+      "Granules",
+      "Ultra-low-volume concentrates"
+     ],
+     "answer": 0,
+     "ref": "p. 54, 'Liquid Baits'",
+     "why": "Liquid rodenticide baits often control rodents where food is abundant but water is scarce.",
+     "id": "c04-s09-t1",
+     "src": "test",
+     "style": "scenario"
+    },
+    {
+     "kind": "mc",
+     "q": "Most liquid insecticide baits are what?",
+     "choices": [
+      "Concentrated sugar solutions",
+      "Oil-based emulsions",
+      "Microencapsulated powders",
+      "Fumigant gels"
+     ],
+     "answer": 0,
+     "ref": "p. 54, 'Liquid Baits'",
+     "why": "Most liquid insecticide baits are concentrated sugar solutions packaged in RTU bait stations.",
+     "id": "c04-s09-t2",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Which of these is NOT an advantage of concentrate solutions?",
+     "choices": [
+      "No agitation necessary",
+      "Do not plug screens or nozzles",
+      "Not abrasive",
+      "Spills are easy to clean up"
+     ],
+     "answer": 3,
+     "ref": "p. 53, 'Concentrate Solutions'",
+     "why": "Spills and splashes may be difficult to clean up; that is a disadvantage.",
+     "id": "c04-s09-t3",
+     "src": "test",
+     "style": "not"
+    },
+    {
+     "kind": "tf",
+     "q": "Ants that feed on liquid baits carry the material back to the colony.",
+     "answer": true,
+     "ref": "p. 54, 'Liquid Baits'",
+     "why": "This is a listed advantage of liquid ant baits.",
+     "id": "c04-s09-t4",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Which is a disadvantage of liquid baits?",
+     "choices": [
+      "Bait stations must be refilled or replaced frequently",
+      "They are highly abrasive",
+      "They drift easily",
+      "They require a respirator"
+     ],
+     "answer": 0,
+     "ref": "p. 54, 'Liquid Baits'",
+     "why": "You must refill or replace liquid-containing bait stations frequently.",
+     "id": "c04-s09-t5",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c04-s10",
+   "chapter": "Chapter 4 · Pesticide Formulations",
+   "title": "Ultra-low volume and invert emulsions",
+   "pages": [
+    54,
+    55
+   ],
+   "body": [
+    {
+     "h": "Ultra-low volume"
+    },
+    {
+     "p": [
+      "Ultra-low-volume concentrates have **almost 100% active ingredient**.",
+      "They are designed to be used \"as is\" or diluted with only small quantities of specified solvents.",
+      "These special-purpose formulations are most suitable for **outdoor** applications, such as in agricultural, forestry, ornamental, and **mosquito control** programs.",
+      "ULV products are applied as **very fine droplets** at very low rates per unit area (or volume)."
+     ]
+    },
+    {
+     "box": "Advantages",
+     "list": [
+      "Relatively easy to handle, transport, and store.",
+      "Little or no agitation required.",
+      "Not abrasive to equipment.",
+      "Do not plug screens and nozzles.",
+      "Leave little visible residue on treated surfaces."
+     ]
+    },
+    {
+     "box": "Disadvantages",
+     "list": [
+      "**High drift hazard** due to small droplet size.",
+      "Specialized equipment required.",
+      "Easily absorbed through skin of humans or animals; high dermal and inhalation exposure risk (concentrated product applied as fine droplets).",
+      "Products and/or solvents may cause rubber or plastic hoses, gaskets, and pump parts and other surfaces to deteriorate.",
+      "Calibration and application must be performed with special care because ULV products are applied in concentrated form."
+     ]
+    },
+    {
+     "h": "Invert emulsions"
+    },
+    {
+     "p": [
+      "**Invert emulsions** contain a **water-soluble pesticide dispersed in an oil carrier**.",
+      "These products require a special kind of emulsifier that allows the pesticide to be mixed with a large volume of petroleum-based carrier, usually **fuel oil**.",
+      "Invert emulsions are **less susceptible to drift** because **oil evaporates more slowly than water**.",
+      "When applied on a hot, dry day, a water-based droplet will become smaller as the water portion of the droplet evaporates.",
+      "Invert emulsion droplets do not \"shrink\" as rapidly when applied in the same weather conditions.",
+      "This means less drift and more pesticide on target.",
+      "Invert emulsions are thick mixtures, with the consistency of **mayonnaise**.",
+      "In addition, invert emulsions are applied as **very large droplets**, which reduce drift."
+     ]
+    },
+    {
+     "p": [
+      "The oil phase of this kind of formulation also serves as a **sticker-spreader**.",
+      "This quality improves rainfast properties and surface coverage.",
+      "It also increases **absorption** and/or penetration.",
+      "This, in turn, reduces loss due to runoff.",
+      "Invert emulsions are relatively uncommon.",
+      "They are most often used in **weed control on rights-of-way** to reduce the chance of drift to susceptible nontarget plants or sensitive areas."
+     ]
+    },
+    {
+     "box": "Advantages",
+     "list": [
+      "Low drift.",
+      "Increased rate of penetration and/or absorption.",
+      "Increased rainfastness and reduced runoff."
+     ]
+    },
+    {
+     "box": "Disadvantages",
+     "list": [
+      "Difficult to treat the underside of foliage or other targets because droplets are large and heavy.",
+      "Limited availability."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c04-s10-r4",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which liquid pesticide formulation may approach 100% active ingredient?",
+     "choices": [
+      "Aerosol (A).",
+      "Emulsifiable concentrate (EC).",
+      "Ultra-low volume (ULV)."
+     ],
+     "answer": 2,
+     "ref": "p. 54, 'Ultra-Low Volume'; p. 67, Review question 4",
+     "why": "ULV concentrates have almost 100% active ingredient."
+    },
+    {
+     "id": "c04-s10-r5",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which is a disadvantage of both EC and ULV formulations?",
+     "choices": [
+      "Difficult to handle, transport, and store.",
+      "Require constant agitation to keep in suspension.",
+      "Solvents may cause rubber or plastic hoses, gaskets, pump parts, and other surfaces to deteriorate."
+     ],
+     "answer": 2,
+     "ref": "pp. 53–54, 'Emulsifiable Concentrates' and 'Ultra-Low Volume'; p. 67, Review question 5",
+     "why": "Both list hose, gasket, and pump deterioration; both are easy to handle and need little agitation."
+    },
+    {
+     "kind": "mc",
+     "q": "How much active ingredient do ultra-low-volume concentrates have?",
+     "choices": [
+      "Almost 100%",
+      "1% or less",
+      "10% or less",
+      "2 to 6 pounds per gallon"
+     ],
+     "answer": 0,
+     "ref": "p. 54, 'Ultra-Low Volume'",
+     "why": "ULV concentrates have almost 100% active ingredient.",
+     "id": "c04-s10-t1",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Which of these is NOT an advantage of ULV formulations?",
+     "choices": [
+      "Little or no agitation required",
+      "Not abrasive to equipment",
+      "Low drift hazard",
+      "Do not plug screens and nozzles"
+     ],
+     "answer": 2,
+     "ref": "p. 54, 'Ultra-Low Volume'",
+     "why": "ULV has a high drift hazard because of its small droplet size.",
+     "id": "c04-s10-t2",
+     "src": "test",
+     "style": "not"
+    },
+    {
+     "kind": "mc",
+     "q": "What causes the high drift hazard of ULV products?",
+     "choices": [
+      "Small droplet size",
+      "Large, heavy droplets",
+      "Abrasive particles",
+      "Their sugar content"
+     ],
+     "answer": 0,
+     "ref": "p. 54, 'Ultra-Low Volume'",
+     "why": "ULV is applied as very fine droplets, which drift.",
+     "id": "c04-s10-t3",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "A county mosquito program is switching to a ULV product. Why must calibration be done with special care?",
+     "choices": [
+      "ULV products are applied in concentrated form",
+      "ULV products settle in the tank",
+      "ULV products plug nozzles",
+      "ULV products are mixed with large volumes of water"
+     ],
+     "answer": 0,
+     "ref": "p. 54, 'Ultra-Low Volume'",
+     "why": "Calibration needs special care because ULV is applied in concentrated form.",
+     "id": "c04-s10-t4",
+     "src": "test",
+     "style": "scenario"
+    },
+    {
+     "kind": "mc",
+     "q": "What does an invert emulsion contain?",
+     "choices": [
+      "A water-soluble pesticide dispersed in an oil carrier",
+      "An oil-soluble pesticide dispersed in water",
+      "Solid particles suspended in water",
+      "A gas under pressure"
+     ],
+     "answer": 0,
+     "ref": "p. 55, 'Invert Emulsions'",
+     "why": "Invert emulsions are the reverse of an EC: water-soluble pesticide in an oil carrier, usually fuel oil.",
+     "id": "c04-s10-t5",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Why are invert emulsions less susceptible to drift?",
+     "choices": [
+      "Oil evaporates more slowly than water, and the droplets are very large",
+      "They are applied as very fine droplets",
+      "They contain almost 100% active ingredient",
+      "They dissolve completely in water"
+     ],
+     "answer": 0,
+     "ref": "p. 55, 'Invert Emulsions'",
+     "why": "Oil droplets do not shrink as fast as water droplets, and invert emulsions are applied as very large droplets.",
+     "id": "c04-s10-t6",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "A road crew must control weeds along a right-of-way next to a sensitive vineyard. Which formulation does the manual say is most often used for this purpose?",
+     "choices": [
+      "Invert emulsion",
+      "Ultra-low-volume concentrate",
+      "Dust",
+      "Smoke or fog formulation"
+     ],
+     "answer": 0,
+     "ref": "p. 55, 'Invert Emulsions'",
+     "why": "Invert emulsions are most often used in rights-of-way weed control to reduce drift to nontarget plants.",
+     "id": "c04-s10-t7",
+     "src": "test",
+     "style": "scenario"
+    },
+    {
+     "kind": "mc",
+     "q": "Which of these is NOT an advantage of invert emulsions?",
+     "choices": [
+      "Low drift",
+      "Increased rainfastness",
+      "Easy coverage of the underside of foliage",
+      "Increased penetration and/or absorption"
+     ],
+     "answer": 2,
+     "ref": "p. 55, 'Invert Emulsions'",
+     "why": "Large, heavy droplets make the underside of foliage difficult to treat.",
+     "id": "c04-s10-t8",
+     "src": "test",
+     "style": "not"
+    },
+    {
+     "kind": "tf",
+     "q": "Invert emulsions are thick mixtures with the consistency of mayonnaise.",
+     "answer": true,
+     "ref": "p. 55, 'Invert Emulsions'",
+     "why": "The manual compares their consistency to mayonnaise.",
+     "id": "c04-s10-t9",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c04-s11",
+   "chapter": "Chapter 4 · Pesticide Formulations",
+   "title": "Flowables (F or AF)",
+   "pages": [
+    55,
+    55
+   ],
+   "body": [
+    {
+     "h": "Flowables (F or AF)"
+    },
+    {
+     "p": [
+      "Some active ingredients are **insoluble solids**: substances that will not dissolve in either water or oil.",
+      "These may be formulated as **flowables**.",
+      "Most manufacturers use the letter **\"F\"** by the trade name to designate that the formulation is a flowable.",
+      "However, some use the letter **\"L,\"** meaning that an insoluble material is presented in \"liquid\" form.",
+      "Most flowables are prepared by first impregnating them onto a dry carrier, such as clay.",
+      "Then, the active ingredient plus carrier (or the active ingredient alone) are ground into a fine powder.",
+      "Next, the fine powder is suspended in a very small amount of liquid (and perhaps other inert ingredients).",
+      "The resulting product is a **thick liquid suspension**."
+     ]
+    },
+    {
+     "p": [
+      "Flowables combine many of the characteristics of **liquid emulsifiable concentrates and dry wettable powders**.",
+      "They appear in the \"Liquid Formulations\" section because the end-use product is a thick liquid.",
+      "Flowables are often used for the same types of pest control operations as ECs."
+     ]
+    },
+    {
+     "box": "Advantages",
+     "list": [
+      "Easy to handle and apply; low exposure risk.",
+      "Generally not phytotoxic.",
+      "Seldom clog nozzles.",
+      "Splashes are less likely than with other liquid formulations."
+     ]
+    },
+    {
+     "box": "Disadvantages",
+     "list": [
+      "May settle; need shaking before measuring and mixing.",
+      "Difficult to remove all of product from the container. Containers may be difficult to rinse.",
+      "Require moderate agitation.",
+      "May be **abrasive**; contribute to \"wear and tear\" of spray application equipment.",
+      "Spills may be harder to clean up.",
+      "May leave a visible residue on treated surfaces."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "kind": "mc",
+     "q": "Flowables are made from active ingredients that are what?",
+     "choices": [
+      "Insoluble solids that will not dissolve in water or oil",
+      "Liquids that dissolve in water",
+      "Gases under pressure",
+      "Oils that dissolve in fuel oil"
+     ],
+     "answer": 0,
+     "ref": "p. 55, 'Flowables (F or AF)'",
+     "why": "Flowables are used for insoluble solids.",
+     "id": "c04-s11-t1",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Flowables combine many of the characteristics of which two formulations?",
+     "choices": [
+      "Emulsifiable concentrates and wettable powders",
+      "Dusts and granules",
+      "Aerosols and fumigants",
+      "Baits and pellets"
+     ],
+     "answer": 0,
+     "ref": "p. 55, 'Flowables (F or AF)'",
+     "why": "Flowables combine characteristics of liquid ECs and dry WPs.",
+     "id": "c04-s11-t2",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Which of these is NOT a disadvantage of flowables?",
+     "choices": [
+      "May settle and need shaking",
+      "Containers may be difficult to rinse",
+      "May be abrasive",
+      "Usually phytotoxic"
+     ],
+     "answer": 3,
+     "ref": "p. 55, 'Flowables (F or AF)'",
+     "why": "Flowables are generally not phytotoxic; that is an advantage.",
+     "id": "c04-s11-t3",
+     "src": "test",
+     "style": "not"
+    },
+    {
+     "kind": "mc",
+     "q": "You open a jug of flowable that has been sitting in storage. What does the manual say to do before measuring?",
+     "choices": [
+      "Shake it, because flowables may settle",
+      "Heat it to thin the liquid",
+      "Add a buffer first",
+      "Nothing; flowables never settle"
+     ],
+     "answer": 0,
+     "ref": "p. 55, 'Flowables (F or AF)'",
+     "why": "Flowables may settle and need shaking before measuring and mixing.",
+     "id": "c04-s11-t4",
+     "src": "test",
+     "style": "scenario"
+    },
+    {
+     "kind": "tf",
+     "q": "Some manufacturers use the letter L for a flowable, meaning an insoluble material is presented in liquid form.",
+     "answer": true,
+     "ref": "p. 55, 'Flowables (F or AF)'",
+     "why": "Most use F, but some use L.",
+     "id": "c04-s11-t5",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c04-s12",
+   "chapter": "Chapter 4 · Pesticide Formulations",
+   "title": "Aerosols and smoke or fog generators",
+   "pages": [
+    55,
+    56
+   ],
+   "body": [
+    {
+     "h": "Aerosols (A)"
+    },
+    {
+     "p": [
+      "Aerosol formulations contain one or more active ingredients and a solvent.",
+      "Most aerosols contain a **low percentage** of active ingredient.",
+      "There are two types of aerosol formulations:"
+     ]
+    },
+    {
+     "list": [
+      "The ready-to-use type (often sold in pressurized sealed containers that serve as application devices).",
+      "Those made for use in electric or gasoline-powered aerosol generators that release the formulated product as a smoke or fog."
+     ]
+    },
+    {
+     "h": "Ready-to-use aerosols"
+    },
+    {
+     "p": [
+      "Ready-to-use aerosol formulations are usually small, self-contained units that release pesticide when the nozzle valve is triggered.",
+      "An inert pressurized gas pushes the pesticide through a fine opening when the gas is released, creating fine droplets.",
+      "These products are effective in greenhouses, in small areas inside buildings, or in localized outdoor areas.",
+      "Commercial models, which hold **5 to 10 pounds** of pesticide, are usually **refillable**."
+     ]
+    },
+    {
+     "box": "Advantages",
+     "list": [
+      "Easy to use; convenient.",
+      "Portable.",
+      "Easily stored.",
+      "Convenient way to buy and apply a small amount of pesticide.",
+      "Retain potency for some time."
+     ]
+    },
+    {
+     "box": "Disadvantages",
+     "list": [
+      "Practical for only a few limited or specialized uses.",
+      "Risk of inhalation exposure.",
+      "Hazardous if punctured, overheated, or used near an open flame.",
+      "May be difficult to direct material released to a single target site or pest."
+     ]
+    },
+    {
+     "h": "Formulations for smoke or fog generators"
+    },
+    {
+     "p": [
+      "Formulations for smoke or fog generators are **not packaged and sold under pressure**.",
+      "They are used in machines that break the liquid formulation into a fine mist or fog (aerosol).",
+      "Using a rapidly whirling disk or heated surface, the machines produce and distribute very fine droplets.",
+      "These formulations are used mainly for **insect control in structures** such as greenhouses, barns, and warehouses and for **outdoor mosquito and biting fly control**."
+     ]
+    },
+    {
+     "box": "Advantages",
+     "list": [
+      "Easy way to fill an entire space with pesticide."
+     ]
+    },
+    {
+     "box": "Disadvantages",
+     "list": [
+      "Highly specialized use sites and equipment.",
+      "Difficult to confine to target site or pest.",
+      "Spills and splashes may be difficult to clean up and/or decontaminate.",
+      "May require **respiratory protection** to prevent inhalation exposure."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "kind": "mc",
+     "q": "Commercial ready-to-use aerosol models hold how much pesticide?",
+     "choices": [
+      "5 to 10 pounds",
+      "1 to 2 pounds",
+      "20 to 50 pounds",
+      "Less than 1 ounce"
+     ],
+     "answer": 0,
+     "ref": "p. 56, 'Ready-to-Use Aerosols'",
+     "why": "Commercial models hold 5 to 10 pounds and are usually refillable.",
+     "id": "c04-s12-t1",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Which of these is NOT true of formulations for smoke or fog generators?",
+     "choices": [
+      "They are packaged and sold under pressure",
+      "They are used in machines that make a fine mist or fog",
+      "They are used mainly for insect control in structures",
+      "They may require respiratory protection"
+     ],
+     "answer": 0,
+     "ref": "p. 56, 'Formulations for Smoke or Fog Generators'",
+     "why": "Smoke and fog formulations are not packaged and sold under pressure.",
+     "id": "c04-s12-t2",
+     "src": "test",
+     "style": "not"
+    },
+    {
+     "kind": "mc",
+     "q": "You are fogging the inside of a warehouse for insects. Which disadvantage of fog formulations matters most for your own safety?",
+     "choices": [
+      "They may require respiratory protection to prevent inhalation exposure",
+      "They plug screens and nozzles",
+      "They settle in the tank",
+      "They are phytotoxic"
+     ],
+     "answer": 0,
+     "ref": "p. 56, 'Formulations for Smoke or Fog Generators'",
+     "why": "Fog formulations may require respiratory protection.",
+     "id": "c04-s12-t3",
+     "src": "test",
+     "style": "scenario"
+    },
+    {
+     "kind": "mc",
+     "q": "Which is a disadvantage of ready-to-use aerosols?",
+     "choices": [
+      "Hazardous if punctured, overheated, or used near an open flame",
+      "Require constant agitation",
+      "Very high percentage of active ingredient",
+      "Abrasive to pumps"
+     ],
+     "answer": 0,
+     "ref": "p. 56, 'Ready-to-Use Aerosols'",
+     "why": "RTU aerosol cans are hazardous if punctured, overheated, or near open flame.",
+     "id": "c04-s12-t4",
+     "src": "test"
+    },
+    {
+     "kind": "tf",
+     "q": "Most aerosols contain a high percentage of active ingredient.",
+     "answer": false,
+     "ref": "p. 55, 'Aerosols (A)'",
+     "why": "Most aerosols contain a low percentage of active ingredient.",
+     "id": "c04-s12-t5",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c04-s13",
+   "chapter": "Chapter 4 · Pesticide Formulations",
+   "title": "Dry formulations: dusts (D)",
+   "pages": [
+    56,
+    57
+   ],
+   "body": [
+    {
+     "h": "Dry or solid formulations"
+    },
+    {
+     "p": [
+      "There are two general types of dry formulations.",
+      "Some are ready-to-use.",
+      "Others are concentrates, which must be mixed with water and applied as a spray."
+     ]
+    },
+    {
+     "h": "Dusts (D)"
+    },
+    {
+     "p": [
+      "Most dust formulations are ready-to-use and contain a low percentage of active ingredient (usually **10% or less** by weight).",
+      "A few dust formulations, however, are concentrates and contain a much higher percentage of active ingredient.",
+      "These concentrates must be mixed with dry inert carriers before application."
+     ]
+    },
+    {
+     "p": [
+      "Dusts have one or more active ingredients plus a very fine, dry inert carrier made from **talc, chalk, clay, nut hulls, or volcanic ash**.",
+      "The size of individual dust particles varies, but all are quite small.",
+      "Due to their small size, dusts need careful handling to prevent nontarget exposure, including **drift**.",
+      "They are **not water-soluble**.",
+      "Therefore, do not mix them with a liquid solvent."
+     ]
+    },
+    {
+     "p": [
+      "**Dusts are always used dry.**",
+      "They are often used as **seed treatments** and in some other agricultural operations.",
+      "Some ornamental and garden pest management products aimed at homeowners are dust formulations.",
+      "In structures, dust formulations are useful to treat **cracks and crevices** and for spot treatments to control insect pests.",
+      "Dusts are also a good tool to control lice, fleas, and other external parasites on pets and livestock."
+     ]
+    },
+    {
+     "fig": "p57-dust"
+    },
+    {
+     "p": [
+      "Special dusts known as **tracking powders** are effective for insect and rodent monitoring and control.",
+      "These products are finely ground dusts with an adsorbed **stomach poison**.",
+      "Insects and rodents walk through the dust, pick it up on their legs and bodies or feet and fur, and ingest the poisonous dust when grooming.",
+      "Tracking powders are effective in sites and situations where **bait acceptance is poor** (for example, where food is abundant).",
+      "NOTE: Another option is to use a nontoxic powder, such as **talc or flour**, to monitor and track rodent activity in buildings."
+     ]
+    },
+    {
+     "fig": "p57-bulbduster"
+    },
+    {
+     "box": "Advantages",
+     "list": [
+      "Usually ready-to-use; no mixing.",
+      "A good alternative where moisture from a spray might cause damage.",
+      "Applied with simple application equipment.",
+      "Effective in hard-to-reach indoor areas."
+     ]
+    },
+    {
+     "box": "Disadvantages",
+     "list": [
+      "Easily drift off target during application.",
+      "Residues do not adhere to treated surfaces, including foliage, as well as liquids do; may easily wash off or blow away.",
+      "May irritate eyes, nose, throat, and skin; pose a relatively high inhalation exposure risk to handlers.",
+      "Dampness may cause product to clump and equipment to clog; difficult to apply in damp or humid environments.",
+      "Some kinds of application equipment and devices are hard to calibrate.",
+      "Difficult to get an even distribution of particles."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "p57-dust",
+     "title": "Dust formulations are always used dry.",
+     "page": "p. 57",
+     "imgFile": "p57-dust.jpg"
+    },
+    {
+     "id": "p57-bulbduster",
+     "title": "A bulb duster used for applying dust formulations to cracks, crevices, and voids in buildings.",
+     "page": "p. 57",
+     "imgFile": "p57-bulbduster.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "kind": "mc",
+     "q": "Most ready-to-use dust formulations contain how much active ingredient?",
+     "choices": [
+      "Usually 10% or less by weight",
+      "Usually 50% or more",
+      "1% to 15%",
+      "Almost 100%"
+     ],
+     "answer": 0,
+     "ref": "p. 56, 'Dusts (D)'",
+     "why": "Most dusts are RTU with usually 10% or less a.i. by weight.",
+     "id": "c04-s13-t1",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "How do tracking powders work?",
+     "choices": [
+      "Pests walk through the dust, pick it up, and ingest it when grooming",
+      "They release a gas that fills the space",
+      "They attract pests with food",
+      "They are absorbed through plant roots"
+     ],
+     "answer": 0,
+     "ref": "p. 57, 'Dusts (D)'",
+     "why": "Tracking powders carry an adsorbed stomach poison that pests swallow while grooming.",
+     "id": "c04-s13-t2",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Which of these is NOT an advantage of dusts?",
+     "choices": [
+      "Usually ready-to-use",
+      "Effective in hard-to-reach indoor areas",
+      "Residues adhere to foliage better than liquids",
+      "A good alternative where moisture from a spray might cause damage"
+     ],
+     "answer": 2,
+     "ref": "p. 57, 'Dusts (D)'",
+     "why": "Dust residues do not adhere as well as liquids and may wash off or blow away.",
+     "id": "c04-s13-t3",
+     "src": "test",
+     "style": "not"
+    },
+    {
+     "kind": "mc",
+     "q": "A restaurant has a rodent problem, but the rodents ignore bait because food is everywhere. Which dust product does the manual describe for this situation?",
+     "choices": [
+      "Tracking powder",
+      "Seed treatment dust",
+      "Wettable powder",
+      "Talc mixed with water"
+     ],
+     "answer": 0,
+     "ref": "p. 57, 'Dusts (D)'",
+     "why": "Tracking powders are effective where bait acceptance is poor, for example, where food is abundant.",
+     "id": "c04-s13-t4",
+     "src": "test",
+     "style": "scenario"
+    },
+    {
+     "kind": "tf",
+     "q": "Dusts may be mixed with a liquid solvent before application.",
+     "answer": false,
+     "ref": "p. 57, 'Dusts (D)'",
+     "why": "Dusts are not water-soluble, are always used dry, and should not be mixed with a liquid solvent.",
+     "id": "c04-s13-t5",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "What nontoxic powders does the manual suggest for monitoring rodent activity in buildings?",
+     "choices": [
+      "Talc or flour",
+      "Clay or silica",
+      "Chalk or volcanic ash",
+      "Sugar or salt"
+     ],
+     "answer": 0,
+     "ref": "p. 57, 'Dusts (D)'",
+     "why": "The NOTE suggests a nontoxic powder such as talc or flour.",
+     "id": "c04-s13-t6",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c04-s14",
+   "chapter": "Chapter 4 · Pesticide Formulations",
+   "title": "Granules (G)",
+   "pages": [
+    57,
+    58
+   ],
+   "body": [
+    {
+     "h": "Granules (G)"
+    },
+    {
+     "p": [
+      "Granular formulations are similar to dust formulations; however, granular particles are **larger and heavier**.",
+      "Like dusts, they are **not water-soluble**.",
+      "They are ready-to-use, not intended to be mixed with water and applied as a liquid suspension.",
+      "The coarse particles that serve as carriers for granular formulations are adsorptive substances like clay or absorptive plant material such as ground corncobs or walnut shells.",
+      "The active ingredient either coats the outside of the granules or is absorbed into them.",
+      "The amount of active ingredient is relatively low, usually ranging from **1% to 15%**."
+     ]
+    },
+    {
+     "p": [
+      "Because many granular formulations use carriers that absorb moisture, **humidity** will affect particle size and mass.",
+      "This, in turn, will affect flow rate.",
+      "Also, different \"batches\" of the same formulation may differ slightly in size or shape and density.",
+      "For these reasons, you must **calibrate granular application devices often**."
+     ]
+    },
+    {
+     "fig": "p58-granules"
+    },
+    {
+     "p": [
+      "Once applied, granules **slowly release** the adsorbed or absorbed active ingredient.",
+      "Some require soil moisture, rain, or watering to initiate the release of the active ingredient.",
+      "Other granules do so as they decompose.",
+      "Granular pesticides are mostly used to apply chemicals to the **soil**, where they control weeds, nematodes, and insects or are absorbed by plant roots.",
+      "Most granular formulations are used to deliver **systemic pesticides**.",
+      "Granules are a common choice in many sites and situations.",
+      "Aerial applicators sometimes use granular formulations to reduce drift or penetrate dense vegetation.",
+      "Granular formulations are also useful in aquatic situations to control mosquito larvae and aquatic weeds."
+     ]
+    },
+    {
+     "box": "Advantages",
+     "list": [
+      "Ready-to-use; no mixing.",
+      "Drift hazard is low, and particles settle quickly.",
+      "Low applicator hazard: no spray; little dust.",
+      "Weight carries the formulation through foliage to soil or water target.",
+      "Applied with simple application equipment, such as seeders or fertilizer spreaders.",
+      "May break down more slowly than WPs or ECs because of a slow-release coating."
+     ]
+    },
+    {
+     "box": "Disadvantages",
+     "list": [
+      "Application equipment needs frequent calibration.",
+      "Application equipment is not as convenient to calibrate as spray equipment. Released particles are measured by **weight instead of by volume**.",
+      "Uniform application may be difficult with some devices, for example, rotary spreaders.",
+      "Granules do not stick to foliage or other uneven surfaces. For this reason, **contact products are rarely formulated this way**.",
+      "May need to be incorporated into soil or planting medium.",
+      "May need moisture to release the active ingredient; may not be effective in **drought** conditions.",
+      "May be hazardous to nontarget species, especially **waterfowl and other birds**. This is because birds may feed on grain- or seed-like granules or mistake them for \"grit\" they need to grind up their food.",
+      "Bulky; low percentage of active ingredient per unit volume."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "p58-granules",
+     "title": "Granular formulations are larger and heavier than dust formulations.",
+     "page": "p. 58",
+     "imgFile": "p58-granules.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "kind": "mc",
+     "q": "The amount of active ingredient in granules usually ranges from what?",
+     "choices": [
+      "1% to 15%",
+      "10% or less",
+      "5% to 95%",
+      "Almost 100%"
+     ],
+     "answer": 0,
+     "ref": "p. 57, 'Granules (G)'",
+     "why": "Granules are relatively low in a.i., usually 1% to 15%.",
+     "id": "c04-s14-t1",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Why must granular application devices be calibrated often?",
+     "choices": [
+      "Humidity changes particle size and mass, and batches differ slightly in size, shape, and density",
+      "Granules dissolve in the hopper",
+      "Granules are abrasive to spray nozzles",
+      "Granules are measured by volume"
+     ],
+     "answer": 0,
+     "ref": "pp. 57–58, 'Granules (G)'",
+     "why": "Moisture and batch differences change flow rate, so calibrate often.",
+     "id": "c04-s14-t2",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Which of these is NOT an advantage of granules?",
+     "choices": [
+      "Low drift hazard",
+      "Ready-to-use; no mixing",
+      "They stick well to foliage",
+      "Applied with simple equipment such as fertilizer spreaders"
+     ],
+     "answer": 2,
+     "ref": "p. 58, 'Granules (G)'",
+     "why": "Granules do not stick to foliage, so contact products are rarely formulated this way.",
+     "id": "c04-s14-t3",
+     "src": "test",
+     "style": "not"
+    },
+    {
+     "kind": "mc",
+     "q": "Why are granules hazardous to waterfowl and other birds?",
+     "choices": [
+      "Birds may eat them as food or mistake them for grit",
+      "The granules release a gas birds inhale",
+      "The granules drift onto nests",
+      "The granules make water toxic only at night"
+     ],
+     "answer": 0,
+     "ref": "p. 58, 'Granules (G)'",
+     "why": "Birds may feed on grain- or seed-like granules or mistake them for grit.",
+     "id": "c04-s14-t4",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "A turf manager applies a granular product during a long dry spell and gets poor control. What is the most likely reason, according to the manual?",
+     "choices": [
+      "Granules may need moisture to release the active ingredient",
+      "Granules drift badly in dry air",
+      "Granules are phytotoxic in drought",
+      "Granules must be mixed with water first"
+     ],
+     "answer": 0,
+     "ref": "p. 58, 'Granules (G)'",
+     "why": "Granules may need moisture and may not be effective in drought conditions.",
+     "id": "c04-s14-t5",
+     "src": "test",
+     "style": "scenario"
+    },
+    {
+     "kind": "tf",
+     "q": "Most granular formulations are used to deliver systemic pesticides.",
+     "answer": true,
+     "ref": "p. 58, 'Granules (G)'",
+     "why": "The manual states this directly.",
+     "id": "c04-s14-t6",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c04-s15",
+   "chapter": "Chapter 4 · Pesticide Formulations",
+   "title": "Pellets and wettable powders",
+   "pages": [
+    58,
+    59
+   ],
+   "body": [
+    {
+     "h": "Pellets (P or PS)"
+    },
+    {
+     "p": [
+      "Most pellet formulations are very similar to granular formulations in their uses, advantages, and disadvantages.",
+      "However, in pellet formulations, all the particles are **more or less the same weight and shape**.",
+      "They are produced by combining the active ingredient with inert materials to form a **\"slurry\"**, a thick liquid mixture.",
+      "This mixture is then **extruded under pressure**.",
+      "As a result, pellets are **round in cross section** and cut to a specific length.",
+      "Because pellet particles are more uniform, you can apply them with **precision**.",
+      "However, in many cases, pellets are applied as **spot treatments**.",
+      "A few **fumigants** are formulated as pellets and are clearly labeled as such to avoid confusing them with nonfumigant pellets."
+     ]
+    },
+    {
+     "fig": "p58-pellets"
+    },
+    {
+     "h": "Wettable powders (WP or W)"
+    },
+    {
+     "p": [
+      "Wettable powders are dry, finely ground solid materials.",
+      "Most include **wetting and/or dispersing agents**.",
+      "Usually, they must be mixed with water and applied as a spray.",
+      "A few products, however, may be applied dry or as a liquid suspension."
+     ]
+    },
+    {
+     "p": [
+      "Wettable powders contain **5% to 95%** active ingredient, usually **50% or more**.",
+      "Wettable powder particles **do not dissolve** in water.",
+      "When mixed with water, they form a **suspension**.",
+      "They will settle out quickly without constant agitation to keep them suspended."
+     ]
+    },
+    {
+     "p": [
+      "To prepare a spray suspension, you must form a **slurry**.",
+      "Mix a WP with a small amount of water, and then dilute this slurry mixture further."
+     ]
+    },
+    {
+     "p": [
+      "Wettable powders are effective for most pest problems and in most types of spray equipment where agitation is possible.",
+      "They have **excellent residual activity** and do not usually harm treated surfaces.",
+      "When you apply a WP spray suspension to a target, most of the pesticide **remains on the surface**.",
+      "This is true even for porous materials, such as concrete, plaster, and untreated wood.",
+      "In such cases, only the water carrier penetrates the porous material.",
+      "Wettable powder particles remain on the treated surface."
+     ]
+    },
+    {
+     "fig": "p59-wp"
+    },
+    {
+     "box": "Advantages",
+     "list": [
+      "Easy to store, transport, and handle.",
+      "Less likely than ECs and other petroleum-based formulations to harm treated plants, animals, and surfaces.",
+      "As a rule, not phytotoxic.",
+      "Less risk of skin and eye absorption than ECs and other liquid formulations."
+     ]
+    },
+    {
+     "box": "Disadvantages",
+     "list": [
+      "Not easy to measure; must be weighed.",
+      "Not easy to mix.",
+      "**Inhalation hazard** to applicator while measuring and mixing the concentrated powder.",
+      "Suspended particles require good and constant agitation (usually mechanical) in the spray tank and quickly settle out if agitation ceases.",
+      "Abrasive to pumps and nozzles; cause equipment wear.",
+      "Difficult to mix in very hard or very alkaline water.",
+      "If not mixed properly, may clog nozzles and screens.",
+      "Residues may be visible on treated surfaces."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "p58-pellets",
+     "title": "In pellet formulations, all particles are the same weight and shape.",
+     "page": "p. 58",
+     "imgFile": "p58-pellets.jpg"
+    },
+    {
+     "id": "p59-wp",
+     "title": "Wettable powders are dry, finely ground formulations that look like dusts.",
+     "page": "p. 59",
+     "imgFile": "p59-wp.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c04-s15-r7",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which type of dry/solid pesticide formulation consists of particles that are the same weight and shape?",
+     "choices": [
+      "Bait.",
+      "Granule.",
+      "Pellet."
+     ],
+     "answer": 2,
+     "ref": "p. 58, 'Pellets (P or PS)'; p. 67, Review question 7",
+     "why": "In pellet formulations, all particles are more or less the same weight and shape."
+    },
+    {
+     "kind": "mc",
+     "q": "What is the key difference between pellets and granules?",
+     "choices": [
+      "In pellets, all particles are more or less the same weight and shape",
+      "Pellets dissolve in water",
+      "Pellets have almost 100% active ingredient",
+      "Pellets are always fumigants"
+     ],
+     "answer": 0,
+     "ref": "p. 58, 'Pellets (P or PS)'",
+     "why": "Pellets are uniform; granules can vary in size, shape, and density.",
+     "id": "c04-s15-t1",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "How are pellets produced?",
+     "choices": [
+      "A slurry of active and inert ingredients is extruded under pressure and cut to length",
+      "Active ingredient is sprayed onto corncobs",
+      "A powder is compressed into dust-free granules",
+      "Droplets are coated with plastic"
+     ],
+     "answer": 0,
+     "ref": "p. 58, 'Pellets (P or PS)'",
+     "why": "Pellets are extruded from a slurry, so they are round in cross section.",
+     "id": "c04-s15-t2",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Which of these is NOT true of pellets, according to the manual?",
+     "choices": [
+      "They can be applied with precision",
+      "In many cases they are applied as spot treatments",
+      "A few fumigants are formulated as pellets",
+      "Fumigant pellets look and are labeled the same as nonfumigant pellets"
+     ],
+     "answer": 3,
+     "ref": "p. 58, 'Pellets (P or PS)'",
+     "why": "Fumigant pellets are clearly labeled to avoid confusing them with nonfumigant pellets.",
+     "id": "c04-s15-t3",
+     "src": "test",
+     "style": "not"
+    },
+    {
+     "kind": "mc",
+     "q": "You find two pellet products in a shed. One label says it is a fumigant. Why does the manual stress that label?",
+     "choices": [
+      "To avoid confusing fumigant pellets with nonfumigant pellets",
+      "Because fumigant pellets are always green",
+      "Because fumigant pellets must be dissolved in water",
+      "Because only fumigant pellets need calibration"
+     ],
+     "answer": 0,
+     "ref": "p. 58, 'Pellets (P or PS)'",
+     "why": "Fumigant pellets are clearly labeled so they are not confused with ordinary pellets.",
+     "id": "c04-s15-t4",
+     "src": "test",
+     "style": "scenario"
+    },
+    {
+     "kind": "mc",
+     "q": "Wettable powders contain how much active ingredient?",
+     "choices": [
+      "5% to 95%, usually 50% or more",
+      "1% to 15%",
+      "Usually 10% or less",
+      "Usually less than 5%"
+     ],
+     "answer": 0,
+     "ref": "p. 59, 'Wettable Powders (WP or W)'",
+     "why": "WPs contain 5% to 95% a.i., usually 50% or more.",
+     "id": "c04-s15-t5",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "How do you prepare a wettable powder spray suspension?",
+     "choices": [
+      "Form a slurry with a small amount of water, then dilute it further",
+      "Dump the powder into a full tank with no agitation",
+      "Dissolve it in fuel oil",
+      "Apply it dry, then water it in"
+     ],
+     "answer": 0,
+     "ref": "p. 59, 'Wettable Powders (WP or W)'",
+     "why": "You must form a slurry first, then dilute.",
+     "id": "c04-s15-t6",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "You spray a WP on an untreated wood wall to control insects. What happens to the pesticide?",
+     "choices": [
+      "Only the water carrier soaks in; most of the pesticide stays on the surface",
+      "The pesticide soaks deep into the wood",
+      "The pesticide dissolves and evaporates",
+      "Nothing stays on the surface"
+     ],
+     "answer": 0,
+     "ref": "p. 59, 'Wettable Powders (WP or W)'",
+     "why": "On porous surfaces, only the water penetrates and WP particles remain on the surface.",
+     "id": "c04-s15-t7",
+     "src": "test",
+     "style": "scenario"
+    },
+    {
+     "kind": "mc",
+     "q": "Which of these is NOT a disadvantage of wettable powders?",
+     "choices": [
+      "Inhalation hazard while measuring and mixing",
+      "Abrasive to pumps and nozzles",
+      "Phytotoxic as a rule",
+      "Difficult to mix in very hard or very alkaline water"
+     ],
+     "answer": 2,
+     "ref": "p. 59, 'Wettable Powders (WP or W)'",
+     "why": "As a rule, WPs are not phytotoxic; that is an advantage.",
+     "id": "c04-s15-t8",
+     "src": "test",
+     "style": "not"
+    },
+    {
+     "kind": "tf",
+     "q": "Wettable powder particles dissolve in water.",
+     "answer": false,
+     "ref": "p. 59, 'Wettable Powders (WP or W)'",
+     "why": "WP particles do not dissolve; they form a suspension that needs constant agitation.",
+     "id": "c04-s15-t9",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c04-s16",
+   "chapter": "Chapter 4 · Pesticide Formulations",
+   "title": "Water-dispersible granules and soluble powders",
+   "pages": [
+    59,
+    60
+   ],
+   "body": [
+    {
+     "h": "Water-dispersible granules (WDG) or dry flowables (DF)"
+    },
+    {
+     "p": [
+      "Water-dispersible granular formulations are **wettable powder formulations compressed into dust-free, granule-sized particles**.",
+      "Most come with a product-specific measuring device, with dry ounce (or pound) increment marks based on product density (weight per unit volume).",
+      "Because of this and the fact that they readily flow or pour out of their containers, they are easier to measure and cleaner to handle than WPs.",
+      "Like wettable powders, water-dispersible granules are mixed with water and applied as a spray suspension.",
+      "Once in water, the granules break apart into fine powder.",
+      "The formulation requires **constant agitation** to keep it suspended in water.",
+      "Water-dispersible granules share the advantages and disadvantages of wettable powders.",
+      "However, WDGs have one added benefit: **reduced handler exposure risk**.",
+      "This is because WDGs/DFs are:"
+     ]
+    },
+    {
+     "list": [
+      "Made of larger, less \"dusty\" particles.",
+      "Easier to remove from their container and measure."
+     ]
+    },
+    {
+     "gallery": [
+      "p59-wdg-before",
+      "p59-wdg-after"
+     ]
+    },
+    {
+     "h": "Soluble powders (SP or WSP)"
+    },
+    {
+     "p": [
+      "Soluble powder formulations look like wettable powders.",
+      "However, when mixed with water, soluble powders **dissolve readily** in water and form a **true solution**.",
+      "After a thorough mixing, **no additional agitation** is necessary.",
+      "The amount of active ingredient in soluble powders ranges from **15% to 95%**; it usually is **more than 50%**.",
+      "Soluble powders have all the advantages of WPs but only one of the disadvantages: **inhalation hazard during mixing**.",
+      "Not many pesticides are available in this formulation because very few active ingredients dissolve in water."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "p59-wdg-before",
+     "title": "Water-dispersible granule before mixing.",
+     "page": "p. 59",
+     "imgFile": "p59-wdg-before.jpg"
+    },
+    {
+     "id": "p59-wdg-after",
+     "title": "Water-dispersible granule after mixing.",
+     "page": "p. 59",
+     "imgFile": "p59-wdg-after.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c04-s16-r6",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which dry/solid formulation is mixed in water and reduces the risk of inhalation exposure during mixing and loading?",
+     "choices": [
+      "Soluble powder (SP).",
+      "Water-dispersible granule (WDG) or dry flowable (DF).",
+      "Wettable powder (WP)."
+     ],
+     "answer": 1,
+     "ref": "p. 59, 'Water-Dispersible Granules (WDG) or Dry Flowables (DF)'; p. 67, Review question 6",
+     "why": "WDGs have larger, less dusty particles, so handler exposure is reduced; SPs and WPs keep the inhalation hazard."
+    },
+    {
+     "kind": "mc",
+     "q": "What are water-dispersible granules?",
+     "choices": [
+      "Wettable powder formulations compressed into dust-free, granule-sized particles",
+      "Granules that dissolve into a true solution",
+      "Ready-to-use granules spread dry on soil",
+      "Granules coated in plastic"
+     ],
+     "answer": 0,
+     "ref": "p. 59, 'Water-Dispersible Granules (WDG) or Dry Flowables (DF)'",
+     "why": "WDGs are compressed wettable powders.",
+     "id": "c04-s16-t1",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "What one added benefit do WDGs have over wettable powders?",
+     "choices": [
+      "Reduced handler exposure risk",
+      "No agitation needed",
+      "They form a true solution",
+      "They are not abrasive"
+     ],
+     "answer": 0,
+     "ref": "p. 59, 'Water-Dispersible Granules (WDG) or Dry Flowables (DF)'",
+     "why": "Larger, less dusty particles that are easier to measure reduce handler exposure.",
+     "id": "c04-s16-t2",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Which of these is NOT true of soluble powders?",
+     "choices": [
+      "They form a true solution in water",
+      "No additional agitation is needed after thorough mixing",
+      "Many pesticides are available in this formulation",
+      "Their one WP disadvantage is inhalation hazard during mixing"
+     ],
+     "answer": 2,
+     "ref": "p. 60, 'Soluble Powders (SP or WSP)'",
+     "why": "Not many pesticides come as soluble powders because very few active ingredients dissolve in water.",
+     "id": "c04-s16-t3",
+     "src": "test",
+     "style": "not"
+    },
+    {
+     "kind": "mc",
+     "q": "A crew mixes a WDG into the spray tank, then shuts off the agitator during a long lunch break. What does the manual predict?",
+     "choices": [
+      "The product will not stay suspended, because WDGs need constant agitation",
+      "Nothing; WDGs form a true solution",
+      "The product will turn into a gas",
+      "The product will become phytotoxic"
+     ],
+     "answer": 0,
+     "ref": "p. 59, 'Water-Dispersible Granules (WDG) or Dry Flowables (DF)'",
+     "why": "WDGs break into fine powder in water and need constant agitation to stay suspended.",
+     "id": "c04-s16-t4",
+     "src": "test",
+     "style": "scenario"
+    },
+    {
+     "kind": "mc",
+     "q": "Soluble powders contain how much active ingredient?",
+     "choices": [
+      "15% to 95%, usually more than 50%",
+      "5% to 95%, usually 50% or more",
+      "1% to 15%",
+      "Usually less than 5%"
+     ],
+     "answer": 0,
+     "ref": "p. 60, 'Soluble Powders (SP or WSP)'",
+     "why": "Soluble powders range from 15% to 95% a.i., usually more than 50%.",
+     "id": "c04-s16-t5",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c04-s17",
+   "chapter": "Chapter 4 · Pesticide Formulations",
+   "title": "Baits (B) and pastes, gels, and injectable baits",
+   "pages": [
+    60,
+    60
+   ],
+   "body": [
+    {
+     "h": "Baits (B)"
+    },
+    {
+     "p": [
+      "A **bait** formulation is an active ingredient mixed with **food or another attractive substance**.",
+      "The bait either attracts the pests or is placed where the pests will find it.",
+      "Many baits are solid (blocks, granules, or pellets), but some are liquids, pastes, or gels.",
+      "The amount of active ingredient in most bait formulations is quite low, usually **less than 5%**."
+     ]
+    },
+    {
+     "p": [
+      "Baits are used inside buildings to control ants, cockroaches, flies, and other insects.",
+      "Outdoors, they can control **vertebrate pests**, such as rodents, other mammals, and birds as well as snails, slugs, and some insects.",
+      "Applicators must place bait stations in safe, strategic locations while following label directions to protect children and nontarget organisms."
+     ]
+    },
+    {
+     "box": "Advantages",
+     "list": [
+      "Ready-to-use.",
+      "Entire area need not be covered because pest goes to bait.",
+      "Control pests that move in and out of an area."
+     ]
+    },
+    {
+     "box": "Disadvantages",
+     "list": [
+      "May be attractive to children and pets.",
+      "May kill domestic animals and nontarget wildlife.",
+      "Require careful placement and inspection.",
+      "Pest may prefer the crop or other food to the bait.",
+      "Dead vertebrate pests may cause odor problems.",
+      "If baits are not removed after the pesticide stops working, they may serve as a food supply for the target pest or other pests.",
+      "May not work in situations where pests have many other food or water sources."
+     ]
+    },
+    {
+     "p": [
+      "For information about liquid baits, see \"Liquid Formulations\" above."
+     ]
+    },
+    {
+     "h": "Pastes, gels, and other injectable baits"
+    },
+    {
+     "p": [
+      "Pastes and gel baits are mainly used in the pest control industry for **ants and cockroaches**.",
+      "In fact, insecticides formulated as pastes and gels are now the **primary formulations used in cockroach control**.",
+      "They are designed to be injected or placed as either a bead or dot inside small cracks and crevices of building elements where insects tend to hide or travel.",
+      "Two basic types of tools are used to apply pastes and gels: **syringes and bait guns**.",
+      "The bait is forced out of the tip of the device by applying pressure to a plunger or trigger."
+     ]
+    },
+    {
+     "fig": "p60-baitgun"
+    },
+    {
+     "box": "Advantages",
+     "list": [
+      "Odorless; no vapors.",
+      "Low human toxicity.",
+      "Last for long periods.",
+      "Low applicator exposure risk.",
+      "Hidden placements minimize human and pet exposure.",
+      "Very accurate in their placement and dosage.",
+      "Easily placed where insects shelter for maximum effectiveness."
+     ]
+    },
+    {
+     "box": "Disadvantages",
+     "list": [
+      "Can become contaminated from exposure to other pesticides and cleaning products.",
+      "When exposed to high temperatures, gels can run and drip.",
+      "May stain porous surfaces.",
+      "Repeated applications can cause an unsightly buildup."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "p60-baitgun",
+     "title": "A bait gun used by the pest control industry to treat small cracks and crevices.",
+     "page": "p. 60",
+     "imgFile": "p60-baitgun.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "kind": "mc",
+     "q": "The amount of active ingredient in most bait formulations is usually what?",
+     "choices": [
+      "Less than 5%",
+      "10% or less",
+      "1% to 15%",
+      "More than 50%"
+     ],
+     "answer": 0,
+     "ref": "p. 60, 'Baits (B)'",
+     "why": "Most baits are quite low in a.i., usually less than 5%.",
+     "id": "c04-s17-t1",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "What are now the primary formulations used in cockroach control?",
+     "choices": [
+      "Pastes and gels",
+      "Dusts",
+      "Fumigants",
+      "Ultra-low-volume sprays"
+     ],
+     "answer": 0,
+     "ref": "p. 60, 'Pastes, Gels, and Other Injectable Baits'",
+     "why": "Insecticides formulated as pastes and gels are now the primary cockroach control formulations.",
+     "id": "c04-s17-t2",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Which of these is NOT a disadvantage of baits?",
+     "choices": [
+      "May be attractive to children and pets",
+      "Pest may prefer the crop or other food",
+      "The entire area must be covered",
+      "Dead vertebrate pests may cause odor problems"
+     ],
+     "answer": 2,
+     "ref": "p. 60, 'Baits (B)'",
+     "why": "The entire area need not be covered because the pest goes to the bait; that is an advantage.",
+     "id": "c04-s17-t3",
+     "src": "test",
+     "style": "not"
+    },
+    {
+     "kind": "mc",
+     "q": "A technician leaves rodent bait out for months after it stops working. What does the manual warn can happen?",
+     "choices": [
+      "The old bait may serve as a food supply for the target pest or other pests",
+      "The bait turns into a fumigant",
+      "The bait becomes more toxic over time",
+      "Nothing; old bait is harmless"
+     ],
+     "answer": 0,
+     "ref": "p. 60, 'Baits (B)'",
+     "why": "Baits not removed after they stop working may feed the target pest or other pests.",
+     "id": "c04-s17-t4",
+     "src": "test",
+     "style": "scenario"
+    },
+    {
+     "kind": "mc",
+     "q": "Which is a disadvantage of gel baits?",
+     "choices": [
+      "When exposed to high temperatures, gels can run and drip",
+      "They have strong vapors",
+      "High human toxicity",
+      "Inaccurate placement"
+     ],
+     "answer": 0,
+     "ref": "p. 60, 'Pastes, Gels, and Other Injectable Baits'",
+     "why": "Gels can run and drip in heat, stain porous surfaces, and build up.",
+     "id": "c04-s17-t5",
+     "src": "test"
+    },
+    {
+     "kind": "short",
+     "q": "Name the two basic types of tools used to apply pastes and gels.",
+     "answer": "Syringes and bait guns",
+     "keys": [
+      [
+       "syringe",
+       "syringes"
+      ],
+      [
+       "gun",
+       "guns"
+      ]
+     ],
+     "ref": "p. 60, 'Pastes, Gels, and Other Injectable Baits'",
+     "why": "Pastes and gels are applied with syringes and bait guns.",
+     "id": "c04-s17-t6",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c04-s18",
+   "chapter": "Chapter 4 · Pesticide Formulations",
+   "title": "Other formulations: fumigants",
+   "pages": [
+    61,
+    61
+   ],
+   "body": [
+    {
+     "h": "Other formulations"
+    },
+    {
+     "p": [
+      "This section describes other formulations that:"
+     ]
+    },
+    {
+     "list": [
+      "Are not easily classified as liquid or dry/solid.",
+      "Are formulated and/or applied as gases.",
+      "Have some special packaging or delivery method."
+     ]
+    },
+    {
+     "h": "Fumigants"
+    },
+    {
+     "p": [
+      "**Fumigants** are pesticides that deliver the active ingredient to the target site in the form of a **gas**.",
+      "Some active ingredients are liquids when packaged under high pressure but become gases when released.",
+      "Other active ingredients are **volatile** liquids.",
+      "They may be enclosed in an ordinary container and not packaged under pressure.",
+      "Still others are solids that release gases after application in humid conditions or in the presence of water or water vapor.",
+      "Fumigants are used for structural pest control, in food- and grain-storage facilities, and in regulatory pest control at **ports of entry** and state and national borders.",
+      "In agricultural pest control, fumigants are effective in soil, greenhouses, and commodity storage areas (such as grain bins)."
+     ]
+    },
+    {
+     "fig": "p61-fumigants"
+    },
+    {
+     "box": "Advantages",
+     "list": [
+      "Toxic to a wide range of pests.",
+      "Can penetrate cracks, crevices, wood, and tightly packed areas (such as soil or grains).",
+      "A single treatment will usually kill most pests in the treated space."
+     ]
+    },
+    {
+     "box": "Disadvantages",
+     "list": [
+      "The target site must be **enclosed or covered** to prevent the gas from escaping.",
+      "**Nonspecific** and highly toxic to humans and all other organisms.",
+      "**High inhalation exposure risk.**",
+      "Most require the use of specialized personal protective equipment.",
+      "May require the use of specialized application equipment.",
+      "Some have specific temperature requirements."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "p61-fumigants",
+     "title": "Fumigants are packaged in liquid and solid forms. Both turn into poisonous gases when applied.",
+     "page": "p. 61",
+     "imgFile": "p61-fumigants.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "kind": "mc",
+     "q": "What is a fumigant?",
+     "choices": [
+      "A pesticide that delivers the active ingredient to the target site in the form of a gas",
+      "A fine dust blown into cracks",
+      "A smoke made by a fog generator",
+      "A liquid bait in a station"
+     ],
+     "answer": 0,
+     "ref": "p. 61, 'Fumigants'",
+     "why": "Fumigants deliver the active ingredient as a gas.",
+     "id": "c04-s18-t1",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Which of these is NOT an advantage of fumigants?",
+     "choices": [
+      "Toxic to a wide range of pests",
+      "Can penetrate tightly packed areas such as grain",
+      "A single treatment usually kills most pests in the space",
+      "Low inhalation exposure risk"
+     ],
+     "answer": 3,
+     "ref": "p. 61, 'Fumigants'",
+     "why": "Fumigants carry a high inhalation exposure risk.",
+     "id": "c04-s18-t2",
+     "src": "test",
+     "style": "not"
+    },
+    {
+     "kind": "mc",
+     "q": "You must fumigate a grain bin. What must be done to the site for the fumigant to work?",
+     "choices": [
+      "Enclose or cover it to prevent the gas from escaping",
+      "Leave doors open for airflow",
+      "Wet the grain first so the gas dissolves",
+      "Spread granules on top"
+     ],
+     "answer": 0,
+     "ref": "p. 61, 'Fumigants'",
+     "why": "The target site must be enclosed or covered to keep the gas in.",
+     "id": "c04-s18-t3",
+     "src": "test",
+     "style": "scenario"
+    },
+    {
+     "kind": "tf",
+     "q": "Fumigants are nonspecific and highly toxic to humans and all other organisms.",
+     "answer": true,
+     "ref": "p. 61, 'Fumigants'",
+     "why": "This is a listed fumigant disadvantage.",
+     "id": "c04-s18-t4",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Where does the manual say fumigants are used in regulatory pest control?",
+     "choices": [
+      "At ports of entry and state and national borders",
+      "In home gardens",
+      "On pets and livestock",
+      "In mosquito larvae habitats"
+     ],
+     "answer": 0,
+     "ref": "p. 61, 'Fumigants'",
+     "why": "Regulatory fumigation happens at ports of entry and state and national borders.",
+     "id": "c04-s18-t5",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c04-s19",
+   "chapter": "Chapter 4 · Pesticide Formulations",
+   "title": "Microencapsulated pesticides (M)",
+   "pages": [
+    61,
+    62
+   ],
+   "body": [
+    {
+     "h": "Microencapsulated pesticides (M)"
+    },
+    {
+     "p": [
+      "**Microencapsulated** pesticides are dry particles or liquid droplets surrounded by a **coating**.",
+      "Coatings may be plastic, starch, or some other material.",
+      "Microencapsulated pesticides are mixed with water and applied as a spray.",
+      "Once applied, the pesticide is released from the capsule.",
+      "In some situations, the encapsulation process can provide **\"timed\" slow release** of the active ingredient.",
+      "Depending on the physical properties of the coating, release of the pesticide active ingredient may be **weather-dependent**.",
+      "If the release is slower than normal (for example, due to dry or cool weather), residues may remain on treated plants or surfaces longer than expected.",
+      "As a result, some microencapsulated products have relatively long **restricted-entry or preharvest intervals**."
+     ]
+    },
+    {
+     "p": [
+      "Some microencapsulated pesticide products contain highly toxic materials with a coating to increase handler safety.",
+      "Others are microencapsulated for different reasons; for example, to reduce staining or odor or to protect the active ingredient from photodegradation.",
+      "Highly toxic microencapsulated pesticides may be very hazardous to **bees** if the particles do not break down quickly and are the **same size as pollen grains**.",
+      "Foraging bees may collect them and carry them back to the hive.",
+      "Later, when the coatings break down and release the pesticide, the colony may be poisoned.",
+      "Some microencapsulated soil-applied products may be more prone to **leaching**."
+     ]
+    },
+    {
+     "box": "Advantages",
+     "list": [
+      "Coatings help protect the applicator.",
+      "Easy to mix, handle, and apply.",
+      "Timed release of active ingredient prolongs effectiveness (that is, may result in fewer applications; application timing may be less critical).",
+      "Reduced volatility.",
+      "Reduced odor.",
+      "Less likely to stain or otherwise damage treated surfaces.",
+      "Reduced phytotoxicity."
+     ]
+    },
+    {
+     "box": "Disadvantages",
+     "list": [
+      "Constant agitation may be necessary in spray tank (depending on the properties of the coating).",
+      "Risk of injuring or killing bees (if the microencapsulated product is toxic to them).",
+      "Long restricted-entry or preharvest intervals for highly toxic products."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c04-s19-r8",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which is an advantage of microencapsulated materials?",
+     "choices": [
+      "Delayed or slow release of the active ingredient prolongs their effectiveness.",
+      "Their pesticidal activity is independent of weather conditions.",
+      "They usually require only short restricted-entry intervals."
+     ],
+     "answer": 0,
+     "ref": "pp. 61–62, 'Microencapsulated Pesticides (M)'; p. 67, Review question 8",
+     "why": "Timed release prolongs effectiveness; release can be weather-dependent and some have long restricted-entry intervals."
+    },
+    {
+     "kind": "mc",
+     "q": "Why can highly toxic microencapsulated pesticides be very hazardous to bees?",
+     "choices": [
+      "Particles the same size as pollen grains may be carried back to the hive and later poison the colony",
+      "The coating attracts bees like nectar",
+      "They release a gas inside the hive immediately",
+      "They kill flowers"
+     ],
+     "answer": 0,
+     "ref": "p. 61, 'Microencapsulated Pesticides (M)'",
+     "why": "Pollen-sized capsules that do not break down quickly can be carried to the hive.",
+     "id": "c04-s19-t1",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "A microencapsulated product is applied during a cool, dry week. What does the manual warn may happen?",
+     "choices": [
+      "Release may be slower, so residues may remain on plants or surfaces longer than expected",
+      "The capsules explode and drift",
+      "The product becomes a fumigant",
+      "The active ingredient is released all at once"
+     ],
+     "answer": 0,
+     "ref": "p. 61, 'Microencapsulated Pesticides (M)'",
+     "why": "Release may be weather-dependent, so dry or cool weather can leave residues longer.",
+     "id": "c04-s19-t2",
+     "src": "test",
+     "style": "scenario"
+    },
+    {
+     "kind": "mc",
+     "q": "Which of these is NOT an advantage of microencapsulated pesticides?",
+     "choices": [
+      "Coatings help protect the applicator",
+      "Reduced odor",
+      "Reduced volatility",
+      "Short restricted-entry intervals for highly toxic products"
+     ],
+     "answer": 3,
+     "ref": "p. 62, 'Microencapsulated Pesticides (M)'",
+     "why": "Highly toxic microencapsulated products can have long restricted-entry or preharvest intervals.",
+     "id": "c04-s19-t3",
+     "src": "test",
+     "style": "not"
+    },
+    {
+     "kind": "tf",
+     "q": "Microencapsulated pesticides are mixed with water and applied as a spray.",
+     "answer": true,
+     "ref": "p. 61, 'Microencapsulated Pesticides (M)'",
+     "why": "The manual states this directly.",
+     "id": "c04-s19-t4",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Some microencapsulated soil-applied products may be more prone to what?",
+     "choices": [
+      "Leaching",
+      "Drift",
+      "Phytotoxicity",
+      "Freezing"
+     ],
+     "answer": 0,
+     "ref": "p. 61, 'Microencapsulated Pesticides (M)'",
+     "why": "The manual says some soil-applied microencapsulated products may be more prone to leaching.",
+     "id": "c04-s19-t5",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c04-s20",
+   "chapter": "Chapter 4 · Pesticide Formulations",
+   "title": "Water-soluble packaging, impregnates, and animal systemics",
+   "pages": [
+    62,
+    63
+   ],
+   "body": [
+    {
+     "h": "Water-soluble packaging (WSB or WSP)"
+    },
+    {
+     "p": [
+      "More and more pesticide products are available in **water-soluble bags** (WSBs).",
+      "A special film packages a precise amount of wettable powder, soluble powder, or gel containing the pesticide active ingredient(s).",
+      "When added to water in a spray tank, the bag dissolves and releases the contents, which then are suspended or dissolved.",
+      "This packaging method **reduces handler exposure risk**.",
+      "It also simplifies measuring.",
+      "However, water-soluble packaging is just that: as a rule, it **will not dissolve in organic solvents or undiluted ECs**.",
+      "As a result, mixers and loaders must follow label instructions when preparing a spray mixture.",
+      "Store water-soluble products in a **dry place**, and **do not handle them with damp or wet gloves**."
+     ]
+    },
+    {
+     "fig": "p62-wsp"
+    },
+    {
+     "box": "Advantages",
+     "list": [
+      "Accurate premeasured unit doses.",
+      "Increased handler safety; greatly reduced exposure risk.",
+      "Lower risk of spills."
+     ]
+    },
+    {
+     "box": "Disadvantages",
+     "list": [
+      "Package size may not match volume of prepared solution needed and/or spray tank volume.",
+      "May not be suitable for products applied in pounds or gallons of active ingredient per acre, due to the size or number of packets required.",
+      "Must be kept dry, away from water or high humidity, until ready to use."
+     ]
+    },
+    {
+     "h": "Impregnates"
+    },
+    {
+     "p": [
+      "Some pesticide products consist of a pesticide active ingredient incorporated into a solid material, usually some kind of **plastic**.",
+      "The pesticide evaporates or is released over time, and the vapors control nearby pests.",
+      "Common examples include:"
+     ]
+    },
+    {
+     "list": [
+      "Livestock ear tags.",
+      "Plastic pest strips and adhesive tapes.",
+      "Pet collars."
+     ]
+    },
+    {
+     "p": [
+      "Fertilizers may also be impregnated with pesticides."
+     ]
+    },
+    {
+     "h": "Animal systemics"
+    },
+    {
+     "p": [
+      "**Animal systemics** are absorbed by, enter the tissues of, and move within the treated animal.",
+      "Usually, these pesticides are applied **externally or orally**.",
+      "They can control fleas and other external blood-feeding insects as well as worms and other internal parasites.",
+      "External application methods include **pour-on liquids**, sprays, and dusts.",
+      "Oral applications include food additives and premeasured capsules, pastes, or liquids."
+     ]
+    },
+    {
+     "h": "Pesticide-fertilizer combinations"
+    },
+    {
+     "p": [
+      "Many pesticide products, usually **granule and pellet** formulations, are combinations of fertilizers and pesticides.",
+      "Such products are convenient because they allow the applicator to control pests and apply nutrients at the same time.",
+      "Some are prepackaged: homeowners commonly use these for their lawns.",
+      "Dealers or growers may custom mix pesticides with fertilizers to meet specific crop requirements."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "p62-wsp",
+     "title": "Adding water-soluble packet to a spray tank.",
+     "page": "p. 62",
+     "imgFile": "p62-wsp.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "kind": "mc",
+     "q": "A mixer reaches for a water-soluble packet while wearing wet gloves. What does the manual say?",
+     "choices": [
+      "Do not handle water-soluble products with damp or wet gloves",
+      "Wet gloves are fine because the bag is waterproof",
+      "Wet the bag first so it dissolves faster",
+      "Water-soluble bags must be cut open before use"
+     ],
+     "answer": 0,
+     "ref": "p. 62, 'Water-Soluble Packaging (WSB or WSP)'",
+     "why": "Store them dry and do not handle them with damp or wet gloves.",
+     "id": "c04-s20-t1",
+     "src": "test",
+     "style": "scenario"
+    },
+    {
+     "kind": "mc",
+     "q": "Water-soluble packaging, as a rule, will NOT dissolve in what?",
+     "choices": [
+      "Organic solvents or undiluted ECs",
+      "Water in a spray tank",
+      "Warm water",
+      "Water with a buffer"
+     ],
+     "answer": 0,
+     "ref": "p. 62, 'Water-Soluble Packaging (WSB or WSP)'",
+     "why": "WSBs dissolve in water but not in organic solvents or undiluted ECs.",
+     "id": "c04-s20-t2",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Which of these is NOT an example of an impregnate?",
+     "choices": [
+      "Livestock ear tags",
+      "Pet collars",
+      "Plastic pest strips",
+      "A wettable powder in a spray tank"
+     ],
+     "answer": 3,
+     "ref": "p. 62, 'Impregnates'",
+     "why": "Impregnates are solid materials, usually plastic, that release pesticide over time.",
+     "id": "c04-s20-t3",
+     "src": "test",
+     "style": "not"
+    },
+    {
+     "kind": "mc",
+     "q": "What are animal systemics?",
+     "choices": [
+      "Pesticides absorbed by, entering the tissues of, and moving within the treated animal",
+      "Baits placed for wild animals",
+      "Fumigants used in barns",
+      "Repellents sprayed on fences"
+     ],
+     "answer": 0,
+     "ref": "p. 62, 'Animal Systemics'",
+     "why": "Animal systemics move within the treated animal and can control external and internal parasites.",
+     "id": "c04-s20-t4",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Pesticide-fertilizer combinations are usually which formulations?",
+     "choices": [
+      "Granule and pellet formulations",
+      "Aerosols and fogs",
+      "Emulsifiable concentrates",
+      "Gels and pastes"
+     ],
+     "answer": 0,
+     "ref": "p. 62, 'Pesticide-Fertilizer Combinations'",
+     "why": "Most pesticide-fertilizer products are granules and pellets.",
+     "id": "c04-s20-t5",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Which is a disadvantage of water-soluble packaging?",
+     "choices": [
+      "Package size may not match the spray tank volume needed",
+      "High handler exposure",
+      "High risk of spills",
+      "Inaccurate doses"
+     ],
+     "answer": 0,
+     "ref": "p. 62, 'Water-Soluble Packaging (WSB or WSP)'",
+     "why": "Packets are premeasured, so they may not match the volume you need.",
+     "id": "c04-s20-t6",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c04-s21",
+   "chapter": "Chapter 4 · Pesticide Formulations",
+   "title": "Pesticide mixtures and tank mixing",
+   "pages": [
+    63,
+    63
+   ],
+   "body": [
+    {
+     "h": "Pesticide mixtures"
+    },
+    {
+     "p": [
+      "Sometimes, product manufacturers combine pesticides with other pesticides or fertilizers for sale as **premixes**.",
+      "However, when premixes are not available (or are not offered in the desired combination), you may combine products at the time of application.",
+      "**Tank mixing**, combining two or more crop-production products (pesticides and/or fertilizers) and applying them at the same time, is convenient and cost-effective.",
+      "This practice can save the time, labor, fuel, and equipment wear involved in multiple applications.",
+      "Tank mixing also reduces soil compaction and the risk of mechanical damage to crops or treated areas.",
+      "Situations appropriate for tank mixing include combining fungicides and insecticides to treat fruit trees or field crops.",
+      "Another common example is combining herbicides to increase the number of weed species controlled (**control spectrum**).",
+      "However, products must be **compatible** in order to be tank-mixed."
+     ]
+    },
+    {
+     "p": [
+      "**Federal law allows applicators to combine pesticides unless the labeling** of one or more components of the intended tank mix **specifically prohibits it**.",
+      "If no prohibitions exist, applicators may mix:"
+     ]
+    },
+    {
+     "list": [
+      "Pesticide with fertilizer.",
+      "Two or more pesticides."
+     ]
+    },
+    {
+     "p": [
+      "When pesticides are tank-mixed, all of the dosages must be **at or below the label rate** for each separate component of the mixture.",
+      "For more information about the causes and effects of incompatibility, how to do a compatibility test, and how to prepare a tank mix, see Chapter 10, Planning the Pesticide Application."
+     ]
+    },
+    {
+     "fig": "p63-incompat"
+    }
+   ],
+   "figures": [
+    {
+     "id": "p63-incompat",
+     "title": "Incompatibility is a condition that prevents pesticides from mixing together properly to form a uniform solution or suspension.",
+     "page": "p. 63",
+     "imgFile": "p63-incompat.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "kind": "mc",
+     "q": "When does federal law allow applicators to combine pesticides in a tank mix?",
+     "choices": [
+      "Unless the labeling of one or more components specifically prohibits it",
+      "Only when the EPA issues a special permit",
+      "Only when all labels specifically list the tank mix",
+      "Never; only premixes are legal"
+     ],
+     "answer": 0,
+     "ref": "p. 63, 'Pesticide Mixtures'",
+     "why": "Tank mixing is allowed unless a component's labeling specifically prohibits it.",
+     "id": "c04-s21-t1",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "When pesticides are tank-mixed, what rule applies to the dosage of each component?",
+     "choices": [
+      "Each must be at or below its label rate",
+      "Each may be 10% above the label rate",
+      "Only the total must match one label",
+      "Dosage no longer matters"
+     ],
+     "answer": 0,
+     "ref": "p. 63, 'Pesticide Mixtures'",
+     "why": "All dosages must be at or below the label rate for each separate component.",
+     "id": "c04-s21-t2",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "You want to tank-mix an insecticide and a fungicide for an orchard. The fungicide label says it must not be tank-mixed with that insecticide. What should you do?",
+     "choices": [
+      "Do not tank-mix them; the label prohibition controls",
+      "Mix them anyway, because federal law allows tank mixing",
+      "Mix them at half rates",
+      "Add an adjuvant and mix them"
+     ],
+     "answer": 0,
+     "ref": "p. 63, 'Pesticide Mixtures'",
+     "why": "Federal law allows mixing only when no component's labeling prohibits it.",
+     "id": "c04-s21-t3",
+     "src": "test",
+     "style": "scenario"
+    },
+    {
+     "kind": "mc",
+     "q": "Which of these is NOT a benefit of tank mixing named in the manual?",
+     "choices": [
+      "Saves time, labor, and fuel",
+      "Reduces soil compaction",
+      "Allows exceeding label rates",
+      "Reduces equipment wear"
+     ],
+     "answer": 2,
+     "ref": "p. 63, 'Pesticide Mixtures'",
+     "why": "Dosages must stay at or below each label rate.",
+     "id": "c04-s21-t4",
+     "src": "test",
+     "style": "not"
+    },
+    {
+     "kind": "short",
+     "q": "What is the term for a condition that prevents pesticides from mixing together properly to form a uniform solution or suspension?",
+     "answer": "Incompatibility",
+     "keys": [
+      [
+       "incompatibility",
+       "incompatible"
+      ]
+     ],
+     "ref": "p. 63, photo caption",
+     "why": "The caption defines incompatibility.",
+     "accept": [
+      "incompatible"
+     ],
+     "id": "c04-s21-t5",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c04-s22",
+   "chapter": "Chapter 4 · Pesticide Formulations",
+   "title": "Adjuvants: what they are and how to use them",
+   "pages": [
+    63,
+    64
+   ],
+   "body": [
+    {
+     "h": "Adjuvants"
+    },
+    {
+     "p": [
+      "An **adjuvant** is a chemical that can affect how a pesticide works.",
+      "Adjuvants:"
+     ]
+    },
+    {
+     "list": [
+      "Improve the action of a pesticide.",
+      "Change the characteristics of a pesticide formulation or a spray mixture (suspension or solution)."
+     ]
+    },
+    {
+     "p": [
+      "Most end-use pesticide products, especially those that are applied to foliage, contain adjuvants.",
+      "However, in some situations, applicators may add them to a tank mix when making a finished spray mixture.",
+      "Many adjuvants increase effectiveness and/or safety.",
+      "Although they enhance the action of a pesticide or modify the properties of a spray solution, **adjuvants alone have no pesticidal activity**.",
+      "Use them to customize the product or formulation for specific needs or to compensate for local conditions."
+     ]
+    },
+    {
+     "p": [
+      "Because adjuvants lack pesticidal properties, the U.S. Environmental Protection Agency **does not register them**.",
+      "As a result, there are **no standards** for composition, quality, or performance.",
+      "If you have questions about an adjuvant, **contact the manufacturer**.",
+      "Companies that produce these products can provide labels, technical data sheets, Safety Data Sheets (SDSs), supplemental labeling, and promotional literature."
+     ]
+    },
+    {
+     "p": [
+      "Before using any adjuvant, **consult the pesticide product label**.",
+      "Some products have very specific adjuvant recommendations or prohibitions.",
+      "If a label instructs you to use an adjuvant, use the **type called for at the directed rate**.",
+      "As noted, many products already contain those adjuvants deemed necessary or useful by the manufacturer or formulator.",
+      "Adding others may actually **decrease efficacy** or result in unintended, and possibly undesirable, effects."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "kind": "mc",
+     "q": "Why does the U.S. EPA not register adjuvants?",
+     "choices": [
+      "Because adjuvants lack pesticidal properties",
+      "Because adjuvants are too toxic",
+      "Because states register them instead",
+      "Because they are always included in the pesticide"
+     ],
+     "answer": 0,
+     "ref": "p. 63, 'Adjuvants'",
+     "why": "Adjuvants lack pesticidal properties, so EPA does not register them and there are no standards.",
+     "id": "c04-s22-t1",
+     "src": "test"
+    },
+    {
+     "kind": "tf",
+     "q": "Adjuvants alone have no pesticidal activity.",
+     "answer": true,
+     "ref": "p. 63, 'Adjuvants'",
+     "why": "They enhance a pesticide or modify a spray solution but do not kill pests on their own.",
+     "id": "c04-s22-t2",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "A pesticide label tells you to add a surfactant. What does the manual say to do?",
+     "choices": [
+      "Use the type called for at the directed rate",
+      "Use any adjuvant you have on hand",
+      "Double the rate for better coverage",
+      "Skip it, because adjuvants are not registered"
+     ],
+     "answer": 0,
+     "ref": "pp. 63–64, 'Adjuvants'",
+     "why": "If the label calls for an adjuvant, use that type at the directed rate.",
+     "id": "c04-s22-t3",
+     "src": "test",
+     "style": "scenario"
+    },
+    {
+     "kind": "mc",
+     "q": "Which of these is NOT true about adjuvants, according to the manual?",
+     "choices": [
+      "EPA sets standards for their quality and performance",
+      "They can change the characteristics of a spray mixture",
+      "Most end-use products applied to foliage already contain them",
+      "Adding extra ones may decrease efficacy"
+     ],
+     "answer": 0,
+     "ref": "pp. 63–64, 'Adjuvants'",
+     "why": "Because EPA does not register adjuvants, there are no standards for composition, quality, or performance.",
+     "id": "c04-s22-t4",
+     "src": "test",
+     "style": "not"
+    },
+    {
+     "kind": "mc",
+     "q": "If you have questions about an adjuvant, whom does the manual tell you to contact?",
+     "choices": [
+      "The manufacturer",
+      "The U.S. EPA",
+      "The state police",
+      "Your neighbor"
+     ],
+     "answer": 0,
+     "ref": "p. 63, 'Adjuvants'",
+     "why": "The manufacturer can provide labels, technical data sheets, and SDSs.",
+     "id": "c04-s22-t5",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c04-s23",
+   "chapter": "Chapter 4 · Pesticide Formulations",
+   "title": "Types of adjuvants",
+   "pages": [
+    64,
+    64
+   ],
+   "body": [
+    {
+     "h": "Types of adjuvants"
+    },
+    {
+     "p": [
+      "There are many types of adjuvants.",
+      "Here are some that are commonly used:"
+     ]
+    },
+    {
+     "list": [
+      "**Antifoaming (defoaming) agents**: reduce foaming of spray mixtures that may result from using some surfactants and/or from vigorous agitation.",
+      "**Buffers or pH modifiers**: allow pesticides to be mixed with diluents or other pesticides of different acidity or alkalinity. Most pesticide solutions or suspensions are stable between **pH 5.5 and 7.0** (slightly acidic to neutral). Water outside this range may cause pesticides to degrade, very rapidly in some cases. If you use a buffer, **add it to the spray tank water first** and mix well. The water must be pH neutral or slightly acidic to start, **before** adding pesticides or other adjuvants.",
+      "**Compatibility agents**: help combine pesticides (or pesticides and fertilizers) effectively; reduce or eliminate incompatibility.",
+      "**Drift control additives (deposition aids)**: reduce drift; increase average droplet size and/or lower the number of \"fines\" (very small droplets) produced.",
+      "**Emulsifiers**: allow petroleum-based pesticides (ECs) to mix with water.",
+      "**Extenders**: keep pesticides active on a target for an extended period. Some adjuvant manufacturers use this name for stickers. (See \"Stickers\" below.)",
+      "**Invert emulsifiers**: allow water-based pesticides to mix with petroleum carrier.",
+      "**Plant penetrants**: allow the pesticide to pass through (penetrate) the outer surface to the inside of treated foliage. Certain plant penetrants may increase penetration on some, but not all, plant species.",
+      "**Safeners**: reduce the toxicity of a pesticide formulation to the pesticide handler or to the treated surface.",
+      "**Spreader**: allow pesticide to form a uniform coating layer over the treated surface.",
+      "**Stickers**: allow pesticide to stay on a treated surface. Some types of stickers increase adhesion of solid particles to a treated surface. This reduces the amount of pesticide that washes off due to rain or irrigation. Others reduce evaporation and/or slow photodegradation. (See \"Extenders\" above.)",
+      "**Surfactant**: see \"Surfactants\" below.",
+      "**Thickeners**: increase viscosity (thickness) of spray mixtures. Thickeners may reduce drift and/or slow evaporation. (Slowing evaporation is useful when applying systemic pesticides. It increases the time during which the active ingredient can be absorbed by or penetrate plant foliage.)",
+      "**Wetting agents**: allow wettable powders to mix with water."
+     ]
+    },
+    {
+     "box": "Types of adjuvants (sidebar)",
+     "list": [
+      "Surfactants: wetting agents and spreaders.",
+      "Stickers.",
+      "Extenders.",
+      "Plant penetrants.",
+      "Compatibility agents.",
+      "Buffers or pH modifiers.",
+      "Drift retardants.",
+      "Defoaming agents.",
+      "Thickeners."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c04-s23-r10",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which type of adjuvant increases the viscosity of spray mixtures?",
+     "choices": [
+      "Sticker.",
+      "Extender.",
+      "Thickener."
+     ],
+     "answer": 2,
+     "ref": "p. 64, 'Types of Adjuvants'; p. 67, Review question 10",
+     "why": "Thickeners increase viscosity (thickness) of spray mixtures."
+    },
+    {
+     "kind": "mc",
+     "q": "Most pesticide solutions or suspensions are stable within what pH range?",
+     "choices": [
+      "pH 5.5 to 7.0",
+      "pH 7.0 to 9.0",
+      "pH 3.0 to 5.0",
+      "pH 8.5 to 10.0"
+     ],
+     "answer": 0,
+     "ref": "p. 64, 'Types of Adjuvants'",
+     "why": "Most are stable between pH 5.5 and 7.0, slightly acidic to neutral.",
+     "id": "c04-s23-t1",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Your well water is strongly alkaline. You plan to use a buffer. When do you add it?",
+     "choices": [
+      "To the spray tank water first, and mix well, before adding pesticides or other adjuvants",
+      "After all the pesticides are in the tank",
+      "Only after spraying, to clean the tank",
+      "At the same time as the pesticide concentrate"
+     ],
+     "answer": 0,
+     "ref": "p. 64, 'Types of Adjuvants'",
+     "why": "Add the buffer to the water first so the water is neutral or slightly acidic before anything else goes in.",
+     "id": "c04-s23-t2",
+     "src": "test",
+     "style": "scenario"
+    },
+    {
+     "kind": "mc",
+     "q": "Which adjuvant allows wettable powders to mix with water?",
+     "choices": [
+      "Wetting agents",
+      "Emulsifiers",
+      "Invert emulsifiers",
+      "Thickeners"
+     ],
+     "answer": 0,
+     "ref": "p. 64, 'Types of Adjuvants'",
+     "why": "Wetting agents let WPs mix with water; emulsifiers do this for ECs.",
+     "id": "c04-s23-t3",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Which of these adjuvant descriptions is NOT correct?",
+     "choices": [
+      "Safeners reduce toxicity to the handler or the treated surface",
+      "Drift control additives increase average droplet size",
+      "Stickers help pesticide stay on a treated surface",
+      "Antifoaming agents increase foaming in the tank"
+     ],
+     "answer": 3,
+     "ref": "p. 64, 'Types of Adjuvants'",
+     "why": "Antifoaming (defoaming) agents reduce foaming.",
+     "id": "c04-s23-t4",
+     "src": "test",
+     "style": "not"
+    },
+    {
+     "kind": "mc",
+     "q": "Which adjuvant increases the viscosity of a spray mixture and may reduce drift and slow evaporation?",
+     "choices": [
+      "Thickeners",
+      "Spreaders",
+      "Plant penetrants",
+      "Compatibility agents"
+     ],
+     "answer": 0,
+     "ref": "p. 64, 'Types of Adjuvants'",
+     "why": "Thickeners increase viscosity, which may reduce drift and slow evaporation.",
+     "id": "c04-s23-t5",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Which adjuvant allows petroleum-based pesticides (ECs) to mix with water?",
+     "choices": [
+      "Emulsifiers",
+      "Invert emulsifiers",
+      "Wetting agents",
+      "Buffers"
+     ],
+     "answer": 0,
+     "ref": "p. 64, 'Types of Adjuvants'",
+     "why": "Emulsifiers mix ECs with water; invert emulsifiers mix water-based pesticides with petroleum carrier.",
+     "id": "c04-s23-t6",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c04-s24",
+   "chapter": "Chapter 4 · Pesticide Formulations",
+   "title": "Surfactants",
+   "pages": [
+    64,
+    65
+   ],
+   "body": [
+    {
+     "h": "Surfactants"
+    },
+    {
+     "p": [
+      "Some of the most common adjuvants are **surfactants** (**surf**ace **act**ive ingred**ients**), which alter the dispersing, spreading, and wetting properties of spray droplets.",
+      "Examples of surfactants are **wetting agents and spreaders**.",
+      "These products physically change the **surface tension** of a spray droplet.",
+      "In order to perform well, some pesticide sprays must be able to wet treated foliage thoroughly and evenly.",
+      "Surfactants that reduce surface tension enable droplets to **spread out instead of bead up**.",
+      "This results in better coverage and increases the odds that the pest will contact the pesticide.",
+      "Surfactants are particularly helpful when treating plants with **waxy or hairy leaves** (see Figure 4.1)."
+     ]
+    },
+    {
+     "fig": "fig-4-1"
+    },
+    {
+     "p": [
+      "Surfactants are classified by how they split apart into charged atoms or molecules, called **ions**."
+     ]
+    },
+    {
+     "list": [
+      "**Anionic** surfactants have a **negative** charge. They are most often used with **contact pesticides**, which control the pest by direct contact instead of being absorbed systemically.",
+      "**Cationic** surfactants have a **positive** charge. Do not use them as \"stand-alone\" surfactants: often, they are **phytotoxic**.",
+      "**Nonionic** surfactants have **no electrical charge**. They are often used with **systemic** products and help sprays penetrate plant cuticles. They are compatible with most pesticide products."
+     ]
+    },
+    {
+     "p": [
+      "A pesticide can behave very differently in the presence of an anionic, cationic, or nonionic surfactant.",
+      "For this reason, you must **follow label directions** when choosing one of these additives.",
+      "Selecting the wrong surfactant can reduce efficacy and damage treated plants or surfaces."
+     ]
+    },
+    {
+     "p": [
+      "The terms used when talking about pesticide additives can be confusing.",
+      "People sometimes use the words \"adjuvant\" and \"surfactant\" interchangeably.",
+      "However, an adjuvant is **ANY substance** added to modify properties of a pesticide formulation or finished spray.",
+      "A surfactant is a specific kind of adjuvant: one that affects the interaction of a spray droplet and a treated surface.",
+      "**All surfactants are adjuvants, but not all adjuvants are surfactants.**",
+      "For example, drift control additives and safeners are not surfactants."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "fig-4-1",
+     "title": "Figure 4.1: Surfactants increase the ability of the pesticide to spread evenly over the surface of a leaf or fruit.",
+     "page": "p. 65",
+     "svgFile": "fig-4-1.svg",
+     "explain": [
+      "The figure shows a side view of a leaf.",
+      "Without surfactant, the spray droplets bead up on the leaf surface.",
+      "With surfactant, the droplets spread out into an even layer over the leaf."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c04-s24-r9",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which type of adjuvant functions as a wetting agent and spreader (that is, physically altering the surface tension of spray droplets)?",
+     "choices": [
+      "Buffer.",
+      "Extender.",
+      "Surfactant."
+     ],
+     "answer": 2,
+     "ref": "p. 64, 'Surfactants'; p. 67, Review question 9",
+     "why": "Surfactants, such as wetting agents and spreaders, change the surface tension of spray droplets."
+    },
+    {
+     "kind": "mc",
+     "q": "Which kind of surfactant has no electrical charge, is often used with systemic products, and is compatible with most pesticide products?",
+     "choices": [
+      "Nonionic",
+      "Anionic",
+      "Cationic",
+      "Ionic"
+     ],
+     "answer": 0,
+     "ref": "p. 65, 'Surfactants'",
+     "why": "Nonionic surfactants have no charge and help sprays penetrate plant cuticles.",
+     "id": "c04-s24-t1",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Why should cationic surfactants not be used as stand-alone surfactants?",
+     "choices": [
+      "They are often phytotoxic",
+      "They have no electrical charge",
+      "They only work with fumigants",
+      "They increase foaming"
+     ],
+     "answer": 0,
+     "ref": "p. 65, 'Surfactants'",
+     "why": "Cationic surfactants have a positive charge and are often phytotoxic.",
+     "id": "c04-s24-t2",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Which of these is NOT a surfactant, according to the manual?",
+     "choices": [
+      "A wetting agent",
+      "A spreader",
+      "A drift control additive",
+      "A nonionic surfactant"
+     ],
+     "answer": 2,
+     "ref": "p. 65, 'Surfactants'",
+     "why": "Drift control additives and safeners are adjuvants but not surfactants.",
+     "id": "c04-s24-t3",
+     "src": "test",
+     "style": "not"
+    },
+    {
+     "kind": "mc",
+     "q": "You are spraying a contact insecticide on plants with waxy leaves, and the spray beads up. Which surfactant type does the manual say is most often used with contact pesticides?",
+     "choices": [
+      "Anionic",
+      "Cationic",
+      "Nonionic",
+      "None; contact pesticides never use surfactants"
+     ],
+     "answer": 0,
+     "ref": "p. 65, 'Surfactants'",
+     "why": "Anionic surfactants, with a negative charge, are most often used with contact pesticides; always follow the label.",
+     "id": "c04-s24-t4",
+     "src": "test",
+     "style": "scenario"
+    },
+    {
+     "kind": "tf",
+     "q": "All adjuvants are surfactants.",
+     "answer": false,
+     "ref": "p. 65, 'Surfactants'",
+     "why": "All surfactants are adjuvants, but not all adjuvants are surfactants.",
+     "id": "c04-s24-t5",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "How do surfactants that reduce surface tension improve coverage?",
+     "choices": [
+      "They let droplets spread out instead of bead up",
+      "They make droplets larger so they fall faster",
+      "They kill the pest directly",
+      "They slow the release of the active ingredient"
+     ],
+     "answer": 0,
+     "ref": "p. 64, 'Surfactants'",
+     "why": "Spreading droplets give better coverage and raise the odds the pest contacts the pesticide.",
+     "id": "c04-s24-t6",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c04-s25",
+   "chapter": "Chapter 4 · Pesticide Formulations",
+   "title": "Choosing the right adjuvant",
+   "pages": [
+    65,
+    65
+   ],
+   "body": [
+    {
+     "h": "Choosing the right adjuvant"
+    },
+    {
+     "p": [
+      "Here are some factors to consider when deciding whether to use an adjuvant and how to choose the right one for a particular site and situation."
+     ]
+    },
+    {
+     "list": [
+      "**Read and follow the label.** Is an adjuvant recommended? If so, what type? **Do not make substitutions.** Note that some product labels may recommend an adjuvant for one type of use or site but prohibit any kind of adjuvant for another labeled use or site. Many end-use formulated products already have adjuvants, and adding adjuvants \"on the fly\" can **decrease efficacy**. Suppose, for example, that a certain product is formulated with a wetting agent. If you add another wetting agent when you mix and load a foliar-applied spray, the product may not give better spreading and coverage. Instead, the extra adjuvant may increase runoff, reduce deposition, and even damage the target plant.",
+      "Use only those adjuvants manufactured for **agricultural or horticultural uses**. Do not use industrial products or **household detergents** in pesticide spray mixes.",
+      "Remember that **no adjuvant is a substitute for good application practices**.",
+      "Take adjuvant performance claims \"with a grain of salt.\" Be skeptical of claims such as \"improves root uptake\" or \"keeps spray equipment clean\" unless a reliable source can provide **research-based evidence** to support them. Only use adjuvant products that have been tested and found effective for your intended use.",
+      "**Test spray mixes with adjuvants on a small area** before proceeding with full-scale use."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "kind": "mc",
+     "q": "A product is already formulated with a wetting agent. A worker adds another wetting agent to the foliar spray. What does the manual say may happen?",
+     "choices": [
+      "Increased runoff, reduced deposition, and even damage to the target plant",
+      "Twice the spreading and coverage",
+      "Nothing, because adjuvants have no effect",
+      "The pesticide turns into a fumigant"
+     ],
+     "answer": 0,
+     "ref": "p. 65, 'Choosing the Right Adjuvant'",
+     "why": "Adding adjuvants on the fly can decrease efficacy; the extra wetting agent may increase runoff and damage the plant.",
+     "id": "c04-s25-t1",
+     "src": "test",
+     "style": "scenario"
+    },
+    {
+     "kind": "mc",
+     "q": "Which of these is NOT acceptable according to the manual's adjuvant guidelines?",
+     "choices": [
+      "Reading the label to see if an adjuvant is recommended",
+      "Using household detergent in a pesticide spray mix",
+      "Testing a spray mix with adjuvant on a small area first",
+      "Using adjuvants made for agricultural or horticultural uses"
+     ],
+     "answer": 1,
+     "ref": "p. 65, 'Choosing the Right Adjuvant'",
+     "why": "Do not use industrial products or household detergents in pesticide spray mixes.",
+     "id": "c04-s25-t2",
+     "src": "test",
+     "style": "not"
+    },
+    {
+     "kind": "tf",
+     "q": "A good adjuvant can make up for poor application practices.",
+     "answer": false,
+     "ref": "p. 65, 'Choosing the Right Adjuvant'",
+     "why": "No adjuvant is a substitute for good application practices.",
+     "id": "c04-s25-t3",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "An adjuvant ad claims it \"improves root uptake.\" What does the manual tell you to do?",
+     "choices": [
+      "Be skeptical unless a reliable source provides research-based evidence",
+      "Trust it, because adjuvants are EPA registered",
+      "Double the label rate to be safe",
+      "Use it only on waxy leaves"
+     ],
+     "answer": 0,
+     "ref": "p. 65, 'Choosing the Right Adjuvant'",
+     "why": "Take performance claims with a grain of salt unless research-based evidence supports them.",
+     "id": "c04-s25-t4",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c04-s26",
+   "chapter": "Chapter 4 · Pesticide Formulations",
+   "title": "Chapter 4 summary",
+   "pages": [
+    66,
+    66
+   ],
+   "body": [
+    {
+     "h": "Summary"
+    },
+    {
+     "p": [
+      "The ingredients of a formulated pesticide include both **active and inert** components.",
+      "The active ingredient controls the pest.",
+      "Inert ingredients include carriers or diluents and adjuvants.",
+      "The type of formulation may be provided in the identifying information on the **front panel of the label**.",
+      "(The **SDS** for a product will describe the formulation and also provide information about hazardous inert ingredients.)"
+     ]
+    },
+    {
+     "p": [
+      "Learn what formulations are available for the pesticide active ingredients you will use.",
+      "To decide which formulation is best for a specific site and situation, you must know the properties, and be able to evaluate the pros and cons, of various formulation types.",
+      "You must be familiar with formulation types and active ingredient properties in order to understand the characteristics of the products you use and apply them properly."
+     ]
+    },
+    {
+     "p": [
+      "Most end-use pesticide products contain adjuvants.",
+      "Although adjuvants themselves lack any direct pesticidal activity, they are added to pesticide formulations to improve product performance.",
+      "You should know when and how to use an adjuvant."
+     ]
+    },
+    {
+     "p": [
+      "In summary, you must consider several factors when choosing a pesticide formulation.",
+      "These include the risks and benefits associated with the options available, the practicality of using a specific formulation in a particular site to control the target pest, and whether the formulated product will provide effective control.",
+      "Understanding the properties of common formulations before choosing a pesticide will help you avoid problems and apply your product in an effective and efficient manner."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "kind": "mc",
+     "q": "Which document does the summary say will describe a product's formulation and give information about hazardous inert ingredients?",
+     "choices": [
+      "The Safety Data Sheet (SDS)",
+      "The restricted-use permit",
+      "The bill of sale",
+      "The application record"
+     ],
+     "answer": 0,
+     "ref": "p. 66, 'Summary'",
+     "why": "The SDS describes the formulation and hazardous inert ingredients.",
+     "id": "c04-s26-t1",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Where on the label may the type of formulation be provided?",
+     "choices": [
+      "In the identifying information on the front panel",
+      "Only in the storage and disposal section",
+      "In the first aid section",
+      "It is never on the label"
+     ],
+     "answer": 0,
+     "ref": "p. 66, 'Summary'",
+     "why": "The formulation type may be in the identifying information on the front panel.",
+     "id": "c04-s26-t2",
+     "src": "test"
+    },
+    {
+     "kind": "mc",
+     "q": "Which of these is NOT one of the inert components named in the summary?",
+     "choices": [
+      "Carriers",
+      "Diluents",
+      "Adjuvants",
+      "The ingredient that controls the pest"
+     ],
+     "answer": 3,
+     "ref": "p. 66, 'Summary'",
+     "why": "The active ingredient controls the pest; inert ingredients include carriers or diluents and adjuvants.",
+     "id": "c04-s26-t3",
+     "src": "test",
+     "style": "not"
+    },
+    {
+     "kind": "mc",
+     "q": "You must choose between two formulations of the same active ingredient for a school lawn. Which set of factors does the summary say to weigh?",
+     "choices": [
+      "Risks and benefits of the options, practicality at the site, and whether it will give effective control",
+      "Only the price per gallon",
+      "Only the brand name",
+      "Only how fast it can be applied"
+     ],
+     "answer": 0,
+     "ref": "p. 66, 'Summary'",
+     "why": "The summary lists risks and benefits, practicality at the site, and effective control.",
+     "id": "c04-s26-t4",
+     "src": "test",
+     "style": "scenario"
+    }
+   ]
+  }
+ ]
+}

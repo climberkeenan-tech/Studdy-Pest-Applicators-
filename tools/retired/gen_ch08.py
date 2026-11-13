@@ -1,3 +1,6 @@
+raise SystemExit("RETIRED: content/chapters/ch08.json is the source of truth now. "
+                 "Edit that JSON directly. Rerunning this generator would undo later fixes.")
+# Kept only as a record of how Chapter 8 was first typed in.
 # Generates content/chapters/ch08.json. Run from the repo root: python3 tools/gen_ch08.py
 import json
 CH = "Chapter 8 · Transportation, Storage, and Security"

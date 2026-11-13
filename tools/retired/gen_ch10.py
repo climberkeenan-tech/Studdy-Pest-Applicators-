@@ -1,3 +1,6 @@
+raise SystemExit("RETIRED: content/chapters/ch10.json is the source of truth now. "
+                 "Edit that JSON directly. Rerunning this generator would undo later fixes.")
+# Kept only as a record of how Chapter 10 was first typed in.
 # Generates content/chapters/ch10.json. Usage: python3 tools/gen_ch10.py content/chapters/ch10.json
 import json, sys
 CH = "Chapter 10 · Planning the Pesticide Application"

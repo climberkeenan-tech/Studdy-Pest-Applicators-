@@ -1,3 +1,6 @@
+raise SystemExit("RETIRED: content/chapters/ch03.json is the source of truth now. "
+                 "Edit that JSON directly. Rerunning this generator would undo later fixes.")
+# Kept only as a record of how Chapter 3 was first typed in.
 CH = "Chapter 3 · Pesticide Labeling"
 S = []
 def card(n, title, pages, body, figures, questions):

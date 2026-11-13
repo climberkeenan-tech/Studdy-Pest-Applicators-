@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+raise SystemExit("RETIRED: content/chapters/ch06.json is the source of truth now. "
+                 "Edit that JSON directly. Rerunning this generator would undo later fixes.")
+# Kept only as a record of how Chapter 6 was first typed in.
 import json, pathlib
 """Generate content/chapters/ch06.json (Chapter 6, Personal Protective Equipment, pp. 89-103).
 Cards are written in their original 24-card order, then three short pairs are merged and

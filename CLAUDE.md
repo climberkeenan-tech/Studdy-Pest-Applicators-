@@ -30,7 +30,13 @@ session's network could not open directly): 50 multiple-choice questions, 35 cor
   Figure 3.1 (sample label, p. 42) panel by panel. Built by `tools/gen_ch03.py` (edit there, rerun, then build).
   Photo crops: `tools/crop_photos_ch03.py`. Page 46 was not sent (likely blank before the review page).
   Review answers again taken from the chapter text; check against Appendix A when it arrives.
-- Next: Chapter 4 pages. Ask for the manual's total page count (still unknown).
+- Chapter 4, Pesticide Formulations (pp. 49–64): 23 cards (`c04-s01` to `c04-s23`), 128 test-style questions.
+  Built by `tools/gen_ch04.py` (edit there, rerun with `content/chapters/ch04.json` as the argument, then build).
+  Photo crops: `tools/crop_photos_ch04.py`. Page 64 ends partway into "Surfactants"; that paragraph is NOT in the
+  cards yet (card 23 has a placeholder line saying so). Missing: p. 65 onward (rest of Surfactants, any remaining
+  chapter text, Chapter 4 review questions). When they arrive, finish card 23 and add review questions as `c04-sNN-rK`.
+  p. 49 prints "an organic solvent of mineral clay" (likely a typo for "or"); typed as printed.
+- Next: Chapter 4 p. 65 onward, then Chapter 5. Ask for the manual's total page count (still unknown).
 - Two sessions once worked in parallel on different branches. Before publishing, check the live artifact
   (and `git branch -r`) for chapters this branch lacks, and merge them first.
 

@@ -20,7 +20,13 @@ session's network could not open directly): 50 multiple-choice questions, 35 cor
   first in the card that holds the answer. The manual's key is in **Appendix A**, which the user has
   not sent. The answers were taken from the chapter text. When Appendix A arrives, check every
   review answer against it and report any disagreement.
-- Next: Chapter 2 pages. Ask for the manual's total page count (still unknown).
+- Chapter 8, Transportation, Storage, and Security (pp. 123–131): 13 cards (`c08-s01` to `c08-s13`),
+  6 review + 61 test questions. The user called these pages "Chapter 7"; the photos say Chapter 8.
+  The summary page (p. 131) and review page had no visible page number; 131 is inferred.
+  Review questions 1–6 added (answers from the chapter text, check against Appendix A).
+  The review page photo showed only Q1–6; ask whether more questions follow on the next page.
+  Photo crops: `tools/crop_photos_ch08.py` (grayscale, photos were shot under purple light).
+- Chapters 2–7 are NOT done. Ask for them. Ask for the manual's total page count (still unknown).
 
 ## Rules for every session (the user's own rules)
 1. The user sends photos of manual pages. Work **only** from those pages.

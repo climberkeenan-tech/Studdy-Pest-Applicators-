@@ -17,9 +17,10 @@ session's network could not open directly): 50 multiple-choice questions, 35 cor
 ## Status
 - Chapter 1, Pest Management (pp. 1–15): 25 cards (`c01-s01` to `c01-s25`), 124 test-style questions.
 - Chapter 1 review questions (pp. 17–18, 10 questions) added as `"src": "review"` (ids `c01-sNN-rK`),
-  first in the card that holds the answer. The manual's key is in **Appendix A**, which the user has
-  not sent. The answers were taken from the chapter text. When Appendix A arrives, check every
-  review answer against it and report any disagreement.
+  first in the card that holds the answer. All 10 checked against Appendix A: all match.
+- **Appendix A answer key (all 11 chapters) is in `content/answer-key.json`.** `tools/build.py` fails if any
+  review question's answer disagrees with it. Review choices must stay in the manual's A, B, C order
+  (index 0 = A), and each review `ref` must contain "Review question N".
 - Next: Chapter 2 pages. Ask for the manual's total page count (still unknown).
 
 ## Rules for every session (the user's own rules)
@@ -48,6 +49,7 @@ session's network could not open directly): 50 multiple-choice questions, 35 cor
 
 ## Files
 - `content/study.json`: manual metadata and the practice card.
+- `content/answer-key.json`: Appendix A answers to the review questions, by chapter.
 - `content/chapters/chNN.json`: `{"chapter", "pages", "sections": [...]}` for each chapter, merged in file-name order.
 - `content/figures/*.svg`: diagrams. Referenced from a figure as `"svgFile": "fig-1-1.svg"`.
 - `content/images/*.jpg`: photo crops. Referenced as `"imgFile": "p4-thistle.jpg"`.

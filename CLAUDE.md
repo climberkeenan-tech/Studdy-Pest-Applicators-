@@ -20,7 +20,12 @@ session's network could not open directly): 50 multiple-choice questions, 35 cor
   first in the card that holds the answer. The manual's key is in **Appendix A**, which the user has
   not sent. The answers were taken from the chapter text. When Appendix A arrives, check every
   review answer against it and report any disagreement.
-- Next: Chapter 2 pages. Ask for the manual's total page count (still unknown).
+- Chapter 2, Federal Pesticide Laws and Regulations (pp. 19–28): 15 cards (`c02-s01` to `c02-s15`),
+  75 test-style questions, plus the 7 review questions from p. 29 (ids `c02-sNN-rK`). Review answers again
+  taken from the chapter text, pending Appendix A. Review Q1 sits in card 2, Q2 card 4, Q3 card 7,
+  Q4 and Q6 card 9, Q5 card 6, Q7 card 10. Figure 2.1 redrawn as `fig-2-1.svg`. Crops: `tools/crop_photos_ch02.py`.
+  Page 28 holds only the last 5 lines of the summary; the rest of that page is blank in the user's photo.
+- Next: Chapter 3 (Pesticide Labeling) pages. Ask for the manual's total page count (still unknown).
 
 ## Rules for every session (the user's own rules)
 1. The user sends photos of manual pages. Work **only** from those pages.

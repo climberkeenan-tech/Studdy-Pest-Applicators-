@@ -55,8 +55,9 @@ A full audit ran over all 11 chapters (kit and method: `tools/audit/README.md`):
 re-answered without the key, wording and explanations were reviewed, the typed-answer grader was probed,
 every figure was looked at, and Chapter 1 was compared with its page photos.
 - **No wrong answer key was found** in 1,197 questions. Chapter 1 matches its photos (no wrong fact).
-- Fixed: 16 questions reworded or given a new wrong choice, 22 explanations, 13 references, a few card
-  sentences, 9 diagrams, and the typed-answer rules of 47 questions.
+- Fixed: 16 questions reworded or given a new wrong choice, 24 explanations, 13 references, a few card
+  sentences, 7 diagrams, and the typed-answer rules of 47 questions. A second pass over the 38 changed
+  cards found no new answer problems.
 - `tools/build.py` now fails if an explanation names a choice by letter or position ("so C is wrong",
   "that last one"): choices are shuffled on screen. Restate the fact instead.
 - Short questions that ask for an order use `"ordered": true` (key groups must appear in order).
@@ -85,6 +86,10 @@ every figure was looked at, and Chapter 1 was compared with its page photos.
 11. Chapter 2, p. 23: "Cosmetic" or "Cosmetics" in the act's name, and the FQPA sentence.
 12. Chapter 8, pp. 130–131: which page holds the box "Steps to Prevent Security Problems"
     (`c08-s12-t1` says p. 131, `c08-s12-t4` says p. 130).
+13. Chapter 2, p. 20 (restricted-use label photo): the sentence "For retail sale and use only by certified
+    applicators or persons under the direct supervision of and only for those uses..." reads as if words
+    were dropped. Retype it word for word.
+14. Chapter 4, p. 64, "Types of Adjuvants": "Spreader" or "Spreaders", "allow" or "allows".
 Photo crops that would be better re-cropped from fresh photos (all minor): `p22-24c-label`, `p20-epa-seal`,
 `p57-dust`, `p98-halfface`, `p100-sealcheck`, `p100-wash`, `p125-spillkit`, `p126-shed`, `p124-passenger`,
 `p148-triplerinse`.

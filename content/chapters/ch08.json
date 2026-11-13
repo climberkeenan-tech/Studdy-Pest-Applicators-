@@ -1211,7 +1211,7 @@
      ],
      "answer": 2,
      "ref": "pp. 126 and 128, 'Prevent Water Damage' and 'Note Shelf Life of Pesticides' (Appendix A: C)",
-     "why": "This is the manual's Appendix A answer: water makes metal containers rust, so store pesticides on raised pallets or shelves."
+     "why": "The manual's answer key (Appendix A) gives this answer. The chapter text as typed does not clearly back it up, so it is flagged for a re-check against the answer key page."
     },
     {
      "id": "c08-s08-t1",

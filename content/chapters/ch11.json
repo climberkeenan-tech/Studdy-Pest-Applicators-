@@ -632,7 +632,7 @@
      ],
      "answer": 2,
      "ref": "Review question 3, p. 169. Answer in the text: pp. 159 to 160, 'Pesticide Containment Systems'",
-     "why": "Pads make cleanup easier and must be impermeable. They belong where large quantities of pesticides are handled or mixed."
+     "why": "Pads make cleanup easier and must be impermeable. They are used where large quantities of pesticides are handled or stored."
     },
     {
      "id": "c11-s05-t1",
@@ -672,7 +672,7 @@
      ],
      "answer": 2,
      "ref": "p. 160, 'Pesticide Containment Systems'",
-     "why": "Recovery is by an automatic sump system or a manually operated pump. Soaking in defeats the pad."
+     "why": "The pad must remove and recover spilled material by an automatic sump system or a manually operated pump."
     },
     {
      "id": "c11-s05-t4",

@@ -697,7 +697,9 @@
    "the substance that controls the pest",
    "the chemical with the pesticidal action",
    "the chemical responsible for the activity of the pesticide",
-   "the ingredient that does the work of controlling the pest"
+   "the ingredient that does the work of controlling the pest",
+   "the chemical that controlled the pest",
+   "the ingredient that performs the desired function"
   ],
   "wrong": [
    "inert ingredients",

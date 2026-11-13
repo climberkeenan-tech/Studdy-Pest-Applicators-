@@ -1,0 +1,18 @@
+<svg viewBox="0 0 640 330" role="img" aria-label="A mixing and washing pad: a containment pad with a drain in the middle that runs down into a sump below">
+  <path class="f-card s-muted" stroke-width="2" d="M30 100 H610 V300 H30 Z"/>
+  <path class="f-muted" fill-opacity=".35" d="M90 110 H550 V280 H90 Z"/>
+  <path class="s-ink" stroke-width="7" stroke-linecap="round" fill="none" d="M40 80 L90 104 H550 L600 80"/>
+  <path class="f-ink" d="M250 110 H390 V124 H250 Z"/>
+  <path class="s-field" stroke-width="2" d="M262 112 V122 M276 112 V122 M290 112 V122 M304 112 V122 M318 112 V122 M332 112 V122 M346 112 V122 M360 112 V122 M374 112 V122"/>
+  <path class="f-ink" d="M312 124 H328 V176 H312 Z"/>
+  <path class="f-field s-ink" fill-opacity=".45" stroke-width="2.5" d="M170 176 H470 V270 H170 Z"/>
+  <g class="s-ink" stroke-width="2" fill="none">
+    <path d="M190 44 L300 112"/>
+    <path d="M470 44 L420 104"/>
+  </g>
+  <g font-family="var(--f-body)" font-size="19" class="f-ink">
+    <text x="130" y="38">Drain</text>
+    <text x="400" y="38">Containment pad</text>
+  </g>
+  <text font-family="var(--f-display)" font-weight="800" font-size="22" text-anchor="middle" class="f-ink" x="320" y="230">sump</text>
+</svg>

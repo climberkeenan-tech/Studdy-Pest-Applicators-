@@ -20,7 +20,13 @@ session's network could not open directly): 50 multiple-choice questions, 35 cor
   first in the card that holds the answer. The manual's key is in **Appendix A**, which the user has
   not sent. The answers were taken from the chapter text. When Appendix A arrives, check every
   review answer against it and report any disagreement.
-- Next: Chapter 2 pages. Ask for the manual's total page count (still unknown).
+- Chapter 10, Planning the Pesticide Application (pp. 143–154, review questions pp. 155–156): 17 cards
+  (`c10-s01` to `c10-s17`), 78 test-style questions, 10 review questions (same Appendix A caveat as Chapter 1).
+  Photos cropped by `tools/crop_photos_ch10.py` (grayscale, because the page photos had a purple cast).
+  Diagrams: `fig-10-jar.svg` (jar test), `fig-10-sump.svg` (containment pad and sump).
+- Chapters 2 to 9 are not done. The user skipped ahead to Chapter 10. Cards merge in file-name order, so new
+  chapter files slot in correctly (ch02.json before ch10.json).
+- Next: whichever chapter the user sends. Ask for the manual's total page count (still unknown).
 
 ## Rules for every session (the user's own rules)
 1. The user sends photos of manual pages. Work **only** from those pages.

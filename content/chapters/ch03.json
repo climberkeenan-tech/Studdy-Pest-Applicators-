@@ -1,0 +1,3397 @@
+{
+ "chapter": "Chapter 3 · Pesticide Labeling",
+ "pages": [
+  31,
+  47
+ ],
+ "sections": [
+  {
+   "id": "c03-s01",
+   "chapter": "Chapter 3 · Pesticide Labeling",
+   "title": "Chapter goals, the label, and EPA approval",
+   "pages": [
+    31,
+    32
+   ],
+   "body": [
+    {
+     "box": "Learning objectives",
+     "p": [
+      "After studying this chapter, you should be able to do the following."
+     ],
+     "list": [
+      "Distinguish between the various types of pesticide registrations.",
+      "Explain when to read the pesticide label.",
+      "State who may use a pesticide.",
+      "Accurately identify the common, chemical, and brand or trade name of a pesticide.",
+      "Determine the percentage of active ingredient or ingredients in a formulation.",
+      "Interpret the meaning of label signal words, symbols, and their relative hazard levels.",
+      "Identify these types of statements on a pesticide label: precautionary; first aid; personal protective equipment; environmental, physical, or chemical hazards; mixing, loading, storage, and disposal; and restricted entry and reentry.",
+      "Describe how to interpret other documents and online resources referenced on the label.",
+      "Distinguish between advisory and mandatory statements on a label.",
+      "Discuss how to use information on a Safety Data Sheet."
+     ]
+    },
+    {
+     "fig": "p31-jug"
+    },
+    {
+     "h": "Label and labeling"
+    },
+    {
+     "p": [
+      "The **pesticide label** is the main method of communication between a pesticide manufacturer and pesticide users.",
+      "The information printed on and attached to the pesticide container is the label.",
+      "**By law, pesticide users are required to comply with all instructions and use directions found on the pesticide product label.**",
+      "**Labeling** includes the label itself plus all other information about the product referenced on the label and given when you buy the product.",
+      "For example, the labeling may include information that accompanies the product in the form of a comprehensive product-use manual, brochures, leaflets, and/or **Safety Data Sheets (SDSs)**.",
+      "Pesticide labeling includes instructions on how to use the product safely and correctly."
+     ]
+    },
+    {
+     "h": "EPA approval of pesticide labeling"
+    },
+    {
+     "fig": "p32-shelf"
+    },
+    {
+     "p": [
+      "As discussed in Chapter 2, Federal Pesticide Laws and Regulations, no pesticide may be sold in the United States until the **Environmental Protection Agency (EPA)** has reviewed the manufacturer's application for registration.",
+      "EPA must determine that the use of the product does not present an **unreasonable risk** to humans, wildlife, or the environment.",
+      "As part of the registration process, EPA must approve all language that the manufacturer, or **registrant**, proposes to include in the product labeling.",
+      "Exceptions to the registration requirement are covered under a specific exemption, explained later in this chapter under Types of Pesticide Registration.",
+      "Only after EPA has reviewed the labeling and registered the product can a pesticide product be sold for use.",
+      "If the manufacturer wants to change the information on the labeling after the product and labeling are registered, **EPA must approve the change**."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "p31-jug",
+     "title": "A pesticide container with its label.",
+     "page": "p. 31",
+     "imgFile": "p31-jug.jpg"
+    },
+    {
+     "id": "p32-shelf",
+     "title": "No pesticide may be sold in the U.S. before it has been reviewed by EPA.",
+     "page": "p. 32",
+     "imgFile": "p32-shelf.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c03-s01-t1",
+     "kind": "mc",
+     "q": "What is the difference between the label and the labeling?",
+     "choices": [
+      "They are two words for the same thing",
+      "The label is the information on and attached to the container; labeling is the label plus all other product information referenced on it and given at purchase",
+      "The labeling is only the front panel; the label is everything else",
+      "The label is written by EPA; the labeling is written by the manufacturer"
+     ],
+     "answer": 1,
+     "ref": "p. 32, introduction",
+     "why": "Labeling includes the label itself plus all other information referenced on the label and given when you buy the product.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s01-t2",
+     "kind": "mc",
+     "q": "Which of these is NOT given as an example of pesticide labeling?",
+     "choices": [
+      "A product-use manual",
+      "Brochures and leaflets",
+      "Safety Data Sheets",
+      "A sales receipt"
+     ],
+     "answer": 3,
+     "ref": "p. 32, introduction",
+     "why": "The manual lists a product-use manual, brochures, leaflets, and SDSs.",
+     "style": "not",
+     "src": "test"
+    },
+    {
+     "id": "c03-s01-t3",
+     "kind": "mc",
+     "q": "A manufacturer wants to change the wording on a label after the product and label are already registered. What must happen?",
+     "choices": [
+      "Nothing; registered labels can be changed freely",
+      "The state must approve the change",
+      "EPA must approve the change",
+      "The manufacturer must re-test the product on animals"
+     ],
+     "answer": 2,
+     "ref": "p. 32, 'EPA Approval of Pesticide Labeling'",
+     "why": "After registration, EPA must approve any change to the labeling.",
+     "style": "scenario",
+     "src": "test"
+    },
+    {
+     "id": "c03-s01-t4",
+     "kind": "tf",
+     "q": "A pesticide may be sold in the United States while EPA is still reviewing its registration application, as long as the label is approved.",
+     "answer": false,
+     "ref": "p. 32, 'EPA Approval of Pesticide Labeling'",
+     "why": "Only after EPA has reviewed the labeling and registered the product can it be sold.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s01-t5",
+     "kind": "short",
+     "q": "By law, pesticide users must comply with what?",
+     "answer": "All instructions and use directions found on the pesticide product label",
+     "accept": [
+      "the label directions",
+      "everything on the label",
+      "label instructions"
+     ],
+     "keys": [
+      [
+       "label",
+       "labeling",
+       "labels"
+      ],
+      [
+       "instructions",
+       "directions",
+       "everything",
+       "all"
+      ]
+     ],
+     "ref": "p. 32, introduction",
+     "why": "By law, users must comply with all instructions and use directions on the label.",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c03-s02",
+   "chapter": "Chapter 3 · Pesticide Labeling",
+   "title": "Why the label matters and how its data is gathered",
+   "pages": [
+    32,
+    33
+   ],
+   "body": [
+    {
+     "h": "The label"
+    },
+    {
+     "p": [
+      "The label is an important tool for the safe and effective use of pesticides.",
+      "Pesticide manufacturers are required by law to put certain information on the label.",
+      "Failure to heed and follow label directives can result in a pesticide accident and **legal action against the user**.",
+      "**Labels are legal documents** providing directions on how to mix, apply, store, and dispose of pesticide products."
+     ]
+    },
+    {
+     "h": "Background of the label"
+    },
+    {
+     "p": [
+      "To appreciate the value of the information that appears on a pesticide label, one must consider the time, effort, and money spent to gather it.",
+      "This research-based information takes **at least six years** to obtain and costs a chemical company **millions of dollars**.",
+      "Manufacturers continually make and screen new compounds for possible pesticide use.",
+      "For every new pesticide that successfully meets the standards, **thousands of other compounds** are screened and discarded for various reasons.",
+      "Once a promising pesticide is identified, its potential use must be evaluated to determine if it is a worthwhile candidate for the label registration process.",
+      "Many carefully controlled tests are conducted to determine the **effectiveness and safety** of each pesticide under a wide range of environmental conditions."
+     ]
+    },
+    {
+     "h": "Toxicity and toxicological tests"
+    },
+    {
+     "p": [
+      "How poisonous or dangerous is a pesticide to humans, wildlife, and other organisms?",
+      "Does the chemical cause any long-term, or **chronic**, effects?",
+      "Does it cause any skin, or **dermal**, reactions?",
+      "To determine these and other health effects, researchers administer the pesticide at various dosages to test animals, usually **rats and mice**.",
+      "Newer methods now coming into use rely on **mathematical models** able to predict the same toxic endpoints without involving animal testing."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c03-s02-t1",
+     "kind": "mc",
+     "q": "According to the manual, how long does it take to gather the research-based information that appears on a pesticide label?",
+     "choices": [
+      "At least one year",
+      "At least three years",
+      "At least six years",
+      "At least ten years"
+     ],
+     "answer": 2,
+     "ref": "p. 32, 'Background of the Label'",
+     "why": "The information takes at least six years and costs millions of dollars.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s02-t2",
+     "kind": "mc",
+     "q": "Which test animals are usually used to find the health effects of a pesticide?",
+     "choices": [
+      "Dogs and cats",
+      "Rats and mice",
+      "Rabbits and birds",
+      "Fish and frogs"
+     ],
+     "answer": 1,
+     "ref": "p. 32, 'Toxicity and Toxicological Tests'",
+     "why": "Researchers usually use rats and mice.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s02-t3",
+     "kind": "mc",
+     "q": "Which of these is NOT something labels give legal directions for, according to 'The Label'?",
+     "choices": [
+      "How to mix the product",
+      "How to apply the product",
+      "How to store and dispose of the product",
+      "What price to sell the product for"
+     ],
+     "answer": 3,
+     "ref": "p. 32, 'The Label'",
+     "why": "Labels give directions on how to mix, apply, store, and dispose of pesticide products.",
+     "style": "not",
+     "src": "test"
+    },
+    {
+     "id": "c03-s02-t4",
+     "kind": "mc",
+     "q": "An applicator ignores the label directions and causes an accident. Based on 'The Label' section, what can result?",
+     "choices": [
+      "Nothing, because labels are only advice",
+      "A pesticide accident and legal action against the user",
+      "Only a warning from the manufacturer",
+      "Legal action against the manufacturer only"
+     ],
+     "answer": 1,
+     "ref": "p. 32, 'The Label'",
+     "why": "Failure to follow label directives can result in an accident and legal action against the user.",
+     "style": "scenario",
+     "src": "test"
+    },
+    {
+     "id": "c03-s02-t5",
+     "kind": "tf",
+     "q": "Newer testing methods use mathematical models to predict toxic endpoints without animal testing.",
+     "answer": true,
+     "ref": "pp. 32 to 33, 'Toxicity and Toxicological Tests'",
+     "why": "Newer methods rely on mathematical models that predict the same toxic endpoints without animals.",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c03-s03",
+   "chapter": "Chapter 3 · Pesticide Labeling",
+   "title": "Efficacy, residue tests, and preharvest intervals",
+   "pages": [
+    33,
+    33
+   ],
+   "body": [
+    {
+     "h": "Efficacy or performance tests"
+    },
+    {
+     "p": [
+      "The company must have **performance data** to show that the pesticide controls a particular pest or group of pests on one or more hosts or sites, including plants, animals, soil, and structures.",
+      "Data must show that the pesticide, when used for its intended purpose and according to directions, is a useful product.",
+      "Information is also needed on crop varieties, soil types, application methods and rates, and a number of required applications.",
+      "Tests must show that the pests are controlled, crops or animals are not injured, yield and/or quality has been improved, and the pesticide provides a **measurable benefit**."
+     ]
+    },
+    {
+     "h": "Degradation, mobility, and residue tests"
+    },
+    {
+     "p": [
+      "A series of studies shows how long it takes for the compound to break down, or **degrade**, into harmless materials under various conditions.",
+      "In addition, it is important to know if the pesticide moves through the soil into **groundwater** or if it moves into the plant from treated soil.",
+      "**Residue studies** are conducted for each application method on every treated crop or animal.",
+      "These tests determine how much, if any, of the pesticide residue or its breakdown products remain on or in the crop or animal at the time of harvest or slaughter.",
+      "Pesticide residues on or in food or feed commodities must not exceed the **residue tolerances** established by EPA when the crop or animal, including meat, milk, and eggs, is ready for market or livestock feed."
+     ]
+    },
+    {
+     "p": [
+      "Although specific tolerances are **not included on product labels**, **preharvest intervals** (days to harvest) and/or **preslaughter intervals** (days to slaughter) are often listed on labels of agricultural pesticides.",
+      "These are the **minimum number of days** between the last application of a pesticide and the harvest of crops or the slaughter of livestock.",
+      "Intervals are set by EPA to allow time for the pesticide to break down on crops or in livestock.",
+      "Adhering to these intervals prevents unacceptable residues on food, feed, or animal products.",
+      "If residues exceed the EPA tolerance or are found on commodities that do not have a specified tolerance, the commodity may be **condemned and destroyed**."
+     ]
+    },
+    {
+     "h": "Effects on wildlife and the environment"
+    },
+    {
+     "fig": "p34-fish"
+    },
+    {
+     "p": [
+      "The pesticide manufacturer must determine the effects of field applications of the pesticide on wildlife and the natural environment.",
+      "Any potentially harmful effects that are recognized during these studies must be included in the **environmental impact statement** submitted to EPA."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "p34-fish",
+     "title": "Potential adverse effects of pesticides to wildlife and the environment must be included in environmental impact statements submitted to EPA.",
+     "page": "p. 34",
+     "imgFile": "p34-fish.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c03-s03-t1",
+     "kind": "mc",
+     "q": "What is a preharvest interval?",
+     "choices": [
+      "The maximum residue allowed on a crop at harvest",
+      "The minimum number of days between the last pesticide application and harvest of the crop",
+      "The number of hours before workers may reenter a field",
+      "The time between two applications of the same pesticide"
+     ],
+     "answer": 1,
+     "ref": "p. 33, 'Degradation, Mobility, and Residue Tests'",
+     "why": "Preharvest intervals are the minimum days between the last application and harvest.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s03-t2",
+     "kind": "mc",
+     "q": "A grower sprays a crop and harvests it before the label's preharvest interval has passed. Residues on the crop exceed the EPA tolerance. What can happen to the crop?",
+     "choices": [
+      "Nothing, if the crop looks healthy",
+      "It may be condemned and destroyed",
+      "It must be washed and then sold",
+      "It can only be sold as livestock feed"
+     ],
+     "answer": 1,
+     "ref": "p. 33, 'Degradation, Mobility, and Residue Tests'",
+     "why": "If residues exceed the EPA tolerance, the commodity may be condemned and destroyed.",
+     "style": "scenario",
+     "src": "test"
+    },
+    {
+     "id": "c03-s03-t3",
+     "kind": "tf",
+     "q": "Specific residue tolerances are printed on product labels.",
+     "answer": false,
+     "ref": "p. 33, 'Degradation, Mobility, and Residue Tests'",
+     "why": "Tolerances are not included on labels; preharvest and preslaughter intervals often are.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s03-t4",
+     "kind": "mc",
+     "q": "Which of these is NOT something efficacy tests must show?",
+     "choices": [
+      "The pests are controlled",
+      "Crops or animals are not injured",
+      "The pesticide provides a measurable benefit",
+      "The pesticide is the cheapest product available"
+     ],
+     "answer": 3,
+     "ref": "p. 33, 'Efficacy or Performance Tests'",
+     "why": "Tests must show pest control, no injury, improved yield or quality, and a measurable benefit.",
+     "style": "not",
+     "src": "test"
+    },
+    {
+     "id": "c03-s03-t5",
+     "kind": "mc",
+     "q": "Where must the manufacturer report potentially harmful effects on wildlife found in its studies?",
+     "choices": [
+      "On the front panel of the label",
+      "In the environmental impact statement submitted to EPA",
+      "In the Safety Data Sheet only",
+      "In a letter to the state"
+     ],
+     "answer": 1,
+     "ref": "p. 33, 'Effects on Wildlife and the Environment'",
+     "why": "Harmful effects must be included in the environmental impact statement submitted to EPA.",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c03-s04",
+   "chapter": "Chapter 3 · Pesticide Labeling",
+   "title": "Registrations: Section 3, special local need, and Section 18",
+   "pages": [
+    33,
+    34
+   ],
+   "body": [
+    {
+     "h": "Types of pesticide registration"
+    },
+    {
+     "p": [
+      "As mentioned in Chapter 2, the **Federal Insecticide, Fungicide, and Rodenticide Act (FIFRA)** has several types of registrations and exemptions that enable pesticides to be used in the United States.",
+      "You are responsible for applying only pesticides registered or exempted from registration by EPA and your respective state, territory, or tribe."
+     ]
+    },
+    {
+     "h": "Section 3"
+    },
+    {
+     "p": [
+      "**Section 3 registrations** are the most common.",
+      "Look for the official **EPA registration number** required on the label, except for products that EPA classifies as minimum-risk pesticides, to be sure you are buying an approved and registered product."
+     ]
+    },
+    {
+     "h": "Special local need, Section 24(c)"
+    },
+    {
+     "p": [
+      "**Special local need (SLN) registrations** are categorized as **Section 24(c)**.",
+      "They allow states to **expand or limit** the uses of certain registered pesticides within their jurisdictions.",
+      "For instance, some SLNs allow uses of pesticides for crops or sites not listed on the label.",
+      "Others limit the uses of certain pesticides to address local concerns.",
+      "Manufacturers must provide **supplemental labeling** for each SLN registration.",
+      "You must have SLN labeling **in your possession** to use a pesticide for that purpose.",
+      "The registration numbers of special local need labeling include the SLN number and code for the state issuing the registration.",
+      "These registrations are legal only in the region, state, or local area specified in the labeling.",
+      "It is **illegal** to apply a pesticide that has an SLN registration from other states or regions."
+     ]
+    },
+    {
+     "h": "Emergency exemptions, Section 18"
+    },
+    {
+     "p": [
+      "**Emergency exemptions** under **Section 18** address pest problems for which no pesticides are currently registered.",
+      "A Section 18 exemption allows the sale and use of a registered pesticide product for a specific nonregistered purpose during a **specified period**.",
+      "EPA can issue an emergency exemption at the request of the state, tribe, or territory regulatory agency for a public health concern or other pest crisis.",
+      "There must be **no other feasible pesticide alternative** to the exemption.",
+      "Regulations impose strict controls and require **recordkeeping** for all emergency uses.",
+      "The state, tribe, or territory pesticide regulatory agency prescribes application rates, safety precautions, and other vital application information.",
+      "Applicators must have a **copy of the Section 18 approval on hand** to legally use the product."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c03-s04-t1",
+     "kind": "mc",
+     "q": "Which type of registration lets a state expand or limit the uses of certain registered pesticides within the state?",
+     "choices": [
+      "Section 3",
+      "Section 18",
+      "Section 24(c), special local need",
+      "Section 25(b)"
+     ],
+     "answer": 2,
+     "ref": "p. 33, 'Types of Pesticide Registration'",
+     "why": "SLN registrations, Section 24(c), let states expand or limit uses.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s04-t2",
+     "kind": "mc",
+     "q": "An applicator in Pennsylvania finds an SLN label issued by Ohio that allows the exact use they need. Can they use it in Pennsylvania?",
+     "choices": [
+      "Yes, SLN labels are valid in every state",
+      "Yes, if they carry the Ohio labeling with them",
+      "No, it is illegal to apply a pesticide under an SLN registration from another state",
+      "Only with EPA's verbal approval"
+     ],
+     "answer": 2,
+     "ref": "p. 34, 'Types of Pesticide Registration'",
+     "why": "SLN registrations are legal only in the area specified, and using another state's SLN is illegal.",
+     "style": "scenario",
+     "src": "test"
+    },
+    {
+     "id": "c03-s04-t3",
+     "kind": "mc",
+     "q": "Which of these is NOT a requirement for a Section 18 emergency exemption?",
+     "choices": [
+      "No pesticides are currently registered for the pest problem",
+      "There is no other feasible pesticide alternative",
+      "The applicator has a copy of the Section 18 approval on hand",
+      "The product must be a minimum-risk pesticide"
+     ],
+     "answer": 3,
+     "ref": "p. 34, 'Types of Pesticide Registration'",
+     "why": "Section 18 allows a registered product for a nonregistered purpose; it has nothing to do with minimum-risk status.",
+     "style": "not",
+     "src": "test"
+    },
+    {
+     "id": "c03-s04-t4",
+     "kind": "mc",
+     "q": "Who requests a Section 18 emergency exemption from EPA?",
+     "choices": [
+      "The applicator",
+      "The manufacturer",
+      "The state, tribe, or territory regulatory agency",
+      "The county extension office"
+     ],
+     "answer": 2,
+     "ref": "p. 34, 'Types of Pesticide Registration'",
+     "why": "EPA issues it at the request of the state, tribe, or territory regulatory agency.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s04-t5",
+     "kind": "tf",
+     "q": "Section 3 registrations are the most common type of pesticide registration.",
+     "answer": true,
+     "ref": "p. 33, 'Types of Pesticide Registration'",
+     "why": "The manual says Section 3 registrations are the most common.",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c03-s05",
+   "chapter": "Chapter 3 · Pesticide Labeling",
+   "title": "Minimum-risk pesticides, Section 25(b)",
+   "pages": [
+    34,
+    34
+   ],
+   "body": [
+    {
+     "h": "Minimum-risk pesticides, Section 25(b)"
+    },
+    {
+     "p": [
+      "**Minimum-risk pesticides** under **Section 25(b)** are **exempt from registration** provided the products satisfy certain conditions.",
+      "Products identified as exempt pose a **minimal risk** to humans and the environment, do not require EPA label approval, and do not undergo review by EPA.",
+      "Furthermore, these products have no label requirements for an EPA registration number, an EPA establishment number, any signal word, or any personal protective equipment (PPE)."
+     ]
+    },
+    {
+     "p": [
+      "To qualify for a Section 25(b) exemption from registration, each of the active ingredients in any such product must be on a list of specified **minimal-risk active ingredients**.",
+      "Additionally, any inert ingredients in these products must also be listed as **minimal-risk inert ingredients**."
+     ]
+    },
+    {
+     "p": [
+      "Minimum-risk pesticides still have certain label requirements imposed by EPA.",
+      "Product labels **may not claim to control microorganisms** that pose a threat to human health.",
+      "For example, the label may list a pest such as a mosquito or tick, but it must not claim to control any microorganisms that the pest transmits to humans."
+     ]
+    },
+    {
+     "p": [
+      "Many states do **not permit the sale** of a Section 25(b) product unless it is first **registered in the state**."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c03-s05-r1",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which group of pesticides is exempt from registration because it poses little or no risk to humans and the environment?",
+     "choices": [
+      "Restricted use.",
+      "Minimum risk.",
+      "Special local need."
+     ],
+     "answer": 1,
+     "ref": "p. 34, 'Types of Pesticide Registration'; p. 47, Review question 1",
+     "why": "Section 25(b) minimum-risk pesticides are exempt from registration."
+    },
+    {
+     "id": "c03-s05-t1",
+     "kind": "mc",
+     "q": "A Section 25(b) minimum-risk product label leaves out several items other labels have. Which items is it NOT required to show?",
+     "choices": [
+      "An EPA registration number only",
+      "A signal word only",
+      "PPE requirements only",
+      "All three: an EPA registration number, a signal word, and PPE requirements"
+     ],
+     "answer": 3,
+     "ref": "p. 34, 'Types of Pesticide Registration'",
+     "why": "Minimum-risk labels need no registration number, establishment number, signal word, or PPE.",
+     "style": "not",
+     "fixed": true,
+     "src": "test"
+    },
+    {
+     "id": "c03-s05-t2",
+     "kind": "mc",
+     "q": "A minimum-risk mosquito repellent label lists mosquitoes as a pest. Which claim is it NOT allowed to make?",
+     "choices": [
+      "It repels mosquitoes",
+      "It controls a disease virus that mosquitoes carry to humans",
+      "It is for outdoor use",
+      "It contains minimal-risk active ingredients"
+     ],
+     "answer": 1,
+     "ref": "p. 34, 'Types of Pesticide Registration'",
+     "why": "Minimum-risk labels may not claim to control microorganisms the pest transmits to humans.",
+     "style": "scenario",
+     "src": "test"
+    },
+    {
+     "id": "c03-s05-t3",
+     "kind": "tf",
+     "q": "For a product to qualify under Section 25(b), only its active ingredients need to be on the minimal-risk list; inert ingredients do not matter.",
+     "answer": false,
+     "ref": "p. 34, 'Types of Pesticide Registration'",
+     "why": "Inert ingredients must also be listed as minimal-risk inert ingredients.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s05-t4",
+     "kind": "tf",
+     "q": "Many states do not permit the sale of a Section 25(b) product unless it is first registered in the state.",
+     "answer": true,
+     "ref": "p. 34, 'Types of Pesticide Registration'",
+     "why": "The manual states this directly.",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c03-s06",
+   "chapter": "Chapter 3 · Pesticide Labeling",
+   "title": "When to read the pesticide label",
+   "pages": [
+    34,
+    35
+   ],
+   "body": [
+    {
+     "h": "When to read the pesticide label"
+    },
+    {
+     "p": [
+      "It is your responsibility as the user to read and understand all labeling before **buying, using, storing, or disposing** of a pesticide.",
+      "Read the label at each of these times."
+     ]
+    },
+    {
+     "h": "Before buying the pesticide"
+    },
+    {
+     "p": [
+      "Make sure the product is registered for your intended use.",
+      "Confirm that there are no restrictions or other conditions that prohibit using this pesticide at the application site.",
+      "Find out what PPE and special application equipment you will need."
+     ]
+    },
+    {
+     "h": "Before mixing and applying the pesticide"
+    },
+    {
+     "p": [
+      "Determine what precautions to take to prevent exposure to people and nontarget organisms.",
+      "Learn what first aid and medical treatments are necessary should an accident occur.",
+      "Be certain the product's use is suitable for **weather conditions** at the time of application.",
+      "Also, be sure it controls the appropriate **life stage** of your pest."
+     ]
+    },
+    {
+     "h": "When storing pesticides"
+    },
+    {
+     "p": [
+      "Find out how to store the pesticide properly.",
+      "Understand any special precautions to prevent **fire hazards**."
+     ]
+    },
+    {
+     "h": "Before disposing of unused pesticides and empty containers"
+    },
+    {
+     "p": [
+      "From the label, learn how to prevent environmental contamination and hazards to people.",
+      "Check with your state pesticide regulatory agency for any disposal restrictions and requirements.",
+      "Find out whether your state has pesticide container recycling and waste disposal programs."
+     ]
+    },
+    {
+     "fig": "p35-reader"
+    }
+   ],
+   "figures": [
+    {
+     "id": "p35-reader",
+     "title": "Always read the label prior to purchasing and using the pesticide.",
+     "page": "p. 35",
+     "imgFile": "p35-reader.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c03-s06-t1",
+     "kind": "mc",
+     "q": "At which point should you find out what PPE and special application equipment you will need?",
+     "choices": [
+      "Before buying the pesticide",
+      "Only before disposing of the container",
+      "After the application",
+      "Only when storing the pesticide"
+     ],
+     "answer": 0,
+     "ref": "p. 34, 'When to Read the Pesticide Label'",
+     "why": "Before buying, find out what PPE and special equipment you will need.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s06-t2",
+     "kind": "mc",
+     "q": "You are about to mix a product. Which of these is NOT one of the label checks the manual lists for before mixing and applying?",
+     "choices": [
+      "Precautions to prevent exposure to people and nontarget organisms",
+      "First aid and medical treatment needed after an accident",
+      "Whether the product controls the pest's life stage",
+      "Whether your state has a container recycling program"
+     ],
+     "answer": 3,
+     "ref": "pp. 34 to 35, 'When to Read the Pesticide Label'",
+     "why": "Checking for recycling programs belongs to the before-disposal step.",
+     "style": "not",
+     "src": "test"
+    },
+    {
+     "id": "c03-s06-t3",
+     "kind": "mc",
+     "q": "A customer wants to use a product on a site. Before buying it, what should the label confirm first?",
+     "choices": [
+      "That the product is registered for the intended use",
+      "That the price is lowest",
+      "That the container is recyclable",
+      "That the product has a CAUTION signal word"
+     ],
+     "answer": 0,
+     "ref": "p. 34, 'When to Read the Pesticide Label'",
+     "why": "Before buying, make sure the product is registered for your intended use.",
+     "style": "scenario",
+     "src": "test"
+    },
+    {
+     "id": "c03-s06-t4",
+     "kind": "tf",
+     "q": "When storing a pesticide, the label should tell you about special precautions to prevent fire hazards.",
+     "answer": true,
+     "ref": "p. 35, 'When to Read the Pesticide Label'",
+     "why": "When storing, understand any special precautions to prevent fire hazards.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s06-t5",
+     "kind": "short",
+     "q": "Name the four times the manual says to read the label.",
+     "answer": "Before buying, before mixing and applying, when storing, and before disposing",
+     "accept": [],
+     "keys": [
+      [
+       "buying",
+       "buy",
+       "purchasing",
+       "purchase"
+      ],
+      [
+       "mixing",
+       "mix",
+       "applying",
+       "apply",
+       "using",
+       "use"
+      ],
+      [
+       "storing",
+       "store",
+       "storage"
+      ],
+      [
+       "disposing",
+       "dispose",
+       "disposal"
+      ]
+     ],
+     "ref": "pp. 34 to 35, 'When to Read the Pesticide Label'",
+     "why": "Read it before buying, before mixing and applying, when storing, and before disposal.",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c03-s07",
+   "chapter": "Chapter 3 · Pesticide Labeling",
+   "title": "Trade name, ingredients, chemical name, and common name",
+   "pages": [
+    35,
+    36
+   ],
+   "body": [
+    {
+     "h": "Parts of the label"
+    },
+    {
+     "p": [
+      "Some labels are easy to understand; others are complicated.",
+      "Each label component is discussed in this section.",
+      "Figure 3.1, later in this chapter, is an example of a pesticide label."
+     ]
+    },
+    {
+     "h": "Trade, brand, or product name"
+    },
+    {
+     "p": [
+      "Every manufacturer has **trade names** for its products.",
+      "Most companies register each trade name as a trademark.",
+      "Various manufacturers use **different trade names**, even when the products contain the **same active ingredient**.",
+      "The **brand name** often indicates the type of formulation and the percentage of active ingredient present.",
+      "For example, **Tempo 20WP** is a brand name.",
+      "Tempo is the registered trade name, and the formulation is a **wettable powder** containing **20% active ingredient**.",
+      "The trade or brand name shows up plainly on the **front panel** of the label and is the one used in advertisements."
+     ]
+    },
+    {
+     "h": "Ingredient statement"
+    },
+    {
+     "p": [
+      "Every pesticide label must list the active ingredients and the percentage of each active ingredient found in that particular product.",
+      "The **active ingredient (a.i.)** is the chemical or chemicals in a pesticide product responsible for its pesticidal activity.",
+      "It is the material in a pesticide formulation that actually controls a pest or performs a desired function, for example a repellent or growth regulator.",
+      "**Inert ingredients** are usually not named, but the label must show what **percentage** of the total contents they make up.",
+      "The ingredient statement must list the official chemical names and/or common names of the active ingredients.",
+      "Look at this Tempo insecticide label excerpt as an example."
+     ]
+    },
+    {
+     "box": "Tempo 20WP",
+     "list": [
+      "Active ingredient: β-Cyfluthrin, cyano(4-fluoro-3-phenoxyphenyl)methyl 3-(2,2-dichloroethenyl)-2,2-dimethylcyclopropanecarboxylate, 20%.",
+      "Inert ingredients, 80%."
+     ]
+    },
+    {
+     "p": [
+      "The **chemical name** is the complex name that identifies the chemical components and structure of the pesticide's active ingredient.",
+      "This name must be listed in the ingredient statement on the label.",
+      "For example, the chemical name of Tempo is the long name in the box above.",
+      "Because chemical names of active ingredients are usually complex, many are given a shorter **common name**.",
+      "Only those common names **officially accepted by EPA** may be used in the ingredient statement on the pesticide label.",
+      "The official common name is usually followed by the chemical name in the list of active ingredients.",
+      "The common name for Tempo is **cyfluthrin**."
+     ]
+    },
+    {
+     "p": [
+      "By purchasing pesticides according to the common or chemical names, you are certain of getting the right active ingredient, no matter what the brand name or formulation.",
+      "Remember, **not all pesticides with the same a.i. are labeled for the same uses or rates**."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c03-s07-r2",
+     "src": "review",
+     "kind": "mc",
+     "q": "The active ingredient in Tempo 20WP is listed as β-Cyfluthrin, cyano(4-fluoro-3-phenoxyphenyl)methyl 3-(2,2-dichloroethenyl)-2,2-dimethylcyclopropanecarboxylate. What does the term \"Cyfluthrin\" represent?",
+     "choices": [
+      "The brand name.",
+      "The chemical name.",
+      "The common name."
+     ],
+     "answer": 2,
+     "ref": "p. 35, 'Ingredient Statement'; p. 47, Review question 2",
+     "why": "The common name for Tempo is cyfluthrin."
+    },
+    {
+     "id": "c03-s07-r3",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which statement about pesticide label names and ingredients is true?",
+     "choices": [
+      "Both the active ingredients and inert ingredients must be listed by chemical name.",
+      "Various manufacturers use different trade names, even though the products may contain the same active ingredient.",
+      "Common names are those officially accepted by the manufacturer."
+     ],
+     "answer": 1,
+     "ref": "p. 35, 'Trade, Brand, or Product Name'; p. 47, Review question 3",
+     "why": "Inerts are usually not named, and common names must be accepted by EPA, not the manufacturer."
+    },
+    {
+     "id": "c03-s07-t1",
+     "kind": "mc",
+     "q": "In the brand name Tempo 20WP, what does 20WP tell you?",
+     "choices": [
+      "20 pounds per gallon of wettable product",
+      "A wettable powder with 20% active ingredient",
+      "20% inert ingredients in a water-based product",
+      "The 20th product made by the manufacturer"
+     ],
+     "answer": 1,
+     "ref": "p. 35, 'Trade, Brand, or Product Name'",
+     "why": "The formulation is a wettable powder containing 20% active ingredient.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s07-t2",
+     "kind": "mc",
+     "q": "Two products from different companies have different brand names but the same active ingredient. Which statement is correct?",
+     "choices": [
+      "They are labeled for exactly the same uses and rates",
+      "They may not be labeled for the same uses or rates, so read each label",
+      "One of them must be illegal",
+      "They must have the same signal word"
+     ],
+     "answer": 1,
+     "ref": "p. 36, 'Ingredient Statement'",
+     "why": "Not all pesticides with the same a.i. are labeled for the same uses or rates.",
+     "style": "scenario",
+     "src": "test"
+    },
+    {
+     "id": "c03-s07-t3",
+     "kind": "mc",
+     "q": "Which of these is NOT true about inert ingredients on a label?",
+     "choices": [
+      "They are usually not named",
+      "The label must show their percentage of the total contents",
+      "In Tempo 20WP they make up 80%",
+      "Each one must be listed by its chemical name"
+     ],
+     "answer": 3,
+     "ref": "p. 35, 'Ingredient Statement'",
+     "why": "Inert ingredients are usually not named; only their percentage must be shown.",
+     "style": "not",
+     "src": "test"
+    },
+    {
+     "id": "c03-s07-t4",
+     "kind": "short",
+     "q": "What is the active ingredient?",
+     "answer": "The chemical or chemicals in a pesticide product responsible for its pesticidal activity",
+     "accept": [
+      "the chemical that actually controls the pest",
+      "the part that controls the pest"
+     ],
+     "keys": [
+      [
+       "chemical",
+       "chemicals",
+       "material",
+       "part",
+       "ingredient"
+      ],
+      [
+       "pesticidal activity",
+       "controls",
+       "control",
+       "kills",
+       "works",
+       "function"
+      ]
+     ],
+     "ref": "p. 35, 'Ingredient Statement'",
+     "why": "The a.i. is the chemical responsible for pesticidal activity, the material that actually controls the pest.",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c03-s08",
+   "chapter": "Chapter 3 · Pesticide Labeling",
+   "title": "Restricted use, type of pesticide, and other front-panel items",
+   "pages": [
+    36,
+    36
+   ],
+   "body": [
+    {
+     "h": "Use classification statement"
+    },
+    {
+     "p": [
+      "Currently, EPA classifies every pesticide product as either **restricted use** or **unclassified/general use**.",
+      "Every product that is federally classified as a restricted-use pesticide must have the following statement at the **top of the front panel** of the pesticide label."
+     ]
+    },
+    {
+     "box": "Restricted-use pesticide",
+     "p": [
+      "For retail sale to and use only by **certified applicators or persons under their direct supervision** and only for those uses covered by the certified applicator's certification."
+     ]
+    },
+    {
+     "p": [
+      "Pesticides labeled for restricted use demand special attention because there is reason to believe they could harm humans, livestock, wildlife, or the environment **even when used according to label directions**.",
+      "The restricted-use statement indicates the **specific hazard** of that pesticide.",
+      "For example, a product may be very toxic to humans and wildlife or pose a groundwater hazard.",
+      "Persons using these products must be certified applicators or have received special training and have demonstrated a certain level of competence to ensure that they can handle these pesticides properly."
+     ]
+    },
+    {
+     "p": [
+      "Unclassified pesticides are often called **general-use pesticides**.",
+      "Typically, they have a lower toxicity with less potential to harm humans and the environment than restricted-use pesticides.",
+      "Anyone can purchase and use them without special permits or restrictions."
+     ]
+    },
+    {
+     "h": "Type of pesticide"
+    },
+    {
+     "p": [
+      "The type of pesticide is usually listed on the front panel of the pesticide label.",
+      "This short statement indicates in general terms what the product controls.",
+      "Examples include the following."
+     ]
+    },
+    {
+     "list": [
+      "Insecticide for control of certain insects on fruits, nuts, and ornamentals.",
+      "Herbicide for control of woody brush and broadleaf weeds.",
+      "Insecticide for broad-spectrum control of crawling, flying, and wood-infesting insect pests on indoor and outdoor surfaces, as well as pests of trees, landscape ornamentals, and residential and commercial lawns."
+     ]
+    },
+    {
+     "h": "Net contents"
+    },
+    {
+     "p": [
+      "The pesticide label must show how much product is in the container.",
+      "This is expressed as **pounds or ounces for dry formulations** or as **gallons, quarts, or pints for liquids**.",
+      "Liquid formulations may also list the **pounds of active ingredient per gallon** of product.",
+      "Many labels now also include metric units, such as grams, kilograms, or liters, as part of the contents information."
+     ]
+    },
+    {
+     "h": "Name and address of manufacturer"
+    },
+    {
+     "p": [
+      "The law requires that the manufacturer or formulator of a pesticide product put its name and address on the label so you know who made or sold the product."
+     ]
+    },
+    {
+     "h": "Emergency telephone number"
+    },
+    {
+     "p": [
+      "Many pesticide manufacturers list an emergency telephone number on their product labels.",
+      "These companies will assist anyone using their products in an emergency, for example a poisoning, spill, or fire."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c03-s08-t1",
+     "kind": "mc",
+     "q": "Where must the restricted-use statement appear on the label?",
+     "choices": [
+      "At the top of the front panel",
+      "In the directions for use",
+      "On the back panel near storage and disposal",
+      "Anywhere on the container"
+     ],
+     "answer": 0,
+     "ref": "p. 36, 'Use Classification Statement'",
+     "why": "It must be at the top of the front panel.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s08-t2",
+     "kind": "mc",
+     "q": "A landscaping crew member who is not certified wants to apply a restricted-use pesticide. Under the restricted-use statement, when may they apply it?",
+     "choices": [
+      "Never, under any circumstances",
+      "Only under the direct supervision of a certified applicator, and only for uses covered by that applicator's certification",
+      "Any time, if they read the label first",
+      "Only if the product has a CAUTION signal word"
+     ],
+     "answer": 1,
+     "ref": "p. 36, 'Use Classification Statement'",
+     "why": "RUPs are for certified applicators or persons under their direct supervision, for uses their certification covers.",
+     "style": "scenario",
+     "src": "test"
+    },
+    {
+     "id": "c03-s08-t3",
+     "kind": "tf",
+     "q": "Restricted-use pesticides can harm humans, livestock, wildlife, or the environment even when used according to label directions.",
+     "answer": true,
+     "ref": "p. 36, 'Use Classification Statement'",
+     "why": "That reason is why they are restricted.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s08-t4",
+     "kind": "mc",
+     "q": "Which of these is NOT a way net contents are expressed on a label?",
+     "choices": [
+      "Pounds or ounces for dry formulations",
+      "Gallons, quarts, or pints for liquids",
+      "Pounds of active ingredient per gallon for liquids",
+      "Number of acres the container will treat"
+     ],
+     "answer": 3,
+     "ref": "p. 36, 'Net Contents'",
+     "why": "Net contents are given by weight or volume, and liquids may list pounds of a.i. per gallon.",
+     "style": "not",
+     "src": "test"
+    },
+    {
+     "id": "c03-s08-t5",
+     "kind": "mc",
+     "q": "Who can purchase and use general-use pesticides?",
+     "choices": [
+      "Only certified applicators",
+      "Only persons under direct supervision",
+      "Anyone, without special permits or restrictions",
+      "Only licensed dealers"
+     ],
+     "answer": 2,
+     "ref": "p. 36, 'Use Classification Statement'",
+     "why": "Anyone can purchase and use general-use pesticides without special permits.",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c03-s09",
+   "chapter": "Chapter 3 · Pesticide Labeling",
+   "title": "EPA registration and establishment numbers",
+   "pages": [
+    36,
+    37
+   ],
+   "body": [
+    {
+     "h": "Registration numbers"
+    },
+    {
+     "p": [
+      "**EPA registration numbers**, required on all pesticide labels **except Section 25(b) products**, indicate that the pesticide product has been registered and the label approved by EPA.",
+      "Most EPA registration numbers include just **two sets of numbers**, which identify the **manufacturer** and the **specific product**.",
+      "Occasionally a **third set** of numbers appears, which gives a **distributor's** identification number on labels of distributor products."
+     ]
+    },
+    {
+     "box": "Examples of EPA registration numbers",
+     "list": [
+      "EPA Reg. No. 3120-280-1492. 3120 identifies the manufacturer, 280 identifies the specific product, and 1492 identifies the distributor.",
+      "EPA SLN No. PA-990005. SLN indicates special local need. PA means that the product is registered for use in Pennsylvania. 99 means it was registered in 1999. 0005 means it was the fifth special local need product registered that year in Pennsylvania."
+     ]
+    },
+    {
+     "h": "Establishment number"
+    },
+    {
+     "p": [
+      "An **EPA establishment number**, for example EPA Est. No. 5840-AZ-1, must be on the pesticide label to identify the **facility that produced the product**.",
+      "This is necessary in case a problem arises or the product is found to be **adulterated**, or contaminated, in any way.",
+      "The **AZ** in the example indicates the product was manufactured in a specific facility in **Arizona**."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c03-s09-t1",
+     "kind": "mc",
+     "q": "On EPA Reg. No. 3120-280-1492, what does 1492 identify?",
+     "choices": [
+      "The manufacturer",
+      "The specific product",
+      "The distributor",
+      "The year of registration"
+     ],
+     "answer": 2,
+     "ref": "p. 37, box 'Examples of EPA Registration Numbers'",
+     "why": "The third set of numbers identifies the distributor.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s09-t2",
+     "kind": "mc",
+     "q": "On EPA SLN No. PA-990005, what does 99 mean?",
+     "choices": [
+      "It was the 99th SLN product in Pennsylvania",
+      "It was registered in 1999",
+      "It is valid for 99 days",
+      "It is the manufacturer's code"
+     ],
+     "answer": 1,
+     "ref": "p. 37, box 'Examples of EPA Registration Numbers'",
+     "why": "99 means it was registered in 1999; 0005 means fifth SLN that year.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s09-t3",
+     "kind": "mc",
+     "q": "A product is found to be contaminated. Which number on the label tells investigators which facility made it?",
+     "choices": [
+      "The EPA registration number",
+      "The EPA establishment number",
+      "The SLN number",
+      "The emergency telephone number"
+     ],
+     "answer": 1,
+     "ref": "p. 37, 'Establishment Number'",
+     "why": "The establishment number identifies the facility that produced the product.",
+     "style": "scenario",
+     "src": "test"
+    },
+    {
+     "id": "c03-s09-t4",
+     "kind": "mc",
+     "q": "Which type of product does NOT need an EPA registration number on its label?",
+     "choices": [
+      "Restricted-use pesticides",
+      "General-use pesticides",
+      "Section 25(b) minimum-risk products",
+      "Special local need products"
+     ],
+     "answer": 2,
+     "ref": "p. 36, 'Registration Numbers'",
+     "why": "Registration numbers are required on all labels except Section 25(b) products.",
+     "style": "not",
+     "src": "test"
+    },
+    {
+     "id": "c03-s09-t5",
+     "kind": "tf",
+     "q": "Most EPA registration numbers have two sets of numbers, identifying the manufacturer and the specific product.",
+     "answer": true,
+     "ref": "p. 36, 'Registration Numbers'",
+     "why": "A third set appears only occasionally, for distributor products.",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c03-s10",
+   "chapter": "Chapter 3 · Pesticide Labeling",
+   "title": "Signal words and symbols",
+   "pages": [
+    37,
+    37
+   ],
+   "body": [
+    {
+     "h": "Signal words and symbols"
+    },
+    {
+     "p": [
+      "Most pesticide labels must include a **signal word**.",
+      "This designation indicates the **relative acute toxicity** of the product to humans and animals.",
+      "The signal word must appear in **large letters on the front panel** of the pesticide label along with the statement **Keep Out of Reach of Children**.",
+      "These are the signal words on pesticide labels."
+     ]
+    },
+    {
+     "h": "DANGER, POISON, with skull and crossbones"
+    },
+    {
+     "p": [
+      "These words and symbol must appear on all products that are **highly toxic by any route of entry** into the body.",
+      "The word **poison must appear in red**.",
+      "These products can cause death in very low doses.",
+      "**PELIGRO**, the Spanish word for DANGER, must also appear on the label."
+     ]
+    },
+    {
+     "h": "DANGER"
+    },
+    {
+     "p": [
+      "This word signals that the product is **highly toxic by at least one route of entry**.",
+      "Products with this signal word can cause **severe eye damage or skin irritation**."
+     ]
+    },
+    {
+     "h": "WARNING"
+    },
+    {
+     "p": [
+      "This word signals that the product is **moderately toxic** either orally, dermally, or through inhalation, or causes moderate eye and skin irritation.",
+      "**AVISO**, the Spanish word for WARNING, must also appear on the label."
+     ]
+    },
+    {
+     "h": "CAUTION"
+    },
+    {
+     "p": [
+      "This word signals that the product is **slightly toxic** either orally, dermally, or through inhalation, or causes slight eye and skin irritation.",
+      "Although **very low toxicity pesticides are not required to display a signal word**, many manufacturers still include a CAUTION designation on the label of these products."
+     ]
+    },
+    {
+     "fig": "p37-signals"
+    },
+    {
+     "p": [
+      "A detailed discussion on signal words and toxicity appears in Chapter 5, Pesticide Hazards and First Aid."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "p37-signals",
+     "title": "Signal words indicate the relative acute toxicity of the product to humans and animals.",
+     "page": "p. 37",
+     "imgFile": "p37-signals.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c03-s10-r4",
+     "src": "review",
+     "kind": "mc",
+     "q": "What is the purpose of the signal word?",
+     "choices": [
+      "Indicates the product's relative acute toxicity to humans and animals.",
+      "Informs the user what type of PPE to wear.",
+      "Tells the user what type of first aid treatment to seek in case of exposure."
+     ],
+     "answer": 0,
+     "ref": "p. 37, 'Signal Words and Symbols'; p. 47, Review question 4",
+     "why": "The signal word indicates relative acute toxicity to humans and animals."
+    },
+    {
+     "id": "c03-s10-t1",
+     "kind": "mc",
+     "q": "Which signal word goes with a product that is highly toxic by any route of entry and can cause death in very low doses?",
+     "choices": [
+      "CAUTION",
+      "WARNING",
+      "DANGER alone",
+      "DANGER, POISON, with skull and crossbones"
+     ],
+     "answer": 3,
+     "ref": "p. 37, 'Signal Words and Symbols'",
+     "why": "DANGER, POISON, and the skull and crossbones are for products highly toxic by any route.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s10-t2",
+     "kind": "mc",
+     "q": "A label says DANGER with no skull and crossbones. What does that tell you?",
+     "choices": [
+      "The product is slightly toxic",
+      "The product is highly toxic by at least one route of entry, and may cause severe eye damage or skin irritation",
+      "The product is moderately toxic",
+      "The product is exempt from registration"
+     ],
+     "answer": 1,
+     "ref": "p. 37, 'Signal Words and Symbols'",
+     "why": "DANGER alone means highly toxic by at least one route, often severe eye or skin effects.",
+     "style": "scenario",
+     "src": "test"
+    },
+    {
+     "id": "c03-s10-t3",
+     "kind": "mc",
+     "q": "Which of these is NOT a correct pairing of a Spanish word and English signal word?",
+     "choices": [
+      "PELIGRO and DANGER",
+      "AVISO and WARNING",
+      "PELIGRO and CAUTION",
+      "Both PELIGRO and AVISO are required to appear on the label with their signal words"
+     ],
+     "answer": 2,
+     "ref": "p. 37, 'Signal Words and Symbols'",
+     "why": "PELIGRO means DANGER; AVISO means WARNING.",
+     "style": "not",
+     "fixed": true,
+     "src": "test"
+    },
+    {
+     "id": "c03-s10-t4",
+     "kind": "tf",
+     "q": "Very low toxicity pesticides must display the CAUTION signal word.",
+     "answer": false,
+     "ref": "p. 37, 'Signal Words and Symbols'",
+     "why": "They are not required to show a signal word, though many manufacturers still use CAUTION.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s10-t5",
+     "kind": "mc",
+     "q": "Which statement must appear with the signal word on the front panel?",
+     "choices": [
+      "Keep Out of Reach of Children",
+      "Restricted-Use Pesticide",
+      "Read the Safety Data Sheet",
+      "Do not reuse this container"
+     ],
+     "answer": 0,
+     "ref": "p. 37, 'Signal Words and Symbols'",
+     "why": "The signal word appears in large letters with Keep Out of Reach of Children.",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c03-s11",
+   "chapter": "Chapter 3 · Pesticide Labeling",
+   "title": "Precautionary statements and routes of entry",
+   "pages": [
+    37,
+    38
+   ],
+   "body": [
+    {
+     "h": "Precautionary statements"
+    },
+    {
+     "p": [
+      "All pesticide labels contain statements to help you decide what precautions to take to protect yourself, other people, or animals from pesticide exposure.",
+      "Sometimes these statements are listed under the heading **Hazards to Humans and Domestic Animals**.",
+      "Precautionary statements may be found in **several sections** of the label."
+     ]
+    },
+    {
+     "box": "Precautionary statements, from a sample label",
+     "p": [
+      "Hazard to humans and domestic animals. WARNING, AVISO.",
+      "This product may cause skin sensitization reactions in certain individuals. Causes eye irritation. Do not get in eyes, on skin, or on clothing. Harmful if swallowed, inhaled, or absorbed through skin. Avoid breathing spray mist.",
+      "Statement of practical treatment.",
+      "If in eyes: Flush with plenty of water. Get medical attention if irritation persists.",
+      "If on skin: Wash with plenty of soap and water. Get medical attention if irritation persists.",
+      "If swallowed: Do not induce vomiting. Promptly drink a large quantity of milk, egg whites, or gelatin solution. If these are not available, drink large quantities of water. Never give anything by mouth to an unconscious person. Call a physician or Poison Control Center immediately.",
+      "If inhaled: Move victim to fresh air.",
+      "Be familiar with first aid procedures before using the pesticide."
+     ]
+    },
+    {
+     "h": "Routes of entry statements"
+    },
+    {
+     "p": [
+      "**Routes of entry statements** indicate which route or routes of entry into the human body are particularly hazardous.",
+      "Because many pesticide products are hazardous by more than one route, you should study these statements carefully.",
+      "A DANGER signal word followed by **May be fatal if swallowed or inhaled** gives you a far different warning than DANGER followed by **Corrosive, causes eye damage and severe skin burns**.",
+      "Routes of entry statements are **not uniform** on all labels; there are many variations.",
+      "More than one precaution may appear on a label."
+     ]
+    },
+    {
+     "box": "Typical DANGER label statements",
+     "list": [
+      "Fatal if swallowed.",
+      "Poisonous if inhaled.",
+      "Extremely hazardous by skin contact, rapidly absorbed through skin.",
+      "Corrosive, causes eye damage and severe skin burns."
+     ]
+    },
+    {
+     "box": "Typical WARNING label statements",
+     "list": [
+      "Harmful or fatal if swallowed.",
+      "Harmful or fatal if absorbed through the skin.",
+      "Harmful or fatal if inhaled.",
+      "Causes skin and eye irritation."
+     ]
+    },
+    {
+     "box": "Typical CAUTION label statements",
+     "list": [
+      "Harmful if swallowed.",
+      "May be harmful if inhaled.",
+      "May irritate eyes, nose, throat, and skin."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c03-s11-r5",
+     "src": "review",
+     "kind": "mc",
+     "q": "The routes of entry statement, \"Extremely hazardous by skin contact, rapidly absorbed through the skin,\" on a label would most likely carry which signal word?",
+     "choices": [
+      "DANGER.",
+      "WARNING.",
+      "CAUTION."
+     ],
+     "answer": 0,
+     "ref": "p. 38, 'Routes of Entry Statements'; p. 47, Review question 5",
+     "why": "It is listed among typical DANGER label statements."
+    },
+    {
+     "id": "c03-s11-t1",
+     "kind": "mc",
+     "q": "What do routes of entry statements tell you?",
+     "choices": [
+      "Which routes into the human body are particularly hazardous",
+      "Which route the pesticide takes through the soil",
+      "How to apply the pesticide",
+      "How long to wait before reentering a field"
+     ],
+     "answer": 0,
+     "ref": "p. 37, 'Routes of Entry Statements'",
+     "why": "They indicate which routes of entry into the body are particularly hazardous.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s11-t2",
+     "kind": "mc",
+     "q": "A label reads, \"Harmful or fatal if absorbed through the skin.\" Which signal word is this statement typical of?",
+     "choices": [
+      "DANGER",
+      "WARNING",
+      "CAUTION",
+      "No signal word"
+     ],
+     "answer": 1,
+     "ref": "p. 38, 'Routes of Entry Statements'",
+     "why": "Harmful or fatal statements are typical of WARNING labels.",
+     "style": "scenario",
+     "src": "test"
+    },
+    {
+     "id": "c03-s11-t3",
+     "kind": "mc",
+     "q": "Which of these is NOT a typical CAUTION label statement?",
+     "choices": [
+      "Harmful if swallowed.",
+      "May be harmful if inhaled.",
+      "May irritate eyes, nose, throat, and skin.",
+      "Poisonous if inhaled."
+     ],
+     "answer": 3,
+     "ref": "p. 38, 'Routes of Entry Statements'",
+     "why": "Poisonous if inhaled is a typical DANGER statement.",
+     "style": "not",
+     "src": "test"
+    },
+    {
+     "id": "c03-s11-t4",
+     "kind": "tf",
+     "q": "Routes of entry statements are worded the same way on all labels.",
+     "answer": false,
+     "ref": "p. 38, 'Routes of Entry Statements'",
+     "why": "They are not uniform; there are many variations.",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c03-s12",
+   "chapter": "Chapter 3 · Pesticide Labeling",
+   "title": "Specific action, PPE, and other precautionary statements",
+   "pages": [
+    38,
+    39
+   ],
+   "body": [
+    {
+     "h": "Specific action statements"
+    },
+    {
+     "p": [
+      "**Specific action statements** usually follow the route of entry statements.",
+      "Specific action statements give the **precautions and PPE** necessary to help reduce exposure to the pesticide.",
+      "These statements are directly related to the toxicity of the pesticide product, meaning the signal word, and the routes of entry.",
+      "DANGER labels typically contain statements such as the following."
+     ]
+    },
+    {
+     "list": [
+      "Do not breathe vapors or spray mist.",
+      "Do not get on skin or clothing.",
+      "Do not get in eyes."
+     ]
+    },
+    {
+     "p": [
+      "Typical WARNING labels often **combine** specific action statements from DANGER and CAUTION labels.",
+      "CAUTION labels generally contain specific action statements that are **less alarming** than those on the DANGER label, indicating that the toxicity hazard is not as great.",
+      "Examples include the following."
+     ]
+    },
+    {
+     "list": [
+      "Avoid contact with skin or clothing.",
+      "Avoid breathing dust, vapors, or spray mists.",
+      "Avoid getting in eyes."
+     ]
+    },
+    {
+     "h": "Protective clothing and equipment statements"
+    },
+    {
+     "fig": "p38-ppe"
+    },
+    {
+     "p": [
+      "Pesticide labels vary in the type of PPE information they contain.",
+      "While some labels carry no such statement at all, other pesticide labels fully describe appropriate personal protective equipment.",
+      "Follow all label statements on PPE or, **if absent**, consider the signal word, routes of entry statements, and specific action statements.",
+      "Read the basic guidelines described in Chapters 5 and 6."
+     ]
+    },
+    {
+     "h": "Other precautionary statements"
+    },
+    {
+     "p": [
+      "Labels often list other precautions that should always be followed when handling the product.",
+      "These commonsense, self-explanatory statements include the following."
+     ]
+    },
+    {
+     "list": [
+      "Do not contaminate food or feed.",
+      "Remove and wash contaminated clothing before reuse.",
+      "Wash thoroughly after handling and before eating or smoking.",
+      "Wear clean clothes daily.",
+      "Not for use or storage in and around a house.",
+      "Do not allow children or domestic animals into the treated area."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "p38-ppe",
+     "title": "Follow label instructions on the use of protective clothing and equipment.",
+     "page": "p. 38",
+     "imgFile": "p38-ppe.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c03-s12-r6",
+     "src": "review",
+     "kind": "mc",
+     "q": "\"Do not breathe vapors or spray mist\" is an example of a:",
+     "choices": [
+      "Specific action statement.",
+      "Statement of practical treatment.",
+      "Routes of entry statement."
+     ],
+     "answer": 0,
+     "ref": "p. 38, 'Specific Action Statements'; p. 47, Review question 6",
+     "why": "It is listed as a typical DANGER specific action statement."
+    },
+    {
+     "id": "c03-s12-t1",
+     "kind": "mc",
+     "q": "Specific action statements are directly related to which two things?",
+     "choices": [
+      "The price and the formulation",
+      "The signal word and the routes of entry",
+      "The registration number and the manufacturer",
+      "The weather and the pest life stage"
+     ],
+     "answer": 1,
+     "ref": "p. 38, 'Specific Action Statements'",
+     "why": "They relate to the product's toxicity, meaning the signal word, and the routes of entry.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s12-t2",
+     "kind": "mc",
+     "q": "A label has no PPE statement at all. According to the manual, what should you do?",
+     "choices": [
+      "Wear no PPE, since none is required",
+      "Consider the signal word, routes of entry statements, and specific action statements to choose PPE",
+      "Call EPA for a PPE ruling",
+      "Use the PPE from any other product's label"
+     ],
+     "answer": 1,
+     "ref": "p. 38, 'Protective Clothing and Equipment Statements'",
+     "why": "If PPE statements are absent, consider the signal word, routes of entry, and specific action statements.",
+     "style": "scenario",
+     "src": "test"
+    },
+    {
+     "id": "c03-s12-t3",
+     "kind": "mc",
+     "q": "Which of these is NOT listed as an other precautionary statement?",
+     "choices": [
+      "Do not contaminate food or feed.",
+      "Wear clean clothes daily.",
+      "Wash thoroughly after handling and before eating or smoking.",
+      "Apply only at night."
+     ],
+     "answer": 3,
+     "ref": "p. 39, 'Other Precautionary Statements'",
+     "why": "Apply only at night is not on the list.",
+     "style": "not",
+     "src": "test"
+    },
+    {
+     "id": "c03-s12-t4",
+     "kind": "tf",
+     "q": "Avoid breathing dust, vapors, or spray mists is a typical specific action statement on a CAUTION label.",
+     "answer": true,
+     "ref": "p. 38, 'Specific Action Statements'",
+     "why": "CAUTION labels use less alarming wording such as avoid breathing.",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c03-s13",
+   "chapter": "Chapter 3 · Pesticide Labeling",
+   "title": "First aid, environmental hazards, and special toxicity statements",
+   "pages": [
+    39,
+    39
+   ],
+   "body": [
+    {
+     "h": "First aid statements"
+    },
+    {
+     "p": [
+      "**First aid statements**, formerly known as the **Statement of Practical Treatment**, list emergency treatments recommended in case of poisoning or accidental exposure.",
+      "Typical statements include the following."
+     ]
+    },
+    {
+     "list": [
+      "In case of contact with skin, wash immediately with plenty of soap and clean water.",
+      "In case of contact with eyes, flush with water for **15 minutes** and get medical attention.",
+      "In case of inhalation exposure, remove victim from contaminated area and give artificial respiration, if necessary.",
+      "If swallowed, induce vomiting."
+     ]
+    },
+    {
+     "p": [
+      "**All DANGER labels** and **some** WARNING and CAUTION labels contain a **note to physicians** describing the appropriate medical procedures and antidotes for poisoning emergencies.",
+      "Always have the label readily available in case of an emergency."
+     ]
+    },
+    {
+     "h": "Environmental hazards"
+    },
+    {
+     "p": [
+      "Pesticides can be harmful to the environment.",
+      "Look for special warning statements on the label concerning environmental hazards."
+     ]
+    },
+    {
+     "h": "Special toxicity statements"
+    },
+    {
+     "p": [
+      "The label will say if a particular pesticide is especially hazardous to wildlife.",
+      "Examples include the following."
+     ]
+    },
+    {
+     "list": [
+      "This product is highly toxic to bees.",
+      "This product is extremely toxic to fish and aquatic invertebrates.",
+      "This product is toxic to birds and other wildlife."
+     ]
+    },
+    {
+     "p": [
+      "**Special toxicity statements** alert you to the special hazards of a product.",
+      "They will help you choose the safest product for a particular job and remind you to take extra precautions."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c03-s13-t1",
+     "kind": "mc",
+     "q": "What was the old name for first aid statements?",
+     "choices": [
+      "Note to physician",
+      "Statement of Practical Treatment",
+      "Hazards to Humans and Domestic Animals",
+      "Specific action statement"
+     ],
+     "answer": 1,
+     "ref": "p. 39, 'First Aid Statements'",
+     "why": "First aid statements were formerly known as the Statement of Practical Treatment.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s13-t2",
+     "kind": "mc",
+     "q": "Which labels always contain a note to physicians?",
+     "choices": [
+      "All CAUTION labels",
+      "All WARNING labels",
+      "All DANGER labels",
+      "Only restricted-use labels"
+     ],
+     "answer": 2,
+     "ref": "p. 39, 'First Aid Statements'",
+     "why": "All DANGER labels and some WARNING and CAUTION labels have a note to physicians.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s13-t3",
+     "kind": "mc",
+     "q": "A coworker gets pesticide in their eyes. Per the typical first aid statement, how long should you flush with water?",
+     "choices": [
+      "1 minute",
+      "5 minutes",
+      "15 minutes",
+      "1 hour"
+     ],
+     "answer": 2,
+     "ref": "p. 39, 'First Aid Statements'",
+     "why": "Flush with water for 15 minutes and get medical attention.",
+     "style": "scenario",
+     "src": "test"
+    },
+    {
+     "id": "c03-s13-t4",
+     "kind": "mc",
+     "q": "Which of these is NOT given as an example of a special toxicity statement?",
+     "choices": [
+      "This product is highly toxic to bees.",
+      "This product is extremely toxic to fish and aquatic invertebrates.",
+      "This product is toxic to birds and other wildlife.",
+      "This product is corrosive to metal."
+     ],
+     "answer": 3,
+     "ref": "p. 39, 'Special Toxicity Statements'",
+     "why": "Corrosive to metal would be a physical or chemical hazard, not a wildlife toxicity statement.",
+     "style": "not",
+     "src": "test"
+    },
+    {
+     "id": "c03-s13-t5",
+     "kind": "tf",
+     "q": "Special toxicity statements can help you choose the safest product for a particular job.",
+     "answer": true,
+     "ref": "p. 39, 'Special Toxicity Statements'",
+     "why": "They alert you to special hazards and help you choose the safest product.",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c03-s14",
+   "chapter": "Chapter 3 · Pesticide Labeling",
+   "title": "General environmental statements",
+   "pages": [
+    39,
+    40
+   ],
+   "body": [
+    {
+     "h": "General environmental statements"
+    },
+    {
+     "p": [
+      "**General environmental statements** are reminders to follow certain commonsense procedures to avoid contaminating the environment.",
+      "The **absence** of any or all of these statements does **not** mean that you do not need to take adequate precautions.",
+      "Sometimes these statements follow a specific toxicity statement and provide practical steps to avoid harming wildlife.",
+      "Examples of general environmental statements include the following."
+     ]
+    },
+    {
+     "list": [
+      "Do not apply when runoff is likely to occur.",
+      "Do not apply when weather conditions favor drift from treated areas.",
+      "Do not contaminate water by improperly disposing of rinse water and other pesticide wastes.",
+      "Do not apply when bees are likely to be in the area.",
+      "Do not apply directly to water or to areas where surface water is present or to intertidal areas below the mean high water mark.",
+      "The use of this chemical in areas where soils are permeable, particularly where the water table is shallow, may result in groundwater contamination."
+     ]
+    },
+    {
+     "box": "Example of an environmental statement: Environmental hazards",
+     "p": [
+      "This product is toxic to aquatic invertebrates.",
+      "Drift and runoff may be hazardous to aquatic organisms in neighboring areas.",
+      "Under some conditions, this chemical may also have a high potential for runoff into surface water for several weeks or months after application.",
+      "Do not cultivate within **10 feet** of aquatic areas so as to allow growth of vegetative filter strip.",
+      "Drift from applications of this pesticide is likely to result in damage to sensitive aquatic invertebrates in water bodies adjacent to treatment area.",
+      "For terrestrial uses, do not apply directly to water or to areas where surface water is present or to intertidal areas below the mean high-water mark, except under forest canopy when aerially applied to control forest pests.",
+      "Do not contaminate water when disposing of equipment washwaters and rinsate.",
+      "Do not apply when weather conditions favor drift or runoff from areas treated.",
+      "This pesticide demonstrates the properties and characteristics associated with chemicals detected in groundwater.",
+      "The use of this chemical in areas where soils are permeable, particularly where the water table is shallow, may result in groundwater contamination."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c03-s14-t1",
+     "kind": "tf",
+     "q": "If a label has no general environmental statements, you do not need to take environmental precautions.",
+     "answer": false,
+     "ref": "p. 39, 'General Environmental Statements'",
+     "why": "The absence of these statements does not mean you can skip adequate precautions.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s14-t2",
+     "kind": "mc",
+     "q": "In the example environmental statement, how close to aquatic areas may you NOT cultivate, to allow a vegetative filter strip to grow?",
+     "choices": [
+      "Within 5 feet",
+      "Within 10 feet",
+      "Within 25 feet",
+      "Within 66 feet"
+     ],
+     "answer": 1,
+     "ref": "p. 39, box 'Example of an Environmental Statement'",
+     "why": "Do not cultivate within 10 feet of aquatic areas.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s14-t3",
+     "kind": "mc",
+     "q": "The label says use in permeable soils with a shallow water table may cause groundwater contamination. You are treating a site with sandy soil and a high water table. What is the label warning you about?",
+     "choices": [
+      "Drift onto bees",
+      "Groundwater contamination",
+      "Phytotoxicity to the crop",
+      "Fire hazard"
+     ],
+     "answer": 1,
+     "ref": "p. 40, 'General Environmental Statements'",
+     "why": "Permeable soils and a shallow water table raise the risk of groundwater contamination.",
+     "style": "scenario",
+     "src": "test"
+    },
+    {
+     "id": "c03-s14-t4",
+     "kind": "mc",
+     "q": "Which of these is NOT an example of a general environmental statement?",
+     "choices": [
+      "Do not apply when runoff is likely to occur.",
+      "Do not apply when bees are likely to be in the area.",
+      "Do not apply when weather conditions favor drift from treated areas.",
+      "Store at temperatures above 32°F."
+     ],
+     "answer": 3,
+     "ref": "p. 40, 'General Environmental Statements'; p. 41, 'Storage and Disposal'",
+     "why": "Storage temperature is a storage and disposal statement.",
+     "style": "not",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c03-s15",
+   "chapter": "Chapter 3 · Pesticide Labeling",
+   "title": "Physical or chemical hazards and agricultural use requirements",
+   "pages": [
+    40,
+    40
+   ],
+   "body": [
+    {
+     "h": "Physical or chemical hazards"
+    },
+    {
+     "p": [
+      "The **Physical or Chemical Hazards** section of the label describes possible **fire, explosion, or chemical hazards** of the product.",
+      "Examples include the following."
+     ]
+    },
+    {
+     "list": [
+      "**Flammable**: Do not use, pour, spill, or store near heat or open flame. Do not cut or weld container.",
+      "**Corrosive**: Store only in a corrosion-resistant tank."
+     ]
+    },
+    {
+     "h": "Agricultural use requirements"
+    },
+    {
+     "p": [
+      "The **Agricultural Use Requirements** section is found **only** on the labels of agricultural products covered by the EPA **Worker Protection Standard (WPS)**.",
+      "The agricultural use statements link the pesticide product to the WPS regulations found in **40 CFR Part 170**.",
+      "Therefore, the user must follow the labeling as well as the WPS requirements.",
+      "These requirements are intended to protect agricultural workers and handlers on farms and in forests, nurseries, and greenhouses through training, decontamination, notification, emergency assistance, personal protective equipment, and **restricted-entry intervals (REIs)**."
+     ]
+    },
+    {
+     "box": "Example of agricultural use requirements",
+     "p": [
+      "Use this product only in accordance with its labeling and with the Worker Protection Standard, 40 CFR part 170.",
+      "This standard contains requirements for the protection of agricultural workers on farms, forests, nurseries, and greenhouses, and handlers of agricultural pesticides.",
+      "It contains requirements for training, decontamination, notification, and emergency assistance.",
+      "It also contains specific instructions and exceptions pertaining to the statements on this label about personal protective equipment (PPE) and restricted-entry interval.",
+      "The requirements in this box only apply to uses of this product that are covered by the Worker Protection Standard.",
+      "Do not enter or allow worker entry into treated areas during the restricted-entry interval (REI) of **12 hours**.",
+      "Exception: if the product is applied by **drenching**, the Worker Protection Standard, under certain circumstances, allows workers to enter the treated area if there will be no contact with anything that has been treated.",
+      "PPE required for early entry to treated areas that is permitted under the Worker Protection Standard and that involves contact with anything that has been treated, such as plants, soil, or water, includes the following."
+     ],
+     "list": [
+      "Coveralls.",
+      "Waterproof gloves.",
+      "Shoes plus socks."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c03-s15-t1",
+     "kind": "mc",
+     "q": "Where is the Agricultural Use Requirements section found?",
+     "choices": [
+      "On every pesticide label",
+      "Only on labels of agricultural products covered by the Worker Protection Standard",
+      "Only on restricted-use labels",
+      "Only on the Safety Data Sheet"
+     ],
+     "answer": 1,
+     "ref": "p. 40, 'Agricultural Use Requirements'",
+     "why": "It is found only on labels of agricultural products covered by the WPS.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s15-t2",
+     "kind": "mc",
+     "q": "Which federal regulation contains the Worker Protection Standard?",
+     "choices": [
+      "40 CFR Part 170",
+      "Section 24(c)",
+      "Section 25(b)",
+      "40 CFR Part 18"
+     ],
+     "answer": 0,
+     "ref": "p. 40, 'Agricultural Use Requirements'",
+     "why": "Agricultural use statements link the product to WPS regulations in 40 CFR Part 170.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s15-t3",
+     "kind": "mc",
+     "q": "A label's Physical or Chemical Hazards section says the product is flammable. Which action does that statement prohibit?",
+     "choices": [
+      "Storing it in a locked cabinet",
+      "Cutting or welding the container",
+      "Diluting it with water",
+      "Applying it on a windy day"
+     ],
+     "answer": 1,
+     "ref": "p. 40, 'Physical or Chemical Hazards'",
+     "why": "Flammable: do not use near heat or flame, and do not cut or weld the container.",
+     "style": "scenario",
+     "src": "test"
+    },
+    {
+     "id": "c03-s15-t4",
+     "kind": "mc",
+     "q": "Which of these is NOT one of the ways WPS requirements protect agricultural workers and handlers?",
+     "choices": [
+      "Training",
+      "Decontamination",
+      "Restricted-entry intervals",
+      "Crop insurance"
+     ],
+     "answer": 3,
+     "ref": "p. 40, 'Agricultural Use Requirements'",
+     "why": "WPS protects through training, decontamination, notification, emergency assistance, PPE, and REIs.",
+     "style": "not",
+     "src": "test"
+    },
+    {
+     "id": "c03-s15-t5",
+     "kind": "tf",
+     "q": "In the example box, the PPE for permitted early entry with contact with treated surfaces is coveralls, waterproof gloves, and shoes plus socks.",
+     "answer": true,
+     "ref": "p. 40, box 'Example of Agricultural Use Requirements'",
+     "why": "That is the list in the example box.",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c03-s16",
+   "chapter": "Chapter 3 · Pesticide Labeling",
+   "title": "Restricted-entry intervals and nonagricultural use",
+   "pages": [
+    40,
+    41
+   ],
+   "body": [
+    {
+     "h": "Restricted-entry intervals"
+    },
+    {
+     "p": [
+      "Many pesticide labels covered by the WPS include a statement about a **restricted-entry interval**.",
+      "The REI specifies how much time must pass between the pesticide application and the reentry of **unprotected workers** into a treated area.",
+      "The REI statement can be found under the heading **Agricultural Use Requirements**.",
+      "If no REI or other restricted-entry statement appears on the label, then all persons should wait at least until **sprays have dried or dusts have settled** before reentering a treated area.",
+      "If there are multiple REIs on a label, look in the **Directions for Use** section for each crop.",
+      "If two or more pesticides are mixed together, you are required to follow the **most restrictive, or longer, REI**."
+     ]
+    },
+    {
+     "fig": "p41-wpssign"
+    },
+    {
+     "h": "Nonagricultural use requirements"
+    },
+    {
+     "p": [
+      "The **Nonagricultural Use Requirements** section applies to pesticide uses that are **not within the scope of the WPS**.",
+      "Examples include the application of pesticides to lawns, golf courses, ornamental plantings, structures **except greenhouses**, aquatic areas, and rights-of-way.",
+      "Specific reentry times are **not generally listed** for these uses.",
+      "However, the label often cautions people and pets not to enter treated areas until the spray has dried or the dust has settled."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "p41-wpssign",
+     "title": "Under the federal Worker Protection Standard (WPS), workers must be notified about areas treated with pesticides so they may avoid inadvertent exposures.",
+     "page": "p. 41",
+     "imgFile": "p41-wpssign.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c03-s16-t1",
+     "kind": "mc",
+     "q": "What does a restricted-entry interval specify?",
+     "choices": [
+      "The minimum days between the last application and harvest",
+      "How much time must pass between application and reentry of unprotected workers into a treated area",
+      "How long a pesticide may be stored",
+      "How often the pesticide may be applied"
+     ],
+     "answer": 1,
+     "ref": "p. 40, 'Restricted-Entry Intervals'",
+     "why": "The REI is the time between application and reentry of unprotected workers.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s16-t2",
+     "kind": "mc",
+     "q": "You tank-mix two products. One label has a 12-hour REI and the other has a 48-hour REI. Which REI must you follow?",
+     "choices": [
+      "12 hours",
+      "30 hours, the average",
+      "48 hours",
+      "60 hours, the total"
+     ],
+     "answer": 2,
+     "ref": "p. 41, 'Restricted-Entry Intervals'",
+     "why": "When pesticides are mixed, follow the most restrictive, or longer, REI.",
+     "style": "scenario",
+     "src": "test"
+    },
+    {
+     "id": "c03-s16-t3",
+     "kind": "mc",
+     "q": "A label has no REI or other restricted-entry statement. How long should people wait before reentering the treated area?",
+     "choices": [
+      "No wait is needed",
+      "At least until sprays have dried or dusts have settled",
+      "At least 12 hours",
+      "At least 48 hours"
+     ],
+     "answer": 1,
+     "ref": "p. 41, 'Restricted-Entry Intervals'",
+     "why": "With no REI, wait at least until sprays have dried or dusts have settled.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s16-t4",
+     "kind": "mc",
+     "q": "Which of these sites is NOT covered by the Nonagricultural Use Requirements section?",
+     "choices": [
+      "Golf courses",
+      "Rights-of-way",
+      "Greenhouses",
+      "Aquatic areas"
+     ],
+     "answer": 2,
+     "ref": "p. 41, 'Nonagricultural Use Requirements'",
+     "why": "Greenhouses are excluded from structures here because they fall under the WPS.",
+     "style": "not",
+     "src": "test"
+    },
+    {
+     "id": "c03-s16-t5",
+     "kind": "tf",
+     "q": "If a label lists multiple REIs, you should look in the Directions for Use section for each crop.",
+     "answer": true,
+     "ref": "p. 41, 'Restricted-Entry Intervals'",
+     "why": "Multiple REIs are explained crop by crop in Directions for Use.",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c03-s17",
+   "chapter": "Chapter 3 · Pesticide Labeling",
+   "title": "Storage and disposal, and directions for use",
+   "pages": [
+    41,
+    41
+   ],
+   "body": [
+    {
+     "h": "Storage and disposal"
+    },
+    {
+     "p": [
+      "All pesticide labels contain instructions for the appropriate storage and disposal of the pesticide, its **rinsate**, and its container.",
+      "State and local laws may vary considerably, so specific instructions usually are not included.",
+      "These statements typically appear in the **Storage and Disposal** section of the label or under headings such as Important, Note, or General Instructions.",
+      "Examples include the following."
+     ]
+    },
+    {
+     "list": [
+      "Store herbicides away from fertilizers, insecticides, fungicides, seeds, and feed items.",
+      "Store at temperatures above **32°F (0°C)**.",
+      "Nonrefillable container. Do not reuse or refill this container.",
+      "Do not contaminate water, food, or feed by storage or disposal.",
+      "**Triple rinse** container promptly after emptying.",
+      "Offer for recycling if available or reconditioning if appropriate or puncture and dispose of in a sanitary landfill."
+     ]
+    },
+    {
+     "p": [
+      "If necessary, seek sound advice to determine the best storage and disposal procedures for your operation and location."
+     ]
+    },
+    {
+     "h": "Directions for use"
+    },
+    {
+     "p": [
+      "The **Directions for Use** section provides instructions on how to use the product, as in Figure 3.1.",
+      "These instructions cover the following."
+     ]
+    },
+    {
+     "list": [
+      "The pests that the manufacturer claims the product will control.",
+      "The crop, animal, or site the product is intended to protect.",
+      "The proper **mixing** instructions.",
+      "How much to use, the **rate**, and how often.",
+      "How close to harvest the product can be applied.",
+      "**Phytotoxicity**, meaning damage to plants, and other possible injury.",
+      "Where and when the material should be applied.",
+      "Plant-back, composting, grazing, and other restrictions.",
+      "How to minimize drift."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c03-s17-r7",
+     "src": "review",
+     "kind": "mc",
+     "q": "Directions for mixing and loading a pesticide are usually found under:",
+     "choices": [
+      "Directions for use.",
+      "Environmental hazards.",
+      "Precautionary statements."
+     ],
+     "answer": 0,
+     "ref": "p. 41, 'Directions for Use'; p. 47, Review question 7",
+     "why": "Directions for Use covers the proper mixing instructions."
+    },
+    {
+     "id": "c03-s17-t1",
+     "kind": "mc",
+     "q": "What does phytotoxicity mean?",
+     "choices": [
+      "Toxicity to fish",
+      "Damage to plants",
+      "Toxicity to humans by inhalation",
+      "Breakdown of a pesticide in sunlight"
+     ],
+     "answer": 1,
+     "ref": "p. 41, 'Directions for Use'",
+     "why": "Phytotoxicity is damage to plants.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s17-t2",
+     "kind": "mc",
+     "q": "Why do labels usually NOT include specific disposal instructions?",
+     "choices": [
+      "EPA forbids them",
+      "State and local laws may vary considerably",
+      "Disposal is covered only on the SDS",
+      "Manufacturers do not know how to dispose of their products"
+     ],
+     "answer": 1,
+     "ref": "p. 41, 'Storage and Disposal'",
+     "why": "State and local laws vary considerably, so specific instructions usually are not included.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s17-t3",
+     "kind": "mc",
+     "q": "You just emptied a nonrefillable container. Following the label examples, what should you do with it?",
+     "choices": [
+      "Reuse it for water",
+      "Triple rinse it promptly, then offer it for recycling or reconditioning, or puncture it and dispose of it in a sanitary landfill",
+      "Burn it on site",
+      "Return it full of rinsate to the dealer"
+     ],
+     "answer": 1,
+     "ref": "p. 41, 'Storage and Disposal'",
+     "why": "Triple rinse promptly, then recycle, recondition, or puncture and landfill.",
+     "style": "scenario",
+     "src": "test"
+    },
+    {
+     "id": "c03-s17-t4",
+     "kind": "mc",
+     "q": "Which of these is NOT listed as something the Directions for Use cover?",
+     "choices": [
+      "The pests the product will control",
+      "How close to harvest it can be applied",
+      "How to minimize drift",
+      "The name and address of the manufacturer"
+     ],
+     "answer": 3,
+     "ref": "p. 41, 'Directions for Use'",
+     "why": "Name and address of the manufacturer is a separate label part.",
+     "style": "not",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c03-s18",
+   "chapter": "Chapter 3 · Pesticide Labeling",
+   "title": "Figure 3.1 sample label, part 1: the front panel",
+   "pages": [
+    42,
+    42
+   ],
+   "body": [
+    {
+     "p": [
+      "Figure 3.1 is a sample pesticide label, adapted from the MSU Pesticide Applicator Core Training Manual.",
+      "The product is fictional. This card types out its center panel. Find each label part you have learned so far."
+     ]
+    },
+    {
+     "box": "Restricted use pesticide",
+     "p": [
+      "Due to very high toxicity to humans and birds.",
+      "For retail sale to and use only by certified applicators or persons under their direct supervision and only for those uses covered by the certified applicator's certificate."
+     ]
+    },
+    {
+     "box": "VIP No Pest Gel",
+     "list": [
+      "Active ingredient: galactothion (0,0-diethyl methyl phosphorothiate), 20.9%.",
+      "Related isomers, 1.1%.",
+      "Inert ingredients, 78.00%.",
+      "Total, 100.00%.",
+      "Net contents: 5 gallons.",
+      "EPA Reg. No. 12345-10.",
+      "EPA Est. 56787-CO-1.",
+      "VIP Chemical Company, 2527 VIP Drive, Biarspond, MI 22315."
+     ]
+    },
+    {
+     "p": [
+      "When handlers use closed systems, enclosed cabs, or aircraft in a manner that meets the requirements listed in the Worker Protection Standard (WPS) for agricultural pesticides, 40 CFR 170.240(d)(4-6), the handler PPE requirements may be reduced or modified as specified in the WPS."
+     ]
+    },
+    {
+     "box": "User safety recommendations",
+     "p": [
+      "Users should wash hands before eating, drinking, chewing gum, using tobacco, or using the toilet.",
+      "Remove clothing immediately if pesticide gets inside. Then wash thoroughly and put on clean clothing.",
+      "Remove PPE immediately after handling this product. Wash the outside of the gloves before removing."
+     ]
+    },
+    {
+     "box": "Environmental hazards",
+     "p": [
+      "This pesticide is highly toxic to aquatic invertebrates and wildlife.",
+      "Birds in treated areas may be killed.",
+      "Shrimp and other aquatic organisms may be killed at recommended application rates.",
+      "Do not contaminate water by cleaning of equipment or disposal of wastes."
+     ]
+    },
+    {
+     "box": "Physical and chemical hazards",
+     "p": [
+      "Do not use or store near heat or open flame. Not for use or storage in or around the home."
+     ]
+    },
+    {
+     "box": "Keep out of reach of children",
+     "p": [
+      "DANGER. PELIGRO. POISON, with the skull and crossbones.",
+      "Si Usted no entiende la etiqueta, busque a alguien para se la explique a Usted en detalle. That means: if you do not understand this label, find someone to explain it to you in detail."
+     ]
+    },
+    {
+     "box": "Storage and disposal",
+     "p": [
+      "Prohibitions: Do not contaminate water, food or feed by storage or disposal. Do not store under conditions which might adversely affect the container or its ability to function properly.",
+      "Storage: Do not store below temperature of 0°F.",
+      "Container disposal: Never reuse empty containers. Triple rinse (or equivalent). Then offer for recycling or reconditioning, or puncture and dispose of in a sanitary landfill, or by other procedure approved by state and local authorities."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c03-s18-t1",
+     "kind": "mc",
+     "q": "On the Figure 3.1 sample label, what is the common name of the active ingredient?",
+     "choices": [
+      "VIP No Pest Gel",
+      "Galactothion",
+      "0,0-diethyl methyl phosphorothiate",
+      "VIP Chemical Company"
+     ],
+     "answer": 1,
+     "ref": "Figure 3.1, sample pesticide label, p. 42, ingredient statement",
+     "why": "Galactothion is the common name; the name in parentheses is the chemical name; VIP No Pest Gel is the brand name.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s18-t2",
+     "kind": "mc",
+     "q": "Which signal word does the Figure 3.1 sample label carry?",
+     "choices": [
+      "CAUTION",
+      "WARNING",
+      "DANGER, POISON, with skull and crossbones, and PELIGRO",
+      "No signal word"
+     ],
+     "answer": 2,
+     "ref": "Figure 3.1, sample pesticide label, p. 42, 'Keep Out of Reach of Children' panel",
+     "why": "The sample label shows DANGER, PELIGRO, POISON, and the skull and crossbones.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s18-t3",
+     "kind": "mc",
+     "q": "On the sample label, which number identifies the facility that made the product?",
+     "choices": [
+      "EPA Reg. No. 12345-10",
+      "EPA Est. 56787-CO-1",
+      "40 CFR 170.240",
+      "22315"
+     ],
+     "answer": 1,
+     "ref": "Figure 3.1, sample pesticide label, p. 42; p. 37, 'Establishment Number'",
+     "why": "The EPA establishment number identifies the production facility.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s18-t4",
+     "kind": "mc",
+     "q": "Which of these is NOT true of the sample label's restricted-use statement?",
+     "choices": [
+      "It gives the reason as very high toxicity to humans and birds",
+      "It limits sale and use to certified applicators or persons under their direct supervision",
+      "It limits use to uses covered by the applicator's certificate",
+      "It says any adult may buy the product"
+     ],
+     "answer": 3,
+     "ref": "Figure 3.1, sample pesticide label, p. 42, restricted use box",
+     "why": "Restricted-use products are not for sale to anyone; that is the point of the statement.",
+     "style": "not",
+     "src": "test"
+    },
+    {
+     "id": "c03-s18-t5",
+     "kind": "mc",
+     "q": "Your storage shed for this sample product drops to minus 5°F in winter. According to its label, is that a problem?",
+     "choices": [
+      "No, the label has no temperature limit",
+      "Yes, the label says do not store below 0°F",
+      "No, it only says to store above 32°F",
+      "Yes, the label says do not store below 50°F"
+     ],
+     "answer": 1,
+     "ref": "Figure 3.1, sample pesticide label, p. 42, 'Storage and Disposal' panel",
+     "why": "The sample label says do not store below a temperature of 0°F.",
+     "style": "scenario",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c03-s19",
+   "chapter": "Chapter 3 · Pesticide Labeling",
+   "title": "Figure 3.1 sample label, part 2: first aid and note to physician",
+   "pages": [
+    42,
+    42
+   ],
+   "body": [
+    {
+     "box": "Statement of practical treatment",
+     "p": [
+      "Contact a doctor (physician), clinic, or hospital immediately in cases of suspected poisoning. Explain that the victim has been exposed to galactothion and describe his or her condition.",
+      "After first aid is given take victim to clinic or hospital. If breathing has stopped, start artificial respiration immediately and maintain until doctor sees victim.",
+      "If swallowed: If patient is conscious and alert, give 2 or 3 glasses of water or milk to drink, and induce vomiting by touching back of throat with finger. Do not induce vomiting or give anything by mouth to an unconscious person. Get medical attention.",
+      "If on skin: Immediately flush the skin with plenty of water while removing contaminated clothing and shoes. See doctor immediately. Galactothion is an organophosphate pesticide that inhibits cholinesterase.",
+      "If inhaled: Remove to fresh air. If not breathing give artificial respiration. Get medical attention.",
+      "If in eyes: Hold eyelids open and flush with a steady stream of water for at least 15 minutes. Get medical attention."
+     ]
+    },
+    {
+     "box": "Note to physician",
+     "p": [
+      "Antidote: administer **atropine** di-sulfate in large doses. Two to four mg intravenously or intramuscularly as soon as cyanosis is overcome. Repeat at 5 to 10 minute intervals until signs of atropinization appear.",
+      "**2-PAM chloride** is also antidotal and may be administered in conjunction with atropine. Do not give morphine or tranquilizers.",
+      "Galactothion is a strong cholinesterase inhibitor affecting the central and peripheral nervous system and producing cardiac and respiratory depression.",
+      "At first sign of pulmonary edema, the patient should be given supplemental oxygen and treated symptomatically.",
+      "Continued absorption of the poison may occur and fatal relapses have been reported after initial improvement. Very close supervision of the patient is indicated for at least **48 hours**."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c03-s19-t1",
+     "kind": "mc",
+     "q": "According to the sample label's note to physician, what is the antidote for galactothion poisoning?",
+     "choices": [
+      "Morphine",
+      "Atropine, with 2-PAM chloride also antidotal",
+      "Tranquilizers",
+      "Milk and egg whites"
+     ],
+     "answer": 1,
+     "ref": "Figure 3.1, sample pesticide label, p. 42, 'Note to Physician'",
+     "why": "Atropine is the antidote; 2-PAM chloride may be given with it; morphine and tranquilizers must not be given.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s19-t2",
+     "kind": "mc",
+     "q": "A worker swallowed the sample product and is unconscious. What does the label say?",
+     "choices": [
+      "Give 2 or 3 glasses of milk and induce vomiting",
+      "Do not induce vomiting or give anything by mouth; get medical attention",
+      "Give water only",
+      "Wait 48 hours and watch for symptoms"
+     ],
+     "answer": 1,
+     "ref": "Figure 3.1, sample pesticide label, p. 42, 'Statement of Practical Treatment'",
+     "why": "Never induce vomiting or give anything by mouth to an unconscious person.",
+     "style": "scenario",
+     "src": "test"
+    },
+    {
+     "id": "c03-s19-t3",
+     "kind": "mc",
+     "q": "How long does the sample label say the poisoned patient needs very close supervision?",
+     "choices": [
+      "At least 12 hours",
+      "At least 24 hours",
+      "At least 48 hours",
+      "At least 72 hours"
+     ],
+     "answer": 2,
+     "ref": "Figure 3.1, sample pesticide label, p. 42, 'Note to Physician'",
+     "why": "Fatal relapses can occur, so close supervision is indicated for at least 48 hours.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s19-t4",
+     "kind": "mc",
+     "q": "Which of these is NOT allowed according to the sample label's note to physician?",
+     "choices": [
+      "Atropine",
+      "2-PAM chloride given with atropine",
+      "Supplemental oxygen at the first sign of pulmonary edema",
+      "Morphine or tranquilizers"
+     ],
+     "answer": 3,
+     "ref": "Figure 3.1, sample pesticide label, p. 42, 'Note to Physician'",
+     "why": "The note says do not give morphine or tranquilizers.",
+     "style": "not",
+     "src": "test"
+    },
+    {
+     "id": "c03-s19-t5",
+     "kind": "tf",
+     "q": "On the sample label, flushing eyes for at least 15 minutes is the first aid for pesticide in the eyes.",
+     "answer": true,
+     "ref": "Figure 3.1, sample pesticide label, p. 42, 'Statement of Practical Treatment'",
+     "why": "Hold eyelids open and flush with a steady stream of water for at least 15 minutes.",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c03-s20",
+   "chapter": "Chapter 3 · Pesticide Labeling",
+   "title": "Figure 3.1 sample label, part 3: hazards to humans and PPE",
+   "pages": [
+    42,
+    42
+   ],
+   "body": [
+    {
+     "box": "Precautionary statements: hazards to humans (and domestic animals)",
+     "p": [
+      "DANGER: Fatal if absorbed through skin, fatal if swallowed, and poisonous if inhaled. Do not breathe vapors or spray mist. Do not get on skin or clothing. May be irritating to eyes and may cause mild skin sensitization. Keep away from domestic animals. Discontinue use if allergic reaction occurs.",
+      "Signs and symptoms of overexposure: salivation, muscle tremors, nausea, watery eyes, difficulty breathing, vomiting, pinpoint eye pupils, excessive sweating, diarrhea, blurred vision, abdominal cramps, weakness, headache."
+     ]
+    },
+    {
+     "box": "Personal protective equipment (PPE)",
+     "p": [
+      "Some materials that are chemical resistant to this product are listed below. If you want more options, follow the instructions for category G on an EPA chemical resistance category selection chart.",
+      "Applicators and other handlers must wear the following."
+     ],
+     "list": [
+      "Coveralls over long-sleeve shirt and long pants.",
+      "Chemical-resistant gloves such as barrier laminate or vitron.",
+      "Chemical-resistant footwear plus socks.",
+      "Protective eyewear.",
+      "Chemical-resistant headgear for overhead exposures.",
+      "Chemical-resistant apron when cleaning equipment, mixing, or loading.",
+      "Respirator with either an organic vapor-removing cartridge with a prefilter approved for pesticides (MSHA/NIOSH approval prefix TC-23C) or a canister approved for pesticides (MSHA/NIOSH approval number prefix TC-14G).",
+      "Discard clothing and other absorbent materials that have been drenched or heavily contaminated with this product's concentrate. Do not reuse them. Follow manufacturer's instructions for cleaning and maintaining PPE. If no such instructions for washables, use detergent and hot water. Keep and wash PPE separately from other laundry."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c03-s20-t1",
+     "kind": "mc",
+     "q": "Which of these is NOT listed as a sign or symptom of overexposure on the sample label?",
+     "choices": [
+      "Pinpoint eye pupils",
+      "Excessive sweating",
+      "Salivation",
+      "Dilated eye pupils"
+     ],
+     "answer": 3,
+     "ref": "Figure 3.1, sample pesticide label, p. 42, 'Precautionary Statements'",
+     "why": "The label lists pinpoint pupils, not dilated pupils.",
+     "style": "not",
+     "src": "test"
+    },
+    {
+     "id": "c03-s20-t2",
+     "kind": "mc",
+     "q": "According to the sample label, which applicators and handlers must wear a chemical-resistant apron?",
+     "choices": [
+      "Everyone at all times",
+      "Those cleaning equipment, mixing, or loading",
+      "Only aerial applicators",
+      "No one; aprons are optional"
+     ],
+     "answer": 1,
+     "ref": "Figure 3.1, sample pesticide label, p. 42, 'Personal Protective Equipment'",
+     "why": "The apron is required when cleaning equipment, mixing, or loading.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s20-t3",
+     "kind": "mc",
+     "q": "A handler's cotton work gloves got drenched with this product's concentrate. What does the sample label say to do?",
+     "choices": [
+      "Wash them with detergent and hot water and reuse them",
+      "Discard them; do not reuse them",
+      "Rinse them in the spray tank",
+      "Let them dry in the sun and reuse them"
+     ],
+     "answer": 1,
+     "ref": "Figure 3.1, sample pesticide label, p. 42, 'Personal Protective Equipment'",
+     "why": "Discard clothing and absorbent materials drenched or heavily contaminated with the concentrate.",
+     "style": "scenario",
+     "src": "test"
+    },
+    {
+     "id": "c03-s20-t4",
+     "kind": "mc",
+     "q": "Which routes of entry does the DANGER statement on the sample label say are fatal or poisonous?",
+     "choices": [
+      "Skin only",
+      "Swallowing only",
+      "Skin, swallowing, and inhaling",
+      "Eyes only"
+     ],
+     "answer": 2,
+     "ref": "Figure 3.1, sample pesticide label, p. 42, 'Precautionary Statements'",
+     "why": "Fatal if absorbed through skin, fatal if swallowed, and poisonous if inhaled.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s20-t5",
+     "kind": "tf",
+     "q": "The sample label says to keep and wash PPE separately from other laundry.",
+     "answer": true,
+     "ref": "Figure 3.1, sample pesticide label, p. 42, 'Personal Protective Equipment'",
+     "why": "Keep and wash PPE separately from other laundry.",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c03-s21",
+   "chapter": "Chapter 3 · Pesticide Labeling",
+   "title": "Figure 3.1 sample label, part 4: directions and agricultural use",
+   "pages": [
+    42,
+    42
+   ],
+   "body": [
+    {
+     "box": "Directions for use",
+     "p": [
+      "It is a violation of Federal law to use this product in a manner inconsistent with its labeling.",
+      "Do not apply this product in a way that will contact workers or other persons, either directly or through drift.",
+      "Only protected handlers may be in the area during application.",
+      "For any requirements specific to your State or Tribe, consult the agency responsible for pesticide regulation."
+     ]
+    },
+    {
+     "box": "General directions",
+     "p": [
+      "Spray preparation: To assure a uniform product, agitate or shake all containers of this product prior to use. Use 50 mesh screens or equivalent slotted strainers in spray system.",
+      "To prepare for spraying, fill tank to one half the needed volume of water. Add the required amount of this insecticide and mix thoroughly by mechanical or hydraulic agitation. Finish filling tank with water to desired volume and thoroughly mix.",
+      "Do not store spray mixture for prolonged periods. If tank mixes are to be used, VIP Pest-No must be fully dispersed in water first, followed by addition of the intended tank-mix material. Do not use mixtures that curdle, precipitate or become greasy.",
+      "Note: Do not add VIP No Pest to water with pH values below 3.0 or above 8.5."
+     ]
+    },
+    {
+     "box": "Directions for aerial or ground spray application",
+     "p": [
+      "Application timing: Begin application when insect populations reach economic threshold levels. Consult the Extension Service, professional consultants or other qualified authorities to determine appropriate threshold levels for treatment in your area.",
+      "Application instructions: Apply a minimum finished spray volume of 2 gallons per acre by air or 5 gallons per acre by ground unless otherwise directed under crop specific directions.",
+      "For best results, it is important to obtain thorough and uniform spray coverage of the plant. Use higher dosage rates for heavy infestations, large larvae, or dense foliage. The specific length of control depends on environmental factors, plant growth, dosage rate, and degree of insect infestation."
+     ]
+    },
+    {
+     "box": "Agricultural use requirements",
+     "p": [
+      "Use this product only in accordance with its labeling and with the Worker Protection Standard, 40 CFR part 170. The requirements in this box only apply to uses of this product that are covered by the Worker Protection Standard.",
+      "Do not enter or allow worker entry into treated areas during the restricted-entry interval (REI) of **48 hours**. The REI is **72 hours** in outdoor areas where the average annual rainfall is less than 25 inches a year.",
+      "PPE required for early entry to treated areas that is permitted under the Worker Protection Standard and that involves contact with anything that has been treated, such as plants, soil, or water, is: coveralls over long-sleeved shirt and long pants; chemical-resistant footwear plus socks; protective eyewear; chemical-resistant headgear.",
+      "Notify workers of the application by warning them orally and by posting warning signs at entrances to treated area."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c03-s21-t1",
+     "kind": "mc",
+     "q": "What is the restricted-entry interval on the sample label, in an area that gets 40 inches of rain a year?",
+     "choices": [
+      "12 hours",
+      "24 hours",
+      "48 hours",
+      "72 hours"
+     ],
+     "answer": 2,
+     "ref": "Figure 3.1, sample pesticide label, p. 42, 'Agricultural Use Requirements'",
+     "why": "The REI is 48 hours; it rises to 72 hours only where annual rainfall is under 25 inches.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s21-t2",
+     "kind": "mc",
+     "q": "You are applying the sample product outdoors in a dry region with 15 inches of rain a year. What is the REI?",
+     "choices": [
+      "12 hours",
+      "48 hours",
+      "72 hours",
+      "No REI applies"
+     ],
+     "answer": 2,
+     "ref": "Figure 3.1, sample pesticide label, p. 42, 'Agricultural Use Requirements'",
+     "why": "The REI is 72 hours where average annual rainfall is less than 25 inches.",
+     "style": "scenario",
+     "src": "test"
+    },
+    {
+     "id": "c03-s21-t3",
+     "kind": "mc",
+     "q": "How does the sample label say to fill the spray tank?",
+     "choices": [
+      "Add the insecticide to an empty tank, then add water",
+      "Fill the tank to one half the needed water, add the insecticide and mix, then finish filling with water",
+      "Fill the tank completely, then add the insecticide",
+      "Premix the insecticide with oil first"
+     ],
+     "answer": 1,
+     "ref": "Figure 3.1, sample pesticide label, p. 42, 'General Directions'",
+     "why": "Fill to half with water, add product and agitate, then finish filling and mix.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s21-t4",
+     "kind": "mc",
+     "q": "Which of these is NOT allowed by the sample label's directions?",
+     "choices": [
+      "Using 50 mesh screens in the spray system",
+      "Adding the product to water with a pH of 9.0",
+      "Beginning application when insects reach economic threshold levels",
+      "Applying at least 5 gallons per acre by ground"
+     ],
+     "answer": 1,
+     "ref": "Figure 3.1, sample pesticide label, p. 42, 'General Directions'",
+     "why": "Do not add the product to water with pH below 3.0 or above 8.5.",
+     "style": "not",
+     "src": "test"
+    },
+    {
+     "id": "c03-s21-t5",
+     "kind": "mc",
+     "q": "What is the minimum finished spray volume by air on the sample label?",
+     "choices": [
+      "1 gallon per acre",
+      "2 gallons per acre",
+      "5 gallons per acre",
+      "10 gallons per acre"
+     ],
+     "answer": 1,
+     "ref": "Figure 3.1, sample pesticide label, p. 42, 'Directions for Aerial or Ground Spray Application'",
+     "why": "2 gallons per acre by air, 5 gallons per acre by ground.",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c03-s22",
+   "chapter": "Chapter 3 · Pesticide Labeling",
+   "title": "Other label resources and web labeling",
+   "pages": [
+    41,
+    43
+   ],
+   "body": [
+    {
+     "h": "Information resources"
+    },
+    {
+     "p": [
+      "Many terms used on labels describe when and how to use pesticides.",
+      "Technical terms also appear in leaflets and bulletins from local Cooperative Extension offices, land-grant universities, state and federal pesticide regulatory agencies, pesticide manufacturers, and professional pest management associations.",
+      "Your understanding of these terms will help you get the best results from pesticide applications.",
+      "Refer to the glossary in this manual.",
+      "If you do not understand the directions on a label, check with any of these sources."
+     ]
+    },
+    {
+     "h": "World Wide Web references on pesticide labels"
+    },
+    {
+     "p": [
+      "A pesticide label may refer you to a **website** for additional use instructions or precautions.",
+      "This means that all of the information necessary to use the pesticide may no longer be found on the pesticide container.",
+      "This information is **binding**, so it is your responsibility as an applicator to seek and obtain it.",
+      "If the website address has changed or is no longer available, you must **contact the manufacturer** and acquire the referenced material **before making an application**."
+     ]
+    },
+    {
+     "h": "Digital pesticide specimen labels"
+    },
+    {
+     "p": [
+      "Many websites allow the downloading of sample or **specimen** pesticide labels.",
+      "Such sites include EPA; state, tribe, or territory regulatory agencies; Cooperative Extension Service; registrants; publishing firms; and consulting companies, among others.",
+      "While the information found on these sites can be useful and may help clarify use instructions, **you are still bound by the labeling found on and with your pesticide container**."
+     ]
+    },
+    {
+     "h": "Electronic or web-distributed labeling"
+    },
+    {
+     "p": [
+      "Regulatory agencies are considering significant changes to what constitutes the official pesticide label that an applicator must follow to comply with federal and state use laws.",
+      "The agencies recognize that it may be desirable and useful to provide a legally binding label on the container and refer applicators to an official Internet site for the most up-to-date and customizable use directions.",
+      "As a result, manufacturers are now able to develop **web-distributed labeling**.",
+      "However, concerns about liability, unfamiliarity with a new system of labeling, and quickly evolving technology mean that changes may occur slowly.",
+      "If you encounter web-distributed labeling, you must carefully follow the instructions on and with the container as well as the instructions obtained from an **EPA-approved website**."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c03-s22-t1",
+     "kind": "mc",
+     "q": "A label refers you to a website for more use instructions, but the web address no longer works. What must you do?",
+     "choices": [
+      "Apply using only what is on the container",
+      "Contact the manufacturer and get the referenced material before applying",
+      "Use a specimen label from any website",
+      "Skip the missing instructions since they are advisory"
+     ],
+     "answer": 1,
+     "ref": "p. 43, 'World Wide Web References on Pesticide Labels'",
+     "why": "The web information is binding; contact the manufacturer and get it before applying.",
+     "style": "scenario",
+     "src": "test"
+    },
+    {
+     "id": "c03-s22-t2",
+     "kind": "tf",
+     "q": "Information on a website that a label refers you to is binding.",
+     "answer": true,
+     "ref": "p. 43, 'World Wide Web References on Pesticide Labels'",
+     "why": "It is binding, so it is your responsibility to seek and obtain it.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s22-t3",
+     "kind": "mc",
+     "q": "You download a specimen label that differs from the label on your container. Which one are you bound by?",
+     "choices": [
+      "The specimen label, because it is newer",
+      "The labeling found on and with your pesticide container",
+      "Whichever is less restrictive",
+      "Neither; EPA decides"
+     ],
+     "answer": 1,
+     "ref": "p. 43, 'Digital Pesticide Specimen Labels'",
+     "why": "You are still bound by the labeling found on and with your container.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s22-t4",
+     "kind": "mc",
+     "q": "Which of these is NOT given as a reason web-distributed labeling changes may occur slowly?",
+     "choices": [
+      "Concerns about liability",
+      "Unfamiliarity with a new system of labeling",
+      "Quickly evolving technology",
+      "A federal ban on internet labels"
+     ],
+     "answer": 3,
+     "ref": "p. 43, 'Electronic or Web-Distributed Labeling'",
+     "why": "The manual names liability, unfamiliarity, and evolving technology.",
+     "style": "not",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c03-s23",
+   "chapter": "Chapter 3 · Pesticide Labeling",
+   "title": "Mandatory and advisory statements",
+   "pages": [
+    43,
+    44
+   ],
+   "body": [
+    {
+     "h": "Mandatory and advisory statements"
+    },
+    {
+     "p": [
+      "Statements on pesticide labels may be either mandatory or advisory.",
+      "Label statements that you **must follow** in order to legally use the pesticide are **mandatory statements**.",
+      "Recommendations or best management practices that the manufacturer has determined may result in better product performance or improved safety are **advisory statements**."
+     ]
+    },
+    {
+     "h": "Mandatory statements"
+    },
+    {
+     "p": [
+      "Mandatory statements direct the user to take or avoid specific actions.",
+      "The directions and precautions specify where, when, and how a pesticide is to be applied.",
+      "Mandatory statements are generally written in **imperative or directive** sentences, for example, Do not use.",
+      "These statements are meant to ensure the proper use of a pesticide and prevent unreasonable harm to the environment.",
+      "Examples include the following."
+     ]
+    },
+    {
+     "list": [
+      "Wear chemical-resistant gloves.",
+      "If swallowed, call a doctor.",
+      "Do not apply within 66 feet of wells.",
+      "Keep away from heat, sparks, and open flame.",
+      "Apply immediately after mixing."
+     ]
+    },
+    {
+     "h": "Advisory statements"
+    },
+    {
+     "p": [
+      "Advisory statements provide information on product characteristics and how to maximize safety and efficacy.",
+      "Such statements cannot conflict with mandatory statements, must not be false or misleading, or otherwise violate statutory or regulatory provisions.",
+      "Advisory statements are written in **descriptive or nondirective** terms."
+     ]
+    },
+    {
+     "p": [
+      "The use of words such as **should, may, or recommend** in advisory statements is carefully screened by EPA to clarify that such statements do not have to be followed.",
+      "However, these words might also imply that a prohibited practice is still permitted.",
+      "In other words, users could infer that a particular use is permitted because a statement recommending against such a use does not have to be followed.",
+      "EPA allows the use of should, may, recommend, or similar terms on a case-by-case basis as long as they are unambiguous and do not appear to cause these kinds of problems.",
+      "A preferred advisory statement usually explains the **purpose or benefit** of doing something instead of asserting that it should be done without explanation."
+     ]
+    },
+    {
+     "p": [
+      "These are examples of hypothetical advisory statements."
+     ]
+    },
+    {
+     "list": [
+      "Latex gloves provide the best protection.",
+      "Opening aluminum phosphide containers near an exhaust fan or other ventilation helps to ensure that the gas will be rapidly dispersed if the product flashes.",
+      "If application is delayed after preparing a tank mix, agitation to re-mix the products ensures proper blending.",
+      "Treatment along one side of interior partition walls where there are cracks in the slab or plumbing entry points prevents further infestation.",
+      "Directing the spray mixture around the base of the cotton plants and using leaf lifters and shields on application equipment will help minimize foliage contact and plant injury.",
+      "If an emulsifiable formulation has been used, flushing the sprayer with a detergent solution at the end of the workday will help to ensure a clean sprayer and trouble-free operation."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c03-s23-r8",
+     "src": "review",
+     "kind": "mc",
+     "q": "\"If swallowed, call a doctor\" is an example of what kind of statement?",
+     "choices": [
+      "Routes of entry.",
+      "Advisory.",
+      "Mandatory."
+     ],
+     "answer": 2,
+     "ref": "p. 43, 'Mandatory Statements'; p. 47, Review question 8",
+     "why": "It is listed as an example of a mandatory statement."
+    },
+    {
+     "id": "c03-s23-t1",
+     "kind": "mc",
+     "q": "How are mandatory statements generally written?",
+     "choices": [
+      "In descriptive or nondirective terms",
+      "In imperative or directive sentences",
+      "Only in capital letters",
+      "As questions"
+     ],
+     "answer": 1,
+     "ref": "p. 43, 'Mandatory Statements'",
+     "why": "Mandatory statements are imperative or directive, such as Do not use.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s23-t2",
+     "kind": "mc",
+     "q": "A label says, \"Do not apply within 66 feet of wells.\" Your well is 50 feet from the site. What is true?",
+     "choices": [
+      "It is advice, so you may apply",
+      "It is a mandatory statement, so applying there is illegal",
+      "It applies only to restricted-use products",
+      "It only matters if the well is used for drinking"
+     ],
+     "answer": 1,
+     "ref": "p. 43, 'Mandatory Statements'",
+     "why": "It is listed as a mandatory statement; you must follow it to use the pesticide legally.",
+     "style": "scenario",
+     "src": "test"
+    },
+    {
+     "id": "c03-s23-t3",
+     "kind": "mc",
+     "q": "Which of these is NOT a mandatory statement example from the manual?",
+     "choices": [
+      "Wear chemical-resistant gloves.",
+      "Keep away from heat, sparks, and open flame.",
+      "Apply immediately after mixing.",
+      "Latex gloves provide the best protection."
+     ],
+     "answer": 3,
+     "ref": "pp. 43 to 44, 'Mandatory Statements' and 'Advisory Statements'",
+     "why": "Latex gloves provide the best protection is a hypothetical advisory statement.",
+     "style": "not",
+     "src": "test"
+    },
+    {
+     "id": "c03-s23-t4",
+     "kind": "mc",
+     "q": "What does a preferred advisory statement usually do?",
+     "choices": [
+      "States that something should be done, with no reason",
+      "Explains the purpose or benefit of doing something",
+      "Overrides a mandatory statement",
+      "Uses the word must"
+     ],
+     "answer": 1,
+     "ref": "p. 44, 'Advisory Statements'",
+     "why": "A preferred advisory statement explains the purpose or benefit.",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c03-s24",
+   "chapter": "Chapter 3 · Pesticide Labeling",
+   "title": "Understanding the difference, and your liability",
+   "pages": [
+    44,
+    44
+   ],
+   "body": [
+    {
+     "h": "Understanding the difference"
+    },
+    {
+     "p": [
+      "Because intermingling advisory and mandatory language may cause confusion and uncertainty, EPA directs manufacturers to **clearly separate** advisory and mandatory label statements.",
+      "Section headings must be appropriate for the information that follows.",
+      "For example, if a heading includes the term **recommended**, everything in that section must be **purely advisory**.",
+      "If separation is not practical, the manufacturer must make sure it is clear that the intent of each statement is either mandatory or advisory."
+     ]
+    },
+    {
+     "p": [
+      "Until the separation of advisory and mandatory statements is fully implemented, you will find older products with seemingly contradictory statements.",
+      "When this occurs, consult with your **state lead regulatory agency**, or other pesticide regulatory body, for clarification."
+     ]
+    },
+    {
+     "p": [
+      "The label provides a wealth of information.",
+      "As explained above, failure to follow the instructions on a pesticide label can cause a serious pesticide accident.",
+      "It may also constitute a legal violation subject to **civil or criminal prosecution**.",
+      "Always remember that **the label is a legal document**.",
+      "**You are liable** for any personal injury, crop or site damage, or pollution that occurs through the misuse of a pesticide."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c03-s24-t1",
+     "kind": "mc",
+     "q": "A label section heading includes the word recommended. What must be true of everything in that section?",
+     "choices": [
+      "It must be mandatory",
+      "It must be purely advisory",
+      "It must be about PPE",
+      "It must be approved by the state"
+     ],
+     "answer": 1,
+     "ref": "p. 44, 'Understanding the Difference'",
+     "why": "If a heading includes recommended, everything in that section must be purely advisory.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s24-t2",
+     "kind": "mc",
+     "q": "An older product's label seems to contradict itself between advisory and mandatory statements. Who should you consult?",
+     "choices": [
+      "The store clerk",
+      "Your state lead regulatory agency or other pesticide regulatory body",
+      "A neighbor who used the product",
+      "Nobody; follow whichever statement is easier"
+     ],
+     "answer": 1,
+     "ref": "p. 44, 'Understanding the Difference'",
+     "why": "Consult your state lead regulatory agency for clarification.",
+     "style": "scenario",
+     "src": "test"
+    },
+    {
+     "id": "c03-s24-t3",
+     "kind": "mc",
+     "q": "Which of these is NOT something the manual says you are liable for through misuse of a pesticide?",
+     "choices": [
+      "Personal injury",
+      "Crop or site damage",
+      "Pollution",
+      "Pest resistance in another county"
+     ],
+     "answer": 3,
+     "ref": "p. 44, 'Understanding the Difference'",
+     "why": "You are liable for personal injury, crop or site damage, or pollution caused by misuse.",
+     "style": "not",
+     "src": "test"
+    },
+    {
+     "id": "c03-s24-t4",
+     "kind": "tf",
+     "q": "Failing to follow label instructions may be a legal violation subject to civil or criminal prosecution.",
+     "answer": true,
+     "ref": "p. 44, 'Understanding the Difference'",
+     "why": "The manual says it may constitute a legal violation subject to civil or criminal prosecution.",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c03-s25",
+   "chapter": "Chapter 3 · Pesticide Labeling",
+   "title": "Safety Data Sheets and chapter summary",
+   "pages": [
+    44,
+    45
+   ],
+   "body": [
+    {
+     "h": "Safety Data Sheets"
+    },
+    {
+     "p": [
+      "**Safety Data Sheets**, formerly called **Material Safety Data Sheets**, provide more details about specific chemical and physical properties than do pesticide labels.",
+      "**Pesticide manufacturers** are required to develop and provide upon request an SDS for each product.",
+      "Commercial establishments are required to keep SDSs and make them available to workers or others who may contact the substance, its diluted end product, or its residues."
+     ]
+    },
+    {
+     "p": [
+      "Unlike the FIFRA label, which is designed specifically for the pesticide end user, that is, the applicator, the SDS is a document regulated by the **Occupational Safety and Health Administration (OSHA)** and designed for use by multiple professionals, for example manufacturers, transporters, medical personnel, and firefighters.",
+      "Thus, the SDS contains more detailed and technical information than the label about the pesticide's chemical and physical properties, toxicological and ecological information, first aid procedures, and emergency response.",
+      "You should use the SDS in conjunction with the pesticide label to provide a better understanding of the product.",
+      "**Never use it in place of the label!**"
+     ]
+    },
+    {
+     "p": [
+      "In **2012**, the naming and formatting of SDSs were radically changed to adhere to international treaties.",
+      "As a result, the SDS of a pesticide product **may have a different signal word** than the label and will include **pictograms** not found on the label.",
+      "**Section 15**, the regulatory section of the SDS, specifies what is on the pesticide label.",
+      "Appendix D describes the elements of an SDS."
+     ]
+    },
+    {
+     "box": "Safety Data Sheet sections",
+     "ol": [
+      "Identification",
+      "Hazard(s) identification",
+      "Composition/information on ingredients",
+      "First aid measures",
+      "Firefighting measures",
+      "Accidental release measures",
+      "Handling and storage",
+      "Exposure controls/personal protection",
+      "Physical and chemical properties",
+      "Stability and reactivity",
+      "Toxicological information",
+      "Ecological information",
+      "Disposal considerations",
+      "Transport information",
+      "Regulatory information",
+      "Other information"
+     ]
+    },
+    {
+     "h": "Summary"
+    },
+    {
+     "p": [
+      "Pesticide label language is strictly regulated by EPA in coordination with state regulatory agencies.",
+      "It is your responsibility as an applicator to read, understand, and follow label directions.",
+      "Make sure the pesticide has both federal and state registration for its intended use.",
+      "Identify both the trade and common names of the chemical you are using, and be familiar with the product's active ingredients.",
+      "Signal words and symbols help you recognize how acutely toxic the pesticide is to humans.",
+      "Applicators are advised to follow best management practices that may not be on the label, such as leaving a **buffer zone** between the treated area and sensitive sites.",
+      "Pesticide labels in combination with Safety Data Sheets provide a wealth of information on the hazards associated with each pesticide. Carefully review these documents before applying any pesticide."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c03-s25-r9",
+     "src": "review",
+     "kind": "mc",
+     "q": "Who is responsible for developing SDSs for pesticides and providing them on request?",
+     "choices": [
+      "EPA.",
+      "OSHA.",
+      "The product manufacturer."
+     ],
+     "answer": 2,
+     "ref": "p. 44, 'Safety Data Sheets'; p. 47, Review question 9",
+     "why": "Pesticide manufacturers must develop and provide an SDS for each product on request."
+    },
+    {
+     "id": "c03-s25-t1",
+     "kind": "mc",
+     "q": "Which agency regulates the Safety Data Sheet?",
+     "choices": [
+      "EPA",
+      "OSHA",
+      "USDA",
+      "The state Department of Agriculture"
+     ],
+     "answer": 1,
+     "ref": "p. 45, 'Safety Data Sheets'",
+     "why": "The SDS is regulated by the Occupational Safety and Health Administration.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s25-t2",
+     "kind": "mc",
+     "q": "The SDS for a product shows a different signal word than its label. What explains this?",
+     "choices": [
+      "One of them is a counterfeit",
+      "The 2012 changes to SDS naming and formatting to follow international treaties",
+      "The SDS is always out of date",
+      "The label must be wrong"
+     ],
+     "answer": 1,
+     "ref": "p. 45, 'Safety Data Sheets'",
+     "why": "Since 2012, an SDS may have a different signal word than the label and include pictograms.",
+     "style": "scenario",
+     "src": "test"
+    },
+    {
+     "id": "c03-s25-t3",
+     "kind": "mc",
+     "q": "Which SDS section specifies what is on the pesticide label?",
+     "choices": [
+      "Section 2, Hazard identification",
+      "Section 8, Exposure controls",
+      "Section 15, Regulatory information",
+      "Section 16, Other information"
+     ],
+     "answer": 2,
+     "ref": "p. 45, 'Safety Data Sheets'",
+     "why": "Section 15, the regulatory section, specifies what is on the label.",
+     "src": "test"
+    },
+    {
+     "id": "c03-s25-t4",
+     "kind": "mc",
+     "q": "Which of these is NOT true about the SDS?",
+     "choices": [
+      "It has more detailed technical information than the label",
+      "It should be used together with the label",
+      "It can be used in place of the label",
+      "It is designed for several kinds of professionals, such as firefighters"
+     ],
+     "answer": 2,
+     "ref": "p. 45, 'Safety Data Sheets'",
+     "why": "Never use the SDS in place of the label.",
+     "style": "not",
+     "src": "test"
+    }
+   ]
+  }
+ ]
+}

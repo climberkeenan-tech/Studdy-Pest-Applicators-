@@ -1,0 +1,28 @@
+<svg viewBox="0 0 640 470" role="img" aria-label="Table 7.1: ASABE Standard S-572.1 spray droplet spectrum categories, from Extra Fine (XF, purple) to Ultra Coarse (UC, black)">
+<g font-family="var(--f-body)">
+<rect class="f-ink" x="10" y="10" width="620" height="60" rx="6"/>
+<text x="320" y="35" text-anchor="middle" font-family="var(--f-display)" font-weight="700" font-size="18" style="fill:var(--card)">ASABE STANDARD S-572.1 (a)</text>
+<text x="320" y="58" text-anchor="middle" font-family="var(--f-display)" font-weight="700" font-size="16" style="fill:var(--card)">SPRAY DROPLET SPECTRUM CATEGORIES</text>
+<g font-weight="700" font-size="16" class="f-ink"><text x="110" y="96" text-anchor="middle">Category (b)</text><text x="320" y="96" text-anchor="middle">Symbol</text><text x="530" y="96" text-anchor="middle">Color Code (c)</text></g>
+<path class="s-ink" stroke-width="1.5" d="M10 106 H630"/>
+<g font-size="16" class="f-ink">
+<rect class="f-line" x="10" y="106" width="620" height="30"/><text x="110" y="127" text-anchor="middle">Extra Fine</text><text x="320" y="127" text-anchor="middle">(XF)</text><text x="530" y="127" text-anchor="middle">Purple</text>
+<text x="110" y="157" text-anchor="middle">Very Fine</text><text x="320" y="157" text-anchor="middle">(VF)</text><text x="530" y="157" text-anchor="middle">Red</text>
+<rect class="f-line" x="10" y="166" width="620" height="30"/><text x="110" y="187" text-anchor="middle">Fine</text><text x="320" y="187" text-anchor="middle">(F)</text><text x="530" y="187" text-anchor="middle">Orange</text>
+<text x="110" y="217" text-anchor="middle">Medium</text><text x="320" y="217" text-anchor="middle">(M)</text><text x="530" y="217" text-anchor="middle">Yellow</text>
+<rect class="f-line" x="10" y="226" width="620" height="30"/><text x="110" y="247" text-anchor="middle">Coarse</text><text x="320" y="247" text-anchor="middle">(C)</text><text x="530" y="247" text-anchor="middle">Blue</text>
+<text x="110" y="277" text-anchor="middle">Very Coarse</text><text x="320" y="277" text-anchor="middle">(VC)</text><text x="530" y="277" text-anchor="middle">Green</text>
+<rect class="f-line" x="10" y="286" width="620" height="30"/><text x="110" y="307" text-anchor="middle">Extra Coarse</text><text x="320" y="307" text-anchor="middle">(XC)</text><text x="530" y="307" text-anchor="middle">White</text>
+<text x="110" y="337" text-anchor="middle">Ultra Coarse</text><text x="320" y="337" text-anchor="middle">(UC)</text><text x="530" y="337" text-anchor="middle">Black</text>
+</g>
+<path class="s-ink" stroke-width="1" d="M215 76 V346 M425 76 V346 M10 346 H630"/>
+<g class="f-muted" font-size="12.5">
+<text x="14" y="368">(a) Revised 2009. Defines droplet spectrum categories for classifying spray nozzles relative to the</text>
+<text x="30" y="384">specified reference fan nozzle. Purpose: droplet size information primarily to indicate off-site</text>
+<text x="30" y="400">spray drift potential and secondarily for application efficacy.</text>
+<text x="14" y="420">(b) Refer to the product label for the droplet spectrum category required for an application.</text>
+<text x="14" y="440">(c) Nozzle manufacturers provide information to place nozzle types into a category, based at least</text>
+<text x="30" y="456">on orifice size and pressure. The color code is also standard.</text>
+</g>
+</g>
+</svg>

@@ -1,0 +1,27 @@
+<svg viewBox="0 0 660 440" role="img" aria-label="Examples of DOT placards: Dangerous 4, Gasoline 3, Oxidizer 5.1, Poison 6, Inhalation Hazard 2, Flammable 3">
+<g><path class="f-field s-ink" stroke-width="3" d="M110 10 L210 110 L110 210 L10 110 Z" fill-opacity="0.35"/>
+<path class="s-ink" stroke-width="1.5" fill="none" d="M110 20 L200 110 L110 200 L20 110 Z"/>
+<text class="f-ink" x="110" y="116" font-family="var(--f-display)" font-weight="800" font-size="20" text-anchor="middle">DANGEROUS</text>
+<text class="f-ink" x="110" y="176" font-family="var(--f-display)" font-weight="800" font-size="22" text-anchor="middle">4</text></g>
+<g><path class="f-field s-ink" stroke-width="3" d="M330 10 L430 110 L330 210 L230 110 Z" fill-opacity="0.35"/>
+<path class="s-ink" stroke-width="1.5" fill="none" d="M330 20 L420 110 L330 200 L240 110 Z"/>
+<text class="f-ink" x="330" y="116" font-family="var(--f-display)" font-weight="800" font-size="20" text-anchor="middle">GASOLINE</text>
+<text class="f-ink" x="330" y="176" font-family="var(--f-display)" font-weight="800" font-size="22" text-anchor="middle">3</text></g>
+<g><path class="f-muted s-ink" stroke-width="3" d="M550 10 L650 110 L550 210 L450 110 Z" fill-opacity="0.35"/>
+<path class="s-ink" stroke-width="1.5" fill="none" d="M550 20 L640 110 L550 200 L460 110 Z"/>
+<text class="f-ink" x="550" y="116" font-family="var(--f-display)" font-weight="800" font-size="20" text-anchor="middle">OXIDIZER</text>
+<text class="f-ink" x="550" y="176" font-family="var(--f-display)" font-weight="800" font-size="22" text-anchor="middle">5.1</text></g>
+<g><path class="f-card s-ink" stroke-width="3" d="M110 230 L210 330 L110 430 L10 330 Z" fill-opacity="1"/>
+<path class="s-ink" stroke-width="1.5" fill="none" d="M110 240 L200 330 L110 420 L20 330 Z"/>
+<text class="f-ink" x="110" y="336" font-family="var(--f-display)" font-weight="800" font-size="20" text-anchor="middle">POISON</text>
+<text class="f-ink" x="110" y="396" font-family="var(--f-display)" font-weight="800" font-size="22" text-anchor="middle">6</text></g>
+<g><path class="f-card s-ink" stroke-width="3" d="M330 230 L430 330 L330 430 L230 330 Z" fill-opacity="1"/>
+<path class="s-ink" stroke-width="1.5" fill="none" d="M330 240 L420 330 L330 420 L240 330 Z"/>
+<text class="f-ink" x="330" y="325" font-family="var(--f-display)" font-weight="800" font-size="17" text-anchor="middle">INHALATION</text>
+<text class="f-ink" x="330" y="347" font-family="var(--f-display)" font-weight="800" font-size="20" text-anchor="middle">HAZARD</text>
+<text class="f-ink" x="330" y="396" font-family="var(--f-display)" font-weight="800" font-size="22" text-anchor="middle">2</text></g>
+<g><path class="f-field s-ink" stroke-width="3" d="M550 230 L650 330 L550 430 L450 330 Z" fill-opacity="0.35"/>
+<path class="s-ink" stroke-width="1.5" fill="none" d="M550 240 L640 330 L550 420 L460 330 Z"/>
+<text class="f-ink" x="550" y="336" font-family="var(--f-display)" font-weight="800" font-size="20" text-anchor="middle">FLAMMABLE</text>
+<text class="f-ink" x="550" y="396" font-family="var(--f-display)" font-weight="800" font-size="22" text-anchor="middle">3</text></g>
+</svg>

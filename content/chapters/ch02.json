@@ -1,0 +1,2096 @@
+{
+  "chapter": "Chapter 2 · Federal Pesticide Laws and Regulations",
+  "pages": [
+    19,
+    28
+  ],
+  "sections": [
+    {
+      "id": "c02-s01",
+      "chapter": "Chapter 2 · Federal Pesticide Laws and Regulations",
+      "title": "Chapter goals and the need for regulation",
+      "pages": [
+        19,
+        19
+      ],
+      "body": [
+        {
+          "box": "Learning objectives",
+          "p": [
+            "After studying this chapter, you should be able to do the following."
+          ],
+          "list": [
+            "Explain how and why pesticides are regulated in the United States.",
+            "Discuss the importance of knowing and following federal laws and regulations related to pesticide use.",
+            "State why certain pesticides are classified as restricted use.",
+            "Distinguish between restricted-use and general-use pesticide classifications.",
+            "Explain the importance of maintaining accurate records of pesticide applications and employee training."
+          ]
+        },
+        {
+          "fig": "p19-epa-doc"
+        },
+        {
+          "h": "The need for regulation"
+        },
+        {
+          "p": [
+            "Pesticides are hazardous substances that can cause serious harm if used improperly.",
+            "However, they also provide important **socioeconomic benefits** when used correctly.",
+            "Pesticides are regulated to utilize their benefits while protecting public health and welfare and preventing harm to the environment.",
+            "Federal and state pesticide laws and regulations control the **labeling, sale and distribution, storage, transportation, use, and disposal** of pesticides in the best public interest.",
+            "Except for **human and veterinary drugs**, few other chemicals sold in the United States are required to undergo such extensive regulatory review and testing before being registered and marketed."
+          ]
+        },
+        {
+          "p": [
+            "This chapter addresses the requirements of **federal** laws and regulations only.",
+            "States, tribes, territories, and some local jurisdictions may have their own legal requirements concerning pesticides that may be **more restrictive than federal law**.",
+            "You are responsible for learning about and complying with all such requirements before making any pesticide application.",
+            "**Ignorance of the law is never an excuse** for noncompliance or violations."
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "id": "p19-epa-doc",
+          "title": "EPA, Office of Pesticide Programs: The Federal Insecticide, Fungicide, and Rodenticide Act (FIFRA) and Federal Food, Drug, and Cosmetic Act (FFDCA) As Amended by the Food Quality Protection Act (FQPA) of August 3, 1996.",
+          "page": "p. 19",
+          "imgFile": "p19-epa-doc.jpg"
+        }
+      ],
+      "questions": [
+        {
+          "id": "c02-s01-t1",
+          "src": "test",
+          "kind": "mc",
+          "q": "Federal and state pesticide laws and regulations control all of these EXCEPT:",
+          "choices": [
+            "Labeling",
+            "Storage and transportation",
+            "Disposal",
+            "The retail price of pesticides"
+          ],
+          "answer": 3,
+          "ref": "p. 19, 'The Need for Regulation'",
+          "why": "The laws control labeling, sale and distribution, storage, transportation, use, and disposal. Price is not on the list.",
+          "style": "not"
+        },
+        {
+          "id": "c02-s01-t2",
+          "src": "test",
+          "kind": "tf",
+          "q": "State, tribal, or local pesticide requirements may be more restrictive than federal law.",
+          "answer": true,
+          "ref": "p. 19, 'The Need for Regulation'",
+          "why": "States, tribes, territories, and some local jurisdictions may have stricter rules."
+        },
+        {
+          "id": "c02-s01-t3",
+          "src": "test",
+          "kind": "mc",
+          "q": "An applicator breaks a local pesticide rule, then says they never knew the rule existed. What does the manual say?",
+          "choices": [
+            "Ignorance of the law is never an excuse for noncompliance or violations.",
+            "Only federal law applies, so the local rule does not count.",
+            "A first-time violation from not knowing the rule is excused.",
+            "Local rules apply only to commercial applicators."
+          ],
+          "answer": 0,
+          "ref": "p. 19, 'The Need for Regulation'",
+          "why": "You must learn and follow all requirements before any application.",
+          "style": "scenario"
+        },
+        {
+          "id": "c02-s01-t4",
+          "src": "test",
+          "kind": "mc",
+          "q": "Except for which products do few other chemicals sold in the United States undergo such extensive regulatory review and testing as pesticides?",
+          "choices": [
+            "Human and veterinary drugs",
+            "Fertilizers",
+            "Cosmetics",
+            "Food additives"
+          ],
+          "answer": 0,
+          "ref": "p. 19, 'The Need for Regulation'",
+          "why": "Only human and veterinary drugs are named as getting comparable review."
+        },
+        {
+          "id": "c02-s01-t5",
+          "src": "test",
+          "kind": "short",
+          "q": "Pesticides are regulated to utilize their benefits while protecting public health and welfare and preventing harm to what?",
+          "answer": "The environment",
+          "accept": [
+            "environment"
+          ],
+          "keys": [
+            [
+              "environment",
+              "environmental"
+            ]
+          ],
+          "ref": "p. 19, 'The Need for Regulation'",
+          "why": "Regulation balances benefits against harm to people and the environment."
+        }
+      ]
+    },
+    {
+      "id": "c02-s02",
+      "chapter": "Chapter 2 · Federal Pesticide Laws and Regulations",
+      "title": "FIFRA and the Section 2(ee) exceptions",
+      "pages": [
+        20,
+        20
+      ],
+      "body": [
+        {
+          "h": "Federal Insecticide, Fungicide, and Rodenticide Act (FIFRA)"
+        },
+        {
+          "p": [
+            "The **Federal Insecticide, Fungicide, and Rodenticide Act (FIFRA)** is the federal law or statute that regulates the **production, transportation, sale, use, and disposal** of pesticides.",
+            "FIFRA is administered by the **U.S. Environmental Protection Agency (EPA)**.",
+            "Congress originally enacted FIFRA, amended it considerably in **1972**, and then again in **1975, 1978, and 1988**."
+          ]
+        },
+        {
+          "fig": "p20-epa-seal"
+        },
+        {
+          "p": [
+            "FIFRA provides the **overall framework** for the federal pesticide regulatory program.",
+            "Under FIFRA, EPA is responsible for **registering or authorizing** pesticide products for sale, distribution, and use in the United States.",
+            "Pesticide registration decisions are based on a detailed assessment of the potential effects of a product on human health and the environment when used according to its labeling directions.",
+            "This EPA-approved labeling **has the force of law**."
+          ]
+        },
+        {
+          "h": "Section 2(ee) exclusions"
+        },
+        {
+          "p": [
+            "Although it is a violation of federal law to use any pesticide registered by EPA in a manner inconsistent with its labeling, **FIFRA Section 2(ee)** excludes several use situations and application procedures.",
+            "Unless specifically prohibited by the labeling, FIFRA allows:"
+          ]
+        },
+        {
+          "list": [
+            "A pesticide to be applied to control a **target pest not specified on the label**, if the pesticide is applied to a crop, animal, or site specifically listed on the labeling. For example, interior of a home, food-handling establishments, exterior ornamental plants, corn, and tomatoes.",
+            "**Any method of application.**",
+            "A pesticide to be applied at a dosage, concentration, or frequency **less than** that specified on the labeling, except in the case of **termiticides labeled for preconstruction treatments**.",
+            "A **pesticide-fertilizer mixture**."
+          ]
+        },
+        {
+          "p": [
+            "Realize that if you exercise any of the Section 2(ee) exclusions under FIFRA, **you alone are responsible** for any consequences resulting from such an application."
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "id": "p20-epa-seal",
+          "title": "The Environmental Protection Agency (EPA) is the agency responsible for administering the Federal Insecticide, Fungicide, and Rodenticide Act (FIFRA).",
+          "page": "p. 20",
+          "imgFile": "p20-epa-seal.jpg"
+        }
+      ],
+      "questions": [
+        {
+          "id": "c02-s02-r1",
+          "src": "review",
+          "kind": "mc",
+          "q": "Which statement about FIFRA is **false**?",
+          "choices": [
+            "It provides the overall framework for the federal pesticide regulatory program.",
+            "It prevents states, tribes, and territories from creating pesticide use laws more stringent than federal regulations.",
+            "It allows applicators to deviate from the pesticide label under specific use situations."
+          ],
+          "answer": 1,
+          "ref": "Review question 1, p. 29. Answer in the text: p. 19, 'The Need for Regulation'; p. 20, 'FIFRA'; p. 27, 'Summary'",
+          "why": "States, tribes, and territories may set rules more (but not less) restrictive than FIFRA. A and C are true."
+        },
+        {
+          "id": "c02-s02-t1",
+          "src": "test",
+          "kind": "mc",
+          "q": "Congress amended FIFRA considerably in which year?",
+          "choices": [
+            "1972",
+            "1996",
+            "2006",
+            "1984"
+          ],
+          "answer": 0,
+          "ref": "p. 20, 'FIFRA'",
+          "why": "Amended considerably in 1972, then again in 1975, 1978, and 1988."
+        },
+        {
+          "id": "c02-s02-t2",
+          "src": "test",
+          "kind": "mc",
+          "q": "Unless the labeling prohibits it, Section 2(ee) allows all of these EXCEPT:",
+          "choices": [
+            "Using any method of application",
+            "Applying at a lower dosage than the label specifies",
+            "Applying a pesticide-fertilizer mixture",
+            "Applying at a higher dosage than the label specifies"
+          ],
+          "answer": 3,
+          "ref": "p. 20, 'FIFRA', Section 2(ee) list",
+          "why": "Section 2(ee) allows less than the label rate, never more.",
+          "style": "not"
+        },
+        {
+          "id": "c02-s02-t3",
+          "src": "test",
+          "kind": "mc",
+          "q": "A label lists tomatoes as a site but does not name the pest you found on your tomatoes. The labeling does not prohibit it. Under Section 2(ee), may you use the product on that pest?",
+          "choices": [
+            "Yes, because tomatoes are a site listed on the labeling.",
+            "No, the pest must be named on the label.",
+            "Only with an emergency exemption.",
+            "Only if you raise the rate."
+          ],
+          "answer": 0,
+          "ref": "p. 20, 'FIFRA', Section 2(ee) list",
+          "why": "A pest not on the label is allowed when the crop, animal, or site is listed.",
+          "style": "scenario"
+        },
+        {
+          "id": "c02-s02-t4",
+          "src": "test",
+          "kind": "mc",
+          "q": "You want to apply a termiticide labeled for preconstruction treatment at a lower concentration than the label says. Does Section 2(ee) allow it?",
+          "choices": [
+            "No. Termiticides labeled for preconstruction treatments are the exception to the lower-rate rule.",
+            "Yes. Section 2(ee) allows any lower rate for any product.",
+            "Yes, if you mix it with fertilizer.",
+            "Only if EPA's Office of Pesticide Programs approves it in writing."
+          ],
+          "answer": 0,
+          "ref": "p. 20, 'FIFRA', Section 2(ee) list",
+          "why": "Lower rates are allowed except for termiticides labeled for preconstruction treatments.",
+          "style": "scenario"
+        },
+        {
+          "id": "c02-s02-t5",
+          "src": "test",
+          "kind": "tf",
+          "q": "If you use a Section 2(ee) exclusion and something goes wrong, the pesticide manufacturer shares the responsibility.",
+          "answer": false,
+          "ref": "p. 20, 'FIFRA'",
+          "why": "If you use a Section 2(ee) exclusion, you alone are responsible."
+        }
+      ]
+    },
+    {
+      "id": "c02-s03",
+      "chapter": "Chapter 2 · Federal Pesticide Laws and Regulations",
+      "title": "EPA's powers under FIFRA, and restricted versus general use",
+      "pages": [
+        20,
+        21
+      ],
+      "body": [
+        {
+          "p": [
+            "FIFRA also gives EPA the authority to:"
+          ]
+        },
+        {
+          "list": [
+            "Impose **civil and/or criminal penalties** on any person who misuses a pesticide or commits any of the other unlawful acts listed in **FIFRA Section 12**.",
+            "**Stop the sale or use** of any pesticide.",
+            "Issue **removal orders** and **seize products** to keep them out of the market if it determines the products pose an unreasonable risk.",
+            "**Reevaluate older pesticides** to ensure that they meet more recent safety standards.",
+            "Implement programs to require the **certification** of applicators of **restricted-use pesticides (RUPs)**.",
+            "Protect agricultural workers and pesticide handlers from occupational pesticide exposure."
+          ]
+        },
+        {
+          "h": "Restricted use and general use"
+        },
+        {
+          "p": [
+            "All pesticides are classified according to their potential hazards under the circumstances in which they are to be used.",
+            "The two main classifications are **restricted use** and **unclassified use**.",
+            "Unclassified-use pesticides are commonly referred to as **general-use pesticides**.",
+            "It should be noted, however, that EPA has officially classified **very few** pesticides as general use.",
+            "Most pesticides that might be expected to fit into the general-use category currently remain unclassified.",
+            "Normally, general-use pesticides have a **lower toxicity** than RUPs and so are less likely to harm humans or the environment.",
+            "The general public can buy general-use pesticides **without special permits or restrictions**."
+          ]
+        },
+        {
+          "h": "Why a pesticide becomes restricted use"
+        },
+        {
+          "p": [
+            "Generally, EPA classifies a pesticide as restricted use if it exceeds one or more **human health toxicity criteria** or based on other regulatory standards.",
+            "EPA may also classify a pesticide as restricted use if it meets certain criteria for **hazards to nontarget organisms or ecosystems**.",
+            "Still another reason for the restricted-use classification is a determination by EPA that a product, or class of products, may cause **unreasonable harm** to human health and/or the environment without such restriction.",
+            "The restricted-use classification designation must be prominently placed on the **top of the front panel** of the pesticide product labeling."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "c02-s03-t1",
+          "src": "test",
+          "kind": "mc",
+          "q": "What are the two main pesticide classifications?",
+          "choices": [
+            "Restricted use and unclassified use",
+            "Restricted use and emergency use",
+            "Federal use and state use",
+            "Toxic and nontoxic"
+          ],
+          "answer": 0,
+          "ref": "p. 21, classification paragraph",
+          "why": "Unclassified-use pesticides are commonly called general-use pesticides."
+        },
+        {
+          "id": "c02-s03-t2",
+          "src": "test",
+          "kind": "mc",
+          "q": "Where must the restricted-use designation appear?",
+          "choices": [
+            "Prominently on the top of the front panel of the labeling",
+            "In the Storage and Disposal section",
+            "On the bottom of the container",
+            "In the directions for use"
+          ],
+          "answer": 0,
+          "ref": "p. 21, classification paragraph",
+          "why": "It must be prominently placed on the top of the front panel."
+        },
+        {
+          "id": "c02-s03-t3",
+          "src": "test",
+          "kind": "mc",
+          "q": "Which of these is NOT a reason the manual gives for EPA classifying a pesticide as restricted use?",
+          "choices": [
+            "It exceeds one or more human health toxicity criteria.",
+            "It meets criteria for hazards to nontarget organisms or ecosystems.",
+            "It may cause unreasonable harm to human health or the environment without the restriction.",
+            "It sells in high volume."
+          ],
+          "answer": 3,
+          "ref": "p. 21, classification paragraph",
+          "why": "Toxicity, nontarget hazards, and unreasonable harm are the reasons. Sales volume is not.",
+          "style": "not"
+        },
+        {
+          "id": "c02-s03-t4",
+          "src": "test",
+          "kind": "tf",
+          "q": "EPA has officially classified most pesticides as general use.",
+          "answer": false,
+          "ref": "p. 21, classification paragraph",
+          "why": "EPA has classified very few as general use. Most remain unclassified."
+        },
+        {
+          "id": "c02-s03-t5",
+          "src": "test",
+          "kind": "mc",
+          "q": "EPA decides that a product already on store shelves poses an unreasonable risk. What does FIFRA let EPA do?",
+          "choices": [
+            "Issue removal orders and seize the products",
+            "Only post a warning for buyers",
+            "Nothing until Congress acts",
+            "Ask each state to reclassify it"
+          ],
+          "answer": 0,
+          "ref": "p. 20, 'FIFRA also gives EPA the authority to'",
+          "why": "EPA can issue removal orders and seize products that pose an unreasonable risk.",
+          "style": "scenario"
+        }
+      ]
+    },
+    {
+      "id": "c02-s04",
+      "chapter": "Chapter 2 · Federal Pesticide Laws and Regulations",
+      "title": "Restricted-use pesticides and certified applicators",
+      "pages": [
+        20,
+        21
+      ],
+      "body": [
+        {
+          "fig": "p20-rup-label"
+        },
+        {
+          "box": "The label in the picture",
+          "p": [
+            "RESTRICTED USE PESTICIDE.",
+            "Due to very high toxicity to humans and birds.",
+            "For retail sale and use only by certified applicators or persons under the direct supervision of and only for those uses covered by the certified applicator's certification."
+          ]
+        },
+        {
+          "h": "One chemical, two categories"
+        },
+        {
+          "p": [
+            "Some pesticide active ingredients may be listed in **both use categories** depending on the formulation, the application method, and the intended uses.",
+            "For example, an **emulsifiable concentrate** formulation of a certain insecticide used on fruit trees might be classified as restricted use if it contains a high percentage of active ingredient, for example **70%**.",
+            "However, the same chemical with a low percentage of active ingredient, for example **5%**, in a **granular** formulation used to treat turf insects might be regarded as a general-use pesticide."
+          ]
+        },
+        {
+          "h": "Certified applicators"
+        },
+        {
+          "p": [
+            "RUPs may be sold only to **certified applicators** or their authorized representatives.",
+            "A certified applicator is an individual who has been recognized, or certified, by the state, tribe, territory, or agency responsible for regulating pesticides as being competent to use or supervise the use of RUPs.",
+            "There are two types of certified pesticide applicators: **private** and **commercial**.",
+            "**Private applicators** are defined as certified applicators who use or supervise the use of any RUP for the purpose of **producing an agricultural commodity** on their **own property** or property they **rent or lease**.",
+            "Agricultural commodities include field and forage crops, fruit, vegetables, nursery stock, Christmas trees, greenhouse plants, and livestock.",
+            "**Commercial applicators** are individuals who use or supervise the use of any RUP for **any purpose on any property**, except for those listed under the definition of a private applicator."
+          ]
+        },
+        {
+          "p": [
+            "**Only certified applicators or individuals under their direct supervision may mix, load, or apply RUPs.**",
+            "To become certified, a person must demonstrate knowledge of and competency in pesticide use and handling.",
+            "Certified applicators must know how to read pesticide labeling and be able to follow directions to use these products properly and safely.",
+            "Pesticide applicator certification programs and the RUP classification process provide an **alternative to cancellation** of these important and beneficial pesticides or more stringent controls on their use."
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "id": "p20-rup-label",
+          "title": "Restricted-use pesticides (RUPs) may be sold only to certified applicators.",
+          "page": "p. 20",
+          "imgFile": "p20-rup-label.jpg"
+        }
+      ],
+      "questions": [
+        {
+          "id": "c02-s04-r1",
+          "src": "review",
+          "kind": "mc",
+          "q": "Under federal law, which statement about trained and certified applicators is **true**?",
+          "choices": [
+            "They may apply and/or supervise the application of restricted-use pesticides.",
+            "They must receive supplemental training before mixing RUPs.",
+            "They are exempt from obtaining county bulletins for the protection of endangered species."
+          ],
+          "answer": 0,
+          "ref": "Review question 2, p. 29. Answer in the text: p. 21, certified applicators",
+          "why": "Certified applicators may use or supervise the use of RUPs. B is not in the text, and C is false."
+        },
+        {
+          "id": "c02-s04-t1",
+          "src": "test",
+          "kind": "mc",
+          "q": "A farmer applies an RUP to corn grown on land the farmer rents. What type of certified applicator is this?",
+          "choices": [
+            "Private applicator",
+            "Commercial applicator",
+            "General-use applicator",
+            "Registrant"
+          ],
+          "answer": 0,
+          "ref": "p. 21, private applicator definition",
+          "why": "Producing an agricultural commodity on owned, rented, or leased land is private.",
+          "style": "scenario"
+        },
+        {
+          "id": "c02-s04-t2",
+          "src": "test",
+          "kind": "mc",
+          "q": "Which of these people may NOT mix, load, or apply an RUP?",
+          "choices": [
+            "A certified private applicator",
+            "A certified commercial applicator",
+            "A worker under the direct supervision of a certified applicator",
+            "An uncertified worker with no certified applicator supervising"
+          ],
+          "answer": 3,
+          "ref": "p. 21, margin box and text",
+          "why": "Only certified applicators or people under their direct supervision may.",
+          "style": "not"
+        },
+        {
+          "id": "c02-s04-t3",
+          "src": "test",
+          "kind": "tf",
+          "q": "The same active ingredient can be restricted use in one formulation and general use in another.",
+          "answer": true,
+          "ref": "p. 21, 'both use categories' paragraph",
+          "why": "Formulation, application method, and intended use can change the category."
+        },
+        {
+          "id": "c02-s04-t4",
+          "src": "test",
+          "kind": "mc",
+          "q": "In the manual's example, which insecticide product might be classified as restricted use?",
+          "choices": [
+            "An emulsifiable concentrate with 70% active ingredient used on fruit trees",
+            "A granular formulation with 5% active ingredient for turf insects",
+            "Any granular formulation",
+            "Any product used on turf"
+          ],
+          "answer": 0,
+          "ref": "p. 21, 'both use categories' paragraph",
+          "why": "The high-percentage emulsifiable concentrate is the restricted-use example."
+        },
+        {
+          "id": "c02-s04-t5",
+          "src": "test",
+          "kind": "short",
+          "q": "Certification programs and the RUP classification provide an alternative to what happening to these beneficial pesticides?",
+          "answer": "Cancellation",
+          "accept": [
+            "being cancelled",
+            "canceled",
+            "cancelled"
+          ],
+          "keys": [
+            [
+              "cancel",
+              "cancellation",
+              "cancelled",
+              "canceled"
+            ]
+          ],
+          "ref": "p. 21, last paragraph of FIFRA section",
+          "why": "Without certification and RUP status, some useful products might be cancelled or more tightly controlled."
+        }
+      ]
+    },
+    {
+      "id": "c02-s05",
+      "chapter": "Chapter 2 · Federal Pesticide Laws and Regulations",
+      "title": "Pesticide registration and devices",
+      "pages": [
+        21,
+        22
+      ],
+      "body": [
+        {
+          "h": "Pesticide registration"
+        },
+        {
+          "p": [
+            "Except for **minimum-risk pesticides**, all pesticides distributed and sold in the United States must be **registered by EPA**.",
+            "Pesticide registration is based on scientific data showing that these products will **not cause unreasonable risks** to human health, workers, or the environment when used as directed on the labeling.",
+            "The process of registering a pesticide begins with the pesticide company, the manufacturer or registrant, submitting an **application package** to EPA.",
+            "EPA's review of this application includes an assessment of the risks to human health and the environment that may be posed by the use of the pesticide.",
+            "Based on this review, EPA may classify the pesticide as restricted use or general use, or the pesticide may remain unclassified.",
+            "Depending on the class of pesticide and the priority assigned to it, this review and decision process may take **several years**."
+          ]
+        },
+        {
+          "p": [
+            "Pesticides must be registered or exempted from registration by **EPA's Office of Pesticide Programs** before they may be sold or distributed in the United States.",
+            "Once registered, a pesticide may not legally be used unless the use is consistent with the approved directions for use on the pesticide's labeling.",
+            "FIFRA has several types of registration and exemption actions that enable pesticides to be used in the United States:"
+          ]
+        },
+        {
+          "list": [
+            "Federal registration of pesticides under **Section 3**.",
+            "**Special local need** registrations under **Section 24(c)**.",
+            "**Emergency exemptions** under **Section 18**.",
+            "Exemption of **minimum-risk pesticides** from registration under **Section 25(b)**."
+          ]
+        },
+        {
+          "p": [
+            "These registration and exemption actions are discussed in more detail in Chapter 3, Pesticide Labeling."
+          ]
+        },
+        {
+          "fig": "p22-24c-label"
+        },
+        {
+          "h": "Devices"
+        },
+        {
+          "p": [
+            "EPA also plays a role in regulating devices used to control pests.",
+            "A **device** is any instrument or contrivance, other than a firearm, intended to **trap, destroy, repel, or mitigate** any pest.",
+            "A **black light trap** is an example of a device.",
+            "Unlike pesticides, devices **do not need to be registered**.",
+            "However, EPA does require the **establishment producing the device** to be registered.",
+            "Devices are subject to certain labeling, packaging, recordkeeping, and import/export requirements."
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "id": "p22-24c-label",
+          "title": "An example of a label for a Section 24(c) special local need registration.",
+          "page": "p. 22",
+          "imgFile": "p22-24c-label.jpg"
+        }
+      ],
+      "questions": [
+        {
+          "id": "c02-s05-t1",
+          "src": "test",
+          "kind": "mc",
+          "q": "All pesticides distributed and sold in the United States must be registered by EPA, except for:",
+          "choices": [
+            "Minimum-risk pesticides",
+            "General-use pesticides",
+            "Restricted-use pesticides",
+            "Pesticides used on food crops"
+          ],
+          "answer": 0,
+          "ref": "p. 21, 'Pesticide Registration'",
+          "why": "Minimum-risk pesticides are exempt under Section 25(b)."
+        },
+        {
+          "id": "c02-s05-t2",
+          "src": "test",
+          "kind": "mc",
+          "q": "Emergency exemptions fall under which FIFRA section?",
+          "choices": [
+            "Section 18",
+            "Section 24(c)",
+            "Section 3",
+            "Section 25(b)"
+          ],
+          "answer": 0,
+          "ref": "p. 22, list of registration and exemption actions",
+          "why": "Section 3 is federal registration, 24(c) is special local need, 18 is emergency, 25(b) is minimum risk."
+        },
+        {
+          "id": "c02-s05-t3",
+          "src": "test",
+          "kind": "tf",
+          "q": "A black light trap must be registered with EPA before it can be sold.",
+          "answer": false,
+          "ref": "p. 22, devices paragraph",
+          "why": "Devices need not be registered. The establishment producing them must be."
+        },
+        {
+          "id": "c02-s05-t4",
+          "src": "test",
+          "kind": "mc",
+          "q": "A company builds black light traps for sale. What does EPA require?",
+          "choices": [
+            "The establishment producing the device must be registered.",
+            "Each trap must be registered like a pesticide.",
+            "Nothing, because devices are not regulated at all.",
+            "Each trap must carry the restricted-use statement."
+          ],
+          "answer": 0,
+          "ref": "p. 22, devices paragraph",
+          "why": "The producing establishment is registered, and devices have labeling, packaging, recordkeeping, and import/export requirements.",
+          "style": "scenario"
+        },
+        {
+          "id": "c02-s05-t5",
+          "src": "test",
+          "kind": "mc",
+          "q": "A device is an instrument or contrivance intended to do all of these to a pest EXCEPT:",
+          "choices": [
+            "Trap",
+            "Repel",
+            "Mitigate",
+            "Identify"
+          ],
+          "answer": 3,
+          "ref": "p. 22, devices paragraph",
+          "why": "The definition is trap, destroy, repel, or mitigate.",
+          "style": "not"
+        }
+      ]
+    },
+    {
+      "id": "c02-s06",
+      "chapter": "Chapter 2 · Federal Pesticide Laws and Regulations",
+      "title": "Tolerances",
+      "pages": [
+        22,
+        23
+      ],
+      "body": [
+        {
+          "h": "Tolerances"
+        },
+        {
+          "p": [
+            "Pesticides are widely used in producing food.",
+            "These pesticides may remain in small amounts, called **residues**, in or on fruits, vegetables, grains, and animal feed.",
+            "Before allowing the use of a pesticide on food crops, EPA sets a **tolerance**, or maximum residue limit.",
+            "A tolerance is the amount of pesticide residue that may legally remain on or in treated crops and animals, and animal products such as milk or eggs, to be sold for food or feed."
+          ]
+        },
+        {
+          "box": "Tolerance",
+          "p": [
+            "The maximum pesticide residue limit that may legally remain on or in treated crops and animals or animal products sold for food or feed."
+          ]
+        },
+        {
+          "p": [
+            "Federal agencies monitor food and feed products for tolerance violations, such as when the residue exceeds the established tolerance.",
+            "If residues are found to exceed the tolerance, the commodity will be **condemned or subject to seizure** by the government, and violators may be **prosecuted**.",
+            "In setting the tolerance, EPA must make a safety finding that the pesticide can be used with **reasonable certainty of no harm**.",
+            "To make this finding, EPA considers:"
+          ]
+        },
+        {
+          "list": [
+            "The **toxicity** of the pesticide and its **breakdown products**.",
+            "**How much** of the pesticide is applied and **how often**.",
+            "How much of the pesticide, that is, the residue, **remains** in or on food by the time it is marketed and prepared."
+          ]
+        },
+        {
+          "p": [
+            "Pesticide manufacturers must submit a wide variety of **scientific studies** for review before EPA sets a tolerance.",
+            "These data are designed to identify possible harmful effects the chemical could have on humans, its toxicity, the amount of the chemical residue, or breakdown products, likely to remain in or on food, and other possible sources of exposure to the pesticide, for example through use in homes or other places."
+          ]
+        },
+        {
+          "p": [
+            "A pesticide applicator **cannot measure residues** on crops or in livestock commodities, because such measurements require highly specialized equipment and techniques.",
+            "But by **following labeling instructions**, you can be sure that products you have treated with pesticides have residues well below the tolerance level when put on the market.",
+            "It is especially important to follow instructions on the correct **application rate** and the **minimum number of days** allowed between the pesticide application and **harvest, slaughter, freshening, or grazing**."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "c02-s06-r1",
+          "src": "review",
+          "kind": "mc",
+          "q": "Which of the following criteria is used by EPA in establishing pesticide tolerances?",
+          "choices": [
+            "Research data completely independent of the pesticide manufacturer's.",
+            "The anticipated volume of product to be sold in any given year.",
+            "The toxicity of the pesticide and its breakdown products."
+          ],
+          "answer": 2,
+          "ref": "Review question 5, p. 29. Answer in the text: p. 22, 'Tolerances'",
+          "why": "Toxicity and breakdown products are on EPA's list. The manufacturer submits the studies, and sales volume is not a factor."
+        },
+        {
+          "id": "c02-s06-t1",
+          "src": "test",
+          "kind": "mc",
+          "q": "What is a tolerance?",
+          "choices": [
+            "The maximum pesticide residue limit that may legally remain on or in treated crops, animals, or animal products sold for food or feed",
+            "The highest rate printed on a label",
+            "The number of days between application and harvest",
+            "The amount of pesticide a pest can survive"
+          ],
+          "answer": 0,
+          "ref": "p. 22, 'Tolerances' and box",
+          "why": "A tolerance is a maximum residue limit."
+        },
+        {
+          "id": "c02-s06-t2",
+          "src": "test",
+          "kind": "mc",
+          "q": "Inspectors find residues above the tolerance on a load of apples. What can happen?",
+          "choices": [
+            "The apples can be condemned or seized, and violators may be prosecuted.",
+            "The grower gets a warning and may still sell the apples.",
+            "EPA raises the tolerance.",
+            "Nothing, because only the label matters."
+          ],
+          "answer": 0,
+          "ref": "p. 22, 'Tolerances'",
+          "why": "Commodities over tolerance are condemned or seized, and violators may be prosecuted.",
+          "style": "scenario"
+        },
+        {
+          "id": "c02-s06-t3",
+          "src": "test",
+          "kind": "mc",
+          "q": "When setting a tolerance, EPA considers all of these EXCEPT:",
+          "choices": [
+            "The toxicity of the pesticide and its breakdown products",
+            "How much of the pesticide is applied and how often",
+            "How much residue remains by the time food is marketed and prepared",
+            "The market price of the crop"
+          ],
+          "answer": 3,
+          "ref": "p. 22, 'Tolerances' list",
+          "why": "Price is not one of EPA's three considerations.",
+          "style": "not"
+        },
+        {
+          "id": "c02-s06-t4",
+          "src": "test",
+          "kind": "tf",
+          "q": "An applicator can measure residues on crops with standard field equipment before harvest.",
+          "answer": false,
+          "ref": "pp. 22–23, 'Tolerances'",
+          "why": "Residue measurement needs highly specialized equipment and techniques."
+        },
+        {
+          "id": "c02-s06-t5",
+          "src": "test",
+          "kind": "mc",
+          "q": "You want your treated crop to be well below tolerance when it goes to market. Which label instructions does the manual say are especially important?",
+          "choices": [
+            "The application rate and the minimum days between application and harvest, slaughter, freshening, or grazing",
+            "The storage temperature and container size",
+            "The brand name and the EPA establishment number",
+            "The signal word only"
+          ],
+          "answer": 0,
+          "ref": "p. 23, end of 'Tolerances'",
+          "why": "Correct rate and the minimum days before harvest keep residues below tolerance.",
+          "style": "scenario"
+        }
+      ]
+    },
+    {
+      "id": "c02-s07",
+      "chapter": "Chapter 2 · Federal Pesticide Laws and Regulations",
+      "title": "Reregistration and registration review",
+      "pages": [
+        23,
+        23
+      ],
+      "body": [
+        {
+          "h": "Pesticide reregistration"
+        },
+        {
+          "p": [
+            "EPA is responsible for ensuring that each registered pesticide **continues** to meet safety standards to protect human health and the environment.",
+            "These standards have become **stricter** over the years as EPA's ability to evaluate the potential harmful effects of pesticides has improved.",
+            "Therefore, the agency has embarked on several programs to reevaluate pesticides as the standards evolve."
+          ]
+        },
+        {
+          "h": "Reregistration and tolerance reassessment"
+        },
+        {
+          "p": [
+            "EPA has completed a **one-time program** to review older pesticides, those initially registered **before November 1984**, to ensure that they meet current scientific and regulatory standards.",
+            "This process, called **reregistration**, considered the human health, environmental, and ecological effects of pesticides.",
+            "It resulted in numerous actions to reduce risks of concern identified during the review.",
+            "The conclusions of those reviews are called **Reregistration Eligibility Decisions (REDs)**."
+          ]
+        },
+        {
+          "p": [
+            "In addition to the reregistration effort, Congress passed the **1996 Food Quality Protection Act (FQPA)** amendments to FIFRA.",
+            "It also passed the Federal Food, Drug, and Cosmetics Act (FFDCA), which called for **reassessing existing tolerances** and tolerance exemptions to ensure that they meet the legal safety standard.",
+            "Implementation of REDs and tolerance reassessment decisions, including the movement of revised labeling into the marketplace, has continued beyond the completion of the reviews in **2008**."
+          ]
+        },
+        {
+          "fig": "p23-usda-chemist"
+        },
+        {
+          "h": "Registration review"
+        },
+        {
+          "p": [
+            "Finally, FQPA mandated a new program: **registration review**.",
+            "Under this program, EPA **periodically reevaluates** pesticides to ensure that products in the marketplace can still be used safely as policies and practices change.",
+            "As the ability to assess risk evolves, registration review allows EPA to verify that all registered pesticides continue to meet the statutory standard of **no unreasonable adverse effects**."
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "id": "p23-usda-chemist",
+          "title": "A USDA chemist prepares extracts of fruits and vegetables for analysis of pesticide residues.",
+          "page": "p. 23",
+          "imgFile": "p23-usda-chemist.jpg"
+        }
+      ],
+      "questions": [
+        {
+          "id": "c02-s07-r1",
+          "src": "review",
+          "kind": "mc",
+          "q": "What is the purpose of the pesticide registration and reregistration process?",
+          "choices": [
+            "To control the flow of new pesticide products entering the marketplace.",
+            "To provide evidence that the pesticide will not cause unreasonable risks to human health or the environment.",
+            "To make sure the amount of pesticide residue remaining on food and feed crops is zero."
+          ],
+          "answer": 1,
+          "ref": "Review question 3, p. 29. Answer in the text: p. 21, 'Pesticide Registration'; p. 23, 'Pesticide Reregistration'",
+          "why": "Registration rests on data showing no unreasonable risks. Tolerances allow some residue, so C is wrong."
+        },
+        {
+          "id": "c02-s07-t1",
+          "src": "test",
+          "kind": "mc",
+          "q": "Reregistration reviewed older pesticides that were first registered before:",
+          "choices": [
+            "November 1984",
+            "January 1972",
+            "August 1996",
+            "2008"
+          ],
+          "answer": 0,
+          "ref": "p. 23, 'Reregistration and Tolerance Reassessment'",
+          "why": "Reregistration covered pesticides first registered before November 1984."
+        },
+        {
+          "id": "c02-s07-t2",
+          "src": "test",
+          "kind": "mc",
+          "q": "What are the conclusions of reregistration reviews called?",
+          "choices": [
+            "Reregistration Eligibility Decisions (REDs)",
+            "Special local need registrations",
+            "Tolerances",
+            "County bulletins"
+          ],
+          "answer": 0,
+          "ref": "p. 23, 'Reregistration and Tolerance Reassessment'",
+          "why": "The conclusions are called REDs."
+        },
+        {
+          "id": "c02-s07-t3",
+          "src": "test",
+          "kind": "mc",
+          "q": "Which statement about registration review is NOT true?",
+          "choices": [
+            "FQPA mandated it.",
+            "EPA periodically reevaluates pesticides under it.",
+            "It checks that pesticides meet the standard of no unreasonable adverse effects.",
+            "It was a one-time program that ended in 2008."
+          ],
+          "answer": 3,
+          "ref": "p. 23, 'Pesticide Reregistration'",
+          "why": "Reregistration was the one-time program. Registration review is periodic and ongoing.",
+          "style": "not"
+        },
+        {
+          "id": "c02-s07-t4",
+          "src": "test",
+          "kind": "tf",
+          "q": "Reregistration was a one-time program, while registration review reevaluates pesticides periodically.",
+          "answer": true,
+          "ref": "p. 23, 'Pesticide Reregistration'",
+          "why": "Reregistration was completed once. Registration review repeats."
+        },
+        {
+          "id": "c02-s07-t5",
+          "src": "test",
+          "kind": "mc",
+          "q": "A product you have used for years gets new labeling after EPA rechecks it against current standards. Under which program does EPA periodically reevaluate products already on the market?",
+          "choices": [
+            "Registration review",
+            "Section 18 emergency exemption",
+            "Section 24(c) special local need",
+            "Tolerance setting"
+          ],
+          "answer": 0,
+          "ref": "p. 23, 'Pesticide Reregistration'",
+          "why": "Registration review is the periodic reevaluation FQPA mandated.",
+          "style": "scenario"
+        }
+      ]
+    },
+    {
+      "id": "c02-s08",
+      "chapter": "Chapter 2 · Federal Pesticide Laws and Regulations",
+      "title": "Label changes that reduce risk, and what they mean for you",
+      "pages": [
+        23,
+        23
+      ],
+      "body": [
+        {
+          "h": "Risks of concern and labeling changes"
+        },
+        {
+          "p": [
+            "Through these assessments, EPA has identified risks of concern for some uses.",
+            "In many cases, these risks could be reduced to acceptable levels by **changing the product labeling**.",
+            "Examples include use sites, application rates and methods, timing of harvest, **restricted-entry intervals**, and requirements for **personal protective equipment (PPE)**."
+          ]
+        },
+        {
+          "p": [
+            "Changes in application rates, timing of application to crop harvest, or the removal of some uses can reduce crop residues, decreasing **dietary exposure** and risk.",
+            "Labeling requirements for PPE, **closed systems**, and **extended restricted-entry intervals** may be established to protect agricultural workers and handlers.",
+            "Limitations on applications in some **soil types** reduce the chance of **groundwater contamination**.",
+            "EPA expects the implementation of revised labeling in the field to be a **continuing process**."
+          ]
+        },
+        {
+          "h": "How do these processes affect you?"
+        },
+        {
+          "p": [
+            "How do these processes affect you, the applicator?",
+            "You must **review each product's labeling before application** to check for recent changes and to ensure that you use the product according to the directions.",
+            "Product labeling can **change frequently**.",
+            "You can avoid misuse by making sure you are referencing the **most current product labeling**."
+          ]
+        },
+        {
+          "fig": "p23-produce"
+        }
+      ],
+      "figures": [
+        {
+          "id": "p23-produce",
+          "title": "The EPA uses data from the USDA on what food people eat and how much they eat, collected through the Pesticide Data Program.",
+          "page": "p. 23",
+          "imgFile": "p23-produce.jpg"
+        }
+      ],
+      "questions": [
+        {
+          "id": "c02-s08-t1",
+          "src": "test",
+          "kind": "mc",
+          "q": "You have used the same product for three seasons. Before today's application, what does the manual say you must do?",
+          "choices": [
+            "Review the product's labeling to check for recent changes.",
+            "Use the rate you remember from last year.",
+            "Read the label only if the product name changed.",
+            "Call EPA for approval."
+          ],
+          "answer": 0,
+          "ref": "p. 23, 'How do these processes affect you'",
+          "why": "Labeling can change frequently, so review it before every application.",
+          "style": "scenario"
+        },
+        {
+          "id": "c02-s08-t2",
+          "src": "test",
+          "kind": "mc",
+          "q": "Which of these is NOT listed as a labeling change EPA uses to reduce risks of concern?",
+          "choices": [
+            "Use sites",
+            "Restricted-entry intervals",
+            "Requirements for PPE",
+            "Product price"
+          ],
+          "answer": 3,
+          "ref": "p. 23, 'Pesticide Reregistration'",
+          "why": "Use sites, rates and methods, harvest timing, restricted-entry intervals, and PPE are listed.",
+          "style": "not"
+        },
+        {
+          "id": "c02-s08-t3",
+          "src": "test",
+          "kind": "mc",
+          "q": "Limiting applications in some soil types reduces the chance of:",
+          "choices": [
+            "Groundwater contamination",
+            "Pesticide resistance",
+            "Dietary exposure",
+            "Spray drift"
+          ],
+          "answer": 0,
+          "ref": "p. 23, 'Pesticide Reregistration'",
+          "why": "Soil-type limits protect groundwater."
+        },
+        {
+          "id": "c02-s08-t4",
+          "src": "test",
+          "kind": "tf",
+          "q": "Once EPA revises a product's labeling, the labeling will not change again.",
+          "answer": false,
+          "ref": "p. 23, 'Pesticide Reregistration'",
+          "why": "Revision is a continuing process, and labeling can change frequently."
+        },
+        {
+          "id": "c02-s08-t5",
+          "src": "test",
+          "kind": "mc",
+          "q": "Which labeling requirements may be set to protect agricultural workers and handlers?",
+          "choices": [
+            "PPE, closed systems, and extended restricted-entry intervals",
+            "Shorter restricted-entry intervals",
+            "Larger containers",
+            "Removal of the signal word"
+          ],
+          "answer": 0,
+          "ref": "p. 23, 'Pesticide Reregistration'",
+          "why": "PPE, closed systems, and longer restricted-entry intervals protect workers and handlers."
+        }
+      ]
+    },
+    {
+      "id": "c02-s09",
+      "chapter": "Chapter 2 · Federal Pesticide Laws and Regulations",
+      "title": "Violations and federal penalties",
+      "pages": [
+        24,
+        24
+      ],
+      "body": [
+        {
+          "h": "Violations and federal penalties"
+        },
+        {
+          "p": [
+            "A variety of actions by pesticide manufacturers, sellers, distributors, and users are considered **unlawful acts** under the provisions of FIFRA.",
+            "These acts include:"
+          ]
+        },
+        {
+          "list": [
+            "Distributing, selling, or delivering an **unregistered** pesticide.",
+            "Making any advertising claim about a pesticide not included in the registration statement.",
+            "Selling any registered pesticide if its content does not conform to labeling data.",
+            "Selling an **adulterated or misbranded** pesticide.",
+            "**Detaching, altering, defacing, or destroying** any part of a container or labeling.",
+            "**Refusing to keep records** or permit authorized EPA inspections.",
+            "Making a guarantee other than that specified by the labeling.",
+            "Advertising an RUP **without giving the product classification**.",
+            "Making an RUP available to a **noncertified applicator**, except as provided by law.",
+            "Using a pesticide in any manner **inconsistent with the labeling**."
+          ]
+        },
+        {
+          "fig": "p24-scales"
+        },
+        {
+          "h": "Penalties"
+        },
+        {
+          "p": [
+            "Anyone who uses a pesticide in a manner inconsistent with its labeling directions and restrictions may be subject to **civil and/or criminal penalties**.",
+            "Generally, any registrant, commercial applicator, wholesaler, dealer, retailer, or other distributor in violation of FIFRA may be assessed a **civil penalty**.",
+            "In determining civil penalties, EPA considers the **size of the business**, how the penalty may affect the ability of the firm to **remain in business**, and the **gravity of the violation**.",
+            "Other considerations include any economic benefit realized by illegal profits or unfair gains.",
+            "In cases involving only **minor violations**, EPA may issue a **warning** instead of assessing a penalty."
+          ]
+        },
+        {
+          "p": [
+            "A **knowing (intentional)** violation by any registrant, applicant for registration, producer, commercial applicator of a restricted-use pesticide, or other person distributing or selling pesticides or devices is a **criminal act**.",
+            "The penalty may include a fine and/or up to **one year** imprisonment.",
+            "A knowing violation by a **private applicator** is a **misdemeanor** and will result in a fine and/or up to **30 days** imprisonment.",
+            "Remember, you must use all pesticides exactly according to labeling directions."
+          ]
+        },
+        {
+          "box": "Remember...",
+          "p": [
+            "**The label is the law!**"
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "id": "p24-scales",
+          "title": "Both civil and criminal penalties can be assessed for FIFRA violations.",
+          "page": "p. 24",
+          "imgFile": "p24-scales.jpg"
+        }
+      ],
+      "questions": [
+        {
+          "id": "c02-s09-r1",
+          "src": "review",
+          "kind": "mc",
+          "q": "Which statement about federal pesticide regulation is **true**?",
+          "choices": [
+            "To ensure future compliance, civil penalties are typically assessed against first-time violators.",
+            "Like pesticides, devices used to control pests must also be registered with EPA.",
+            "Approved pesticide labels have the force of law."
+          ],
+          "answer": 2,
+          "ref": "Review question 4, p. 29. Answer in the text: p. 20, 'FIFRA'; p. 22, devices; p. 24, 'Penalties'",
+          "why": "EPA-approved labeling has the force of law. Devices need not be registered, and minor violations may get only a warning."
+        },
+        {
+          "id": "c02-s09-r2",
+          "src": "review",
+          "kind": "mc",
+          "q": "Under federal law, which of the following actions is unlawful and subject to civil or criminal penalties?",
+          "choices": [
+            "Allowing a person under the direct supervision of a certified applicator to apply RUPs.",
+            "Detaching, altering, defacing, or destroying any part of a container or labeling.",
+            "Keeping inadequate records of employees who received training on the proper use of pesticides."
+          ],
+          "answer": 1,
+          "ref": "Review question 6, p. 29. Answer in the text: p. 24, 'Violations and Federal Penalties'",
+          "why": "Damaging a container or labeling is on the unlawful list. Supervised RUP use is legal, and training records are not federally required."
+        },
+        {
+          "id": "c02-s09-t1",
+          "src": "test",
+          "kind": "mc",
+          "q": "A commercial applicator of an RUP knowingly violates FIFRA. What is the most prison time the penalty may include?",
+          "choices": [
+            "Up to one year",
+            "Up to 30 days",
+            "Up to five years",
+            "None, only a fine"
+          ],
+          "answer": 0,
+          "ref": "p. 24, 'Penalties'",
+          "why": "A knowing violation by a commercial applicator may bring a fine and/or up to one year.",
+          "style": "scenario"
+        },
+        {
+          "id": "c02-s09-t2",
+          "src": "test",
+          "kind": "mc",
+          "q": "A private applicator knowingly violates FIFRA. What is the result?",
+          "choices": [
+            "A misdemeanor, with a fine and/or up to 30 days imprisonment",
+            "A felony, with up to one year imprisonment",
+            "Only a written warning",
+            "Loss of the applicator's land"
+          ],
+          "answer": 0,
+          "ref": "p. 24, 'Penalties'",
+          "why": "For a private applicator, a knowing violation is a misdemeanor: fine and/or up to 30 days.",
+          "style": "scenario"
+        },
+        {
+          "id": "c02-s09-t3",
+          "src": "test",
+          "kind": "mc",
+          "q": "In determining a civil penalty, EPA considers all of these EXCEPT:",
+          "choices": [
+            "The size of the business",
+            "How the penalty may affect the firm's ability to remain in business",
+            "The gravity of the violation",
+            "The applicator's years of experience"
+          ],
+          "answer": 3,
+          "ref": "p. 24, 'Penalties'",
+          "why": "Size, ability to stay in business, gravity, and economic benefit are considered.",
+          "style": "not"
+        },
+        {
+          "id": "c02-s09-t4",
+          "src": "test",
+          "kind": "tf",
+          "q": "In cases involving only minor violations, EPA may issue a warning instead of assessing a penalty.",
+          "answer": true,
+          "ref": "p. 24, 'Penalties'",
+          "why": "Minor violations may get a warning."
+        },
+        {
+          "id": "c02-s09-t5",
+          "src": "test",
+          "kind": "mc",
+          "q": "Which of these is NOT an unlawful act under FIFRA?",
+          "choices": [
+            "Selling a misbranded pesticide",
+            "Advertising an RUP without giving its classification",
+            "Refusing an authorized EPA inspection",
+            "Applying a pesticide at a lower rate than the label specifies, when the labeling does not prohibit it"
+          ],
+          "answer": 3,
+          "ref": "p. 24 list; p. 20, Section 2(ee)",
+          "why": "A lower rate is a Section 2(ee) exclusion unless the labeling prohibits it.",
+          "style": "not"
+        }
+      ]
+    },
+    {
+      "id": "c02-s10",
+      "chapter": "Chapter 2 · Federal Pesticide Laws and Regulations",
+      "title": "Federal regulations: containers and the Worker Protection Standard",
+      "pages": [
+        24,
+        25
+      ],
+      "body": [
+        {
+          "h": "Federal pesticide regulations under FIFRA"
+        },
+        {
+          "p": [
+            "EPA develops regulations to carry out the provisions of FIFRA.",
+            "The primary federal regulations pertaining to pesticides are found in **Parts 150 to 189 of Title 40 of the Code of Federal Regulations**, written as **40 CFR Parts 150-189**.",
+            "The most important federal pesticide regulations of concern to pesticide applicators are briefly summarized below."
+          ]
+        },
+        {
+          "h": "Pesticide Container and Containment Regulation (40 CFR Part 165)"
+        },
+        {
+          "p": [
+            "In **2006**, EPA published regulations on pesticide containers and containment structures to ensure the safe use, refill, and disposal of containers.",
+            "While most of these requirements apply to pesticide manufacturers and refillers, commercial applicators who store pesticides in containers **greater than 500 gallons** may need to verify that the container is surrounded by a **secondary containment structure**.",
+            "Contact your state pesticide regulatory agency, because some states are implementing **state, instead of federal**, containment regulations.",
+            "In addition, all applicators must follow the container handling and cleaning instructions in the **Storage and Disposal** section of the pesticide labeling."
+          ]
+        },
+        {
+          "h": "Worker Protection Standard Regulation (40 CFR Part 170)"
+        },
+        {
+          "p": [
+            "EPA's **Worker Protection Standard (WPS)** is intended to reduce the incidence of occupational pesticide exposure and related illnesses and injuries among **agricultural workers and pesticide handlers** covered by the rule.",
+            "The WPS requires employers to provide agricultural workers and pesticide handlers with certain protections.",
+            "These include **pesticide safety training, personal protective equipment, and decontamination supplies** designed to prevent or reduce harm from occupational pesticide exposures.",
+            "Owners and operators of agricultural establishments, such as farms, nurseries, and forest and greenhouse operations producing agricultural plants, and of commercial businesses hired to apply pesticides or to perform crop advising tasks on agricultural establishments, must comply with the WPS.",
+            "The WPS also requires employers to **maintain certain records** and to **display specific pesticide safety information** on the premises."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "c02-s10-r1",
+          "src": "review",
+          "kind": "mc",
+          "q": "Which federal regulation requires employee training in the use of pesticides?",
+          "choices": [
+            "Worker Protection Standard.",
+            "Pesticide Container and Containment Regulation.",
+            "Food Quality Protection Act."
+          ],
+          "answer": 0,
+          "ref": "Review question 7, p. 29. Answer in the text: p. 25, 'Worker Protection Standard Regulation'",
+          "why": "The WPS requires employers to give workers and handlers pesticide safety training."
+        },
+        {
+          "id": "c02-s10-t1",
+          "src": "test",
+          "kind": "mc",
+          "q": "Where are the primary federal pesticide regulations found?",
+          "choices": [
+            "40 CFR Parts 150 to 189",
+            "FIFRA Section 2(ee)",
+            "FIFRA Section 18",
+            "The Endangered Species Act"
+          ],
+          "answer": 0,
+          "ref": "p. 24, 'Federal Pesticide Regulations Under FIFRA'",
+          "why": "Title 40 of the Code of Federal Regulations, Parts 150 to 189."
+        },
+        {
+          "id": "c02-s10-t2",
+          "src": "test",
+          "kind": "mc",
+          "q": "A commercial applicator stores pesticide in a 600-gallon tank. Under the container and containment regulation, what may they need to verify?",
+          "choices": [
+            "That the container is surrounded by a secondary containment structure",
+            "That the tank is registered as a device",
+            "That the tank carries the restricted-use statement",
+            "Nothing, because the rule applies only to manufacturers"
+          ],
+          "answer": 0,
+          "ref": "p. 24, 'Pesticide Container and Containment Regulation'",
+          "why": "Commercial applicators storing over 500 gallons may need secondary containment.",
+          "style": "scenario"
+        },
+        {
+          "id": "c02-s10-t3",
+          "src": "test",
+          "kind": "mc",
+          "q": "The WPS requires employers to provide workers and handlers all of these EXCEPT:",
+          "choices": [
+            "Pesticide safety training",
+            "Personal protective equipment",
+            "Decontamination supplies",
+            "Health insurance"
+          ],
+          "answer": 3,
+          "ref": "p. 25, 'Worker Protection Standard Regulation'",
+          "why": "Training, PPE, and decontamination supplies are the listed protections.",
+          "style": "not"
+        },
+        {
+          "id": "c02-s10-t4",
+          "src": "test",
+          "kind": "tf",
+          "q": "All applicators must follow the container handling and cleaning instructions in the Storage and Disposal section of the labeling.",
+          "answer": true,
+          "ref": "p. 24, 'Pesticide Container and Containment Regulation'",
+          "why": "That part applies to all applicators."
+        },
+        {
+          "id": "c02-s10-t5",
+          "src": "test",
+          "kind": "mc",
+          "q": "Which part of Title 40 of the Code of Federal Regulations is the Worker Protection Standard?",
+          "choices": [
+            "Part 170",
+            "Part 165",
+            "Part 171",
+            "Part 150"
+          ],
+          "answer": 0,
+          "ref": "p. 25, 'Worker Protection Standard Regulation'",
+          "why": "Part 165 is containers, Part 170 is the WPS, Part 171 is applicator certification."
+        }
+      ]
+    },
+    {
+      "id": "c02-s11",
+      "chapter": "Chapter 2 · Federal Pesticide Laws and Regulations",
+      "title": "Applicator certification, and other federal laws",
+      "pages": [
+        25,
+        25
+      ],
+      "body": [
+        {
+          "h": "Certification of Pesticide Applicators Regulation (40 CFR Part 171)"
+        },
+        {
+          "p": [
+            "As previously mentioned, EPA has the authority to classify certain products as RUPs and to require anyone applying or supervising the use of RUPs to become a **certified pesticide applicator**.",
+            "To carry out this requirement, EPA has established standards for the certification of pesticide applicators and requirements for state, tribal, territorial, and federal agencies to establish pesticide applicator certification programs.",
+            "Any such agency that wants to certify applicators to use RUPs must have an **EPA-approved certification plan** that describes how the certifying authority will carry out its credentialing program.",
+            "This includes the requirements to become a certified applicator, **recertification** requirements, and the **standards of competency** for each category of applicator.",
+            "At a minimum, all certification plans must **meet federal standards** and requirements."
+          ]
+        },
+        {
+          "p": [
+            "**All 50 states**, as well as several tribes, territories, and federal agencies, have EPA-approved certification plans and pesticide applicator certification programs.",
+            "Additionally, all 50 states have signed **cooperative enforcement agreements** with EPA that designate an agency within the state, that is, the **state lead agency**, as the primary pesticide regulatory authority to enforce the provisions of FIFRA.",
+            "In some situations, more than one state agency may be designated to enforce various parts of FIFRA.",
+            "For example, some states have **structural pest control boards** responsible for regulating the structural pest control industry."
+          ]
+        },
+        {
+          "h": "Other federal laws"
+        },
+        {
+          "p": [
+            "Although FIFRA is the main federal law regulating pesticide use, the **FFDCA** is another statute that provides the EPA with regulatory authority for pesticides.",
+            "Other federal laws cover certain pesticide-related activities, such as **transportation, storage, disposal, protecting the safety of employees, and reporting accidents and spills**.",
+            "Applicators will encounter other laws and regulations that they must be aware of and obey.",
+            "In some cases, the pesticide labeling will alert the applicator to these laws."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "c02-s11-t1",
+          "src": "test",
+          "kind": "mc",
+          "q": "Under cooperative enforcement agreements with EPA, which agency is the primary pesticide regulatory authority within a state for enforcing FIFRA?",
+          "choices": [
+            "The state lead agency",
+            "The U.S. Fish and Wildlife Service",
+            "The Food and Drug Administration",
+            "The pesticide registrant"
+          ],
+          "answer": 0,
+          "ref": "p. 25, 'Certification of Pesticide Applicators Regulation'",
+          "why": "All 50 states designate a state lead agency to enforce FIFRA."
+        },
+        {
+          "id": "c02-s11-t2",
+          "src": "test",
+          "kind": "mc",
+          "q": "An EPA-approved certification plan includes all of these EXCEPT:",
+          "choices": [
+            "Requirements to become a certified applicator",
+            "Recertification requirements",
+            "Standards of competency for each category of applicator",
+            "A list of pesticide brands each applicator must buy"
+          ],
+          "answer": 3,
+          "ref": "p. 25, 'Certification of Pesticide Applicators Regulation'",
+          "why": "The plan covers becoming certified, recertification, and competency standards.",
+          "style": "not"
+        },
+        {
+          "id": "c02-s11-t3",
+          "src": "test",
+          "kind": "tf",
+          "q": "A state certification plan may set standards below the federal standards if the state approves it.",
+          "answer": false,
+          "ref": "p. 25, 'Certification of Pesticide Applicators Regulation'",
+          "why": "At a minimum, all plans must meet federal standards and requirements."
+        },
+        {
+          "id": "c02-s11-t4",
+          "src": "test",
+          "kind": "mc",
+          "q": "In your state, a structural pest control board regulates the structural pest control industry, while another agency enforces the rest of FIFRA. According to the manual, this is:",
+          "choices": [
+            "Allowed. More than one state agency may be designated to enforce parts of FIFRA.",
+            "Not allowed. Only one agency may enforce FIFRA.",
+            "Allowed only on tribal lands.",
+            "A Section 18 emergency exemption."
+          ],
+          "answer": 0,
+          "ref": "p. 25, 'Certification of Pesticide Applicators Regulation'",
+          "why": "The manual gives structural pest control boards as the example.",
+          "style": "scenario"
+        },
+        {
+          "id": "c02-s11-t5",
+          "src": "test",
+          "kind": "short",
+          "q": "Besides FIFRA, which statute does the manual name as giving EPA regulatory authority for pesticides?",
+          "answer": "The Federal Food, Drug, and Cosmetic Act (FFDCA)",
+          "accept": [
+            "FFDCA",
+            "Food, Drug, and Cosmetic Act"
+          ],
+          "keys": [
+            [
+              "ffdca",
+              "food drug",
+              "food, drug",
+              "cosmetic"
+            ]
+          ],
+          "ref": "p. 25, 'Other Federal Laws'",
+          "why": "The FFDCA is the other statute named."
+        }
+      ]
+    },
+    {
+      "id": "c02-s12",
+      "chapter": "Chapter 2 · Federal Pesticide Laws and Regulations",
+      "title": "The FFDCA and the Food Quality Protection Act",
+      "pages": [
+        25,
+        26
+      ],
+      "body": [
+        {
+          "h": "Federal Food, Drug, and Cosmetic Act"
+        },
+        {
+          "p": [
+            "The **FFDCA** governs the establishment of **pesticide tolerances** for food and feed products.",
+            "As discussed earlier, a tolerance is the maximum level of pesticide residues allowed in or on human food and animal feed.",
+            "The **EPA and the Food and Drug Administration** are responsible for administering this act."
+          ]
+        },
+        {
+          "h": "Food Quality Protection Act"
+        },
+        {
+          "p": [
+            "The **FQPA** set a higher standard for pesticides used on food.",
+            "It established a **single, health-based standard** to be used when assessing the risks of pesticide residues in food or feed.",
+            "This safety standard considers the **aggregate risk** from dietary and other nonoccupational sources of exposure, such as drinking water and residential lawn use, as shown in Figure 2.1.",
+            "In addition, when setting new or reassessing existing tolerances, the FQPA requires EPA to focus explicitly on exposures and risks to **infants and children**.",
+            "This act also requires EPA to assume an **additional safety factor** to account for any uncertainty in data."
+          ]
+        },
+        {
+          "fig": "fig-2-1"
+        },
+        {
+          "p": [
+            "Other FQPA mandates require EPA to:"
+          ]
+        },
+        {
+          "list": [
+            "Establish a tolerance only if there is **a reasonable certainty** that no harm will result from all combined sources of exposure to pesticides, called **aggregate exposures**. The combined effects of human exposure to different pesticides that may act in similar ways on the body, called **cumulative exposure**, must also be considered.",
+            "Review all old pesticides to make sure that the residues allowed on food meet the new safety standard.",
+            "Test pesticides for **endocrine-disruption potential**. Endocrine disruptors may be linked to a variety of sexual, developmental, behavioral, and reproductive problems.",
+            "Distribute a brochure discussing pesticides on foods to **supermarkets** to better inform the public."
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "id": "fig-2-1",
+          "title": "Figure 2.1: Under FQPA, the EPA must consider both dietary (food) and non-dietary (garden, home, water, pets, etc.) risks of exposure when setting tolerance levels for pesticide residues in food.",
+          "page": "p. 25",
+          "svgFile": "fig-2-1.svg",
+          "explain": [
+            "The picture is titled Aggregate Pesticide Residue Exposure Risk under FQPA.",
+            "Exposure from the garden, food, water, pets, and the home all goes into one risk cup, because EPA must add these sources together."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "c02-s12-t1",
+          "src": "test",
+          "kind": "mc",
+          "q": "Who is responsible for administering the FFDCA?",
+          "choices": [
+            "The EPA and the Food and Drug Administration",
+            "The EPA alone",
+            "The U.S. Department of Agriculture",
+            "The U.S. Fish and Wildlife Service and the National Marine Fisheries Service"
+          ],
+          "answer": 0,
+          "ref": "p. 25, 'Federal Food, Drug, and Cosmetic Act'",
+          "why": "EPA and FDA administer the FFDCA."
+        },
+        {
+          "id": "c02-s12-t2",
+          "src": "test",
+          "kind": "mc",
+          "q": "When setting or reassessing tolerances, the FQPA requires EPA to focus explicitly on exposures and risks to:",
+          "choices": [
+            "Infants and children",
+            "Pesticide handlers",
+            "Livestock",
+            "Endangered species"
+          ],
+          "answer": 0,
+          "ref": "p. 26, 'Food Quality Protection Act'",
+          "why": "FQPA singles out infants and children."
+        },
+        {
+          "id": "c02-s12-t3",
+          "src": "test",
+          "kind": "mc",
+          "q": "EPA adds up one person's exposure to a single pesticide from food, drinking water, and lawn use. What is this combined exposure called?",
+          "choices": [
+            "Aggregate exposure",
+            "Cumulative exposure",
+            "Occupational exposure",
+            "Chronic exposure"
+          ],
+          "answer": 0,
+          "ref": "p. 26, FQPA mandates",
+          "why": "All combined sources of exposure are aggregate exposure.",
+          "style": "scenario"
+        },
+        {
+          "id": "c02-s12-t4",
+          "src": "test",
+          "kind": "mc",
+          "q": "EPA looks at the combined effects of several different pesticides that act in similar ways on the body. What is this called?",
+          "choices": [
+            "Cumulative exposure",
+            "Aggregate exposure",
+            "Biomagnification",
+            "Residue tolerance"
+          ],
+          "answer": 0,
+          "ref": "p. 26, FQPA mandates",
+          "why": "Different pesticides with a similar action on the body is cumulative exposure.",
+          "style": "scenario"
+        },
+        {
+          "id": "c02-s12-t5",
+          "src": "test",
+          "kind": "mc",
+          "q": "The FQPA requires EPA to do all of these EXCEPT:",
+          "choices": [
+            "Test pesticides for endocrine-disruption potential",
+            "Review all old pesticides against the new safety standard",
+            "Distribute a brochure on pesticides on foods to supermarkets",
+            "Exempt pesticides used on food from needing tolerances"
+          ],
+          "answer": 3,
+          "ref": "p. 26, FQPA mandates",
+          "why": "FQPA tightened tolerances. It did not exempt food uses from them.",
+          "style": "not"
+        }
+      ]
+    },
+    {
+      "id": "c02-s13",
+      "chapter": "Chapter 2 · Federal Pesticide Laws and Regulations",
+      "title": "The Endangered Species Act",
+      "pages": [
+        26,
+        26
+      ],
+      "body": [
+        {
+          "h": "Endangered Species Act"
+        },
+        {
+          "p": [
+            "The **Endangered Species Act (ESA)** is a federal law administered by the **U.S. Fish and Wildlife Service** and the **National Marine Fisheries Service**, jointly referred to as **the Services**.",
+            "The ESA makes it illegal to kill, harm, or collect endangered or threatened wildlife or fish, or to remove endangered or threatened plants from areas under federal jurisdiction.",
+            "It also requires other federal agencies to ensure that any action they carry out or authorize is not likely to jeopardize the continued existence of any endangered or threatened species, or to destroy or harm its **critical habitat**.",
+            "Therefore, EPA must ensure that no registered pesticide use is likely to jeopardize the survival of any endangered or threatened species."
+          ]
+        },
+        {
+          "gallery": [
+            "p26-wolf",
+            "p26-owl",
+            "p26-butterfly",
+            "p26-trillium"
+          ]
+        },
+        {
+          "p": [
+            "Each **state pesticide regulatory agency** is responsible for implementing the federal **Endangered Species Protection Program** in cooperation with EPA.",
+            "Under this program, a pesticide product that might harm an endangered species carries a labeling statement instructing applicators to **consult a county bulletin** to determine if they must take any special precautions when using the product in a specific county.",
+            "EPA is developing these county bulletins and making them available through the Internet-based **Bulletins Live!** system.",
+            "Precautionary measures included in the bulletins may include **buffer strips, reduced application rates, or timing restrictions**.",
+            "An applicator might also be **prohibited from using the pesticide** within the identified habitat."
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "id": "p26-wolf",
+          "title": "Endangered mammal: Gray wolf.",
+          "page": "p. 26",
+          "imgFile": "p26-wolf.jpg"
+        },
+        {
+          "id": "p26-owl",
+          "title": "Endangered bird: Northern spotted owl.",
+          "page": "p. 26",
+          "imgFile": "p26-owl.jpg"
+        },
+        {
+          "id": "p26-butterfly",
+          "title": "Endangered insect: Karner blue butterfly.",
+          "page": "p. 26",
+          "imgFile": "p26-butterfly.jpg"
+        },
+        {
+          "id": "p26-trillium",
+          "title": "Endangered plant: Painted trillium.",
+          "page": "p. 26",
+          "imgFile": "p26-trillium.jpg"
+        }
+      ],
+      "questions": [
+        {
+          "id": "c02-s13-t1",
+          "src": "test",
+          "kind": "mc",
+          "q": "Who administers the Endangered Species Act?",
+          "choices": [
+            "The U.S. Fish and Wildlife Service and the National Marine Fisheries Service",
+            "The EPA and the Food and Drug Administration",
+            "The U.S. Department of Agriculture",
+            "The state lead agency"
+          ],
+          "answer": 0,
+          "ref": "p. 26, 'Endangered Species Act'",
+          "why": "Together they are called the Services."
+        },
+        {
+          "id": "c02-s13-t2",
+          "src": "test",
+          "kind": "mc",
+          "q": "Your product's label tells you to consult a county bulletin before use. What are you checking for?",
+          "choices": [
+            "Whether you must take special precautions to protect an endangered species in that county",
+            "The county's tolerance limits",
+            "Whether the product is restricted use",
+            "The county's recordkeeping forms"
+          ],
+          "answer": 0,
+          "ref": "p. 26, 'Endangered Species Act'",
+          "why": "County bulletins say what precautions protect endangered species there.",
+          "style": "scenario"
+        },
+        {
+          "id": "c02-s13-t3",
+          "src": "test",
+          "kind": "mc",
+          "q": "Precautionary measures in county bulletins may include all of these EXCEPT:",
+          "choices": [
+            "Buffer strips",
+            "Reduced application rates",
+            "Timing restrictions",
+            "A higher application rate"
+          ],
+          "answer": 3,
+          "ref": "p. 26, 'Endangered Species Act'",
+          "why": "Bulletins may call for buffer strips, lower rates, or timing limits.",
+          "style": "not"
+        },
+        {
+          "id": "c02-s13-t4",
+          "src": "test",
+          "kind": "tf",
+          "q": "A county bulletin might prohibit you from using the pesticide within the identified habitat.",
+          "answer": true,
+          "ref": "p. 26, 'Endangered Species Act'",
+          "why": "Use within the identified habitat can be prohibited."
+        },
+        {
+          "id": "c02-s13-t5",
+          "src": "test",
+          "kind": "short",
+          "q": "What is the name of the Internet-based system EPA uses to make county bulletins available?",
+          "answer": "Bulletins Live!",
+          "accept": [
+            "Bulletins Live"
+          ],
+          "keys": [
+            [
+              "bulletins live",
+              "bulletin live"
+            ]
+          ],
+          "ref": "p. 26, 'Endangered Species Act'",
+          "why": "County bulletins are posted through Bulletins Live!"
+        }
+      ]
+    },
+    {
+      "id": "c02-s14",
+      "chapter": "Chapter 2 · Federal Pesticide Laws and Regulations",
+      "title": "Recordkeeping: application records and training records",
+      "pages": [
+        26,
+        27
+      ],
+      "body": [
+        {
+          "h": "Application records"
+        },
+        {
+          "p": [
+            "The **United States Department of Agriculture (USDA)** administers the program that establishes federal recordkeeping requirements for **private applicators**.",
+            "**States** establish pesticide recordkeeping requirements for **commercial applicators**.",
+            "States may also establish private applicator recordkeeping requirements that **exceed USDA's**.",
+            "Both private and commercial applicators must be aware of the recordkeeping requirements for their industry.",
+            "Keeping appropriate application records not only meets the legal requirements but is also a wise practice, because records:"
+          ]
+        },
+        {
+          "list": [
+            "Are invaluable documentation in the event of a **complaint or lawsuit**.",
+            "Help determine which pesticide treatments work, which do not work, and why.",
+            "Help applicators plan future purchases so that they buy only the amount needed.",
+            "Provide information needed by **medical staff**.",
+            "Document the steps taken to protect farmworkers and the environment.",
+            "Are used for federal and state surveys."
+          ]
+        },
+        {
+          "fig": "p27-records"
+        },
+        {
+          "h": "Training records"
+        },
+        {
+          "p": [
+            "Owners and operators of pesticide application businesses should consider keeping documentation of employee training in pesticide use and handling.",
+            "Though **not currently required by federal law**, such documentation may be required in the future.",
+            "Therefore, make sure you are aware of applicable training requirements.",
+            "Your state, tribal, territorial, or federal pesticide regulatory agency may require written proof that employees received training on proper pesticide use when they were hired.",
+            "In the case of the **WPS**, records document that the mandatory training requirements were satisfied.",
+            "Consider including the following in your training records:"
+          ]
+        },
+        {
+          "list": [
+            "Employee's name and Social Security or work identification number.",
+            "Date of the training.",
+            "Materials used and source/provider of the training.",
+            "Employee's signature and the date signed."
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "id": "p27-records",
+          "title": "Both private and commercial applicators must be aware of the recordkeeping requirements for their industry.",
+          "page": "p. 27",
+          "imgFile": "p27-records.jpg"
+        }
+      ],
+      "questions": [
+        {
+          "id": "c02-s14-t1",
+          "src": "test",
+          "kind": "mc",
+          "q": "Who administers the program that sets federal recordkeeping requirements for private applicators?",
+          "choices": [
+            "The U.S. Department of Agriculture (USDA)",
+            "EPA",
+            "The Food and Drug Administration",
+            "The Services"
+          ],
+          "answer": 0,
+          "ref": "p. 26, 'Application Records'",
+          "why": "USDA runs the private applicator recordkeeping program."
+        },
+        {
+          "id": "c02-s14-t2",
+          "src": "test",
+          "kind": "mc",
+          "q": "Who establishes pesticide recordkeeping requirements for commercial applicators?",
+          "choices": [
+            "States",
+            "USDA",
+            "The Food and Drug Administration",
+            "Pesticide registrants"
+          ],
+          "answer": 0,
+          "ref": "p. 26, 'Application Records'",
+          "why": "States set commercial applicator recordkeeping rules."
+        },
+        {
+          "id": "c02-s14-t3",
+          "src": "test",
+          "kind": "mc",
+          "q": "Application records help in all of these ways EXCEPT:",
+          "choices": [
+            "Documentation in a complaint or lawsuit",
+            "Information needed by medical staff",
+            "Planning future purchases",
+            "Replacing the need to read the label"
+          ],
+          "answer": 3,
+          "ref": "pp. 26–27, 'Application Records'",
+          "why": "Records never replace reading the label.",
+          "style": "not"
+        },
+        {
+          "id": "c02-s14-t4",
+          "src": "test",
+          "kind": "tf",
+          "q": "Federal law currently requires every pesticide application business to keep employee training records.",
+          "answer": false,
+          "ref": "p. 27, 'Training Records'",
+          "why": "Training records are not currently required by federal law, though they may be in the future."
+        },
+        {
+          "id": "c02-s14-t5",
+          "src": "test",
+          "kind": "mc",
+          "q": "You are setting up training records for new hires. Which item does the manual suggest including?",
+          "choices": [
+            "The employee's signature and the date signed",
+            "The employee's medical history",
+            "The employee's home address",
+            "The price of the training"
+          ],
+          "answer": 0,
+          "ref": "p. 27, 'Training Records'",
+          "why": "Name and ID number, training date, materials and source, and signature with date.",
+          "style": "scenario"
+        }
+      ]
+    },
+    {
+      "id": "c02-s15",
+      "chapter": "Chapter 2 · Federal Pesticide Laws and Regulations",
+      "title": "Chapter 2 summary",
+      "pages": [
+        27,
+        28
+      ],
+      "body": [
+        {
+          "h": "Summary"
+        },
+        {
+          "p": [
+            "Federal pesticide laws and regulations are designed to protect the public and the environment from possible adverse effects of pesticides.",
+            "It is your responsibility as an applicator to comply with these laws and regulations.",
+            "**FIFRA** is the primary law that regulates how pesticides are **produced, transported, sold, used, and disposed of**.",
+            "FIFRA also establishes the process for the registration and reregistration of pesticide products, and for the certification of pesticide applicators.",
+            "All states, tribes, and territories must comply with FIFRA and its accompanying regulations.",
+            "They may establish additional pesticide regulations **more, but not less, restrictive** than FIFRA."
+          ]
+        },
+        {
+          "p": [
+            "The **FFDCA** regulates the tolerances, that is, the maximum amounts of pesticide residue, that may remain in human food and animal feed.",
+            "To set tolerance levels, EPA requires the review of many scientific studies to ensure the safety of food and feed products in the United States."
+          ]
+        },
+        {
+          "p": [
+            "The **FQPA** has put in place even more stringent requirements to assess the risks of pesticide residues in food or feed.",
+            "Under this standard, EPA must now consider the risk of **aggregate (combined)** pesticide exposures.",
+            "These include exposure through diet, residential lawn and home uses of pesticides, and residues that may be found in drinking water.",
+            "The standard also emphasizes the risk of pesticide exposure to **infants and children**.",
+            "Under the FQPA, EPA must review all old and new pesticides to make sure the residues allowed on food and feed meet the new safety standard."
+          ]
+        },
+        {
+          "p": [
+            "The **ESA** protects endangered or threatened species from harm, including pesticide injury.",
+            "Pesticide products that might harm an endangered species must carry a statement instructing applicators to consult a **county bulletin** to determine if they must take any special measures to protect an endangered species when using the product."
+          ]
+        },
+        {
+          "p": [
+            "All applicators must comply with **recordkeeping requirements for RUP applications**.",
+            "Even though it is not a current federal requirement, maintaining employee training records is a good idea.",
+            "Such records, which may eventually be required by the applicator's state, tribal, territorial, or federal agency, document that the **WPS safety training requirement** has been met."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "c02-s15-t1",
+          "src": "test",
+          "kind": "mc",
+          "q": "States, tribes, and territories may set pesticide regulations that are:",
+          "choices": [
+            "More, but not less, restrictive than FIFRA",
+            "Less restrictive than FIFRA",
+            "Exactly the same as FIFRA, no more and no less",
+            "Anything they choose, since FIFRA does not apply to them"
+          ],
+          "answer": 0,
+          "ref": "p. 27, 'Summary'",
+          "why": "They must comply with FIFRA and may only add stricter rules."
+        },
+        {
+          "id": "c02-s15-t2",
+          "src": "test",
+          "kind": "mc",
+          "q": "Under the FQPA standard, aggregate exposure includes all of these EXCEPT:",
+          "choices": [
+            "Diet",
+            "Residential lawn and home uses",
+            "Residues in drinking water",
+            "Exposure on the job as an applicator"
+          ],
+          "answer": 3,
+          "ref": "p. 27, 'Summary'; p. 26, FQPA",
+          "why": "The FQPA standard covers dietary and other nonoccupational sources.",
+          "style": "not"
+        },
+        {
+          "id": "c02-s15-t3",
+          "src": "test",
+          "kind": "tf",
+          "q": "All applicators must comply with recordkeeping requirements for RUP applications.",
+          "answer": true,
+          "ref": "p. 27, 'Summary'",
+          "why": "RUP application records are required for all applicators."
+        },
+        {
+          "id": "c02-s15-t4",
+          "src": "test",
+          "kind": "mc",
+          "q": "A coworker says FIFRA only covers how pesticides are applied. What is the best correction from the summary?",
+          "choices": [
+            "FIFRA regulates how pesticides are produced, transported, sold, used, and disposed of.",
+            "FIFRA covers only sales.",
+            "FIFRA covers only tolerances on food.",
+            "FIFRA covers only endangered species."
+          ],
+          "answer": 0,
+          "ref": "p. 27, 'Summary'",
+          "why": "FIFRA covers the whole life of a pesticide, from production to disposal.",
+          "style": "scenario"
+        },
+        {
+          "id": "c02-s15-t5",
+          "src": "test",
+          "kind": "mc",
+          "q": "Which law regulates the tolerances, the maximum pesticide residues, in human food and animal feed?",
+          "choices": [
+            "The FFDCA",
+            "The ESA",
+            "The WPS",
+            "FIFRA Section 24(c)"
+          ],
+          "answer": 0,
+          "ref": "p. 27, 'Summary'",
+          "why": "The FFDCA governs tolerances."
+        }
+      ]
+    }
+  ]
+}

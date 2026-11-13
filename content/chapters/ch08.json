@@ -1,0 +1,1907 @@
+{
+ "chapter": "Chapter 8 · Transportation, Storage, and Security",
+ "pages": [
+  123,
+  131
+ ],
+ "sections": [
+  {
+   "id": "c08-s01",
+   "chapter": "Chapter 8 · Transportation, Storage, and Security",
+   "title": "Chapter goals and transportation hazards",
+   "pages": [
+    123,
+    123
+   ],
+   "body": [
+    {
+     "box": "Learning objectives",
+     "p": [
+      "After studying this chapter, you should be able to do the following."
+     ],
+     "list": [
+      "State what precautions to take before transporting pesticides.",
+      "Summarize what the label says about legally disposing of unwanted pesticides.",
+      "List the steps to take to restrict access to pesticides.",
+      "Explain how to create a safe and secure storage area.",
+      "Describe how to properly store pesticides.",
+      "Discuss how to reduce the amounts stored by controlling inventory.",
+      "Explain how to maintain the integrity of pesticide containers."
+     ]
+    },
+    {
+     "fig": "p123-danger"
+    },
+    {
+     "p": [
+      "This chapter discusses safety and security issues that may arise when pesticides are moved or stored.",
+      "Serious accidents involving pesticides are **more likely to occur while they are in transit**.",
+      "Securing pesticides in a vehicle or in storage is a critical step to **prevent vandalism or theft** of product.",
+      "You can reduce pesticide transport and storage problems by being aware of conditions that lead to increased security risks."
+     ]
+    },
+    {
+     "h": "Transportation"
+    },
+    {
+     "p": [
+      "Every pesticide applicator should understand the hazards of transporting pesticides and the procedures for minimizing those risks.",
+      "Pesticides are moved by manufacturers to distributors, from retailers to end users, and from storage sites to job sites.",
+      "Transportation-related accidents can happen at **any point in the distribution chain**, from the manufacturer to the job site.",
+      "Your **first line of defense** is recognizing how to prevent these transportation mishaps.",
+      "When accidents occur, the **timing of your response** could determine the size of the spill."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "p123-danger",
+     "title": "Sign: Danger, Peligro. Fire will cause toxic fumes. Pesticide storage area. All unauthorized persons keep out. Keep door locked when not in use.",
+     "page": "p. 123",
+     "imgFile": "p123-danger.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c08-s01-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "According to the manual, when are serious accidents involving pesticides more likely to occur?",
+     "choices": [
+      "While the pesticides are in storage",
+      "While the pesticides are in transit",
+      "While the pesticides are being mixed",
+      "While the pesticides are being disposed of"
+     ],
+     "answer": 1,
+     "ref": "p. 123, chapter introduction",
+     "why": "Serious accidents are more likely to occur while pesticides are in transit."
+    },
+    {
+     "id": "c08-s01-t2",
+     "src": "test",
+     "kind": "mc",
+     "q": "What does the manual call your first line of defense against transportation accidents?",
+     "choices": [
+      "Carrying a spill kit",
+      "Calling first responders",
+      "Recognizing how to prevent these transportation mishaps",
+      "Buying vehicle insurance"
+     ],
+     "answer": 2,
+     "ref": "p. 123, 'Transportation'",
+     "why": "Your first line of defense is recognizing how to prevent these transportation mishaps."
+    },
+    {
+     "id": "c08-s01-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT named as a point where pesticides are moved in the distribution chain?",
+     "choices": [
+      "Manufacturers to distributors",
+      "Retailers to end users",
+      "Storage sites to job sites",
+      "Job sites back to manufacturers"
+     ],
+     "answer": 3,
+     "ref": "p. 123, 'Transportation'",
+     "why": "The manual names manufacturers to distributors, retailers to end users, and storage sites to job sites."
+    },
+    {
+     "id": "c08-s01-t4",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A tank of pesticide tips over on a truck. According to the manual, what could determine the size of the spill?",
+     "choices": [
+      "The timing of your response",
+      "The brand of the pesticide",
+      "The weather forecast",
+      "The size of the truck"
+     ],
+     "answer": 0,
+     "ref": "p. 123, 'Transportation'",
+     "why": "When accidents occur, the timing of your response could determine the size of the spill."
+    },
+    {
+     "id": "c08-s01-t5",
+     "src": "test",
+     "kind": "tf",
+     "q": "Transportation-related accidents can happen only on public highways, not at other points in the distribution chain.",
+     "answer": false,
+     "ref": "p. 123, 'Transportation'",
+     "why": "They can happen at any point in the distribution chain, from the manufacturer to the job site."
+    }
+   ]
+  },
+  {
+   "id": "c08-s02",
+   "chapter": "Chapter 8 · Transportation, Storage, and Security",
+   "title": "The transport vehicle and securing the load",
+   "pages": [
+    124,
+    124
+   ],
+   "body": [
+    {
+     "fig": "p124-secure"
+    },
+    {
+     "h": "Transport vehicle"
+    },
+    {
+     "p": [
+      "Transport vehicles should be in **good mechanical condition**.",
+      "Make sure **brakes, tires, and steering** are in proper working order.",
+      "Repair all fluid leaks before putting a truck on the road or leaving the job site.",
+      "Regularly inspect application equipment to be transported and used.",
+      "Inspect **hoses under pressure for wear and cracks** and **hose clamps for rust**.",
+      "Always carry **supplies and replacement parts** to make emergency repairs if a leak should develop while going to and from the job site."
+     ]
+    },
+    {
+     "p": [
+      "**Never carry liquid pesticides in the passenger area**, because spilled chemicals may cause harmful fumes that can be inhaled.",
+      "A pesticide spilled in the cab is difficult to remove and may lead to **long-term inhalation exposure**."
+     ]
+    },
+    {
+     "fig": "p124-passenger"
+    },
+    {
+     "p": [
+      "It is best to keep pesticide containers in the **original shipping box**.",
+      "Depending on the material, many of these boxes meet the **U.S. Department of Transportation (DOT)** packaging standards to give added protection to the contents.",
+      "Try to carry a **minimum amount** of pesticide products on a vehicle at any one time."
+     ]
+    },
+    {
+     "p": [
+      "Secure and protect pesticide containers against **punctures and impacts** from items packed closely together.",
+      "**Enclosed cargo boxes** provide extra security from curious children, thieves, or vandals.",
+      "**Never stack pesticide containers higher than the sides of the vehicle.**",
+      "Make sure flatbed trucks have **tie-down rings or racks** to simplify the job of securing the load."
+     ]
+    },
+    {
+     "fig": "p124-cargo"
+    }
+   ],
+   "figures": [
+    {
+     "id": "p124-secure",
+     "title": "Secure pesticides while transporting them even for short distances.",
+     "page": "p. 124",
+     "imgFile": "p124-secure.jpg"
+    },
+    {
+     "id": "p124-passenger",
+     "title": "Never carry pesticides in the passenger compartment of a vehicle.",
+     "page": "p. 124",
+     "imgFile": "p124-passenger.jpg"
+    },
+    {
+     "id": "p124-cargo",
+     "title": "Cargo boxes allow for secure transport of pesticides and help prevent theft and vandalism.",
+     "page": "p. 124",
+     "imgFile": "p124-cargo.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c08-s02-r1",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which statement about transporting pesticides is true?",
+     "choices": [
+      "Carry pesticides in the passenger compartment to prevent unauthorized access.",
+      "Enclosed and lockable cargo boxes offer the greatest protection.",
+      "The operator (driver) is not held responsible if a pesticide spill or accident occurs."
+     ],
+     "answer": 1,
+     "ref": "p. 124, 'Transport Vehicle' and 'Vehicle Operator'",
+     "why": "Enclosed cargo boxes provide extra security, pesticides never go in the passenger area, and the driver is accountable."
+    },
+    {
+     "id": "c08-s02-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "Why does the manual say never to carry liquid pesticides in the passenger area?",
+     "choices": [
+      "The cab is too warm for pesticides",
+      "Spilled chemicals may cause harmful fumes that can be inhaled",
+      "It voids the vehicle warranty",
+      "Labels fade in sunlight"
+     ],
+     "answer": 1,
+     "ref": "p. 124, 'Transport Vehicle'",
+     "why": "A spill in the cab can cause harmful fumes and long-term inhalation exposure."
+    },
+    {
+     "id": "c08-s02-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT a transport vehicle check named in the manual?",
+     "choices": [
+      "Brakes, tires, and steering in proper working order",
+      "Hoses under pressure inspected for wear and cracks",
+      "Hose clamps inspected for rust",
+      "Tire pressure set 10% above normal"
+     ],
+     "answer": 3,
+     "ref": "p. 124, 'Transport Vehicle'",
+     "why": "The manual lists brakes, tires, steering, fluid leaks, hoses, and hose clamps, nothing about extra tire pressure."
+    },
+    {
+     "id": "c08-s02-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "You are loading a pickup with jugs of pesticide. The stack would rise above the sides of the bed. What should you do?",
+     "choices": [
+      "Stack them anyway and drive slowly",
+      "Do not stack them higher than the sides of the vehicle",
+      "Put the extra jugs in the cab",
+      "Cover the stack with a tarp"
+     ],
+     "answer": 1,
+     "ref": "p. 124, 'Transport Vehicle'",
+     "why": "Never stack pesticide containers higher than the sides of the vehicle."
+    },
+    {
+     "id": "c08-s02-t4",
+     "src": "test",
+     "kind": "tf",
+     "q": "It is best to move pesticide containers out of their original shipping boxes before transport.",
+     "answer": false,
+     "ref": "p. 124, 'Transport Vehicle'",
+     "why": "It is best to keep them in the original shipping box, which may meet DOT packaging standards."
+    },
+    {
+     "id": "c08-s02-t5",
+     "src": "test",
+     "kind": "short",
+     "q": "What should flatbed trucks have to simplify the job of securing the load?",
+     "answer": "tie-down rings or racks",
+     "accept": [
+      "tie down rings",
+      "racks",
+      "tie-downs",
+      "tie downs"
+     ],
+     "keys": [
+      [
+       "tie-down",
+       "tie down",
+       "tiedown",
+       "rack",
+       "racks",
+       "rings"
+      ]
+     ],
+     "ref": "p. 124, 'Transport Vehicle'",
+     "why": "Flatbed trucks should have tie-down rings or racks."
+    }
+   ]
+  },
+  {
+   "id": "c08-s03",
+   "chapter": "Chapter 8 · Transportation, Storage, and Security",
+   "title": "Vehicle operator, SDSs, spill kits, and temperature",
+   "pages": [
+    124,
+    125
+   ],
+   "body": [
+    {
+     "h": "Vehicle operator"
+    },
+    {
+     "p": [
+      "The person driving the vehicle and/or the owner of the company is **accountable for injuries to people and any pesticide release** into the environment.",
+      "The vehicle operator (driver) is the **first person who can contain the spill** and prevent it from spreading.",
+      "By the time first responders arrive on the scene, the spill may already be contained.",
+      "Therefore, it is important that the driver know **basic emergency response procedures** to contain the spill, **company guidelines**, and **who will notify local, state, and federal authorities**.",
+      "Chapter 9, Emergency or Incident Response, explains in detail how to respond to a fire, spill, or leak involving pesticides."
+     ]
+    },
+    {
+     "p": [
+      "It should be noted that some drivers transporting pesticides regulated as **hazardous materials** will be required to follow **DOT regulations** regarding **commercial driver licenses, placarding, shipping papers, and annual inspections**."
+     ]
+    },
+    {
+     "h": "Other safety precautions"
+    },
+    {
+     "p": [
+      "Always carry **product labels and Safety Data Sheets (SDSs)** when transporting pesticides on highways.",
+      "The SDS contains critical information for the driver and emergency responders after a pesticide spill.",
+      "It lists steps to safely deal with the spill, including the **personal protective equipment (PPE)** to use, whether the spill carries an **inhalation or explosion risk**, **decontamination procedures**, and **emergency telephone numbers**.",
+      "Have the labels and SDSs well organized and **alphabetically arranged by product name** to allow quick access in the event of a spill."
+     ]
+    },
+    {
+     "p": [
+      "Always carry a **spill kit** with the items you will need to handle a spill during transport.",
+      "The contents of a spill kit are discussed in Chapter 9."
+     ]
+    },
+    {
+     "fig": "p125-spillkit"
+    },
+    {
+     "p": [
+      "Inspect containers to ensure they have **legible and attached labels**, **tight closures**, and **pesticide-free outside surfaces**.",
+      "Secure application equipment, such as hand sprayers, backpack sprayers, and spreaders, during transport."
+     ]
+    },
+    {
+     "p": [
+      "Protect pesticides from **extreme temperature and moisture** during transit.",
+      "Depending on the pesticide, **either extremely low or extremely high temperatures** can alter the stability of certain pesticide formulations."
+     ]
+    },
+    {
+     "fig": "p125-feedseed"
+    }
+   ],
+   "figures": [
+    {
+     "id": "p125-spillkit",
+     "title": "Always secure the load and carry in the truck a spill kit that includes a broom and shovel.",
+     "page": "p. 125",
+     "imgFile": "p125-spillkit.jpg"
+    },
+    {
+     "id": "p125-feedseed",
+     "title": "Pesticides stored incorrectly with feed, seed, and fertilizers increase the risk of contaminating non-pesticide products.",
+     "page": "p. 125",
+     "imgFile": "p125-feedseed.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c08-s03-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "Who does the manual say is the first person who can contain a spill during transport?",
+     "choices": [
+      "The first responders",
+      "The vehicle operator (driver)",
+      "The state lead agency",
+      "The pesticide manufacturer"
+     ],
+     "answer": 1,
+     "ref": "p. 124, 'Vehicle Operator'",
+     "why": "The driver is the first person who can contain the spill and prevent it from spreading."
+    },
+    {
+     "id": "c08-s03-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT listed as SDS information that helps after a spill?",
+     "choices": [
+      "The PPE to use",
+      "Whether the spill carries an inhalation or explosion risk",
+      "Decontamination procedures",
+      "The retail price of the product"
+     ],
+     "answer": 3,
+     "ref": "p. 125, 'Other Safety Precautions'",
+     "why": "The SDS lists PPE, inhalation or explosion risk, decontamination procedures, and emergency phone numbers."
+    },
+    {
+     "id": "c08-s03-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A driver for a pest control company spills a pesticide on the highway. Who is accountable for injuries to people and the release into the environment?",
+     "choices": [
+      "Only the pesticide manufacturer",
+      "Only the state highway department",
+      "The driver and/or the owner of the company",
+      "No one, if it was an accident"
+     ],
+     "answer": 2,
+     "ref": "p. 124, 'Vehicle Operator'",
+     "why": "The person driving and/or the owner of the company is accountable."
+    },
+    {
+     "id": "c08-s03-t4",
+     "src": "test",
+     "kind": "tf",
+     "q": "Only extremely high temperatures, not low temperatures, can alter the stability of pesticide formulations.",
+     "answer": false,
+     "ref": "p. 125, 'Other Safety Precautions'",
+     "why": "Either extremely low or extremely high temperatures can alter stability, depending on the pesticide."
+    },
+    {
+     "id": "c08-s03-t5",
+     "src": "test",
+     "kind": "mc",
+     "q": "According to the photo caption, what two tools should the truck's spill kit include?",
+     "choices": [
+      "A broom and shovel",
+      "A rake and hose",
+      "A bucket and mop",
+      "A fire extinguisher and flashlight"
+     ],
+     "answer": 0,
+     "ref": "p. 125, photo caption",
+     "why": "The caption says to carry a spill kit that includes a broom and shovel."
+    }
+   ]
+  },
+  {
+   "id": "c08-s04",
+   "chapter": "Chapter 8 · Transportation, Storage, and Security",
+   "title": "Vehicle placards and the transportation security plan",
+   "pages": [
+    125,
+    126
+   ],
+   "body": [
+    {
+     "h": "Vehicle placards"
+    },
+    {
+     "p": [
+      "DOT requires diamond-shaped signs called **placards** to be placed on vehicles that transport certain types and quantities of hazardous materials.",
+      "Most **distributors** will give you any required placards to place on your transportation vehicle.",
+      "Hazardous materials include some pesticides, fertilizers such as **anhydrous ammonia or ammonium nitrate**, and fuels such as **gasoline, diesel, and propane**.",
+      "Placards provide emergency responders with the information necessary to **quickly assess an accident situation**."
+     ]
+    },
+    {
+     "fig": "fig-8-placards"
+    },
+    {
+     "p": [
+      "If you ship or transport materials in quantities that require placards, you must develop and implement a **transportation security plan**.",
+      "Vehicles must be placarded when transporting pesticides in any of these ways."
+     ]
+    },
+    {
+     "list": [
+      "Bearing a **DOT poison label**.",
+      "In containers **larger than 119 gallons**.",
+      "In quantities **greater than 1,000 pounds**."
+     ]
+    },
+    {
+     "p": [
+      "The security plan must include measures to **prevent unauthorized access**, a **security check of employees** who pick up and transport placarded hazardous materials, and the **intended route of travel**.",
+      "For further details on the transportation security plan, contact the **Hazardous Materials Information Center**."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "fig-8-placards",
+     "title": "Examples of placards placed on vehicles that transport certain types of hazardous materials.",
+     "page": "p. 125",
+     "svgFile": "fig-8-placards.svg",
+     "explain": [
+      "The six example placards are: Dangerous 4, Gasoline 3, Oxidizer 5.1, Poison 6, Inhalation Hazard 2, and Flammable 3.",
+      "Each one is a diamond-shaped sign with the hazard name and a number."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c08-s04-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "Vehicles must be placarded when transporting pesticides in containers larger than how many gallons?",
+     "choices": [
+      "55 gallons",
+      "100 gallons",
+      "119 gallons",
+      "1,000 gallons"
+     ],
+     "answer": 2,
+     "ref": "p. 126, 'Vehicle Placards'",
+     "why": "Placards are required for containers larger than 119 gallons."
+    },
+    {
+     "id": "c08-s04-t2",
+     "src": "test",
+     "kind": "mc",
+     "q": "Vehicles must be placarded when transporting pesticides in quantities greater than how many pounds?",
+     "choices": [
+      "119 pounds",
+      "500 pounds",
+      "1,000 pounds",
+      "10,000 pounds"
+     ],
+     "answer": 2,
+     "ref": "p. 126, 'Vehicle Placards'",
+     "why": "Placards are required for quantities greater than 1,000 pounds."
+    },
+    {
+     "id": "c08-s04-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT a required part of a transportation security plan?",
+     "choices": [
+      "Measures to prevent unauthorized access",
+      "A security check of employees who transport placarded hazardous materials",
+      "The intended route of travel",
+      "A copy of each employee's driving record from the last 10 years"
+     ],
+     "answer": 3,
+     "ref": "p. 126, 'Vehicle Placards'",
+     "why": "The plan covers unauthorized access, employee security checks, and the intended route of travel."
+    },
+    {
+     "id": "c08-s04-t4",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "You will haul 1,500 pounds of a pesticide. What must you develop and implement?",
+     "choices": [
+      "A pest management plan",
+      "A transportation security plan",
+      "A drift management plan",
+      "A groundwater protection plan"
+     ],
+     "answer": 1,
+     "ref": "pp. 125–126, 'Vehicle Placards'",
+     "why": "Quantities that require placards also require a transportation security plan."
+    },
+    {
+     "id": "c08-s04-t5",
+     "src": "test",
+     "kind": "mc",
+     "q": "Who does the manual say will give you most required placards?",
+     "choices": [
+      "The state police",
+      "Most distributors",
+      "The EPA",
+      "The local fire department"
+     ],
+     "answer": 1,
+     "ref": "p. 125, 'Vehicle Placards'",
+     "why": "Most distributors will give you any required placards."
+    }
+   ]
+  },
+  {
+   "id": "c08-s05",
+   "chapter": "Chapter 8 · Transportation, Storage, and Security",
+   "title": "Storage buildings, site security, and water damage",
+   "pages": [
+    126,
+    126
+   ],
+   "body": [
+    {
+     "h": "Storage of pesticides in buildings"
+    },
+    {
+     "p": [
+      "Although existing buildings are often used for pesticide storage, it is best to have a **separate storage facility** for pesticides, fertilizers, and other similar products.",
+      "Storing pesticides separately gives emergency response crews **more options in dealing with fires and spills**.",
+      "Keeping **equipment, employees, and records away from pesticides** is always recommended where possible."
+     ]
+    },
+    {
+     "fig": "p126-shed"
+    },
+    {
+     "p": [
+      "A well-designed pesticide storage site does the following."
+     ]
+    },
+    {
+     "list": [
+      "**Limits access.**",
+      "Permits better **inventory control**.",
+      "Protects people from exposure.",
+      "Reduces the chance of environmental contamination.",
+      "Prevents damage to pesticides from **temperature extremes and excess moisture**.",
+      "Safeguards pesticides from **theft, vandalism, and unauthorized use**.",
+      "Allows **fire departments to know the location** of products."
+     ]
+    },
+    {
+     "h": "Secure the site"
+    },
+    {
+     "p": [
+      "Whether the designated storage area is a **cabinet, an entire room, or a separate building**, **keep it locked when not in use**.",
+      "**Post warning signs on doors and windows** to alert others that pesticides are stored inside.",
+      "Pesticide security is covered in detail later in this chapter."
+     ]
+    },
+    {
+     "h": "Prevent water damage"
+    },
+    {
+     "p": [
+      "Pesticide storage facilities should **not be located in a flood zone**.",
+      "Carefully consider **soil and land surface characteristics** when selecting a storage site to prevent contamination of surface water or groundwater.",
+      "Do not locate the storage facility **near a stream likely to flood** or where **runoff water flows toward the facility**.",
+      "If flooding is likely, consider **building dikes** around the storage facility.",
+      "Work with local **zoning and building code professionals** to determine how best to protect the environment if high water were to enter the storage facility."
+     ]
+    },
+    {
+     "p": [
+      "Consider storing pesticides on a **raised pallet or on shelves** to prevent high water from damaging pesticide containers or flowing water from moving them offsite."
+     ]
+    },
+    {
+     "fig": "p126-damp"
+    },
+    {
+     "p": [
+      "Water or excess moisture may damage pesticide containers and their contents and cause the following."
+     ]
+    },
+    {
+     "list": [
+      "**Metal containers to rust.**",
+      "**Paper and cardboard containers to split or crumble.**",
+      "Pesticide labeling to peel, smear, or otherwise become unreadable.",
+      "Dry pesticides to clump, degrade, or dissolve.",
+      "Slow-release products to release their active ingredients."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "p126-shed",
+     "title": "Maintain a well designed, secure pesticide storage facility with highly visible warning signs. Keep it well ventilated and located where water damage is not likely to occur.",
+     "page": "p. 126",
+     "imgFile": "p126-shed.jpg"
+    },
+    {
+     "id": "p126-damp",
+     "title": "Do not store pesticides in locations that can become damp or wet.",
+     "page": "p. 126",
+     "imgFile": "p126-damp.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c08-s05-r2",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which statement about pesticide storage facilities is true?",
+     "choices": [
+      "A ventilation system may reduce noxious vapors by venting air into an adjoining area.",
+      "Carefully consider the terrain when selecting a storage site.",
+      "The floor should remain as bare soil to absorb any spilled material."
+     ],
+     "answer": 1,
+     "ref": "p. 126, 'Prevent Water Damage'",
+     "why": "Consider soil and land surface characteristics. Venting to an adjoining room does little, and floors should be impervious."
+    },
+    {
+     "id": "c08-s05-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "Why does the manual say it is best to store pesticides in a separate facility?",
+     "choices": [
+      "It lowers property taxes",
+      "It gives emergency response crews more options in dealing with fires and spills",
+      "It keeps pesticides warmer",
+      "It is required for all private applicators"
+     ],
+     "answer": 1,
+     "ref": "p. 126, 'Storage of Pesticides in Buildings'",
+     "why": "Separate storage gives emergency crews more options with fires and spills."
+    },
+    {
+     "id": "c08-s05-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "Your company stores pesticides in a single locked cabinet, not a building. What does the manual say about securing it?",
+     "choices": [
+      "A cabinet does not need to be locked",
+      "Keep it locked when not in use and post warning signs",
+      "Only rooms and buildings need signs",
+      "Lock it only at night"
+     ],
+     "answer": 1,
+     "ref": "p. 126, 'Secure the Site'",
+     "why": "Whether a cabinet, room, or building, keep it locked when not in use and post warning signs."
+    },
+    {
+     "id": "c08-s05-t3",
+     "src": "test",
+     "kind": "short",
+     "q": "Where does the manual say to post warning signs at a pesticide storage site?",
+     "answer": "on doors and windows",
+     "accept": [
+      "doors and windows"
+     ],
+     "keys": [
+      [
+       "door",
+       "doors"
+      ],
+      [
+       "window",
+       "windows"
+      ]
+     ],
+     "ref": "p. 126, 'Secure the Site'",
+     "why": "Post warning signs on doors and windows."
+    },
+    {
+     "id": "c08-s05-t4",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT listed as damage that water or excess moisture may cause?",
+     "choices": [
+      "Metal containers to rust",
+      "Dry pesticides to clump, degrade, or dissolve",
+      "Slow-release products to release their active ingredients",
+      "Liquid pesticides to freeze solid"
+     ],
+     "answer": 3,
+     "ref": "p. 126, 'Prevent Water Damage'",
+     "why": "Freezing is not on the moisture list."
+    },
+    {
+     "id": "c08-s05-t5",
+     "src": "test",
+     "kind": "mc",
+     "q": "If flooding is likely at a storage site, what does the manual say to consider building?",
+     "choices": [
+      "A second floor",
+      "Dikes around the storage facility",
+      "A sump pump",
+      "A drainage ditch to the nearest stream"
+     ],
+     "answer": 1,
+     "ref": "p. 126, 'Prevent Water Damage'",
+     "why": "If flooding is likely, consider building dikes around the facility."
+    }
+   ]
+  },
+  {
+   "id": "c08-s06",
+   "chapter": "Chapter 8 · Transportation, Storage, and Security",
+   "title": "Ventilation, lighting, floors, and what belongs in storage",
+   "pages": [
+    126,
+    127
+   ],
+   "body": [
+    {
+     "h": "Control the temperature"
+    },
+    {
+     "p": [
+      "Choose a **well-ventilated room where temperatures are controlled**.",
+      "**Exhaust fans directed to the outside** of the building reduce the buildup of noxious vapors from many of the solvents used in pesticide formulations.",
+      "**Ventilating the pesticide storage room into an adjoining room does little to solve the problem.**",
+      "Pesticide labeling often gives **temperature limits** for storing a product."
+     ]
+    },
+    {
+     "p": [
+      "Consider installing an exhaust fan **on a timer** to automatically turn on at a certain temperature.",
+      "If the exhaust fan is not on a timer, **turn on the fan switch before entering** the storage room.",
+      "**Wait a few minutes** to allow any vapors to clear."
+     ]
+    },
+    {
+     "h": "Provide adequate lighting"
+    },
+    {
+     "p": [
+      "Be sure the pesticide storage facility is **well-lighted**.",
+      "Pesticide handlers entering the building must be able to **read the product labels** and determine whether **containers are leaking**."
+     ]
+    },
+    {
+     "h": "Use nonporous materials"
+    },
+    {
+     "p": [
+      "Use **cement or other impervious materials** for flooring to retain the spilled material on the surface.",
+      "Such surfaces are easy to clean and decontaminate in the event of a release.",
+      "A floor that **slopes into a sump** helps collect and contain the spill.",
+      "Consider using shelving and pallets made of **nonabsorbent materials, such as plastic or metal**, for the same reasons as impervious floors."
+     ]
+    },
+    {
+     "fig": "p127-floor"
+    },
+    {
+     "h": "Maintain the storage site"
+    },
+    {
+     "p": [
+      "Store **only pesticide containers, pesticide equipment, and a spill cleanup kit** at the storage site.",
+      "Keep **food, drink, tobacco, feed, medication, medical or veterinary supplies, seed (treated and untreated), clothing, and PPE** (other than that necessary for emergency response) out of the storage location."
+     ]
+    },
+    {
+     "h": "Keep labels legible"
+    },
+    {
+     "p": [
+      "Store pesticide containers with the **labels in plain sight**.",
+      "Costly errors may result if the wrong pesticide is chosen.",
+      "Be sure labels are always legible.",
+      "If the label is destroyed or damaged, **immediately mark the container** with some basic labeling information, such as the **trade name, the U.S. Environmental Protection Agency (EPA) registration number, signal word, and use classification**.",
+      "Go online to find a product replacement label or get a **new label from the manufacturer**."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "p127-floor",
+     "title": "Be sure the floor of the pesticide containment site is made of non-porous materials such as sealed cement. A recessed floor helps control spills or leaking pesticides.",
+     "page": "p. 127",
+     "imgFile": "p127-floor.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c08-s06-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "Where should exhaust fans in a pesticide storage room be directed?",
+     "choices": [
+      "Into an adjoining room",
+      "To the outside of the building",
+      "Toward the floor",
+      "Into the office"
+     ],
+     "answer": 1,
+     "ref": "p. 126, 'Control the Temperature'",
+     "why": "Fans directed to the outside reduce noxious vapor buildup. An adjoining room does little."
+    },
+    {
+     "id": "c08-s06-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "The storage room's exhaust fan is not on a timer. What should you do before going in?",
+     "choices": [
+      "Open a window after you are inside",
+      "Turn on the fan switch before entering, then wait a few minutes for vapors to clear",
+      "Hold your breath and work quickly",
+      "Spray air freshener"
+     ],
+     "answer": 1,
+     "ref": "p. 127, 'Control the Temperature'",
+     "why": "Turn on the fan before entering and wait a few minutes for vapors to clear."
+    },
+    {
+     "id": "c08-s06-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT a recommended material for a storage floor or shelving?",
+     "choices": [
+      "Sealed cement",
+      "Plastic shelving",
+      "Metal shelving",
+      "Wood shelving"
+     ],
+     "answer": 3,
+     "ref": "p. 127, 'Use Nonporous Materials'",
+     "why": "Use impervious floors and nonabsorbent shelving such as plastic or metal. Wood absorbs spills."
+    },
+    {
+     "id": "c08-s06-t4",
+     "src": "test",
+     "kind": "mc",
+     "q": "Which of these does the manual say SHOULD be stored at the pesticide storage site?",
+     "choices": [
+      "Treated seed",
+      "A spill cleanup kit",
+      "Livestock feed",
+      "Everyday work clothing"
+     ],
+     "answer": 1,
+     "ref": "p. 127, 'Maintain the Storage Site'",
+     "why": "Store only pesticide containers, pesticide equipment, and a spill cleanup kit."
+    },
+    {
+     "id": "c08-s06-t5",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A label on a jug in storage has torn off and is unreadable. What should you do first?",
+     "choices": [
+      "Throw the jug away",
+      "Immediately mark the container with basic labeling information such as trade name, EPA registration number, signal word, and use classification",
+      "Pour it into a labeled container of a similar product",
+      "Use it up quickly"
+     ],
+     "answer": 1,
+     "ref": "p. 127, 'Keep Labels Legible'",
+     "why": "Immediately mark the container with basic labeling information, then get a replacement label."
+    }
+   ]
+  },
+  {
+   "id": "c08-s07",
+   "chapter": "Chapter 8 · Transportation, Storage, and Security",
+   "title": "Storing pesticide containers safely",
+   "pages": [
+    127,
+    128
+   ],
+   "body": [
+    {
+     "h": "Store pesticide containers safely"
+    },
+    {
+     "p": [
+      "Store pesticides in their **original containers** or, if allowed by state law, in a **properly labeled service container**.",
+      "Never use any other container to store a product.",
+      "Besides being illegal, serious injury may result when using **food containers, such as milk jugs or soft drink bottles**.",
+      "Children will associate the shape, size, and color of the container with its usual contents.",
+      "Never use a pesticide product from an unmarked or unlabeled container unless you are certain what it is.",
+      "Guessing wrong can cause serious damage at the application site."
+     ]
+    },
+    {
+     "fig": "p127-foodjars"
+    },
+    {
+     "p": [
+      "Keep pesticide containers **securely closed** when not in use.",
+      "Just like bagged fertilizer, **dry pesticide formulations can clump** together under high humidity.",
+      "Consider placing partially used bags of wettable and soluble powders, dry flowables, dusts, and granules in a **plastic trash bag or tub with a cover** to reduce clumping."
+     ]
+    },
+    {
+     "p": [
+      "Place **drums and bags on plastic pallets**.",
+      "Store other pesticides on **metal shelving**, placing the **heaviest containers on lower shelves**.",
+      "Do not allow containers to **extend beyond the edge of the shelving**. They could be knocked off or torn open."
+     ]
+    },
+    {
+     "fig": "p127-shelving"
+    },
+    {
+     "p": [
+      "Place **bulk and mini-bulk tanks on a reinforced concrete pad**.",
+      "**Diking** around bulk tanks keeps leaking pesticides inside a contained area.",
+      "Make the area inside a dike large enough to contain **the volume of the liquid in the tank plus at least an additional 10%**.",
+      "Keep **valves and pumps as well as transfer hoses within the diked area** when not in use.",
+      "Contact your state, tribe, or territory pesticide regulatory agency for guidance on what constitutes bulk pesticides and to learn specific rules for building containment structures."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "p127-foodjars",
+     "title": "Do not store pesticides in food containers.",
+     "page": "p. 127",
+     "imgFile": "p127-foodjars.jpg"
+    },
+    {
+     "id": "p127-shelving",
+     "title": "Store pesticides on metal shelving, with the heaviest containers and liquids stored on the lower shelves. Never extend beyond the edge of the shelving.",
+     "page": "p. 127",
+     "imgFile": "p127-shelving.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c08-s07-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "How large should the area inside a dike around a bulk tank be?",
+     "choices": [
+      "Equal to the volume of the liquid in the tank",
+      "The volume of the liquid in the tank plus at least an additional 10%",
+      "Twice the volume of the tank",
+      "The volume of the tank plus 119 gallons"
+     ],
+     "answer": 1,
+     "ref": "pp. 127–128, 'Store Pesticide Containers Safely'",
+     "why": "The dike must hold the tank's liquid volume plus at least an additional 10%."
+    },
+    {
+     "id": "c08-s07-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A coworker pours leftover insecticide into an empty soft drink bottle to store it. What does the manual say?",
+     "choices": [
+      "That is fine if the cap is tight",
+      "It is illegal and can cause serious injury, because people associate the container with its usual contents",
+      "It is fine if the bottle is stored up high",
+      "It is fine for less than a week"
+     ],
+     "answer": 1,
+     "ref": "p. 127, 'Store Pesticide Containers Safely'",
+     "why": "Using food containers is illegal and may cause serious injury."
+    },
+    {
+     "id": "c08-s07-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT a correct storage practice from the manual?",
+     "choices": [
+      "Place drums and bags on plastic pallets",
+      "Place the heaviest containers on lower shelves",
+      "Let containers extend past the shelf edge to save space",
+      "Place bulk tanks on a reinforced concrete pad"
+     ],
+     "answer": 2,
+     "ref": "p. 127, 'Store Pesticide Containers Safely'",
+     "why": "Containers must not extend beyond the shelf edge, where they could be knocked off or torn open."
+    },
+    {
+     "id": "c08-s07-t4",
+     "src": "test",
+     "kind": "tf",
+     "q": "Valves, pumps, and transfer hoses for a bulk tank should be kept within the diked area when not in use.",
+     "answer": true,
+     "ref": "p. 128, 'Store Pesticide Containers Safely'",
+     "why": "Keep valves, pumps, and transfer hoses within the diked area when not in use."
+    },
+    {
+     "id": "c08-s07-t5",
+     "src": "test",
+     "kind": "short",
+     "q": "What does the manual suggest putting partially used bags of dry formulations in to reduce clumping?",
+     "answer": "a plastic trash bag or tub with a cover",
+     "accept": [
+      "plastic bag",
+      "covered tub",
+      "trash bag"
+     ],
+     "keys": [
+      [
+       "bag",
+       "tub",
+       "bin"
+      ]
+     ],
+     "ref": "p. 127, 'Store Pesticide Containers Safely'",
+     "why": "A plastic trash bag or tub with a cover reduces clumping."
+    }
+   ]
+  },
+  {
+   "id": "c08-s08",
+   "chapter": "Chapter 8 · Transportation, Storage, and Security",
+   "title": "Damaged containers, shelf life, and safety tips",
+   "pages": [
+    128,
+    128
+   ],
+   "body": [
+    {
+     "h": "Look for damage"
+    },
+    {
+     "p": [
+      "Regularly inspect pesticide containers to detect problems at the outset.",
+      "If you find a damaged container, **put on appropriate PPE** and **place it into a larger container, such as a 5-gallon bucket**.",
+      "Clean up spilled pesticide and place any contaminated materials in the bucket.",
+      "If possible, **use the pesticide immediately** on a site and at a rate allowed by the label, or **dispose of it according to label directions**."
+     ]
+    },
+    {
+     "fig": "p128-damaged"
+    },
+    {
+     "h": "Note shelf life of pesticides"
+    },
+    {
+     "p": [
+      "Keep an **inventory** of all pesticides in storage, **marking each container or box with the year it was purchased**.",
+      "In this way, you can **use the oldest product first**.",
+      "Remember to use it as it was meant to be used. A replacement product may have different label directions and uses.",
+      "If you have questions about the shelf life of a product, contact the **dealer or manufacturer**.",
+      "Avoid storing large quantities of pesticides for long periods. **Buy only as much as you need for the season.**"
+     ]
+    },
+    {
+     "fig": "p128-dates"
+    },
+    {
+     "box": "Follow these safety tips",
+     "p": [
+      "For best results, do the following."
+     ],
+     "list": [
+      "Have **duplicate copies of pesticide labels and SDSs** available in case of an emergency.",
+      "Wear appropriate protective clothing when handling pesticide containers.",
+      "**Label items such as measuring utensils and protective equipment** to prevent their use for other purposes.",
+      "Have **absorbent materials** readily available to soak up leaks in the storage room. Keep a **shovel, broom, and heavy-duty plastic bags** on hand to remove the contaminated absorbent material.",
+      "Check the **SDS** for materials that will **deactivate a contaminated surface**. When in doubt, contact the pesticide manufacturer for a recommendation."
+     ]
+    },
+    {
+     "p": [
+      "Have readily accessible **clean water for decontamination, an eyewash station, personal protective equipment, a fire extinguisher rated for chemical fires, first aid equipment, and emergency telephone numbers**.",
+      "Additionally, keep plenty of **soap, water, and paper towels** available near the storage facility."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "p128-damaged",
+     "title": "Place damaged pesticide containers in secondary containment.",
+     "page": "p. 128",
+     "imgFile": "p128-damaged.jpg"
+    },
+    {
+     "id": "p128-dates",
+     "title": "Mark each container with its purchase date.",
+     "page": "p. 128",
+     "imgFile": "p128-dates.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c08-s08-r3",
+     "src": "review",
+     "kind": "mc",
+     "q": "What is the first thing to do if a pesticide container is leaking?",
+     "choices": [
+      "Put on personal protective equipment.",
+      "Transfer contents into another container.",
+      "Clean up any spilled material."
+     ],
+     "answer": 0,
+     "ref": "p. 128, 'Look for Damage'",
+     "why": "If you find a damaged container, put on appropriate PPE first."
+    },
+    {
+     "id": "c08-s08-r4",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which recommended practice will minimize pesticide storage problems?",
+     "choices": [
+      "Purchase quantities based on previous usage.",
+      "Purchase more than you need to ensure availability of the product.",
+      "Store metal pesticide containers on the higher shelves to prevent rusting."
+     ],
+     "answer": 0,
+     "ref": "p. 128, 'Note Shelf Life of Pesticides'",
+     "why": "Buy only as much as you need for the season. Heaviest containers go on lower shelves."
+    },
+    {
+     "id": "c08-s08-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "Why should you mark each container or box with the year it was purchased?",
+     "choices": [
+      "So you can use the oldest product first",
+      "Because the EPA requires it",
+      "So you can return it for a refund",
+      "So the fire department knows its age"
+     ],
+     "answer": 0,
+     "ref": "p. 128, 'Note Shelf Life of Pesticides'",
+     "why": "Marking the purchase year lets you use the oldest product first."
+    },
+    {
+     "id": "c08-s08-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT on the manual's list of things to keep readily accessible near pesticide storage?",
+     "choices": [
+      "An eyewash station",
+      "A fire extinguisher rated for chemical fires",
+      "Emergency telephone numbers",
+      "A garden hose connected to a storm drain"
+     ],
+     "answer": 3,
+     "ref": "p. 128, 'Follow These Safety Tips'",
+     "why": "The list includes clean water, an eyewash station, PPE, a chemical-rated extinguisher, first aid, and emergency numbers."
+    },
+    {
+     "id": "c08-s08-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "You find a cracked jug in storage and have put on PPE. What do you do with the jug?",
+     "choices": [
+      "Place it into a larger container, such as a 5-gallon bucket",
+      "Pour it down the floor drain",
+      "Tape the crack and put it back",
+      "Leave it for the next inspection"
+     ],
+     "answer": 0,
+     "ref": "p. 128, 'Look for Damage'",
+     "why": "Place it into a larger container, such as a 5-gallon bucket, and clean up the spill."
+    },
+    {
+     "id": "c08-s08-t4",
+     "src": "test",
+     "kind": "short",
+     "q": "Where should you check to find materials that will deactivate a contaminated surface?",
+     "answer": "the SDS",
+     "accept": [
+      "safety data sheet",
+      "the safety data sheet",
+      "SDS"
+     ],
+     "ref": "p. 128, 'Follow These Safety Tips'",
+     "why": "Check the SDS. When in doubt, contact the manufacturer."
+    }
+   ]
+  },
+  {
+   "id": "c08-s09",
+   "chapter": "Chapter 8 · Transportation, Storage, and Security",
+   "title": "Unwanted, waste, and canceled products",
+   "pages": [
+    128,
+    129
+   ],
+   "body": [
+    {
+     "h": "Isolate unwanted or waste products"
+    },
+    {
+     "p": [
+      "**Do not accumulate outdated or unwanted pesticide products.**",
+      "Not only will you lose money by not using the product, but you may have to **pay a disposal service**.",
+      "If you **use the product up according to the label**, you will avoid both problems."
+     ]
+    },
+    {
+     "p": [
+      "Sometimes **EPA will cancel a product registration**.",
+      "When this occurs, EPA usually either **allows the continued use of the product until it has cleared the distribution chain** or **issues a federal notice prohibiting use after a specific date**.",
+      "If you keep such products after that date, you may have to **dispose of them as hazardous waste**.",
+      "Be sure to **follow label directions for disposal** of any excess or leftover product."
+     ]
+    },
+    {
+     "p": [
+      "If you are holding pesticides or emptied pesticide containers for disposal or recycling, keep them in a **special section of the storage area**.",
+      "See Chapter 10 (Planning the Pesticide Application) for information on pesticide container rinsing procedures."
+     ]
+    },
+    {
+     "fig": "p129-rinsed"
+    },
+    {
+     "p": [
+      "Some states sponsor **pesticide disposal programs** that collect unwanted pesticides from growers and applicators **free or at reduced cost**.",
+      "Contact your state, tribe, or territory pesticide regulatory agency to see if a program is available in your area."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "p129-rinsed",
+     "title": "Have a designated area for properly rinsed containers.",
+     "page": "p. 129",
+     "imgFile": "p129-rinsed.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c08-s09-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "When EPA cancels a product registration, what does EPA usually do?",
+     "choices": [
+      "Orders all stocks destroyed within 24 hours",
+      "Either allows use until the product clears the distribution chain or issues a federal notice prohibiting use after a specific date",
+      "Refunds the purchase price",
+      "Lets applicators use it forever"
+     ],
+     "answer": 1,
+     "ref": "p. 128, 'Isolate Unwanted or Waste Products'",
+     "why": "EPA usually allows use until the product clears the distribution chain, or bans use after a specific date."
+    },
+    {
+     "id": "c08-s09-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "You still have a canceled pesticide after EPA's prohibition date. What may you have to do?",
+     "choices": [
+      "Return it to EPA",
+      "Dispose of it as hazardous waste",
+      "Sell it to another applicator",
+      "Dilute it and pour it out"
+     ],
+     "answer": 1,
+     "ref": "p. 128, 'Isolate Unwanted or Waste Products'",
+     "why": "Products kept past that date may have to be disposed of as hazardous waste."
+    },
+    {
+     "id": "c08-s09-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT a reason the manual gives for avoiding a buildup of unwanted pesticides?",
+     "choices": [
+      "You lose money by not using the product",
+      "You may have to pay a disposal service",
+      "Old pesticides become more toxic every year",
+      "Using it up according to the label avoids both problems"
+     ],
+     "answer": 2,
+     "ref": "p. 128, 'Isolate Unwanted or Waste Products'",
+     "why": "The manual cites lost money and disposal costs, not rising toxicity."
+    },
+    {
+     "id": "c08-s09-t4",
+     "src": "test",
+     "kind": "tf",
+     "q": "Pesticides and empty containers held for disposal or recycling should be kept in a special section of the storage area.",
+     "answer": true,
+     "ref": "p. 129, 'Isolate Unwanted or Waste Products'",
+     "why": "Keep them in a special section of the storage area."
+    },
+    {
+     "id": "c08-s09-t5",
+     "src": "test",
+     "kind": "short",
+     "q": "Who should you contact to learn whether a pesticide disposal program is available in your area?",
+     "answer": "your state, tribe, or territory pesticide regulatory agency",
+     "accept": [
+      "state pesticide regulatory agency",
+      "state agency",
+      "state lead agency"
+     ],
+     "keys": [
+      [
+       "state",
+       "tribe",
+       "territory",
+       "regulatory agency"
+      ]
+     ],
+     "ref": "p. 129, 'Isolate Unwanted or Waste Products'",
+     "why": "Contact your state, tribe, or territory pesticide regulatory agency."
+    }
+   ]
+  },
+  {
+   "id": "c08-s10",
+   "chapter": "Chapter 8 · Transportation, Storage, and Security",
+   "title": "Pesticide site security and risk assessment",
+   "pages": [
+    129,
+    130
+   ],
+   "body": [
+    {
+     "h": "Pesticide site security"
+    },
+    {
+     "p": [
+      "Minimizing risks for the safety of employees, customers, and communities should always be a top priority when it comes to storing pesticides.",
+      "Every pesticide storage facility should examine its security efforts and **plan for worst-case scenarios**.",
+      "Routinely review your security measures to determine whether all risks have been accounted for in the plan.",
+      "Without effective security procedures, you may be vulnerable to both **internal (employee theft)** and **external (terrorism, theft, and vandalism)** threats.",
+      "This puts both employees and the community at risk."
+     ]
+    },
+    {
+     "h": "Benefits of security efforts"
+    },
+    {
+     "p": [
+      "By developing a strong and workable security plan, managers, employees, and emergency responders can reduce the likelihood of theft or other mishaps.",
+      "In addition, effective security avoids costly losses.",
+      "An incident of any magnitude can seriously disrupt operations and result in lawsuits, costly remediation actions, employee fear and uncertainty, and damage to the company's reputation.",
+      "A well-planned security program can do the following."
+     ]
+    },
+    {
+     "list": [
+      "Safeguard employees and the community.",
+      "Maintain the integrity of operations.",
+      "**Reduce insurance costs.**",
+      "Prevent theft.",
+      "Reduce vandalism and sabotage.",
+      "Protect confidential business information.",
+      "Improve relationships with local authorities and community leaders."
+     ]
+    },
+    {
+     "h": "Risk assessment"
+    },
+    {
+     "p": [
+      "**The first step in developing a security program is to conduct a risk assessment** of your business or farm's vulnerabilities.",
+      "Make a list of **assets that need protecting, possible threats, and steps** that can be taken to protect them.",
+      "Any place that stores or transports pesticides shares similar assets, which are broadly defined as **people, information, and property**.",
+      "\"People\" includes employees, visitors, customers, contractors, and neighbors.",
+      "\"Information\" includes business, proprietary, and employee material deemed confidential.",
+      "\"Property\" may include the following."
+     ]
+    },
+    {
+     "list": [
+      "Pesticide storage facilities.",
+      "Vehicles.",
+      "Application equipment.",
+      "Bulk storage tanks.",
+      "Mixing and loading sites.",
+      "All utilities, such as telephone, water, gas, and electric."
+     ]
+    },
+    {
+     "fig": "p129-visitors"
+    }
+   ],
+   "figures": [
+    {
+     "id": "p129-visitors",
+     "title": "Be sure to guard against unauthorized entry.",
+     "page": "p. 129",
+     "imgFile": "p129-visitors.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c08-s10-r5",
+     "src": "review",
+     "kind": "mc",
+     "q": "What is the first step a business should take to develop an effective pesticide security program?",
+     "choices": [
+      "Coordinate planned actions with authorities.",
+      "Conduct a risk assessment of business vulnerabilities.",
+      "Train employees on security measures."
+     ],
+     "answer": 1,
+     "ref": "p. 129, 'Risk Assessment'",
+     "why": "The first step in developing a security program is a risk assessment."
+    },
+    {
+     "id": "c08-s10-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "The manual broadly defines the assets of any place that stores or transports pesticides as which three things?",
+     "choices": [
+      "People, information, and property",
+      "Money, equipment, and buildings",
+      "Employees, customers, and vehicles",
+      "Pesticides, records, and land"
+     ],
+     "answer": 0,
+     "ref": "p. 129, 'Risk Assessment'",
+     "why": "Assets are broadly defined as people, information, and property."
+    },
+    {
+     "id": "c08-s10-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT listed as a benefit of a well-planned security program?",
+     "choices": [
+      "Reduce insurance costs",
+      "Prevent theft",
+      "Protect confidential business information",
+      "Eliminate the need for a pesticide license"
+     ],
+     "answer": 3,
+     "ref": "p. 129, 'Benefits of Security Efforts'",
+     "why": "Security does not replace licensing. The other three are on the list."
+    },
+    {
+     "id": "c08-s10-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "An employee steals pesticides from the storage building. What kind of threat is this, according to the manual?",
+     "choices": [
+      "An external threat",
+      "An internal threat",
+      "A regulatory threat",
+      "An environmental threat"
+     ],
+     "answer": 1,
+     "ref": "p. 129, 'Pesticide Site Security'",
+     "why": "Internal threats are employee theft. External threats are terrorism, theft, and vandalism."
+    },
+    {
+     "id": "c08-s10-t4",
+     "src": "test",
+     "kind": "tf",
+     "q": "Under the manual's definition, neighbors count as part of the \"people\" asset.",
+     "answer": true,
+     "ref": "p. 129, 'Risk Assessment'",
+     "why": "People includes employees, visitors, customers, contractors, and neighbors."
+    }
+   ]
+  },
+  {
+   "id": "c08-s11",
+   "chapter": "Chapter 8 · Transportation, Storage, and Security",
+   "title": "Employee training and evaluating security",
+   "pages": [
+    130,
+    130
+   ],
+   "body": [
+    {
+     "h": "Employee training and security awareness"
+    },
+    {
+     "p": [
+      "Train employees to be **vigilant in detecting security threats**.",
+      "Employees are familiar with what occurs in and around a pesticide storage facility or at the job site.",
+      "They can provide an **early warning** when something seems out of place or someone is acting suspiciously.",
+      "At a minimum, instruct all employees on **pesticide inventory control, security of storage facilities and application equipment, and emergency preparedness and response**."
+     ]
+    },
+    {
+     "h": "Evaluating pesticide security"
+    },
+    {
+     "p": [
+      "Fundamental security tasks include the following."
+     ]
+    },
+    {
+     "p": [
+      "**Secure buildings, manufacturing facilities, storage areas, and surrounding property.**",
+      "Prevent the unauthorized entry of persons into areas used to manufacture or store pesticides.",
+      "Elements of an effective security plan may range from **log sheets, identification badges, fencing, lighting, and locks** to **detection systems, cameras, and trained guards**."
+     ]
+    },
+    {
+     "fig": "p130-lights"
+    },
+    {
+     "p": [
+      "**Secure pesticide application equipment and vehicles.**",
+      "Keep unauthorized people away from equipment used for storing, mixing, loading, transferring, transporting, and applying pesticides.",
+      "Secure and disable equipment in the field to prevent misuse.",
+      "For example, **do not leave keys in the ignition**, and lock doors and cabinets.",
+      "**Reclaim keys from employees when they terminate employment.**"
+     ]
+    },
+    {
+     "fig": "p130-sprayers"
+    }
+   ],
+   "figures": [
+    {
+     "id": "p130-lights",
+     "title": "Outside lights on a pesticide storage building help prevent theft and vandalism.",
+     "page": "p. 130",
+     "imgFile": "p130-lights.jpg"
+    },
+    {
+     "id": "p130-sprayers",
+     "title": "Lock backpack sprayers securely onto the transport vehicle.",
+     "page": "p. 130",
+     "imgFile": "p130-sprayers.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c08-s11-r6",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which of the following is considered a good security practice?",
+     "choices": [
+      "Instruct employees on pesticide inventory control.",
+      "Allow employees access to inventory.",
+      "Back up confidential data daily and keep it at the facility."
+     ],
+     "answer": 0,
+     "ref": "p. 130, 'Employee Training and Security Awareness'",
+     "why": "At a minimum, instruct all employees on pesticide inventory control."
+    },
+    {
+     "id": "c08-s11-t1",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT one of the minimum topics to instruct all employees on?",
+     "choices": [
+      "Pesticide inventory control",
+      "Security of storage facilities and application equipment",
+      "Emergency preparedness and response",
+      "Pesticide sales techniques"
+     ],
+     "answer": 3,
+     "ref": "p. 130, 'Employee Training and Security Awareness'",
+     "why": "The minimum topics are inventory control, security, and emergency preparedness and response."
+    },
+    {
+     "id": "c08-s11-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "An employee quits your company. What does the manual say to do?",
+     "choices": [
+      "Reclaim keys from the employee",
+      "Change the pesticide labels",
+      "Move all pesticides to a new building",
+      "Nothing, if they left on good terms"
+     ],
+     "answer": 0,
+     "ref": "p. 130, 'Evaluating Pesticide Security'",
+     "why": "Reclaim keys from employees when they terminate employment."
+    },
+    {
+     "id": "c08-s11-t3",
+     "src": "test",
+     "kind": "mc",
+     "q": "According to the photo caption, what do outside lights on a pesticide storage building help prevent?",
+     "choices": [
+      "Fires and spills",
+      "Theft and vandalism",
+      "Temperature extremes",
+      "Flooding"
+     ],
+     "answer": 1,
+     "ref": "p. 130, photo caption",
+     "why": "Outside lights help prevent theft and vandalism."
+    },
+    {
+     "id": "c08-s11-t4",
+     "src": "test",
+     "kind": "tf",
+     "q": "Leaving keys in the ignition of field equipment is acceptable if the field is fenced.",
+     "answer": false,
+     "ref": "p. 130, 'Evaluating Pesticide Security'",
+     "why": "Do not leave keys in the ignition. Secure and disable equipment in the field."
+    }
+   ]
+  },
+  {
+   "id": "c08-s12",
+   "chapter": "Chapter 8 · Transportation, Storage, and Security",
+   "title": "Security procedures, authorities, and prevention steps",
+   "pages": [
+    130,
+    131
+   ],
+   "body": [
+    {
+     "p": [
+      "**Protect confidential information.**",
+      "As safety and security systems become more reliant on computers and other technology, it is important to secure them from hackers and intruders.",
+      "Such efforts include **contingency planning for power disruptions, adherence to password and backup procedures**, and other measures to ensure that only authorized personnel have access."
+     ]
+    },
+    {
+     "p": [
+      "**Develop procedures and policies that support security needs.**",
+      "Recommended practices include effective **hiring and labor policies, inventory management, and planning for emergencies**.",
+      "Hiring and labor policies should include **employee training, background checks, and workplace violence prevention**.",
+      "Inventory management is necessary to keep track of pesticides stored at the facility.",
+      "Planning for emergency response is critical. It helps to ensure that managers and employees know how to respond in the unlikely event of pesticide release, bomb threat, or terrorist activity."
+     ]
+    },
+    {
+     "p": [
+      "**Coordinate with authorities in a timely manner.**",
+      "If you believe a security breach or suspicious activity has occurred, **contact local authorities immediately**.",
+      "In addition to alerting the police department, call the **local emergency planning commission, fire departments**, and other emergency response agencies.",
+      "The **Federal Bureau of Investigation (FBI)** cautions that any suspicious activity related to the use, training, or acquisition of pesticides should be immediately reported to management and local authorities."
+     ]
+    },
+    {
+     "box": "Steps to prevent security problems",
+     "p": [
+      "To minimize risks, do the following."
+     ],
+     "list": [
+      "Adopt security measures to deter tampering with chemicals, equipment, or the facility itself.",
+      "Include local authorities, for example police and firefighters, in developing the security plan.",
+      "Keep an accurate inventory of all chemicals.",
+      "Keep chemical storage areas locked when not in use.",
+      "Update your emergency response plan and practice the procedures.",
+      "Post telephone numbers of law enforcement and emergency response agencies in a prominent location.",
+      "Be cautious of **unknown persons who want to pay cash for large quantities** of pesticides.",
+      "Ask employees to report any unusual incidents or requests.",
+      "Restrict access of nonemployees to your pesticide storage facilities."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c08-s12-t1",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A stranger asks to buy a large quantity of pesticide and wants to pay cash. What does the manual say?",
+     "choices": [
+      "Sell it; cash sales are safest",
+      "Be cautious of unknown persons who want to pay cash for large quantities of pesticides",
+      "Require them to show a driver license only",
+      "Refer them to the manufacturer"
+     ],
+     "answer": 1,
+     "ref": "p. 131, 'Steps to Prevent Security Problems'",
+     "why": "Be cautious of unknown persons who want to pay cash for large quantities."
+    },
+    {
+     "id": "c08-s12-t2",
+     "src": "test",
+     "kind": "mc",
+     "q": "According to the manual, the FBI says suspicious activity related to the use, training, or acquisition of pesticides should be immediately reported to whom?",
+     "choices": [
+      "The EPA only",
+      "Management and local authorities",
+      "The pesticide manufacturer",
+      "The state department of agriculture only"
+     ],
+     "answer": 1,
+     "ref": "p. 130, 'Evaluating Pesticide Security'",
+     "why": "Report it immediately to management and local authorities."
+    },
+    {
+     "id": "c08-s12-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT listed as part of good hiring and labor policies?",
+     "choices": [
+      "Employee training",
+      "Background checks",
+      "Workplace violence prevention",
+      "Hiring only family members"
+     ],
+     "answer": 3,
+     "ref": "p. 130, 'Evaluating Pesticide Security'",
+     "why": "Hiring and labor policies include training, background checks, and workplace violence prevention."
+    },
+    {
+     "id": "c08-s12-t4",
+     "src": "test",
+     "kind": "tf",
+     "q": "The manual says local authorities, such as police and firefighters, should be included in developing the security plan.",
+     "answer": true,
+     "ref": "p. 130, 'Steps to Prevent Security Problems'",
+     "why": "Include local authorities in developing the security plan."
+    },
+    {
+     "id": "c08-s12-t5",
+     "src": "test",
+     "kind": "short",
+     "q": "Besides the police department, name one other group to call if you believe a security breach has occurred.",
+     "answer": "the local emergency planning commission or fire departments",
+     "accept": [
+      "fire department",
+      "local emergency planning commission",
+      "LEPC",
+      "emergency response agencies"
+     ],
+     "keys": [
+      [
+       "emergency planning",
+       "fire",
+       "lepc",
+       "emergency response"
+      ]
+     ],
+     "ref": "p. 130, 'Evaluating Pesticide Security'",
+     "why": "Also call the local emergency planning commission, fire departments, and other emergency response agencies."
+    }
+   ]
+  },
+  {
+   "id": "c08-s13",
+   "chapter": "Chapter 8 · Transportation, Storage, and Security",
+   "title": "Chapter 8 summary",
+   "pages": [
+    131,
+    131
+   ],
+   "body": [
+    {
+     "h": "Summary"
+    },
+    {
+     "p": [
+      "It is essential to establish safety and security practices for moving pesticides on the highways and at storage and job sites.",
+      "Because spills and accidents are **more likely to occur while transporting or applying pesticides**, drivers and pesticide applicators must be **trained to respond quickly to a spill**.",
+      "**Pesticide labels and SDSs** for the pesticide carried in the vehicle can provide important information in the event of a spill."
+     ]
+    },
+    {
+     "p": [
+      "Attention to pesticide site security and managing pesticides should be a **top priority**.",
+      "Develop **security and emergency management plans** for every pesticide-handling and storage facility to safeguard employees and the community.",
+      "Design security plans to reduce the risk of **theft, vandalism, and deliberate misuse** of pesticides by those wanting to harm others.",
+      "Train employees in security and emergency response procedures and to coordinate efforts with **local police, emergency response personnel, and the FBI**."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c08-s13-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "According to the summary, when are spills and accidents more likely to occur?",
+     "choices": [
+      "While storing pesticides",
+      "While transporting or applying pesticides",
+      "While buying pesticides",
+      "While disposing of containers"
+     ],
+     "answer": 1,
+     "ref": "Chapter 8 Summary",
+     "why": "Spills and accidents are more likely while transporting or applying pesticides."
+    },
+    {
+     "id": "c08-s13-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT a risk the summary says security plans should be designed to reduce?",
+     "choices": [
+      "Theft",
+      "Vandalism",
+      "Deliberate misuse of pesticides by those wanting to harm others",
+      "Pest resistance"
+     ],
+     "answer": 3,
+     "ref": "Chapter 8 Summary",
+     "why": "Security plans target theft, vandalism, and deliberate misuse."
+    },
+    {
+     "id": "c08-s13-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A driver hauling pesticides has a spill and needs product information fast. Per the summary, what in the vehicle provides it?",
+     "choices": [
+      "The vehicle registration",
+      "The pesticide labels and SDSs",
+      "The placard",
+      "The shipping invoice"
+     ],
+     "answer": 1,
+     "ref": "Chapter 8 Summary",
+     "why": "Labels and SDSs for the pesticides carried provide important spill information."
+    },
+    {
+     "id": "c08-s13-t4",
+     "src": "test",
+     "kind": "tf",
+     "q": "The summary says employees should coordinate security efforts with local police, emergency response personnel, and the FBI.",
+     "answer": true,
+     "ref": "Chapter 8 Summary",
+     "why": "That is the summary's closing point."
+    }
+   ]
+  }
+ ]
+}

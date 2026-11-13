@@ -1,0 +1,37 @@
+<svg viewBox="0 0 680 420" role="img" aria-label="Figure 7.2: Movement of pesticides in the environment, showing evaporation and volatilization, drift, plant uptake, degradation, percolation and leaching to groundwater, photodegradation, and surface runoff and erosion to surface water">
+<defs><marker id="a72" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="f-ink" d="M0 0 L10 5 L0 10 Z"/></marker></defs>
+<g font-family="var(--f-body)" font-size="14" font-weight="700">
+<path class="s-ink" stroke-width="6" d="M70 40 H250"/>
+<path class="s-ink" stroke-width="3" d="M120 40 V56 M200 40 V56"/>
+<g class="s-field" stroke-width="1.5" stroke-dasharray="3 4"><path d="M120 58 L80 170 M120 58 L120 170 M120 58 L160 170 M200 58 L160 170 M200 58 L200 170 M200 58 L240 170"/></g>
+<text class="f-ink" x="160" y="28" text-anchor="middle" font-size="13">Pesticide spray</text>
+<g class="s-ink" stroke-width="2" fill="none" marker-end="url(#a72)"><path d="M40 160 q-8 -15 0 -30 q8 -15 0 -30"/><path d="M60 160 q-8 -15 0 -30 q8 -15 0 -36"/></g>
+<text class="f-ink" x="14" y="62">Evaporation/</text><text class="f-ink" x="14" y="78">Volatilization</text>
+<path class="s-ink" stroke-width="2" stroke-dasharray="5 4" fill="none" marker-end="url(#a72)" d="M250 110 H320"/>
+<text class="f-ink" x="330" y="115">Drift</text>
+<path class="s-field" stroke-width="4" fill="none" d="M290 172 V128 M290 150 l-14 -14 M290 140 l14 -14"/>
+<text class="f-ink" x="250" y="206">Plant uptake (absorption)</text>
+<path class="f-muted" fill-opacity=".55" d="M420 40 q-30 0 -30 -18 q0 -18 30 -16 q10 -12 34 -6 q24 -8 38 8 q26 0 26 16 q0 18 -30 16 Z"/>
+<g class="s-field" stroke-width="2.5" stroke-dasharray="3 6"><path d="M420 50 V110 M445 50 V120 M470 50 V110 M495 50 V120"/></g>
+<text class="f-ink" x="460" y="138" text-anchor="middle">Precipitation</text>
+<circle class="f-hi" cx="620" cy="34" r="20"/>
+<path class="s-ink" stroke-width="2" fill="none" marker-end="url(#a72)" d="M600 52 L560 100"/>
+<text class="f-ink" x="560" y="118">Photo</text><text class="f-ink" x="560" y="134">degradation</text>
+<path class="f-field" fill-opacity=".3" d="M10 172 H500 L600 300 H670 V400 H10 Z"/>
+<path class="s-ink" stroke-width="2" fill="none" d="M10 172 H500 L600 300"/>
+<path class="f-field" fill-opacity=".7" d="M600 300 H670 V340 H630 Z"/>
+<text class="f-ink" x="560" y="290" text-anchor="end">Surface water</text>
+<path class="s-ink" stroke-width="3" fill="none" marker-end="url(#a72)" d="M440 166 Q520 170 590 280"/>
+<text class="f-ink" x="520" y="196">Surface runoff/</text><text class="f-ink" x="540" y="212">erosion → Runoff</text>
+<path class="s-muted" stroke-width="1.5" stroke-dasharray="6 4" d="M10 230 H470"/>
+<text class="f-muted" x="16" y="196">Soil surface</text>
+<text class="f-muted" x="16" y="224">Root zone</text>
+<g class="s-ink" stroke-width="2" fill="none" marker-end="url(#a72)"><path d="M150 190 L100 210"/><path d="M150 250 L90 270"/><path d="M200 200 V330"/><path d="M230 200 V330"/></g>
+<text class="f-ink" x="40" y="250">Degradation</text>
+<text class="f-ink" x="40" y="292">Degradation</text>
+<text class="f-ink" x="250" y="290">Percolation/Leaching</text>
+<path class="s-ink" stroke-width="2.5" d="M10 340 H630"/>
+<text class="f-ink" x="16" y="334">Water table</text>
+<text class="f-ink" x="250" y="378">Groundwater</text>
+</g>
+</svg>

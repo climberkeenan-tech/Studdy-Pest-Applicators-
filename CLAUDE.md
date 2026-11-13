@@ -36,7 +36,13 @@ session's network could not open directly): 50 multiple-choice questions, 35 cor
   `fig-4-1.svg`. Photo crops: `tools/crop_photos_ch04.py`. Review answers taken from the chapter text; check
   against Appendix A when it arrives. p. 49 prints "an organic solvent of mineral clay" (likely a typo for "or");
   typed as printed. Page 66 (Summary) had no visible page number in the photo; numbered by position.
-- Next: Chapter 5 pages. Ask for the manual's total page count (still unknown).
+- Chapter 5, Pesticide Hazards and First Aid (pp. 69–85, review questions pp. 87–88): 31 cards (`c05-s01` to
+  `c05-s31`), 10 review questions (`c05-sNN-rK`, K = manual question number) plus test questions. Review Q1 in card 2,
+  Q2 card 7, Q3 card 16, Q4 card 12, Q5 card 22, Q6 card 19, Q7 card 9, Q8 and Q9 card 26, Q10 card 30.
+  Figure 5.1 redrawn as a bar chart (`fig-5-1.svg`), Table 5.1 as `tab-5-1.svg` (row text also typed as boxes in card 13).
+  Label photo crops: `tools/crop_photos_ch05.py`. Page 86 not sent (summary ends on p. 85; probably blank).
+  Review answers taken from the chapter text; check against Appendix A when it arrives.
+- Next: Chapter 6 pages. Ask for the manual's total page count (still unknown).
 - Two sessions once worked in parallel on different branches. Before publishing, check the live artifact
   (and `git branch -r`) for chapters this branch lacks, and merge them first.
 

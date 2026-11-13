@@ -1,0 +1,16 @@
+{
+  "source": "Appendix A, Answers to Review Questions, p. 171 (and the page after it). Letters are the manual's choice order: A = first choice.",
+  "chapters": {
+    "1":  {"title": "Pest Management", "answers": ["B", "B", "A", "A", "A", "A", "A", "A", "B", "B"]},
+    "2":  {"title": "Federal Pesticide Laws and Regulations", "answers": ["B", "A", "B", "C", "C", "B", "A"]},
+    "3":  {"title": "Pesticide Labeling", "answers": ["B", "C", "B", "A", "A", "A", "A", "C", "C"]},
+    "4":  {"title": "Pesticide Formulations", "answers": ["A", "C", "B", "C", "C", "B", "C", "A", "C", "C"]},
+    "5":  {"title": "Pesticide Hazards and First Aid", "answers": ["A", "A", "A", "A", "A", "B", "B", "B", "A", "C"]},
+    "6":  {"title": "Personal Protective Equipment", "answers": ["A", "C", "C", "B", "A", "C", "A", "C", "A"]},
+    "7":  {"title": "Pesticides in the Environment", "answers": ["A", "B", "C", "C", "B", "C", "B", "C"]},
+    "8":  {"title": "Transportation, Storage, and Security", "answers": ["B", "B", "A", "C", "B", "A"]},
+    "9":  {"title": "Emergency or Incident Response", "answers": ["C", "A", "B", "A", "C"]},
+    "10": {"title": "Planning the Pesticide Application", "answers": ["A", "A", "C", "B", "B", "C", "C", "C", "A", "C"]},
+    "11": {"title": "Pesticide Application Procedures", "answers": ["A", "C", "C", "C", "C", "B", "B", "B", "A"]}
+  }
+}

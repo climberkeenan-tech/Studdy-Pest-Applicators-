@@ -32,8 +32,15 @@ def sh(q, answer, accept, keys, ref, why, style=None):
     d.update({"q": q, "answer": answer, "accept": accept})
     if keys: d["keys"] = keys
     d.update({"ref": ref, "why": why}); return d
+KEY_DISPUTE = {4}  # Appendix A transcription says C; the chapter text supports A. Unverified; see CLAUDE.md.
 def rv(n, q, choices, answer, ref, why):
-    return mc(q, choices, answer, ref, why, src="review", rn=n)
+    if n in KEY_DISPUTE:
+        d = rv.__wrapped__(n, q, choices, answer, ref, why); d["keyDispute"] = True; return d
+    return rv.__wrapped__(n, q, choices, answer, ref, why)
+def _rv(n, q, choices, answer, ref, why):
+    # build.py checks review answers against Appendix A via "Review question N" in ref
+    return mc(q, choices, answer, f"Review question {n}. Answer in the text: {ref}", why, src="review", rn=n)
+rv.__wrapped__ = _rv
 
 # ---------- 1
 card(1, "Chapter goals and transportation hazards", [123, 123], [

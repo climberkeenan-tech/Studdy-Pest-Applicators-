@@ -17,9 +17,10 @@ session's network could not open directly): 50 multiple-choice questions, 35 cor
 ## Status
 - Chapter 1, Pest Management (pp. 1–15): 25 cards (`c01-s01` to `c01-s25`), 124 test-style questions.
 - Chapter 1 review questions (pp. 17–18, 10 questions) added as `"src": "review"` (ids `c01-sNN-rK`),
-  first in the card that holds the answer. The manual's key is in **Appendix A**, which the user has
-  not sent. The answers were taken from the chapter text. When Appendix A arrives, check every
-  review answer against it and report any disagreement.
+  first in the card that holds the answer. All 10 checked against Appendix A: all match.
+- **Appendix A answer key (all 11 chapters) is in `content/answer-key.json`.** `tools/build.py` fails if any
+  review question's answer disagrees with it. Review choices must stay in the manual's A, B, C order
+  (index 0 = A), and each review `ref` must contain "Review question N".
 - Chapter 2, Federal Pesticide Laws and Regulations (pp. 19–28): 15 cards (`c02-s01` to `c02-s15`),
   75 test-style questions, plus the 7 review questions from p. 29 (ids `c02-sNN-rK`). Review answers again
   taken from the chapter text, pending Appendix A. Review Q1 sits in card 2, Q2 card 4, Q3 card 7,
@@ -70,9 +71,14 @@ session's network could not open directly): 50 multiple-choice questions, 35 cor
   Check review answers against Appendix A when it arrives.
 - Chapter 10 not sent yet.
 - Chapter 11, Pesticide Application Procedures (pp. 157–168): 16 cards (`c11-s01` to `c11-s16`), 9 review
-  questions from p. 169 (Appendix A key not seen; answers taken from the chapter text, and #9 is a computed answer,
-  1.5 lb). Photo crops: `tools/crop_photos_ch11.py` (grayscale). Area figure: `content/figures/fig-11-area.svg`.
+  questions from p. 169, all checked against Appendix A: all match (A, C, C, C, C, B, B, B, A). Photo crops: `tools/crop_photos_ch11.py` (grayscale). Area figure: `content/figures/fig-11-area.svg`.
   Figure 11.1 (nozzle patterns) is a photo crop with every label typed into `explain`.
+- **Open dispute, Chapter 8 review Q4** (`c08-s08-r4`, "Which recommended practice will minimize pesticide storage
+  problems?"): the transcribed Appendix A key says C (metal containers on higher shelves); the chapter text (p. 128,
+  buy only what you need; heaviest containers on lower shelves) supports A. The card keeps A with `"keyDispute": true`,
+  which makes build.py warn instead of fail. Ask the user to re-photograph Appendix A (Chapter 8) and the Chapter 8
+  review page, then resolve and remove the flag (`KEY_DISPUTE` in `tools/gen_ch08.py`).
+- Chapter 6 and 8 review refs now carry "Review question N" (set in `tools/gen_ch06.py` and `tools/gen_ch08.py`).
 - Ask for the manual's total page count (still unknown).
 - Two sessions once worked in parallel on different branches. Before publishing, check the live artifact
   (and `git branch -r`) for chapters this branch lacks, and merge them first.
@@ -103,6 +109,7 @@ session's network could not open directly): 50 multiple-choice questions, 35 cor
 
 ## Files
 - `content/study.json`: manual metadata and the practice card.
+- `content/answer-key.json`: Appendix A answers to the review questions, by chapter.
 - `content/chapters/chNN.json`: `{"chapter", "pages", "sections": [...]}` for each chapter, merged in file-name order.
 - `content/figures/*.svg`: diagrams. Referenced from a figure as `"svgFile": "fig-1-1.svg"`.
 - `content/images/*.jpg`: photo crops. Referenced as `"imgFile": "p4-thistle.jpg"`.

@@ -1,5 +1,6 @@
+"""Chapter 9 photo crops. Shot under purple light, so crops are converted to grayscale."""
 import sys, os
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageOps
 U='/root/.claude/uploads/1b053c7f-e9bd-5a4f-80a0-0942958c3cb3/'
 # coordinates in the 1500x2000 display space (raw pixels, no EXIF rotation)
 C = {
@@ -22,7 +23,7 @@ tiles = []
 for k,(f,box) in C.items():
     im = Image.open(U+f+'-image.jpg')
     sx = im.size[0]/1500; sy = im.size[1]/2000
-    c = im.crop(tuple(int(v*s) for v,s in zip(box,(sx,sy,sx,sy)))).convert('RGB')
+    c = ImageOps.autocontrast(im.crop(tuple(int(v*s) for v,s in zip(box,(sx,sy,sx,sy)))).convert('L'), cutoff=1).convert('RGB')
     if mode == 'sheet':
         t = c.copy(); t.thumbnail((360,360)); d=ImageDraw.Draw(t); d.rectangle((0,0,len(k)*7+6,14),fill='white'); d.text((3,2),k,fill='black'); tiles.append(t)
     else:

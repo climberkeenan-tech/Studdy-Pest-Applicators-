@@ -1,0 +1,4204 @@
+{
+ "chapter": "Chapter 5 · Pesticide Hazards and First Aid",
+ "pages": [
+  69,
+  85
+ ],
+ "sections": [
+  {
+   "id": "c05-s01",
+   "chapter": "Chapter 5 · Pesticide Hazards and First Aid",
+   "title": "Chapter goals and why pesticides affect people",
+   "pages": [
+    69,
+    69
+   ],
+   "body": [
+    {
+     "box": "Learning objectives",
+     "p": [
+      "After studying this chapter, you should be able to:"
+     ],
+     "list": [
+      "Differentiate between types of harmful effects (**allergic, acute, chronic, and delayed**) associated with pesticide application.",
+      "Identify common **exposure routes** for various pesticides and application methods.",
+      "Explain the **hazard level classification system** for pesticides, including the corresponding **signal words**.",
+      "Describe typical symptoms of pesticide exposure in humans.",
+      "Discuss the appropriate first aid response to oral, ocular, dermal, and inhalation exposures to pesticides.",
+      "List other health risks (such as **heat stress**) that may occur during pesticide application."
+     ]
+    },
+    {
+     "p": [
+      "Pesticides are designed to be toxic to living organisms so they can control pests, for example plants, insects, rodents, fungi, and bacteria.",
+      "At the same time, pesticides must be used with special care to avoid harming **nontarget organisms**, including pesticide applicators, handlers, and anyone else exposed to the product.",
+      "Though many pesticides are toxic to humans, they vary significantly in the type and level of hazards they present.",
+      "In many cases, something that is toxic to one species may also be toxic to other species of organisms.",
+      "This is especially true if the organisms are **closely related**.",
+      "For example, insects, rodents, and humans are all animals and have similarities in their **nervous, circulatory, and respiratory systems**.",
+      "Because of these similarities, pesticides can affect people as well as the target pest."
+     ]
+    },
+    {
+     "p": [
+      "Pesticides can have both **short-term and long-term effects** on humans.",
+      "The **signal word** on the product label and the information contained in the **\"Hazards to Humans and Domestic Animals\"** section of the label indicate the human toxicity concerns and the precautions you should take to minimize your own risk.",
+      "Pesticides can pose additional physical and chemical risks by being **explosive and/or combustible**.",
+      "If the product presents either a physical or a chemical hazard, this information is included in the **\"Precautionary Statements\"** section.",
+      "Refer also to the **Safety Data Sheet (SDS)** for more information on toxicity and precautions."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c05-s01-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "Why can a pesticide that controls insects or rodents also affect people?",
+     "choices": [
+      "Humans and these pests are all animals with similar nervous, circulatory, and respiratory systems",
+      "Pesticides are designed to target humans first",
+      "All pesticides are equally toxic to every living thing",
+      "Humans absorb pesticides faster than any pest"
+     ],
+     "answer": 0,
+     "ref": "p. 69, chapter introduction",
+     "why": "Insects, rodents, and humans share similar nervous, circulatory, and respiratory systems."
+    },
+    {
+     "id": "c05-s01-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "You want to know if a product is explosive or combustible. Which label section should you check?",
+     "choices": [
+      "Directions for Use",
+      "Storage and Disposal",
+      "Precautionary Statements",
+      "Active Ingredients"
+     ],
+     "answer": 2,
+     "ref": "p. 69, chapter introduction",
+     "why": "Physical or chemical hazards are listed in the Precautionary Statements section."
+    },
+    {
+     "id": "c05-s01-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT named on p. 69 as a source of human toxicity concerns and precautions?",
+     "choices": [
+      "The signal word on the label",
+      "The \"Hazards to Humans and Domestic Animals\" section",
+      "The Safety Data Sheet (SDS)",
+      "The product's brand name"
+     ],
+     "answer": 3,
+     "ref": "p. 69, chapter introduction",
+     "why": "The signal word, the Hazards to Humans and Domestic Animals section, and the SDS give toxicity information."
+    },
+    {
+     "id": "c05-s01-t4",
+     "src": "test",
+     "kind": "tf",
+     "q": "Something toxic to one species is especially likely to be toxic to another species if the two are closely related.",
+     "answer": true,
+     "ref": "p. 69, chapter introduction",
+     "why": "The manual says this is especially true for closely related organisms."
+    },
+    {
+     "id": "c05-s01-t5",
+     "src": "test",
+     "kind": "short",
+     "q": "What does SDS stand for?",
+     "answer": "Safety Data Sheet",
+     "keys": [
+      [
+       "safety"
+      ],
+      [
+       "data"
+      ],
+      [
+       "sheet"
+      ]
+     ],
+     "ref": "p. 69, chapter introduction",
+     "why": "SDS is the Safety Data Sheet, a source of toxicity and precaution information."
+    }
+   ]
+  },
+  {
+   "id": "c05-s02",
+   "chapter": "Chapter 5 · Pesticide Hazards and First Aid",
+   "title": "Toxicity, exposure, and hazard",
+   "pages": [
+    70,
+    70
+   ],
+   "body": [
+    {
+     "h": "Toxicity, Exposure, and Hazard"
+    },
+    {
+     "p": [
+      "**Toxicity** refers to the ability of a pesticide to cause short-term (**acute**) or long-term (**chronic**) injury.",
+      "\"Toxicity,\" a measure of the pesticide's capacity to cause injury or illness, is a combination of its **chemical properties and concentration**."
+     ]
+    },
+    {
+     "p": [
+      "**Exposure** occurs when pesticides get onto or into the body through the skin (**dermal**), the lungs (**inhalation**), the mouth (**oral**), or by eye contact (**ocular**).",
+      "Product formulations differ greatly in their exposure risk.",
+      "Some routine pesticide-handling procedures present an especially high likelihood of exposure.",
+      "Examples include handling opened containers, mixing and loading concentrates, and working around contaminated application equipment.",
+      "Other examples are making spray, mist, or dust applications, cleaning up spills, and reentering a recently treated area before the spray has dried or the dust has settled."
+     ]
+    },
+    {
+     "p": [
+      "**Hazard**, or **risk**, is the true concern for the applicator or handler.",
+      "It is the potential or probability for harm (injury, illness, or allergy) to occur because of the combination of the product's innate toxicity and the level of human exposure.",
+      "\"Hazard\" reflects both the pesticide's toxicity and the likelihood that you will be exposed to the product in a particular situation.",
+      "As an applicator, you can reduce your risk by choosing a **less-toxic product**, by **reducing exposure**, or both.",
+      "In situations when a different product cannot be used, you can still reduce the hazard (risk) by taking steps to reduce exposure.",
+      "As a result, pesticide users need to be concerned with the hazards associated with exposure to the chemical and not exclusively with the toxicity of the pesticide.",
+      "A good equation to remember is:"
+     ]
+    },
+    {
+     "box": "Hazard equation",
+     "p": [
+      "**Hazard = Toxicity x Exposure**"
+     ]
+    },
+    {
+     "p": [
+      "The following two examples illustrate that risk takes into account both toxicity and exposure:"
+     ]
+    },
+    {
+     "list": [
+      "**Gasoline** is extremely toxic to humans, especially if swallowed or inhaled. Yet every day, millions of people fill their gas tanks without incident. The toxicity is high, but gas pumps are designed to virtually eliminate human exposure. Therefore, the risk associated with filling a car's gas tank is very low. If someone siphons gas, the risk is much greater because exposure is much more likely.",
+      "**Aspirin** has a low toxicity to humans. However, if someone takes too many aspirin at one time, he or she can become very ill. In this case, toxicity is low but the potential for exposure is high, increasing the overall hazard or risk."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c05-s02-r1",
+     "src": "review",
+     "kind": "mc",
+     "q": "The capacity of a pesticide to cause short-term (acute) or long-term (chronic) injury is referred to as its:",
+     "choices": [
+      "Toxicity.",
+      "Exposure.",
+      "Hazard."
+     ],
+     "answer": 0,
+     "fixed": true,
+     "ref": "p. 70, 'Toxicity, Exposure, and Hazard' (Review question 1, p. 87)",
+     "why": "Toxicity is the ability to cause short-term or long-term injury."
+    },
+    {
+     "id": "c05-s02-t1",
+     "src": "test",
+     "kind": "short",
+     "q": "Type the equation for hazard.",
+     "answer": "Hazard = Toxicity x Exposure",
+     "keys": [
+      [
+       "hazard",
+       "risk"
+      ],
+      [
+       "toxicity",
+       "toxic"
+      ],
+      [
+       "exposure",
+       "exposed"
+      ]
+     ],
+     "ref": "p. 70, 'Toxicity, Exposure, and Hazard'",
+     "why": "Hazard equals toxicity times exposure."
+    },
+    {
+     "id": "c05-s02-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A product cannot be swapped for a less-toxic one. What can the applicator still do to lower the hazard?",
+     "choices": [
+      "Nothing, since hazard depends only on toxicity",
+      "Take steps to reduce exposure",
+      "Increase the application rate so fewer trips are needed",
+      "Skip reading the label to save time"
+     ],
+     "answer": 1,
+     "ref": "p. 70, 'Toxicity, Exposure, and Hazard'",
+     "why": "When a different product cannot be used, reducing exposure still reduces the hazard."
+    },
+    {
+     "id": "c05-s02-t3",
+     "src": "test",
+     "kind": "mc",
+     "q": "Filling a car's gas tank is low risk even though gasoline is extremely toxic. Why?",
+     "choices": [
+      "Gasoline loses its toxicity at the pump",
+      "Gas pumps are designed to virtually eliminate human exposure",
+      "Gasoline is only toxic when siphoned",
+      "People build up a tolerance to gasoline"
+     ],
+     "answer": 1,
+     "ref": "p. 70, 'Toxicity, Exposure, and Hazard'",
+     "why": "High toxicity times near-zero exposure gives very low risk."
+    },
+    {
+     "id": "c05-s02-t4",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT listed as a routine activity with an especially high likelihood of exposure?",
+     "choices": [
+      "Mixing and loading concentrates",
+      "Cleaning up spills",
+      "Reading the product label before use",
+      "Reentering a treated area before the spray has dried"
+     ],
+     "answer": 2,
+     "ref": "p. 70, 'Toxicity, Exposure, and Hazard'",
+     "why": "Reading the label is not an exposure activity. The others are."
+    },
+    {
+     "id": "c05-s02-t5",
+     "src": "test",
+     "kind": "tf",
+     "q": "Toxicity is a combination of a pesticide's chemical properties and its concentration.",
+     "answer": true,
+     "ref": "p. 70, 'Toxicity, Exposure, and Hazard'",
+     "why": "The manual defines toxicity as a combination of chemical properties and concentration."
+    }
+   ]
+  },
+  {
+   "id": "c05-s03",
+   "chapter": "Chapter 5 · Pesticide Hazards and First Aid",
+   "title": "Engineering controls, attitude, and your obligations",
+   "pages": [
+    70,
+    71
+   ],
+   "body": [
+    {
+     "p": [
+      "**Engineering controls**, such as gas pumps and childproof caps, are often designed to reduce exposure.",
+      "Engineering controls that reduce handler exposure are also available for pesticide mixing and loading (see Chapter 11, Pesticide Application Procedures, for more information).",
+      "Examples are **lock-and-load devices** and **water-soluble bags** containing formulated product."
+     ]
+    },
+    {
+     "p": [
+      "Often, the **greatest hazard** to the applicator occurs while **mixing and loading the pesticide concentrate**.",
+      "There is a significant risk of exposure to a chemical in its most concentrated, toxic form unless engineering controls are used.",
+      "Hazards associated with the actual application are frequently much lower when diluted pesticides are handled or applied.",
+      "The hazards may still be substantial, however, in the case of a single high exposure (such as when an accident occurs) or when many smaller exposures occur over an extended period."
+     ]
+    },
+    {
+     "p": [
+      "The best way to avoid or reduce the risks of pesticide use is to understand what you are using and how to use it safely in a way that minimizes your exposure.",
+      "This means reading the label carefully and following instructions.",
+      "The **user's attitude** is of utmost importance.",
+      "If you assume that you know exactly how to use a pesticide without reading the product label, or do not bother to take the precautions indicated on the label, you are more likely to experience excess exposure.",
+      "Your risk may increase significantly."
+     ]
+    },
+    {
+     "p": [
+      "Pesticide users have a **legal and moral obligation** to protect their own health and that of others when handling pesticides.",
+      "Besides protecting yourself, you must be aware of other people, wildlife, or pets that may be in or near the treatment area and could be exposed to the pesticide during or after application.",
+      "Taking adequate precautions and following good safety practices will reduce the chance of exposure from pesticide application."
+     ]
+    },
+    {
+     "p": [
+      "In Chapter 2 (Federal Pesticide Laws and Regulations), you learned that the pesticide registration process requires manufacturers to do **risk-assessment studies**.",
+      "These studies gauge the risk to applicators during and unprotected people after application.",
+      "Using the data from these studies, the manufacturer develops product labels that provide instructions on minimizing exposure, personal protective equipment (**PPE**), engineering controls, symptoms of overexposure, first aid, and postapplication **restricted-entry intervals (REIs)**.",
+      "**Be sure to read and follow all label directions.**"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c05-s03-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "When does the greatest hazard to the applicator often occur?",
+     "choices": [
+      "While applying diluted spray",
+      "While mixing and loading the pesticide concentrate",
+      "While storing sealed containers",
+      "While reading the label"
+     ],
+     "answer": 1,
+     "ref": "p. 70, 'Toxicity, Exposure, and Hazard'",
+     "why": "Mixing and loading exposes you to the chemical in its most concentrated, toxic form."
+    },
+    {
+     "id": "c05-s03-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT an example of an engineering control given in the manual?",
+     "choices": [
+      "Lock-and-load devices",
+      "Water-soluble bags containing formulated product",
+      "Childproof caps",
+      "A long-sleeved shirt"
+     ],
+     "answer": 3,
+     "ref": "p. 70, 'Toxicity, Exposure, and Hazard'",
+     "why": "A shirt is clothing or PPE. The other three are engineering controls."
+    },
+    {
+     "id": "c05-s03-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "An experienced applicator skips the label because he has used the product before. According to the manual, what is the likely result?",
+     "choices": [
+      "No change in risk, since experience replaces the label",
+      "He is more likely to experience excess exposure",
+      "Lower risk, since he works faster",
+      "The REI no longer applies to him"
+     ],
+     "answer": 1,
+     "ref": "p. 71, 'Toxicity, Exposure, and Hazard'",
+     "why": "Assuming you know how to use a pesticide without reading the label makes excess exposure more likely."
+    },
+    {
+     "id": "c05-s03-t4",
+     "src": "test",
+     "kind": "tf",
+     "q": "Hazards during application of diluted pesticides are always negligible.",
+     "answer": false,
+     "ref": "p. 70, 'Toxicity, Exposure, and Hazard'",
+     "why": "They can still be substantial with a single high exposure, such as an accident, or many small exposures over time."
+    },
+    {
+     "id": "c05-s03-t5",
+     "src": "test",
+     "kind": "short",
+     "q": "What does REI stand for?",
+     "answer": "Restricted-entry interval",
+     "keys": [
+      [
+       "restricted",
+       "restrict"
+      ],
+      [
+       "entry"
+      ],
+      [
+       "interval",
+       "intervals"
+      ]
+     ],
+     "ref": "p. 71, 'Toxicity, Exposure, and Hazard'",
+     "why": "REI is the postapplication restricted-entry interval given on the label."
+    }
+   ]
+  },
+  {
+   "id": "c05-s04",
+   "chapter": "Chapter 5 · Pesticide Hazards and First Aid",
+   "title": "Local and systemic effects",
+   "pages": [
+    71,
+    71
+   ],
+   "body": [
+    {
+     "h": "Potential Harmful Effects of Pesticides"
+    },
+    {
+     "p": [
+      "Effects from chemicals, including pesticides, may be classified into two broad types: **local** and **systemic**.",
+      "**Local effects** are those that occur to the area of contact with skin, eyes, or respiratory tract.",
+      "Local effects are often referred to as **contact** symptoms or effects.",
+      "**Systemic effects** may occur once the substance is absorbed and distributed throughout the body.",
+      "They may be acute or chronic."
+     ]
+    },
+    {
+     "box": "Local effects",
+     "p": [
+      "Injury at the point of contact, including skin discoloration and irritation (**dermatitis**) such as itching, redness, rashes, blisters, and burns.",
+      "Also, swelling, stinging, and burning of the eyes, nose, mouth, or throat are contact effects."
+     ]
+    },
+    {
+     "p": [
+      "Local effects (or contact symptoms) are localized to the area that the pesticide actually touches. Examples are:"
+     ]
+    },
+    {
+     "list": [
+      "Skin irritation (**dermatitis**) or injury: itching, redness, rashes, blisters, burns, and discoloration.",
+      "Many **herbicides and fungicides** cause dermatitis. **Fumigants** can cause severe blisters.",
+      "Eye irritation or injury: swelling, stinging, and burning.",
+      "Herbicides, fungicides, insecticides, and fumigants may cause eye irritation or injury through contact, sometimes resulting in **irreversible damage**.",
+      "Nose, mouth, or throat irritation or injury: swelling, stinging, and burning.",
+      "Permanent respiratory damage occurs less often."
+     ]
+    },
+    {
+     "box": "Systemic effects",
+     "p": [
+      "Poisoning effects that occur at sites **other than the entry point** into the body."
+     ]
+    },
+    {
+     "p": [
+      "Systemic effects may occur once a pesticide has been absorbed and distributed throughout the body.",
+      "These effects depend on the toxicological profile of the chemical itself, the amount absorbed, and the individual's ability to detoxify and eliminate the chemical.",
+      "Examples are:"
+     ]
+    },
+    {
+     "list": [
+      "**Cholinesterase inhibition** or **neuropathies** (damage to nerves).",
+      "Impairment of the blood's clotting ability.",
+      "Some cancers.",
+      "Reproductive problems.",
+      "Impaired metabolism (the body's ability to use energy).",
+      "Hormonal effects.",
+      "Damage to various organ systems, such as the kidneys or liver."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c05-s04-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "What are local effects often called?",
+     "choices": [
+      "Delayed effects",
+      "Contact symptoms or effects",
+      "Chronic effects",
+      "Systemic symptoms"
+     ],
+     "answer": 1,
+     "ref": "p. 71, 'Potential Harmful Effects of Pesticides'",
+     "why": "Local effects are often referred to as contact symptoms or effects."
+    },
+    {
+     "id": "c05-s04-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A handler splashes a product on her forearm. Weeks later, tests show liver damage, though her arm never reddened. What kind of effect is the liver damage?",
+     "choices": [
+      "Local effect",
+      "Contact effect",
+      "Systemic effect",
+      "Dermatitis"
+     ],
+     "answer": 2,
+     "ref": "p. 71, 'Potential Harmful Effects of Pesticides'",
+     "why": "Systemic effects occur at sites other than the entry point, such as the liver."
+    },
+    {
+     "id": "c05-s04-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT an example of a systemic effect?",
+     "choices": [
+      "Cholinesterase inhibition",
+      "Impairment of the blood's clotting ability",
+      "Redness and itching where the spray touched the skin",
+      "Hormonal effects"
+     ],
+     "answer": 2,
+     "ref": "p. 71, 'Potential Harmful Effects of Pesticides'",
+     "why": "Redness and itching at the point of contact is a local (contact) effect."
+    },
+    {
+     "id": "c05-s04-t4",
+     "src": "test",
+     "kind": "mc",
+     "q": "Which type of pesticide does the manual say can cause severe blisters?",
+     "choices": [
+      "Fumigants",
+      "Fungicides",
+      "Rodenticides",
+      "Herbicides"
+     ],
+     "answer": 0,
+     "ref": "p. 71, 'Potential Harmful Effects of Pesticides'",
+     "why": "Fumigants can cause severe blisters. Many herbicides and fungicides cause dermatitis."
+    },
+    {
+     "id": "c05-s04-t5",
+     "src": "test",
+     "kind": "short",
+     "q": "What is the medical term for skin irritation?",
+     "answer": "Dermatitis",
+     "accept": [
+      "dermatitis"
+     ],
+     "ref": "p. 71, 'Potential Harmful Effects of Pesticides'",
+     "why": "Skin irritation is called dermatitis."
+    }
+   ]
+  },
+  {
+   "id": "c05-s05",
+   "chapter": "Chapter 5 · Pesticide Hazards and First Aid",
+   "title": "How EPA uses effects, and allergic effects",
+   "pages": [
+    72,
+    72
+   ],
+   "body": [
+    {
+     "p": [
+      "The U.S. Environmental Protection Agency (**EPA**) considers local and systemic effects when deciding whether to register a chemical.",
+      "They are also used to set label restrictions, such as limiting the method, timing, or rate of application.",
+      "They are used to determine appropriate levels of PPE, or to establish REIs (in combination with exposure factors)."
+     ]
+    },
+    {
+     "box": "Allergic effects / Allergy",
+     "p": [
+      "A **hypersensitivity** to a specific substance, often called the **allergen**.",
+      "An allergy may cause dermatitis, blisters, hives, and itching of the eyes.",
+      "It could also cause illness, asthma-like symptoms, or life-threatening shock.",
+      "Often the entire body is affected."
+     ]
+    },
+    {
+     "p": [
+      "**Allergic effects** are harmful effects that occur in some people in reaction to certain substances.",
+      "An allergy to a chemical contained in a product formulation may cause dermatitis, blisters, hives, or more serious problems, such as asthma or even life-threatening **shock**.",
+      "Pesticide allergy symptoms are similar to other allergy symptoms: red and/or itchy eyes, respiratory discomfort, and asthma-like effects.",
+      "Unfortunately, there is **no way to predict** which people will develop allergies to a particular product.",
+      "Having an allergic reaction does not predict whether someone would also be more sensitive to other effects of the pesticide, such as chronic or delayed effects.",
+      "These types of effects depend on different chemical reactions within the body."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c05-s05-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "What is an allergy?",
+     "choices": [
+      "A hypersensitivity to a specific substance, often called the allergen",
+      "Damage that appears only after years of exposure",
+      "Injury produced from a single large exposure",
+      "Injury at the point of contact only"
+     ],
+     "answer": 0,
+     "ref": "p. 72, 'Allergic Effects/Allergy' box",
+     "why": "An allergy is a hypersensitivity to a specific substance, the allergen."
+    },
+    {
+     "id": "c05-s05-t2",
+     "src": "test",
+     "kind": "tf",
+     "q": "Testing can predict which people will develop allergies to a particular pesticide product.",
+     "answer": false,
+     "ref": "p. 72, 'Potential Harmful Effects of Pesticides'",
+     "why": "There is no way to predict who will develop allergies to a particular product."
+    },
+    {
+     "id": "c05-s05-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A worker breaks out in hives every time he handles one herbicide. What does this tell you about his sensitivity to that herbicide's chronic effects?",
+     "choices": [
+      "He is certainly more sensitive to its chronic effects",
+      "He is immune to its chronic effects",
+      "Nothing. An allergic reaction does not predict sensitivity to chronic or delayed effects",
+      "He will develop delayed effects within 24 hours"
+     ],
+     "answer": 2,
+     "ref": "p. 72, 'Potential Harmful Effects of Pesticides'",
+     "why": "Chronic and delayed effects depend on different chemical reactions in the body."
+    },
+    {
+     "id": "c05-s05-t4",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT a way EPA uses local and systemic effects?",
+     "choices": [
+      "Deciding whether to register a chemical",
+      "Setting label restrictions on method, timing, or rate of application",
+      "Setting the retail price of the product",
+      "Establishing REIs, together with exposure factors"
+     ],
+     "answer": 2,
+     "ref": "p. 72, 'Potential Harmful Effects of Pesticides'",
+     "why": "EPA uses these effects for registration, label restrictions, PPE levels, and REIs, not pricing."
+    },
+    {
+     "id": "c05-s05-t5",
+     "src": "test",
+     "kind": "mc",
+     "q": "What is the most serious allergic reaction named in the manual?",
+     "choices": [
+      "Hives",
+      "Itchy eyes",
+      "Life-threatening shock",
+      "Dermatitis"
+     ],
+     "answer": 2,
+     "ref": "p. 72, 'Allergic Effects/Allergy' box",
+     "why": "An allergy can cause life-threatening shock."
+    }
+   ]
+  },
+  {
+   "id": "c05-s06",
+   "chapter": "Chapter 5 · Pesticide Hazards and First Aid",
+   "title": "Common ways handlers are exposed",
+   "pages": [
+    72,
+    72
+   ],
+   "body": [
+    {
+     "h": "Common ways in which pesticide handlers and other workers are exposed to pesticides"
+    },
+    {
+     "box": "Dermal exposure",
+     "list": [
+      "Not wearing gloves or other protective clothing.",
+      "Not washing hands after handling pesticides, product containers, or application equipment.",
+      "Not washing hands **before using the toilet**.",
+      "Splashing or spilling pesticide on skin.",
+      "Being exposed to spray or dust drift.",
+      "Applying pesticides in windy weather or above your head.",
+      "Touching treated plants, soil, or livestock."
+     ]
+    },
+    {
+     "box": "Eye exposure",
+     "list": [
+      "Rubbing eyes with contaminated gloves or hands.",
+      "Splashing pesticide in eyes.",
+      "Handling dry formulations when not wearing eye protection.",
+      "Applying pesticides in windy weather."
+     ]
+    },
+    {
+     "box": "Oral exposure",
+     "list": [
+      "Not washing hands before eating, smoking, chewing, or drinking.",
+      "Splashing pesticide in mouth."
+     ]
+    },
+    {
+     "box": "Inhalation exposure",
+     "list": [
+      "Handling pesticides in confined or poorly ventilated areas.",
+      "Handling dusts or powders.",
+      "Using an inadequate or poorly fitting respirator.",
+      "Being exposed to spray or dust drift."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c05-s06-t1",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "An applicator sprays a ceiling in a crawl space with little air movement and his respirator does not seal well. Which exposure route is the main concern?",
+     "choices": [
+      "Oral",
+      "Inhalation",
+      "Eye only",
+      "None, since he is indoors"
+     ],
+     "answer": 1,
+     "ref": "p. 72, 'Common ways ... exposed to pesticides' box",
+     "why": "Confined, poorly ventilated areas and a poorly fitting respirator are inhalation exposures."
+    },
+    {
+     "id": "c05-s06-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT listed as a cause of oral exposure?",
+     "choices": [
+      "Not washing hands before eating",
+      "Not washing hands before smoking",
+      "Splashing pesticide in mouth",
+      "Handling dusts or powders"
+     ],
+     "answer": 3,
+     "ref": "p. 72, 'Common ways ... exposed to pesticides' box",
+     "why": "Handling dusts or powders is listed under inhalation exposure."
+    },
+    {
+     "id": "c05-s06-t3",
+     "src": "test",
+     "kind": "tf",
+     "q": "The manual lists not washing your hands before using the toilet as a cause of dermal exposure.",
+     "answer": true,
+     "ref": "p. 72, 'Common ways ... exposed to pesticides' box",
+     "why": "Not washing hands before using the toilet is a dermal exposure route."
+    },
+    {
+     "id": "c05-s06-t4",
+     "src": "test",
+     "kind": "mc",
+     "q": "Being exposed to spray or dust drift is listed under which two exposure types?",
+     "choices": [
+      "Dermal and inhalation",
+      "Oral and eye",
+      "Eye and oral",
+      "Oral and inhalation"
+     ],
+     "answer": 0,
+     "ref": "p. 72, 'Common ways ... exposed to pesticides' box",
+     "why": "Drift is listed under both dermal and inhalation exposure."
+    },
+    {
+     "id": "c05-s06-t5",
+     "src": "test",
+     "kind": "short",
+     "q": "Name one cause of eye exposure from the manual's list.",
+     "answer": "Rubbing eyes with contaminated gloves or hands",
+     "accept": [
+      "rubbing eyes",
+      "rubbing eyes with contaminated hands",
+      "rubbing eyes with contaminated gloves",
+      "splashing pesticide in eyes",
+      "splashing",
+      "splash in eyes",
+      "handling dry formulations without eye protection",
+      "not wearing eye protection",
+      "handling dry formulations",
+      "applying pesticides in windy weather",
+      "windy weather",
+      "wind"
+     ],
+     "ref": "p. 72, 'Common ways ... exposed to pesticides' box",
+     "why": "Rubbing eyes, splashes, dry formulations without eye protection, and windy weather."
+    }
+   ]
+  },
+  {
+   "id": "c05-s07",
+   "chapter": "Chapter 5 · Pesticide Hazards and First Aid",
+   "title": "The four routes and the skin route",
+   "pages": [
+    73,
+    73
+   ],
+   "body": [
+    {
+     "h": "Exposure: How Pesticides Enter the Body"
+    },
+    {
+     "p": [
+      "Pesticide exposure occurs when pesticides get onto or into the body.",
+      "The **four primary routes of exposure** are: skin (**dermal**), eyes (**ocular**), lungs (**inhalation**), and mouth (**oral**)."
+     ]
+    },
+    {
+     "h": "Skin or Dermal Route"
+    },
+    {
+     "p": [
+      "In most cases, the **skin is the main route** of pesticide entry onto or into the body.",
+      "Some studies show that up to **97%** of all body exposure to pesticides during a spraying operation is by skin contact.",
+      "Dermal absorption or contact injury may occur from airborne dust, splashes, spills, or spray mist when mixing, loading, applying, or disposing of pesticides.",
+      "Skin exposure may also result from contact with pesticide residues on treated surfaces or contaminated equipment during cleaning, adjustment, or repair."
+     ]
+    },
+    {
+     "p": [
+      "Once a pesticide contacts the body, absorption, penetration, and distribution throughout the body depend on many factors.",
+      "These include the chemical properties of the pesticide product, the area of contact and its rate of absorption, and the body's own detoxification and elimination capabilities.",
+      "Some products that cause systemic injury are **just as toxic when absorbed through the skin as when they are swallowed**."
+     ]
+    },
+    {
+     "p": [
+      "Parts of the body differ in their ability to absorb pesticides.",
+      "**Warm, moist areas**, such as the groin, armpits, head, neck, backs of the hands, and tops of the feet, tend to absorb more than the palms and forearms (Figure 5.1)."
+     ]
+    },
+    {
+     "fig": "fig-5-1"
+    },
+    {
+     "p": [
+      "However, **palms and forearms must still be protected** because they get the most exposure.",
+      "Cuts, abrasions, and skin rashes can increase absorption.",
+      "Remember, the rate of absorption (that is, how quickly the pesticide can get into the body) differs depending on the area contacted, but the rate is also a function of **time**.",
+      "The longer a pesticide (or any other chemical) remains in contact, the more will be absorbed.",
+      "So, protecting your skin is still important even if the area of the body most likely to contact a pesticide has a low absorption rate."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "fig-5-1",
+     "title": "Figure 5.1: Some areas of the skin absorb more pesticide than others.",
+     "page": "p. 73",
+     "svgFile": "fig-5-1.svg",
+     "explain": [
+      "Absorption by body area, from the figure: genital area 100%, ear canal 46.5%, forehead 36.3%, scalp 32.1%, abdomen 18.4%, foot 13.6%, palm 11.8%, forearm 8.6%.",
+      "The genital area absorbs the most. The forearm absorbs the least of the areas shown."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c05-s07-r2",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which statement about harmful effects of pesticides is false?",
+     "choices": [
+      "The most common form of pesticide injury is by inhalation.",
+      "Asthma-like symptoms may be caused by allergies to pesticides.",
+      "Many herbicides and fungicides cause dermatitis (skin reactions)."
+     ],
+     "answer": 0,
+     "fixed": true,
+     "ref": "p. 73, 'Skin or Dermal Route' (Review question 2, p. 87)",
+     "why": "False: the skin, not inhalation, is the main route, up to 97% of body exposure when spraying."
+    },
+    {
+     "id": "c05-s07-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "In most cases, what is the main route of pesticide entry onto or into the body?",
+     "choices": [
+      "Mouth (oral)",
+      "Lungs (inhalation)",
+      "Skin (dermal)",
+      "Eyes (ocular)"
+     ],
+     "answer": 2,
+     "ref": "p. 73, 'Skin or Dermal Route'",
+     "why": "Up to 97% of body exposure during spraying is by skin contact."
+    },
+    {
+     "id": "c05-s07-t2",
+     "src": "test",
+     "kind": "mc",
+     "q": "Some studies show that up to what percent of all body exposure during a spraying operation is by skin contact?",
+     "choices": [
+      "47%",
+      "67%",
+      "86%",
+      "97%"
+     ],
+     "answer": 3,
+     "ref": "p. 73, 'Skin or Dermal Route'",
+     "why": "Up to 97% of body exposure during spraying is by skin contact."
+    },
+    {
+     "id": "c05-s07-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "In Figure 5.1, which of these is NOT a high-absorption area?",
+     "choices": [
+      "Genital area",
+      "Ear canal",
+      "Forehead",
+      "Forearm"
+     ],
+     "answer": 3,
+     "ref": "p. 73, Figure 5.1",
+     "why": "The forearm absorbs 8.6%, the lowest shown. The genital area absorbs 100%."
+    },
+    {
+     "id": "c05-s07-t4",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A handler says, \"My forearms barely absorb pesticide, so I don't need to cover them.\" What is the best reply based on the manual?",
+     "choices": [
+      "Correct, forearms never need protection",
+      "Wrong: palms and forearms get the most exposure, and absorption grows the longer the pesticide stays on the skin",
+      "Correct, as long as he washes at the end of the week",
+      "Wrong: forearms absorb 100% of contact"
+     ],
+     "answer": 1,
+     "ref": "p. 73, 'Skin or Dermal Route'",
+     "why": "Palms and forearms get the most exposure, and longer contact means more absorption."
+    },
+    {
+     "id": "c05-s07-t5",
+     "src": "test",
+     "kind": "short",
+     "q": "Name the four primary routes of exposure.",
+     "answer": "Dermal (skin), ocular (eyes), inhalation (lungs), and oral (mouth)",
+     "keys": [
+      [
+       "dermal",
+       "skin"
+      ],
+      [
+       "ocular",
+       "eye",
+       "eyes"
+      ],
+      [
+       "inhalation",
+       "lungs",
+       "lung",
+       "breathing",
+       "inhaled"
+      ],
+      [
+       "oral",
+       "mouth",
+       "swallowing",
+       "ingestion"
+      ]
+     ],
+     "ref": "p. 73, 'Exposure: How Pesticides Enter the Body'",
+     "why": "Skin, eyes, lungs, and mouth."
+    }
+   ]
+  },
+  {
+   "id": "c05-s08",
+   "chapter": "Chapter 5 · Pesticide Hazards and First Aid",
+   "title": "Formulations, application methods, and the eyes",
+   "pages": [
+    73,
+    74
+   ],
+   "body": [
+    {
+     "p": [
+      "Pesticide formulations vary in how well they penetrate skin.",
+      "In general, **water-soluble liquids or powders, wettable powders, dusts, and granular pesticides** do not easily penetrate skin.",
+      "However, **oil-based liquid formulations**, such as **emulsifiable concentrates**, are **readily absorbed**."
+     ]
+    },
+    {
+     "p": [
+      "Application techniques may also affect exposure levels for applicators.",
+      "Making **overhead applications**, using **blower application equipment** for mists and dusts, using **animal pour-ons**, and **dipping livestock and pets** are all application methods that often have high dermal exposure levels.",
+      "Additionally, contaminated hands or gloves can transfer pesticides to other body parts.",
+      "Be sure to **wash your hands and gloves** after each pesticide-handling activity."
+     ]
+    },
+    {
+     "h": "Eyes or Ocular Route"
+    },
+    {
+     "p": [
+      "Eye tissues are **extremely absorbent**.",
+      "Blood vessels are very close to the surface of the eye, so pesticides can be quickly and easily absorbed into the bloodstream.",
+      "Under certain conditions when using certain pesticides, absorption through the eyes can be particularly hazardous.",
+      "Eyes are very sensitive to many pesticides.",
+      "For their size, they are able to absorb surprisingly large amounts of chemical.",
+      "In addition to systemic concerns, some products are **corrosive** and can cause severe eye damage or even **blindness**.",
+      "Significant eye exposure may result from airborne dusts or particles, splashes or spills, broken hoses, spray mists, or from rubbing the eyes with contaminated hands or clothing."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c05-s08-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "Which formulation is readily absorbed through the skin?",
+     "choices": [
+      "Wettable powder",
+      "Granular",
+      "Emulsifiable concentrate",
+      "Dust"
+     ],
+     "answer": 2,
+     "ref": "p. 73, 'Skin or Dermal Route'",
+     "why": "Oil-based liquids such as emulsifiable concentrates are readily absorbed."
+    },
+    {
+     "id": "c05-s08-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT an application method that often has high dermal exposure?",
+     "choices": [
+      "Making overhead applications",
+      "Using blower equipment for mists and dusts",
+      "Dipping livestock and pets",
+      "Placing granules with a closed spreader at ground level"
+     ],
+     "answer": 3,
+     "ref": "p. 73, 'Skin or Dermal Route'",
+     "why": "The manual lists overhead applications, blowers, animal pour-ons, and dipping livestock and pets."
+    },
+    {
+     "id": "c05-s08-t3",
+     "src": "test",
+     "kind": "mc",
+     "q": "Why can pesticides be quickly absorbed through the eyes?",
+     "choices": [
+      "Tears dissolve all pesticides",
+      "Blood vessels are very close to the surface of the eye",
+      "The eye has no protective layer at all",
+      "Eyes absorb only vapors"
+     ],
+     "answer": 1,
+     "ref": "p. 74, 'Eyes or Ocular Route'",
+     "why": "Blood vessels near the eye surface let pesticides pass quickly into the bloodstream."
+    },
+    {
+     "id": "c05-s08-t4",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "After pouring a pour-on product, a worker rubs her itchy eye with her gloved hand. What should she have done first, per the manual?",
+     "choices": [
+      "Nothing, since gloves keep pesticide off the eyes",
+      "Washed her hands and gloves after the handling activity",
+      "Waited 24 hours before touching her face",
+      "Switched to a granular formulation"
+     ],
+     "answer": 1,
+     "ref": "pp. 73–74, 'Skin or Dermal Route' and 'Eyes or Ocular Route'",
+     "why": "Contaminated hands or gloves transfer pesticide, so wash hands and gloves after each handling activity."
+    },
+    {
+     "id": "c05-s08-t5",
+     "src": "test",
+     "kind": "tf",
+     "q": "For their size, eyes can absorb surprisingly large amounts of chemical.",
+     "answer": true,
+     "ref": "p. 74, 'Eyes or Ocular Route'",
+     "why": "Eye tissues are extremely absorbent."
+    }
+   ]
+  },
+  {
+   "id": "c05-s09",
+   "chapter": "Chapter 5 · Pesticide Hazards and First Aid",
+   "title": "Inhalation and oral routes",
+   "pages": [
+    74,
+    74
+   ],
+   "body": [
+    {
+     "h": "Breathing or Inhalation Route"
+    },
+    {
+     "p": [
+      "Protecting the lungs is especially important when mixing, loading, or applying pesticides, particularly in **confined areas**.",
+      "If inhaled in sufficient amounts, pesticides can cause contact damage to nose, throat, and lung tissue.",
+      "Once breathed into the lungs, pesticides can enter the bloodstream **very rapidly**, eventually damaging other body organs (systemic illness).",
+      "Another major concern is the **aspiration** (suction) of **petroleum solvents** (ingredients in emulsifiable concentrate formulations) and other substances into the lungs while vomiting.",
+      "As the person vomits, some of the material is aspirated into the lungs, where it can cause severe damage."
+     ]
+    },
+    {
+     "h": "Swallowing or Oral Route"
+    },
+    {
+     "p": [
+      "When people work around pesticides, oral exposure can occur when liquid concentrates splash into the mouth during mixing and loading of pesticides or while cleaning equipment.",
+      "**Never use your mouth** to clear a spray line or to begin siphoning a pesticide.",
+      "Eating, drinking, or smoking without first washing your hands may transfer product to your mouth."
+     ]
+    },
+    {
+     "p": [
+      "Other people are most likely to accidentally swallow pesticides when chemicals are improperly stored in the home or when transferred into an **unlabeled bottle or container** normally used for food or beverages.",
+      "Rodent baits may also pose an accidental exposure hazard if they are not properly placed.",
+      "Unfortunately, **children** are the most common victims of these mishaps."
+     ]
+    },
+    {
+     "p": [
+      "**Mark all pesticide measuring cups and containers.**",
+      "Store them in a separate area away from measuring devices used for food and beverages so they are not used for water, drink, or food.",
+      "**Never store pesticides in beverage or other food containers.**",
+      "Practice good personal hygiene and wear proper protective equipment.",
+      "Preventing exposure is key to the safe use of pesticides."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c05-s09-r7",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which statement about pesticide exposure routes is true?",
+     "choices": [
+      "Studies show that about 97% of all body exposure to pesticides during a spraying operation is by inhalation.",
+      "Eating, drinking, or smoking without first washing your hands after handling pesticides is likely to transfer the product to your mouth.",
+      "The palms and forearms absorb pesticides more quickly than the scalp, ear canal, and forehead."
+     ],
+     "answer": 1,
+     "fixed": true,
+     "ref": "p. 74, 'Swallowing or Oral Route' (Review question 7, p. 87)",
+     "why": "Unwashed hands transfer product to your mouth. The 97% figure is for skin, and palms and forearms absorb less."
+    },
+    {
+     "id": "c05-s09-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "What is the major aspiration concern described for the inhalation route?",
+     "choices": [
+      "Petroleum solvents from emulsifiable concentrates being sucked into the lungs during vomiting",
+      "Granules lodging in the nose",
+      "Water-soluble powders dissolving in saliva",
+      "Dust settling on the skin"
+     ],
+     "answer": 0,
+     "ref": "p. 74, 'Breathing or Inhalation Route'",
+     "why": "Petroleum solvents aspirated into the lungs while vomiting can cause severe damage."
+    },
+    {
+     "id": "c05-s09-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A spray line is clogged and a coworker starts to blow it out by mouth. What should you tell him?",
+     "choices": [
+      "Fine, if he rinses his mouth afterward",
+      "Never use your mouth to clear a spray line",
+      "Fine, if the tank holds diluted spray",
+      "Fine, if he wears gloves"
+     ],
+     "answer": 1,
+     "ref": "p. 74, 'Swallowing or Oral Route'",
+     "why": "Never use your mouth to clear a spray line or start siphoning."
+    },
+    {
+     "id": "c05-s09-t3",
+     "src": "test",
+     "kind": "mc",
+     "q": "Who are the most common victims of accidental pesticide swallowing?",
+     "choices": [
+      "Applicators",
+      "Elderly people",
+      "Children",
+      "Pets"
+     ],
+     "answer": 2,
+     "ref": "p. 74, 'Swallowing or Oral Route'",
+     "why": "Children are the most common victims of these mishaps."
+    },
+    {
+     "id": "c05-s09-t4",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT a way the manual says to prevent accidental oral exposure?",
+     "choices": [
+      "Mark all pesticide measuring cups and containers",
+      "Store measuring devices away from those used for food and beverages",
+      "Pour leftover pesticide into a clean, labeled soda bottle",
+      "Wash your hands before eating, drinking, or smoking"
+     ],
+     "answer": 2,
+     "ref": "p. 74, 'Swallowing or Oral Route'",
+     "why": "Never store pesticides in beverage or other food containers."
+    },
+    {
+     "id": "c05-s09-t5",
+     "src": "test",
+     "kind": "tf",
+     "q": "Once breathed into the lungs, pesticides enter the bloodstream slowly, so systemic illness is unlikely.",
+     "answer": false,
+     "ref": "p. 74, 'Breathing or Inhalation Route'",
+     "why": "Pesticides in the lungs can enter the bloodstream very rapidly and damage other organs."
+    }
+   ]
+  },
+  {
+   "id": "c05-s10",
+   "chapter": "Chapter 5 · Pesticide Hazards and First Aid",
+   "title": "How toxicity is tested",
+   "pages": [
+    74,
+    75
+   ],
+   "body": [
+    {
+     "h": "Product Toxicity and Health Concerns"
+    },
+    {
+     "p": [
+      "Historically, the toxicity of pesticides and other substances has been determined by subjecting **test animals** (usually **rats, mice, rabbits, or dogs**) to various dosages of the active ingredient and to each of its formulated products.",
+      "Toxicity, measured for both short-term (**acute**) and long-term (**chronic**) exposure, is evaluated at a range of doses.",
+      "These are doses that cause no immediate effects, those that cause some immediate effects, those that cause delayed or long-term effects, and those that cause death."
+     ]
+    },
+    {
+     "p": [
+      "For some of the tests, the doses are administered only once to assess what effect or effects the pesticide may have from a **single exposure**.",
+      "Other tests involve dosing the animals over **several years** to simulate exposure to small amounts throughout a lifetime.",
+      "These tests can detect many different types of toxic effects.",
+      "They range from subtle changes, such as weight loss or gain (which could indicate underlying problems), to specific illnesses, to death."
+     ]
+    },
+    {
+     "p": [
+      "Today, agencies that regulate pesticides, prescription medications, over-the-counter drugs, and many other toxic substances are developing tests that can identify and predict the same toxic endpoints as the earlier tests required.",
+      "The newer methods use **mathematical models** and techniques **without animal testing**."
+     ]
+    },
+    {
+     "box": "Acute Toxicity",
+     "p": [
+      "Injury or illness produced from a **single exposure**.",
+      "**LD50** and **LC50** are common measures of the degree of acute toxicity."
+     ]
+    },
+    {
+     "box": "Chronic Toxicity",
+     "p": [
+      "The ability of small amounts of pesticide from **repeated, prolonged exposure** to cause injury or illness."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c05-s10-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "Which test animals have usually been used to determine pesticide toxicity?",
+     "choices": [
+      "Frogs, fish, and birds",
+      "Rats, mice, rabbits, or dogs",
+      "Monkeys and pigs",
+      "Insects and earthworms"
+     ],
+     "answer": 1,
+     "ref": "p. 74, 'Product Toxicity and Health Concerns'",
+     "why": "The manual lists rats, mice, rabbits, or dogs."
+    },
+    {
+     "id": "c05-s10-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT one of the dose ranges at which toxicity is evaluated?",
+     "choices": [
+      "Doses that cause no immediate effects",
+      "Doses that cause delayed or long-term effects",
+      "Doses that cause death",
+      "Doses that cause the test animals to become resistant"
+     ],
+     "answer": 3,
+     "ref": "p. 74, 'Product Toxicity and Health Concerns'",
+     "why": "The ranges are no immediate effects, some immediate effects, delayed or long-term effects, and death."
+    },
+    {
+     "id": "c05-s10-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A study doses test animals with small amounts of a pesticide over several years. What is it simulating?",
+     "choices": [
+      "A single accidental spill",
+      "Exposure to small amounts throughout a lifetime",
+      "Exposure during one mixing and loading job",
+      "Exposure through eye contact only"
+     ],
+     "answer": 1,
+     "ref": "p. 74, 'Product Toxicity and Health Concerns'",
+     "why": "Multi-year dosing simulates small exposures throughout a lifetime."
+    },
+    {
+     "id": "c05-s10-t4",
+     "src": "test",
+     "kind": "tf",
+     "q": "Newer testing methods use mathematical models and techniques without animal testing.",
+     "answer": true,
+     "ref": "p. 75, top of page",
+     "why": "Regulators are developing these to predict the same toxic endpoints."
+    },
+    {
+     "id": "c05-s10-t5",
+     "src": "test",
+     "kind": "short",
+     "q": "Define chronic toxicity.",
+     "answer": "The ability of small amounts of pesticide from repeated, prolonged exposure to cause injury or illness.",
+     "keys": [
+      [
+       "small",
+       "low",
+       "little"
+      ],
+      [
+       "repeated",
+       "repeat",
+       "prolonged",
+       "long",
+       "over time",
+       "many"
+      ],
+      [
+       "injury",
+       "illness",
+       "harm",
+       "sick",
+       "damage"
+      ]
+     ],
+     "ref": "p. 74, 'Chronic Toxicity' box",
+     "why": "Chronic toxicity comes from small amounts over repeated, prolonged exposure."
+    }
+   ]
+  },
+  {
+   "id": "c05-s11",
+   "chapter": "Chapter 5 · Pesticide Hazards and First Aid",
+   "title": "Acute toxicity and the LD50",
+   "pages": [
+    75,
+    75
+   ],
+   "body": [
+    {
+     "h": "Acute Toxicity"
+    },
+    {
+     "p": [
+      "**Acute toxicity** is the measure of harm (systemic or contact) caused by a **single, one-time exposure** event.",
+      "Acute effects are determined after test animals have been exposed to a chemical through contact with their skin and eyes, through inhalation, or through ingestion.",
+      "The harmful effects may be systemic or contact in nature (or a combination of both), depending on the product, formulation, dose, and route of exposure.",
+      "Acute effects occur shortly after exposure, usually **within 24 hours**."
+     ]
+    },
+    {
+     "p": [
+      "The following example of acute toxicity illustrates the damaging effects that can occur when people are exposed to a harmful dose of alcohol."
+     ]
+    },
+    {
+     "box": "Example: acute toxicity of alcohol",
+     "p": [
+      "Alcohol consumption is fairly common.",
+      "Each year, relatively few people die from lethal alcohol toxicity due to a single episode.",
+      "Many people, however, experience varying levels of harmful effects after drinking too much, including headaches, digestive disorders, and disorientation.",
+      "Symptoms from drinking alcohol depend on the dose, the exposure period, body chemistry, weight, diet and exercise, and other factors."
+     ]
+    },
+    {
+     "h": "The LD50"
+    },
+    {
+     "p": [
+      "**Acute systemic toxicity** is the measure of illness or death resulting from a change in critical body function in a test animal.",
+      "The common method used for comparing acute toxicity is the **LD50**, or **lethal dose 50%**.",
+      "The LD50 is the dose of a toxicant required to **kill 50%** of the population of test animals under a standard set of conditions.",
+      "For comparison purposes, LD50 values of pesticides are recorded in **milligrams** of toxicant per **kilogram** of body weight of the test animal (**mg/kg**).",
+      "When the animal is exposed to material by feeding, the result is referred to as the **oral LD50**.",
+      "When the material is tested by skin exposure, the result is called the **dermal LD50**.",
+      "As the caption on page 75 puts it, LD50 is the amount of pesticide that kills half of the test animals."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c05-s11-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "Acute effects usually occur within what time after exposure?",
+     "choices": [
+      "1 hour",
+      "24 hours",
+      "72 hours",
+      "30 days"
+     ],
+     "answer": 1,
+     "ref": "p. 75, 'Acute Toxicity'",
+     "why": "Acute effects occur shortly after exposure, usually within 24 hours."
+    },
+    {
+     "id": "c05-s11-t2",
+     "src": "test",
+     "kind": "short",
+     "q": "What does LD50 stand for?",
+     "answer": "Lethal dose 50%",
+     "keys": [
+      [
+       "lethal",
+       "letal"
+      ],
+      [
+       "dose"
+      ],
+      [
+       "50",
+       "fifty"
+      ]
+     ],
+     "ref": "p. 75, 'Acute Toxicity'",
+     "why": "LD50 is the lethal dose 50%, the dose that kills half the test animals."
+    },
+    {
+     "id": "c05-s11-t3",
+     "src": "test",
+     "kind": "mc",
+     "q": "In what units are pesticide LD50 values recorded?",
+     "choices": [
+      "Parts per million",
+      "Milligrams per liter",
+      "Milligrams of toxicant per kilogram of body weight (mg/kg)",
+      "Ounces per gallon"
+     ],
+     "answer": 2,
+     "ref": "p. 75, 'Acute Toxicity'",
+     "why": "LD50 is in mg/kg of the test animal's body weight."
+    },
+    {
+     "id": "c05-s11-t4",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A lab tests a pesticide by mixing it into the feed of test rats and finds the dose that kills half of them. What is that result called?",
+     "choices": [
+      "Oral LD50",
+      "Dermal LD50",
+      "LC50",
+      "Chronic LD50"
+     ],
+     "answer": 0,
+     "ref": "p. 75, 'Acute Toxicity'",
+     "why": "Exposure by feeding gives the oral LD50."
+    },
+    {
+     "id": "c05-s11-t5",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT a way the manual says test animals are exposed when acute effects are determined?",
+     "choices": [
+      "Contact with skin and eyes",
+      "Inhalation",
+      "Ingestion",
+      "Exposure spread over two years"
+     ],
+     "answer": 3,
+     "ref": "p. 75, 'Acute Toxicity'",
+     "why": "Acute effects come from a single exposure, not one spread over years."
+    }
+   ]
+  },
+  {
+   "id": "c05-s12",
+   "chapter": "Chapter 5 · Pesticide Hazards and First Aid",
+   "title": "The LC50, and what lower values mean",
+   "pages": [
+    75,
+    76
+   ],
+   "body": [
+    {
+     "p": [
+      "Another commonly used measure of acute toxicity is the **LC50**, or **lethal concentration 50%**.",
+      "This is the concentration of a substance **in air or water** required to kill 50% of the test population.",
+      "The LC50 is generally expressed as a ratio of the proportional amount of pesticide to a total volume of air or water.",
+      "This is usually expressed in **parts per million** or **milligrams per liter (mg/l)**.",
+      "The LC50 is a common measure of lethal effects of chemicals on **fish and other aquatic organisms**.",
+      "The LC50 values most directly applicable to human health are those expressing lethal concentration of chemicals **in air**."
+     ]
+    },
+    {
+     "p": [
+      "The LD50 and LC50 values are useful in comparing the systemic toxicity of different active ingredients as well as different formulations of the same active ingredient.",
+      "Table 5.1 summarizes the range of LD50 and LC50 values and their relationship to the different toxicity levels."
+     ]
+    },
+    {
+     "box": "Remember",
+     "p": [
+      "The **lower** the LD50 value of a pesticide, the **less it takes** to kill 50% of the population of test animals.",
+      "Therefore, the **greater the toxicity** of the chemical."
+     ]
+    },
+    {
+     "h": "Limitations of LD50 and LC50"
+    },
+    {
+     "p": [
+      "LD50 and LC50 values have limitations because they measure **only one toxic effect: death**.",
+      "They do not indicate what dose may lead to other, less serious acute systemic effects, or to other, possibly equally serious contact or delayed systemic effects.",
+      "Also, they **do not translate directly to humans** because our body systems are slightly different from those of test animals.",
+      "Lastly, the LD50 and LC50 are measures of a **single exposure**, not the potential sequence of effects resulting from multiple exposures."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c05-s12-r4",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which statement about pesticide toxicity is true?",
+     "choices": [
+      "A pesticide with an oral LD50 of 5 mg/kg is more toxic than a pesticide with an LD50 of 250 mg/kg.",
+      "Manufacturers are not required to include chronic toxicity warning statements on product labels.",
+      "The signal word on the product label indicates how likely the product is to cause both acute and chronic toxic effects."
+     ],
+     "answer": 0,
+     "fixed": true,
+     "ref": "p. 75, LD50 and LC50 (Review question 4, p. 87)",
+     "why": "The lower the LD50, the greater the toxicity."
+    },
+    {
+     "id": "c05-s12-t1",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "Pesticide A has an oral LD50 of 25 mg/kg. Pesticide B has an oral LD50 of 2,500 mg/kg. Which is more toxic?",
+     "choices": [
+      "Pesticide B, because its number is higher",
+      "Pesticide A, because it takes less to kill half the test animals",
+      "They are equally toxic",
+      "You cannot compare them"
+     ],
+     "answer": 1,
+     "ref": "p. 75, LD50 box",
+     "why": "The lower the LD50, the greater the toxicity."
+    },
+    {
+     "id": "c05-s12-t2",
+     "src": "test",
+     "kind": "mc",
+     "q": "How is the LC50 usually expressed?",
+     "choices": [
+      "Milligrams per kilogram of body weight",
+      "Parts per million or milligrams per liter (mg/l)",
+      "Teaspoons per 150-pound person",
+      "Percent of body surface"
+     ],
+     "answer": 1,
+     "ref": "p. 75, 'Acute Toxicity'",
+     "why": "LC50 is a concentration in air or water, in ppm or mg/l."
+    },
+    {
+     "id": "c05-s12-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT a limitation of LD50 and LC50 values?",
+     "choices": [
+      "They measure only one toxic effect, death",
+      "They do not translate directly to humans",
+      "They measure a single exposure, not multiple exposures",
+      "They cannot compare different formulations of the same active ingredient"
+     ],
+     "answer": 3,
+     "ref": "p. 75, 'Acute Toxicity'",
+     "why": "They are useful for comparing formulations of the same active ingredient."
+    },
+    {
+     "id": "c05-s12-t4",
+     "src": "test",
+     "kind": "tf",
+     "q": "The LC50 values most directly applicable to human health are those for lethal concentrations in water.",
+     "answer": false,
+     "ref": "p. 75, 'Acute Toxicity'",
+     "why": "For human health, the most applicable LC50 values are concentrations in air."
+    },
+    {
+     "id": "c05-s12-t5",
+     "src": "test",
+     "kind": "short",
+     "q": "LD50 and LC50 values measure only one toxic effect. What is it?",
+     "answer": "Death",
+     "accept": [
+      "death",
+      "dying",
+      "killing",
+      "lethality",
+      "kill",
+      "killing half",
+      "mortality"
+     ],
+     "ref": "p. 75, 'Acute Toxicity'",
+     "why": "They measure only death, not lesser or delayed effects."
+    }
+   ]
+  },
+  {
+   "id": "c05-s13",
+   "chapter": "Chapter 5 · Pesticide Hazards and First Aid",
+   "title": "Table 5.1: Toxicity categories",
+   "pages": [
+    76,
+    76
+   ],
+   "body": [
+    {
+     "p": [
+      "Table 5.1 matches each signal word to its toxicity level and hazard class, LD50 and LC50 ranges, contact injury concern, and toxicity concern.",
+      "Oral and dermal LD50 values are in **mg/kg**. Inhalation LC50 values are in **mg/l**."
+     ]
+    },
+    {
+     "fig": "tab-5-1"
+    },
+    {
+     "box": "DANGER-POISON, PELIGRO, skull and crossbones (Hazard Class I)",
+     "list": [
+      "Contact injury concern: signal word based on oral, dermal, or inhalation toxicity.",
+      "Toxicity concern: very low dose could kill a person (**a few drops to 1 teaspoon**)."
+     ]
+    },
+    {
+     "box": "DANGER, PELIGRO (Hazard Class I)",
+     "list": [
+      "Contact injury concern: **corrosive**. Permanent or severe skin, eye, or respiratory damage.",
+      "Toxicity concern: based on the corrosive or irritant properties of the product."
+     ]
+    },
+    {
+     "box": "WARNING, AVISO (Hazard Class II)",
+     "list": [
+      "Contact injury concern: moderate skin, eye, or respiratory damage.",
+      "Toxicity concern: small to medium dose could cause death, illness, or skin, eye, or respiratory damage (**1 teaspoon to 1 ounce**)."
+     ]
+    },
+    {
+     "box": "CAUTION (Hazard Class III)",
+     "list": [
+      "Contact injury concern: mild skin, eye, or respiratory irritation.",
+      "Toxicity concern: medium to large dose could cause death, illness, or skin, eye, or respiratory damage (**1 ounce to 1 pint or 1 pound**)."
+     ]
+    },
+    {
+     "box": "CAUTION or no signal word (Hazard Class IV)",
+     "list": [
+      "Contact injury concern: slight concern for skin, eye, or respiratory injury.",
+      "Toxicity concern: slight to none (**over 1 pint or 1 pound**)."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "tab-5-1",
+     "title": "Table 5.1: Toxicity Categories",
+     "page": "p. 76",
+     "svgFile": "tab-5-1.svg",
+     "explain": [
+      "DANGER, POISON, PELIGRO with skull and crossbones: highly toxic, Hazard Class I. Oral LD50 trace to 50, dermal LD50 trace to 200, inhalation LC50 trace to 0.2.",
+      "DANGER, PELIGRO without the skull: also Hazard Class I, based on corrosive or irritant properties, so no LD50 range is given.",
+      "WARNING, AVISO: moderately toxic, Hazard Class II. Oral 50 to 500, dermal 200 to 2,000, inhalation 0.2 to 2.",
+      "CAUTION: slightly toxic, Hazard Class III. Oral 500 to 5,000, dermal 2,000 to 20,000, inhalation 2 to 20.",
+      "CAUTION or no signal word: Hazard Class IV. Oral greater than 5,000, dermal greater than 20,000, inhalation greater than 20."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c05-s13-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "What is the oral LD50 range for products with the signal word WARNING?",
+     "choices": [
+      "Trace to 50 mg/kg",
+      "50 to 500 mg/kg",
+      "500 to 5,000 mg/kg",
+      "Greater than 5,000 mg/kg"
+     ],
+     "answer": 1,
+     "ref": "p. 76, Table 5.1",
+     "why": "WARNING, Hazard Class II, is 50 to 500 mg/kg oral."
+    },
+    {
+     "id": "c05-s13-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A product's concern is systemic, with an oral LD50 of 3,000 mg/kg. Which signal word and class fit?",
+     "choices": [
+      "DANGER-POISON, Class I",
+      "WARNING, Class II",
+      "CAUTION, Class III",
+      "No signal word, Class IV"
+     ],
+     "answer": 2,
+     "ref": "p. 76, Table 5.1",
+     "why": "500 to 5,000 mg/kg oral is CAUTION, Hazard Class III."
+    },
+    {
+     "id": "c05-s13-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A product has a dermal LD50 of 150 mg/kg. Which signal word does Table 5.1 match it to?",
+     "choices": [
+      "CAUTION",
+      "WARNING",
+      "DANGER-POISON with skull and crossbones",
+      "No signal word"
+     ],
+     "answer": 2,
+     "ref": "p. 76, Table 5.1",
+     "why": "Dermal LD50 trace to 200 mg/kg is Hazard Class I, DANGER-POISON."
+    },
+    {
+     "id": "c05-s13-t4",
+     "src": "test",
+     "kind": "mc",
+     "q": "What amount of a DANGER-POISON product could kill a person, according to Table 5.1?",
+     "choices": [
+      "A few drops to 1 teaspoon",
+      "1 teaspoon to 1 ounce",
+      "1 ounce to 1 pint or 1 pound",
+      "Over 1 pint or 1 pound"
+     ],
+     "answer": 0,
+     "ref": "p. 76, Table 5.1",
+     "why": "A very low dose, a few drops to 1 teaspoon, could kill a person."
+    },
+    {
+     "id": "c05-s13-t5",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these signal words is NOT used for Hazard Class I products?",
+     "choices": [
+      "DANGER-POISON",
+      "DANGER",
+      "PELIGRO",
+      "WARNING"
+     ],
+     "answer": 3,
+     "ref": "p. 76, Table 5.1",
+     "why": "WARNING is Hazard Class II."
+    },
+    {
+     "id": "c05-s13-t6",
+     "src": "test",
+     "kind": "tf",
+     "q": "Hazard Class IV products have an oral LD50 greater than 5,000 mg/kg.",
+     "answer": true,
+     "ref": "p. 76, Table 5.1",
+     "why": "Class IV is greater than 5,000 oral, greater than 20,000 dermal, greater than 20 inhalation."
+    }
+   ]
+  },
+  {
+   "id": "c05-s14",
+   "chapter": "Chapter 5 · Pesticide Hazards and First Aid",
+   "title": "Corrosive effects and how the signal word is chosen",
+   "pages": [
+    76,
+    76
+   ],
+   "body": [
+    {
+     "p": [
+      "Some pesticides produce acute toxic effects because of their **corrosive or irritant** properties.",
+      "These can result in respiratory, skin, or eye irritation or damage.",
+      "Some can cause **severe burns** or **permanent blindness**.",
+      "Chemicals with these irritant or corrosive properties require extra care and special PPE.",
+      "**Fungicides, herbicides, and some insecticides** may cause contact injuries."
+     ]
+    },
+    {
+     "p": [
+      "Manufacturers list nonlethal systemic and contact effects in addition to the signal word.",
+      "Systemic and contact acute toxicity concerns are indicated by the signal word.",
+      "They are further explained in the **\"Precautionary Statements\"** portion of the product label, under the **\"Hazards to Humans and Domestic Animals\"** section."
+     ]
+    },
+    {
+     "p": [
+      "**EPA and the manufacturer** take into account both systemic and contact toxicity measures in assigning the signal word and toxicity category to a product.",
+      "These are assigned on the basis of the **greatest concern**.",
+      "That concern may be oral, dermal, or inhalation systemic effects, or skin, eye, or respiratory tract contact effects."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c05-s14-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "On what basis are a product's signal word and toxicity category assigned?",
+     "choices": [
+      "The cheapest formulation",
+      "The greatest concern, whether systemic or contact",
+      "Only the oral LD50",
+      "Only the inhalation LC50"
+     ],
+     "answer": 1,
+     "ref": "p. 76, 'Acute Toxicity'",
+     "why": "They are assigned on the basis of the greatest concern, systemic or contact."
+    },
+    {
+     "id": "c05-s14-t2",
+     "src": "test",
+     "kind": "short",
+     "q": "Who assigns the signal word and toxicity category to a pesticide product?",
+     "answer": "EPA and the manufacturer",
+     "keys": [
+      [
+       "epa",
+       "environmental protection agency"
+      ],
+      [
+       "manufacturer",
+       "manufacturers",
+       "maker",
+       "company",
+       "registrant"
+      ]
+     ],
+     "ref": "p. 76, 'Acute Toxicity'",
+     "why": "EPA and the manufacturer consider both systemic and contact toxicity."
+    },
+    {
+     "id": "c05-s14-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "You read the signal word on a label and want more detail on its human health hazards. Where on the label do you look?",
+     "choices": [
+      "The directions for use",
+      "The storage and disposal section",
+      "\"Precautionary Statements,\" under \"Hazards to Humans and Domestic Animals\"",
+      "The net contents line"
+     ],
+     "answer": 2,
+     "ref": "p. 76, 'Acute Toxicity'",
+     "why": "Concerns are explained under Precautionary Statements, Hazards to Humans and Domestic Animals."
+    },
+    {
+     "id": "c05-s14-t4",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT listed as an effect of pesticides with corrosive or irritant properties?",
+     "choices": [
+      "Severe burns",
+      "Permanent blindness",
+      "Respiratory irritation",
+      "Reduced blood clotting"
+     ],
+     "answer": 3,
+     "ref": "p. 76, 'Acute Toxicity'",
+     "why": "Corrosives cause burns, blindness, and skin, eye, or respiratory irritation or damage."
+    },
+    {
+     "id": "c05-s14-t5",
+     "src": "test",
+     "kind": "tf",
+     "q": "Fungicides, herbicides, and some insecticides may cause contact injuries.",
+     "answer": true,
+     "ref": "p. 76, 'Acute Toxicity'",
+     "why": "The manual names all three as possible causes of contact injury."
+    }
+   ]
+  },
+  {
+   "id": "c05-s15",
+   "chapter": "Chapter 5 · Pesticide Hazards and First Aid",
+   "title": "GHS and the four signal words",
+   "pages": [
+    76,
+    77
+   ],
+   "body": [
+    {
+     "h": "Signal Words and Skull and Crossbones Symbol"
+    },
+    {
+     "p": [
+      "The **Globally Harmonized System (GHS)** for classification and labeling of chemicals is an **international system for hazard communication**.",
+      "The goal of GHS is to help ensure more **consistency** in the classification and labeling of all chemicals, thereby improving and simplifying hazard communication.",
+      "This improved communication system will alert the user to the presence of a hazard and the need to minimize exposure and risk.",
+      "The result should be safer transportation, handling, and use of chemicals."
+     ]
+    },
+    {
+     "p": [
+      "Under GHS, many substances, including paint, oven cleaner, dish soap, antifreeze, window cleaner, and others, could eventually bear common signal words and **pictograms**.",
+      "Signal words and pictograms will identify more types of hazards than the current signal words on pesticide labels.",
+      "For instance, separate pictograms and signal words will provide information about **chronic toxicity** as well as acute toxicity.",
+      "For the current status and implementation of GHS, go to www.epa.gov/oppfead1/international/globalharmon.htm."
+     ]
+    },
+    {
+     "p": [
+      "There are **four distinct signal words** found on pesticide labels: **DANGER-POISON**, **DANGER**, **WARNING**, and **CAUTION**.",
+      "Signal words are based on the **acute toxicity** of the product.",
+      "Depending on their acute toxicity, pesticide products are categorized into several **hazard classes**.",
+      "Some very low toxicity products (**Hazard Class IV**) are **not required to have a signal word**."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c05-s15-t1",
+     "src": "test",
+     "kind": "short",
+     "q": "Name the four signal words found on pesticide labels.",
+     "answer": "DANGER-POISON, DANGER, WARNING, and CAUTION",
+     "keys": [
+      [
+       "poison"
+      ],
+      [
+       "danger"
+      ],
+      [
+       "warning"
+      ],
+      [
+       "caution"
+      ]
+     ],
+     "ref": "p. 77, signal words",
+     "why": "DANGER-POISON, DANGER, WARNING, and CAUTION."
+    },
+    {
+     "id": "c05-s15-t2",
+     "src": "test",
+     "kind": "mc",
+     "q": "Signal words are based on what?",
+     "choices": [
+      "The chronic toxicity of the product",
+      "The acute toxicity of the product",
+      "The price of the product",
+      "How long the product persists"
+     ],
+     "answer": 1,
+     "ref": "p. 77, signal words",
+     "why": "Signal words are based on acute toxicity."
+    },
+    {
+     "id": "c05-s15-t3",
+     "src": "test",
+     "kind": "tf",
+     "q": "Hazard Class IV products must carry the signal word CAUTION.",
+     "answer": false,
+     "ref": "p. 77, signal words",
+     "why": "Some very low toxicity Class IV products are not required to have a signal word."
+    },
+    {
+     "id": "c05-s15-t4",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT a stated goal or result of GHS?",
+     "choices": [
+      "More consistency in classifying and labeling chemicals",
+      "Alerting the user to a hazard and the need to minimize exposure",
+      "Safer transportation, handling, and use of chemicals",
+      "Removing signal words from pesticide labels"
+     ],
+     "answer": 3,
+     "ref": "p. 76, 'Signal Words and Skull and Crossbones Symbol'",
+     "why": "GHS adds common signal words and pictograms, it does not remove them."
+    },
+    {
+     "id": "c05-s15-t5",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "Under GHS, a chemical label carries a separate pictogram for a long-term health hazard. What kind of toxicity is it warning about?",
+     "choices": [
+      "Chronic toxicity",
+      "Acute oral toxicity only",
+      "Fish toxicity",
+      "Fire hazard"
+     ],
+     "answer": 0,
+     "ref": "p. 77, top of page",
+     "why": "GHS pictograms and signal words can give information about chronic toxicity as well as acute."
+    }
+   ]
+  },
+  {
+   "id": "c05-s16",
+   "chapter": "Chapter 5 · Pesticide Hazards and First Aid",
+   "title": "DANGER-POISON and DANGER",
+   "pages": [
+    77,
+    77
+   ],
+   "body": [
+    {
+     "h": "Danger-Poison"
+    },
+    {
+     "p": [
+      "Pesticides classified as **highly toxic** (**Hazard Class I**) with acute oral LD50 values from **a trace to 50 mg/kg** must have the signal words **DANGER** and **POISON** (in **red letters**) and a **skull and crossbones** symbol prominently displayed on the package label.",
+      "The lethal toxicity may be based on oral, dermal, or inhalation exposure, depending on which exposure route presents the greatest risk for that particular product."
+     ]
+    },
+    {
+     "p": [
+      "**PELIGRO**, the Spanish word for DANGER, must also appear on the labels of highly toxic chemicals.",
+      "As little as **a few drops** of a DANGER-POISON material taken orally could be fatal to a **150-pound person**.",
+      "Note that the human oral LD50 of **paraquat**, a herbicide active ingredient, is **3 to 5 mg/kg**, whereas the rat oral LD50 is **150 mg/kg**.",
+      "Consult the precautionary statements that follow the signal word and symbol on the label to learn more about the product's hazard to humans.",
+      "**Most fumigants**, some insecticides and rodenticides, and a few herbicides are assigned the DANGER-POISON signal word."
+     ]
+    },
+    {
+     "box": "DANGER-POISON PELIGRO (shown with the skull and crossbones)",
+     "p": [
+      "Fatal if swallowed.",
+      "May cause blindness if swallowed.",
+      "May be fatal if inhaled or absorbed through eyes.",
+      "Causes irreversible eye damage.",
+      "Do not get in eyes, on skin, or on clothing.",
+      "Do not breathe vapors or spray mist."
+     ]
+    },
+    {
+     "h": "Danger"
+    },
+    {
+     "p": [
+      "Some highly toxic (Hazard Class I) pesticide products carry the signal word **DANGER** (without the word \"poison\" or the skull and crossbones symbol) because of their potential to cause **acute contact injury**.",
+      "DANGER indicates the potential for **permanent or severe damage to skin, eyes, or lungs**.",
+      "For products with this signal word, it has been determined that these contact effects are more dangerous than the acute systemic toxicity (LD50) of the product.",
+      "Several carry warnings of concern about the products' ability to cause **irreversible eye damage** at low exposures.",
+      "Consult the precautionary statements that follow the signal word on the label to learn more about the products' hazard for humans.",
+      "Some herbicides, insecticides, and antimicrobials carry the DANGER signal word."
+     ]
+    },
+    {
+     "gallery": [
+      "p77-danger-poison",
+      "p77-danger"
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "p77-danger-poison",
+     "title": "Hazard Class 1 pesticides that are highly toxic due to acute oral, dermal, or inhalation toxicity must have the signal words DANGER and POISON and the Spanish word for danger, PELIGRO, in red letters, and the skull and crossbones symbol prominently displayed on the package label.",
+     "page": "p. 77",
+     "imgFile": "p77-danger-poison.jpg"
+    },
+    {
+     "id": "p77-danger",
+     "title": "Hazard Class 1 pesticides that are highly toxic due to acute contact toxicity must have the word DANGER but not the word POISON or the skull and crossbones symbol.",
+     "page": "p. 77",
+     "imgFile": "p77-danger.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c05-s16-r3",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which signal word is associated with very low oral LD50 values?",
+     "choices": [
+      "DANGER-POISON.",
+      "WARNING.",
+      "CAUTION."
+     ],
+     "answer": 0,
+     "fixed": true,
+     "ref": "p. 77, 'Danger-Poison' (Review question 3, p. 87)",
+     "why": "DANGER-POISON goes on products with oral LD50 values from a trace to 50 mg/kg."
+    },
+    {
+     "id": "c05-s16-t1",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A Hazard Class I product with an acute oral LD50 of 20 mg/kg must show which of these on its label?",
+     "choices": [
+      "CAUTION only",
+      "WARNING and AVISO",
+      "DANGER and POISON in red letters, PELIGRO, and the skull and crossbones",
+      "DANGER only, with no symbol"
+     ],
+     "answer": 2,
+     "ref": "p. 77, 'Danger-Poison'",
+     "why": "Oral LD50 trace to 50 mg/kg requires DANGER-POISON in red, PELIGRO, and the skull and crossbones."
+    },
+    {
+     "id": "c05-s16-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A label reads DANGER and PELIGRO but has no skull and crossbones and no word POISON. Why?",
+     "choices": [
+      "It is only slightly toxic",
+      "Its main concern is acute contact injury, such as severe skin, eye, or lung damage",
+      "It is a Hazard Class IV product",
+      "It is not a restricted product"
+     ],
+     "answer": 1,
+     "ref": "p. 77, 'Danger'",
+     "why": "DANGER without POISON marks Class I products whose contact effects are the bigger danger."
+    },
+    {
+     "id": "c05-s16-t3",
+     "src": "test",
+     "kind": "mc",
+     "q": "How much of a DANGER-POISON material taken orally could be fatal to a 150-pound person?",
+     "choices": [
+      "As little as a few drops",
+      "About 1 ounce",
+      "About 1 pint",
+      "About 1 pound"
+     ],
+     "answer": 0,
+     "ref": "p. 77, 'Danger-Poison'",
+     "why": "As little as a few drops could be fatal."
+    },
+    {
+     "id": "c05-s16-t4",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT required on a DANGER-POISON label?",
+     "choices": [
+      "The word PELIGRO",
+      "The skull and crossbones symbol",
+      "DANGER and POISON in red letters",
+      "The word AVISO"
+     ],
+     "answer": 3,
+     "ref": "p. 77, 'Danger-Poison'",
+     "why": "AVISO goes with WARNING, Hazard Class II."
+    },
+    {
+     "id": "c05-s16-t5",
+     "src": "test",
+     "kind": "tf",
+     "q": "Most fumigants are assigned the DANGER-POISON signal word.",
+     "answer": true,
+     "ref": "p. 77, 'Danger-Poison'",
+     "why": "Most fumigants, some insecticides and rodenticides, and a few herbicides are DANGER-POISON."
+    },
+    {
+     "id": "c05-s16-t6",
+     "src": "test",
+     "kind": "mc",
+     "q": "For paraquat, the manual compares the human oral LD50 with the rat oral LD50. What are they?",
+     "choices": [
+      "Human 150 mg/kg, rat 3 to 5 mg/kg",
+      "Human 3 to 5 mg/kg, rat 150 mg/kg",
+      "Both 50 mg/kg",
+      "Human 500 mg/kg, rat 5,000 mg/kg"
+     ],
+     "answer": 1,
+     "ref": "p. 77, 'Danger-Poison'",
+     "why": "Paraquat is far more toxic to humans (3 to 5 mg/kg) than to rats (150 mg/kg)."
+    }
+   ]
+  },
+  {
+   "id": "c05-s17",
+   "chapter": "Chapter 5 · Pesticide Hazards and First Aid",
+   "title": "WARNING and CAUTION",
+   "pages": [
+    78,
+    78
+   ],
+   "body": [
+    {
+     "h": "Warning"
+    },
+    {
+     "p": [
+      "A pesticide product considered **moderately toxic** (**Hazard Class II**) must have the signal words **WARNING** and **AVISO** (Spanish) on its label.",
+      "If the concern is due to systemic toxicity, the acute oral LD50 values range from **50 to 500 mg/kg**.",
+      "**1 teaspoonful to 1 ounce** (2 tablespoons) of this material could be fatal to a 150-pound person.",
+      "The concern could also be due to contact injury to skin, eyes, or respiratory tract.",
+      "The WARNING signal word alone **does not indicate** whether the concern is systemic, contact, or both.",
+      "Consult the precautionary statements that follow the signal word on the label to learn about the product's specific contact or systemic hazard for humans."
+     ]
+    },
+    {
+     "h": "Caution"
+    },
+    {
+     "p": [
+      "Pesticide products classified as **slightly toxic** (**Hazard Class III**) are required to have the signal word **CAUTION** on the pesticide label.",
+      "Acute toxicity may be systemic or contact in nature.",
+      "If systemic, the acute oral LD50 values are between **500 and 5,000 mg/kg**.",
+      "Contact effects are generally irritation of eyes, skin, or respiratory tract.",
+      "Consult the precautionary statements that follow the signal word on the label to learn about the product's contact or systemic hazard to humans."
+     ]
+    },
+    {
+     "gallery": [
+      "p78-warning",
+      "p78-caution"
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "p78-warning",
+     "title": "Hazard Class II pesticides must have the signal word WARNING (AVISO in Spanish) on the label.",
+     "page": "p. 78",
+     "imgFile": "p78-warning.jpg"
+    },
+    {
+     "id": "p78-caution",
+     "title": "Hazard Class III pesticides are required to have the signal word CAUTION on the label.",
+     "page": "p. 78",
+     "imgFile": "p78-caution.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c05-s17-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "AVISO is the Spanish word that appears with which signal word?",
+     "choices": [
+      "DANGER",
+      "WARNING",
+      "CAUTION",
+      "POISON"
+     ],
+     "answer": 1,
+     "ref": "p. 78, 'Warning'",
+     "why": "WARNING and AVISO go together on Hazard Class II labels."
+    },
+    {
+     "id": "c05-s17-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A label says WARNING. Can you tell from the signal word alone whether the concern is systemic or contact?",
+     "choices": [
+      "Yes, WARNING always means systemic",
+      "Yes, WARNING always means contact",
+      "No, read the precautionary statements that follow the signal word",
+      "No, call the manufacturer before opening it"
+     ],
+     "answer": 2,
+     "ref": "p. 78, 'Warning'",
+     "why": "WARNING alone does not say systemic, contact, or both."
+    },
+    {
+     "id": "c05-s17-t3",
+     "src": "test",
+     "kind": "mc",
+     "q": "How much of a WARNING product could be fatal to a 150-pound person?",
+     "choices": [
+      "A few drops",
+      "1 teaspoonful to 1 ounce (2 tablespoons)",
+      "1 ounce to 1 pint",
+      "Over 1 pint"
+     ],
+     "answer": 1,
+     "ref": "p. 78, 'Warning'",
+     "why": "WARNING is 1 teaspoonful to 1 ounce."
+    },
+    {
+     "id": "c05-s17-t4",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT true of a CAUTION product?",
+     "choices": [
+      "It is slightly toxic",
+      "It is Hazard Class III",
+      "If systemic, its oral LD50 is 500 to 5,000 mg/kg",
+      "It must also carry the word PELIGRO"
+     ],
+     "answer": 3,
+     "ref": "p. 78, 'Caution'",
+     "why": "PELIGRO is for Hazard Class I products."
+    },
+    {
+     "id": "c05-s17-t5",
+     "src": "test",
+     "kind": "tf",
+     "q": "Contact effects of CAUTION products are generally irritation of eyes, skin, or respiratory tract.",
+     "answer": true,
+     "ref": "p. 78, 'Caution'",
+     "why": "CAUTION contact effects are generally irritation."
+    }
+   ]
+  },
+  {
+   "id": "c05-s18",
+   "chapter": "Chapter 5 · Pesticide Hazards and First Aid",
+   "title": "Chronic toxicity",
+   "pages": [
+    78,
+    78
+   ],
+   "body": [
+    {
+     "h": "Chronic Toxicity"
+    },
+    {
+     "p": [
+      "The **chronic toxicity** of a pesticide is determined by subjecting test animals to long-term exposure to an active ingredient.",
+      "The length of exposure is typically **two years**, which represents a lifetime for these test animals.",
+      "The harmful effects that occur from **small, repeated doses over time** are termed **chronic effects**.",
+      "The following is an example of chronic toxicity."
+     ]
+    },
+    {
+     "box": "Example: chronic toxicity of alcohol",
+     "p": [
+      "In addition to acute toxicity of alcohol, chronic effects may also occur from alcohol exposure over long periods.",
+      "Cirrhosis and other liver diseases, miscarriages, cardiovascular disease, neurological effects, and various cancers have been shown to be associated with long-term use of alcohol.",
+      "As with acute effects, the illnesses and symptoms expressed in different people depend on the dose, the frequency of exposure, body chemistry, weight, diet and exercise, and other factors."
+     ]
+    },
+    {
+     "p": [
+      "The general range of suspected chronic effects from pesticide exposure includes genetic changes, noncancerous or cancerous tumors, reproductive effects, infertility, fetal toxicity, miscarriages, birth defects, blood disorders, nerve disorders, and hormonal or endocrine-mediated diseases.",
+      "Each pesticide has its own characteristic pattern of diseases and adverse effects that it might cause.",
+      "However, **no single pesticide** is likely to be able to cause the entire range of harmful effects listed here.",
+      "Remember that the tests used to characterize each pesticide's potential for harm are conducted at different doses.",
+      "This helps regulators determine levels and conditions under which each pesticide could safely be used.",
+      "**Minimizing the likelihood of chronic effects is one of the important reasons to follow all label directions and be cautious in handling and applying pesticides.**"
+     ]
+    },
+    {
+     "p": [
+      "If a product causes chronic effects in laboratory animals, the manufacturer is required to include **chronic toxicity warning statements** on the product label.",
+      "This information is also listed on the **SDS**.",
+      "The chronic toxicity of a pesticide is more difficult to determine through laboratory analysis than the acute toxicity, and it cannot be expressed by a single measure.",
+      "Thus, there is **no chronic toxicity measure equivalent to the acute toxicity LD50**."
+     ]
+    }
+   ],
+   "figures": [],
+   "questions": [
+    {
+     "id": "c05-s18-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "How long is the typical exposure period in a chronic toxicity test?",
+     "choices": [
+      "24 hours",
+      "30 days",
+      "Six months",
+      "Two years"
+     ],
+     "answer": 3,
+     "ref": "p. 78, 'Chronic Toxicity'",
+     "why": "Two years represents a lifetime for the test animals."
+    },
+    {
+     "id": "c05-s18-t2",
+     "src": "test",
+     "kind": "tf",
+     "q": "There is a chronic toxicity measure equivalent to the acute toxicity LD50.",
+     "answer": false,
+     "ref": "p. 78, 'Chronic Toxicity'",
+     "why": "Chronic toxicity cannot be expressed by a single measure, so there is no LD50 equivalent."
+    },
+    {
+     "id": "c05-s18-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A product caused chronic effects in laboratory animals. What must the manufacturer do?",
+     "choices": [
+      "Nothing, since chronic effects are not regulated",
+      "Include chronic toxicity warning statements on the label, also listed on the SDS",
+      "Change the signal word to DANGER-POISON",
+      "Stop selling the product"
+     ],
+     "answer": 1,
+     "ref": "p. 78, 'Chronic Toxicity'",
+     "why": "Chronic toxicity warning statements go on the label and the SDS."
+    },
+    {
+     "id": "c05-s18-t4",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT in the manual's list of suspected chronic effects from pesticide exposure?",
+     "choices": [
+      "Birth defects",
+      "Blood disorders",
+      "Infertility",
+      "Skin redness within 24 hours of one exposure"
+     ],
+     "answer": 3,
+     "ref": "p. 78, 'Chronic Toxicity'",
+     "why": "Redness within 24 hours of one exposure is an acute contact effect."
+    },
+    {
+     "id": "c05-s18-t5",
+     "src": "test",
+     "kind": "short",
+     "q": "What are chronic effects?",
+     "answer": "Harmful effects that occur from small, repeated doses over time.",
+     "keys": [
+      [
+       "small",
+       "low",
+       "little",
+       "tiny"
+      ],
+      [
+       "repeated",
+       "repeat",
+       "repeatedly",
+       "multiple",
+       "many"
+      ],
+      [
+       "over time",
+       "time",
+       "long",
+       "prolonged",
+       "years"
+      ]
+     ],
+     "ref": "p. 78, 'Chronic Toxicity'",
+     "why": "Chronic effects come from small, repeated doses over time."
+    }
+   ]
+  },
+  {
+   "id": "c05-s19",
+   "chapter": "Chapter 5 · Pesticide Hazards and First Aid",
+   "title": "Delayed effects and how the body responds",
+   "pages": [
+    79,
+    79
+   ],
+   "body": [
+    {
+     "h": "Delayed Effects"
+    },
+    {
+     "p": [
+      "**Delayed effects** are illnesses or injuries that do not appear immediately (**within 24 hours**) after exposure to a pesticide.",
+      "They may be delayed for **weeks, months, or even years**.",
+      "Whether you experience delayed effects depends on the pesticide, the extent and route of exposure or exposures, and how often you were exposed.",
+      "Under **\"Precautionary Statements,\"** the label states any delayed effects that the pesticide might cause and how to avoid exposures leading to them.",
+      "Delayed effects may be caused by either an **acute or a chronic exposure** to a pesticide."
+     ]
+    },
+    {
+     "h": "Factors Affecting Response"
+    },
+    {
+     "p": [
+      "Like all living organisms, humans have built-in mechanisms to reduce the risks of toxic substances, including pesticides, and to eliminate them from the body.",
+      "The **liver** is the primary organ that transforms toxic substances to nontoxic or less-toxic forms."
+     ]
+    },
+    {
+     "p": [
+      "The chemical breakdown process performed by the liver also helps make most of these substances more **water-soluble**.",
+      "They can then be eliminated from the body in **urine**.",
+      "The **kidneys** are the most important organs in filtering water-soluble pesticides and other unwanted chemicals out of the blood and into the urine.",
+      "Unwanted substances that cannot be made water-soluble eventually are stored in our bodies, primarily in **fatty deposits** throughout the body and in **breast milk**.",
+      "Most of the pesticides in use today are more water-soluble than those of the past (**before 1970**).",
+      "Most are eliminated relatively quickly (**hours to days** instead of months to years) in urine."
+     ]
+    },
+    {
+     "p": [
+      "Some pesticides can cause changes, called **mutations**, to our **DNA**.",
+      "DNA is the carrier of genetic information in our bodies.",
+      "This information is stored as codes for all of the chemicals our bodies make to help them function properly.",
+      "Some DNA mutations do not cause any effects.",
+      "Others cause serious malfunctions and may lead to various types of illnesses or other problems, such as **birth defects**.",
+      "Although our bodies constantly monitor and repair DNA mutations, over time our ability to repair the DNA **decreases**."
+     ]
+    },
+    {
+     "p": [
+      "Our bodies continually manufacture the **enzymes** we need to help detoxify pesticides and other toxic substances.",
+      "However, continual or very frequent exposures may **overwhelm** the body's capacity for chemical breakdown and elimination.",
+      "Keeping your exposure low and having **periods of nonexposure** between applications of the same class of pesticide can reduce the chance that your body will be overwhelmed."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c05-s19-r6",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which statement about what happens to pesticides inside the body is true?",
+     "choices": [
+      "Most pesticides used today are stored in our body fat.",
+      "The kidneys filter pesticides from the blood into the urine.",
+      "Most chemical breakdown of toxic substances takes place wherever the pesticide is first absorbed."
+     ],
+     "answer": 1,
+     "fixed": true,
+     "ref": "p. 79, 'Factors Affecting Response' (Review question 6, p. 87)",
+     "why": "The kidneys filter water-soluble pesticides from the blood into the urine. The liver does the breakdown."
+    },
+    {
+     "id": "c05-s19-t1",
+     "kind": "mc",
+     "q": "Delayed effects are illnesses or injuries that do NOT appear within how long after exposure?",
+     "choices": [
+      "1 hour",
+      "24 hours",
+      "7 days",
+      "30 days"
+     ],
+     "answer": 1,
+     "ref": "p. 79, 'Delayed Effects'",
+     "why": "Delayed effects do not appear immediately, meaning within 24 hours.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s19-t2",
+     "kind": "mc",
+     "q": "Which organ is the primary organ that transforms toxic substances to nontoxic or less-toxic forms?",
+     "choices": [
+      "Kidneys",
+      "Lungs",
+      "Liver",
+      "Skin"
+     ],
+     "answer": 2,
+     "ref": "p. 79, 'Factors Affecting Response'",
+     "why": "The liver transforms toxic substances. The kidneys filter water-soluble chemicals into urine.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s19-t3",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT true of delayed effects, according to the manual?",
+     "choices": [
+      "They may be delayed for weeks, months, or even years",
+      "They can only be caused by a chronic exposure",
+      "They may be caused by either an acute or a chronic exposure",
+      "The label lists them under \"Precautionary Statements\""
+     ],
+     "answer": 1,
+     "ref": "p. 79, 'Delayed Effects'",
+     "why": "Delayed effects may come from either an acute or a chronic exposure.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s19-t4",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "An applicator sprays the same class of pesticide every day for weeks with no break. Based on the manual, what is the concern?",
+     "choices": [
+      "Continual exposures may overwhelm the body's capacity for chemical breakdown and elimination",
+      "The pesticide will become more water-soluble",
+      "The kidneys will stop producing urine",
+      "There is no concern if no symptoms appear in 24 hours"
+     ],
+     "answer": 0,
+     "ref": "p. 79, 'Factors Affecting Response'",
+     "why": "Keep exposure low and allow periods of nonexposure between applications of the same class.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s19-t5",
+     "kind": "tf",
+     "q": "Unwanted substances that cannot be made water-soluble are stored primarily in fatty deposits and in breast milk.",
+     "answer": true,
+     "ref": "p. 79, 'Factors Affecting Response'",
+     "why": "Substances that cannot be made water-soluble are stored in fatty deposits and breast milk.",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c05-s20",
+   "chapter": "Chapter 5 · Pesticide Hazards and First Aid",
+   "title": "Recognizing symptoms by pesticide group",
+   "pages": [
+    79,
+    80
+   ],
+   "body": [
+    {
+     "h": "Symptom Recognition"
+    },
+    {
+     "p": [
+      "Symptoms can be correlated with certain groups of pesticides.",
+      "For example, **borates** (insecticides) tend to irritate the skin, nose, and respiratory system.",
+      "Some **fungicides** are irritants to the skin, eyes, and mucous membranes of the respiratory system.",
+      "**Anticoagulant-type rodenticides** affect the blood's ability to clot and may cause **bloody noses and bleeding gums**.",
+      "**Organophosphate and carbamate insecticides** are **cholinesterase inhibitors**.",
+      "They may cause certain systemic symptoms that could lead to **respiratory failure and death**.",
+      "The manual lists these symptoms in a sidebar, which is on the next card.",
+      "Symptoms associated with **synthetic pyrethroid insecticides** include nausea, dizziness, weakness, nervousness, and eye and skin irritation.",
+      "**Chlorophenoxy herbicides**, such as **2,4-D** and some related products (dicamba, MCPA, and MCPP), are irritating to the skin and mucous membranes.",
+      "They may also cause vomiting, headaches, diarrhea, and confusion."
+     ]
+    },
+    {
+     "p": [
+      "Because symptoms of pesticide poisoning or exposure can vary widely, medical professionals need training to recognize this variability and treat appropriately.",
+      "A manual entitled **Recognition and Management of Pesticide Poisonings** provides treatment guidelines for medical professionals.",
+      "It may be obtained through the **EPA Office of Pesticide Programs** or from the EPA website, www.epa.gov.",
+      "The photo beside this text shows the cover of that manual, with the caption: Reference material for toxicological symptoms."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c05-s20-t1",
+     "kind": "mc",
+     "q": "Which group of pesticides affects the blood's ability to clot and may cause bloody noses and bleeding gums?",
+     "choices": [
+      "Borates",
+      "Synthetic pyrethroids",
+      "Anticoagulant-type rodenticides",
+      "Chlorophenoxy herbicides"
+     ],
+     "answer": 2,
+     "ref": "pp. 79–80, 'Symptom Recognition'",
+     "why": "Anticoagulant-type rodenticides affect blood clotting.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s20-t2",
+     "kind": "mc",
+     "q": "Which two classes of insecticides are cholinesterase inhibitors?",
+     "choices": [
+      "Borates and pyrethroids",
+      "Pyrethroids and carbamates",
+      "Organophosphates and borates",
+      "Organophosphates and carbamates"
+     ],
+     "answer": 3,
+     "ref": "pp. 79–80, 'Symptom Recognition'",
+     "why": "Organophosphate and carbamate insecticides are cholinesterase inhibitors.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s20-t3",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A worker who has been applying 2,4-D has irritated skin, a headache, and confusion. Which pesticide group does the manual link to these symptoms?",
+     "choices": [
+      "Chlorophenoxy herbicides",
+      "Anticoagulant-type rodenticides",
+      "Borates",
+      "Fungicides"
+     ],
+     "answer": 0,
+     "ref": "pp. 79–80, 'Symptom Recognition'",
+     "why": "2,4-D is a chlorophenoxy herbicide: skin and mucous membrane irritation, vomiting, headaches, diarrhea, and confusion.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s20-t4",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT listed as a symptom associated with synthetic pyrethroid insecticides?",
+     "choices": [
+      "Nausea",
+      "Bleeding gums",
+      "Dizziness",
+      "Nervousness"
+     ],
+     "answer": 1,
+     "ref": "pp. 79–80, 'Symptom Recognition'",
+     "why": "Bleeding gums come from anticoagulant-type rodenticides, not pyrethroids.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s20-t5",
+     "kind": "short",
+     "q": "What is the title of the manual that gives medical professionals treatment guidelines for pesticide poisonings?",
+     "answer": "Recognition and Management of Pesticide Poisonings",
+     "keys": [
+      [
+       "recognition",
+       "recognizing"
+      ],
+      [
+       "management",
+       "managing"
+      ],
+      [
+       "poisoning",
+       "poisonings"
+      ]
+     ],
+     "ref": "pp. 79–80, 'Symptom Recognition'",
+     "why": "It is available through the EPA Office of Pesticide Programs or www.epa.gov.",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c05-s21",
+   "chapter": "Chapter 5 · Pesticide Hazards and First Aid",
+   "title": "Cholinesterase inhibition and its symptoms",
+   "pages": [
+    80,
+    80
+   ],
+   "body": [
+    {
+     "h": "Cholinesterase Inhibition"
+    },
+    {
+     "p": [
+      "**Cholinesterase** is an **enzyme** necessary for proper nerve impulse transmission and nervous system function.",
+      "If the amount of this enzyme is reduced below a critical level, nerve impulses throughout the body can no longer be controlled.",
+      "This may cause serious health problems, affecting the ability of certain muscles, including the **heart and breathing muscles**, to function properly.",
+      "Without medical attention, **death** may result."
+     ]
+    },
+    {
+     "p": [
+      "Two classes of insecticides, **organophosphates and carbamates**, act as **cholinesterase inhibitors**.",
+      "That is, they reduce the amount of cholinesterase available for the body's use.",
+      "Cholinesterase inhibition can cause **acute or delayed** effects.",
+      "Large exposures to organophosphate or carbamate insecticides can cause immediate illness.",
+      "Although smaller exposures may not cause outward symptoms, **small, repeated exposures** over several days or weeks may continually reduce the body's cholinesterase level.",
+      "This may ultimately trigger mild, moderate, or severe symptoms of overexposure."
+     ]
+    },
+    {
+     "p": [
+      "In the case of cholinesterase inhibition, it is not always obvious whether a worker is showing symptoms from an acute exposure or experiencing delayed effects from repeated exposures.",
+      "For example, an applicator who is exposed to a single, large amount of an organophosphate may suffer acute effects.",
+      "However, if over time the applicator is exposed to several small amounts, cholinesterase levels are slightly reduced at each exposure.",
+      "Eventually, a **small additional exposure** may cause illness.",
+      "In this case, the illness sets in soon after an exposure, but only following previous repeated exposures."
+     ]
+    },
+    {
+     "h": "Common symptoms associated with organophosphate and carbamate insecticide poisoning"
+    },
+    {
+     "box": "Mild poisoning",
+     "list": [
+      "Fatigue.",
+      "Headache.",
+      "Dizziness.",
+      "Blurred vision.",
+      "Excessive sweating or salivation.",
+      "Nausea and vomiting.",
+      "Stomach cramps and diarrhea."
+     ]
+    },
+    {
+     "box": "Moderate poisoning",
+     "list": [
+      "Inability to walk.",
+      "Weakness.",
+      "Chest discomfort.",
+      "Constriction of pupils.",
+      "Mild symptoms more severe."
+     ]
+    },
+    {
+     "box": "Severe poisoning",
+     "list": [
+      "Unconsciousness.",
+      "Severe constriction of pupils.",
+      "Muscle twitching.",
+      "Running nose and drooling.",
+      "Breathing difficulty.",
+      "Coma and death."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c05-s21-t1",
+     "kind": "short",
+     "q": "What is cholinesterase?",
+     "answer": "An enzyme necessary for proper nerve impulse transmission and nervous system function.",
+     "keys": [
+      [
+       "enzyme"
+      ],
+      [
+       "nerve",
+       "nerves",
+       "nervous"
+      ]
+     ],
+     "ref": "p. 80, 'Cholinesterase Inhibition'",
+     "why": "Cholinesterase is an enzyme needed for nerve impulse transmission.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s21-t2",
+     "kind": "mc",
+     "q": "Constriction of pupils, chest discomfort, and inability to walk are signs of what level of organophosphate or carbamate poisoning?",
+     "choices": [
+      "Moderate",
+      "Mild",
+      "Severe",
+      "None, these are heat stress signs"
+     ],
+     "answer": 0,
+     "ref": "p. 80, organophosphate and carbamate symptoms sidebar",
+     "why": "Those are moderate poisoning signs. Severe poisoning has severe constriction of pupils.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s21-t3",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT listed as a sign of mild organophosphate or carbamate poisoning?",
+     "choices": [
+      "Blurred vision",
+      "Headache",
+      "Muscle twitching",
+      "Excessive sweating or salivation"
+     ],
+     "answer": 2,
+     "ref": "p. 80, organophosphate and carbamate symptoms sidebar",
+     "why": "Muscle twitching is a sign of severe poisoning.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s21-t4",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "An applicator has used small amounts of an organophosphate for several weeks with no symptoms. After one more small exposure, they become ill soon after. What best explains this?",
+     "choices": [
+      "The last exposure alone was a lethal dose",
+      "Organophosphates only cause chronic effects",
+      "The illness cannot be related to the pesticide because the dose was small",
+      "Repeated small exposures slightly reduced cholinesterase each time, so a small additional exposure caused illness"
+     ],
+     "answer": 3,
+     "ref": "p. 80, 'Cholinesterase Inhibition'",
+     "why": "Small repeated exposures keep lowering cholinesterase until a small extra exposure triggers illness.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s21-t5",
+     "kind": "tf",
+     "q": "Cholinesterase inhibition can cause only acute effects, never delayed effects.",
+     "answer": false,
+     "ref": "p. 80, 'Cholinesterase Inhibition'",
+     "why": "Cholinesterase inhibition can cause acute or delayed effects.",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c05-s22",
+   "chapter": "Chapter 5 · Pesticide Hazards and First Aid",
+   "title": "Cholinesterase monitoring",
+   "pages": [
+    80,
+    81
+   ],
+   "body": [
+    {
+     "h": "Cholinesterase Monitoring"
+    },
+    {
+     "p": [
+      "Each person has a certain **baseline level** of cholinesterase enzyme that is considered normal for him or her.",
+      "The **blood cholinesterase test** measures the effect of exposure to organophosphate and carbamate insecticides.",
+      "A baseline must be established for each person **before** he or she begins working with cholinesterase inhibitors, or during the **off-season**.",
+      "Always conduct baseline testing during the time of year when insecticides are not being used or **at least 30 days** from the most recent exposure.",
+      "Establishing an accurate baseline value often requires that **two tests** be performed **at least 72 hours (but not more than 14 days) apart**."
+     ]
+    },
+    {
+     "p": [
+      "If you regularly use organophosphate or carbamate insecticides, cholinesterase tests should be taken **periodically** and results compared with your baseline level.",
+      "Also, anytime you feel ill or have mild or moderate poisoning symptoms, your medical professional should conduct a blood test to evaluate your cholinesterase level and compare it with the baseline level.",
+      "The purpose of routine or emergency cholinesterase monitoring is to enable a medical professional to recognize the occurrence of excessive exposure to organophosphate and carbamate insecticides.",
+      "A **significant reduction** in your body's cholinesterase level **indicates poisoning**."
+     ]
+    },
+    {
+     "p": [
+      "A medical professional normally suggests that the affected pesticide handler **avoid further exposure** until his or her cholinesterase level returns to normal.",
+      "A drop in cholinesterase may require you to have no exposure to these chemicals for a certain period, usually **three to five weeks**, to allow your body time to build new cholinesterase.",
+      "Medical professionals can help to establish the frequency of this testing program, which will depend on how often you use cholinesterase-inhibiting pesticides.",
+      "**Occupational and environmental medicine specialists** are most familiar with this type of testing program.",
+      "Also, because different laboratories may use slightly different methods, the **same laboratory** should be used to collect and test all samples from any one individual."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c05-s22-r5",
+     "src": "review",
+     "kind": "mc",
+     "q": "For which class(es) of pesticides might cholinesterase monitoring be appropriate?",
+     "choices": [
+      "Organophosphate and carbamate insecticides.",
+      "Pyrethroids.",
+      "Phenoxy herbicides, such as 2,4-D."
+     ],
+     "answer": 0,
+     "fixed": true,
+     "ref": "p. 80, 'Cholinesterase Monitoring' (Review question 5, p. 87)",
+     "why": "Cholinesterase tests measure the effect of organophosphate and carbamate insecticides."
+    },
+    {
+     "id": "c05-s22-t1",
+     "kind": "mc",
+     "q": "Baseline cholinesterase testing should be done when insecticides are not being used, or at least how long from the most recent exposure?",
+     "choices": [
+      "24 hours",
+      "72 hours",
+      "14 days",
+      "30 days"
+     ],
+     "answer": 3,
+     "ref": "pp. 80–81, 'Cholinesterase Monitoring'",
+     "why": "At least 30 days from the most recent exposure, or during the off-season.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s22-t2",
+     "kind": "mc",
+     "q": "An accurate baseline often requires two tests performed how far apart?",
+     "choices": [
+      "At least 24 hours but not more than 7 days",
+      "At least 72 hours but not more than 14 days",
+      "At least 14 days but not more than 30 days",
+      "At least 30 days but not more than 60 days"
+     ],
+     "answer": 1,
+     "ref": "pp. 80–81, 'Cholinesterase Monitoring'",
+     "why": "Two tests at least 72 hours, but not more than 14 days, apart.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s22-t3",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A handler's cholinesterase level has dropped significantly. How long does the manual say they usually must avoid exposure so the body can build new cholinesterase?",
+     "choices": [
+      "24 to 48 hours",
+      "Three to five weeks",
+      "One week",
+      "Six months"
+     ],
+     "answer": 1,
+     "ref": "pp. 80–81, 'Cholinesterase Monitoring'",
+     "why": "Usually three to five weeks with no exposure.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s22-t4",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT a recommendation for cholinesterase monitoring in the manual?",
+     "choices": [
+      "Establish a baseline before working with cholinesterase inhibitors",
+      "Test periodically if you regularly use organophosphates or carbamates",
+      "Use a different laboratory for each test to compare methods",
+      "Get a blood test anytime you feel ill or have mild or moderate poisoning symptoms"
+     ],
+     "answer": 2,
+     "ref": "pp. 80–81, 'Cholinesterase Monitoring'",
+     "why": "The same laboratory should test all samples from any one individual.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s22-t5",
+     "kind": "tf",
+     "q": "A significant reduction in your body's cholinesterase level indicates poisoning.",
+     "answer": true,
+     "ref": "pp. 80–81, 'Cholinesterase Monitoring'",
+     "why": "A significant drop from baseline indicates poisoning.",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c05-s23",
+   "chapter": "Chapter 5 · Pesticide Hazards and First Aid",
+   "title": "First aid: get medical advice and bring the label",
+   "pages": [
+    81,
+    81
+   ],
+   "body": [
+    {
+     "h": "First Aid for Pesticide Poisoning"
+    },
+    {
+     "p": [
+      "Get medical advice **immediately** if you or any of your fellow workers have unusual or unexplained symptoms that develop **within 24 hours** of a pesticide exposure.",
+      "Be alert for the early symptoms of pesticide poisoning and contact (local) effects in yourself and others.",
+      "Do not wait until you or someone else gets dangerously ill before calling a physician or going to a hospital.",
+      "It is better to be too cautious than to act too late.",
+      "To help the medical professional treat you appropriately and quickly, **take the pesticide label with you**.",
+      "Bring either a duplicate copy or the one attached to the container, or, at a minimum, the **EPA registration number** of the product.",
+      "To avoid contamination and exposure, **do not carry pesticides in the passenger space** of the vehicle."
+     ]
+    },
+    {
+     "p": [
+      "The label is important because the medical professional needs to know the **pesticide ingredients** to determine the proper course of treatment.",
+      "It is a good idea to print off extra copies of the label from the Internet.",
+      "Place one copy in your **service vehicle** and one in your **office** in case of a medical emergency.",
+      "The illustration here shows a doctor reading a pesticide label, with the caption: Always bring the label with you when seeking medical advice for exposure symptoms."
+     ]
+    },
+    {
+     "p": [
+      "Keep in mind that even symptoms commonly associated with certain pesticides are not always the result of pesticide exposure.",
+      "Common illnesses can cause symptoms similar to those of many frequently used pesticides.",
+      "Examples are the flu, heat exhaustion or heatstroke, pneumonia, asthma, respiratory or intestinal infections, and even a hangover.",
+      "Contact with certain plants, such as **poison oak or poison ivy**, may also produce skin effects like those resulting from pesticide exposure.",
+      "However, it is best to take every precaution.",
+      "When symptoms appear after contact with pesticides, **always seek medical attention immediately**."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c05-s23-t1",
+     "kind": "mc",
+     "q": "If you cannot bring the whole label to the medical professional, what does the manual say to bring at a minimum?",
+     "choices": [
+      "The EPA registration number of the product",
+      "The pesticide container",
+      "The applicator's license",
+      "The Safety Data Sheet"
+     ],
+     "answer": 0,
+     "ref": "p. 81, 'First Aid for Pesticide Poisoning'",
+     "why": "At a minimum, bring the product's EPA registration number.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s23-t2",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A coworker develops unexplained symptoms 6 hours after mixing a pesticide. They want to wait and see if it gets worse. What does the manual say to do?",
+     "choices": [
+      "Wait 24 hours to see if symptoms clear",
+      "Get medical advice immediately and take the pesticide label",
+      "Treat it as the flu unless symptoms become severe",
+      "Call a physician only if the coworker loses consciousness"
+     ],
+     "answer": 1,
+     "ref": "p. 81, 'First Aid for Pesticide Poisoning'",
+     "why": "Get medical advice immediately for unexplained symptoms within 24 hours. Do not wait.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s23-t3",
+     "kind": "tf",
+     "q": "You should carry the pesticide container in the passenger space of your vehicle so the doctor can see it.",
+     "answer": false,
+     "ref": "p. 81, 'First Aid for Pesticide Poisoning'",
+     "why": "Do not carry pesticides in the passenger space. Bring the label or a copy instead.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s23-t4",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT listed as a common illness that can cause symptoms similar to pesticide poisoning?",
+     "choices": [
+      "The flu",
+      "A hangover",
+      "Pneumonia",
+      "A broken bone"
+     ],
+     "answer": 3,
+     "ref": "p. 81, 'First Aid for Pesticide Poisoning'",
+     "why": "The manual lists flu, heat exhaustion or heatstroke, pneumonia, asthma, infections, and a hangover.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s23-t5",
+     "kind": "short",
+     "q": "Why does the medical professional need the pesticide label?",
+     "answer": "To know the pesticide ingredients so they can determine the proper course of treatment.",
+     "keys": [
+      [
+       "ingredient",
+       "ingredients",
+       "what is in it",
+       "chemical",
+       "chemicals",
+       "active ingredient"
+      ],
+      [
+       "treatment",
+       "treat",
+       "treating"
+      ]
+     ],
+     "ref": "p. 81, 'First Aid for Pesticide Poisoning'",
+     "why": "The ingredients on the label determine the treatment.",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c05-s24",
+   "chapter": "Chapter 5 · Pesticide Hazards and First Aid",
+   "title": "General first aid and emergency numbers",
+   "pages": [
+    81,
+    82
+   ],
+   "body": [
+    {
+     "h": "General First Aid"
+    },
+    {
+     "p": [
+      "**First aid** is the initial effort to assist a victim while medical help is on the way.",
+      "If you are alone with the victim, make sure he or she is **breathing** and is **no longer being exposed** to the pesticide **before you call for help**.",
+      "Protect yourself from pesticide exposure before and while giving assistance.",
+      "Make sure you wear the appropriate PPE, including a **respirator** if indicated, before assisting someone in an enclosed area.",
+      "Administer **artificial respiration** if the victim is not breathing and is not vomiting."
+     ]
+    },
+    {
+     "box": "Emergency numbers",
+     "list": [
+      "American Association of Poison Control Centers: **1-800-222-1222** (Staffed 24 hours).",
+      "Animal Poison Control Center (APCC): **1-888-426-4435**.",
+      "National Pesticide Information Center (NPIC): **1-800-858-7378**."
+     ]
+    },
+    {
+     "p": [
+      "Immediate action can indeed be a life-or-death matter in a pesticide poisoning.",
+      "The **product label** is the **primary source of information**.",
+      "Follow the label's specific first aid instructions carefully.",
+      "Beyond the label, call the American Association of Poison Control Centers (**AAPCC**) or a physician for additional advice.",
+      "The AAPCC's poison help line (800-222-1222) is available **24 hours** each day.",
+      "First aid is only the first response and is **not a substitute** for professional medical help.",
+      "It is very important to get the victim to a hospital, or contact **911** for emergency response, without delay.",
+      "The following are a few key points to remember when administering first aid during a pesticide emergency."
+     ]
+    },
+    {
+     "list": [
+      "If oral or dermal exposure has occurred, the first objective is usually to **rinse the exposed area with water** to dilute the pesticide and prevent absorption.",
+      "Always have a source of clean water available. In an extreme emergency, use water from a **farm pond, irrigation system, or watering trough** to rinse exposed areas and dilute the pesticide.",
+      "**Never** try to give anything by mouth to an **unconscious** person.",
+      "**Do not induce vomiting** unless the label tells you to.",
+      "If inhalation exposure has occurred, get the victim to **fresh air** immediately.",
+      "Become familiar with the proper techniques of artificial respiration. It may be necessary if a person's breathing has stopped or becomes impaired.",
+      "If first responders are likely to be directly exposed to a pesticide, be sure they wear appropriate PPE."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c05-s24-t1",
+     "kind": "mc",
+     "q": "According to the manual, what is the primary source of first aid information in a pesticide poisoning?",
+     "choices": [
+      "The Safety Data Sheet",
+      "The AAPCC website",
+      "The applicator's training manual",
+      "The product label"
+     ],
+     "answer": 3,
+     "ref": "p. 82, 'General First Aid'",
+     "why": "The product label is the primary source. Follow its first aid instructions.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s24-t2",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "You find a coworker alone, collapsed next to a spilled pesticide. Before you call for help, what does the manual say to make sure of?",
+     "choices": [
+      "That the victim is breathing and is no longer being exposed to the pesticide",
+      "That the spill is cleaned up",
+      "That you have found the EPA registration number",
+      "That the victim has had something to drink"
+     ],
+     "answer": 0,
+     "ref": "p. 81, 'General First Aid'",
+     "why": "If you are alone, check breathing and stop the exposure before calling for help.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s24-t3",
+     "kind": "mc",
+     "q": "Which number reaches the American Association of Poison Control Centers poison help line?",
+     "choices": [
+      "1-800-222-1222",
+      "1-800-858-7378",
+      "1-888-426-4435",
+      "911 only"
+     ],
+     "answer": 0,
+     "ref": "p. 81, emergency numbers box",
+     "why": "AAPCC is 1-800-222-1222. NPIC is 1-800-858-7378. APCC is 1-888-426-4435.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s24-t4",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT one of the key first aid points in the manual?",
+     "choices": [
+      "Never give anything by mouth to an unconscious person",
+      "Get the victim to fresh air after inhalation exposure",
+      "Rinse the exposed area with water after oral or dermal exposure",
+      "Always induce vomiting after a pesticide is swallowed"
+     ],
+     "answer": 3,
+     "ref": "p. 82, 'General First Aid'",
+     "why": "Do not induce vomiting unless the label tells you to.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s24-t5",
+     "kind": "tf",
+     "q": "In an extreme emergency, water from a farm pond, irrigation system, or watering trough can be used to rinse exposed areas.",
+     "answer": true,
+     "ref": "p. 82, 'General First Aid'",
+     "why": "Any available water can be used in an extreme emergency to dilute the pesticide.",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c05-s25",
+   "chapter": "Chapter 5 · Pesticide Hazards and First Aid",
+   "title": "NPIC, animal poisoning, and pesticide on the skin",
+   "pages": [
+    82,
+    83
+   ],
+   "body": [
+    {
+     "p": [
+      "In addition to the AAPCC, you can call the **National Pesticide Information Center (NPIC)**.",
+      "NPIC provides a variety of information about pesticides to anyone in the United States by phone (**800-858-7378**) or online (search for \"National Pesticide Information Center\").",
+      "**Post all emergency numbers** near telephones and in service vehicles used by pesticide handlers."
+     ]
+    },
+    {
+     "p": [
+      "Pets, horses, and other livestock may also be poisoned by exposure to pesticides.",
+      "For emergency information on treating pets or livestock harmed by pesticide contamination or poisoning, call the **Animal Poison Control Center** (**888-426-4435**)."
+     ]
+    },
+    {
+     "h": "Pesticide on the Skin"
+    },
+    {
+     "p": [
+      "Proper hygiene helps protect the skin from pesticide exposure.",
+      "Keep an adequate **water supply** with you whenever skin exposure is possible.",
+      "Other key points:"
+     ]
+    },
+    {
+     "list": [
+      "**Remove all contaminated clothing** immediately.",
+      "Wash the affected area, **including the hair**, with water and soap. Rinse well.",
+      "**Showering is better than bathing** to avoid prolonged contact with pesticide residues.",
+      "Avoid **harsh scrubbing**, which could damage the skin and enhance pesticide absorption.",
+      "Gently dry the affected area and wrap it in loose cloth or a blanket, if necessary.",
+      "If the skin has **chemical burns**, cover the area loosely with a clean, soft cloth.",
+      "Do **not** use ointments, greases, powders, and other medications unless instructed to do so by a medical authority."
+     ]
+    },
+    {
+     "p": [
+      "The illustration shows a worker at a sink, with the caption: Washing your hands with water and soap after using pesticides prevents skin contamination."
+     ]
+    },
+    {
+     "p": [
+      "Wash and store contaminated clothing **separately from the family laundry**.",
+      "If clothing is contaminated with a **pesticide concentrate**, or if there is concern about getting contaminated clothing clean, it is often best to **dispose of it**.",
+      "Place the clothing in a plastic bag, seal the bag, and write the name of the pesticide on it.",
+      "Take it to a **household hazardous waste collection**."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c05-s25-t1",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A client's dog walked through a freshly treated area and is drooling and shaking. Which number does the manual say to call?",
+     "choices": [
+      "American Association of Poison Control Centers, 1-800-222-1222",
+      "National Pesticide Information Center, 1-800-858-7378",
+      "Animal Poison Control Center, 1-888-426-4435",
+      "The pesticide dealer"
+     ],
+     "answer": 2,
+     "ref": "p. 82, NPIC and Animal Poison Control Center",
+     "why": "The Animal Poison Control Center handles pets and livestock.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s25-t2",
+     "kind": "mc",
+     "q": "Why is showering better than bathing after skin exposure?",
+     "choices": [
+      "It avoids prolonged contact with pesticide residues",
+      "It uses less water",
+      "It neutralizes the pesticide",
+      "It is faster to dry off"
+     ],
+     "answer": 0,
+     "ref": "p. 82, 'Pesticide on the Skin'",
+     "why": "Bathing keeps you sitting in pesticide residue.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s25-t3",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT correct first aid for pesticide on the skin?",
+     "choices": [
+      "Remove all contaminated clothing immediately",
+      "Scrub hard to remove all residue",
+      "Wash the affected area, including the hair, with water and soap",
+      "Cover chemical burns loosely with a clean, soft cloth"
+     ],
+     "answer": 1,
+     "ref": "p. 82, 'Pesticide on the Skin'",
+     "why": "Harsh scrubbing can damage the skin and enhance absorption.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s25-t4",
+     "kind": "tf",
+     "q": "You may put ointments or powders on chemical burns from a pesticide without asking anyone.",
+     "answer": false,
+     "ref": "p. 82, 'Pesticide on the Skin'",
+     "why": "Do not use ointments, greases, powders, or medications unless a medical authority says to.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s25-t5",
+     "kind": "short",
+     "style": "scenario",
+     "q": "Clothing is soaked with a pesticide concentrate. What does the manual say is often best to do with it?",
+     "answer": "Dispose of it: seal it in a plastic bag labeled with the pesticide name and take it to a household hazardous waste collection.",
+     "keys": [
+      [
+       "dispose",
+       "disposed",
+       "throw away",
+       "throw it away",
+       "throw out",
+       "get rid",
+       "discard",
+       "hazardous waste",
+       "trash"
+      ]
+     ],
+     "ref": "p. 83, 'Pesticide on the Skin'",
+     "why": "Concentrate-contaminated clothing is often best disposed of at a household hazardous waste collection.",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c05-s26",
+   "chapter": "Chapter 5 · Pesticide Hazards and First Aid",
+   "title": "Pesticide in the eyes and inhaled pesticide",
+   "pages": [
+    83,
+    83
+   ],
+   "body": [
+    {
+     "h": "Pesticide in the Eyes"
+    },
+    {
+     "p": [
+      "Because eyes readily absorb material, **fast action** is required.",
+      "Other key points:"
+     ]
+    },
+    {
+     "list": [
+      "Hold the eyelid open and immediately begin gently washing the eye with **drips of clean water**.",
+      "Do not use chemicals or drugs in the wash water unless instructed to do so by a medical professional or a poison control center.",
+      "Drip the water **across, not directly into**, the eye, or use an **eyewash dispenser**.",
+      "Continuously rinse the eye for **15 minutes**.",
+      "If only one eye is affected, be careful **not to contaminate the other eye**.",
+      "Flush under the eyelid with water to remove debris.",
+      "Cover the eye with a clean piece of cloth and seek medical attention immediately."
+     ]
+    },
+    {
+     "h": "Inhaled Pesticide"
+    },
+    {
+     "p": [
+      "The basic first aid procedure for someone who has inhaled a pesticide is to get him or her to **fresh air**.",
+      "Other key points:"
+     ]
+    },
+    {
+     "list": [
+      "Immediately **carry** the victim to fresh air. **Do not allow him or her to walk**.",
+      "Do not attempt to rescue someone who is in an enclosed, contaminated area **unless you are wearing appropriate PPE**.",
+      "If other people are in the area, warn them of the danger.",
+      "Have the victim **lie down** and **loosen** his or her clothing.",
+      "Keep the victim **warm and quiet**. Do not allow him or her to become chilled or overheated.",
+      "If the victim is **convulsing**, protect his or her head, turn the head to the side, and watch that breathing continues.",
+      "Do **not** attempt to insert anything into the person's mouth during a seizure.",
+      "Keep the person's **chin up** to ensure that air passages are open for breathing.",
+      "If breathing stops or is irregular, give **artificial respiration**."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c05-s26-r8",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which statement about first aid response for pesticide exposure to the eye is false?",
+     "choices": [
+      "You should hold the eye open and immediately begin gently washing it.",
+      "You should drip water directly into the eye.",
+      "You should flush under the eyelid with water to remove debris."
+     ],
+     "answer": 1,
+     "fixed": true,
+     "ref": "p. 83, 'Pesticide in the Eyes' (Review question 8, p. 87)",
+     "why": "False: drip the water across, not directly into, the eye."
+    },
+    {
+     "id": "c05-s26-r9",
+     "src": "review",
+     "kind": "mc",
+     "q": "What is the first thing you should do to help a victim of inhalation exposure?",
+     "choices": [
+      "Get the victim to fresh air.",
+      "Administer artificial respiration.",
+      "Have the victim lie down and loosen clothing."
+     ],
+     "answer": 0,
+     "fixed": true,
+     "ref": "p. 83, 'Inhaled Pesticide' (Review question 9, p. 88)",
+     "why": "The basic first aid for inhaled pesticide is to get the victim to fresh air."
+    },
+    {
+     "id": "c05-s26-t1",
+     "kind": "mc",
+     "q": "For how long does the manual say to continuously rinse an eye exposed to pesticide?",
+     "choices": [
+      "2 minutes",
+      "5 minutes",
+      "15 minutes",
+      "1 hour"
+     ],
+     "answer": 2,
+     "ref": "p. 83, 'Pesticide in the Eyes'",
+     "why": "Continuously rinse the eye for 15 minutes.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s26-t2",
+     "kind": "mc",
+     "q": "How should the rinse water be applied to the eye?",
+     "choices": [
+      "Sprayed directly into the eye under pressure",
+      "Mixed with eye drops first",
+      "Dripped across, not directly into, the eye",
+      "Splashed from a cupped hand"
+     ],
+     "answer": 2,
+     "ref": "p. 83, 'Pesticide in the Eyes'",
+     "why": "Drip the water across the eye, or use an eyewash dispenser.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s26-t3",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A coworker is found dizzy in a greenhouse after a fumigation. You are wearing appropriate PPE. Which action follows the manual?",
+     "choices": [
+      "Have the coworker walk out to fresh air",
+      "Give the coworker water and let them rest inside",
+      "Leave the coworker until the area is ventilated",
+      "Carry the coworker to fresh air and do not let them walk"
+     ],
+     "answer": 3,
+     "ref": "p. 83, 'Inhaled Pesticide'",
+     "why": "Immediately carry the victim to fresh air. Do not allow them to walk.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s26-t4",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT correct first aid for someone who inhaled a pesticide?",
+     "choices": [
+      "Have the victim lie down and loosen their clothing",
+      "Put something in the person's mouth during a seizure",
+      "Keep the victim warm and quiet",
+      "Keep the person's chin up so air passages stay open"
+     ],
+     "answer": 1,
+     "ref": "p. 83, 'Inhaled Pesticide'",
+     "why": "Do not insert anything into the person's mouth during a seizure.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s26-t5",
+     "kind": "tf",
+     "q": "You should go into an enclosed, contaminated area to rescue someone even if you are not wearing PPE.",
+     "answer": false,
+     "ref": "p. 83, 'Inhaled Pesticide'",
+     "why": "Do not attempt the rescue unless you are wearing appropriate PPE.",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c05-s27",
+   "chapter": "Chapter 5 · Pesticide Hazards and First Aid",
+   "title": "Swallowed pesticide: when not to induce vomiting",
+   "pages": [
+    83,
+    83
+   ],
+   "body": [
+    {
+     "h": "Pesticide in the Mouth or Swallowed"
+    },
+    {
+     "p": [
+      "If pesticide is in someone's mouth but **has not been swallowed**, rinse the mouth with plenty of water.",
+      "Then give the victim large amounts (**up to 1 quart**) of **milk or water** to drink.",
+      "If the pesticide is swallowed, one of the most critical first aid decisions is **whether to induce vomiting**.",
+      "Induce vomiting **only if the label instructs you** to do so.",
+      "Several pesticides cause **more harm when vomited** than if they remain in the stomach.",
+      "To provide first aid for a swallowed pesticide, you must know the appropriate treatment.",
+      "The decision to induce vomiting must be made quickly and accurately. The victim's life may depend on it."
+     ]
+    },
+    {
+     "box": "Never induce vomiting if the victim:",
+     "list": [
+      "Is **unconscious** or having **convulsions**.",
+      "Has swallowed a **corrosive poison**, such as a strong alkali or acid. The material burns the throat and mouth as severely coming up as it did going down. Also, it can be aspirated into the lungs and cause more damage.",
+      "Has swallowed an **emulsifiable concentrate or oil solution** product, which is dissolved in petroleum solvents. Emulsifiable concentrates and oil solutions may be **fatal if aspirated** into the lungs during vomiting."
+     ]
+    },
+    {
+     "box": "Note: Ipecac",
+     "p": [
+      "**Ipecac syrup**, used as an **emetic** for almost **50 years**, is **no longer recommended** for routine use in most poisonings.",
+      "Clinical studies have demonstrated no benefit from its use.",
+      "Ipecac works too slowly (**about 20 minutes**) in inducing vomiting and results in only about **one-third** of stomach contents being voided."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c05-s27-t1",
+     "kind": "mc",
+     "q": "When should you induce vomiting after a pesticide is swallowed?",
+     "choices": [
+      "Only if the label instructs you to do so",
+      "Always, as fast as possible",
+      "Only if the victim is unconscious",
+      "Only if the product is an emulsifiable concentrate"
+     ],
+     "answer": 0,
+     "ref": "p. 83, 'Pesticide in the Mouth or Swallowed'",
+     "why": "Induce vomiting only if the label instructs you to.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s27-t2",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A worker swallowed some emulsifiable concentrate. Why must you NOT induce vomiting?",
+     "choices": [
+      "It is dissolved in petroleum solvents and may be fatal if aspirated into the lungs during vomiting",
+      "It is not toxic when swallowed",
+      "Vomiting will make the pesticide more water-soluble",
+      "Ipecac is required first"
+     ],
+     "answer": 0,
+     "ref": "p. 83, 'Pesticide in the Mouth or Swallowed'",
+     "why": "Emulsifiable concentrates and oil solutions may be fatal if aspirated into the lungs.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s27-t3",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT one of the situations where you must never induce vomiting?",
+     "choices": [
+      "The victim is unconscious or having convulsions",
+      "The victim swallowed a corrosive poison such as a strong acid or alkali",
+      "The victim swallowed an oil solution product",
+      "The label instructs you to induce vomiting"
+     ],
+     "answer": 3,
+     "ref": "p. 83, 'Pesticide in the Mouth or Swallowed'",
+     "why": "If the label tells you to induce vomiting, you follow the label.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s27-t4",
+     "kind": "tf",
+     "q": "Ipecac syrup is recommended for routine use in most pesticide poisonings.",
+     "answer": false,
+     "ref": "p. 83, ipecac note",
+     "why": "Ipecac is no longer recommended: it is slow (about 20 minutes) and voids only about one-third of stomach contents.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s27-t5",
+     "kind": "short",
+     "q": "Pesticide is in someone's mouth but has not been swallowed. After rinsing the mouth, what does the manual say to give them, and how much?",
+     "answer": "Large amounts, up to 1 quart, of milk or water to drink.",
+     "keys": [
+      [
+       "milk",
+       "water"
+      ],
+      [
+       "quart",
+       "1 qt",
+       "one qt"
+      ]
+     ],
+     "ref": "p. 83, 'Pesticide in the Mouth or Swallowed'",
+     "why": "Rinse the mouth, then give up to 1 quart of milk or water.",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c05-s28",
+   "chapter": "Chapter 5 · Pesticide Hazards and First Aid",
+   "title": "Inducing vomiting, activated charcoal, and antidotes",
+   "pages": [
+    84,
+    84
+   ],
+   "body": [
+    {
+     "h": "How to Induce Vomiting (if appropriate)"
+    },
+    {
+     "p": [
+      "Induce vomiting only as a first aid measure until you can get the victim to a hospital.",
+      "Do not waste a lot of time trying to induce vomiting.",
+      "Follow these steps:"
+     ]
+    },
+    {
+     "list": [
+      "Make sure the victim is **kneeling forward or lying on his or her side** to prevent vomit from entering the lungs and causing additional damage.",
+      "Give the victim **at least two glasses of water** to dilute the product. Do **not** use **carbonated beverages**.",
+      "Put your **finger or the blunt end of a spoon** at the back of the throat. Do not use anything sharp or pointed. Do **not** give the victim **saltwater**.",
+      "**Collect some of the vomitus** for the doctor, who may need it for chemical analysis."
+     ]
+    },
+    {
+     "h": "Activated charcoal"
+    },
+    {
+     "p": [
+      "**Activated charcoal** is another first aid treatment that can be administered when a pesticide has been swallowed.",
+      "It acts as a magnet to **adsorb** many chemicals.",
+      "Pharmaceutical-grade activated charcoal is available from most drugstores.",
+      "Activated charcoal prepared for cleaning up pesticide spills may be substituted in an emergency.",
+      "Seek the advice of a medical professional or poison control center **before** administering activated charcoal.",
+      "Take the victim to a physician or hospital."
+     ]
+    },
+    {
+     "p": [
+      "Only general first aid practices have been discussed here.",
+      "Contact a poison control center for more help in administering first aid.",
+      "If necessary, get the victim to a medical professional or hospital.",
+      "Take the pesticide label with you."
+     ]
+    },
+    {
+     "h": "Antidotes"
+    },
+    {
+     "p": [
+      "**Antidotes** are available for only a few classes of pesticides: **anticoagulant-type rodenticides** and **organophosphate or carbamate insecticides**.",
+      "Because antidotes can be extremely dangerous if misused, they should be prescribed and administered **only by a qualified medical professional**.",
+      "Antidotes should **never** be used to prevent poisoning."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c05-s28-t1",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "The label says to induce vomiting. What position should the victim be in?",
+     "choices": [
+      "Lying flat on their back",
+      "Standing upright",
+      "Sitting with the head tilted back",
+      "Kneeling forward or lying on their side"
+     ],
+     "answer": 3,
+     "ref": "p. 84, 'How to Induce Vomiting (if appropriate)'",
+     "why": "Kneeling forward or lying on the side keeps vomit out of the lungs.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s28-t2",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT a correct step for inducing vomiting?",
+     "choices": [
+      "Give at least two glasses of water",
+      "Use the blunt end of a spoon at the back of the throat",
+      "Give the victim saltwater",
+      "Collect some of the vomitus for the doctor"
+     ],
+     "answer": 2,
+     "ref": "p. 84, 'How to Induce Vomiting (if appropriate)'",
+     "why": "Do not give saltwater, and do not use carbonated beverages.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s28-t3",
+     "kind": "mc",
+     "q": "Antidotes are available for which classes of pesticides?",
+     "choices": [
+      "Borates and pyrethroids",
+      "Anticoagulant-type rodenticides and organophosphate or carbamate insecticides",
+      "Chlorophenoxy herbicides and fungicides",
+      "All restricted-use pesticides"
+     ],
+     "answer": 1,
+     "ref": "p. 84, 'Antidotes'",
+     "why": "Only anticoagulant-type rodenticides and organophosphate or carbamate insecticides.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s28-t4",
+     "kind": "tf",
+     "q": "An applicator may take an antidote before spraying to prevent poisoning.",
+     "answer": false,
+     "ref": "p. 84, 'Antidotes'",
+     "why": "Antidotes should never be used to prevent poisoning, and only a qualified medical professional should give them.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s28-t5",
+     "kind": "short",
+     "q": "How does activated charcoal work when a pesticide has been swallowed?",
+     "answer": "It acts as a magnet to adsorb many chemicals.",
+     "keys": [
+      [
+       "adsorb",
+       "absorb",
+       "adsorbs",
+       "absorbs",
+       "magnet",
+       "binds",
+       "bind",
+       "soaks up",
+       "attracts"
+      ]
+     ],
+     "ref": "p. 84, activated charcoal",
+     "why": "Activated charcoal adsorbs many chemicals. Get medical or poison control advice first.",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c05-s29",
+   "chapter": "Chapter 5 · Pesticide Hazards and First Aid",
+   "title": "Heat stress",
+   "pages": [
+    84,
+    84
+   ],
+   "body": [
+    {
+     "h": "Heat Stress"
+    },
+    {
+     "p": [
+      "**Heat stress** occurs when the body cannot cope with a certain level of heat.",
+      "Heat stress may affect both pesticide handlers and other workers.",
+      "A person suffering from heat stress exhibits symptoms that **closely resemble poisoning symptoms** of some pesticides.",
+      "**PPE** worn during handling or early-entry activities **may increase the risk** of heat stress.",
+      "The protective qualities of the PPE may **restrict the evaporation of sweat**, thus impeding the body's natural cooling system.",
+      "If you are under a physician's care, consult him or her before working in hot or humid conditions.",
+      "**Vests and headbands** with special pockets for **ice packs** or other heat stress prevention devices may be worn with or beneath PPE.",
+      "These will help maintain a cool body temperature.",
+      "Caption: Avoid heat stress by taking breaks and drinking water throughout the workday."
+     ]
+    },
+    {
+     "h": "Symptoms of Heat Stress"
+    },
+    {
+     "p": [
+      "Mild forms of heat stress make people feel ill and impair their ability to do a good job.",
+      "You may feel weak and get tired sooner than usual.",
+      "You may also be less alert and less able to use good judgment.",
+      "Severe heat stress, also known as **heatstroke**, is **life-threatening**.",
+      "The normal human body temperature ranges from about **97°F to 99°F**, with an average of **98.6°F**.",
+      "With heatstroke, body temperature may **exceed 105°F**.",
+      "Staggering, loss of consciousness, or convulsions may result.",
+      "**Lack of sweating** is a common symptom of heatstroke."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c05-s29-t1",
+     "kind": "mc",
+     "q": "With heatstroke, body temperature may exceed what?",
+     "choices": [
+      "99°F",
+      "101°F",
+      "103°F",
+      "105°F"
+     ],
+     "answer": 3,
+     "ref": "p. 84, 'Symptoms of Heat Stress'",
+     "why": "Heatstroke body temperature may exceed 105°F.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s29-t2",
+     "kind": "mc",
+     "q": "How can PPE increase the risk of heat stress?",
+     "choices": [
+      "It may restrict the evaporation of sweat, impeding the body's natural cooling system",
+      "It absorbs pesticide and releases heat",
+      "It raises blood pressure directly",
+      "It blocks fresh air from the lungs"
+     ],
+     "answer": 0,
+     "ref": "p. 84, 'Heat Stress'",
+     "why": "PPE can trap sweat so it cannot evaporate and cool you.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s29-t3",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A handler in full PPE on a hot afternoon is staggering and has stopped sweating. Which condition does this most match?",
+     "choices": [
+      "Mild organophosphate poisoning",
+      "Allergic dermatitis",
+      "Heatstroke",
+      "Normal fatigue"
+     ],
+     "answer": 2,
+     "ref": "p. 84, 'Symptoms of Heat Stress'",
+     "why": "Staggering and lack of sweating are signs of heatstroke, which is life-threatening.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s29-t4",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT a sign of mild heat stress described in the manual?",
+     "choices": [
+      "Feeling weak",
+      "Body temperature over 105°F",
+      "Getting tired sooner than usual",
+      "Being less alert"
+     ],
+     "answer": 1,
+     "ref": "p. 84, 'Symptoms of Heat Stress'",
+     "why": "Over 105°F is heatstroke, the severe form.",
+     "src": "test"
+    },
+    {
+     "id": "c05-s29-t5",
+     "kind": "tf",
+     "q": "Heat stress symptoms can closely resemble the poisoning symptoms of some pesticides.",
+     "answer": true,
+     "ref": "p. 84, 'Heat Stress'",
+     "why": "That is why heat stress can be confused with pesticide poisoning.",
+     "src": "test"
+    }
+   ]
+  },
+  {
+   "id": "c05-s30",
+   "chapter": "Chapter 5 · Pesticide Hazards and First Aid",
+   "title": "Heatstroke dangers and heat stress symptoms",
+   "pages": [
+    84,
+    85
+   ],
+   "body": [
+    {
+     "h": "Symptoms of Heat Stress (continued)"
+    },
+    {
+     "p": [
+      "Brain damage or even death may occur if the heatstroke victim is not cooled down very quickly.",
+      "More than **10%** of severe heat stress victims die, including young, healthy adults.",
+      "Sometimes victims remain highly sensitive to heat for months and cannot return to the same type of work."
+     ]
+    },
+    {
+     "box": "Heat stress symptoms include",
+     "list": [
+      "Fatigue, exhaustion, or muscle weakness.",
+      "Dizziness and fainting.",
+      "Clammy or hot, dry skin.",
+      "Altered behavior: confusion, slurred speech, quarrelsome or irrational conduct.",
+      "Headache, nausea, and chills.",
+      "Severe thirst and dry mouth.",
+      "Heavy sweating. Eventually, this can progress to a complete lack of sweating as the body loses the ability to control its temperature."
+     ]
+    },
+    {
+     "p": [
+      "**Act immediately** to cool down if you suspect that you may be suffering from even mild heat stress.",
+      "Drink plenty of water and take breaks in the shade throughout the workday.",
+      "In hot conditions, watch for symptoms of heat stress in other workers as well."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "id": "c05-s30-r10",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which statement about heat stress is true?",
+     "choices": [
+      "Wearing extra PPE prevents heat stress.",
+      "Constricted pupils is a symptom of heatstroke.",
+      "Lack of sweat is a symptom of heatstroke."
+     ],
+     "answer": 2,
+     "fixed": true,
+     "ref": "pp. 84–85, 'Symptoms of Heat Stress' (Review question 10, p. 88)",
+     "why": "Lack of sweating is a common symptom of heatstroke."
+    },
+    {
+     "src": "test",
+     "kind": "mc",
+     "q": "What percentage of severe heat stress victims die, according to the manual?",
+     "choices": [
+      "More than 1%",
+      "More than 10%",
+      "More than 25%",
+      "More than 50%"
+     ],
+     "answer": 1,
+     "ref": "p. 85, 'Symptoms of Heat Stress'",
+     "why": "More than 10% die, including young, healthy adults.",
+     "id": "c05-s30-t1"
+    },
+    {
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT listed as a heat stress symptom?",
+     "choices": [
+      "Dizziness and fainting",
+      "Severe thirst and dry mouth",
+      "Clammy or hot, dry skin",
+      "Constricted pupils"
+     ],
+     "answer": 3,
+     "ref": "p. 85, heat stress symptoms list",
+     "why": "Constricted pupils is a cholinesterase poisoning symptom, not a heat stress symptom.",
+     "id": "c05-s30-t2"
+    },
+    {
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "On a hot day, a coworker becomes confused, quarrelsome, and has slurred speech. What does the manual say this can be?",
+     "choices": [
+      "Altered behavior from heat stress",
+      "Normal fatigue that needs no action",
+      "An allergy to sunscreen",
+      "A sign of delayed pesticide effects only"
+     ],
+     "answer": 0,
+     "ref": "p. 85, heat stress symptoms list",
+     "why": "Confusion, slurred speech, and quarrelsome or irrational conduct are altered behavior from heat stress.",
+     "id": "c05-s30-t3"
+    },
+    {
+     "src": "test",
+     "kind": "tf",
+     "q": "Heavy sweating can eventually progress to a complete lack of sweating as the body loses the ability to control its temperature.",
+     "answer": true,
+     "ref": "p. 85, heat stress symptoms list",
+     "why": "Sweating can stop completely as temperature control fails.",
+     "id": "c05-s30-t4"
+    },
+    {
+     "src": "test",
+     "kind": "short",
+     "q": "What should you do immediately if you suspect even mild heat stress?",
+     "answer": "Cool down",
+     "keys": [
+      [
+       "cool",
+       "cooling",
+       "cooled"
+      ]
+     ],
+     "ref": "p. 85, 'Symptoms of Heat Stress'",
+     "why": "Act immediately to cool down, drink plenty of water, and take breaks in the shade.",
+     "id": "c05-s30-t5"
+    }
+   ]
+  },
+  {
+   "id": "c05-s31",
+   "chapter": "Chapter 5 · Pesticide Hazards and First Aid",
+   "title": "Chapter 5 summary",
+   "pages": [
+    85,
+    85
+   ],
+   "body": [
+    {
+     "h": "Summary"
+    },
+    {
+     "p": [
+      "Pesticide risk can be summarized by the equation **hazard (risk) = toxicity x exposure**.",
+      "**Toxicity** is the capacity of the pesticide to cause either short-term (acute) or long-term (chronic) injury or illness.",
+      "**Exposure** is the means by which the pesticide gets into or onto the body.",
+      "These two factors determine the likelihood that harm, that is, hazard, will come to a person who handles pesticides."
+     ]
+    },
+    {
+     "p": [
+      "Harmful effects of pesticides may occur at the area of local contact or after uptake into the body, that is, **systemic effects**.",
+      "Pesticides can enter the body by any of four routes: through the skin (**dermal**), eyes (**ocular**), lungs (**respiratory**), or mouth (**oral**).",
+      "Some adverse effects may occur within **24 hours** after a single, usually large, exposure. These are **acute effects**.",
+      "Others may occur many years after exposure (**delayed effects**), typically from small exposures over a long period (**chronic effects**).",
+      "Pesticide handlers can minimize exposure, and reduce risk, by following label directions, using the proper application and handling procedures, and wearing appropriate personal protective equipment."
+     ]
+    },
+    {
+     "p": [
+      "The toxicity of a pesticide product is measured in test animals by the **LD50** and **LC50** values.",
+      "These values determine the signal word that occurs on the pesticide label.",
+      "Signal words, **DANGER-POISON, DANGER, WARNING, and CAUTION**, help the user recognize how acutely toxic the pesticide is and what precautions to take.",
+      "Remember, however, that the signal word only provides information about the **acute toxicity** of the product.",
+      "Chronic and delayed effects are often the result of different mechanisms and are not related to the substance's level of acute toxicity."
+     ]
+    },
+    {
+     "p": [
+      "People who use pesticides routinely should have regular medical checkups to determine if they are experiencing any ill effects from pesticide use.",
+      "Regular monitoring of blood **cholinesterase** levels can determine if certain insecticides are affecting an individual before symptoms appear."
+     ]
+    },
+    {
+     "p": [
+      "Early recognition of pesticide poisoning symptoms is the key to preventing further injury.",
+      "The label often provides important information on first aid procedures for the particular pesticide product.",
+      "Make sure a copy of the label is readily available whenever you are using pesticides.",
+      "Take the label to a medical professional if a poisoning incident occurs."
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "src": "test",
+     "kind": "short",
+     "q": "Type the equation that summarizes pesticide risk.",
+     "answer": "Hazard (risk) = toxicity x exposure",
+     "keys": [
+      [
+       "hazard",
+       "risk"
+      ],
+      [
+       "toxicity",
+       "toxic"
+      ],
+      [
+       "exposure",
+       "exposed"
+      ]
+     ],
+     "ref": "p. 85, 'Summary'",
+     "why": "Hazard, or risk, equals toxicity times exposure.",
+     "id": "c05-s31-t1"
+    },
+    {
+     "src": "test",
+     "kind": "tf",
+     "q": "The signal word tells you about both the acute and the chronic toxicity of a product.",
+     "answer": false,
+     "ref": "p. 85, 'Summary'",
+     "why": "The signal word only provides information about acute toxicity.",
+     "id": "c05-s31-t2"
+    },
+    {
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT one of the four routes by which pesticides enter the body?",
+     "choices": [
+      "Dermal",
+      "Ocular",
+      "Respiratory",
+      "Circulatory"
+     ],
+     "answer": 3,
+     "ref": "p. 85, 'Summary'",
+     "why": "The four routes are skin, eyes, lungs, and mouth.",
+     "id": "c05-s31-t3"
+    },
+    {
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "You use organophosphate insecticides routinely. What can show whether they are affecting you before symptoms appear?",
+     "choices": [
+      "A skin patch test",
+      "Regular monitoring of blood cholinesterase levels",
+      "Checking the signal word",
+      "Measuring body temperature"
+     ],
+     "answer": 1,
+     "ref": "p. 85, 'Summary'",
+     "why": "Regular blood cholinesterase monitoring can detect effects before symptoms appear.",
+     "id": "c05-s31-t4"
+    }
+   ]
+  }
+ ]
+}

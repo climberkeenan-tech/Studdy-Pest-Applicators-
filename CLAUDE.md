@@ -20,7 +20,51 @@ session's network could not open directly): 50 multiple-choice questions, 35 cor
   first in the card that holds the answer. The manual's key is in **Appendix A**, which the user has
   not sent. The answers were taken from the chapter text. When Appendix A arrives, check every
   review answer against it and report any disagreement.
-- Next: Chapter 2 pages. Ask for the manual's total page count (still unknown).
+- Chapter 2, Federal Pesticide Laws and Regulations (pp. 19–28): 15 cards (`c02-s01` to `c02-s15`),
+  75 test-style questions, plus the 7 review questions from p. 29 (ids `c02-sNN-rK`). Review answers again
+  taken from the chapter text, pending Appendix A. Review Q1 sits in card 2, Q2 card 4, Q3 card 7,
+  Q4 and Q6 card 9, Q5 card 6, Q7 card 10. Figure 2.1 redrawn as `fig-2-1.svg`. Crops: `tools/crop_photos_ch02.py`.
+  Page 28 holds only the last 5 lines of the summary; the rest of that page is blank in the user's photo.
+- Chapter 3, Pesticide Labeling (pp. 31–45, review questions p. 47): 25 cards (`c03-s01` to `c03-s25`),
+  9 review questions (`c03-sNN-rK`, K = manual question number) plus test questions. Cards 18–21 type out
+  Figure 3.1 (sample label, p. 42) panel by panel. Built by `tools/gen_ch03.py` (edit there, rerun, then build).
+  Photo crops: `tools/crop_photos_ch03.py`. Page 46 was not sent (likely blank before the review page).
+  Review answers again taken from the chapter text; check against Appendix A when it arrives.
+- Chapter 4, Pesticide Formulations (pp. 49–66, review questions p. 67): 26 cards (`c04-s01` to `c04-s26`),
+  10 review questions (`c04-sNN-rK`, K = manual question number) plus test questions. Built by `tools/gen_ch04.py`
+  (edit there, rerun with `content/chapters/ch04.json` as the argument, then build). Figure 4.1 redrawn as
+  `fig-4-1.svg`. Photo crops: `tools/crop_photos_ch04.py`. Review answers taken from the chapter text; check
+  against Appendix A when it arrives. p. 49 prints "an organic solvent of mineral clay" (likely a typo for "or");
+  typed as printed. Page 66 (Summary) had no visible page number in the photo; numbered by position.
+- Chapter 5, Pesticide Hazards and First Aid (pp. 69–85, review questions pp. 87–88): 31 cards (`c05-s01` to
+  `c05-s31`), 10 review questions (`c05-sNN-rK`, K = manual question number) plus test questions. Review Q1 in card 2,
+  Q2 card 7, Q3 card 16, Q4 card 12, Q5 card 22, Q6 card 19, Q7 card 9, Q8 and Q9 card 26, Q10 card 30.
+  Figure 5.1 redrawn as a bar chart (`fig-5-1.svg`), Table 5.1 as `tab-5-1.svg` (row text also typed as boxes in card 13).
+  Label photo crops: `tools/crop_photos_ch05.py`. Page 86 not sent (summary ends on p. 85; probably blank).
+  Review answers taken from the chapter text; check against Appendix A when it arrives.
+- Chapter 6, Personal Protective Equipment (pp. 89–102, review questions p. 103): 21 cards (`c06-s01` to
+  `c06-s21`), 9 review questions (`c06-sNN-rK`, K = manual question number) plus 5 test questions per card.
+  Review Q1 in card 4, Q2 card 9, Q4 card 14, Q3 and Q5 card 15, Q6 card 17, Q7 card 18, Q8 and Q9 card 19.
+  Built by `tools/gen_ch06.py` (edit there, rerun, then build). Figure 6.1 redrawn as `fig-6-1.svg` (bar heights
+  read off the chart, which prints no values). Crops: `tools/crop_photos_ch06.py`. Page 102 (Summary) had no
+  visible page number; numbered by position. Review answers taken from the chapter text; check against Appendix A.
+  The manual's "Rinse and slash used gloves" (p. 95) is typed as printed.
+- Chapter 8, Transportation, Storage, and Security (pp. 123–131): 13 cards (`c08-s01` to `c08-s13`),
+  6 review + 61 test questions. The user called these pages "Chapter 7"; the photos say Chapter 8.
+  The summary page (p. 131) and review page had no visible page number; 131 is inferred.
+  Review questions 1–6 added (answers from the chapter text, check against Appendix A).
+  The review page photo showed only Q1–6; ask whether more questions follow on the next page.
+  Built by `tools/gen_ch08.py` (edit there, rerun, then build). Photo crops: `tools/crop_photos_ch08.py` (grayscale, photos were shot under purple light).
+- Chapter 9, Emergency or Incident Response (pp. 135–140, review questions p. 141): 8 cards (`c09-s01` to `c09-s08`),
+  5 review + 42 test questions. Review Q1 in card 6 (answer C by elimination: the text says to keep records and
+  photographs, and the coordinator fills out reports), Q2 card 3, Q3 and Q4 card 4, Q5 card 5. Figure 9.1 (facility map)
+  redrawn simplified as `fig-9-1.svg` by `tools/fig_9_1.py`. The NFPA diamond is `fig-9-nfpa.svg` (its drawing labels the
+  right box "reactivity", the box text says "instability"). Crops: `tools/crop_photos_ch09.py` (grayscale).
+  Check review answers against Appendix A when it arrives.
+- Chapter 7 (about pp. 105–121) is NOT done: the user sent Chapter 8 while calling it Chapter 7. Ask for Chapter 7.
+  Ask for the manual's total page count (still unknown).
+- Two sessions once worked in parallel on different branches. Before publishing, check the live artifact
+  (and `git branch -r`) for chapters this branch lacks, and merge them first.
 
 ## Rules for every session (the user's own rules)
 1. The user sends photos of manual pages. Work **only** from those pages.
@@ -54,6 +98,7 @@ session's network could not open directly): 50 multiple-choice questions, 35 cor
 - `app/template.html`: the app (reader, quiz engine, grader, progress). Content gets injected at `__CONTENT__`.
 - `tools/build.py`: validates content, inlines figures and images, writes `dist/pest-study.html`. Fails on bad content.
 - `tools/crop_photos_ch01.py`, `tools/fig_1_4.py`: how the Chapter 1 crops and Figure 1.4 were made.
+- `tools/crop_photos_ch09.py`, `tools/fig_9_1.py`: Chapter 9 crops and the Figure 9.1 redraw.
 - Uploaded photos arrive under `/root/.claude/uploads/<session>/`. Crop them WITHOUT applying EXIF rotation:
   the raw pixel orientation matches what is shown in the conversation. Do not commit the full photos.
 

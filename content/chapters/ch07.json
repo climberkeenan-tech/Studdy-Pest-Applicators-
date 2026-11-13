@@ -196,6 +196,20 @@
    ],
    "questions": [
     {
+     "id": "c07-s02-r1",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which property of a pesticide would make it more likely to move in surface water runoff?",
+     "choices": [
+      "High solubility.",
+      "High adsorption.",
+      "High volatility."
+     ],
+     "answer": 0,
+     "ref": "p. 121, Review question 1; answer from p. 106, 'Solubility'",
+     "why": "Highly water-soluble pesticides are more likely to move with water in surface runoff."
+    },
+    {
      "id": "c07-s02-t1",
      "src": "test",
      "kind": "mc",
@@ -1190,6 +1204,20 @@
    ],
    "questions": [
     {
+     "id": "c07-s09-r6",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which two factors are most important in avoiding vapor drift?",
+     "choices": [
+      "Droplet size and wind speed.",
+      "Air stability and temperature.",
+      "Temperature and pesticide volatility."
+     ],
+     "answer": 2,
+     "ref": "p. 121, Review question 6; answer from p. 111, 'Vapor Drift'",
+     "why": "Only volatile pesticides can vapor drift, and the risk rises as temperature rises."
+    },
+    {
      "id": "c07-s09-t1",
      "src": "test",
      "kind": "mc",
@@ -1358,6 +1386,20 @@
    ],
    "questions": [
     {
+     "id": "c07-s10-r3",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which is an example of nonpoint-source contamination of groundwater?",
+     "choices": [
+      "Back-siphoning of pesticide spills at a wellhead.",
+      "Leaching from a pesticide mixing area.",
+      "Pesticides that dissolve and leach through soil after it rains."
+     ],
+     "answer": 2,
+     "ref": "p. 121, Review question 3; answer from p. 112, 'Sources of Water Contamination'",
+     "why": "Back-siphoning and mixing sites are specific locations (point source); leaching from a widespread area after rain is nonpoint."
+    },
+    {
      "id": "c07-s10-t1",
      "src": "test",
      "kind": "mc",
@@ -1472,6 +1514,20 @@
     }
    ],
    "questions": [
+    {
+     "id": "c07-s11-r2",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which statement about movement of pesticides from the application site is true?",
+     "choices": [
+      "Drift is seldom an issue with indoor applications.",
+      "Runoff and erosion are sources of surface water contamination by pesticides.",
+      "Leaching is the main way that pesticides move great distances."
+     ],
+     "answer": 1,
+     "ref": "p. 121, Review question 2; answer from p. 112, 'Pesticide Contamination of Surface Water'",
+     "why": "Pesticides moving in runoff water or with eroded sediment reach surface water; indoor drift is real, and runoff water carries pesticides great distances."
+    },
     {
      "id": "c07-s11-t1",
      "src": "test",
@@ -1776,6 +1832,20 @@
    ],
    "questions": [
     {
+     "id": "c07-s13-r4",
+     "src": "review",
+     "kind": "mc",
+     "q": "Under which conditions are pesticides more likely to leach through soil?",
+     "choices": [
+      "Heavy clay soil, high in organic matter.",
+      "Sandy soil, high in organic matter.",
+      "Sandy soil, low in organic matter."
+     ],
+     "answer": 2,
+     "ref": "p. 121, Review question 4; answer from pp. 113 to 114, 'Texture and Structure', 'Organic Matter', Table 7.2",
+     "why": "Sand moves water fast with few binding sites, and low organic matter means little adsorption."
+    },
+    {
      "id": "c07-s13-t1",
      "src": "test",
      "kind": "mc",
@@ -1919,6 +1989,20 @@
     }
    ],
    "questions": [
+    {
+     "id": "c07-s14-r5",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which best management practice will help prevent contamination of surface water and groundwater by pesticides?",
+     "choices": [
+      "Using pesticides that are highly water-soluble.",
+      "Following IPM principles.",
+      "Selecting persistent pesticides."
+     ],
+     "answer": 1,
+     "ref": "p. 121, Review question 5; answer from p. 115, 'Use Integrated Pest Management Principles'",
+     "why": "Following IPM is listed as a way to prevent water contamination; soluble and persistent pesticides are more likely to leach."
+    },
     {
      "id": "c07-s14-t1",
      "src": "test",
@@ -2471,6 +2555,20 @@
    ],
    "questions": [
     {
+     "id": "c07-s18-r7",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which statement about sensitive areas is true?",
+     "choices": [
+      "Do not spray a larger target site if it contains a sensitive area.",
+      "Pesticide labels may list special precautions around sensitive areas.",
+      "Endangered species' habitats are not considered sensitive areas."
+     ],
+     "answer": 1,
+     "ref": "p. 121, Review question 7; answer from p. 117, 'Sensitive Areas'",
+     "why": "Check the label for statements about special restrictions around sensitive areas."
+    },
+    {
      "id": "c07-s18-t1",
      "src": "test",
      "kind": "mc",
@@ -2752,6 +2850,20 @@
     }
    ],
    "questions": [
+    {
+     "id": "c07-s20-r8",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which statement about protecting bees from pesticide injury is true?",
+     "choices": [
+      "Use foliar applications when possible.",
+      "Spray crops when they are in bloom.",
+      "Apply insecticides in the evening or at night."
+     ],
+     "answer": 2,
+     "ref": "p. 121, Review question 8; answer from p. 118, bee protection principles",
+     "why": "Apply insecticides in the evening or at night when bees are not foraging."
+    },
     {
      "id": "c07-s20-t1",
      "src": "test",

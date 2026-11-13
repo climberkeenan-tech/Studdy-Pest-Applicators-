@@ -59,7 +59,9 @@ session's network could not open directly): 50 multiple-choice questions, 35 cor
   questions. Figures 7.1 to 7.6, Tables 7.1 and 7.2, and the p. 114 soil drawing redrawn as SVG; 12 photo crops
   (`tools/crop_photos_ch07.py`, saved grayscale because the photos had a purple cast). The summary page's number
   was not visible in the photo; 120 is inferred. Table 7.1 prints "Extra Course"; the card says Extra Coarse and notes it.
-  Chapter 7 review questions NOT received yet (should follow the summary, about p. 121). Add them as `src: review`.
+  Review questions 1–8 from p. 121 added (`c07-sNN-rK`, K = manual question number): Q1 card 2, Q2 card 11,
+  Q3 card 10 (answer C by elimination: A and B are specific locations), Q4 card 13, Q5 card 14, Q6 card 9,
+  Q7 card 18, Q8 card 20. Answers taken from the chapter text; check against Appendix A when it arrives.
 - Chapter 9, Emergency or Incident Response (pp. 135–140, review questions p. 141): 8 cards (`c09-s01` to `c09-s08`),
   5 review + 42 test questions. Review Q1 in card 6 (answer C by elimination: the text says to keep records and
   photographs, and the coordinator fills out reports), Q2 card 3, Q3 and Q4 card 4, Q5 card 5. Figure 9.1 (facility map)

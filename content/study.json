@@ -6,7 +6,9 @@
     "totalPages": null,
     "deadline": "2027-01-11",
     "edition": "Second Edition, 2014",
-    "publisher": "Penn State Extension, Pesticide Education Program"
+    "publisher": "Penn State Extension, Pesticide Education Program",
+    "complete": true,
+    "chapters": 11
   },
   "sections": [
     {

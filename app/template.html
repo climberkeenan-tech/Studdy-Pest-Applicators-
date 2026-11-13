@@ -105,6 +105,18 @@ p{margin:0}
 .panel h2{font-family:var(--f-display);font-weight:800;font-size:22px;text-transform:uppercase;letter-spacing:.03em}
 .secgroup{display:flex;flex-direction:column;gap:6px}
 .secgroup h3{font-family:var(--f-display);font-weight:700;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.chap{border:1px solid var(--line);border-radius:10px;background:var(--card)}
+.chap+.chap{margin-top:-4px}
+.chap summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:18px minmax(0,1fr) auto;gap:4px 10px;align-items:center;padding:12px}
+.chap summary::-webkit-details-marker{display:none}
+.chap summary::before{content:"";width:9px;height:9px;border-right:2.5px solid var(--field);border-bottom:2.5px solid var(--field);transform:rotate(-45deg);transition:transform .15s;justify-self:center}
+.chap[open] summary::before{transform:rotate(45deg)}
+.chap-t{font-family:var(--f-display);font-weight:800;font-size:19px;letter-spacing:.03em;text-transform:uppercase;line-height:1.15;min-width:0}
+.chap-n{display:flex;gap:6px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.chap-n .mono{font-size:14px;font-weight:600}
+.chap summary .meter{grid-column:2 / -1;height:6px}
+.chap[open] summary{border-bottom:1px solid var(--line)}
+.chap .secgroup{padding:10px}
 .secrow{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;text-align:left;width:100%;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
 .secrow:hover{border-color:var(--field)}
 .secrow .t{font-weight:700;min-width:0}
@@ -312,7 +324,9 @@ function save() {
 async function flush() {
   if (!profRef || saving || !dirty) return;
   saving = true; dirty = false;
-  try { await profRef.set(JSON.parse(JSON.stringify(P))); sync = 'synced'; }
+  let body = JSON.stringify(P);
+  while (body.length > 200000 && P.sessions.length > 3) { P.sessions.pop(); body = JSON.stringify(P); }
+  try { await profRef.set(JSON.parse(body)); sync = 'synced'; }
   catch (e) { dirty = true; sync = e && e.code === 'quota_exceeded' ? 'full' : 'error'; }
   saving = false;
   renderFoot();
@@ -390,7 +404,7 @@ function startSession() {
   if (!REAL.length) { toast('No manual pages loaded yet. Try the practice card while you wait.'); openSection('practice'); return; }
   S.sess = { id: 's' + Date.now(), start: Date.now(), touch: Date.now(), end: null, a: 0, c: 0, xp: 0, best: 0, passed: [], cleared: [], failed: [], missed: [], studied: [], rapid: null };
   P.sessions.unshift(S.sess);
-  P.sessions = P.sessions.slice(0, 60);
+  P.sessions = P.sessions.slice(0, 30);
   save();
   const pool = rapidPool();
   if (pool.length) startQuiz('rapid', null, pool.slice(0, 5));
@@ -839,7 +853,14 @@ function viewHome() {
   const dl = daysLeft(), mp = manualProgress(), r = rank(), d = P.days[dayKey()] || { a: 0, c: 0 };
   const nx = nextSection(), misses = openMisses();
   let pace = '';
-  if (mp.total) { const left = mp.total - mp.pagesDone; pace = left > 0 && dl > 0 ? `Pace needed: <b>${Math.ceil(left / dl)} pages a day</b> to finish the manual by ${esc(fmtDate(DEADLINE))}.` : ''; }
+  if (C.manual && C.manual.complete) {
+    const left = REAL.length - mp.passedN;
+    if (!left) pace = 'Every card is passed. Keep drilling weak spots until exam day.';
+    else if (dl > 21) pace = `Pace needed: <b>${Math.ceil(left / (dl - 14))} cards a day</b> passes all ${REAL.length} cards with two weeks left to review. ${Math.ceil(left / dl)} a day finishes right at the deadline.`;
+    else if (dl > 0) pace = `Pace needed: <b>${Math.ceil(left / dl)} cards a day</b> to pass the ${left} cards left by ${esc(fmtDate(DEADLINE))}.`;
+    else pace = `${left} cards still not passed.`;
+  }
+  else if (mp.total) { const left = mp.total - mp.pagesDone; pace = left > 0 && dl > 0 ? `Pace needed: <b>${Math.ceil(left / dl)} pages a day</b> to finish the manual by ${esc(fmtDate(DEADLINE))}.` : ''; }
   else pace = 'Tell Claude how many pages your manual has, and this will show your daily pace.';
   const ctaSub = S.sess ? 'Session in progress. Pick up where you left off.' : (rapidPool().length ? '5-question rapid round first, then ' : 'Next up: ') + (nx ? '<b>' + esc(nx.title) + '</b>' : (REAL.length ? 'drilling your weak spots' : 'the practice card'));
   const totalA = Object.values(P.days).reduce((s, x) => s + (x.a || 0), 0), totalC = Object.values(P.days).reduce((s, x) => s + (x.c || 0), 0);
@@ -872,7 +893,7 @@ function viewHome() {
   <section class="panel">
     <div class="row" style="justify-content:space-between"><h2>Manual progress</h2><span class="mono">${Math.round(mp.frac * 100)}%</span></div>
     <div class="meter" style="height:14px"><i style="width:${(mp.frac * 100).toFixed(1)}%"></i></div>
-    <p class="muted" style="font-size:15px">${esc(mp.text)}${mp.total ? '' : '. Total manual size not set yet.'}</p>
+    <p class="muted" style="font-size:15px">${esc(mp.text)}${mp.total || (C.manual && C.manual.complete) ? (C.manual && C.manual.chapters ? ' across ' + C.manual.chapters + ' chapters.' : '.') : '. Total manual size not set yet.'}</p>
   </section>
 
   ${misses.length ? `<section class="panel">
@@ -890,13 +911,24 @@ function viewHome() {
   <div class="foot" id="foot"></div>
 </div>`;
 }
+const OPEN_KEY = 'pas-open-chapters-v1';
+const chapOpen = lsGet(OPEN_KEY) || {};
 function groupSections(list, nx) {
-  let html = '', ch = null;
+  const groups = [];
   for (const s of list) {
-    if (s.chapter !== ch) { if (ch !== null) html += '</div>'; ch = s.chapter; html += `<div class="secgroup"><h3>${esc(ch || 'Cards')}</h3>`; }
-    html += secRow(s, nx);
+    const g = groups[groups.length - 1];
+    if (g && g.ch === s.chapter) g.secs.push(s); else groups.push({ ch: s.chapter || 'Cards', secs: [s] });
   }
-  return html + (ch !== null ? '</div>' : '');
+  if (groups.length === 1) return `<div class="secgroup"><h3>${esc(groups[0].ch)}</h3>${groups[0].secs.map(s => secRow(s, nx)).join('')}</div>`;
+  return groups.map(g => {
+    const n = g.secs.length, passed = g.secs.filter(s => P.passed[s.id]).length;
+    const failed = g.secs.filter(s => !P.passed[s.id] && P.attempts[s.id] && P.attempts[s.id].n).length;
+    const weak = g.secs.reduce((k, s) => k + (s.questions || []).filter(q => P.q[q.id] && P.q[q.id].open).length, 0);
+    const hasNext = !!(nx && g.secs.some(s => s.id === nx.id));
+    const open = chapOpen[g.ch] !== undefined ? chapOpen[g.ch] : hasNext;
+    const pills = (passed === n ? '<span class="pill pass">Done</span>' : hasNext ? '<span class="pill next">Next</span>' : '') + (failed ? `<span class="pill fail">${failed} failed</span>` : '') + (weak ? `<span class="pill weak">${weak} weak</span>` : '');
+    return `<details class="chap" data-ch="${esc(g.ch)}"${open ? ' open' : ''}><summary><span class="chap-t">${esc(g.ch)}</span><span class="chap-n">${pills}<span class="mono">${passed}/${n}</span></span><div class="meter"><i style="width:${pct(passed, n)}%"></i></div></summary><div class="secgroup">${g.secs.map(s => secRow(s, nx)).join('')}</div></details>`;
+  }).join('');
 }
 function secRow(s, nx) {
   const st = s.practice ? 'practice' : secStatus(s);
@@ -1174,6 +1206,11 @@ document.addEventListener('click', e => {
   const sent = e.target.closest('#reading .sent');
   if (sent && (Reader.mode === 'claude' || Reader.mode === 'device')) play(parseInt(sent.dataset.i, 10));
 });
+document.addEventListener('toggle', e => {
+  const d = e.target;
+  if (!d || !d.matches || !d.matches('details.chap')) return;
+  chapOpen[d.dataset.ch] = d.open; lsSet(OPEN_KEY, chapOpen);
+}, true);
 document.addEventListener('submit', e => { if (e.target.matches('[data-form="short"]')) { e.preventDefault(); submitShort(); } });
 document.addEventListener('change', e => {
   if (e.target.id === 'sel-voice') { P.settings.voice = e.target.value; save(); if (Reader.state !== 'idle' && Reader.cur >= 0) play(Reader.cur); }

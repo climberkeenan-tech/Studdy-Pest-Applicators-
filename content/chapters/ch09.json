@@ -407,7 +407,7 @@
      ],
      "answer": 0,
      "ref": "p. 136, 'Keep'",
-     "why": "Copies kept away from the storage area survive a fire or spill there."
+     "why": "Keep copies of pesticide labels and SDSs away from the storage area."
     },
     {
      "id": "c09-s03-t2",
@@ -578,7 +578,7 @@
      "answer": 1,
      "fixed": true,
      "ref": "p. 141, Review question 3 (answer: p. 137, 'Precautions to Reduce Fire Hazards')",
-     "why": "A fire-detection system is one of the listed precautions. Store combustible pesticides away from heat."
+     "why": "Installing a fire-detection system is in the list of precautions to reduce fire hazards. The sign appears only as a photo caption, and combustible pesticides are stored away from heat."
     },
     {
      "id": "c09-s04-r4",
@@ -776,17 +776,25 @@
      "answer": "control, contain, clean up",
      "keys": [
       [
-       "control"
+       "control",
+       "controlling"
       ],
       [
-       "contain"
+       "contain",
+       "containing",
+       "containment"
       ],
       [
-       "clean"
+       "clean up",
+       "cleanup",
+       "clean-up",
+       "clean",
+       "cleaning"
       ]
      ],
      "ref": "p. 138, 'Pesticide Spills' and box 'The Three Cs'",
-     "why": "Control the spill, contain it, and clean it up."
+     "why": "Control the spill, contain it, and clean it up.",
+     "ordered": true
     },
     {
      "id": "c09-s05-t2",
@@ -945,9 +953,31 @@
      "answer": "1-800-424-9300",
      "accept": [
       "800-424-9300",
-      "18004249300",
+      "800 424 9300",
+      "800.424.9300",
       "8004249300",
-      "1 800 424 9300"
+      "800 424-9300",
+      "1-800 424 9300",
+      "1-800.424.9300",
+      "1-8004249300",
+      "1-800 424-9300",
+      "1 800-424-9300",
+      "1 800 424 9300",
+      "1 800.424.9300",
+      "1 8004249300",
+      "1 800 424-9300",
+      "1.800-424-9300",
+      "1.800 424 9300",
+      "1.800.424.9300",
+      "1.8004249300",
+      "1.800 424-9300",
+      "1800-424-9300",
+      "1800 424 9300",
+      "1800.424.9300",
+      "18004249300",
+      "1800 424-9300",
+      "1-800-424-9300.",
+      "800-424-9300."
      ],
      "ref": "p. 139, box 'For emergency response information call'",
      "why": "CHEMTREC is 1-800-424-9300."
@@ -1321,12 +1351,29 @@
      "answer": "defensive driving and not using a cellphone while driving",
      "keys": [
       [
-       "defensive"
+       "defensive",
+       "defensively"
       ],
       [
        "cellphone",
        "cell phone",
-       "phone"
+       "phone",
+       "smartphone",
+       "mobile"
+      ],
+      [
+       "not",
+       "no",
+       "never",
+       "refrain",
+       "refraining",
+       "avoid",
+       "avoiding",
+       "without",
+       "off",
+       "away",
+       "don't",
+       "dont"
       ]
      ],
      "ref": "p. 140, 'Prevent Spills'",

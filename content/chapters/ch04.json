@@ -48,7 +48,7 @@
     },
     {
      "list": [
-      "A carrier or diluent, such as an organic solvent of mineral clay.",
+      "A carrier or diluent, such as an organic solvent of mineral clay. (The manual prints \"of\" here. It most likely means an organic solvent or mineral clay.)",
       "Surface-active ingredients, such as **stickers** and **spreaders**.",
       "Other additives, such as stabilizers, dyes, and chemicals, which make the product safer or enhance pesticidal activity."
      ]
@@ -219,19 +219,40 @@
        "solubility",
        "soluble",
        "dissolve",
-       "dissolves"
+       "dissolves",
+       "dissolving"
       ],
       [
-       "use",
-       "uses",
        "intended use",
-       "used"
+       "intended uses",
+       "intended purpose",
+       "what it is intended for",
+       "purpose",
+       "how it will be used",
+       "it will be used",
+       "how it is used",
+       "pesticide is used",
+       "what it is used for"
       ]
      ],
      "ref": "p. 50, 'Formulations: An Overview'",
      "why": "Solubility and intended use determine how an active ingredient is made into an end-use product.",
      "id": "c04-s02-t4",
-     "src": "test"
+     "src": "test",
+     "accept": [
+      "Solubility and intended use",
+      "Solubility and use",
+      "Solubility and uses",
+      "Use and solubility",
+      "Solubility, use",
+      "Solubility and its use",
+      "Solubility and the use",
+      "Solubility and the use of the pesticide",
+      "Solubility and how the pesticide will be used",
+      "Solubilty and use",
+      "The use and solubility",
+      "Solubility and it's use"
+     ]
     },
     {
      "kind": "mc",
@@ -798,7 +819,7 @@
       "Could I choose a less hazardous formulation that would still be as effective?",
       "Which one is cheaper per gallon?",
       "Which one has the strongest odor?",
-      "Which one the supplier recommends most often?"
+      "Which one does the supplier recommend most often?"
      ],
      "answer": 0,
      "ref": "p. 52, 'Formulations: An Overview'",
@@ -2739,8 +2760,10 @@
        "syringes"
       ],
       [
-       "gun",
-       "guns"
+       "bait gun",
+       "bait guns",
+       "baitgun",
+       "baitguns"
       ]
      ],
      "ref": "p. 60, 'Pastes, Gels, and Other Injectable Baits'",
@@ -3623,7 +3646,7 @@
     },
     {
      "kind": "mc",
-     "q": "Which adjuvant increases the viscosity of a spray mixture and may reduce drift and slow evaporation?",
+     "q": "Slowing evaporation is useful when applying systemic pesticides. Which adjuvant may reduce drift and/or slow evaporation?",
      "choices": [
       "Thickeners",
       "Spreaders",

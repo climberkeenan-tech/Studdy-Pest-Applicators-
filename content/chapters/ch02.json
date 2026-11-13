@@ -105,7 +105,7 @@
           "id": "c02-s01-t4",
           "src": "test",
           "kind": "mc",
-          "q": "Except for which products do few other chemicals sold in the United States undergo such extensive regulatory review and testing as pesticides?",
+          "q": "Few other chemicals sold in the United States undergo such extensive regulatory review and testing as pesticides. Which products does the manual name as the exception?",
           "choices": [
             "Human and veterinary drugs",
             "Fertilizers",
@@ -210,7 +210,7 @@
           ],
           "answer": 1,
           "ref": "Review question 1, p. 29. Answer in the text: p. 19, 'The Need for Regulation'; p. 20, 'FIFRA'; p. 27, 'Summary'",
-          "why": "States, tribes, and territories may set rules more (but not less) restrictive than FIFRA. A and C are true."
+          "why": "States, tribes, and territories may set rules more, but not less, restrictive than FIFRA."
         },
         {
           "id": "c02-s02-t1",
@@ -219,7 +219,7 @@
           "q": "Congress amended FIFRA considerably in which year?",
           "choices": [
             "1972",
-            "1996",
+            "2008",
             "2006",
             "1984"
           ],
@@ -483,7 +483,7 @@
           ],
           "answer": 0,
           "ref": "Review question 2, p. 29. Answer in the text: p. 21, certified applicators",
-          "why": "Certified applicators may use or supervise the use of RUPs. B is not in the text, and C is false."
+          "why": "Certified applicators may use or supervise the use of restricted-use pesticides."
         },
         {
           "id": "c02-s04-t1",
@@ -545,7 +545,7 @@
           "id": "c02-s04-t5",
           "src": "test",
           "kind": "short",
-          "q": "Certification programs and the RUP classification provide an alternative to what happening to these beneficial pesticides?",
+          "q": "Besides more stringent controls on their use, certification programs and the RUP classification provide an alternative to what happening to these beneficial pesticides?",
           "answer": "Cancellation",
           "accept": [
             "being cancelled",
@@ -554,10 +554,11 @@
           ],
           "keys": [
             [
-              "cancel",
               "cancellation",
               "cancelled",
-              "canceled"
+              "canceled",
+              "cancelling",
+              "canceling"
             ]
           ],
           "ref": "p. 21, last paragraph of FIFRA section",
@@ -922,7 +923,7 @@
           ],
           "answer": 1,
           "ref": "Review question 3, p. 29. Answer in the text: p. 21, 'Pesticide Registration'; p. 23, 'Pesticide Reregistration'",
-          "why": "Registration rests on data showing no unreasonable risks. Tolerances allow some residue, so C is wrong."
+          "why": "Registration rests on data showing no unreasonable risks. Tolerances allow some residue, so zero residue is not the purpose."
         },
         {
           "id": "c02-s07-t1",
@@ -1537,9 +1538,8 @@
           "keys": [
             [
               "ffdca",
-              "food drug",
-              "food, drug",
-              "cosmetic"
+              "cosmetic",
+              "cosmetics"
             ]
           ],
           "ref": "p. 25, 'Other Federal Laws'",
@@ -1598,7 +1598,7 @@
       "figures": [
         {
           "id": "fig-2-1",
-          "title": "Figure 2.1: Under FQPA, the EPA must consider both dietary (food) and non-dietary (garden, home, water, pets, etc.) risks of exposure when setting tolerance levels for pesticide residues in food.",
+          "title": "Figure 2.1: Under FQPA, the EPA must consider both dietary (food) and non-dietary (garden, home, water, pets, and so on) risks of exposure when setting tolerance levels for pesticide residues in food.",
           "page": "p. 25",
           "svgFile": "fig-2-1.svg",
           "explain": [
@@ -1820,8 +1820,13 @@
           ],
           "keys": [
             [
-              "bulletins live",
-              "bulletin live"
+              "bulletins",
+              "bulletin",
+              "bulletinslive"
+            ],
+            [
+              "live",
+              "bulletinslive"
             ]
           ],
           "ref": "p. 26, 'Endangered Species Act'",

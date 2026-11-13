@@ -23,6 +23,14 @@ OUT = ROOT / "dist" / "pest-study.html"
 
 errors, warnings = [], []
 BLOCK_KINDS = ("h", "box", "p", "list", "ol", "fig", "gallery")
+# Multiple-choice answers are shuffled on screen, so an explanation must never point at a choice by its
+# letter ("so C is wrong") or position ("that last one"). It would point at the wrong choice after a shuffle.
+BY_LETTER = re.compile(
+    r"(?:\b(?i:choices?|options?)\s+\(?[A-F]\)?(?![a-z])"
+    r"|\b[A-F]\)?,?\s+(?:and|or)\s+\(?[A-F]\b(?![a-z'])"
+    r"|(?:^|[.!?:]\s+)[A-F]\s+(?:is|are|was|has|describes?|says?)\b"
+    r"|(?:\bso|\bbut|\band|\bonly|\bsays)\s+[A-F]\b(?![a-z'°])"
+    r"|\b(?i:that|the) (?i:last|first|second|third|fourth) (?i:one|choice|option|answer|statement)\b)")
 MIME = {".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".png": "image/png", ".webp": "image/webp"}
 
 
@@ -171,6 +179,9 @@ def check(data):
                     refers = any(w in c.lower() for c in ch for w in ("all of the above", "none of the above", "both a", "a and b", "a and c", "b and c"))
                     if refers and not q.get("fixed"):
                         err(f"{qw}: choices refer to other choices; set \"fixed\": true")
+                    m = None if q.get("fixed") else BY_LETTER.search(q.get("why", ""))
+                    if m:
+                        err(f"{qw}: why names a choice by letter or position ({m.group(0).strip()!r}); choices are shuffled, so restate the fact instead")
             elif kind == "tf":
                 if not isinstance(q.get("answer"), bool):
                     err(f"{qw}: tf answer must be true/false")
@@ -180,6 +191,8 @@ def check(data):
                 keys = q.get("keys")
                 if keys is not None and not (isinstance(keys, list) and all(isinstance(g, (str, list)) for g in keys)):
                     err(f"{qw}: keys must be a list of strings or lists of alternatives")
+                if "ordered" in q and not (q["ordered"] is True and keys):
+                    err(f"{qw}: ordered must be true and needs keys (the key groups are then required in order)")
             else:
                 err(f"{qw}: kind must be mc, tf, or short")
             if q.get("style") not in (None, "recall", "scenario", "not"):

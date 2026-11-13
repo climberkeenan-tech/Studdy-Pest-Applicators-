@@ -98,8 +98,11 @@
       [
        "inhalation",
        "inhaling",
+       "inhale",
        "breathing",
-       "lungs"
+       "breathe",
+       "lungs",
+       "respiratory"
       ],
       [
        "ocular",
@@ -109,7 +112,9 @@
       [
        "oral",
        "mouth",
-       "swallowing"
+       "swallowing",
+       "swallow",
+       "ingest"
       ]
      ],
      "accept": [
@@ -633,21 +638,46 @@
      "why": "Chemical resistant means no measurable amount breaks through the material.",
      "keys": [
       [
+       "prevent",
+       "prevents",
+       "preventing",
+       "stop",
+       "stops",
+       "stopping",
+       "block",
+       "blocks",
+       "blocking",
+       "nothing",
+       "zero",
+       "keeps any",
+       "keeps all",
+       "keeps measurable",
+       "won't let",
+       "won't allow"
+      ],
+      [
        "measurable",
        "any amount",
        "any material",
-       "any pesticide"
+       "any pesticide",
+       "any chemical"
+      ],
+      [
+       "measurable",
+       "any"
       ],
       [
        "through",
        "breakthrough",
        "penetrate",
-       "penetrating"
+       "penetrating",
+       "penetration",
+       "thru"
       ]
      ],
      "accept": [
-      "no measurable amount of material moves through the fabric",
-      "prevents any measurable amount from breaking through"
+      "prevents any measurable amount from breaking through",
+      "nothing measurable moves through the fabric"
      ]
     },
     {
@@ -1113,7 +1143,7 @@
      "id": "c06-s08-t2",
      "src": "test",
      "kind": "mc",
-     "q": "Wearing protective gloves reduced exposure by how much in that study?",
+     "q": "In the study the manual cites on workers mixing pesticides, wearing protective gloves reduced exposure by how much?",
      "choices": [
       "13%",
       "50%",
@@ -1462,7 +1492,7 @@
      ],
      "answer": 1,
      "ref": "p. 95, Figure 6.2",
-     "why": "Overhead: gloves outside sleeves, cuff folded up 1 or 2 inches, so spray cannot run down your arm.",
+     "why": "When spraying above your head, wear gloves outside your sleeves with the cuff folded up 1 or 2 inches.",
      "style": "scenario"
     }
    ]

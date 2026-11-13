@@ -144,19 +144,37 @@
      "accept": [
       "the label directions",
       "everything on the label",
-      "label instructions"
+      "label instructions",
+      "the label",
+      "the label.",
+      "the pesticide label",
+      "the pesticide label.",
+      "the product label",
+      "the pesticide product label",
+      "pesticide label",
+      "label",
+      "the lable",
+      "what the label says",
+      "the label on the pesticide",
+      "the label on the product",
+      "the label on the container"
      ],
      "keys": [
       [
        "label",
        "labeling",
-       "labels"
+       "labels",
+       "lable",
+       "lables"
       ],
       [
        "instructions",
        "directions",
        "everything",
-       "all"
+       "all",
+       "says",
+       "follow",
+       "comply"
       ]
      ],
      "ref": "p. 32, introduction",
@@ -794,7 +812,6 @@
      "kind": "short",
      "q": "Name the four times the manual says to read the label.",
      "answer": "Before buying, before mixing and applying, when storing, and before disposing",
-     "accept": [],
      "keys": [
       [
        "buying",
@@ -807,8 +824,17 @@
        "mix",
        "applying",
        "apply",
+       "application",
        "using",
-       "use"
+       "usage",
+       "use it",
+       "prior to uses",
+       "you uses",
+       "buy use",
+       "before uses",
+       "buying uses",
+       "purchase uses",
+       "purchasing uses"
       ],
       [
        "storing",
@@ -818,7 +844,15 @@
       [
        "disposing",
        "dispose",
-       "disposal"
+       "disposal",
+       "discarding",
+       "discard",
+       "throwing away",
+       "throw away",
+       "throw it away",
+       "throw them away",
+       "getting rid of",
+       "get rid of"
       ]
      ],
      "ref": "pp. 34 to 35, 'When to Read the Pesticide Label'",
@@ -978,7 +1012,7 @@
     {
      "id": "c03-s07-t4",
      "kind": "short",
-     "q": "What is the active ingredient?",
+     "q": "What does the term active ingredient mean?",
      "answer": "The chemical or chemicals in a pesticide product responsible for its pesticidal activity",
      "accept": [
       "the chemical that actually controls the pest",
@@ -990,15 +1024,21 @@
        "chemicals",
        "material",
        "part",
-       "ingredient"
+       "ingredient",
+       "substance",
+       "stuff",
+       "what"
       ],
       [
        "pesticidal activity",
+       "pesticidal action",
+       "activity of the pesticide",
        "controls",
        "control",
+       "controlling",
        "kills",
-       "works",
-       "function"
+       "kill",
+       "killing"
       ]
      ],
      "ref": "p. 35, 'Ingredient Statement'",
@@ -1403,7 +1443,7 @@
     {
      "id": "c03-s10-t3",
      "kind": "mc",
-     "q": "Which of these is NOT a correct pairing of a Spanish word and English signal word?",
+     "q": "Which of these is NOT correct about the Spanish words that appear with signal words on a label?",
      "choices": [
       "PELIGRO and DANGER",
       "AVISO and WARNING",
@@ -1958,7 +1998,7 @@
     {
      "id": "c03-s14-t3",
      "kind": "mc",
-     "q": "The label says use in permeable soils with a shallow water table may cause groundwater contamination. You are treating a site with sandy soil and a high water table. What is the label warning you about?",
+     "q": "You are about to treat a site where the soils are permeable and the water table is shallow. According to the example general environmental statements, what may use of the chemical there result in?",
      "choices": [
       "Drift onto bees",
       "Groundwater contamination",
@@ -2467,7 +2507,7 @@
       "VIP Chemical Company"
      ],
      "answer": 1,
-     "ref": "Figure 3.1, sample pesticide label, p. 42, ingredient statement",
+     "ref": "Figure 3.1, sample pesticide label, p. 42, ingredient statement; p. 36, 'Ingredient Statement'",
      "why": "Galactothion is the common name; the name in parentheses is the chemical name; VIP No Pest Gel is the brand name.",
      "src": "test"
     },

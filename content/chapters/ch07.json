@@ -230,10 +230,10 @@
      "src": "test",
      "kind": "mc",
      "style": "scenario",
-     "q": "Two herbicides are equal in every way except that Product A is highly water-soluble and Product B is not. Which is more likely to move in surface runoff or through the soil?",
+     "q": "Two herbicides are equal in every way except that Product X is highly water-soluble and Product Y is not. Which is more likely to move in surface runoff or through the soil?",
      "choices": [
-      "Product A",
-      "Product B",
+      "Product X",
+      "Product Y",
       "Both equally",
       "Neither; solubility does not affect movement"
      ],
@@ -395,10 +395,10 @@
      "src": "test",
      "kind": "mc",
      "style": "scenario",
-     "q": "The same pesticide is applied in two places. Site A is warm and wet. Site B is cool and dry. Where will the pesticide most likely break down faster?",
+     "q": "The same pesticide is applied in two places. Site X is warm and wet. Site Y is cool and dry. Where will the pesticide most likely break down faster?",
      "choices": [
-      "Site A",
-      "Site B",
+      "Site X",
+      "Site Y",
       "Equally fast at both sites",
       "It cannot break down at either site"
      ],
@@ -921,14 +921,30 @@
      "accept": [
       "20-24 inches",
       "20 to 24",
-      "20-24"
+      "20-24",
+      "twenty to twenty-four inches",
+      "twenty to twenty four inches",
+      "twenty to twenty-four",
+      "twenty to twenty four"
      ],
      "keys": [
       [
-       "20"
+       "20",
+       "20in",
+       "20-24",
+       "20-24.",
+       "20-24in",
+       "20-24in."
       ],
       [
-       "24"
+       "24",
+       "24.",
+       "24in",
+       "24in.",
+       "20-24",
+       "20-24.",
+       "20-24in",
+       "20-24in."
       ]
      ],
      "ref": "p. 110, paragraph on release height",
@@ -939,7 +955,7 @@
      "src": "test",
      "kind": "mc",
      "style": "scenario",
-     "q": "A field borders a school on its east side. The wind is blowing from west to east. Following the manual, what is the problem?",
+     "q": "A school is next to the east edge of a field that is about to be sprayed. The wind is blowing from west to east. Following the manual, what is the problem?",
      "choices": [
       "The applicator would be spraying upwind of the school, so drift would blow toward it",
       "There is no problem; wind direction does not matter",
@@ -1265,15 +1281,23 @@
      "answer": "particle drift",
      "accept": [
       "dust drift",
+      "dust drift.",
+      "dust-drift",
+      "dust drifting",
+      "the dust drift",
+      "it is called dust drift",
+      "it is called dust drift.",
+      "it's called dust drift",
+      "its called dust drift",
       "particle drift or dust drift"
      ],
      "keys": [
       [
-       "particle",
-       "dust"
+       "particle"
       ],
       [
-       "drift"
+       "drift",
+       "drifting"
       ]
      ],
      "ref": "p. 111, 'Particle Drift (Dust Drift)'",
@@ -1470,7 +1494,10 @@
       [
        "nonpoint",
        "non-point",
-       "non point"
+       "non point",
+       "nonpoint-source",
+       "non-point-source",
+       "nonpointsource"
       ]
      ],
      "ref": "p. 112, 'Sources of Water Contamination'",
@@ -2329,14 +2356,30 @@
      "accept": [
       "backsiphoning",
       "back siphoning",
-      "backflow",
       "back-siphonage",
       "back siphon",
       "backsiphon",
-      "back-siphon"
+      "back-siphon",
+      "backflow",
+      "backflow.",
+      "back flow",
+      "back-flow",
+      "backflow of pesticides",
+      "it is called backflow",
+      "it is called backflow."
      ],
      "ref": "p. 116, 'Avoid Back-siphoning'",
-     "why": "That reverse flow is back-siphoning."
+     "why": "That reverse flow is back-siphoning.",
+     "keys": [
+      [
+       "back-siphoning",
+       "back siphoning",
+       "back-siphonage",
+       "back siphonage",
+       "back-siphon",
+       "back siphon"
+      ]
+     ]
     }
    ]
   },
@@ -2497,7 +2540,7 @@
      "list": [
       "School grounds, playgrounds, and recreational areas.",
       "Habitats of endangered species.",
-      "Apiaries, which are honey bee sites, wildlife refuges, and parks.",
+      "Apiaries (honey bee sites), wildlife refuges, and parks.",
       "Areas where domestic animals and livestock are kept.",
       "Ornamental plantings, public gardens, and sensitive food or feed crops."
      ]

@@ -137,7 +137,12 @@
       "the rats"
      ],
      "ref": "pp. 1–2, 'Pest Problems Throughout History'",
-     "why": "Rats were the normal hosts. Without them, the fleas sought other warm-blooded hosts, including humans."
+     "why": "Rats were the normal hosts. Without them, the fleas sought other warm-blooded hosts, including humans.",
+     "keys": [
+      [
+       "rat"
+      ]
+     ]
     }
    ]
   },
@@ -226,10 +231,16 @@
       [
        "injures",
        "injure",
+       "injuring",
        "harms",
        "harm",
+       "harming",
+       "harmful",
+       "hurts",
+       "hurt",
        "damages",
-       "damage"
+       "damage",
+       "damaging"
       ],
       [
        "humans",
@@ -1114,7 +1125,7 @@
      ],
      "answer": 0,
      "ref": "Review question 3, p. 17. Answer in the text: p. 6, 'Biological Control'",
-     "why": "Keeping native natural enemies healthy, for example with pollen and nectar plants, is biological control. B has it backwards."
+     "why": "Keeping native natural enemies healthy, for example with pollen and nectar plants, is part of biological control."
     },
     {
      "id": "c01-s08-t1",
@@ -1485,15 +1496,39 @@
       [
        "how long",
        "length of time",
+       "amount of time",
+       "period of time",
+       "duration",
+       "time",
        "long"
       ],
       [
-       "active",
-       "effective",
-       "works",
-       "working",
-       "control",
-       "controls"
+       "remain",
+       "remains",
+       "remaining",
+       "stays",
+       "staying",
+       "lasts",
+       "lasting",
+       "keeps",
+       "continues",
+       "activity",
+       "it is active",
+       "they are active",
+       "pesticide is active",
+       "it is effective",
+       "they are effective",
+       "pesticide is effective",
+       "it works",
+       "they work",
+       "pesticide works",
+       "pesticides work",
+       "will work",
+       "it controls",
+       "they control",
+       "pesticide controls",
+       "pesticides control",
+       "will control"
       ]
      ],
      "ref": "p. 7, persistence",
@@ -1575,7 +1610,7 @@
      ],
      "answer": 0,
      "ref": "Review question 5, p. 17. Answer in the text: p. 7, 'Cultural Control'",
-     "why": "B describes chemical control and C describes biological control."
+     "why": "Cultural controls reduce pest establishment, reproduction, dispersal, and survival. The other two statements describe chemical control and biological control."
     },
     {
      "id": "c01-s11-t1",
@@ -1631,7 +1666,8 @@
      "q": "What does the manual call one of the most important ways to control weeds?",
      "answer": "Cultivation",
      "accept": [
-      "cultivating"
+      "cultivating",
+      "cultivate"
      ],
      "ref": "p. 7, 'Cultural Control'",
      "why": "Cultivation is one of the most important ways to control weeds."
@@ -1937,7 +1973,49 @@
       "stops egg hatch"
      ],
      "ref": "p. 9, 'Mechanical/Physical Control'",
-     "why": "Lowered temperatures kill the insects, stop their feeding, and prevent egg hatch or development."
+     "why": "Lowered temperatures kill the insects, stop their feeding, and prevent egg hatch or development.",
+     "keys": [
+      [
+       "kills",
+       "killed",
+       "killing",
+       "die",
+       "stop feeding",
+       "stops feeding",
+       "stop eating",
+       "stops eating",
+       "prevent egg hatch",
+       "prevents egg hatch",
+       "stop egg hatch",
+       "stops egg hatch",
+       "prevent hatching",
+       "prevents hatching",
+       "prevent egg hatching",
+       "prevent eggs from hatching",
+       "prevents eggs from hatching",
+       "stop eggs from hatching",
+       "stops eggs from hatching",
+       "keep eggs from hatching",
+       "keeps eggs from hatching",
+       "prevent the eggs from hatching",
+       "prevents the eggs from hatching",
+       "stop the eggs from hatching",
+       "stops the eggs from hatching",
+       "prevent development",
+       "prevents development",
+       "stop development",
+       "stops development",
+       "prevent egg development",
+       "stop developing",
+       "prevent them from developing",
+       "stops them from developing",
+       "keeps them from developing",
+       "stops them from feeding",
+       "stop them from feeding",
+       "stopped feeding",
+       "quit feeding"
+      ]
+     ]
     }
    ]
   },
@@ -2154,31 +2232,42 @@
      "id": "c01-s15-t2",
      "src": "test",
      "kind": "short",
-     "q": "Define integrated pest management (IPM).",
+     "q": "Define integrated pest management (IPM) and state the goal of this strategy.",
      "answer": "A pest management strategy that utilizes a wide range of pest control methods or tactics to prevent pests from reaching economically or aesthetically damaging levels with the least risk to the environment.",
      "keys": [
-      [
-       "strategy",
-       "approach"
-      ],
       [
        "wide range",
        "range",
        "many",
        "variety",
-       "multiple"
+       "multiple",
+       "several",
+       "various",
+       "different",
+       "combination"
       ],
       [
        "methods",
        "method",
        "tactics",
-       "tactic"
+       "tactic",
+       "techniques",
+       "practices",
+       "tools",
+       "options",
+       "measures"
       ],
       [
        "prevent",
        "prevents",
+       "preventing",
        "keep",
-       "stop"
+       "keeps",
+       "keeping",
+       "stop",
+       "stops",
+       "stopping",
+       "below"
       ],
       [
        "damaging",
@@ -2189,7 +2278,13 @@
        "lowest risk",
        "minimal risk",
        "less risk",
-       "least harm"
+       "least harm",
+       "least environmental risk",
+       "lowest environmental risk",
+       "least possible risk",
+       "lowest possible risk",
+       "least amount of risk",
+       "minimal harm"
       ],
       [
        "environment",
@@ -2366,17 +2461,19 @@
       ],
       [
        "ineffective",
-       "not effective",
-       "do not work",
-       "don't work",
-       "doesn't work"
+       "fail",
+       "fails",
+       "aren't effective",
+       "won't work",
+       "won't always work"
       ],
       [
        "save money",
        "saves money",
        "money",
-       "cost",
-       "costs"
+       "costs",
+       "cheaper",
+       "less expensive"
       ],
       [
        "healthy environment",
@@ -2550,7 +2647,8 @@
       ]
      ],
      "ref": "p. 11, 'Components of IPM' box",
-     "why": "Identify, monitor, develop the goal, implement, record and evaluate."
+     "why": "Identify, monitor, develop the goal, implement, record and evaluate.",
+     "ordered": true
     }
    ]
   },
@@ -2589,7 +2687,8 @@
       "Agricultural or ornamental producers must understand the concept of economic thresholds.",
       "The presence of a pest does not always cause a loss in quality or quantity of a product.",
       "To justify the cost of control, pest populations must be large enough to cause significant damage.",
-      "The **economic threshold (ET)** is the pest population density, the number of pests per unit area, at which control measures are needed to prevent the pest from reaching the economic injury level.",
+      "This is called the **economic threshold (ET)**.",
+      "The economic threshold is the pest population density, the number of pests per unit area, at which control measures are needed to prevent the pest from reaching the economic injury level.",
       "The **economic injury level (EIL)** is the pest population density that causes losses equal to the cost of control measures.",
       "To justify using a control method, it is necessary to **set the ET below the EIL**.",
       "Otherwise, producers lose money: first from the damage caused by the pest, and then by the cost of the control method.",
@@ -2696,18 +2795,33 @@
        "pests"
       ],
       [
-       "control"
+       "control",
+       "controls",
+       "controlled",
+       "controlling",
+       "treat",
+       "treatment",
+       "treated",
+       "action",
+       "act"
       ],
       [
        "prevent",
+       "prevents",
+       "preventing",
        "before",
        "keep",
-       "stop"
+       "keeps",
+       "keeping",
+       "stop",
+       "stops",
+       "stopping"
       ],
       [
        "economic injury level",
        "eil",
-       "injury level"
+       "injury level",
+       "economic injury"
       ]
      ],
      "ref": "p. 11, 'Pest Population Thresholds'",
@@ -3185,7 +3299,8 @@
     {
      "p": [
       "**Pesticide degradation.** Pesticides may degrade when stored.",
-      "Under some conditions, pesticides can change into a form that is ineffective, due to the age of the product or the pesticide storage conditions.",
+      "Under some conditions, pesticides can change into a form that is ineffective.",
+      "This might be due to the age of the product or the pesticide storage conditions.",
       "For example, **granular pesticides stored in wet or very humid conditions** will draw moisture.",
       "This may cause **clumping and possible deactivation** of the pesticide."
      ]
@@ -3274,7 +3389,12 @@
        "deactivate",
        "ineffective",
        "stop working",
-       "stops working"
+       "stops working",
+       "lose effectiveness",
+       "loses effectiveness",
+       "lose its effectiveness",
+       "loses its effectiveness",
+       "loss of effectiveness"
       ]
      ],
      "ref": "p. 14, pesticide degradation",
@@ -3346,7 +3466,7 @@
      ],
      "answer": 1,
      "ref": "Review question 10, p. 18. Answer in the text: p. 14, 'Pesticide Resistance'",
-     "why": "Many generations and greater persistence raise the chances, so A and C lower them."
+     "why": "Continual use of pesticides from the same chemical class increases the likelihood of resistance."
     },
     {
      "id": "c01-s23-t1",
@@ -3533,22 +3653,49 @@
      "answer": "Use pesticides with different modes of action",
      "keys": [
       [
-       "different",
-       "rotate",
-       "rotating",
-       "alternate",
-       "alternating",
-       "change",
-       "changing",
-       "switch",
-       "switching"
+       "different mode",
+       "different modes",
+       "different moa",
+       "rotate mode",
+       "rotate modes",
+       "rotate the mode",
+       "rotate moa",
+       "rotating mode",
+       "rotating modes",
+       "alternate mode",
+       "alternate modes",
+       "alternate the mode",
+       "alternate moa",
+       "alternating mode",
+       "alternating modes",
+       "change mode",
+       "change modes",
+       "change the mode",
+       "changing mode",
+       "changing modes",
+       "changing the mode",
+       "switch mode",
+       "switch modes",
+       "switch the mode",
+       "switching mode",
+       "switching modes",
+       "switching the mode",
+       "rotating the mode",
+       "alternating the mode",
+       "rotate between modes",
+       "rotating between modes",
+       "alternate between modes",
+       "alternating between modes",
+       "switch between modes",
+       "switching between modes",
+       "rotate by mode",
+       "rotate pesticides by mode",
+       "alternate by mode",
+       "alternate pesticides by mode"
       ],
       [
-       "mode of action",
-       "modes of action",
-       "moa",
-       "mode",
-       "modes"
+       "action",
+       "moa"
       ]
      ],
      "ref": "p. 14, 'Pesticide Resistance'",

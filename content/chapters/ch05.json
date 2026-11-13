@@ -114,7 +114,8 @@
      "answer": "Safety Data Sheet",
      "keys": [
       [
-       "safety"
+       "safety",
+       "saftey"
       ],
       [
        "data"
@@ -208,20 +209,49 @@
      "answer": "Hazard = Toxicity x Exposure",
      "keys": [
       [
-       "hazard",
-       "risk"
+       "hazard toxicity x exposure",
+       "hazard exposure x toxicity",
+       "hazard toxicity times exposure",
+       "hazard exposure times toxicity",
+       "hazard toxicity multiplied by exposure",
+       "hazard equals toxicity x exposure",
+       "hazard equals exposure x toxicity",
+       "hazard equals toxicity times exposure",
+       "toxicity x exposure hazard",
+       "exposure x toxicity hazard",
+       "toxicity x exposure equals hazard",
+       "toxicity times exposure equals hazard",
+       "risk toxicity x exposure",
+       "risk exposure x toxicity",
+       "risk toxicity times exposure",
+       "risk exposure times toxicity",
+       "risk toxicity multiplied by exposure",
+       "risk equals toxicity x exposure",
+       "risk equals exposure x toxicity",
+       "risk equals toxicity times exposure",
+       "toxicity x exposure risk",
+       "exposure x toxicity risk",
+       "toxicity x exposure equals risk",
+       "toxicity times exposure equals risk",
+       "hazard risk toxicity x exposure",
+       "product of toxicity and exposure"
       ],
       [
-       "toxicity",
-       "toxic"
-      ],
-      [
-       "exposure",
-       "exposed"
+       "x",
+       "times",
+       "multiplied",
+       "product"
       ]
      ],
      "ref": "p. 70, 'Toxicity, Exposure, and Hazard'",
-     "why": "Hazard equals toxicity times exposure."
+     "why": "Hazard equals toxicity times exposure.",
+     "accept": [
+      "toxicity x exposure",
+      "exposure x toxicity",
+      "toxicity times exposure",
+      "exposure times toxicity",
+      "toxicity multiplied by exposure"
+     ]
     },
     {
      "id": "c05-s02-t2",
@@ -396,14 +426,19 @@
      "keys": [
       [
        "restricted",
-       "restrict"
+       "restrict",
+       "restricted-entry",
+       "restricted-entry-interval"
       ],
       [
-       "entry"
+       "entry",
+       "restricted-entry",
+       "restricted-entry-interval"
       ],
       [
        "interval",
-       "intervals"
+       "intervals",
+       "restricted-entry-interval"
       ]
      ],
      "ref": "p. 71, 'Toxicity, Exposure, and Hazard'",
@@ -722,7 +757,7 @@
      "src": "test",
      "kind": "mc",
      "style": "scenario",
-     "q": "An applicator sprays a ceiling in a crawl space with little air movement and his respirator does not seal well. Which exposure route is the main concern?",
+     "q": "An applicator handles a pesticide in a crawl space with little air movement and his respirator does not seal well. Which exposure route do these two conditions point to?",
      "choices": [
       "Oral",
       "Inhalation",
@@ -766,7 +801,7 @@
      "choices": [
       "Dermal and inhalation",
       "Oral and eye",
-      "Eye and oral",
+      "Dermal and eye",
       "Oral and inhalation"
      ],
      "answer": 0,
@@ -780,21 +815,60 @@
      "q": "Name one cause of eye exposure from the manual's list.",
      "answer": "Rubbing eyes with contaminated gloves or hands",
      "accept": [
+      "rubbing",
       "rubbing eyes",
       "rubbing eyes with contaminated hands",
       "rubbing eyes with contaminated gloves",
-      "splashing pesticide in eyes",
       "splashing",
+      "splash",
+      "splashes",
+      "splashing pesticide",
+      "splashing pesticide in eyes",
       "splash in eyes",
+      "handling dry formulations",
       "handling dry formulations without eye protection",
       "not wearing eye protection",
-      "handling dry formulations",
+      "without eye protection",
+      "no eye protection",
       "applying pesticides in windy weather",
       "windy weather",
       "wind"
      ],
      "ref": "p. 72, 'Common ways ... exposed to pesticides' box",
-     "why": "Rubbing eyes, splashes, dry formulations without eye protection, and windy weather."
+     "why": "Rubbing eyes, splashes, dry formulations without eye protection, and windy weather.",
+     "keys": [
+      [
+       "eye",
+       "eyes",
+       "windy",
+       "dry formulations",
+       "dry pesticides",
+       "dry products"
+      ],
+      [
+       "rub",
+       "rubs",
+       "rubbing",
+       "rubbed eyes",
+       "rubbed my eyes",
+       "rubbed your eyes",
+       "rubbed the eyes",
+       "eyes rubbed",
+       "splash",
+       "splashing",
+       "splashed",
+       "splashes",
+       "windy",
+       "dry formulations",
+       "dry pesticides",
+       "dry products",
+       "not wearing eye protection",
+       "not using eye protection",
+       "without wearing eye protection",
+       "contaminated hands",
+       "contaminated gloves"
+      ]
+     ]
     }
    ]
   },
@@ -961,20 +1035,50 @@
       ],
       [
        "inhalation",
+       "inhaled",
+       "inhaling",
+       "inhale",
        "lungs",
        "lung",
        "breathing",
-       "inhaled"
+       "breathe",
+       "breathed",
+       "respiratory",
+       "respiration"
       ],
       [
        "oral",
        "mouth",
        "swallowing",
-       "ingestion"
+       "swallowed",
+       "swallow",
+       "ingest"
       ]
      ],
      "ref": "p. 73, 'Exposure: How Pesticides Enter the Body'",
-     "why": "Skin, eyes, lungs, and mouth."
+     "why": "Skin, eyes, lungs, and mouth.",
+     "accept": [
+      "dermal, ocular, inhalation, ingestion",
+      "dermal, ocular, inhalation, and ingestion",
+      "dermal, inhalation, ingestion, ocular",
+      "dermal, inhalation, ingestion, and ocular",
+      "dermal, inhalation, ocular, ingestion",
+      "dermal, inhalation, ocular, and ingestion",
+      "dermal, ingestion, inhalation, ocular",
+      "dermal, ingestion, inhalation, and ocular",
+      "ingestion, ocular, dermal, inhalation",
+      "ingestion, ocular, dermal, and inhalation",
+      "ingestion, inhalation, dermal, ocular",
+      "ingestion, inhalation, dermal, and ocular",
+      "ingestion, dermal, inhalation, ocular",
+      "ingestion, dermal, inhalation, and ocular",
+      "inhalation, ingestion, dermal, ocular",
+      "inhalation, ingestion, dermal, and ocular",
+      "skin, eyes, lungs, ingestion",
+      "skin, eyes, lungs, and ingestion",
+      "skin, eyes, inhalation, ingestion",
+      "skin, eyes, inhalation, and ingestion"
+     ]
     }
    ]
   },
@@ -1341,24 +1445,35 @@
      "answer": "The ability of small amounts of pesticide from repeated, prolonged exposure to cause injury or illness.",
      "keys": [
       [
-       "small",
-       "low",
-       "little"
-      ],
-      [
-       "repeated",
        "repeat",
+       "repeate",
+       "repeatedly",
        "prolonged",
-       "long",
-       "over time",
-       "many"
+       "long-term",
+       "long term",
+       "over a long time",
+       "over a long period",
+       "over long periods",
+       "over an extended period",
+       "multiple exposures",
+       "multiple doses",
+       "doses over time",
+       "amounts over time",
+       "exposures over time"
       ],
       [
        "injury",
+       "injuries",
        "illness",
+       "illnesses",
        "harm",
+       "harmful",
        "sick",
-       "damage"
+       "sickness",
+       "damage",
+       "disease",
+       "effects",
+       "poisoning"
       ]
      ],
      "ref": "p. 74, 'Chronic Toxicity' box",
@@ -1569,10 +1684,10 @@
      "src": "test",
      "kind": "mc",
      "style": "scenario",
-     "q": "Pesticide A has an oral LD50 of 25 mg/kg. Pesticide B has an oral LD50 of 2,500 mg/kg. Which is more toxic?",
+     "q": "Pesticide X has an oral LD50 of 25 mg/kg. Pesticide Y has an oral LD50 of 2,500 mg/kg. Which is more toxic?",
      "choices": [
-      "Pesticide B, because its number is higher",
-      "Pesticide A, because it takes less to kill half the test animals",
+      "Pesticide Y, because its number is higher",
+      "Pesticide X, because it takes less to kill half the test animals",
       "They are equally toxic",
       "You cannot compare them"
      ],
@@ -1628,15 +1743,34 @@
      "answer": "Death",
      "accept": [
       "death",
+      "deaths",
       "dying",
+      "dies",
+      "died",
       "killing",
       "lethality",
       "kill",
       "killing half",
-      "mortality"
+      "mortality",
+      "fatal",
+      "fatality"
      ],
      "ref": "p. 75, 'Acute Toxicity'",
-     "why": "They measure only death, not lesser or delayed effects."
+     "why": "They measure only death, not lesser or delayed effects.",
+     "keys": [
+      [
+       "death",
+       "deaths",
+       "lethal",
+       "lethality",
+       "mortality",
+       "kills",
+       "killed",
+       "killing",
+       "die",
+       "fatality"
+      ]
+     ]
     }
    ]
   },
@@ -1858,14 +1992,17 @@
      "keys": [
       [
        "epa",
+       "e.p.a.",
        "environmental protection agency"
       ],
       [
        "manufacturer",
        "manufacturers",
-       "maker",
        "company",
-       "registrant"
+       "registrant",
+       "the maker",
+       "pesticide maker",
+       "product maker"
       ]
      ],
      "ref": "p. 76, 'Acute Toxicity'",
@@ -1961,10 +2098,22 @@
      "answer": "DANGER-POISON, DANGER, WARNING, and CAUTION",
      "keys": [
       [
-       "poison"
+       "poison",
+       "danger-poison"
       ],
       [
-       "danger"
+       "poison danger",
+       "danger-poison danger",
+       "danger danger",
+       "danger danger-poison",
+       "danger warning",
+       "danger caution",
+       "danger and warning",
+       "danger and caution",
+       "poison and danger",
+       "danger-poison and danger",
+       "danger and danger",
+       "danger and danger-poison"
       ],
       [
        "warning"
@@ -1974,7 +2123,17 @@
       ]
      ],
      "ref": "p. 77, signal words",
-     "why": "DANGER-POISON, DANGER, WARNING, and CAUTION."
+     "why": "DANGER-POISON, DANGER, WARNING, and CAUTION.",
+     "accept": [
+      "danger-poison, warning, caution, danger",
+      "danger-poison, warning, caution, and danger",
+      "danger-poison, caution, warning, danger",
+      "danger-poison, caution, warning, and danger",
+      "danger poison, warning, caution, danger",
+      "danger poison, warning, caution, and danger",
+      "danger poison, caution, warning, danger",
+      "danger poison, caution, warning, and danger"
+     ]
     },
     {
      "id": "c05-s15-t2",
@@ -2453,28 +2612,33 @@
      "answer": "Harmful effects that occur from small, repeated doses over time.",
      "keys": [
       [
-       "small",
-       "low",
-       "little",
-       "tiny"
-      ],
-      [
-       "repeated",
        "repeat",
+       "repeate",
        "repeatedly",
-       "multiple",
-       "many"
-      ],
-      [
-       "over time",
-       "time",
-       "long",
        "prolonged",
-       "years"
+       "long-term",
+       "long term",
+       "over a long time",
+       "over a long period",
+       "over long periods",
+       "over an extended period",
+       "multiple exposures",
+       "multiple doses",
+       "doses over time",
+       "amounts over time",
+       "exposures over time"
       ]
      ],
      "ref": "p. 78, 'Chronic Toxicity'",
-     "why": "Chronic effects come from small, repeated doses over time."
+     "why": "Chronic effects come from small, repeated doses over time.",
+     "accept": [
+      "small doses over time",
+      "small exposures over time",
+      "small amounts over time",
+      "harmful effects from small doses over time",
+      "effects from small doses over time",
+      "effects of small doses over time"
+     ]
     }
    ]
   },
@@ -3138,10 +3302,14 @@
       [
        "ingredient",
        "ingredients",
-       "what is in it",
+       "active ingredient",
+       "what is in",
+       "what's in",
+       "whats in",
        "chemical",
        "chemicals",
-       "active ingredient"
+       "contents",
+       "contains"
       ],
       [
        "treatment",
@@ -3277,7 +3445,7 @@
      "q": "In an extreme emergency, water from a farm pond, irrigation system, or watering trough can be used to rinse exposed areas.",
      "answer": true,
      "ref": "p. 82, 'General First Aid'",
-     "why": "Any available water can be used in an extreme emergency to dilute the pesticide.",
+     "why": "In an extreme emergency, water from a farm pond, irrigation system, or watering trough can rinse exposed areas and dilute the pesticide.",
      "src": "test"
     }
    ]
@@ -3685,14 +3853,27 @@
        "water"
       ],
       [
-       "quart",
+       "1 quart",
+       "one quart",
        "1 qt",
-       "one qt"
+       "one qt",
+       "1 quart.",
+       "1 qt."
       ]
      ],
      "ref": "p. 83, 'Pesticide in the Mouth or Swallowed'",
      "why": "Rinse the mouth, then give up to 1 quart of milk or water.",
-     "src": "test"
+     "src": "test",
+     "accept": [
+      "a quart of milk or water",
+      "up to a quart of milk or water",
+      "a quart of water",
+      "a quart of milk",
+      "up to a quart",
+      "a quart",
+      "up to a quart of water or milk",
+      "a quart of water or milk"
+     ]
     }
    ]
   },
@@ -3820,19 +4001,35 @@
      "keys": [
       [
        "adsorb",
-       "absorb",
        "adsorbs",
+       "adsorbing",
+       "adsorption",
+       "absorb",
        "absorbs",
+       "absorbing",
+       "absorption",
        "magnet",
-       "binds",
-       "bind",
+       "binds to",
+       "binds with",
+       "binding to",
        "soaks up",
-       "attracts"
+       "attract"
       ]
      ],
      "ref": "p. 84, activated charcoal",
      "why": "Activated charcoal adsorbs many chemicals. Get medical or poison control advice first.",
-     "src": "test"
+     "src": "test",
+     "accept": [
+      "binds",
+      "it binds",
+      "binding",
+      "binds chemicals",
+      "it binds chemicals",
+      "binds the chemicals",
+      "it binds the chemicals",
+      "binds many chemicals",
+      "it binds many chemicals"
+     ]
     }
    ]
   },
@@ -4141,21 +4338,50 @@
      "answer": "Hazard (risk) = toxicity x exposure",
      "keys": [
       [
-       "hazard",
-       "risk"
+       "hazard toxicity x exposure",
+       "hazard exposure x toxicity",
+       "hazard toxicity times exposure",
+       "hazard exposure times toxicity",
+       "hazard toxicity multiplied by exposure",
+       "hazard equals toxicity x exposure",
+       "hazard equals exposure x toxicity",
+       "hazard equals toxicity times exposure",
+       "toxicity x exposure hazard",
+       "exposure x toxicity hazard",
+       "toxicity x exposure equals hazard",
+       "toxicity times exposure equals hazard",
+       "risk toxicity x exposure",
+       "risk exposure x toxicity",
+       "risk toxicity times exposure",
+       "risk exposure times toxicity",
+       "risk toxicity multiplied by exposure",
+       "risk equals toxicity x exposure",
+       "risk equals exposure x toxicity",
+       "risk equals toxicity times exposure",
+       "toxicity x exposure risk",
+       "exposure x toxicity risk",
+       "toxicity x exposure equals risk",
+       "toxicity times exposure equals risk",
+       "hazard risk toxicity x exposure",
+       "product of toxicity and exposure"
       ],
       [
-       "toxicity",
-       "toxic"
-      ],
-      [
-       "exposure",
-       "exposed"
+       "x",
+       "times",
+       "multiplied",
+       "product"
       ]
      ],
      "ref": "p. 85, 'Summary'",
      "why": "Hazard, or risk, equals toxicity times exposure.",
-     "id": "c05-s31-t1"
+     "id": "c05-s31-t1",
+     "accept": [
+      "toxicity x exposure",
+      "exposure x toxicity",
+      "toxicity times exposure",
+      "exposure times toxicity",
+      "toxicity multiplied by exposure"
+     ]
     },
     {
      "src": "test",

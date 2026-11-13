@@ -632,7 +632,7 @@
      ],
      "answer": 2,
      "ref": "Review question 3, p. 169. Answer in the text: pp. 159 to 160, 'Pesticide Containment Systems'",
-     "why": "Pads make cleanup easier and must be impermeable, so only C is true."
+     "why": "Pads make cleanup easier and must be impermeable. They belong where large quantities of pesticides are handled or mixed."
     },
     {
      "id": "c11-s05-t1",
@@ -1083,8 +1083,8 @@
       "Nozzles control the amount of material applied and type of pattern created."
      ],
      "answer": 2,
-     "ref": "Review question 4, p. 169. Answer in the text: pp. 161 to 162, 'Sprayer Components'",
-     "why": "A and B are backwards: large droplets cut drift, small droplets maximize coverage."
+     "ref": "Review question 4, p. 169. Answer in the text: pp. 161 to 162, 'Nozzles'",
+     "why": "Nozzles control the amount applied and the pattern. Large droplets cut drift and small droplets maximize coverage, so the other two statements are backwards."
     },
     {
      "id": "c11-s08-t1",
@@ -1098,7 +1098,7 @@
       "Wear out faster"
      ],
      "answer": 1,
-     "ref": "p. 162, 'Sprayer Components'",
+     "ref": "p. 162, 'Nozzles'",
      "why": "Larger droplets minimize drift; smaller droplets maximize coverage."
     },
     {
@@ -1114,7 +1114,7 @@
       "Brass"
      ],
      "answer": 3,
-     "ref": "p. 162, 'Sprayer Components'",
+     "ref": "p. 162, 'Nozzles'",
      "why": "Brass and aluminum wear too fast with abrasive materials."
     },
     {
@@ -1130,7 +1130,7 @@
       "Add more water"
      ],
      "answer": 1,
-     "ref": "p. 162, 'Sprayer Components'",
+     "ref": "p. 162, 'Nozzles'",
      "why": "Never use brass or aluminum tips for abrasive materials like wettable powders."
     },
     {
@@ -1145,7 +1145,7 @@
       "The pump they use"
      ],
      "answer": 1,
-     "ref": "p. 161, 'Sprayer Components' and Figure 11.1",
+     "ref": "p. 161, 'Nozzles' and Figure 11.1",
      "why": "Nozzles are classified by spray pattern, as Figure 11.1 shows."
     },
     {
@@ -1160,7 +1160,7 @@
       "Only the spray angle"
      ],
      "answer": 0,
-     "ref": "p. 162, 'Sprayer Components'",
+     "ref": "p. 162, 'Nozzles'",
      "why": "Orifice size affects droplet size and flow rate."
     },
     {
@@ -1169,7 +1169,7 @@
      "kind": "tf",
      "q": "Flow meters can measure the uniformity of flow from nozzles along a boom.",
      "answer": true,
-     "ref": "p. 162, 'Sprayer Components'",
+     "ref": "p. 162, 'Nozzles'",
      "why": "Flow meters measure nozzle flow rate and uniformity along a boom."
     }
    ]
@@ -1271,7 +1271,7 @@
      ],
      "answer": 2,
      "ref": "Review question 5, p. 169. Answer in the text: p. 162, 'Granular Applicators'",
-     "why": "The manual states C word for word, and it lists ground speed as affecting the rate, so A is false."
+     "why": "The manual states the drop spreader sentence word for word, and it lists ground speed as affecting the application rate."
     },
     {
      "id": "c11-s09-t1",
@@ -1439,20 +1439,30 @@
       [
        "measuring",
        "measure",
-       "measures"
+       "measures",
+       "measurement"
       ],
       [
        "adjusting",
        "adjust",
-       "adjusts"
+       "adjusts",
+       "adjustment"
       ],
       [
        "amount",
        "how much",
-       "quantity"
+       "quantity",
+       "volume",
+       "output",
+       "application rate",
+       "rate of application"
       ],
       [
-       "area"
+       "area",
+       "acre",
+       "acres",
+       "square feet",
+       "square foot"
       ]
      ],
      "ref": "p. 163, 'Equipment Calibration'",

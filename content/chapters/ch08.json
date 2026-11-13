@@ -293,12 +293,12 @@
      ],
      "keys": [
       [
-       "tie-down",
-       "tie down",
-       "tiedown",
-       "rack",
+       "rings",
        "racks",
-       "rings"
+       "tie-down ring",
+       "tie down ring",
+       "tie-down rack",
+       "tie down rack"
       ]
      ],
      "ref": "p. 124, 'Transport Vehicle'",
@@ -578,7 +578,7 @@
      "id": "c08-s04-t5",
      "src": "test",
      "kind": "mc",
-     "q": "Who does the manual say will give you most required placards?",
+     "q": "Who does the manual say will give you any required placards?",
      "choices": [
       "The state police",
       "Most distributors",
@@ -915,7 +915,7 @@
      ],
      "answer": 3,
      "ref": "p. 127, 'Use Nonporous Materials'",
-     "why": "Use impervious floors and nonabsorbent shelving such as plastic or metal. Wood absorbs spills."
+     "why": "The manual calls for cement or other impervious flooring and nonabsorbent shelving such as plastic or metal."
     },
     {
      "id": "c08-s06-t4",
@@ -1082,13 +1082,29 @@
      "accept": [
       "plastic bag",
       "covered tub",
-      "trash bag"
+      "trash bag",
+      "plastic trash bag",
+      "tub with a cover"
      ],
      "keys": [
       [
        "bag",
+       "bags",
        "tub",
-       "bin"
+       "tubs",
+       "trashbag"
+      ],
+      [
+       "plastic bag",
+       "plastic bags",
+       "trash bag",
+       "trash bags",
+       "plastic trash bag",
+       "plastic trash bags",
+       "garbage bag",
+       "garbage bags",
+       "tub",
+       "tubs"
       ]
      ],
      "ref": "p. 127, 'Store Pesticide Containers Safely'",
@@ -1195,7 +1211,7 @@
      ],
      "answer": 2,
      "ref": "pp. 126 and 128, 'Prevent Water Damage' and 'Note Shelf Life of Pesticides' (Appendix A: C)",
-     "why": "Appendix A says C: water makes metal containers rust, so store pesticides on raised pallets or shelves."
+     "why": "This is the manual's Appendix A answer: water makes metal containers rust, so store pesticides on raised pallets or shelves."
     },
     {
      "id": "c08-s08-t1",
@@ -1348,7 +1364,7 @@
      "src": "test",
      "kind": "mc",
      "style": "not",
-     "q": "Which of these is NOT a reason the manual gives for avoiding a buildup of unwanted pesticides?",
+     "q": "Which of these is NOT something the manual says about a buildup of unwanted pesticides?",
      "choices": [
       "You lose money by not using the product",
       "You may have to pay a disposal service",
@@ -1377,14 +1393,26 @@
      "accept": [
       "state pesticide regulatory agency",
       "state agency",
-      "state lead agency"
+      "state lead agency",
+      "pesticide regulatory agency",
+      "the pesticide regulatory agency",
+      "your pesticide regulatory agency"
      ],
      "keys": [
       [
        "state",
        "tribe",
-       "territory",
-       "regulatory agency"
+       "tribal",
+       "territory"
+      ],
+      [
+       "agency",
+       "agencies"
+      ],
+      [
+       "pesticide",
+       "pesticides",
+       "regulatory"
       ]
      ],
      "ref": "p. 129, 'Isolate Unwanted or Waste Products'",
@@ -1800,14 +1828,23 @@
       "fire department",
       "local emergency planning commission",
       "LEPC",
-      "emergency response agencies"
+      "emergency response agencies",
+      "fire"
      ],
      "keys": [
       [
        "emergency planning",
-       "fire",
        "lepc",
-       "emergency response"
+       "emergency response",
+       "emergency responders",
+       "fire department",
+       "fire departments",
+       "fire dept",
+       "fire company",
+       "firefighters",
+       "firemen",
+       "fire station",
+       "fire service"
       ]
      ],
      "ref": "p. 130, 'Evaluating Pesticide Security'",
@@ -1857,7 +1894,7 @@
       "While disposing of containers"
      ],
      "answer": 1,
-     "ref": "Chapter 8 Summary",
+     "ref": "p. 131, 'Summary'",
      "why": "Spills and accidents are more likely while transporting or applying pesticides."
     },
     {
@@ -1873,7 +1910,7 @@
       "Pest resistance"
      ],
      "answer": 3,
-     "ref": "Chapter 8 Summary",
+     "ref": "p. 131, 'Summary'",
      "why": "Security plans target theft, vandalism, and deliberate misuse."
     },
     {
@@ -1889,7 +1926,7 @@
       "The shipping invoice"
      ],
      "answer": 1,
-     "ref": "Chapter 8 Summary",
+     "ref": "p. 131, 'Summary'",
      "why": "Labels and SDSs for the pesticides carried provide important spill information."
     },
     {
@@ -1898,7 +1935,7 @@
      "kind": "tf",
      "q": "The summary says employees should coordinate security efforts with local police, emergency response personnel, and the FBI.",
      "answer": true,
-     "ref": "Chapter 8 Summary",
+     "ref": "p. 131, 'Summary'",
      "why": "That is the summary's closing point."
     }
    ]

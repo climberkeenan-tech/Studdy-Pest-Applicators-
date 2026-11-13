@@ -532,7 +532,8 @@ function finishQuiz() {
 
 /* ================= grading typed answers ================= */
 const NEG = /\b(not|no|never|isn'?t|don'?t|doesn'?t|cannot|can'?t|without)\b/;
-const norm = s => plain(s).toLowerCase().replace(/[‘’]/g, "'").replace(/[^a-z0-9%.'\s-]/g, ' ').replace(/\s+/g, ' ').trim();
+// "50%" reads as "50 percent"; a period only survives inside a number (0.5, .04), so "Rats." equals "rats".
+const norm = s => plain(s).toLowerCase().replace(/[‘’]/g, "'").replace(/(\d)\s*%/g, '$1 percent').replace(/\.(?!\d)/g, ' ').replace(/[^a-z0-9%.'\s-]/g, ' ').replace(/\s+/g, ' ').trim();
 function lev(a, b) {
   if (a === b) return 0; if (!a.length) return b.length; if (!b.length) return a.length;
   let prev = Array.from({ length: b.length + 1 }, (_, i) => i);
@@ -551,26 +552,42 @@ function close(a, b) {
   const allowed = L <= 3 ? 0 : L <= 7 ? 1 : L <= 14 ? 2 : Math.floor(L * 0.15);
   return Math.abs(a.length - b.length) <= allowed && lev(a, b) <= allowed;
 }
-function phraseIn(phrase, ans) {
-  const target = norm(phrase); if (!target) return false;
+// Word position (from `from` on) where the phrase appears in the answer, or -1.
+function phrasePos(phrase, ans, from) {
+  const target = norm(phrase); if (!target) return -1;
   const p = target.split(' '), a = norm(ans).split(' ');
-  for (let len = Math.max(1, p.length - 1); len <= p.length + 1; len++) {
-    for (let i = 0; i + len <= a.length; i++) {
+  for (let i = from || 0; i < a.length; i++) {
+    for (let len = Math.max(1, p.length - 1); len <= p.length + 1; len++) {
+      if (i + len > a.length) continue;
       const w = a.slice(i, i + len).join(' ');
-      if (/\d/.test(target)) { if (w.replace(/\s/g, '') === target.replace(/\s/g, '')) return true; continue; }
-      if (close(w, target)) return true;
+      if (/\d/.test(target)) { if (w.replace(/\s/g, '') === target.replace(/\s/g, '')) return i; continue; }
+      if (close(w, target)) return i;
     }
   }
-  return false;
+  return -1;
 }
+const phraseIn = (phrase, ans) => phrasePos(phrase, ans, 0) >= 0;
 function localGrade(q, text) {
   const t = norm(text); if (!t) return false;
   const acc = [q.answer, ...(q.accept || [])].filter(x => x !== undefined && x !== null && x !== '').map(String);
   if (acc.some(a => norm(a) === t)) return true;
-  const negTrap = NEG.test(t) && !acc.some(a => NEG.test(norm(a)));
+  const keys = (q.keys || []).map(g => [].concat(g));
+  // A "not"/"no" in the answer fails it, unless an accepted wording or a key itself uses a negation.
+  const negTrap = NEG.test(t) && !acc.some(a => NEG.test(norm(a))) && !keys.some(g => g.some(a => NEG.test(norm(a))));
   if (negTrap) return false;
   // With required points, every point must be there; whole-answer fuzziness would let list answers slide.
-  if (q.keys && q.keys.length) return q.keys.every(g => [].concat(g).some(alt => phraseIn(alt, text)));
+  if (keys.length) {
+    if (!q.ordered) return keys.every(g => g.some(alt => phraseIn(alt, text)));
+    // "ordered": the points must come in the listed order (for "in order" questions).
+    let from = 0;
+    for (const g of keys) {
+      let best = -1;
+      for (const alt of g) { const at = phrasePos(alt, text, from); if (at >= 0 && (best < 0 || at < best)) best = at; }
+      if (best < 0) return false;
+      from = best + 1;
+    }
+    return true;
+  }
   for (const a of acc) { const na = norm(a); if (/\d/.test(na) ? t === na : close(t, na)) return true; }
   return acc.some(a => phraseIn(a, text));
 }
@@ -592,6 +609,7 @@ async function gradeShort(q, text) {
       'Correct answer: ' + plain(q.answer),
       q.accept && q.accept.length ? 'Also acceptable: ' + q.accept.map(plain).join(' | ') : '',
       q.keys && q.keys.length ? 'Required points: ' + q.keys.map(g => [].concat(g).join(' or ')).join('; ') : '',
+      q.ordered ? 'The question asks for an order: the points must be given in the order listed above.' : '',
       q.ref ? 'Where it is in the manual: ' + plain(q.ref) : '',
       source ? 'Manual text for this card:\n' + source : '',
       '', 'Student answer: """' + text.slice(0, 600) + '"""',

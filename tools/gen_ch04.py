@@ -1152,7 +1152,6 @@ card("Types of adjuvants", [64, 64], [
     {"box": "Types of adjuvants (sidebar)", "list": [
         "Surfactants: wetting agents and spreaders.", "Stickers.", "Extenders.", "Plant penetrants.", "Compatibility agents.",
         "Buffers or pH modifiers.", "Drift retardants.", "Defoaming agents.", "Thickeners."]},
-    {"p": ["The \"Surfactants\" section begins at the bottom of page 64 and continues on page 65. It will be added when page 65 is photographed."]},
 ])
 mc("Most pesticide solutions or suspensions are stable within what pH range?",
    ["pH 5.5 to 7.0", "pH 7.0 to 9.0", "pH 3.0 to 5.0", "pH 8.5 to 10.0"], 0, "p. 64, 'Types of Adjuvants'",
@@ -1175,6 +1174,121 @@ mc("Which adjuvant allows petroleum-based pesticides (ECs) to mix with water?",
    ["Emulsifiers", "Invert emulsifiers", "Wetting agents", "Buffers"], 0, "p. 64, 'Types of Adjuvants'",
    "Emulsifiers mix ECs with water; invert emulsifiers mix water-based pesticides with petroleum carrier.")
 
+# ---------------------------------------------------------------- pp. 64-65
+card("Surfactants", [64, 65], [
+    {"h": "Surfactants"},
+    {"p": [
+        "Some of the most common adjuvants are **surfactants** (**surf**ace **act**ive ingred**ients**), which alter the dispersing, spreading, and wetting properties of spray droplets.",
+        "Examples of surfactants are **wetting agents and spreaders**.",
+        "These products physically change the **surface tension** of a spray droplet.",
+        "In order to perform well, some pesticide sprays must be able to wet treated foliage thoroughly and evenly.",
+        "Surfactants that reduce surface tension enable droplets to **spread out instead of bead up**.",
+        "This results in better coverage and increases the odds that the pest will contact the pesticide.",
+        "Surfactants are particularly helpful when treating plants with **waxy or hairy leaves** (see Figure 4.1)."]},
+    {"fig": "fig-4-1"},
+    {"p": ["Surfactants are classified by how they split apart into charged atoms or molecules, called **ions**."]},
+    {"list": [
+        "**Anionic** surfactants have a **negative** charge. They are most often used with **contact pesticides**, which control the pest by direct contact instead of being absorbed systemically.",
+        "**Cationic** surfactants have a **positive** charge. Do not use them as \"stand-alone\" surfactants: often, they are **phytotoxic**.",
+        "**Nonionic** surfactants have **no electrical charge**. They are often used with **systemic** products and help sprays penetrate plant cuticles. They are compatible with most pesticide products."]},
+    {"p": [
+        "A pesticide can behave very differently in the presence of an anionic, cationic, or nonionic surfactant.",
+        "For this reason, you must **follow label directions** when choosing one of these additives.",
+        "Selecting the wrong surfactant can reduce efficacy and damage treated plants or surfaces."]},
+    {"p": [
+        "The terms used when talking about pesticide additives can be confusing.",
+        "People sometimes use the words \"adjuvant\" and \"surfactant\" interchangeably.",
+        "However, an adjuvant is **ANY substance** added to modify properties of a pesticide formulation or finished spray.",
+        "A surfactant is a specific kind of adjuvant: one that affects the interaction of a spray droplet and a treated surface.",
+        "**All surfactants are adjuvants, but not all adjuvants are surfactants.**",
+        "For example, drift control additives and safeners are not surfactants."]},
+], [{"id": "fig-4-1", "title": "Figure 4.1: Surfactants increase the ability of the pesticide to spread evenly over the surface of a leaf or fruit.",
+     "page": "p. 65", "svgFile": "fig-4-1.svg",
+     "explain": ["The figure shows a side view of a leaf.",
+                 "Without surfactant, the spray droplets bead up on the leaf surface.",
+                 "With surfactant, the droplets spread out into an even layer over the leaf."]}])
+mc("Which kind of surfactant has no electrical charge, is often used with systemic products, and is compatible with most pesticide products?",
+   ["Nonionic", "Anionic", "Cationic", "Ionic"], 0, "p. 65, 'Surfactants'",
+   "Nonionic surfactants have no charge and help sprays penetrate plant cuticles.")
+mc("Why should cationic surfactants not be used as stand-alone surfactants?",
+   ["They are often phytotoxic", "They have no electrical charge", "They only work with fumigants", "They increase foaming"], 0,
+   "p. 65, 'Surfactants'", "Cationic surfactants have a positive charge and are often phytotoxic.")
+mc("Which of these is NOT a surfactant, according to the manual?",
+   ["A wetting agent", "A spreader", "A drift control additive", "A nonionic surfactant"], 2, "p. 65, 'Surfactants'",
+   "Drift control additives and safeners are adjuvants but not surfactants.", style="not")
+mc("You are spraying a contact insecticide on plants with waxy leaves, and the spray beads up. Which surfactant type does the manual say is most often used with contact pesticides?",
+   ["Anionic", "Cationic", "Nonionic", "None; contact pesticides never use surfactants"], 0, "p. 65, 'Surfactants'",
+   "Anionic surfactants, with a negative charge, are most often used with contact pesticides; always follow the label.", style="scenario")
+tf("All adjuvants are surfactants.", False, "p. 65, 'Surfactants'",
+   "All surfactants are adjuvants, but not all adjuvants are surfactants.")
+mc("How do surfactants that reduce surface tension improve coverage?",
+   ["They let droplets spread out instead of bead up", "They make droplets larger so they fall faster",
+    "They kill the pest directly", "They slow the release of the active ingredient"], 0, "p. 64, 'Surfactants'",
+   "Spreading droplets give better coverage and raise the odds the pest contacts the pesticide.")
+
+# ---------------------------------------------------------------- p. 65
+card("Choosing the right adjuvant", [65, 65], [
+    {"h": "Choosing the right adjuvant"},
+    {"p": ["Here are some factors to consider when deciding whether to use an adjuvant and how to choose the right one for a particular site and situation."]},
+    {"list": [
+        "**Read and follow the label.** Is an adjuvant recommended? If so, what type? **Do not make substitutions.** Note that some product labels may recommend an adjuvant for one type of use or site but prohibit any kind of adjuvant for another labeled use or site. Many end-use formulated products already have adjuvants, and adding adjuvants \"on the fly\" can **decrease efficacy**. Suppose, for example, that a certain product is formulated with a wetting agent. If you add another wetting agent when you mix and load a foliar-applied spray, the product may not give better spreading and coverage. Instead, the extra adjuvant may increase runoff, reduce deposition, and even damage the target plant.",
+        "Use only those adjuvants manufactured for **agricultural or horticultural uses**. Do not use industrial products or **household detergents** in pesticide spray mixes.",
+        "Remember that **no adjuvant is a substitute for good application practices**.",
+        "Take adjuvant performance claims \"with a grain of salt.\" Be skeptical of claims such as \"improves root uptake\" or \"keeps spray equipment clean\" unless a reliable source can provide **research-based evidence** to support them. Only use adjuvant products that have been tested and found effective for your intended use.",
+        "**Test spray mixes with adjuvants on a small area** before proceeding with full-scale use."]},
+])
+mc("A product is already formulated with a wetting agent. A worker adds another wetting agent to the foliar spray. What does the manual say may happen?",
+   ["Increased runoff, reduced deposition, and even damage to the target plant", "Twice the spreading and coverage",
+    "Nothing, because adjuvants have no effect", "The pesticide turns into a fumigant"], 0, "p. 65, 'Choosing the Right Adjuvant'",
+   "Adding adjuvants on the fly can decrease efficacy; the extra wetting agent may increase runoff and damage the plant.", style="scenario")
+mc("Which of these is NOT acceptable according to the manual's adjuvant guidelines?",
+   ["Reading the label to see if an adjuvant is recommended", "Using household detergent in a pesticide spray mix",
+    "Testing a spray mix with adjuvant on a small area first", "Using adjuvants made for agricultural or horticultural uses"], 1,
+   "p. 65, 'Choosing the Right Adjuvant'", "Do not use industrial products or household detergents in pesticide spray mixes.", style="not")
+tf("A good adjuvant can make up for poor application practices.", False, "p. 65, 'Choosing the Right Adjuvant'",
+   "No adjuvant is a substitute for good application practices.")
+mc("An adjuvant ad claims it \"improves root uptake.\" What does the manual tell you to do?",
+   ["Be skeptical unless a reliable source provides research-based evidence", "Trust it, because adjuvants are EPA registered",
+    "Double the label rate to be safe", "Use it only on waxy leaves"], 0, "p. 65, 'Choosing the Right Adjuvant'",
+   "Take performance claims with a grain of salt unless research-based evidence supports them.")
+
+# ---------------------------------------------------------------- p. 66
+card("Chapter 4 summary", [66, 66], [
+    {"h": "Summary"},
+    {"p": [
+        "The ingredients of a formulated pesticide include both **active and inert** components.",
+        "The active ingredient controls the pest.",
+        "Inert ingredients include carriers or diluents and adjuvants.",
+        "The type of formulation may be provided in the identifying information on the **front panel of the label**.",
+        "(The **SDS** for a product will describe the formulation and also provide information about hazardous inert ingredients.)"]},
+    {"p": [
+        "Learn what formulations are available for the pesticide active ingredients you will use.",
+        "To decide which formulation is best for a specific site and situation, you must know the properties, and be able to evaluate the pros and cons, of various formulation types.",
+        "You must be familiar with formulation types and active ingredient properties in order to understand the characteristics of the products you use and apply them properly."]},
+    {"p": [
+        "Most end-use pesticide products contain adjuvants.",
+        "Although adjuvants themselves lack any direct pesticidal activity, they are added to pesticide formulations to improve product performance.",
+        "You should know when and how to use an adjuvant."]},
+    {"p": [
+        "In summary, you must consider several factors when choosing a pesticide formulation.",
+        "These include the risks and benefits associated with the options available, the practicality of using a specific formulation in a particular site to control the target pest, and whether the formulated product will provide effective control.",
+        "Understanding the properties of common formulations before choosing a pesticide will help you avoid problems and apply your product in an effective and efficient manner."]},
+])
+mc("Which document does the summary say will describe a product's formulation and give information about hazardous inert ingredients?",
+   ["The Safety Data Sheet (SDS)", "The restricted-use permit", "The bill of sale", "The application record"], 0,
+   "p. 66, 'Summary'", "The SDS describes the formulation and hazardous inert ingredients.")
+mc("Where on the label may the type of formulation be provided?",
+   ["In the identifying information on the front panel", "Only in the storage and disposal section",
+    "In the first aid section", "It is never on the label"], 0, "p. 66, 'Summary'",
+   "The formulation type may be in the identifying information on the front panel.")
+mc("Which of these is NOT one of the inert components named in the summary?",
+   ["Carriers", "Diluents", "Adjuvants", "The ingredient that controls the pest"], 3, "p. 66, 'Summary'",
+   "The active ingredient controls the pest; inert ingredients include carriers or diluents and adjuvants.", style="not")
+mc("You must choose between two formulations of the same active ingredient for a school lawn. Which set of factors does the summary say to weigh?",
+   ["Risks and benefits of the options, practicality at the site, and whether it will give effective control",
+    "Only the price per gallon", "Only the brand name", "Only how fast it can be applied"], 0, "p. 66, 'Summary'",
+   "The summary lists risks and benefits, practicality at the site, and effective control.", style="scenario")
+
 def merge(t1, t2, title):
     i = next(k for k, x in enumerate(sections) if x["title"] == t1)
     A, B = sections[i], sections[i + 1]
@@ -1190,6 +1304,47 @@ for n, x in enumerate(sections, 1):
     for k, q in enumerate(x["questions"], 1):
         q["id"] = f"{x['id']}-t{k}"
 
-out = {"chapter": CH, "pages": [49, 64], "sections": sections}
+# ---------------------------------------------------------------- p. 67 review questions (manual's order within each card)
+# Answers taken from the chapter text; check against Appendix A when it arrives.
+def rv(title, k, q, choices, ans, ref, why):
+    x = next(c for c in sections if c["title"] == title)
+    r = [i for i, y in enumerate(x["questions"]) if y["src"] == "review"]
+    x["questions"].insert(len(r), {"id": f"{x['id']}-r{k}", "src": "review", "kind": "mc", "q": q, "choices": choices,
+                                   "answer": ans, "ref": ref + f"; p. 67, Review question {k}", "why": why})
+
+rv("Formulation abbreviations and Table 4.1", 1, "The name \"X-Pest 5G\" on a pesticide label indicates a:",
+   ["Granular pesticide with 5% active ingredient.", "Granular pesticide with 5% inert ingredients.", "Gel pesticide with 5% active ingredient."], 0,
+   "p. 51, 'Formulations: An Overview' and Table 4.1", "Numbers in a brand name can give percent active ingredient, and G means granules (GL is gel).")
+rv("Solutions, suspensions, and emulsions", 2, "Which is the pesticide formulation process by which solid particles are dispersed in a liquid?",
+   ["Emulsion.", "Solution.", "Suspension."], 2, "p. 50, 'Formulations: An Overview'",
+   "A suspension is fine solid particles dispersed in a liquid; an emulsion is droplets of one liquid in another.")
+rv("Solutions (S) and ready-to-use solutions", 3, "Which liquid pesticide formulation consists of a small amount of active ingredient (often 1% or less per unit volume)?",
+   ["Microencapsulated (M).", "Ready-to-use (low-concentrate) solution (RTU).", "Ultra-low volume (ULV)."], 1,
+   "p. 53, 'Ready-to-Use (RTU) Low-Concentrate Solutions'", "RTU low-concentrate solutions are often 1% or less active ingredient.")
+rv("Ultra-low volume and invert emulsions", 4, "Which liquid pesticide formulation may approach 100% active ingredient?",
+   ["Aerosol (A).", "Emulsifiable concentrate (EC).", "Ultra-low volume (ULV)."], 2, "p. 54, 'Ultra-Low Volume'",
+   "ULV concentrates have almost 100% active ingredient.")
+rv("Ultra-low volume and invert emulsions", 5, "Which is a disadvantage of both EC and ULV formulations?",
+   ["Difficult to handle, transport, and store.", "Require constant agitation to keep in suspension.",
+    "Solvents may cause rubber or plastic hoses, gaskets, pump parts, and other surfaces to deteriorate."], 2,
+   "pp. 53–54, 'Emulsifiable Concentrates' and 'Ultra-Low Volume'",
+   "Both list hose, gasket, and pump deterioration; both are easy to handle and need little agitation.")
+rv("Water-dispersible granules and soluble powders", 6, "Which dry/solid formulation is mixed in water and reduces the risk of inhalation exposure during mixing and loading?",
+   ["Soluble powder (SP).", "Water-dispersible granule (WDG) or dry flowable (DF).", "Wettable powder (WP)."], 1,
+   "p. 59, 'Water-Dispersible Granules (WDG) or Dry Flowables (DF)'",
+   "WDGs have larger, less dusty particles, so handler exposure is reduced; SPs and WPs keep the inhalation hazard.")
+rv("Pellets and wettable powders", 7, "Which type of dry/solid pesticide formulation consists of particles that are the same weight and shape?",
+   ["Bait.", "Granule.", "Pellet."], 2, "p. 58, 'Pellets (P or PS)'", "In pellet formulations, all particles are more or less the same weight and shape.")
+rv("Microencapsulated pesticides (M)", 8, "Which is an advantage of microencapsulated materials?",
+   ["Delayed or slow release of the active ingredient prolongs their effectiveness.", "Their pesticidal activity is independent of weather conditions.",
+    "They usually require only short restricted-entry intervals."], 0, "pp. 61–62, 'Microencapsulated Pesticides (M)'",
+   "Timed release prolongs effectiveness; release can be weather-dependent and some have long restricted-entry intervals.")
+rv("Surfactants", 9, "Which type of adjuvant functions as a wetting agent and spreader (that is, physically altering the surface tension of spray droplets)?",
+   ["Buffer.", "Extender.", "Surfactant."], 2, "p. 64, 'Surfactants'",
+   "Surfactants, such as wetting agents and spreaders, change the surface tension of spray droplets.")
+rv("Types of adjuvants", 10, "Which type of adjuvant increases the viscosity of spray mixtures?",
+   ["Sticker.", "Extender.", "Thickener."], 2, "p. 64, 'Types of Adjuvants'", "Thickeners increase viscosity (thickness) of spray mixtures.")
+
+out = {"chapter": CH, "pages": [49, 67], "sections": sections}
 json.dump(out, open(sys.argv[1], "w"), ensure_ascii=False, indent=1)
 print(len(sections), "cards", sum(len(s["questions"]) for s in sections), "questions")

@@ -1,0 +1,33 @@
+<svg viewBox="0 0 640 330" role="img" aria-label="Figure 4.1: Side view of a leaf. Without surfactant, spray droplets bead up on the surface. With surfactant, droplets spread out into an even film.">
+<text class="f-ink" x="320" y="30" text-anchor="middle" font-size="22" font-weight="700" font-family="var(--f-display)">Side view of leaf</text>
+<rect class="f-card" x="14" y="48" width="292" height="268" rx="12"/>
+<path class="f-field" d="M64 67.4 C65.8 74.6 70.3 78.2 70.3 82.7 A6.3 6.3 0 0 1 57.7 82.7 C57.7 78.2 62.2 74.6 64 67.4 Z"/>
+<path class="f-field" d="M119 89.6 C121.2 98.4 126.7 102.8 126.7 108.3 A7.700000000000001 7.700000000000001 0 0 1 111.3 108.3 C111.3 102.8 116.8 98.4 119 89.6 Z"/>
+<path class="f-field" d="M174 61 C176 69 181 73 181 78 A7 7 0 0 1 167 78 C167 73 172 69 174 61 Z"/>
+<path class="f-field" d="M229 103.8 C230.6 110.2 234.6 113.4 234.6 117.4 A5.6000000000000005 5.6000000000000005 0 0 1 223.4 117.4 C223.4 113.4 227.4 110.2 229 103.8 Z"/>
+<path class="f-field" d="M274 77.4 C275.8 84.6 280.3 88.2 280.3 92.7 A6.3 6.3 0 0 1 267.7 92.7 C267.7 88.2 272.2 84.6 274 77.4 Z"/>
+<path class="f-field" d="M144 140.2 C145.4 145.8 148.9 148.6 148.9 152.1 A4.8999999999999995 4.8999999999999995 0 0 1 139.1 152.1 C139.1 148.6 142.6 145.8 144 140.2 Z"/>
+<path class="f-field" d="M84 128.8 C85.6 135.2 89.6 138.4 89.6 142.4 A5.6000000000000005 5.6000000000000005 0 0 1 78.4 142.4 C78.4 138.4 82.4 135.2 84 128.8 Z"/>
+<path class="f-field" d="M254 150.2 C255.4 155.8 258.9 158.6 258.9 162.1 A4.8999999999999995 4.8999999999999995 0 0 1 249.1 162.1 C249.1 158.6 252.6 155.8 254 150.2 Z"/>
+<path class="f-ok" d="M24 230 C104 204 214 204 286 224 L262 232 L274 240 C194 246 114 252 64 260 L76 248 Z"/>
+<circle class="f-field" cx="64" cy="212.7" r="7"/>
+<circle class="f-field" cx="94" cy="208.4" r="7"/>
+<circle class="f-field" cx="129" cy="205.6" r="7"/>
+<circle class="f-field" cx="164" cy="205.1" r="7"/>
+<circle class="f-field" cx="199" cy="206.9" r="7"/>
+<circle class="f-field" cx="234" cy="211.1" r="7"/>
+<circle class="f-field" cx="264" cy="216.5" r="7"/>
+<text class="f-ink" x="160" y="296" text-anchor="middle" font-size="19" font-weight="700" font-family="var(--f-display)">Without surfactant</text>
+<rect class="f-card" x="334" y="48" width="292" height="268" rx="12"/>
+<path class="f-field" d="M384 67.4 C385.8 74.6 390.3 78.2 390.3 82.7 A6.3 6.3 0 0 1 377.7 82.7 C377.7 78.2 382.2 74.6 384 67.4 Z"/>
+<path class="f-field" d="M439 89.6 C441.2 98.4 446.7 102.8 446.7 108.3 A7.700000000000001 7.700000000000001 0 0 1 431.3 108.3 C431.3 102.8 436.8 98.4 439 89.6 Z"/>
+<path class="f-field" d="M494 61 C496 69 501 73 501 78 A7 7 0 0 1 487 78 C487 73 492 69 494 61 Z"/>
+<path class="f-field" d="M549 103.8 C550.6 110.2 554.6 113.4 554.6 117.4 A5.6000000000000005 5.6000000000000005 0 0 1 543.4 117.4 C543.4 113.4 547.4 110.2 549 103.8 Z"/>
+<path class="f-field" d="M594 77.4 C595.8 84.6 600.3 88.2 600.3 92.7 A6.3 6.3 0 0 1 587.7 92.7 C587.7 88.2 592.2 84.6 594 77.4 Z"/>
+<path class="f-field" d="M464 140.2 C465.4 145.8 468.9 148.6 468.9 152.1 A4.8999999999999995 4.8999999999999995 0 0 1 459.1 152.1 C459.1 148.6 462.6 145.8 464 140.2 Z"/>
+<path class="f-field" d="M404 128.8 C405.6 135.2 409.6 138.4 409.6 142.4 A5.6000000000000005 5.6000000000000005 0 0 1 398.4 142.4 C398.4 138.4 402.4 135.2 404 128.8 Z"/>
+<path class="f-field" d="M574 150.2 C575.4 155.8 578.9 158.6 578.9 162.1 A4.8999999999999995 4.8999999999999995 0 0 1 569.1 162.1 C569.1 158.6 572.6 155.8 574 150.2 Z"/>
+<path class="f-ok" d="M344 230 C424 204 534 204 606 224 L582 232 L594 240 C514 246 434 252 384 260 L396 248 Z"/>
+<path class="f-field" d="M364 224 C434 202 524 202 594 220 C524 210 434 210 364 228 Z"/>
+<text class="f-ink" x="480" y="296" text-anchor="middle" font-size="19" font-weight="700" font-family="var(--f-display)">With surfactant</text>
+</svg>

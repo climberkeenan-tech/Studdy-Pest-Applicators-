@@ -1,487 +1,1353 @@
 {
-  "chapter": "Chapter 9 · Emergency or Incident Response",
-  "pages": [135, 141],
-  "sections": [
+ "chapter": "Chapter 9 · Emergency or Incident Response",
+ "pages": [
+  135,
+  141
+ ],
+ "sections": [
+  {
+   "id": "c09-s01",
+   "chapter": "Chapter 9 · Emergency or Incident Response",
+   "title": "Chapter goals and why you need an emergency plan",
+   "pages": [
+    135,
+    135
+   ],
+   "body": [
     {
-      "id": "c09-s01",
-      "chapter": "Chapter 9 · Emergency or Incident Response",
-      "title": "Chapter goals and why you need an emergency plan",
-      "pages": [135, 135],
-      "body": [
-        {"box": "Learning objectives", "p": ["After studying this chapter, you should be able to do the following."], "list": [
-          "Discuss how pesticide releases from spills and fires can endanger humans and the environment.",
-          "Explain how to execute an emergency response plan.",
-          "State how to dispose of contaminated materials resulting from a spill cleanup.",
-          "Discuss how to implement cleanup procedures to lessen the environmental impact from a spill.",
-          "List the items to include for emergency response equipment, for example, a spill cleanup kit, a first aid kit, and personal protective equipment."
-        ]},
-        {"fig": "p135-spillkit"},
-        {"h": "Accidents are rare, but they happen"},
-        {"p": [
-          "Although pesticide accidents and emergencies are rare, they do occur.",
-          "Pesticides spilled on the ground or burning in a fire can **contaminate water, soil, and air**.",
-          "They can **damage plants**, **injure livestock, wildlife, or pets**, and **endanger the health** of the applicator and emergency responders.",
-          "Pesticide spills and fires may lead to **financial loss** due to cleanup, liability claims, and fines assessed by government agencies.",
-          "Do all that you can to prevent accidents, but be prepared in case of emergency."
-        ]},
-        {"h": "Emergency response planning"},
-        {"p": [
-          "Like a pesticide site security plan, a carefully thought-out **emergency response plan**, that is, a **contingency plan**, can help to prevent an emergency situation from becoming a catastrophe.",
-          "An emergency response plan helps **protect employees and the community**, **minimizes environmental damage**, and **reduces liability** if an accident happens."
-        ]},
-        {"p": [
-          "Emergencies can take many forms: tornado or high winds, flood, fire, or a highway accident.",
-          "How you and emergency personnel respond determines whether the problem is quickly and safely resolved."
-        ]},
-        {"p": ["Do you know what to do in a pesticide emergency?"]}
-      ],
-      "figures": [
-        {"id": "p135-spillkit", "title": "A spill kit bag labeled: For chemical or pesticide exposure.", "page": "p. 135", "imgFile": "p135-spillkit.jpg"}
-      ],
-      "questions": [
-        {"id": "c09-s01-t1", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT one of the three things the manual says an emergency response plan does?",
-         "choices": ["Protects employees and the community", "Minimizes environmental damage", "Reduces liability if an accident happens", "Eliminates the need for insurance"], "answer": 3,
-         "ref": "p. 135, 'Emergency Response Planning'", "why": "The plan protects people, minimizes environmental damage, and reduces liability."},
-        {"id": "c09-s01-t2", "src": "test", "kind": "short", "q": "What is another name the manual gives for an emergency response plan?",
-         "answer": "contingency plan", "accept": ["a contingency plan", "contingency"],
-         "ref": "p. 135, 'Emergency Response Planning'", "why": "The manual calls it an emergency response plan, that is, a contingency plan."},
-        {"id": "c09-s01-t3", "src": "test", "kind": "mc", "q": "Pesticide spills and fires may lead to financial loss. Which three causes does the manual list?",
-         "choices": ["Cleanup, liability claims, and fines from government agencies", "Lost sales, lawsuits, and higher taxes", "Product recalls, cleanup, and lost wages", "Insurance premiums, cleanup, and permits"], "answer": 0,
-         "ref": "p. 135, chapter introduction", "why": "Financial loss comes from cleanup, liability claims, and fines assessed by government agencies."},
-        {"id": "c09-s01-t4", "src": "test", "kind": "mc", "style": "scenario", "q": "A storm floods a pesticide dealer's yard. According to the manual, what determines whether the problem is quickly and safely resolved?",
-         "choices": ["How you and emergency personnel respond", "How much pesticide was stored", "Whether the flood was forecast", "Which agency has jurisdiction"], "answer": 0,
-         "ref": "p. 135, 'Emergency Response Planning'", "why": "How you and emergency personnel respond determines whether it is resolved quickly and safely."},
-        {"id": "c09-s01-t5", "src": "test", "kind": "tf", "q": "Pesticides burning in a fire can contaminate the air, not just soil and water.", "answer": true,
-         "ref": "p. 135, chapter introduction", "why": "Spilled or burning pesticides can contaminate water, soil, and air."}
-      ]
+     "box": "Learning objectives",
+     "p": [
+      "After studying this chapter, you should be able to do the following."
+     ],
+     "list": [
+      "Discuss how pesticide releases from spills and fires can endanger humans and the environment.",
+      "Explain how to execute an emergency response plan.",
+      "State how to dispose of contaminated materials resulting from a spill cleanup.",
+      "Discuss how to implement cleanup procedures to lessen the environmental impact from a spill.",
+      "List the items to include for emergency response equipment, for example, a spill cleanup kit, a first aid kit, and personal protective equipment."
+     ]
     },
     {
-      "id": "c09-s02",
-      "chapter": "Chapter 9 · Emergency or Incident Response",
-      "title": "The plan: coordinator, contact list, and incident form",
-      "pages": [135, 136],
-      "body": [
-        {"p": ["Follow these guidelines when developing an emergency response plan."]},
-        {"h": "Designate an emergency coordinator"},
-        {"p": [
-          "Designate an **emergency coordinator** as the **go-to person**.",
-          "This person must have **authority to make important decisions** during an emergency, including coordinating with local first responders, such as fire, police, and paramedics.",
-          "The emergency coordinator is the person who will **make the necessary calls and fill out reports** to government agencies."
-        ]},
-        {"fig": "p136-fire"},
-        {"h": "Post a contact list"},
-        {"p": [
-          "Post in the **office, shop, and truck** a list of names and telephone numbers of response agencies that may require notification."
-        ]},
-        {"box": "Emergency Response Agency Contacts", "list": [
-          "Persons or agencies required to be notified by local, state, and federal requirements.",
-          "Local emergency planning committees.",
-          "Police and fire units.",
-          "Paramedics and area hospitals.",
-          "Appropriate chemical manufacturers and dealers.",
-          "Containment and hazardous waste cleanup contractors.",
-          "Your **attorney**, to protect your rights and the rights of others."
-        ]},
-        {"h": "Prepare a fill-in form"},
-        {"p": [
-          "Prepare a **fill-in form or an outline of critical information** to convey to emergency personnel.",
-          "Keep it **with your calling list**.",
-          "Be sure to include the following."
-        ]},
-        {"list": [
-          "Name of the person reporting the incident.",
-          "Precise location of the incident.",
-          "General description of what happened.",
-          "The exact **name, quantity, and classification** of pesticides involved.",
-          "The extent of injuries.",
-          "Whether pesticides have **entered surface water**."
-        ]}
-      ],
-      "figures": [
-        {"id": "p136-fire", "title": "Be prepared for emergency situations.", "page": "p. 136", "imgFile": "p136-fire.jpg"}
-      ],
-      "questions": [
-        {"id": "c09-s02-t1", "src": "test", "kind": "mc", "q": "Who makes the necessary calls and fills out reports to government agencies during an emergency?",
-         "choices": ["The emergency coordinator", "The fire chief", "The company attorney", "The pesticide manufacturer"], "answer": 0,
-         "ref": "p. 136, emergency plan guidelines", "why": "The emergency coordinator makes the calls and fills out the reports."},
-        {"id": "c09-s02-t2", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT on the manual's list of critical information for the fill-in form?",
-         "choices": ["Precise location of the incident", "Whether pesticides have entered surface water", "The exact name, quantity, and classification of pesticides involved", "The purchase price of the pesticides involved"], "answer": 3,
-         "ref": "p. 136, 'Prepare a fill-in form'", "why": "Price is not on the list. Name, quantity, and classification are."},
-        {"id": "c09-s02-t3", "src": "test", "kind": "short", "q": "Name the three places the manual says to post the list of response agency names and phone numbers.",
-         "answer": "office, shop, and truck", "keys": [["office"], ["shop"], ["truck", "vehicle"]],
-         "ref": "p. 136, emergency plan guidelines", "why": "Post the list in the office, shop, and truck."},
-        {"id": "c09-s02-t4", "src": "test", "kind": "tf", "q": "Your attorney is on the manual's list of emergency response agency contacts.", "answer": true,
-         "ref": "p. 136, box 'Emergency Response Agency Contacts'", "why": "The attorney is listed, to protect your rights and the rights of others."},
-        {"id": "c09-s02-t5", "src": "test", "kind": "mc", "style": "scenario", "q": "You hand an employee the fill-in form of critical incident information. Where should it be kept?",
-         "choices": ["With your calling list", "In the pesticide storage area", "At your attorney's office", "In the glove box of the truck only"], "answer": 0,
-         "ref": "p. 136, 'Prepare a fill-in form'", "why": "Keep the form with your calling list."}
-      ]
+     "fig": "p135-spillkit"
     },
     {
-      "id": "c09-s03",
-      "chapter": "Chapter 9 · Emergency or Incident Response",
-      "title": "Maps, inventory, training, and the plan's backbone",
-      "pages": [136, 137],
-      "body": [
-        {"h": "Prepare maps"},
-        {"p": [
-          "Prepare a **facility map** that shows a layout of all chemical storage buildings and bulk storage tanks.",
-          "It also shows access roads; main shutoffs for electricity, water, and gas; perimeter fencing or gates; and fuel storage tanks.",
-          "It shows the location of fire alarms, fire extinguishers and other firefighting equipment, and protective clothing.",
-          "It also shows drainage ditches, wells, and surface flow of water."
-        ]},
-        {"p": [
-          "Prepare an **area map** that shows your facility in relation to the surrounding area.",
-          "Provide emergency response agencies with an **updated copy** of the facility map and area map **whenever changes are made**."
-        ]},
-        {"fig": "fig-9-1"},
-        {"h": "Keep, maintain, and train"},
-        {"list": [
-          "Keep a **product inventory** of chemicals stored at the facility. Let your emergency response plan reflect **peak seasonal storage** of pesticides, fertilizers, and fuel.",
-          "Keep copies of pesticide labels and Safety Data Sheets, or SDSs, **away from the storage area**.",
-          "Maintain in good working order the emergency equipment and supplies needed to respond to fires and spills.",
-          "Train all employees how to execute the response plan **each year**."
-        ]},
-        {"p": ["Do you know where your emergency equipment is?"]},
-        {"h": "The backbone of the plan"},
-        {"p": [
-          "The **backbone** of any emergency response plan is a description of the **sequence of actions to take in a crisis**.",
-          "Prepare step-by-step procedures on how to respond to various emergencies: fires, spills, ammonia leaks, tornadoes, hurricanes, and transportation accidents, among others.",
-          "Specify **in writing** every activity from sounding the alarm to interacting with local emergency response agencies.",
-          "Once internal emergency procedures have been established, ask your local response agencies, for example, fire, police, and emergency planning committee, if they have anything to add to your plan.",
-          "Offer them a copy of your plan for their files."
-        ]},
-        {"fig": "p137-plan"}
-      ],
-      "figures": [
-        {"id": "fig-9-1", "title": "Figure 9.1: Include a facility map as part of the emergency response plan.", "page": "p. 137", "svgFile": "fig-9-1.svg",
-         "explain": [
-           "This is a simplified redraw of the sample map. The key on the right matches the manual's Key to Facilities.",
-           "It marks buildings, bulk bins, tanks, dikes, drains, the well, fences, vehicle access, and the stream along the property edge, so responders know where hazards and water are."
-         ]},
-        {"id": "p137-plan", "title": "Develop a written emergency response plan.", "page": "p. 137", "imgFile": "p137-plan.jpg"}
-      ],
-      "questions": [
-        {"id": "c09-s03-r2", "src": "review", "kind": "mc", "q": "What is the backbone of any emergency response plan?",
-         "choices": ["Outlining the sequence of actions to take in a crisis.", "Knowing where labels and SDSs are kept.", "Having a designated emergency responder."], "answer": 0, "fixed": true,
-         "ref": "p. 141, Review question 2 (answer: p. 137)", "why": "The backbone is a description of the sequence of actions to take in a crisis."},
-        {"id": "c09-s03-t1", "src": "test", "kind": "mc", "q": "Where should you keep copies of pesticide labels and SDSs for emergencies?",
-         "choices": ["Away from the storage area", "Inside the storage area, by the door", "Only on the application vehicle", "With the bulk storage tanks"], "answer": 0,
-         "ref": "p. 136, 'Keep'", "why": "Copies kept away from the storage area survive a fire or spill there."},
-        {"id": "c09-s03-t2", "src": "test", "kind": "mc", "style": "scenario", "q": "In April you double your stock of pesticides, fertilizer, and fuel for the season. What should your emergency response plan reflect?",
-         "choices": ["Peak seasonal storage", "Average yearly storage", "Storage on the day the plan was written", "Only the pesticides, not fertilizer or fuel"], "answer": 0,
-         "ref": "p. 136, 'Keep'", "why": "The plan should reflect peak seasonal storage of pesticides, fertilizers, and fuel."},
-        {"id": "c09-s03-t3", "src": "test", "kind": "mc", "style": "not", "q": "Which of these does the manual NOT list as something the facility map should show?",
-         "choices": ["Main shutoffs for electricity, water, and gas", "Drainage ditches, wells, and surface flow of water", "Location of fire extinguishers and protective clothing", "Employee home addresses"], "answer": 3,
-         "ref": "p. 136, 'Facility map'", "why": "Employee home addresses are not on the list."},
-        {"id": "c09-s03-t4", "src": "test", "kind": "tf", "q": "Employees need to be trained on executing the response plan only once, when they are hired.", "answer": false,
-         "ref": "p. 136, guidelines", "why": "Train all employees how to execute the response plan each year."},
-        {"id": "c09-s03-t5", "src": "test", "kind": "mc", "q": "When should you give emergency response agencies an updated copy of your facility map and area map?",
-         "choices": ["Whenever changes are made", "Once every five years", "Only after an emergency", "Only when they ask"], "answer": 0,
-         "ref": "p. 136, 'Area map'", "why": "Provide an updated copy whenever changes are made."}
-      ]
+     "h": "Accidents are rare, but they happen"
     },
     {
-      "id": "c09-s04",
-      "chapter": "Chapter 9 · Emergency or Incident Response",
-      "title": "Fires: precautions and what to do",
-      "pages": [137, 138],
-      "body": [
-        {"h": "Fires"},
-        {"p": [
-          "Pesticide products vary significantly in their flammability.",
-          "However, **any pesticide product involved in a fire is dangerous** to responders working at the scene because of **smoke and fumes**.",
-          "**Even after the fire has been extinguished**, pesticide residue in the debris, soil, and runoff may be dangerous."
-        ]},
-        {"h": "Precautions to reduce fire hazards"},
-        {"p": [
-          "Chapter 8, Transportation, Storage, and Security, discussed where to locate a pesticide storage facility and the proper design and components of a secure facility.",
-          "Follow these guidelines to help you prepare for, and respond to, a fire in the storage area."
-        ]},
-        {"list": [
-          "Store combustible pesticides **away from heating sources**.",
-          "Install a **fire-detection system**.",
-          "Train employees to use a fire extinguisher."
-        ]},
-        {"gallery": ["p137-sprinkler", "p137-sign"]},
-        {"h": "When a fire occurs"},
-        {"p": [
-          "**Prompt action** is essential when a fire occurs.",
-          "Coordinate all details on managing a fire with local emergency response officials.",
-          "Take the following actions."
-        ]},
-        {"list": [
-          "Make sure employees evacuating the premises go to a **designated rendezvous point** where everyone can be accounted for.",
-          "Notify the fire department.",
-          "Provide emergency response teams with **SDSs, labels, the emergency plan, and a site map**.",
-          "Follow the instructions given by the **onsite incident commander**.",
-          "Establish a **security perimeter** to discourage onlookers.",
-          "Contain contaminated runoff water and leaking pesticide onsite by **building berms**.",
-          "Consult with emergency responders to decide whether to **allow the fire to burn out**.",
-          "Call your insurance agent.",
-          "Make all regulatory phone calls required by state and federal agencies."
-        ]},
-        {"gallery": ["p138-extinguisher", "p138-salvage"]}
-      ],
-      "figures": [
-        {"id": "p137-sprinkler", "title": "Install fire detection systems such as this sprinkler system with a sensor.", "page": "p. 137", "imgFile": "p137-sprinkler.jpg"},
-        {"id": "p137-sign", "title": "Post signs that indicate pesticides are stored in the facility.", "page": "p. 137", "imgFile": "p137-sign.jpg"},
-        {"id": "p138-extinguisher", "title": "Have a fire extinguisher approved for chemical fires readily available.", "page": "p. 138", "imgFile": "p138-extinguisher.jpg"},
-        {"id": "p138-salvage", "title": "Cleanup and salvage operations after a fire must be done under expert supervision after everything has cooled.", "page": "p. 138", "imgFile": "p138-salvage.jpg"}
-      ],
-      "questions": [
-        {"id": "c09-s04-r3", "src": "review", "kind": "mc", "q": "In addition to an emergency response plan, which of the following will further reduce the risk of a pesticide fire?",
-         "choices": ["Store pesticides close to a heat source to prevent freezing.", "Keep a fire-detection system in the storage area.", "Post the storage area with a warning sign."], "answer": 1, "fixed": true,
-         "ref": "p. 141, Review question 3 (answer: p. 137, 'Precautions to Reduce Fire Hazards')", "why": "A fire-detection system is one of the listed precautions. Store combustible pesticides away from heat."},
-        {"id": "c09-s04-r4", "src": "review", "kind": "mc", "q": "Which is a recommended action to take in the event of a pesticide fire?",
-         "choices": ["Construct berms to contain contaminated runoff water.", "Enter the storage facility and remove as much pesticide as possible.", "Try to extinguish the fire before calling 911."], "answer": 0, "fixed": true,
-         "ref": "p. 141, Review question 4 (answer: p. 138, fire actions)", "why": "Contain contaminated runoff water and leaking pesticide onsite by building berms."},
-        {"id": "c09-s04-t1", "src": "test", "kind": "tf", "q": "Once a pesticide fire is put out, the debris, soil, and runoff are no longer dangerous.", "answer": false,
-         "ref": "p. 137, 'Fires'", "why": "Pesticide residue in debris, soil, and runoff may be dangerous even after the fire is out."},
-        {"id": "c09-s04-t2", "src": "test", "kind": "mc", "style": "scenario", "q": "Your storage building is on fire and the crew has run outside. What should you make sure they do first?",
-         "choices": ["Go to a designated rendezvous point where everyone can be accounted for", "Go back in for the SDS binder", "Spray water on the pesticide shelves", "Move their vehicles to block the road"], "answer": 0,
-         "ref": "p. 138, fire actions", "why": "Evacuating employees go to a designated rendezvous point to be accounted for."},
-        {"id": "c09-s04-t3", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT something the manual says to give emergency response teams at a fire?",
-         "choices": ["SDSs", "Labels", "The emergency plan and a site map", "Your sales records"], "answer": 3,
-         "ref": "p. 138, fire actions", "why": "Give them SDSs, labels, the emergency plan, and a site map."},
-        {"id": "c09-s04-t4", "src": "test", "kind": "mc", "q": "Whose instructions do you follow at the scene of a pesticide fire?",
-         "choices": ["The onsite incident commander", "The pesticide manufacturer", "Your insurance agent", "The state pesticide inspector"], "answer": 0,
-         "ref": "p. 138, fire actions", "why": "Follow the instructions given by the onsite incident commander."},
-        {"id": "c09-s04-t5", "src": "test", "kind": "short", "q": "Why is any pesticide product involved in a fire dangerous to responders at the scene?",
-         "answer": "smoke and fumes", "keys": [["smoke", "fumes", "toxic fumes", "fume"]],
-         "ref": "p. 137, 'Fires'", "why": "Any pesticide in a fire is dangerous to responders because of smoke and fumes."}
-      ]
+     "p": [
+      "Although pesticide accidents and emergencies are rare, they do occur.",
+      "Pesticides spilled on the ground or burning in a fire can **contaminate water, soil, and air**.",
+      "They can **damage plants**, **injure livestock, wildlife, or pets**, and **endanger the health** of the applicator and emergency responders.",
+      "Pesticide spills and fires may lead to **financial loss** due to cleanup, liability claims, and fines assessed by government agencies.",
+      "Do all that you can to prevent accidents, but be prepared in case of emergency."
+     ]
     },
     {
-      "id": "c09-s05",
-      "chapter": "Chapter 9 · Emergency or Incident Response",
-      "title": "Spills: the three Cs, control and contain",
-      "pages": [138, 139],
-      "body": [
-        {"h": "Pesticide spills"},
-        {"p": [
-          "A **spill** is an accidental release of **any amount** of pesticide, small or large.",
-          "Spills on public highways, such as when a tank on a truck overturns, usually have major consequences.",
-          "Failure to respond quickly and appropriately to such mishaps could seriously endanger public health and environmental quality.",
-          "In the event of any pesticide spill, remember the **three Cs**: **CONTROL** the spill, **CONTAIN** it, and **CLEAN** it up."
-        ]},
-        {"box": "The Three Cs", "ol": ["Control.", "Contain.", "Clean up the spill."]},
-        {"fig": "p138-spill"},
-        {"h": "Control the spill"},
-        {"p": [
-          "**Act immediately** to control the spilled product.",
-          "Always put on the appropriate **personal protective equipment**, or **PPE**, **before** responding to a spill.",
-          "Place **small, leaking containers into larger ones**.",
-          "If a larger container, such as a drum, is leaking, try to **plug the leak**. Then, transfer the contents to another container.",
-          "To stop leaks from pressurized systems, such as sprayers, **turn off the pump**.",
-          "**Never leave the site unattended.**"
-        ]},
-        {"fig": "p138-ppe"},
-        {"h": "Contain the spill"},
-        {"p": [
-          "Do all you can to keep the spill from spreading or getting worse.",
-          "**Prevent the material from entering surface water.**",
-          "Using a **shovel**, you can quickly **berm off an area** to keep the spilled pesticide out of drains and waterways.",
-          "A spill that is contained on the surface is much easier to clean than one that has entered a body of water."
-        ]},
-        {"fig": "p139-tube"}
-      ],
-      "figures": [
-        {"id": "p138-spill", "title": "Clean up all spills immediately.", "page": "p. 138", "imgFile": "p138-spill.jpg"},
-        {"id": "p138-ppe", "title": "Wear appropriate PPE when cleaning up a spill.", "page": "p. 138", "imgFile": "p138-ppe.jpg"},
-        {"id": "p139-tube", "title": "Take action to prevent spills from spreading. In this case, an absorbent spill tube is used to contain the spill.", "page": "p. 139", "imgFile": "p139-tube.jpg"}
-      ],
-      "questions": [
-        {"id": "c09-s05-r5", "src": "review", "kind": "mc", "q": "Which is an appropriate action to take in the event of a pesticide spill?",
-         "choices": ["Take a \"time out\" to read your emergency response plan.", "Call 911 only if the spill has a chance of entering surface water.", "Put on the appropriate PPE before responding to the spill."], "answer": 2, "fixed": true,
-         "ref": "p. 141, Review question 5 (answer: p. 138, 'Control the Spill')", "why": "Always put on the appropriate PPE before responding to a spill."},
-        {"id": "c09-s05-t1", "src": "test", "kind": "short", "q": "What are the three Cs of a pesticide spill, in order?",
-         "answer": "control, contain, clean up", "keys": [["control"], ["contain"], ["clean"]],
-         "ref": "p. 138, 'Pesticide Spills' and box 'The Three Cs'", "why": "Control the spill, contain it, and clean it up."},
-        {"id": "c09-s05-t2", "src": "test", "kind": "mc", "style": "scenario", "q": "A hose fitting on your sprayer breaks and the tank is pumping pesticide onto the ground. What stops the leak?",
-         "choices": ["Turn off the pump", "Pour cat litter on the puddle", "Drive the sprayer back to the shop", "Call the manufacturer"], "answer": 0,
-         "ref": "p. 139, 'Control the Spill'", "why": "To stop leaks from pressurized systems such as sprayers, turn off the pump."},
-        {"id": "c09-s05-t3", "src": "test", "kind": "tf", "q": "Only a large release of pesticide counts as a spill.", "answer": false,
-         "ref": "p. 138, 'Pesticide Spills'", "why": "A spill is an accidental release of any amount of pesticide, small or large."},
-        {"id": "c09-s05-t4", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT a correct step to control a spill?",
-         "choices": ["Place small, leaking containers into larger ones", "Try to plug a leaking drum, then transfer the contents", "Leave the site briefly to get help", "Put on PPE before responding"], "answer": 2,
-         "ref": "pp. 138–139, 'Control the Spill'", "why": "Never leave the site unattended."},
-        {"id": "c09-s05-t5", "src": "test", "kind": "mc", "q": "What tool does the manual say you can use to quickly berm off an area around a spill?",
-         "choices": ["A shovel", "A broom", "A hose", "A dustpan"], "answer": 0,
-         "ref": "p. 139, 'Contain the Spill'", "why": "Using a shovel, you can quickly berm off an area."}
-      ]
+     "h": "Emergency response planning"
     },
     {
-      "id": "c09-s06",
-      "chapter": "Chapter 9 · Emergency or Incident Response",
-      "title": "Spills into water, reporting, and cleanup",
-      "pages": [139, 140],
-      "body": [
-        {"h": "If the spill reaches water"},
-        {"p": [
-          "If the spilled pesticide does contaminate a stream, pond, or other waterway, **immediately contact** the state, tribe, or territory regulatory agencies responsible for streams and fisheries and for pesticides.",
-          "**Do not delay** notifying the authorities.",
-          "They need time to alert downstream users who draw surface water for drinking, prevent accidental poisoning of livestock, evacuate people using the water for recreational purposes such as swimming and fishing, and avoid contamination of irrigated crops.",
-          "Call the **manufacturer's emergency number on the SDS** to find out what steps you or the emergency response coordinator should take to lessen the dangers of water contamination."
-        ]},
-        {"h": "Report the spill"},
-        {"p": [
-          "**Call 911** to report the spill and be ready to respond to the authorities arriving at the scene.",
-          "Be sure to have the **product label and SDS** available for emergency responders.",
-          "After the spill has been contained, follow your emergency plan.",
-          "In some cases, the applicator will call the emergency responder, who will then call the proper authorities."
-        ]},
-        {"box": "For emergency response information call", "p": ["**CHEMTREC**: 1-800-424-9300."]},
-        {"h": "Clean up the spill"},
-        {"p": [
-          "The last step at the spill site is to clean up the spilled product.",
-          "Sweep up any absorbent materials and other contaminated items and **place them in a drum**.",
-          "If the spill occurred on **concrete or asphalt**, you will have to **neutralize the surface**.",
-          "Follow the instructions on the SDS or contact the manufacturer, whose number is listed on the data sheet."
-        ]},
-        {"fig": "p140-absorbent"},
-        {"p": [
-          "The state, tribe, or territory regulatory agency involved with pesticide spills will tell you what to do when the spill occurs on **soil**.",
-          "For example, they may require that the **top 2 to 3 inches of soil** be excavated, removed, and replaced with clean soil."
-        ]},
-        {"h": "Keep records"},
-        {"p": [
-          "**Keep records** of your activities and conversations with regulatory authorities, emergency responders, news media, and the public when dealing with a pesticide spill.",
-          "**Photographs** help document any related damage as well as steps you have taken to clean up the spilled product."
-        ]}
-      ],
-      "figures": [
-        {"id": "p140-absorbent", "title": "Use an absorbent material to help clean up a spill.", "page": "p. 140", "imgFile": "p140-absorbent.jpg"}
-      ],
-      "questions": [
-        {"id": "c09-s06-r1", "src": "review", "kind": "mc", "q": "Which statement about emergency response planning is true?",
-         "choices": ["The main reason to have an emergency response plan is to reduce economic losses.", "The first person to contact in an emergency is an attorney.", "It is important to make a detailed report of what took place before, during, and after the incident."], "answer": 2, "fixed": true,
-         "ref": "p. 141, Review question 1 (answer: p. 140, keep records; p. 136, coordinator fills out reports)", "why": "Keep records of your activities and conversations, and photographs help document the damage and your cleanup."},
-        {"id": "c09-s06-t1", "src": "test", "kind": "short", "q": "What is the phone number for CHEMTREC?",
-         "answer": "1-800-424-9300", "accept": ["800-424-9300", "18004249300", "8004249300", "1 800 424 9300"],
-         "ref": "p. 139, box 'For emergency response information call'", "why": "CHEMTREC is 1-800-424-9300."},
-        {"id": "c09-s06-t2", "src": "test", "kind": "mc", "style": "scenario", "q": "A spill soaks into the soil at a mixing site. The regulatory agency may require you to excavate and replace how much soil?",
-         "choices": ["The top 2 to 3 inches", "The top 6 to 8 inches", "The top 1 foot", "None, soil spills break down on their own"], "answer": 0,
-         "ref": "pp. 139–140, 'Clean up the Spill'", "why": "They may require the top 2 to 3 inches of soil be excavated, removed, and replaced."},
-        {"id": "c09-s06-t3", "src": "test", "kind": "mc", "q": "A pesticide spilled on concrete has been swept up. What else must be done to the surface?",
-         "choices": ["Neutralize it", "Hose it down into the drain", "Paint over it", "Nothing more"], "answer": 0,
-         "ref": "p. 139, 'Clean up the Spill'", "why": "On concrete or asphalt you have to neutralize the surface, following the SDS or manufacturer."},
-        {"id": "c09-s06-t4", "src": "test", "kind": "mc", "style": "not", "q": "Authorities need time after a waterway is contaminated. Which of these is NOT a reason the manual gives?",
-         "choices": ["To alert downstream users who draw surface water for drinking", "To prevent accidental poisoning of livestock", "To evacuate people swimming and fishing", "To decide how much to fine you"], "answer": 3,
-         "ref": "p. 139, waterway contamination", "why": "Fines are not among the listed reasons."},
-        {"id": "c09-s06-t5", "src": "test", "kind": "tf", "q": "If a spill reaches a stream, you should finish cleanup before notifying the state agencies.", "answer": false,
-         "ref": "p. 139, waterway contamination", "why": "Immediately contact the agencies, and do not delay notifying the authorities."},
-        {"id": "c09-s06-t6", "src": "test", "kind": "mc", "q": "Where do you put swept-up absorbent material and other contaminated items?",
-         "choices": ["In a drum", "In the regular trash", "Back in the original pesticide container", "In a burn pile"], "answer": 0,
-         "ref": "p. 139, 'Clean up the Spill'", "why": "Sweep up absorbent and contaminated items and place them in a drum."}
-      ]
+     "p": [
+      "Like a pesticide site security plan, a carefully thought-out **emergency response plan**, that is, a **contingency plan**, can help to prevent an emergency situation from becoming a catastrophe.",
+      "An emergency response plan helps **protect employees and the community**, **minimizes environmental damage**, and **reduces liability** if an accident happens."
+     ]
     },
     {
-      "id": "c09-s07",
-      "chapter": "Chapter 9 · Emergency or Incident Response",
-      "title": "The NFPA hazard diamond",
-      "pages": [138, 139],
-      "body": [
-        {"h": "National Fire Protection Association"},
-        {"p": [
-          "A hazardous rating system used to assist emergency response personnel is the **NFPA Hazard Identification System**.",
-          "This system uses a **diamond-shaped** warning symbol.",
-          "The **top, left, and right** boxes refer to **flammability, health, and instability** hazards, respectively, and each contains a number from **0 to 4**.",
-          "The **bottom** box is used for **special hazards**; the most common of these is a **warning against the use of water**."
-        ]},
-        {"fig": "fig-9-nfpa"},
-        {"box": "Health Hazard: Blue Section", "list": ["4: Severe hazard.", "3: Serious hazard.", "2: Moderate hazard.", "1: Slight hazard.", "0: Minimal hazard."]},
-        {"box": "Flammability Hazard: Red Section", "list": ["4: Flammable gases, volatile liquids, pyrophoric materials.", "3: Ignites at ambient temperatures.", "2: Ignites when moderately heated.", "1: Must be preheated to burn.", "0: Will not burn."]},
-        {"box": "Special Hazard: White Section", "list": ["OX: Oxidizer.", "W with a line through it: Avoid use of water."]},
-        {"box": "Instability Hazard: Yellow Section", "list": ["4: Capable of detonation or explosive decomposition at ambient temperatures.", "3: Capable of detonation or explosive decomposition with strong initiating source.", "2: Violent chemical change possible at elevated temperature and pressure.", "1: Normally stable, but becomes unstable if heated.", "0: Normally stable."]},
-        {"fig": "p138-nfpa"}
-      ],
-      "figures": [
-        {"id": "fig-9-nfpa", "title": "NFPA diamond, the example drawn in the box on page 139.", "page": "p. 139", "svgFile": "fig-9-nfpa.svg",
-         "explain": [
-           "This example reads health 1, flammability 4, and instability 3, with the special notice box left blank.",
-           "The drawing labels the right box reactivity, while the text of the box calls it instability."
-         ]},
-        {"id": "p138-nfpa", "title": "A National Fire Protection Association, or NFPA, warning on a storage box for fumigants. The strikeover on the letter W in the white diamond alerts firefighters not to use water to put out a fire.", "page": "p. 138", "imgFile": "p138-nfpa.jpg"}
-      ],
-      "questions": [
-        {"id": "c09-s07-t1", "src": "test", "kind": "mc", "q": "On the NFPA diamond, which box shows the health hazard?",
-         "choices": ["Left, blue", "Top, red", "Right, yellow", "Bottom, white"], "answer": 0,
-         "ref": "p. 139, box 'National Fire Protection Association'", "why": "Top is flammability, left is health, right is instability."},
-        {"id": "c09-s07-t2", "src": "test", "kind": "mc", "style": "scenario", "q": "A fumigant storage box shows a W with a line through it in the white bottom diamond. What does that tell firefighters?",
-         "choices": ["Do not use water to put out a fire", "The product is water soluble", "Wear a respirator", "The product is a weak hazard"], "answer": 0,
-         "ref": "p. 138 photo caption; p. 139 NFPA box", "why": "The strikeover on the W warns against the use of water."},
-        {"id": "c09-s07-t3", "src": "test", "kind": "mc", "q": "A flammability rating of 0 means the material:",
-         "choices": ["Will not burn", "Must be preheated to burn", "Ignites at ambient temperatures", "Is a pyrophoric material"], "answer": 0,
-         "ref": "p. 139, 'Flammability Hazard: Red Section'", "why": "A 0 means it will not burn."},
-        {"id": "c09-s07-t4", "src": "test", "kind": "tf", "q": "On the NFPA diamond, a 4 means the least hazardous and a 0 the most hazardous.", "answer": false,
-         "ref": "p. 139, NFPA box", "why": "It is the reverse. 4 is the most severe and 0 is minimal."},
-        {"id": "c09-s07-t5", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT one of the NFPA diamond's colored sections?",
-         "choices": ["Blue for health", "Red for flammability", "Yellow for instability", "Green for environmental hazard"], "answer": 3,
-         "ref": "p. 139, NFPA box", "why": "The sections are blue, red, yellow, and white. There is no green section."},
-        {"id": "c09-s07-t6", "src": "test", "kind": "short", "q": "On the NFPA diamond, what do the letters OX in the white section mean?",
-         "answer": "oxidizer", "accept": ["an oxidizer", "oxidiser", "oxidizing"],
-         "ref": "p. 139, 'Special Hazard: White Section'", "why": "OX means oxidizer."}
-      ]
+     "p": [
+      "Emergencies can take many forms: tornado or high winds, flood, fire, or a highway accident.",
+      "How you and emergency personnel respond determines whether the problem is quickly and safely resolved."
+     ]
     },
     {
-      "id": "c09-s08",
-      "chapter": "Chapter 9 · Emergency or Incident Response",
-      "title": "Preventing spills, the spill kit, and chapter summary",
-      "pages": [140, 140],
-      "body": [
-        {"h": "Prevent spills"},
-        {"p": [
-          "A key to reducing the likelihood of any spill is to **properly maintain your application equipment and transport vehicles**.",
-          "Leaks and drips from **cracked hoses or loose hose clamps** clearly indicate problems.",
-          "**Defensive driving techniques** and **refraining from cellphone use while driving** are two important habits that can prevent vehicle accidents that might result in a spill."
-        ]},
-        {"p": [
-          "Keep a **spill cleanup kit** in **each pesticide transport vehicle** and at the site where pesticides are **mixed, loaded, and stored**.",
-          "Store your spill kit items in a **plastic container** and keep them clean and in working order.",
-          "Include the following items in a spill response kit."
-        ]},
-        {"list": [
-          "Telephone numbers for emergency assistance.",
-          "PPE designed for use with pesticides.",
-          "Absorbent materials, such as **spill pillows, absorbent clay, and cat litter**.",
-          "A **shovel, broom, and dustpan**.",
-          "**Heavy-duty detergent**."
-        ]},
-        {"fig": "p140-supplies"},
-        {"h": "Summary"},
-        {"p": [
-          "Prepare for a pesticide emergency.",
-          "Make sure the plan includes designating an emergency response coordinator, maintaining a list of emergency response agencies, preparing a map of the facility, and keeping a product inventory.",
-          "Be sure all employees at the facility are familiar with the emergency response plan and know what to do in a crisis.",
-          "Take precautions to reduce the chance of pesticide fires.",
-          "The best way to manage pesticide spills is to **prevent them from happening**.",
-          "It is your responsibility as a pesticide applicator to do everything possible to avoid spills and adhere to a few basic guidelines when handling spills and leaks.",
-          "Accidents happen. Be prepared so that they will not become catastrophes."
-        ]}
-      ],
-      "figures": [
-        {"id": "p140-supplies", "title": "Keep emergency supplies and a shovel on hand.", "page": "p. 140", "imgFile": "p140-supplies.jpg"}
-      ],
-      "questions": [
-        {"id": "c09-s08-t1", "src": "test", "kind": "mc", "style": "not", "q": "Which of these is NOT on the manual's list of spill response kit items?",
-         "choices": ["Heavy-duty detergent", "A shovel, broom, and dustpan", "Spill pillows, absorbent clay, and cat litter", "A garden hose to rinse the spill away"], "answer": 3,
-         "ref": "p. 140, 'Prevent Spills'", "why": "A hose is not on the list."},
-        {"id": "c09-s08-t2", "src": "test", "kind": "mc", "q": "According to the summary, what is the best way to manage pesticide spills?",
-         "choices": ["Prevent them from happening", "Call 911 right away", "Keep an attorney on retainer", "Neutralize them with detergent"], "answer": 0,
-         "ref": "p. 140, 'Summary'", "why": "The best way to manage spills is to prevent them."},
-        {"id": "c09-s08-t3", "src": "test", "kind": "mc", "style": "scenario", "q": "Before a route, you see drips under the spray rig from a loose hose clamp. What does the manual say this indicates?",
-         "choices": ["A problem that needs maintenance", "Normal wear that can wait until fall", "That the tank is overfilled", "That the pesticide is too thin"], "answer": 0,
-         "ref": "p. 140, 'Prevent Spills'", "why": "Leaks and drips from cracked hoses or loose clamps clearly indicate problems."},
-        {"id": "c09-s08-t4", "src": "test", "kind": "tf", "q": "A spill cleanup kit is only needed at the storage site, not in transport vehicles.", "answer": false,
-         "ref": "p. 140, 'Prevent Spills'", "why": "Keep a kit in each transport vehicle and where pesticides are mixed, loaded, and stored."},
-        {"id": "c09-s08-t5", "src": "test", "kind": "short", "q": "Name two driving habits the manual says can prevent vehicle accidents that might result in a spill.",
-         "answer": "defensive driving and not using a cellphone while driving", "keys": [["defensive"], ["cellphone", "cell phone", "phone"]],
-         "ref": "p. 140, 'Prevent Spills'", "why": "Defensive driving and refraining from cellphone use while driving."},
-        {"id": "c09-s08-t6", "src": "test", "kind": "mc", "q": "What kind of container should spill kit items be stored in?",
-         "choices": ["A plastic container", "A metal drum", "A cardboard box", "A paper bag"], "answer": 0,
-         "ref": "p. 140, 'Prevent Spills'", "why": "Store your spill kit items in a plastic container."}
-      ]
+     "p": [
+      "Do you know what to do in a pesticide emergency?"
+     ]
     }
-  ]
+   ],
+   "figures": [
+    {
+     "id": "p135-spillkit",
+     "title": "A spill kit bag labeled: For chemical or pesticide exposure.",
+     "page": "p. 135",
+     "imgFile": "p135-spillkit.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c09-s01-t1",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT one of the three things the manual says an emergency response plan does?",
+     "choices": [
+      "Protects employees and the community",
+      "Minimizes environmental damage",
+      "Reduces liability if an accident happens",
+      "Eliminates the need for insurance"
+     ],
+     "answer": 3,
+     "ref": "p. 135, 'Emergency Response Planning'",
+     "why": "The plan protects people, minimizes environmental damage, and reduces liability."
+    },
+    {
+     "id": "c09-s01-t2",
+     "src": "test",
+     "kind": "short",
+     "q": "What is another name the manual gives for an emergency response plan?",
+     "answer": "contingency plan",
+     "accept": [
+      "a contingency plan",
+      "contingency"
+     ],
+     "ref": "p. 135, 'Emergency Response Planning'",
+     "why": "The manual calls it an emergency response plan, that is, a contingency plan."
+    },
+    {
+     "id": "c09-s01-t3",
+     "src": "test",
+     "kind": "mc",
+     "q": "Pesticide spills and fires may lead to financial loss. Which three causes does the manual list?",
+     "choices": [
+      "Cleanup, liability claims, and fines from government agencies",
+      "Lost sales, lawsuits, and higher taxes",
+      "Product recalls, cleanup, and lost wages",
+      "Insurance premiums, cleanup, and permits"
+     ],
+     "answer": 0,
+     "ref": "p. 135, chapter introduction",
+     "why": "Financial loss comes from cleanup, liability claims, and fines assessed by government agencies."
+    },
+    {
+     "id": "c09-s01-t4",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A storm floods a pesticide dealer's yard. According to the manual, what determines whether the problem is quickly and safely resolved?",
+     "choices": [
+      "How you and emergency personnel respond",
+      "How much pesticide was stored",
+      "Whether the flood was forecast",
+      "Which agency has jurisdiction"
+     ],
+     "answer": 0,
+     "ref": "p. 135, 'Emergency Response Planning'",
+     "why": "How you and emergency personnel respond determines whether it is resolved quickly and safely."
+    },
+    {
+     "id": "c09-s01-t5",
+     "src": "test",
+     "kind": "tf",
+     "q": "Pesticides burning in a fire can contaminate the air, not just soil and water.",
+     "answer": true,
+     "ref": "p. 135, chapter introduction",
+     "why": "Spilled or burning pesticides can contaminate water, soil, and air."
+    }
+   ]
+  },
+  {
+   "id": "c09-s02",
+   "chapter": "Chapter 9 · Emergency or Incident Response",
+   "title": "The plan: coordinator, contact list, and incident form",
+   "pages": [
+    135,
+    136
+   ],
+   "body": [
+    {
+     "p": [
+      "Follow these guidelines when developing an emergency response plan."
+     ]
+    },
+    {
+     "h": "Designate an emergency coordinator"
+    },
+    {
+     "p": [
+      "Designate an **emergency coordinator** as the **go-to person**.",
+      "This person must have **authority to make important decisions** during an emergency, including coordinating with local first responders, such as fire, police, and paramedics.",
+      "The emergency coordinator is the person who will **make the necessary calls and fill out reports** to government agencies."
+     ]
+    },
+    {
+     "fig": "p136-fire"
+    },
+    {
+     "h": "Post a contact list"
+    },
+    {
+     "p": [
+      "Post in the **office, shop, and truck** a list of names and telephone numbers of response agencies that may require notification."
+     ]
+    },
+    {
+     "box": "Emergency Response Agency Contacts",
+     "list": [
+      "Persons or agencies required to be notified by local, state, and federal requirements.",
+      "Local emergency planning committees.",
+      "Police and fire units.",
+      "Paramedics and area hospitals.",
+      "Appropriate chemical manufacturers and dealers.",
+      "Containment and hazardous waste cleanup contractors.",
+      "Your **attorney**, to protect your rights and the rights of others."
+     ]
+    },
+    {
+     "h": "Prepare a fill-in form"
+    },
+    {
+     "p": [
+      "Prepare a **fill-in form or an outline of critical information** to convey to emergency personnel.",
+      "Keep it **with your calling list**.",
+      "Be sure to include the following."
+     ]
+    },
+    {
+     "list": [
+      "Name of the person reporting the incident.",
+      "Precise location of the incident.",
+      "General description of what happened.",
+      "The exact **name, quantity, and classification** of pesticides involved.",
+      "The extent of injuries.",
+      "Whether pesticides have **entered surface water**."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "p136-fire",
+     "title": "Be prepared for emergency situations.",
+     "page": "p. 136",
+     "imgFile": "p136-fire.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c09-s02-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "Who makes the necessary calls and fills out reports to government agencies during an emergency?",
+     "choices": [
+      "The emergency coordinator",
+      "The fire chief",
+      "The company attorney",
+      "The pesticide manufacturer"
+     ],
+     "answer": 0,
+     "ref": "p. 136, emergency plan guidelines",
+     "why": "The emergency coordinator makes the calls and fills out the reports."
+    },
+    {
+     "id": "c09-s02-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT on the manual's list of critical information for the fill-in form?",
+     "choices": [
+      "Precise location of the incident",
+      "Whether pesticides have entered surface water",
+      "The exact name, quantity, and classification of pesticides involved",
+      "The purchase price of the pesticides involved"
+     ],
+     "answer": 3,
+     "ref": "p. 136, 'Prepare a fill-in form'",
+     "why": "Price is not on the list. Name, quantity, and classification are."
+    },
+    {
+     "id": "c09-s02-t3",
+     "src": "test",
+     "kind": "short",
+     "q": "Name the three places the manual says to post the list of response agency names and phone numbers.",
+     "answer": "office, shop, and truck",
+     "keys": [
+      [
+       "office"
+      ],
+      [
+       "shop"
+      ],
+      [
+       "truck",
+       "vehicle"
+      ]
+     ],
+     "ref": "p. 136, emergency plan guidelines",
+     "why": "Post the list in the office, shop, and truck."
+    },
+    {
+     "id": "c09-s02-t4",
+     "src": "test",
+     "kind": "tf",
+     "q": "Your attorney is on the manual's list of emergency response agency contacts.",
+     "answer": true,
+     "ref": "p. 136, box 'Emergency Response Agency Contacts'",
+     "why": "The attorney is listed, to protect your rights and the rights of others."
+    },
+    {
+     "id": "c09-s02-t5",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "You hand an employee the fill-in form of critical incident information. Where should it be kept?",
+     "choices": [
+      "With your calling list",
+      "In the pesticide storage area",
+      "At your attorney's office",
+      "In the glove box of the truck only"
+     ],
+     "answer": 0,
+     "ref": "p. 136, 'Prepare a fill-in form'",
+     "why": "Keep the form with your calling list."
+    }
+   ]
+  },
+  {
+   "id": "c09-s03",
+   "chapter": "Chapter 9 · Emergency or Incident Response",
+   "title": "Maps, inventory, training, and the plan's backbone",
+   "pages": [
+    136,
+    137
+   ],
+   "body": [
+    {
+     "h": "Prepare maps"
+    },
+    {
+     "p": [
+      "Prepare a **facility map** that shows a layout of all chemical storage buildings and bulk storage tanks.",
+      "It also shows access roads; main shutoffs for electricity, water, and gas; perimeter fencing or gates; and fuel storage tanks.",
+      "It shows the location of fire alarms, fire extinguishers and other firefighting equipment, and protective clothing.",
+      "It also shows drainage ditches, wells, and surface flow of water."
+     ]
+    },
+    {
+     "p": [
+      "Prepare an **area map** that shows your facility in relation to the surrounding area.",
+      "Provide emergency response agencies with an **updated copy** of the facility map and area map **whenever changes are made**."
+     ]
+    },
+    {
+     "fig": "fig-9-1"
+    },
+    {
+     "h": "Keep, maintain, and train"
+    },
+    {
+     "list": [
+      "Keep a **product inventory** of chemicals stored at the facility. Let your emergency response plan reflect **peak seasonal storage** of pesticides, fertilizers, and fuel.",
+      "Keep copies of pesticide labels and Safety Data Sheets, or SDSs, **away from the storage area**.",
+      "Maintain in good working order the emergency equipment and supplies needed to respond to fires and spills.",
+      "Train all employees how to execute the response plan **each year**."
+     ]
+    },
+    {
+     "p": [
+      "Do you know where your emergency equipment is?"
+     ]
+    },
+    {
+     "h": "The backbone of the plan"
+    },
+    {
+     "p": [
+      "The **backbone** of any emergency response plan is a description of the **sequence of actions to take in a crisis**.",
+      "Prepare step-by-step procedures on how to respond to various emergencies: fires, spills, ammonia leaks, tornadoes, hurricanes, and transportation accidents, among others.",
+      "Specify **in writing** every activity from sounding the alarm to interacting with local emergency response agencies.",
+      "Once internal emergency procedures have been established, ask your local response agencies, for example, fire, police, and emergency planning committee, if they have anything to add to your plan.",
+      "Offer them a copy of your plan for their files."
+     ]
+    },
+    {
+     "fig": "p137-plan"
+    }
+   ],
+   "figures": [
+    {
+     "id": "fig-9-1",
+     "title": "Figure 9.1: Include a facility map as part of the emergency response plan.",
+     "page": "p. 137",
+     "svgFile": "fig-9-1.svg",
+     "explain": [
+      "This is a simplified redraw of the sample map. The key on the right matches the manual's Key to Facilities.",
+      "It marks buildings, bulk bins, tanks, dikes, drains, the well, fences, vehicle access, and the stream along the property edge, so responders know where hazards and water are."
+     ]
+    },
+    {
+     "id": "p137-plan",
+     "title": "Develop a written emergency response plan.",
+     "page": "p. 137",
+     "imgFile": "p137-plan.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c09-s03-r2",
+     "src": "review",
+     "kind": "mc",
+     "q": "What is the backbone of any emergency response plan?",
+     "choices": [
+      "Outlining the sequence of actions to take in a crisis.",
+      "Knowing where labels and SDSs are kept.",
+      "Having a designated emergency responder."
+     ],
+     "answer": 0,
+     "fixed": true,
+     "ref": "p. 141, Review question 2 (answer: p. 137)",
+     "why": "The backbone is a description of the sequence of actions to take in a crisis."
+    },
+    {
+     "id": "c09-s03-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "Where should you keep copies of pesticide labels and SDSs for emergencies?",
+     "choices": [
+      "Away from the storage area",
+      "Inside the storage area, by the door",
+      "Only on the application vehicle",
+      "With the bulk storage tanks"
+     ],
+     "answer": 0,
+     "ref": "p. 136, 'Keep'",
+     "why": "Copies kept away from the storage area survive a fire or spill there."
+    },
+    {
+     "id": "c09-s03-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "In April you double your stock of pesticides, fertilizer, and fuel for the season. What should your emergency response plan reflect?",
+     "choices": [
+      "Peak seasonal storage",
+      "Average yearly storage",
+      "Storage on the day the plan was written",
+      "Only the pesticides, not fertilizer or fuel"
+     ],
+     "answer": 0,
+     "ref": "p. 136, 'Keep'",
+     "why": "The plan should reflect peak seasonal storage of pesticides, fertilizers, and fuel."
+    },
+    {
+     "id": "c09-s03-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these does the manual NOT list as something the facility map should show?",
+     "choices": [
+      "Main shutoffs for electricity, water, and gas",
+      "Drainage ditches, wells, and surface flow of water",
+      "Location of fire extinguishers and protective clothing",
+      "Employee home addresses"
+     ],
+     "answer": 3,
+     "ref": "p. 136, 'Facility map'",
+     "why": "Employee home addresses are not on the list."
+    },
+    {
+     "id": "c09-s03-t4",
+     "src": "test",
+     "kind": "tf",
+     "q": "Employees need to be trained on executing the response plan only once, when they are hired.",
+     "answer": false,
+     "ref": "p. 136, guidelines",
+     "why": "Train all employees how to execute the response plan each year."
+    },
+    {
+     "id": "c09-s03-t5",
+     "src": "test",
+     "kind": "mc",
+     "q": "When should you give emergency response agencies an updated copy of your facility map and area map?",
+     "choices": [
+      "Whenever changes are made",
+      "Once every five years",
+      "Only after an emergency",
+      "Only when they ask"
+     ],
+     "answer": 0,
+     "ref": "p. 136, 'Area map'",
+     "why": "Provide an updated copy whenever changes are made."
+    }
+   ]
+  },
+  {
+   "id": "c09-s04",
+   "chapter": "Chapter 9 · Emergency or Incident Response",
+   "title": "Fires: precautions and what to do",
+   "pages": [
+    137,
+    138
+   ],
+   "body": [
+    {
+     "h": "Fires"
+    },
+    {
+     "p": [
+      "Pesticide products vary significantly in their flammability.",
+      "However, **any pesticide product involved in a fire is dangerous** to responders working at the scene because of **smoke and fumes**.",
+      "**Even after the fire has been extinguished**, pesticide residue in the debris, soil, and runoff may be dangerous."
+     ]
+    },
+    {
+     "h": "Precautions to reduce fire hazards"
+    },
+    {
+     "p": [
+      "Chapter 8, Transportation, Storage, and Security, discussed where to locate a pesticide storage facility and the proper design and components of a secure facility.",
+      "Follow these guidelines to help you prepare for, and respond to, a fire in the storage area."
+     ]
+    },
+    {
+     "list": [
+      "Store combustible pesticides **away from heating sources**.",
+      "Install a **fire-detection system**.",
+      "Train employees to use a fire extinguisher."
+     ]
+    },
+    {
+     "gallery": [
+      "p137-sprinkler",
+      "p137-sign"
+     ]
+    },
+    {
+     "h": "When a fire occurs"
+    },
+    {
+     "p": [
+      "**Prompt action** is essential when a fire occurs.",
+      "Coordinate all details on managing a fire with local emergency response officials.",
+      "Take the following actions."
+     ]
+    },
+    {
+     "list": [
+      "Make sure employees evacuating the premises go to a **designated rendezvous point** where everyone can be accounted for.",
+      "Notify the fire department.",
+      "Provide emergency response teams with **SDSs, labels, the emergency plan, and a site map**.",
+      "Follow the instructions given by the **onsite incident commander**.",
+      "Establish a **security perimeter** to discourage onlookers.",
+      "Contain contaminated runoff water and leaking pesticide onsite by **building berms**.",
+      "Consult with emergency responders to decide whether to **allow the fire to burn out**.",
+      "Call your insurance agent.",
+      "Make all regulatory phone calls required by state and federal agencies."
+     ]
+    },
+    {
+     "gallery": [
+      "p138-extinguisher",
+      "p138-salvage"
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "p137-sprinkler",
+     "title": "Install fire detection systems such as this sprinkler system with a sensor.",
+     "page": "p. 137",
+     "imgFile": "p137-sprinkler.jpg"
+    },
+    {
+     "id": "p137-sign",
+     "title": "Post signs that indicate pesticides are stored in the facility.",
+     "page": "p. 137",
+     "imgFile": "p137-sign.jpg"
+    },
+    {
+     "id": "p138-extinguisher",
+     "title": "Have a fire extinguisher approved for chemical fires readily available.",
+     "page": "p. 138",
+     "imgFile": "p138-extinguisher.jpg"
+    },
+    {
+     "id": "p138-salvage",
+     "title": "Cleanup and salvage operations after a fire must be done under expert supervision after everything has cooled.",
+     "page": "p. 138",
+     "imgFile": "p138-salvage.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c09-s04-r3",
+     "src": "review",
+     "kind": "mc",
+     "q": "In addition to an emergency response plan, which of the following will further reduce the risk of a pesticide fire?",
+     "choices": [
+      "Store pesticides close to a heat source to prevent freezing.",
+      "Keep a fire-detection system in the storage area.",
+      "Post the storage area with a warning sign."
+     ],
+     "answer": 1,
+     "fixed": true,
+     "ref": "p. 141, Review question 3 (answer: p. 137, 'Precautions to Reduce Fire Hazards')",
+     "why": "A fire-detection system is one of the listed precautions. Store combustible pesticides away from heat."
+    },
+    {
+     "id": "c09-s04-r4",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which is a recommended action to take in the event of a pesticide fire?",
+     "choices": [
+      "Construct berms to contain contaminated runoff water.",
+      "Enter the storage facility and remove as much pesticide as possible.",
+      "Try to extinguish the fire before calling 911."
+     ],
+     "answer": 0,
+     "fixed": true,
+     "ref": "p. 141, Review question 4 (answer: p. 138, fire actions)",
+     "why": "Contain contaminated runoff water and leaking pesticide onsite by building berms."
+    },
+    {
+     "id": "c09-s04-t1",
+     "src": "test",
+     "kind": "tf",
+     "q": "Once a pesticide fire is put out, the debris, soil, and runoff are no longer dangerous.",
+     "answer": false,
+     "ref": "p. 137, 'Fires'",
+     "why": "Pesticide residue in debris, soil, and runoff may be dangerous even after the fire is out."
+    },
+    {
+     "id": "c09-s04-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "Your storage building is on fire and the crew has run outside. What should you make sure they do first?",
+     "choices": [
+      "Go to a designated rendezvous point where everyone can be accounted for",
+      "Go back in for the SDS binder",
+      "Spray water on the pesticide shelves",
+      "Move their vehicles to block the road"
+     ],
+     "answer": 0,
+     "ref": "p. 138, fire actions",
+     "why": "Evacuating employees go to a designated rendezvous point to be accounted for."
+    },
+    {
+     "id": "c09-s04-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT something the manual says to give emergency response teams at a fire?",
+     "choices": [
+      "SDSs",
+      "Labels",
+      "The emergency plan and a site map",
+      "Your sales records"
+     ],
+     "answer": 3,
+     "ref": "p. 138, fire actions",
+     "why": "Give them SDSs, labels, the emergency plan, and a site map."
+    },
+    {
+     "id": "c09-s04-t4",
+     "src": "test",
+     "kind": "mc",
+     "q": "Whose instructions do you follow at the scene of a pesticide fire?",
+     "choices": [
+      "The onsite incident commander",
+      "The pesticide manufacturer",
+      "Your insurance agent",
+      "The state pesticide inspector"
+     ],
+     "answer": 0,
+     "ref": "p. 138, fire actions",
+     "why": "Follow the instructions given by the onsite incident commander."
+    },
+    {
+     "id": "c09-s04-t5",
+     "src": "test",
+     "kind": "short",
+     "q": "Why is any pesticide product involved in a fire dangerous to responders at the scene?",
+     "answer": "smoke and fumes",
+     "keys": [
+      [
+       "smoke",
+       "fumes",
+       "toxic fumes",
+       "fume"
+      ]
+     ],
+     "ref": "p. 137, 'Fires'",
+     "why": "Any pesticide in a fire is dangerous to responders because of smoke and fumes."
+    }
+   ]
+  },
+  {
+   "id": "c09-s05",
+   "chapter": "Chapter 9 · Emergency or Incident Response",
+   "title": "Spills: the three Cs, control and contain",
+   "pages": [
+    138,
+    139
+   ],
+   "body": [
+    {
+     "h": "Pesticide spills"
+    },
+    {
+     "p": [
+      "A **spill** is an accidental release of **any amount** of pesticide, small or large.",
+      "Spills on public highways, such as when a tank on a truck overturns, usually have major consequences.",
+      "Failure to respond quickly and appropriately to such mishaps could seriously endanger public health and environmental quality.",
+      "In the event of any pesticide spill, remember the **three Cs**: **CONTROL** the spill, **CONTAIN** it, and **CLEAN** it up."
+     ]
+    },
+    {
+     "box": "The Three Cs",
+     "ol": [
+      "Control.",
+      "Contain.",
+      "Clean up the spill."
+     ]
+    },
+    {
+     "fig": "p138-spill"
+    },
+    {
+     "h": "Control the spill"
+    },
+    {
+     "p": [
+      "**Act immediately** to control the spilled product.",
+      "Always put on the appropriate **personal protective equipment**, or **PPE**, **before** responding to a spill.",
+      "Place **small, leaking containers into larger ones**.",
+      "If a larger container, such as a drum, is leaking, try to **plug the leak**. Then, transfer the contents to another container.",
+      "To stop leaks from pressurized systems, such as sprayers, **turn off the pump**.",
+      "**Never leave the site unattended.**"
+     ]
+    },
+    {
+     "fig": "p138-ppe"
+    },
+    {
+     "h": "Contain the spill"
+    },
+    {
+     "p": [
+      "Do all you can to keep the spill from spreading or getting worse.",
+      "**Prevent the material from entering surface water.**",
+      "Using a **shovel**, you can quickly **berm off an area** to keep the spilled pesticide out of drains and waterways.",
+      "A spill that is contained on the surface is much easier to clean than one that has entered a body of water."
+     ]
+    },
+    {
+     "fig": "p139-tube"
+    }
+   ],
+   "figures": [
+    {
+     "id": "p138-spill",
+     "title": "Clean up all spills immediately.",
+     "page": "p. 138",
+     "imgFile": "p138-spill.jpg"
+    },
+    {
+     "id": "p138-ppe",
+     "title": "Wear appropriate PPE when cleaning up a spill.",
+     "page": "p. 138",
+     "imgFile": "p138-ppe.jpg"
+    },
+    {
+     "id": "p139-tube",
+     "title": "Take action to prevent spills from spreading. In this case, an absorbent spill tube is used to contain the spill.",
+     "page": "p. 139",
+     "imgFile": "p139-tube.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c09-s05-r5",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which is an appropriate action to take in the event of a pesticide spill?",
+     "choices": [
+      "Take a \"time out\" to read your emergency response plan.",
+      "Call 911 only if the spill has a chance of entering surface water.",
+      "Put on the appropriate PPE before responding to the spill."
+     ],
+     "answer": 2,
+     "fixed": true,
+     "ref": "p. 141, Review question 5 (answer: p. 138, 'Control the Spill')",
+     "why": "Always put on the appropriate PPE before responding to a spill."
+    },
+    {
+     "id": "c09-s05-t1",
+     "src": "test",
+     "kind": "short",
+     "q": "What are the three Cs of a pesticide spill, in order?",
+     "answer": "control, contain, clean up",
+     "keys": [
+      [
+       "control"
+      ],
+      [
+       "contain"
+      ],
+      [
+       "clean"
+      ]
+     ],
+     "ref": "p. 138, 'Pesticide Spills' and box 'The Three Cs'",
+     "why": "Control the spill, contain it, and clean it up."
+    },
+    {
+     "id": "c09-s05-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A hose fitting on your sprayer breaks and the tank is pumping pesticide onto the ground. What stops the leak?",
+     "choices": [
+      "Turn off the pump",
+      "Pour cat litter on the puddle",
+      "Drive the sprayer back to the shop",
+      "Call the manufacturer"
+     ],
+     "answer": 0,
+     "ref": "p. 139, 'Control the Spill'",
+     "why": "To stop leaks from pressurized systems such as sprayers, turn off the pump."
+    },
+    {
+     "id": "c09-s05-t3",
+     "src": "test",
+     "kind": "tf",
+     "q": "Only a large release of pesticide counts as a spill.",
+     "answer": false,
+     "ref": "p. 138, 'Pesticide Spills'",
+     "why": "A spill is an accidental release of any amount of pesticide, small or large."
+    },
+    {
+     "id": "c09-s05-t4",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT a correct step to control a spill?",
+     "choices": [
+      "Place small, leaking containers into larger ones",
+      "Try to plug a leaking drum, then transfer the contents",
+      "Leave the site briefly to get help",
+      "Put on PPE before responding"
+     ],
+     "answer": 2,
+     "ref": "pp. 138–139, 'Control the Spill'",
+     "why": "Never leave the site unattended."
+    },
+    {
+     "id": "c09-s05-t5",
+     "src": "test",
+     "kind": "mc",
+     "q": "What tool does the manual say you can use to quickly berm off an area around a spill?",
+     "choices": [
+      "A shovel",
+      "A broom",
+      "A hose",
+      "A dustpan"
+     ],
+     "answer": 0,
+     "ref": "p. 139, 'Contain the Spill'",
+     "why": "Using a shovel, you can quickly berm off an area."
+    }
+   ]
+  },
+  {
+   "id": "c09-s06",
+   "chapter": "Chapter 9 · Emergency or Incident Response",
+   "title": "Spills into water, reporting, and cleanup",
+   "pages": [
+    139,
+    140
+   ],
+   "body": [
+    {
+     "h": "If the spill reaches water"
+    },
+    {
+     "p": [
+      "If the spilled pesticide does contaminate a stream, pond, or other waterway, **immediately contact** the state, tribe, or territory regulatory agencies responsible for streams and fisheries and for pesticides.",
+      "**Do not delay** notifying the authorities.",
+      "They need time to alert downstream users who draw surface water for drinking, prevent accidental poisoning of livestock, evacuate people using the water for recreational purposes such as swimming and fishing, and avoid contamination of irrigated crops.",
+      "Call the **manufacturer's emergency number on the SDS** to find out what steps you or the emergency response coordinator should take to lessen the dangers of water contamination."
+     ]
+    },
+    {
+     "h": "Report the spill"
+    },
+    {
+     "p": [
+      "**Call 911** to report the spill and be ready to respond to the authorities arriving at the scene.",
+      "Be sure to have the **product label and SDS** available for emergency responders.",
+      "After the spill has been contained, follow your emergency plan.",
+      "In some cases, the applicator will call the emergency responder, who will then call the proper authorities."
+     ]
+    },
+    {
+     "box": "For emergency response information call",
+     "p": [
+      "**CHEMTREC**: 1-800-424-9300."
+     ]
+    },
+    {
+     "h": "Clean up the spill"
+    },
+    {
+     "p": [
+      "The last step at the spill site is to clean up the spilled product.",
+      "Sweep up any absorbent materials and other contaminated items and **place them in a drum**.",
+      "If the spill occurred on **concrete or asphalt**, you will have to **neutralize the surface**.",
+      "Follow the instructions on the SDS or contact the manufacturer, whose number is listed on the data sheet."
+     ]
+    },
+    {
+     "fig": "p140-absorbent"
+    },
+    {
+     "p": [
+      "The state, tribe, or territory regulatory agency involved with pesticide spills will tell you what to do when the spill occurs on **soil**.",
+      "For example, they may require that the **top 2 to 3 inches of soil** be excavated, removed, and replaced with clean soil."
+     ]
+    },
+    {
+     "h": "Keep records"
+    },
+    {
+     "p": [
+      "**Keep records** of your activities and conversations with regulatory authorities, emergency responders, news media, and the public when dealing with a pesticide spill.",
+      "**Photographs** help document any related damage as well as steps you have taken to clean up the spilled product."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "p140-absorbent",
+     "title": "Use an absorbent material to help clean up a spill.",
+     "page": "p. 140",
+     "imgFile": "p140-absorbent.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c09-s06-r1",
+     "src": "review",
+     "kind": "mc",
+     "q": "Which statement about emergency response planning is true?",
+     "choices": [
+      "The main reason to have an emergency response plan is to reduce economic losses.",
+      "The first person to contact in an emergency is an attorney.",
+      "It is important to make a detailed report of what took place before, during, and after the incident."
+     ],
+     "answer": 2,
+     "fixed": true,
+     "ref": "p. 141, Review question 1 (answer: p. 140, keep records; p. 136, coordinator fills out reports)",
+     "why": "Keep records of your activities and conversations, and photographs help document the damage and your cleanup."
+    },
+    {
+     "id": "c09-s06-t1",
+     "src": "test",
+     "kind": "short",
+     "q": "What is the phone number for CHEMTREC?",
+     "answer": "1-800-424-9300",
+     "accept": [
+      "800-424-9300",
+      "18004249300",
+      "8004249300",
+      "1 800 424 9300"
+     ],
+     "ref": "p. 139, box 'For emergency response information call'",
+     "why": "CHEMTREC is 1-800-424-9300."
+    },
+    {
+     "id": "c09-s06-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A spill soaks into the soil at a mixing site. The regulatory agency may require you to excavate and replace how much soil?",
+     "choices": [
+      "The top 2 to 3 inches",
+      "The top 6 to 8 inches",
+      "The top 1 foot",
+      "None, soil spills break down on their own"
+     ],
+     "answer": 0,
+     "ref": "pp. 139–140, 'Clean up the Spill'",
+     "why": "They may require the top 2 to 3 inches of soil be excavated, removed, and replaced."
+    },
+    {
+     "id": "c09-s06-t3",
+     "src": "test",
+     "kind": "mc",
+     "q": "A pesticide spilled on concrete has been swept up. What else must be done to the surface?",
+     "choices": [
+      "Neutralize it",
+      "Hose it down into the drain",
+      "Paint over it",
+      "Nothing more"
+     ],
+     "answer": 0,
+     "ref": "p. 139, 'Clean up the Spill'",
+     "why": "On concrete or asphalt you have to neutralize the surface, following the SDS or manufacturer."
+    },
+    {
+     "id": "c09-s06-t4",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Authorities need time after a waterway is contaminated. Which of these is NOT a reason the manual gives?",
+     "choices": [
+      "To alert downstream users who draw surface water for drinking",
+      "To prevent accidental poisoning of livestock",
+      "To evacuate people swimming and fishing",
+      "To decide how much to fine you"
+     ],
+     "answer": 3,
+     "ref": "p. 139, waterway contamination",
+     "why": "Fines are not among the listed reasons."
+    },
+    {
+     "id": "c09-s06-t5",
+     "src": "test",
+     "kind": "tf",
+     "q": "If a spill reaches a stream, you should finish cleanup before notifying the state agencies.",
+     "answer": false,
+     "ref": "p. 139, waterway contamination",
+     "why": "Immediately contact the agencies, and do not delay notifying the authorities."
+    },
+    {
+     "id": "c09-s06-t6",
+     "src": "test",
+     "kind": "mc",
+     "q": "Where do you put swept-up absorbent material and other contaminated items?",
+     "choices": [
+      "In a drum",
+      "In the regular trash",
+      "Back in the original pesticide container",
+      "In a burn pile"
+     ],
+     "answer": 0,
+     "ref": "p. 139, 'Clean up the Spill'",
+     "why": "Sweep up absorbent and contaminated items and place them in a drum."
+    }
+   ]
+  },
+  {
+   "id": "c09-s07",
+   "chapter": "Chapter 9 · Emergency or Incident Response",
+   "title": "The NFPA hazard diamond",
+   "pages": [
+    138,
+    139
+   ],
+   "body": [
+    {
+     "h": "National Fire Protection Association"
+    },
+    {
+     "p": [
+      "A hazardous rating system used to assist emergency response personnel is the **NFPA Hazard Identification System**.",
+      "This system uses a **diamond-shaped** warning symbol.",
+      "The **top, left, and right** boxes refer to **flammability, health, and instability** hazards, respectively, and each contains a number from **0 to 4**.",
+      "The **bottom** box is used for **special hazards**; the most common of these is a **warning against the use of water**."
+     ]
+    },
+    {
+     "fig": "fig-9-nfpa"
+    },
+    {
+     "box": "Health Hazard: Blue Section",
+     "list": [
+      "4: Severe hazard.",
+      "3: Serious hazard.",
+      "2: Moderate hazard.",
+      "1: Slight hazard.",
+      "0: Minimal hazard."
+     ]
+    },
+    {
+     "box": "Flammability Hazard: Red Section",
+     "list": [
+      "4: Flammable gases, volatile liquids, pyrophoric materials.",
+      "3: Ignites at ambient temperatures.",
+      "2: Ignites when moderately heated.",
+      "1: Must be preheated to burn.",
+      "0: Will not burn."
+     ]
+    },
+    {
+     "box": "Special Hazard: White Section",
+     "list": [
+      "OX: Oxidizer.",
+      "W with a line through it: Avoid use of water."
+     ]
+    },
+    {
+     "box": "Instability Hazard: Yellow Section",
+     "list": [
+      "4: Capable of detonation or explosive decomposition at ambient temperatures.",
+      "3: Capable of detonation or explosive decomposition with strong initiating source.",
+      "2: Violent chemical change possible at elevated temperature and pressure.",
+      "1: Normally stable, but becomes unstable if heated.",
+      "0: Normally stable."
+     ]
+    },
+    {
+     "fig": "p138-nfpa"
+    }
+   ],
+   "figures": [
+    {
+     "id": "fig-9-nfpa",
+     "title": "NFPA diamond, the example drawn in the box on page 139.",
+     "page": "p. 139",
+     "svgFile": "fig-9-nfpa.svg",
+     "explain": [
+      "This example reads health 1, flammability 4, and instability 3, with the special notice box left blank.",
+      "The drawing labels the right box reactivity, while the text of the box calls it instability."
+     ]
+    },
+    {
+     "id": "p138-nfpa",
+     "title": "A National Fire Protection Association, or NFPA, warning on a storage box for fumigants. The strikeover on the letter W in the white diamond alerts firefighters not to use water to put out a fire.",
+     "page": "p. 138",
+     "imgFile": "p138-nfpa.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c09-s07-t1",
+     "src": "test",
+     "kind": "mc",
+     "q": "On the NFPA diamond, which box shows the health hazard?",
+     "choices": [
+      "Left, blue",
+      "Top, red",
+      "Right, yellow",
+      "Bottom, white"
+     ],
+     "answer": 0,
+     "ref": "p. 139, box 'National Fire Protection Association'",
+     "why": "Top is flammability, left is health, right is instability."
+    },
+    {
+     "id": "c09-s07-t2",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "A fumigant storage box shows a W with a line through it in the white bottom diamond. What does that tell firefighters?",
+     "choices": [
+      "Do not use water to put out a fire",
+      "The product is water soluble",
+      "Wear a respirator",
+      "The product is a weak hazard"
+     ],
+     "answer": 0,
+     "ref": "p. 138 photo caption; p. 139 NFPA box",
+     "why": "The strikeover on the W warns against the use of water."
+    },
+    {
+     "id": "c09-s07-t3",
+     "src": "test",
+     "kind": "mc",
+     "q": "A flammability rating of 0 means the material:",
+     "choices": [
+      "Will not burn",
+      "Must be preheated to burn",
+      "Ignites at ambient temperatures",
+      "Is a pyrophoric material"
+     ],
+     "answer": 0,
+     "ref": "p. 139, 'Flammability Hazard: Red Section'",
+     "why": "A 0 means it will not burn."
+    },
+    {
+     "id": "c09-s07-t4",
+     "src": "test",
+     "kind": "tf",
+     "q": "On the NFPA diamond, a 4 means the least hazardous and a 0 the most hazardous.",
+     "answer": false,
+     "ref": "p. 139, NFPA box",
+     "why": "It is the reverse. 4 is the most severe and 0 is minimal."
+    },
+    {
+     "id": "c09-s07-t5",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT one of the NFPA diamond's colored sections?",
+     "choices": [
+      "Blue for health",
+      "Red for flammability",
+      "Yellow for instability",
+      "Green for environmental hazard"
+     ],
+     "answer": 3,
+     "ref": "p. 139, NFPA box",
+     "why": "The sections are blue, red, yellow, and white. There is no green section."
+    },
+    {
+     "id": "c09-s07-t6",
+     "src": "test",
+     "kind": "short",
+     "q": "On the NFPA diamond, what do the letters OX in the white section mean?",
+     "answer": "oxidizer",
+     "accept": [
+      "an oxidizer",
+      "oxidiser",
+      "oxidizing"
+     ],
+     "ref": "p. 139, 'Special Hazard: White Section'",
+     "why": "OX means oxidizer."
+    }
+   ]
+  },
+  {
+   "id": "c09-s08",
+   "chapter": "Chapter 9 · Emergency or Incident Response",
+   "title": "Preventing spills, the spill kit, and chapter summary",
+   "pages": [
+    140,
+    140
+   ],
+   "body": [
+    {
+     "h": "Prevent spills"
+    },
+    {
+     "p": [
+      "A key to reducing the likelihood of any spill is to **properly maintain your application equipment and transport vehicles**.",
+      "Leaks and drips from **cracked hoses or loose hose clamps** clearly indicate problems.",
+      "**Defensive driving techniques** and **refraining from cellphone use while driving** are two important habits that can prevent vehicle accidents that might result in a spill."
+     ]
+    },
+    {
+     "p": [
+      "Keep a **spill cleanup kit** in **each pesticide transport vehicle** and at the site where pesticides are **mixed, loaded, and stored**.",
+      "Store your spill kit items in a **plastic container** and keep them clean and in working order.",
+      "Include the following items in a spill response kit."
+     ]
+    },
+    {
+     "list": [
+      "Telephone numbers for emergency assistance.",
+      "PPE designed for use with pesticides.",
+      "Absorbent materials, such as **spill pillows, absorbent clay, and cat litter**.",
+      "A **shovel, broom, and dustpan**.",
+      "**Heavy-duty detergent**."
+     ]
+    },
+    {
+     "fig": "p140-supplies"
+    },
+    {
+     "h": "Summary"
+    },
+    {
+     "p": [
+      "Prepare for a pesticide emergency.",
+      "Make sure the plan includes designating an emergency response coordinator, maintaining a list of emergency response agencies, preparing a map of the facility, and keeping a product inventory.",
+      "Be sure all employees at the facility are familiar with the emergency response plan and know what to do in a crisis.",
+      "Take precautions to reduce the chance of pesticide fires.",
+      "The best way to manage pesticide spills is to **prevent them from happening**.",
+      "It is your responsibility as a pesticide applicator to do everything possible to avoid spills and adhere to a few basic guidelines when handling spills and leaks.",
+      "Accidents happen. Be prepared so that they will not become catastrophes."
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "id": "p140-supplies",
+     "title": "Keep emergency supplies and a shovel on hand.",
+     "page": "p. 140",
+     "imgFile": "p140-supplies.jpg"
+    }
+   ],
+   "questions": [
+    {
+     "id": "c09-s08-t1",
+     "src": "test",
+     "kind": "mc",
+     "style": "not",
+     "q": "Which of these is NOT on the manual's list of spill response kit items?",
+     "choices": [
+      "Heavy-duty detergent",
+      "A shovel, broom, and dustpan",
+      "Spill pillows, absorbent clay, and cat litter",
+      "A garden hose to rinse the spill away"
+     ],
+     "answer": 3,
+     "ref": "p. 140, 'Prevent Spills'",
+     "why": "A hose is not on the list."
+    },
+    {
+     "id": "c09-s08-t2",
+     "src": "test",
+     "kind": "mc",
+     "q": "According to the summary, what is the best way to manage pesticide spills?",
+     "choices": [
+      "Prevent them from happening",
+      "Call 911 right away",
+      "Keep an attorney on retainer",
+      "Neutralize them with detergent"
+     ],
+     "answer": 0,
+     "ref": "p. 140, 'Summary'",
+     "why": "The best way to manage spills is to prevent them."
+    },
+    {
+     "id": "c09-s08-t3",
+     "src": "test",
+     "kind": "mc",
+     "style": "scenario",
+     "q": "Before a route, you see drips under the spray rig from a loose hose clamp. What does the manual say this indicates?",
+     "choices": [
+      "A problem that needs maintenance",
+      "Normal wear that can wait until fall",
+      "That the tank is overfilled",
+      "That the pesticide is too thin"
+     ],
+     "answer": 0,
+     "ref": "p. 140, 'Prevent Spills'",
+     "why": "Leaks and drips from cracked hoses or loose clamps clearly indicate problems."
+    },
+    {
+     "id": "c09-s08-t4",
+     "src": "test",
+     "kind": "tf",
+     "q": "A spill cleanup kit is only needed at the storage site, not in transport vehicles.",
+     "answer": false,
+     "ref": "p. 140, 'Prevent Spills'",
+     "why": "Keep a kit in each transport vehicle and where pesticides are mixed, loaded, and stored."
+    },
+    {
+     "id": "c09-s08-t5",
+     "src": "test",
+     "kind": "short",
+     "q": "Name two driving habits the manual says can prevent vehicle accidents that might result in a spill.",
+     "answer": "defensive driving and not using a cellphone while driving",
+     "keys": [
+      [
+       "defensive"
+      ],
+      [
+       "cellphone",
+       "cell phone",
+       "phone"
+      ]
+     ],
+     "ref": "p. 140, 'Prevent Spills'",
+     "why": "Defensive driving and refraining from cellphone use while driving."
+    },
+    {
+     "id": "c09-s08-t6",
+     "src": "test",
+     "kind": "mc",
+     "q": "What kind of container should spill kit items be stored in?",
+     "choices": [
+      "A plastic container",
+      "A metal drum",
+      "A cardboard box",
+      "A paper bag"
+     ],
+     "answer": 0,
+     "ref": "p. 140, 'Prevent Spills'",
+     "why": "Store your spill kit items in a plastic container."
+    }
+   ]
+  }
+ ]
 }

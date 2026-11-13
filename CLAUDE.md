@@ -60,6 +60,12 @@ session's network could not open directly): 50 multiple-choice questions, 35 cor
   (`tools/crop_photos_ch07.py`, saved grayscale because the photos had a purple cast). The summary page's number
   was not visible in the photo; 120 is inferred. Table 7.1 prints "Extra Course"; the card says Extra Coarse and notes it.
   Chapter 7 review questions NOT received yet (should follow the summary, about p. 121). Add them as `src: review`.
+- Chapter 9, Emergency or Incident Response (pp. 135–140, review questions p. 141): 8 cards (`c09-s01` to `c09-s08`),
+  5 review + 42 test questions. Review Q1 in card 6 (answer C by elimination: the text says to keep records and
+  photographs, and the coordinator fills out reports), Q2 card 3, Q3 and Q4 card 4, Q5 card 5. Figure 9.1 (facility map)
+  redrawn simplified as `fig-9-1.svg` by `tools/fig_9_1.py`. The NFPA diamond is `fig-9-nfpa.svg` (its drawing labels the
+  right box "reactivity", the box text says "instability"). Crops: `tools/crop_photos_ch09.py` (grayscale).
+  Check review answers against Appendix A when it arrives.
 - Ask for the manual's total page count (still unknown).
 - Two sessions once worked in parallel on different branches. Before publishing, check the live artifact
   (and `git branch -r`) for chapters this branch lacks, and merge them first.
@@ -96,6 +102,7 @@ session's network could not open directly): 50 multiple-choice questions, 35 cor
 - `app/template.html`: the app (reader, quiz engine, grader, progress). Content gets injected at `__CONTENT__`.
 - `tools/build.py`: validates content, inlines figures and images, writes `dist/pest-study.html`. Fails on bad content.
 - `tools/crop_photos_ch01.py`, `tools/fig_1_4.py`: how the Chapter 1 crops and Figure 1.4 were made.
+- `tools/crop_photos_ch09.py`, `tools/fig_9_1.py`: Chapter 9 crops and the Figure 9.1 redraw.
 - Uploaded photos arrive under `/root/.claude/uploads/<session>/`. Crop them WITHOUT applying EXIF rotation:
   the raw pixel orientation matches what is shown in the conversation. Do not commit the full photos.
 

@@ -50,6 +50,45 @@ branches (`claude/*`) are fully merged into it and can be ignored.
 
 Photo crops: `tools/crop_photos_chNN.py` (Chapters 7 to 11 are grayscale because those photos had a purple cast).
 
+## Content audit (2026-11-13) and what is still open
+A full audit ran over all 11 chapters (kit and method: `tools/audit/README.md`): every question was
+re-answered without the key, wording and explanations were reviewed, the typed-answer grader was probed,
+every figure was looked at, and Chapter 1 was compared with its page photos.
+- **No wrong answer key was found** in 1,197 questions. Chapter 1 matches its photos (no wrong fact).
+- Fixed: 16 questions reworded or given a new wrong choice, 22 explanations, 13 references, a few card
+  sentences, 9 diagrams, and the typed-answer rules of 47 questions.
+- `tools/build.py` now fails if an explanation names a choice by letter or position ("so C is wrong",
+  "that last one"): choices are shuffled on screen. Restate the fact instead.
+- Short questions that ask for an order use `"ordered": true` (key groups must appear in order).
+- Explanations may be two short sentences. Do not merge them into one long sentence.
+
+**Open checks. These need the manual pages, which only the user has. Ask for these photos, then settle each:**
+1. **Appendix A (p. 171 and the page after it).** Re-read every answer letter against
+   `content/answer-key.json`. Chapter 8 question 4 matters most: the key is C ("Store metal pesticide
+   containers on the higher shelves to prevent rusting"), but the card text supports choice A better.
+   Also needs the Chapter 8 review page and pp. 126–128 (any sentence about metal containers, shelves, rust).
+2. **Chapter 10, pp. 148–149**, "Cleaning and Disposing of Pesticide Containers": any sentence about
+   puncturing rinsed containers, or disposing of containers under current regulations (`c10-s08-r1`
+   cannot rule out choice A from the card text).
+3. **Chapter 9, pp. 135–137 and p. 140**: a sentence about a detailed report of what took place before,
+   during, and after the incident (`c09-s06-r1` is only loosely supported).
+4. **Chapter 8, p. 124**, "Transport Vehicle": a sentence about enclosed or lockable cargo boxes giving
+   the greatest protection (`c08-s02-r1`).
+5. Chapter 6, p. 93: apron coverage, body text ("middle of the chest to the knees") against the photo
+   caption ("from your neck to at least your knees").
+6. Chapter 6, p. 100: does "PAPRs do not need a fit test" carry a qualifier such as "loose-fitting"?
+7. Chapter 4, p. 49: "an organic solvent of mineral clay" or "or mineral clay" (the card keeps "of" and notes it).
+8. Chapter 4, p. 54, "Liquid Baits": "Most liquid insecticides" or "Most liquid insecticide baits".
+9. Chapter 3, p. 33: "and a number of required applications" or "and number of required applications".
+10. Chapter 3, p. 42 (Figure 3.1): the Spanish sentence ("para que se la explique"?) and the product
+    names "VIP No Pest Gel", "VIP Pest-No", "VIP No Pest".
+11. Chapter 2, p. 23: "Cosmetic" or "Cosmetics" in the act's name, and the FQPA sentence.
+12. Chapter 8, pp. 130–131: which page holds the box "Steps to Prevent Security Problems"
+    (`c08-s12-t1` says p. 131, `c08-s12-t4` says p. 130).
+Photo crops that would be better re-cropped from fresh photos (all minor): `p22-24c-label`, `p20-epa-seal`,
+`p57-dust`, `p98-halfface`, `p100-sealcheck`, `p100-wash`, `p125-spillkit`, `p126-shed`, `p124-passenger`,
+`p148-triplerinse`.
+
 ## Rules for every session (the user's own rules)
 1. The user sends photos of manual pages. Work **only** from those pages.
    If a photo is blurry, cut off, or has glare, name the photo and ask for a retake.
@@ -72,7 +111,7 @@ Photo crops: `tools/crop_photos_chNN.py` (Chapters 7 to 11 are grayscale because
 5. Every question needs `ref`: where in the pages the answer is (page and heading).
 6. Pass = 100%. Misses come back later in the session and next session until right twice in a row.
    The page enforces this. Do not change that logic without the user asking.
-7. Keep written explanations (`why`) to one short sentence.
+7. Keep written explanations (`why`) short: one or two short sentences. Never name a choice by its letter.
 
 ## Files
 - `content/study.json`: manual metadata and the practice card.
@@ -85,6 +124,7 @@ Photo crops: `tools/crop_photos_chNN.py` (Chapters 7 to 11 are grayscale because
 - `tools/check_grader.js` + `tools/grader_cases.json`: regression test for typed-answer grading.
 - `tools/crop_photos_chNN.py`, `tools/fig_1_4.py`, `tools/fig_9_1.py`: how the photo crops and two figures were made.
 - `tools/retired/`: retired one-time chapter generators. Do not run.
+- `tools/audit/`: the content audit kit as it ran (see its README).
 - Uploaded photos arrive under `/root/.claude/uploads/<session>/`. Crop them WITHOUT applying EXIF rotation:
   the raw pixel orientation matches what is shown in the conversation. Do not commit the full photos.
 

@@ -135,7 +135,7 @@ TERMS = {
     'photodegradation': 'fˌOTOdˌɛɡɹədˈAʃən', 'preharvest': 'pɹihˈɑɹvəst', 'preplant': 'pɹiplˈænt',
     'prerinse': 'pɹiɹˈɪns', 'preslaughter': 'pɹislˈɔTəɹ', 'preslurry': 'pɹislˈɜɹi', 'prewash': 'pɹiwˈɑʃ',
     'prefilter': 'pɹifˈɪltəɹ', 'preheated': 'pɹihˈiTᵻd', 'premeasured': 'pɹimˈɛʒəɹd',
-    'recertification': 'ɹˌisɜɹTəfəkˈAʃən', 'refiller': 'ɹifˈɪləɹ', 'reregistration': 'ɹˌiɹɛʤəstɹˈAʃən',
+    'recertification': 'ɹˌi sˌɜɹTəfəkˈAʃən', 'refiller': 'ɹifˈɪləɹ', 'reregistration': 'ɹˌi ɹˌɛʤəstɹˈAʃən',
     'replanting': 'ɹiplˈæntɪŋ', 'safener': 'sˈAfənəɹ', 'acquavella': 'ˌækwəvˈɛlə',
     'peligro': 'pɛlˈiɡɹO', 'aviso': 'ɑvˈisO', 'phosphorothiate': 'fˌɑsfəɹəθˈIAt',
     'breathed': 'bɹˈiðd', 'postapplication': 'pˌOstæpləkˈAʃən',

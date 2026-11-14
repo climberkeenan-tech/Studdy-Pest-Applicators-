@@ -113,8 +113,10 @@ plays that everywhere. A card starts reading when it opens. Do not remove this.
   - `<venv python> tools/narrate.py` records every card that is missing or whose text or pronunciation changed.
     `--list` shows what is out of date. `--cards c01-s03 --force` records chosen cards again.
   - Output: `dist/audio/<card>.mp3` (not in git) and `content/narration.json` (in git). Per card: `h` hash of the
-    card's sentences, `p` hash of what was rendered, `d` length in ms, `t` start and end of each sentence,
-    `w` start of each word in each sentence.
+    card's sentences, `r` hash of what was asked of the voice (text after the pronunciation rules, voice,
+    settings: a change means record again), `p` names the published file (it also covers the timings that came
+    out, so a card recorded again gets a new name), `d` length in ms, `t` start and end of each sentence,
+    `w` start of each word in each sentence. One recording run at a time (it takes a lock).
   - Pronunciation: `say()`, `PHONEMES` (acronyms), `TERMS` (words the engine gets wrong), `CONTEXT` (a word with
     two pronunciations, fixed for one sentence), `SPANISH`. `--say "text"` shows how a sentence will be read.
     `--words` lists every word the engine had to guess. Check both after adding cards with new terms.
@@ -130,6 +132,11 @@ plays that everywhere. A card starts reading when it opens. Do not remove this.
   (Artifact `action: "list"`, `scope: "files"` shows what is published).
 - **After changing a card's text**: build, record, build again, `node tools/check_narration.js`, publish the page
   with the new audio file, remove the old file.
+- **Listening check** (`tools/listen.py`): nobody can proof-listen 8 hours of audio, and Claude cannot hear at
+  all. A speech recogniser hears every recorded sentence and the result is compared with the card by sound.
+  `<venv python> tools/listen.py --setup` once (about 700 MB), then `<venv python> tools/listen.py`. It lists the
+  sentences worth a human ear. The recogniser mishears rare words (miticide, FIFRA) often: a flag is a lead,
+  not proof. Run it after recording new cards. On 2026-11-14 the full set was checked this way.
 - **The recordings exist only on the artifact** (and in this container until it is reclaimed). If they are lost,
   `narrate.py` makes them again from the content.
 
@@ -170,6 +177,7 @@ plays that everywhere. A card starts reading when it opens. Do not remove this.
 - `tools/narrate.py`: records the narration and holds the pronunciation rules. `dist/audio/*.mp3` is its output (not in git).
 - `tools/check_narration.js`: the page and `narrate.py` must split every card into the same sentences and words.
 - `tools/say_cases.json`: regression cases for the pronunciation rules (`python3 tools/narrate.py --check`).
+- `tools/listen.py`: listening check for the recordings (speech recogniser; optional, large download).
 - `tools/crop_photos_chNN.py`, `tools/fig_1_4.py`, `tools/fig_9_1.py`: how the photo crops and two figures were made.
 - `tools/retired/`: retired one-time chapter generators. Do not run.
 - `tools/audit/`: the content audit kit as it ran (see its README).

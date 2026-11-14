@@ -781,7 +781,7 @@ ttsP.then(t => {
 });
 function claudePlay(from) {
   const gen = ++Reader.cgen;
-  const lines = Reader.lines.slice(from, from + 100).map((L, k) => ({ text: L.say.slice(0, 2000), id: 'L' + (from + k) }));
+  const lines = Reader.lines.slice(from, from + 100).map((L, k) => ({ text: L.say.slice(0, 2000), id: gen + 'L' + (from + k) }));
   Reader.engine = 'claude';
   Reader.lastMs = 0; setCur(from);          // the place asked for, known even if the platform refuses this call
   Reader.setState('speaking');
@@ -846,8 +846,10 @@ function recEl() {
   el.addEventListener('play', () => { if (Reader.engine === 'rec' && Rec.mode === 'el' && !Rec.loading && Reader.state === 'paused' && !el.paused) { Reader.setState('speaking'); recLoop(); } });
   // The file stopped arriving part-way through (the connection dropped).
   el.addEventListener('error', () => {
-    if (Reader.engine !== 'rec' || Rec.mode !== 'el' || Rec.loading) return;
-    Rec.sid = null; Rec.mode = null; Reader.engine = null; cancelAnimationFrame(Rec.raf);
+    if (Rec.mode !== 'el' || Rec.loading) return;
+    Rec.sid = null; Rec.mode = null;          // whoever plays next loads the file again, even if nothing is reading now
+    if (Reader.engine !== 'rec') return;
+    Reader.engine = null; cancelAnimationFrame(Rec.raf);
     Reader.note = 'The recorded voice stopped loading. Press Play to try again.';
     Reader.setState('idle', 'error'); renderVoiceNote();
   });
@@ -880,7 +882,9 @@ Rec.resume = async () => {
     catch (e) { const nm = e && e.name; return nm === 'NotAllowedError' ? 'gesture' : nm === 'AbortError' ? 'abort' : 'fail'; }
   }
   if (Rec.mode === 'buf') {
+    const g = Rec.gen;
     try { await Promise.race([AC.resume(), new Promise(r => setTimeout(r, 500))]); } catch (e) {}
+    if (g !== Rec.gen || Reader.state !== 'speaking') return 'abort';      // stopped, paused or replaced during the wait
     if (AC.state !== 'running') return 'gesture';
     if (!Rec.brun) bufStart();
     return 'ok';
@@ -947,7 +951,7 @@ async function recLoad(sid, n, from) {
           Rec.buf = buf; Rec.mode = 'buf'; Rec.boff = at; Rec.brun = false;
           r = await Rec.resume();
           if (!live()) return;
-        } catch (e) { Rec.why = 'this browser could not play the file'; Rec.code = 'decode failed'; r = 'fail'; }
+        } catch (e) { if (!live()) return; Rec.why = 'this browser could not play the file'; Rec.code = 'decode failed'; r = 'fail'; }
       }
     }
   }
@@ -981,6 +985,7 @@ function recPlay(sid, from) {
   const n = narr(sid);
   if (!n || n.t.length !== Reader.lines.length * 2) { Rec.bad[sid] = DIFFER; return play(from); }
   Reader.engine = 'rec'; Rec.li = from;
+  if (Rec.sid !== sid) Rec.shown = '';
   Reader.setState('speaking');
   setCur(from); hiWord(from, 0);
   if (Rec.sid === sid && Rec.mode && !Rec.loading) {      // this card is already loaded: jump and go
@@ -998,6 +1003,7 @@ function recPlay(sid, from) {
   recLoad(sid, n, from);
 }
 function recStop() {
+  if (Rec.loading) Rec.sid = null;          // the load did not finish: this card is not loaded
   Rec.gen++; Rec.loading = false;
   cancelAnimationFrame(Rec.raf);
   try { Rec.pause(); } catch (e) {}
@@ -1089,7 +1095,8 @@ function clearHi() {
   if (Reader.wordEl) Reader.wordEl.classList.remove('on');
   Reader.wordEl = null; Reader.cur = -1;
 }
-const idIdx = id => id && id[0] === 'L' ? parseInt(id.slice(1), 10) : -1;
+/* A line id is "<reading number>L<sentence>". Reports from any reading but the current one are dropped. */
+const idIdx = id => { const m = /^(\d+)L(\d+)$/.exec(id || ''); return m && +m[1] === Reader.cgen ? +m[2] : -1; };
 function onLine(id) {
   const i = idIdx(id); if (i < 0) return;
   const prev = Reader.lines[Reader.cur];
@@ -1126,7 +1133,7 @@ function play(from) {
   const eng = pickEngine(S.sid);
   // The Claude voice may still be answering: wait for it only when there is no recording to play at once.
   if (Reader.tts === 'pending' && eng !== 'rec') { const sid = S.sid; ttsP.then(() => { if (S.view === 'study' && S.sid === sid && Reader.state === 'idle') play(from); }); return; }
-  Reader.done = false; Reader.note = '';
+  Reader.done = false; Reader.note = ''; Reader.resumeAt = 0;
   halt(eng);
   if (eng === 'rec') recPlay(S.sid, from);
   else if (eng === 'claude') claudePlay(from);

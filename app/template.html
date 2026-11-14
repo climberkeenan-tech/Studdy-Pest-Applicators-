@@ -983,8 +983,10 @@ async function recLoad(sid, n, from) {
   Rec.bad[sid] = why; Rec.badAt[sid] = Date.now(); Rec.fails[sid] = (Rec.fails[sid] || 0) + 1; Rec.sid = null; Rec.mode = null; Reader.engine = null;
   const next = pickEngine(sid);
   if (!next) delete Rec.bad[sid];           // no other voice here: let Play try the recording again
-  Reader.note = 'The recorded voice could not load (' + why + ').' + (next ? ' Using ' + ENGINE_SAYS[next] + ' instead.' : ' Press Play to try again.');
-  if (next === 'claude') claudePlay(from); else if (next === 'device') devicePlay(from); else Reader.setState('idle', 'error');
+  const held = Reader.state === 'paused';          // Pause was pressed while the file was still arriving: no other voice starts by itself
+  Reader.note = 'The recorded voice could not load (' + why + ').' + (next && !held ? ' Using ' + ENGINE_SAYS[next] + ' instead.' : ' Press Play to try again.');
+  if (held) { Reader.resumeAt = from; Reader.setState('idle', 'error'); }
+  else if (next === 'claude') claudePlay(from); else if (next === 'device') devicePlay(from); else Reader.setState('idle', 'error');
   renderVoiceBar();
 }
 function recPlay(sid, from) {
@@ -1145,7 +1147,8 @@ function play(from) {
   else if (eng === 'claude') claudePlay(from);
   else if (eng === 'device') devicePlay(from);
   else { Reader.setState('idle', 'none'); }
-  renderVoiceNote();
+  // A tap can change the voice (the live voice arrived, or "keep going" was ticked or unticked, mid-reading): the Style menu follows it.
+  if (!!$('#sel-voice') !== (Reader.engine === 'claude')) renderVoiceBar(); else renderVoiceNote();
 }
 function pickDeviceVoice() {
   if (Reader.devVoice) return Reader.devVoice;
@@ -1267,9 +1270,10 @@ function render() {
   renderChips();
   const v = S.view;
   const html = v === 'study' ? viewStudy() : v === 'quiz' ? viewQuiz() : v === 'result' ? viewResult() : v === 'summary' ? viewSummary() : viewHome();
+  const vb0 = $('#voicebar'), keep = v === 'study' && vb0 && vb0.contains(document.activeElement) ? document.activeElement.id : '';
   $('#app').innerHTML = html;
   document.body.dataset.view = v;
-  if (v === 'study') { buildLines(); renderVoiceBar(); renderDock(); } else removeDock();
+  if (v === 'study') { buildLines(); renderVoiceBar(); renderDock(); if (keep) { const f = document.getElementById(keep); if (f) f.focus({ preventScroll: true }); } } else removeDock();
   if (v === 'home') renderFoot();
   if (v === 'quiz') { const f = $('#short-in'); if (f && !S.quiz.cur.result && !S.quiz.cur.grading) setTimeout(() => f.focus(), 30); }
 }
@@ -1456,7 +1460,7 @@ function renderVoiceBar() {
     <label class="tick" for="chk-auto"><input type="checkbox" id="chk-auto"${P.settings.autoplay !== false ? ' checked' : ''}> Read to me when a card opens</label>
     <label class="tick" for="chk-chain"><input type="checkbox" id="chk-chain"${P.settings.chain ? ' checked' : ''}> Keep going to the next card</label>
     <span class="voicenote" id="voicenote"></span>`;
-  if (fid) { const f = document.getElementById(fid); if (f) f.focus(); }
+  if (fid) { const f = document.getElementById(fid); if (f) f.focus({ preventScroll: true }); }
   renderVoiceNote();
 }
 function rateSelect() { return `<select id="sel-rate">${[0.8, 0.9, 1, 1.15, 1.3].map(r => `<option value="${r}"${r === P.settings.rate ? ' selected' : ''}>${r}×</option>`).join('')}</select>`; }
@@ -1491,7 +1495,7 @@ function renderDock() {
     <span class="spacer"></span>
     <button class="btn${Reader.done ? ' hi' : ''}" id="dock-quiz" data-act="quiz" data-sid="${esc(S.sid)}">Quiz ${ICON.arrow}</button>
   </div>`;
-  if (fa) { const f = d.querySelector('[data-act="' + fa + '"]'); if (f) f.focus(); }
+  if (fa) { const f = d.querySelector('[data-act="' + fa + '"]'); if (f) f.focus({ preventScroll: true }); }
 }
 function removeDock() { const d = $('#dock'); if (d) d.remove(); }
 

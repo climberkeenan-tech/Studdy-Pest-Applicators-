@@ -106,8 +106,8 @@ plays that everywhere. A card starts reading when it opens. Do not remove this.
   keeps playing with the screen off). The recording plays from one shared audio element; if that fails it
   tries a fetched copy, then Web Audio, then the next voice, and says why in the voice note.
   If the viewer turned reading aloud off (`not_granted`), nothing speaks unless they pick the recording themselves.
-- **Recording** (`tools/narrate.py`): Kokoro TTS, voice `af_heart`, on the CPU. All 221 cards are about 8.3 hours
-  of audio and 150 MB; about 90 minutes on 4 cores.
+- **Recording** (`tools/narrate.py`): Kokoro TTS, voice `af_heart`, on the CPU. All 221 cards are 8.2 hours
+  of audio and 148 MB; about 90 minutes on 4 cores.
   - Once per container: `python3 tools/narrate.py --setup` (Python 3.12 venv, model and word lists, about 700 MB;
     needs `ffmpeg`). It prints the venv's python. `$NARRATE_HOME` moves the cache (default `~/.cache/pest-study-tts`).
   - `<venv python> tools/narrate.py` records every card that is missing or whose text or pronunciation changed.
@@ -134,9 +134,23 @@ plays that everywhere. A card starts reading when it opens. Do not remove this.
   with the new audio file, remove the old file.
 - **Listening check** (`tools/listen.py`): nobody can proof-listen 8 hours of audio, and Claude cannot hear at
   all. A speech recogniser hears every recorded sentence and the result is compared with the card by sound.
-  `<venv python> tools/listen.py --setup` once (about 700 MB), then `<venv python> tools/listen.py`. It lists the
-  sentences worth a human ear. The recogniser mishears rare words (miticide, FIFRA) often: a flag is a lead,
-  not proof. Run it after recording new cards. On 2026-11-14 the full set was checked this way.
+  `<venv python> tools/listen.py --setup` once (about 700 MB), then `<venv python> tools/listen.py`
+  (`--cards c08-s04` for a few cards; for everything, four `--shard K/4 --threads 1` runs side by side take
+  about 25 minutes, then `--report`). Run it after recording new cards. The report has three parts:
+  - Sentences that differ from the card. A sentence that differs is heard a second time on a wider cut first,
+    because the recogniser now and then drops a word that is in the audio (an acronym in brackets, the first or
+    last word, once a whole sentence).
+  - Near matches where a whole word was not heard, or a word was heard that the card does not have.
+  - Numbers: the digits heard against the digits on the card ("fifteen" for "fifty" is one sound, so the first
+    part would miss it).
+  A flag is a lead, not proof: the recogniser mishears rare words (ovicides, galactothion) and writes numbers
+  its own way ("Class I", "Chapter X").
+  **Result on 2026-11-14, all 221 recordings, 4,718 sentences:** 0.18% of sounds differ. 6 sentences flagged
+  (phone and registration numbers, the sample label's chemical name), 16 near matches (a bracketed acronym or
+  the first or last word), no extra words, 5 of 584 numbered sentences with different digits (all the
+  recogniser's spelling). Every one of these was then checked word by word (loudness and length of the word in
+  the audio, narrow cuts around it, and a second recogniser, Whisper small): each word is there. No dropped,
+  garbled, repeated or wrong word was found. What this cannot judge is how natural the voice sounds.
 - **The recordings exist only on the artifact** (and in this container until it is reclaimed). If they are lost,
   `narrate.py` makes them again from the content.
 
@@ -247,4 +261,6 @@ plays that everywhere. A card starts reading when it opens. Do not remove this.
 - A card starts reading when it is opened ("Read to me when a card opens"). "Keep going to the next card" opens
   the next card and reads it when one ends. Both are settings in the voice bar, saved with the profile.
 - Progress is saved per user in the artifact database (`data/users/<id>/profile`), mirrored in localStorage.
+  The page never writes to the account before it has read it (`loaded`, `P.base` in `app/template.html`).
+  Keep that guard: without it a visit that could not read the saved copy overwrote it with an empty one.
 - Session: 5-question rapid round from studied cards (open misses first), next card, quiz, summary.

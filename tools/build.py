@@ -247,7 +247,9 @@ def add_narration(data):
         e = recorded.get("cards", {}).get(s["id"])
         if not lines:
             continue
-        if e and e.get("h") == narrate.text_hash(lines) and len(e["t"]) == 2 * len(lines):
+        fits = (e and e.get("h") == narrate.text_hash(lines) and len(e["t"]) == 2 * len(lines)
+                and [len(x) for x in e["w"]] == [len(narrate.display_words(t)) for _, t in lines])
+        if fits:
             cards[s["id"]] = {k: e[k] for k in ("h", "p", "d", "t", "w")}
         else:
             stale.append(s["id"])
@@ -260,9 +262,10 @@ def add_narration(data):
 
 def main():
     data = load()
-    add_narration(data)
     check(data)
     check_answer_key(data)
+    if not errors:
+        add_narration(data)
     for w in warnings:
         print("warning:", w)
     if errors:

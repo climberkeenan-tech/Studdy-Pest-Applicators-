@@ -183,7 +183,8 @@ p{margin:0}
 .dock .spacer{flex:1}
 .dock .btn{min-height:50px}
 .dock-time{font-size:13px;font-weight:600;white-space:nowrap;color:var(--muted)}
-@media (max-width:480px){.dock-stop{padding-inline:14px}.dock-stop span{display:none}}
+@media (max-width:480px){.dock .btn{padding-inline:12px}.dock-stop span{display:none}}
+@media (max-width:339px){.dock-time{display:none}}
 .speaking-dot{width:10px;height:10px;border-radius:50%;background:var(--hi);box-shadow:0 0 0 0 var(--hi);animation:pulse 1.2s infinite}
 @keyframes pulse{70%{box-shadow:0 0 0 10px transparent}}
 
@@ -316,7 +317,10 @@ function normalize(p) {
   return p;
 }
 let P = normalize(lsGet(LS_KEY));
-let profRef = null, sync = 'local', dirty = false, saving = false, saveT = null;
+/* bootStamp: how new this device's copy was when the page opened. A tap made before the saved copy has
+   loaded stamps P with the time now; that must never make an empty or old copy win over the saved one. */
+const bootStamp = P.updatedAt || 0;
+let profRef = null, sync = 'local', dirty = false, saving = false, saveT = null, loaded = false;
 
 function save() {
   P.updatedAt = Date.now();
@@ -326,7 +330,7 @@ function save() {
   saveT = setTimeout(flush, 700);
 }
 async function flush() {
-  if (!profRef || saving || !dirty) return;
+  if (!profRef || !loaded || saving || !dirty) return;
   saving = true; dirty = false;
   let body = JSON.stringify(P);
   while (body.length > 200000 && P.sessions.length > 3) { P.sessions.pop(); body = JSON.stringify(P); }
@@ -351,9 +355,10 @@ async function initDb() {
     clearTimeout(slow);
     if (snap.exists) {
       const remote = normalize(JSON.parse(JSON.stringify(snap.data())));
-      if ((remote.updatedAt || 0) >= (P.updatedAt || 0)) { P = remote; lsSet(LS_KEY, P); resumeSession(); }
-      else { dirty = true; }
+      if ((remote.updatedAt || 0) > bootStamp) { P = remote; lsSet(LS_KEY, P); resumeSession(); dirty = false; }
+      else if ((P.updatedAt || 0) > (remote.updatedAt || 0)) { dirty = true; }
     } else if (P.updatedAt) { dirty = true; }
+    loaded = true;
     sync = 'synced';
     if (dirty) flush();
     if (S.view === 'home') render(); else { renderChips(); renderFoot(); }
@@ -713,9 +718,15 @@ const rate = () => P.settings.rate || 1;
 const fmtClock = sec => { sec = Math.max(0, Math.round(sec)); return Math.floor(sec / 60) + ':' + String(sec % 60).padStart(2, '0'); };
 
 /* ----- which voice */
+/* A recording that failed to load once (a dropped connection) is tried again by the next Play, a few seconds
+   later. One that failed twice is left alone, so Play moves on to another voice instead of failing each time.
+   Opening the card again, or picking the recorded voice in the Voice menu, always tries once more. */
+const DIFFER = 'the recording and the card differ';
+const recBad = sid => !!Rec.bad[sid] && (Rec.bad[sid] === DIFFER || (Rec.fails[sid] || 0) >= 2 || Date.now() - (Rec.badAt[sid] || 0) < 8000);
+const recRetry = sid => { if (Rec.bad[sid] && Rec.bad[sid] !== DIFFER) { delete Rec.bad[sid]; Rec.fails[sid] = Math.min(Rec.fails[sid] || 0, 1); } };
 function canUse(sid) {
   return {
-    rec: !!narr(sid) && !Rec.bad[sid] && typeof Audio !== 'undefined',
+    rec: !!narr(sid) && !recBad(sid) && typeof Audio !== 'undefined',
     claude: Reader.tts === 'ready',
     device: Reader.tts !== 'off' && 'speechSynthesis' in window,
   };
@@ -730,7 +741,7 @@ function pickEngine(sid) {
   return order.find(e => can[e]) || null;
 }
 const offNote = () => 'Reading aloud is turned off for this page. Turn it back on in the artifact’s Permissions menu' + (canUse(S.sid).rec ? ', or pick Recorded voice in the Voice menu.' : '.');
-const ENGINE_NAME = { rec: 'Recorded voice', claude: 'Claude voice', device: 'This device’s voice' };
+const ENGINE_SAYS = { rec: 'the recorded voice', claude: 'the Claude voice', device: 'this device’s voice' };
 
 /* ----- the live Claude voice */
 const ttsP = (window.claude && claude.use) ? claude.use('tts').catch(() => null) : Promise.resolve(null);
@@ -789,7 +800,7 @@ function claudeEnded(reason) {
 }
 
 /* ----- the recorded voice */
-const Rec = { el: null, gen: 0, sid: null, n: null, mode: null, loading: false, bad: {}, why: '', raf: 0, li: 0, blob: null, shown: '',
+const Rec = { el: null, gen: 0, sid: null, n: null, mode: null, loading: false, bad: {}, badAt: {}, fails: {}, why: '', raf: 0, li: 0, blob: null, shown: '', at0: 0,
   buf: null, bsrc: null, boff: 0, bt0: 0, brate: 1, brun: false };
 const recUrl = (sid, n) => 'audio/' + sid + '.' + n.p + '.mp3';
 /* Where in the recording a sentence starts, in seconds. The first sentence plays from the very top. */
@@ -798,6 +809,9 @@ function recEl() {
   if (Rec.el) return Rec.el;
   const el = Rec.el = new Audio();
   el.preload = 'auto';
+  // Where a newly loaded file should start. Kept in one place (Rec.at0), so a jump asked for one load can
+  // never be applied to the next file.
+  el.addEventListener('loadedmetadata', () => { const a = Rec.at0; Rec.at0 = 0; if (a > 0.01) { try { el.currentTime = a; } catch (e) {} } });
   el.addEventListener('ended', () => { if (Reader.engine === 'rec' && Rec.mode === 'el' && !Rec.loading) recEnded(); });
   // The phone's own media buttons can pause and resume the element too.
   el.addEventListener('pause', () => { if (Reader.engine === 'rec' && Rec.mode === 'el' && !Rec.loading && Reader.state === 'speaking' && el.paused && !el.ended) Reader.setState('paused'); });
@@ -827,7 +841,7 @@ function bufHalt() {
 Rec.time = () => Rec.mode === 'el' ? Rec.el.currentTime : Rec.mode === 'buf' ? (Rec.brun ? Rec.boff + (AC.currentTime - Rec.bt0) * Rec.brate : Rec.boff) : 0;
 Rec.total = () => Rec.n ? Rec.n.d / 1000 : 0;
 Rec.seek = s => {
-  if (Rec.mode === 'el') { try { Rec.el.currentTime = s; } catch (e) {} }
+  if (Rec.mode === 'el') { if (Rec.el.readyState < 1) Rec.at0 = s; try { Rec.el.currentTime = s; } catch (e) {} }
   else if (Rec.mode === 'buf') { const run = Rec.brun; bufHalt(); Rec.boff = s; if (run) bufStart(); }
 };
 Rec.pause = () => { if (Rec.mode === 'el') Rec.el.pause(); else if (Rec.mode === 'buf') bufHalt(); };
@@ -856,23 +870,28 @@ function elPlay(src, at) {
     const el = recEl();
     let settled = false;
     const fin = v => { if (settled) return; settled = true; el.removeEventListener('error', onErr); clearTimeout(tm); done(v); };
-    const onErr = () => { Rec.why = 'media error ' + (el.error ? el.error.code : '?'); fin('fail'); };
-    const tm = setTimeout(() => { if (el.readyState < 2) { Rec.why = 'the file did not arrive'; fin('fail'); } }, 15000);
+    const onErr = () => { Rec.why = 'this browser could not play the file'; Rec.code = 'media error ' + (el.error ? el.error.code : '?'); fin('fail'); };
+    // Nothing arrived in 15 seconds: give up on this request, and cancel it so it cannot start playing later.
+    const tm = setTimeout(() => {
+      if (el.readyState >= 2) return;
+      Rec.why = 'the connection is too slow'; Rec.code = 'timeout'; fin('fail');
+      try { el.pause(); el.removeAttribute('src'); el.load(); } catch (e) {}
+    }, 15000);
     el.addEventListener('error', onErr);
     try {
       el.src = src;
       el.playbackRate = el.defaultPlaybackRate = rate();
-      if (at > 0.01) { const seek = () => { try { el.currentTime = at; } catch (e) {} }; if (el.readyState >= 1) seek(); else el.addEventListener('loadedmetadata', seek, { once: true }); }
+      Rec.at0 = at;
       const p = el.play();
-      if (p && p.then) p.then(() => fin('ok'), e => { const nm = e && e.name; if (nm === 'NotAllowedError') fin('gesture'); else if (nm === 'AbortError') fin('abort'); else { Rec.why = nm || 'could not play'; fin('fail'); } });
+      if (p && p.then) p.then(() => fin('ok'), e => { const nm = e && e.name; if (nm === 'NotAllowedError') fin('gesture'); else if (nm === 'AbortError') fin('abort'); else { Rec.why = 'this browser could not play the file'; Rec.code = nm || 'play failed'; fin('fail'); } });
       else fin('ok');
-    } catch (e) { Rec.why = 'could not play'; fin('fail'); }
+    } catch (e) { Rec.why = 'this browser could not play the file'; Rec.code = 'play threw'; fin('fail'); }
   });
 }
 async function recLoad(sid, n, from) {
   const gen = ++Rec.gen, live = () => gen === Rec.gen && Reader.engine === 'rec';
   const at = lineStart(n, from), url = recUrl(sid, n);
-  Rec.loading = true; Rec.sid = sid; Rec.n = n; Rec.mode = 'el'; Rec.why = ''; Rec.buf = null;
+  Rec.loading = true; Rec.sid = sid; Rec.n = n; Rec.mode = 'el'; Rec.why = ''; Rec.code = ''; Rec.buf = null; Rec.shown = '';
   if (Rec.blob) { try { URL.revokeObjectURL(Rec.blob); } catch (e) {} Rec.blob = null; }
   // 1. Straight from the file: starts quickest, and keeps the voice's pitch at any speed.
   let r = await elPlay(url, at);
@@ -880,7 +899,11 @@ async function recLoad(sid, n, from) {
   if (r === 'fail') {
     // 2. The same file fetched by script and played from memory.
     let blob = null;
-    try { const res = await fetch(url); if (res.ok) blob = await res.blob(); else Rec.why = 'file missing (' + res.status + ')'; } catch (e) { Rec.why = Rec.why || 'download failed'; }
+    try {
+      const res = await fetch(url);
+      if (res.ok) blob = await res.blob();
+      else { Rec.why = res.status === 404 ? 'the sound file is missing' : 'the server did not send the sound file'; Rec.code = 'http ' + res.status; }
+    } catch (e) { Rec.why = 'no connection'; Rec.code = 'fetch failed'; }
     if (!live()) return;
     if (blob && blob.size > 1000) {
       Rec.blob = URL.createObjectURL(blob);
@@ -896,31 +919,39 @@ async function recLoad(sid, n, from) {
           Rec.buf = buf; Rec.mode = 'buf'; Rec.boff = at; Rec.brun = false;
           r = await Rec.resume();
           if (!live()) return;
-        } catch (e) { Rec.why = 'could not decode'; r = 'fail'; }
+        } catch (e) { Rec.why = 'this browser could not play the file'; Rec.code = 'decode failed'; r = 'fail'; }
       }
     }
   }
   Rec.loading = false;
   if (r === 'ok') {
+    delete Rec.bad[sid]; Rec.fails[sid] = 0;
+    if (Reader.state === 'paused') { Rec.pause(); return; }       // Pause was pressed while the file was still arriving
     // Some phones ignore a jump asked for before the first sound: ask again once it is playing.
     if (Rec.mode === 'el' && at > 0.5 && Math.abs(Rec.el.currentTime - at) > 1.5) { try { Rec.el.currentTime = at; } catch (e) {} }
     recLoop(); mediaMeta(); return;
   }
-  if (r === 'abort') return;
+  if (r === 'abort') {      // the phone paused the element while it was loading (a call, headphones pulled out)
+    if (Rec.mode === 'el' && Rec.el.paused && Reader.state === 'speaking') Reader.setState('paused');
+    return;
+  }
   if (r === 'gesture') {            // loaded, but this browser wants a tap before any sound
     Reader.note = 'Tap Play to start the voice.';
     Reader.engine = null; Reader.setState('idle', 'blocked'); renderVoiceNote(); return;
   }
   // The recording cannot be played here: remember that for this card and use the next best voice.
-  Rec.bad[sid] = Rec.why || 'could not load'; Rec.sid = null; Rec.mode = null; Reader.engine = null;
+  const why = Rec.why || 'this browser could not play the file';
+  try { console.warn('recorded voice failed:', sid, why, Rec.code); } catch (e) {}
+  Rec.bad[sid] = why; Rec.badAt[sid] = Date.now(); Rec.fails[sid] = (Rec.fails[sid] || 0) + 1; Rec.sid = null; Rec.mode = null; Reader.engine = null;
   const next = pickEngine(sid);
-  Reader.note = 'The recorded voice could not load (' + Rec.bad[sid] + ').' + (next ? ' Using ' + ENGINE_NAME[next].toLowerCase() + ' instead.' : '');
+  if (!next) delete Rec.bad[sid];           // no other voice here: let Play try the recording again
+  Reader.note = 'The recorded voice could not load (' + why + ').' + (next ? ' Using ' + ENGINE_SAYS[next] + ' instead.' : ' Press Play to try again.');
   if (next === 'claude') claudePlay(from); else if (next === 'device') devicePlay(from); else Reader.setState('idle', 'error');
   renderVoiceBar();
 }
 function recPlay(sid, from) {
   const n = narr(sid);
-  if (!n || n.t.length !== Reader.lines.length * 2) { Rec.bad[sid] = 'recording and card differ'; return play(from); }
+  if (!n || n.t.length !== Reader.lines.length * 2) { Rec.bad[sid] = DIFFER; return play(from); }
   Reader.engine = 'rec'; Rec.li = from;
   Reader.setState('speaking');
   setCur(from); hiWord(from, 0);
@@ -958,7 +989,7 @@ function recTick() {
   const n = Rec.n; if (!n || Rec.loading) return;
   const T = n.t, last = T.length / 2 - 1, sec = Rec.time(), ms = sec * 1000;
   let i = Math.max(0, Math.min(Rec.li, last));
-  while (i > 0 && T[2 * i] > ms) i--;
+  while (i > 0 && T[2 * i] - 100 > ms) i--;        // a jump lands 30 ms before its sentence: still that sentence
   while (i < last && T[2 * i + 2] <= ms) i++;
   Rec.li = i;
   setCur(i);
@@ -972,7 +1003,7 @@ function recTick() {
     }
     else hiWord(i, wordAtUnits(L, Math.max(0, rel) / Math.max(1, T[2 * i + 1] - T[2 * i]) * L.total));
   }
-  const clock = fmtClock(sec) + ' / ' + fmtClock(Rec.total());
+  const clock = innerWidth < 412 ? fmtClock(sec) : fmtClock(sec) + ' / ' + fmtClock(Rec.total());       // a narrow dock has room for one number
   if (clock !== Rec.shown) { Rec.shown = clock; const el = $('#dock-time'); if (el) el.textContent = clock; }
 }
 function mediaMeta() {
@@ -983,7 +1014,8 @@ function mediaMeta() {
     ms.metadata = new MediaMetadata({ title: s.title, artist: s.practice ? 'Practice card' : (s.chapter || ''), album: 'Pest Applicator Study' });
     ms.setActionHandler('play', () => { if (Reader.state === 'paused') pauseResume(); else if (Reader.state === 'idle' && S.view === 'study') play(0); });
     ms.setActionHandler('pause', () => { if (Reader.state === 'speaking') pauseResume(); });
-    ms.setActionHandler('previoustrack', () => { if (S.view === 'study') play(Math.max(0, Reader.cur - 1)); });
+    // With the screen off no animation frame runs, so take the place from the audio clock before stepping back.
+    ms.setActionHandler('previoustrack', () => { if (S.view !== 'study') return; if (Reader.engine === 'rec' && Reader.state !== 'idle') recTick(); play(Math.max(0, Reader.cur - 1)); });
     ms.setActionHandler('nexttrack', () => { const nx = nextCardId(S.sid); if (nx && S.view === 'study') openSection(nx, true); });
   } catch (e) {}
 }
@@ -1002,6 +1034,8 @@ function buildLines() {
   });
   Reader.cur = -1;
 }
+let handScroll = 0;
+for (const ev of ['wheel', 'touchmove']) window.addEventListener(ev, () => { handScroll = Date.now(); }, { passive: true });
 function setCur(i) {
   if (Reader.cur === i) return;
   const old = Reader.lines[Reader.cur]; if (old) old.el.classList.remove('on');
@@ -1009,8 +1043,11 @@ function setCur(i) {
   Reader.cur = i;
   const L = Reader.lines[i]; if (!L) return;
   L.el.classList.add('on');
-  const r = L.el.getBoundingClientRect();
-  if (r.top < 90 || r.bottom > innerHeight - 110) L.el.scrollIntoView({ block: 'center', behavior: reduced() ? 'auto' : 'smooth' });
+  if (Date.now() - handScroll < 5000) return;        // the student is scrolling by hand (reaching for a control): leave the page alone
+  const r = L.el.getBoundingClientRect(), behavior = reduced() ? 'auto' : 'smooth';
+  if (i === 0 && r.top >= 90) {                      // a card just opened: show the first sentence without throwing the title off screen
+    if (r.bottom > innerHeight - 110) window.scrollBy({ top: r.bottom - (innerHeight - 130), behavior });
+  } else if (r.top < 90 || r.bottom > innerHeight - 110) L.el.scrollIntoView({ block: 'center', behavior });
 }
 function hiWord(i, k) {
   const L = Reader.lines[i]; if (!L) return;
@@ -1084,7 +1121,7 @@ function pickDeviceVoice() {
   } catch (e) {}
   return (Reader.devVoice = best);
 }
-const devTick = { timer: null };
+const devTick = { timer: null, run: 0 };
 function devicePlay(from) {
   try { speechSynthesis.cancel(); } catch (e) {}
   clearInterval(devTick.timer);
@@ -1092,13 +1129,17 @@ function devicePlay(from) {
   const tick = { i: -1, t0: 0, boundary: false };
   const end = Reader.lines.length;
   Reader.engine = 'device';
-  const mine = () => Reader.engine === 'device';
+  const run = ++devTick.run, mine = () => Reader.engine === 'device' && run === devTick.run;
+  let began = false;
+  // Some phones drop speech that was not asked for by a tap, without any event. Do not sit on "Pause" in silence.
+  const blocked = () => { if (!mine() || began) return; halt(null); Reader.note = 'Tap Play to start the voice.'; Reader.setState('idle', 'blocked'); renderVoiceNote(); };
   for (let i = from; i < end; i++) {
     const L = Reader.lines[i];
     const u = new SpeechSynthesisUtterance(L.say);
     if (voice) u.voice = voice; u.lang = (voice && voice.lang) || 'en-US'; u.rate = rate();
     u.onstart = () => {
       if (!mine()) return;
+      began = true;
       clearInterval(devTick.timer); tick.i = i; tick.t0 = performance.now(); tick.boundary = false;
       setCur(i); hiWord(i, 0);
       devTick.timer = setInterval(() => {
@@ -1114,10 +1155,11 @@ function devicePlay(from) {
       hiWord(i, k);
     };
     u.onend = () => { if (mine() && i === end - 1) { clearInterval(devTick.timer); Reader.engine = null; Reader.setState('idle', 'completed'); } };
-    u.onerror = e => { if (e.error === 'interrupted' || e.error === 'canceled') clearInterval(devTick.timer); };
+    u.onerror = e => { if (e.error === 'not-allowed') blocked(); else if (e.error === 'interrupted' || e.error === 'canceled') clearInterval(devTick.timer); };
     speechSynthesis.speak(u);
   }
   Reader.setState('speaking');
+  setTimeout(blocked, 3000);
 }
 function pauseResume() {
   const e = Reader.engine;
@@ -1138,7 +1180,7 @@ function playToggle() {
 /* A card was read to its end. With "keep going" on, open the next card and read that too. */
 function nextCardId(sid) { const i = REAL.findIndex(s => s.id === sid); return i >= 0 && i + 1 < REAL.length ? REAL[i + 1].id : null; }
 function readingDone() {
-  if (!P.settings.chain || S.view !== 'study') return;
+  if (!P.settings.chain || S.view !== 'study' || (SEC[S.sid] || {}).practice) return;
   const nx = nextCardId(S.sid);
   if (!nx) { toast('That was the last card.'); return; }
   openSection(nx, true);
@@ -1152,6 +1194,7 @@ function openSection(sid, auto) {
   Reader.stop();
   Reader.done = false;
   Reader.note = '';
+  recRetry(sid);
   S.sid = sid;
   if (S.sess && !S.sess.studied.includes(sid) && !SEC[sid].practice) { S.sess.studied.push(sid); touchSess(); save(); }
   go('study');
@@ -1352,7 +1395,8 @@ function viewStudy() {
 }
 function renderVoiceBar() {
   const vb = $('#voicebar'); if (!vb) return;
-  const eng = pickEngine(S.sid), pref = P.settings.engine || 'auto';
+  const fid = vb.contains(document.activeElement) ? document.activeElement.id : '';
+  const eng = (Reader.state !== 'idle' && Reader.engine) || pickEngine(S.sid), pref = P.settings.engine || 'auto';
   const opts = [['auto', 'Best available']];
   if (narr(S.sid)) opts.push(['rec', 'Recorded voice']);
   if (Reader.tts === 'ready') opts.push(['claude', 'Claude voice']);
@@ -1364,6 +1408,7 @@ function renderVoiceBar() {
     <label class="tick" for="chk-auto"><input type="checkbox" id="chk-auto"${P.settings.autoplay !== false ? ' checked' : ''}> Read to me when a card opens</label>
     <label class="tick" for="chk-chain"><input type="checkbox" id="chk-chain"${P.settings.chain ? ' checked' : ''}> Keep going to the next card</label>
     <span class="voicenote" id="voicenote"></span>`;
+  if (fid) { const f = document.getElementById(fid); if (f) f.focus(); }
   renderVoiceNote();
 }
 function rateSelect() { return `<select id="sel-rate">${[0.8, 0.9, 1, 1.15, 1.3].map(r => `<option value="${r}"${r === P.settings.rate ? ' selected' : ''}>${r}×</option>`).join('')}</select>`; }
@@ -1371,7 +1416,7 @@ function renderVoiceNote() {
   const n = $('#voicenote'); if (!n) return;
   if (Reader.note) { n.textContent = Reader.note; n.style.color = 'var(--warn)'; return; }
   n.style.color = '';
-  const eng = pickEngine(S.sid), bad = Rec.bad[S.sid];
+  const eng = (Reader.state !== 'idle' && Reader.engine) || pickEngine(S.sid), bad = recBad(S.sid) ? Rec.bad[S.sid] : '';
   n.textContent = eng === 'rec' ? 'Recorded voice. Tap any sentence to hear it from there.'
     : eng === 'claude' ? 'Claude voice. Tap any sentence to hear it from there.'
     : eng === 'device' ? (bad ? 'The recorded voice could not load (' + bad + '), so Play uses this device’s voice.'
@@ -1387,6 +1432,7 @@ function renderDock() {
   if (!d) { d = document.createElement('div'); d.className = 'dock'; d.id = 'dock'; document.body.appendChild(d); }
   const can = !!pickEngine(S.sid) || Reader.tts === 'pending';
   const st = Reader.state;
+  const fa = d.contains(document.activeElement) ? document.activeElement.dataset.act : '';
   const label = st === 'idle' ? 'Play' : st === 'paused' ? 'Resume' : 'Pause';
   const icon = st === 'speaking' ? ICON.pause : ICON.play;
   d.innerHTML = `<div class="dock-in">
@@ -1397,6 +1443,7 @@ function renderDock() {
     <span class="spacer"></span>
     <button class="btn${Reader.done ? ' hi' : ''}" id="dock-quiz" data-act="quiz" data-sid="${esc(S.sid)}">Quiz ${ICON.arrow}</button>
   </div>`;
+  if (fa) { const f = d.querySelector('[data-act="' + fa + '"]'); if (f) f.focus(); }
 }
 function removeDock() { const d = $('#dock'); if (d) d.remove(); }
 
@@ -1562,6 +1609,7 @@ document.addEventListener('change', e => {
   const id = e.target.id;
   if (id === 'sel-engine') {
     P.settings.engine = e.target.value; save();
+    if (e.target.value === 'rec') recRetry(S.sid);
     const at = Reader.state !== 'idle' ? Math.max(0, Reader.cur) : -1;
     Reader.note = '';
     if (at >= 0) play(at);

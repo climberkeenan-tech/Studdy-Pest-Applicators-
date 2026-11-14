@@ -142,7 +142,7 @@ TERMS = {
     # words with two pronunciations that mean one thing in this manual: a tear is a rip, wind is moving air,
     # discard and decreases are verbs, records are papers
     'tear': 'tˈɛɹ', 'wind': 'wˈɪnd', 'discard': 'dəskˈɑɹd', 'arsenic': 'ˈɑɹsᵊnɪk', 'records': 'ɹˈɛkəɹdz',
-    'decreases': 'dəkɹˈisᵻz',
+    'decreases': 'dəkɹˈisᵻz', 'increases': 'ɪnkɹˈisᵻz',
 }
 # Words with two pronunciations where the engine picks the wrong one in a particular sentence. Each pattern
 # matches just the word, in its context.
@@ -166,6 +166,16 @@ CONTEXT = [
     (r'(?<=sale to and )use(?= only by)', 'jˈus'),
     (r'(?<=Discontinue )use\b', 'jˈus'),
     (r'(?i)\bready-to-use\b', 'ɹˈɛditəjˈuz'),            # "ready to yooz", every time
+    # noun and verb differ only in the stressed syllable: IN-crease / in-CREASE, TRANS-port / trans-PORT
+    (r'(?<=and wind )increase\b', 'ɪnkɹˈis'),
+    (r'(?<=Sudden )increases\b', 'ˈɪnkɹˌisᵻz'),           # the one noun; every other "increases" is a verb (see TERMS)
+    (r'(?<=handle, )transport\b', 'tɹænspˈɔɹt'),
+    (r'(?<=store, )transport\b', 'tɹænspˈɔɹt'),
+    (r'(?<=ship or )transport\b', 'tɹænspˈɔɹt'),
+    (r'(?<=pick up and )transport\b', 'tɹænspˈɔɹt'),
+    (r'(?m)^Insert\b', 'ɪnsˈɜɹt'),
+    (r'(?<=truck )overturns\b', 'ˌOvəɹtˈɜɹnz'),
+    (r'(?<=\ba )can(?= (?:marked|of light)\b)', 'kˈæn'),   # a container, not "is able to"
 ]
 # The sample label's Spanish sentence, word by word.
 SPANISH = {'si': 'sˈi', 'usted': 'ustˈɛd', 'no': 'nˈO', 'entiende': 'ɛntjˈɛndA', 'la': 'lɑ', 'etiqueta': 'ˌɛtikˈɛtɑ',
@@ -203,6 +213,9 @@ def say(text):
     t = t.replace('[', '(').replace(']', ')')                                  # square brackets mark phonemes below
     t = t.replace('β-', 'beta ').replace(' / ', ', ')
     t = t.replace('Bulletins Live!', 'Bulletins Live')                         # a name, not the end of a sentence
+    # the card's note on a misprint in Table 7.1: the two words sound the same, so spell them
+    t = t.replace('as Extra Course;', 'as Extra Course, spelled C O U R S E;')
+    t = t.replace('it means Extra Coarse,', 'it means Extra Coarse, spelled C O [A](/ˈA/) R S E,')
     t = re.sub(r'\ba\.i\.(?=[\s),;:]|$)', '[a.i.](/ˌAˈI/)', t)                  # active ingredient: no full stop mid-sentence
     t = re.sub(r'(?<=\w)\(s\)', 's', t)                                        # ingredient(s) -> ingredients
     # a bare site name is read out; an address with a path is not
@@ -259,6 +272,12 @@ def say(text):
         m.group(0)), t)
     for pat, ph in CONTEXT:
         t = re.sub(pat, lambda m: f'[{m.group(0)}](/{ph}/)', t)
+    for k in PHONEMES:                                   # NIOSH-approved -> NIOSH approved
+        t = re.sub(r'(?<![\w.\[-])(' + re.escape(k) + r')-(?=[A-Za-z])', r'\1 ', t)
+        t = re.sub(r'(?<=[A-Za-z])-(' + re.escape(k) + r')(?![\w\]-])', r' \1', t)
+    for k in TERMS:                                      # tear-resistant, low-wind
+        t = re.sub(r'(?<![\w.\[-])((?i:' + re.escape(k) + r')s?)-(?=[A-Za-z])', r'\1 ', t)
+        t = re.sub(r'(?<=[A-Za-z])-((?i:' + re.escape(k) + r')s?)(?![\w\]-])', r' \1', t)
     for k, v in PHONEMES.items():
         t = re.sub(r'(?<![\w.\[-])' + re.escape(k) + r"(?:(')?(s))?(?![\w\]-])",
                    lambda m: f'[{m.group(0)}](/{plural(v) if m.group(2) else v}/)', t)
@@ -349,8 +368,9 @@ def phonemize(text):
     # A sentence that ends in an abbreviation ("in 950 B.C.") comes back with no full stop, and the voice
     # then does not let its pitch fall. Put the sentence's own end mark back.
     end = re.search(r'([.!?:])["”\')\]]*$', text.strip())
-    if end and out and (out[-1].isalpha() or out[-1] in VOWELS_ETC):
+    if end and out and words and (out[-1].isalpha() or out[-1] in VOWELS_ETC):
         out += end.group(1)
+        words[-1][2] = len(out)
     return out, words
 
 
@@ -480,14 +500,23 @@ def _narrate(job):
     if p.returncode:
         raise RuntimeError(p.stderr.decode()[:400])
     os.replace(tmp, path)
-    entry = {'h': text_hash(lines), 'p': render_hash(lines), 'd': round(len(audio) * 1000 / SR), 't': marks, 'w': wordms}
+    # r: hash of what was asked for (text handed to the voice, voice, settings); a change means record again.
+    # p: names the published file. It also covers the timings that came out, so a card recorded again
+    #    (new engine version, --force, a fix to this script) gets a new name unless the result is identical,
+    #    and no browser can pair an old file with new timings.
+    r = render_hash(lines)
+    dur = round(len(audio) * 1000 / SR)
+    entry = {'h': text_hash(lines), 'r': r, 'p': fnv(r + json.dumps([dur, marks, wordms])), 'd': dur, 't': marks, 'w': wordms}
     return sid, entry, path.stat().st_size, time.time() - t0
 
 
 def load_sections():
     sys.path.insert(0, str(ROOT / 'tools'))
     import build
-    return build.load()['sections']
+    data = build.load()
+    if build.errors:
+        raise SystemExit('content does not load, nothing recorded or changed:\n' + '\n'.join(build.errors))
+    return data['sections']
 
 
 def read_manifest():
@@ -535,14 +564,14 @@ def setup():
         py = next((p for p in ('python3.12', 'python3.11') if shutil.which(p)), sys.executable)
         subprocess.check_call([py, '-m', 'venv', str(venv)])
     pip = [str(venv / 'bin' / 'pip'), 'install', '-q']
-    subprocess.check_call(pip + ['kokoro-onnx', 'soundfile', 'misaki[en]'])
+    subprocess.check_call(pip + ['kokoro-onnx==0.6.1', 'soundfile', 'misaki[en]==0.9.4'])
     subprocess.check_call(pip + [SPACY_MODEL])
     # kokoro-onnx and misaki each bring their own copy of the "phonemizer" package; keep misaki's
     subprocess.call([str(venv / 'bin' / 'pip'), 'uninstall', '-y', '-q', 'phonemizer', 'phonemizer-fork'])
-    subprocess.check_call(pip + ['phonemizer-fork'])
+    subprocess.check_call(pip + ['phonemizer-fork==3.3.2'])
     for f in (MODEL, VOICES):
         if not (HOME / f).exists() or (HOME / f).stat().st_size < 1_000_000:
-            subprocess.check_call(['curl', '-sS', '-L', '-o', str(HOME / f), MODEL_URL + f])
+            subprocess.check_call(['curl', '-f', '-sS', '-L', '-o', str(HOME / f), MODEL_URL + f])
     if not shutil.which('ffmpeg'):
         print('ffmpeg is missing: install it (apt-get install -y ffmpeg) before recording')
     print('ready. Run:', venv / 'bin' / 'python', 'tools/narrate.py')
@@ -627,7 +656,9 @@ def main():
         if not lines:
             continue
         cur = manifest['cards'].get(sid)
-        ok = cur and cur['h'] == text_hash(lines) and cur.get('p') == render_hash(lines) and (OUT / f'{sid}.mp3').exists()
+        ok = (cur and cur['h'] == text_hash(lines) and cur.get('r', cur.get('p')) == render_hash(lines)
+              and [len(x) for x in cur['w']] == [len(display_words(t)) for _, t in lines]     # bold marks moved: word times no longer fit
+              and (OUT / f'{sid}.mp3').exists())
         if not ok or a.force:
             jobs.append((sid, lines))
     if a.new_first:
@@ -643,12 +674,21 @@ def main():
             print('  ', j[0])
         return
     espeak_data()
-    from multiprocessing import Pool
+    import fcntl
+    from concurrent.futures import ProcessPoolExecutor, as_completed
+    OUT.mkdir(parents=True, exist_ok=True)
+    lock = open(OUT / '.lock', 'w')
+    try:
+        fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except OSError:
+        raise SystemExit('another recording run is going (dist/audio/.lock). Wait for it, or stop it first.')
     t0 = time.time()
     done = audio_ms = size = 0
-    with Pool(a.jobs, initializer=_init, initargs=(a.threads,)) as pool:
-        for sid, entry, nbytes, dt in pool.imap_unordered(_narrate, jobs):
-            manifest = read_manifest() if MANIFEST.exists() else manifest      # another run may be writing too
+    # A worker killed for memory, or a model that will not load, raises BrokenProcessPool here and ends the run.
+    with ProcessPoolExecutor(max_workers=max(1, min(a.jobs, len(jobs))), initializer=_init, initargs=(a.threads,)) as pool:
+        for fut in as_completed([pool.submit(_narrate, j) for j in jobs]):
+            sid, entry, nbytes, dt = fut.result()
+            manifest = read_manifest() if MANIFEST.exists() else manifest
             manifest['cards'][sid] = entry
             write_manifest(manifest)
             done += 1

@@ -362,7 +362,13 @@ async function initDb() {
     sync = 'synced';
     if (dirty) flush();
     if (S.view === 'home') render(); else { renderChips(); renderFoot(); }
-  } catch (e) { clearTimeout(slow); sync = 'error'; renderFoot(); }
+  } catch (e) {
+    clearTimeout(slow);
+    // The first read failed (a connection hiccup). Nothing is saved to the account until it has been read,
+    // so try a few more times before settling for this device's copy.
+    if (!loaded && (initDb.tries = (initDb.tries || 0) + 1) <= 3) { setTimeout(initDb, 1500 * initDb.tries + Math.random() * 1000); return; }
+    sync = 'error'; renderFoot();
+  }
 }
 
 /* ================= derived stats ================= */
@@ -704,7 +710,7 @@ function narr(sid) {
 const Reader = {
   tts: 'pending',          // pending | ready | none | off (the viewer turned reading aloud off)
   t: null, engine: null,   // engine: the voice speaking now (rec | claude | device)
-  state: 'idle', lines: [], cur: -1, wordEl: null, done: false, cgen: 0,
+  state: 'idle', lines: [], cur: -1, wordEl: null, done: false, cgen: 0, resumeAt: 0,
   msPerUnit: 62, lastMs: 0, note: '', voices: ['buttery', 'airy', 'glassy', 'rounded'], devVoice: null,
   stop() { if (this.state === 'idle' && !this.engine) return; halt(null); this.setState('idle', 'stopped'); },
   setState(state, reason) {
@@ -740,7 +746,7 @@ function pickEngine(sid) {
   const order = pref === 'auto' && !P.settings.chain ? ['claude', 'rec', 'device'] : ['rec', 'claude', 'device'];
   return order.find(e => can[e]) || null;
 }
-const offNote = () => 'Reading aloud is turned off for this page. Turn it back on in the artifact’s Permissions menu' + (canUse(S.sid).rec ? ', or pick Recorded voice in the Voice menu.' : '.');
+const offNote = () => 'Reading aloud is turned off for this page. To turn it back on, use the artifact’s Permissions menu, then close and reopen this page.' + (canUse(S.sid).rec ? ' Or pick Recorded voice in the Voice menu.' : '');
 const ENGINE_SAYS = { rec: 'the recorded voice', claude: 'the Claude voice', device: 'this device’s voice' };
 
 /* ----- the live Claude voice */
@@ -751,7 +757,15 @@ ttsP.then(t => {
     // The end of a reading is taken from its own speak() promise (see claudePlay). State events only move
     // between speaking and paused, so a late event from an older reading cannot end a newer one.
     t.onState(({ state, reason }) => {
-      if (state === 'idle') { if (reason === 'not_granted') { Reader.tts = 'off'; if (S.view === 'study') { renderVoiceBar(); renderDock(); } } return; }
+      if (state === 'idle') {
+        if (reason === 'not_granted') {
+          Reader.tts = 'off';
+          // The viewer said no. A voice this page could no longer start by its own rules must stop too.
+          if (Reader.engine && Reader.engine !== 'claude' && pickEngine(S.sid) !== Reader.engine) { Reader.stop(); Reader.note = offNote(); }
+          if (S.view === 'study') { renderVoiceBar(); renderDock(); }
+        }
+        return;
+      }
       if (Reader.engine !== 'claude') return;
       Reader.setState(state === 'starting' ? 'speaking' : state);
     });
@@ -769,15 +783,24 @@ function claudePlay(from) {
   const gen = ++Reader.cgen;
   const lines = Reader.lines.slice(from, from + 100).map((L, k) => ({ text: L.say.slice(0, 2000), id: 'L' + (from + k) }));
   Reader.engine = 'claude';
+  Reader.lastMs = 0; setCur(from);          // the place asked for, known even if the platform refuses this call
   Reader.setState('speaking');
   const mine = () => gen === Reader.cgen && Reader.engine === 'claude';
   Reader.t.speak(lines, { voice: P.settings.voice, rate: rate(), language: 'en' }).then(
     () => { if (mine()) { if (from + 100 < Reader.lines.length) claudePlay(from + 100); else claudeEnded('completed'); } },
-    e => { if (mine()) { const c = e && e.code; claudeEnded(c === 'stopped' ? (e.reason || 'stopped') : (c || 'upstream_error')); } });
+    e => {
+      if (!mine()) return;
+      const c = e && e.code;
+      // A refused call leaves an older reading playing. This page now treats the Claude voice as ended, so end it.
+      if (c !== 'stopped') Reader.t.stop().catch(() => {});
+      claudeEnded(c === 'stopped' ? (e.reason || 'stopped') : (c || 'upstream_error'));
+    });
 }
 function claudeEnded(reason) {
   if (Reader.engine !== 'claude') return;
   Reader.engine = null;
+  // a reason this page does not know is treated as a fault in the speech service, as the platform asks
+  if (!['completed', 'stopped', 'replaced', 'viewer_stopped', 'interrupted', 'hidden', 'time_limit', 'rate_limited', 'not_granted', 'unavailable', 'upstream_error', 'no_gesture', 'busy', 'invalid_argument'].includes(reason)) reason = 'upstream_error';
   if (reason === 'not_granted') Reader.tts = 'off';
   if (reason === 'unavailable') Reader.tts = 'none';
   const at = Math.max(0, Reader.cur);
@@ -794,7 +817,12 @@ function claudeEnded(reason) {
     no_gesture: 'Tap Play again to start the voice.',
     busy: 'Finish dictating first, then press Play.',
     invalid_argument: 'The voice could not read this card. Press Play to try again.',
+    time_limit: 'The voice stopped after a long pause. Press Play to go on from the same sentence.',
+    hidden: 'The voice stopped when you left the page. Press Play to go on from the same sentence.',
+    interrupted: 'The voice was interrupted. Press Play to go on from the same sentence.',
   }[reason] || '';
+  // the platform ended it part-way: Play picks up at the same sentence, not at the top
+  Reader.resumeAt = ['time_limit', 'hidden', 'interrupted', 'no_gesture', 'busy'].includes(reason) ? at : 0;
   Reader.setState('idle', reason);
   renderVoiceBar();
 }
@@ -936,7 +964,7 @@ async function recLoad(sid, n, from) {
     return;
   }
   if (r === 'gesture') {            // loaded, but this browser wants a tap before any sound
-    Reader.note = 'Tap Play to start the voice.';
+    Reader.note = 'Tap Play to start the voice.'; Reader.resumeAt = from;
     Reader.engine = null; Reader.setState('idle', 'blocked'); renderVoiceNote(); return;
   }
   // The recording cannot be played here: remember that for this card and use the next best voice.
@@ -961,7 +989,7 @@ function recPlay(sid, from) {
     Rec.resume().then(r => {
       if (gen !== Rec.gen || Reader.engine !== 'rec') return;
       if (r === 'ok') { recLoop(); mediaMeta(); }
-      else if (r === 'gesture') { Reader.note = 'Tap Play to start the voice.'; Reader.engine = null; Reader.setState('idle', 'blocked'); renderVoiceNote(); }
+      else if (r === 'gesture') { Reader.note = 'Tap Play to start the voice.'; Reader.resumeAt = from; Reader.engine = null; Reader.setState('idle', 'blocked'); renderVoiceNote(); }
       else if (r === 'fail') { Rec.sid = null; Rec.mode = null; recLoad(sid, n, from); }
     });
     recLoop();
@@ -1132,7 +1160,7 @@ function devicePlay(from) {
   const run = ++devTick.run, mine = () => Reader.engine === 'device' && run === devTick.run;
   let began = false;
   // Some phones drop speech that was not asked for by a tap, without any event. Do not sit on "Pause" in silence.
-  const blocked = () => { if (!mine() || began) return; halt(null); Reader.note = 'Tap Play to start the voice.'; Reader.setState('idle', 'blocked'); renderVoiceNote(); };
+  const blocked = () => { if (!mine() || began) return; halt(null); Reader.note = 'Tap Play to start the voice.'; Reader.resumeAt = from; Reader.setState('idle', 'blocked'); renderVoiceNote(); };
   for (let i = from; i < end; i++) {
     const L = Reader.lines[i];
     const u = new SpeechSynthesisUtterance(L.say);
@@ -1175,7 +1203,7 @@ function pauseResume() {
   }
 }
 function playToggle() {
-  if (Reader.state === 'idle') play(0); else pauseResume();
+  if (Reader.state === 'idle') { const at = Reader.resumeAt || 0; Reader.resumeAt = 0; play(at); } else pauseResume();
 }
 /* A card was read to its end. With "keep going" on, open the next card and read that too. */
 function nextCardId(sid) { const i = REAL.findIndex(s => s.id === sid); return i >= 0 && i + 1 < REAL.length ? REAL[i + 1].id : null; }
@@ -1194,6 +1222,7 @@ function openSection(sid, auto) {
   Reader.stop();
   Reader.done = false;
   Reader.note = '';
+  Reader.resumeAt = 0;
   recRetry(sid);
   S.sid = sid;
   if (S.sess && !S.sess.studied.includes(sid) && !SEC[sid].practice) { S.sess.studied.push(sid); touchSess(); save(); }
@@ -1436,7 +1465,7 @@ function renderDock() {
   const label = st === 'idle' ? 'Play' : st === 'paused' ? 'Resume' : 'Pause';
   const icon = st === 'speaking' ? ICON.pause : ICON.play;
   d.innerHTML = `<div class="dock-in">
-    <button class="btn primary" data-act="play" ${can ? '' : 'disabled'} aria-label="${label}">${icon} ${label}</button>
+    <button class="btn primary" data-act="play" ${can || st !== 'idle' ? '' : 'disabled'} aria-label="${label}">${icon} ${label}</button>
     ${st !== 'idle' ? `<button class="btn dock-stop" data-act="stop" aria-label="Stop reading">${ICON.stop}<span> Stop</span></button>` : ''}
     ${st === 'speaking' && Reader.engine !== 'rec' ? '<span class="speaking-dot" aria-hidden="true"></span>' : ''}
     ${st !== 'idle' && Reader.engine === 'rec' ? `<span class="mono dock-time" id="dock-time">${esc(Rec.shown)}</span>` : ''}

@@ -6,6 +6,7 @@ Content layout:
   content/chapters/chNN.json   {"sections": [...]} for each chapter, merged in file-name order
   content/figures/*.svg        diagrams, referenced from a figure as "svgFile": "fig-1-1.svg"
   content/images/*.jpg|png     photo crops, referenced as "imgFile": "p4-thistle.jpg"
+  content/narration.json       timing of the recorded narration (written by tools/narrate.py)
 
 Usage: python3 tools/build.py
 Fails loudly on any content error so a broken card never ships.
@@ -229,8 +230,37 @@ def check_answer_key(data):
                 err(f"{qw}: answer {got} disagrees with Appendix A ({ch['answers'][num - 1]})")
 
 
+def add_narration(data):
+    """Put the timing of every recording that still matches its card's text into the page.
+
+    The audio itself is not in the page: tools/narrate.py writes one MP3 per card, published next to the page.
+    A card whose text changed since it was recorded is left out, and the page reads it with a live voice.
+    """
+    path = CONTENT / "narration.json"
+    if not path.exists():
+        return
+    import narrate
+    recorded = json.loads(path.read_text(encoding="utf-8"))
+    cards, stale = {}, []
+    for s in data["sections"]:
+        lines = narrate.spoken_lines(s)
+        e = recorded.get("cards", {}).get(s["id"])
+        if not lines:
+            continue
+        if e and e.get("h") == narrate.text_hash(lines) and len(e["t"]) == 2 * len(lines):
+            cards[s["id"]] = {k: e[k] for k in ("h", "p", "d", "t", "w")}
+        else:
+            stale.append(s["id"])
+    data["narration"] = {"voice": recorded.get("voice"), "cards": cards}
+    total = len(cards) + len(stale)
+    print(f"narration: {len(cards)} of {total} cards have a recording that matches their text")
+    if stale:
+        warn("no current recording (run tools/narrate.py, then publish the new audio files): " + ", ".join(stale[:12]) + (" ..." if len(stale) > 12 else ""))
+
+
 def main():
     data = load()
+    add_narration(data)
     check(data)
     check_answer_key(data)
     for w in warnings:

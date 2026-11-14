@@ -104,7 +104,13 @@ plays that everywhere. A card starts reading when it opens. Do not remove this.
   `device` (speechSynthesis). "Best available" uses the Claude voice where it is offered, else the recording,
   else the device voice. With "Keep going to the next card" on, it prefers the recording (no hourly limit,
   keeps playing with the screen off). The recording plays from one shared audio element; if that fails it
-  tries a fetched copy, then Web Audio, then the next voice, and says why in the voice note.
+  tries a fetched copy, then Web Audio, then the next voice, and says why in the voice note. Every wait has a
+  15-second limit (no data from the file, no data from the fetched copy), so a dead connection ends in a note
+  and another voice, never in silence.
+- **After changing the reader or the storage code** in `app/template.html`:
+  `python3 tools/build.py && tools/browser/run.sh` (72 checks in real Chromium, about 3 minutes: the recorded
+  voice and its fallbacks, a stand-in for the live Claude voice, stalled and dead connections, saved progress).
+  It needs the Chapter 1 recordings in `dist/audio`.
   If the viewer turned reading aloud off (`not_granted`), nothing speaks unless they pick the recording themselves.
 - **Recording** (`tools/narrate.py`): Kokoro TTS, voice `af_heart`, on the CPU. All 221 cards are 8.2 hours
   of audio and 148 MB; about 90 minutes on 4 cores.
@@ -190,6 +196,7 @@ plays that everywhere. A card starts reading when it opens. Do not remove this.
 - `content/narration.json`: timing of the recorded narration (written by `tools/narrate.py`, read by the build).
 - `tools/narrate.py`: records the narration and holds the pronunciation rules. `dist/audio/*.mp3` is its output (not in git).
 - `tools/check_narration.js`: the page and `narrate.py` must split every card into the same sentences and words.
+- `tools/browser/`: browser tests of the reader (`run.sh` runs all five; each file says what it covers).
 - `tools/say_cases.json`: regression cases for the pronunciation rules (`python3 tools/narrate.py --check`).
 - `tools/listen.py`: listening check for the recordings (speech recogniser; optional, large download).
 - `tools/crop_photos_chNN.py`, `tools/fig_1_4.py`, `tools/fig_9_1.py`: how the photo crops and two figures were made.

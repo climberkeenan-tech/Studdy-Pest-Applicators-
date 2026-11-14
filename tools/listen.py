@@ -12,6 +12,7 @@ a dropped word, a garbled word, a number read wrongly, silence.
     <venv python> tools/listen.py --report           # report again from what was already heard
     <venv python> tools/listen.py --shard 0/4 &      # four of these (0/4 .. 3/4) hear four times as fast;
                                                      # each needs about 2.5 GB of memory. Then --report.
+    <venv python> tools/listen.py --probe 'c02-s07#9#fqpa'    # settle a flag: sentence 9 of that card, the word FQPA
 
 <venv python> is the one tools/narrate.py --setup made. What was heard is kept in <home>/heard*.json.
 
@@ -324,6 +325,77 @@ def report(cards, cut):
         print('  heard:', got)
 
 
+def probe(targets, threads, whisper):
+    """A close look at single sentences, to settle a flag. A target is card#sentence, or card#sentence#word,word
+    to look at those words. It prints how long and how loud each word is in the recording (a word the voice
+    skipped has no length or no sound), then what is heard on the tight cut, on the wide cut, and on narrow cuts
+    around the named words. A word that shows up in a narrow cut is in the audio.
+
+    --whisper DIR adds a second recogniser's opinion. DIR holds a sherpa-onnx Whisper model, for example the
+    unpacked sherpa-onnx-whisper-small.en.tar.bz2 (640 MB) from the same release page as MODEL_URL.
+    Whisper guesses words it expects, so trust it for "is the word there", not for "is the word exact"."""
+    import numpy as np
+    import sherpa_onnx
+    recs = {'parakeet': sherpa_onnx.OfflineRecognizer.from_transducer(
+        encoder=str(MODEL / 'encoder.int8.onnx'), decoder=str(MODEL / 'decoder.int8.onnx'), joiner=str(MODEL / 'joiner.int8.onnx'),
+        tokens=str(MODEL / 'tokens.txt'), num_threads=threads, model_type='nemo_transducer')}
+    if whisper:
+        first = lambda pattern: str(sorted(pathlib.Path(whisper).glob(pattern))[0])
+        recs['whisper'] = sherpa_onnx.OfflineRecognizer.from_whisper(
+            encoder=first('*encoder.int8.onnx'), decoder=first('*decoder.int8.onnx'), tokens=first('*tokens.txt'),
+            language='en', task='transcribe', num_threads=threads)
+    manifest = narrate.read_manifest()
+    sections = {s['id']: s for s in narrate.load_sections()}
+    quiet = np.zeros(SR // 4, dtype=np.float32)
+    for target in targets:
+        sid, i, *rest = target.split('#')
+        i = int(i)
+        names = [n.lower() for n in rest[0].split(',') if n] if rest else []
+        e = manifest['cards'][sid]
+        raw = narrate.spoken_lines(sections[sid])[i][1]
+        pcm = np.frombuffer(subprocess.run(['ffmpeg', '-v', 'error', '-i', str(narrate.OUT / f'{sid}.mp3'), '-f', 'f32le', '-ac', '1', '-ar', str(SR), '-'],
+                                           capture_output=True).stdout, dtype='<f4')
+        a, b = e['t'][2 * i], e['t'][2 * i + 1]
+        nxt = e['t'][2 * i + 2] if 2 * i + 2 < len(e['t']) else e['d']
+
+        def cut(x0, x1):
+            return pcm[max(0, int(x0 * SR / 1000)): max(0, int(x1 * SR / 1000))]
+
+        def hear(x0, x1):
+            seg = cut(x0, x1)
+            if len(seg) < SR // 10:
+                return '(too short to hear)'
+            out = []
+            for name, rec in recs.items():
+                st = rec.create_stream()
+                st.accept_waveform(SR, np.concatenate([quiet, seg, quiet]))
+                rec.decode_stream(st)
+                out.append((name + ': ' if len(recs) > 1 else '') + st.result.text.strip())
+            return ' | '.join(out)
+
+        def loud(x0, x1):
+            seg = cut(x0, x1).astype(np.float64)
+            return float(np.sqrt((seg ** 2).mean())) if len(seg) else 0.0
+
+        whole = loud(a, b) or 1e-6
+        words, starts = narrate.display_words(raw), e['w'][i]
+        ends = starts[1:] + [b - a]
+        print(f'\n{sid} sentence {i}: {a} to {b} ms of the recording')
+        print('  card :', narrate.plain(raw))
+        print('  asked:', narrate.say(narrate.plain(raw)))
+        print('  tight cut:', hear(a - 150, b + 250))
+        print('  wide cut :', hear(a - 300, nxt - 40))
+        hits = [k for k, w in enumerate(words) if any(n in w.lower() for n in names)]
+        show = sorted({j for k in hits for j in range(max(0, k - 3), min(len(words), k + 4))}) if names else range(len(words))
+        for k in show:
+            print(f'   {"*" if k in hits else " "} {words[k]!r:26} {starts[k]:6} to {ends[k]:6} ms ({ends[k] - starts[k]:5} ms), '
+                  f'loudness {loud(a + starts[k], a + ends[k]) / whole:.2f} of the sentence')
+        for k in hits:
+            for back, on in ((3, 4), (1, 2), (0, 1)):
+                k0, k1 = max(0, k - back), min(len(words), k + on)
+                print(f'    around "{" ".join(words[k0:k1])}": {hear(a + starts[k0] - 120, a + ends[k1 - 1] + 120)}')
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--setup', action='store_true')
@@ -332,9 +404,13 @@ def main():
     ap.add_argument('--threads', type=int, default=4)
     ap.add_argument('--cut', type=float, default=0.12, help='flag a sentence when this share of its sounds differ')
     ap.add_argument('--shard', default='', metavar='K/N', help='hear only every Nth card, starting at K (run N of these side by side)')
+    ap.add_argument('--probe', nargs='+', default=[], metavar='CARD#SENTENCE[#WORD,WORD]', help='a close look at single sentences')
+    ap.add_argument('--whisper', default='', metavar='DIR', help='with --probe: a sherpa-onnx Whisper model for a second opinion')
     a = ap.parse_args()
     if a.setup:
         return setup()
+    if a.probe:
+        return probe(a.probe, a.threads, a.whisper)
     cards = {c.strip() for c in a.cards.split(',') if c.strip()}
     if a.shard:
         k, n = (int(x) for x in a.shard.split('/'))

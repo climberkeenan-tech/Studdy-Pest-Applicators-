@@ -896,6 +896,15 @@ Rec.resume = async () => {
   }
   return 'fail';
 };
+/* The audio element was pointed at the file, but nothing of it has arrived (Pause pressed in the first seconds of
+   a slow load, or the browser wanted a tap first). A bare play() would wait on that one request for good, so
+   Play and Resume go through the loader instead: it has the time limit and the other routes. A fetched copy
+   (Rec.blob) is never cold: it is in memory, and starting it must stay inside the tap. */
+const recCold = () => {
+  const el = Rec.el;
+  if (Rec.mode !== 'el' || Rec.blob || !el) return false;
+  try { return el.readyState < 2 && el.buffered.length === 0; } catch (e) { return false; }
+};
 Rec.setRate = () => {
   if (Rec.mode === 'el') Rec.el.playbackRate = Rec.el.defaultPlaybackRate = rate();
   else if (Rec.mode === 'buf' && Rec.brun) { Rec.boff = Rec.time(); Rec.bt0 = AC.currentTime; Rec.brate = rate(); Rec.bsrc.playbackRate.value = rate(); }
@@ -926,6 +935,22 @@ function elPlay(src, at) {
     } catch (e) { Rec.why = 'this browser could not play the file'; Rec.code = 'play threw'; fin('fail'); }
   });
 }
+/* The file fetched by script. It gives up when nothing has arrived for `quiet` ms, so a dead connection cannot
+   hold the reader for minutes; a slow one that keeps delivering is left to finish. */
+async function fetchSound(url, quiet) {
+  const ctl = typeof AbortController === 'function' ? new AbortController() : null;
+  let tm = 0;
+  const arm = () => { clearTimeout(tm); tm = setTimeout(() => { try { if (ctl) ctl.abort(); } catch (e) {} }, quiet); };
+  arm();
+  try {
+    const res = await fetch(url, ctl ? { signal: ctl.signal } : {});
+    if (!res.ok) return { status: res.status };
+    if (!res.body || !res.body.getReader) return { blob: await res.blob() };
+    const rd = res.body.getReader(), parts = [];
+    for (;;) { arm(); const x = await rd.read(); if (x.done) break; parts.push(x.value); }
+    return { blob: new Blob(parts, { type: (res.headers && res.headers.get('content-type')) || 'audio/mpeg' }) };
+  } finally { clearTimeout(tm); }
+}
 async function recLoad(sid, n, from) {
   const gen = ++Rec.gen, live = () => gen === Rec.gen && Reader.engine === 'rec';
   const at = lineStart(n, from), url = recUrl(sid, n);
@@ -938,10 +963,13 @@ async function recLoad(sid, n, from) {
     // 2. The same file fetched by script and played from memory.
     let blob = null;
     try {
-      const res = await fetch(url);
-      if (res.ok) blob = await res.blob();
-      else { Rec.why = res.status === 404 ? 'the sound file is missing' : 'the server did not send the sound file'; Rec.code = 'http ' + res.status; }
-    } catch (e) { Rec.why = 'no connection'; Rec.code = 'fetch failed'; }
+      const got = await fetchSound(url, 15000);
+      if (got.blob) blob = got.blob;
+      else { Rec.why = got.status === 404 ? 'the sound file is missing' : 'the server did not send the sound file'; Rec.code = 'http ' + got.status; }
+    } catch (e) {
+      const slow = e && e.name === 'AbortError';
+      Rec.why = slow ? 'the connection is too slow' : 'no connection'; Rec.code = slow ? 'fetch timeout' : 'fetch failed';
+    }
     if (!live()) return;
     if (blob && blob.size > 1000) {
       Rec.blob = URL.createObjectURL(blob);
@@ -996,7 +1024,7 @@ function recPlay(sid, from) {
   if (Rec.sid !== sid) Rec.shown = '';
   Reader.setState('speaking');
   setCur(from); hiWord(from, 0);
-  if (Rec.sid === sid && Rec.mode && !Rec.loading) {      // this card is already loaded: jump and go
+  if (Rec.sid === sid && Rec.mode && !Rec.loading && !recCold()) {      // this card is already loaded: jump and go
     Rec.seek(lineStart(n, from));
     const gen = ++Rec.gen;
     Rec.resume().then(r => {
@@ -1219,6 +1247,7 @@ function pauseResume() {
   } else if (e === 'rec') {
     if (Reader.state === 'paused') {
       Reader.setState('speaking');
+      if (recCold()) { recLoad(S.sid, Rec.n, Math.max(0, Rec.li)); return; }      // nothing had arrived when Pause was pressed
       Rec.resume().then(r => { if (Reader.engine !== 'rec') return; if (r === 'ok') recLoop(); else if (r !== 'abort') { Reader.setState('paused'); if (r === 'gesture') { Reader.note = 'Tap Play to start the voice.'; renderVoiceNote(); } } });
     } else { Rec.pause(); Reader.setState('paused'); }
   }

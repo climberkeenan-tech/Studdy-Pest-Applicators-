@@ -331,6 +331,18 @@ def _init(threads, voice=True):
     _G2P = en.G2P(trf=False, british=False, fallback=espeak.EspeakFallback(british=False), unk='')
 
 
+def _worker(threads):
+    """Start-up of a recording worker. It must not outlive the run: left alone it would sit idle for good,
+    holding over 1 GB of memory and the lock on dist/audio."""
+    import ctypes
+    import signal
+    try:
+        ctypes.CDLL(None).prctl(1, signal.SIGKILL)       # PR_SET_PDEATHSIG (Linux): die when the parent dies
+    except (OSError, AttributeError):
+        pass
+    _init(threads)
+
+
 def vocab():
     if _K:
         return _K.tokenizer.vocab
@@ -571,7 +583,9 @@ def setup():
     subprocess.check_call(pip + ['phonemizer-fork==3.3.2'])
     for f in (MODEL, VOICES):
         if not (HOME / f).exists() or (HOME / f).stat().st_size < 1_000_000:
-            subprocess.check_call(['curl', '-f', '-sS', '-L', '-o', str(HOME / f), MODEL_URL + f])
+            part = HOME / (f + '.part')
+            subprocess.check_call(['curl', '-f', '-sS', '-L', '-o', str(part), MODEL_URL + f])
+            os.replace(part, HOME / f)                   # only a complete download gets the real name
     if not shutil.which('ffmpeg'):
         print('ffmpeg is missing: install it (apt-get install -y ffmpeg) before recording')
     print('ready. Run:', venv / 'bin' / 'python', 'tools/narrate.py')
@@ -675,6 +689,7 @@ def main():
         return
     espeak_data()
     import fcntl
+    import multiprocessing
     from concurrent.futures import ProcessPoolExecutor, as_completed
     OUT.mkdir(parents=True, exist_ok=True)
     lock = open(OUT / '.lock', 'w')
@@ -684,8 +699,10 @@ def main():
         raise SystemExit('another recording run is going (dist/audio/.lock). Wait for it, or stop it first.')
     t0 = time.time()
     done = audio_ms = size = 0
-    # A worker killed for memory, or a model that will not load, raises BrokenProcessPool here and ends the run.
-    with ProcessPoolExecutor(max_workers=max(1, min(a.jobs, len(jobs))), initializer=_init, initargs=(a.threads,)) as pool:
+    # A worker killed for memory, or a model that will not load, raises BrokenProcessPool here. Any error ends
+    # the run at once: leaving a "with" block would first record every card still waiting and drop the results.
+    pool = ProcessPoolExecutor(max_workers=max(1, min(a.jobs, len(jobs))), initializer=_worker, initargs=(a.threads,))
+    try:
         for fut in as_completed([pool.submit(_narrate, j) for j in jobs]):
             sid, entry, nbytes, dt = fut.result()
             manifest = read_manifest() if MANIFEST.exists() else manifest
@@ -697,6 +714,12 @@ def main():
             el = time.time() - t0
             print(f'[{done}/{len(jobs)}] {sid}: {entry["d"] / 1000:.0f}s audio, {nbytes // 1024} KB, took {dt:.0f}s | '
                   f'{audio_ms / 60000:.1f} min audio, {size / 1e6:.1f} MB, in {el / 60:.1f} min ({audio_ms / 1000 / el:.1f}x)', flush=True)
+    except BaseException:
+        pool.shutdown(wait=False, cancel_futures=True)
+        for child in multiprocessing.active_children():
+            child.kill()
+        raise
+    pool.shutdown()
     print('done')
 
 

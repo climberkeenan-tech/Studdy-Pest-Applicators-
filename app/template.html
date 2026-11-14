@@ -319,10 +319,13 @@ function normalize(p) {
 let P = normalize(lsGet(LS_KEY));
 /* bootStamp: how new this device's copy was when the page opened. A tap made before the saved copy has
    loaded stamps P with the time now; that must never make an empty or old copy win over the saved one. */
-const bootStamp = P.updatedAt || 0;
+/* P.base: set by a save made before the saved copy was read; it keeps the stamp at which this device and the
+   account were last in step, so a later visit still sees that the account copy is the newer one. */
+const bootStamp = typeof P.base === 'number' ? P.base : (P.updatedAt || 0);
 let profRef = null, sync = 'local', dirty = false, saving = false, saveT = null, loaded = false;
 
 function save() {
+  if (!loaded && typeof P.base !== 'number') P.base = bootStamp;
   P.updatedAt = Date.now();
   lsSet(LS_KEY, P);
   dirty = true;
@@ -330,6 +333,7 @@ function save() {
   saveT = setTimeout(flush, 700);
 }
 async function flush() {
+  if (!loaded && dirty && sync === 'error') { initDb(); return; }      // initDb gave up earlier: try the read again
   if (!profRef || !loaded || saving || !dirty) return;
   saving = true; dirty = false;
   let body = JSON.stringify(P);
@@ -358,6 +362,7 @@ async function initDb() {
       if ((remote.updatedAt || 0) > bootStamp) { P = remote; lsSet(LS_KEY, P); resumeSession(); dirty = false; }
       else if ((P.updatedAt || 0) > (remote.updatedAt || 0)) { dirty = true; }
     } else if (P.updatedAt) { dirty = true; }
+    if (typeof P.base === 'number') { delete P.base; lsSet(LS_KEY, P); }
     loaded = true;
     sync = 'synced';
     if (dirty) flush();
@@ -914,6 +919,7 @@ function elPlay(src, at) {
       el.src = src;
       el.playbackRate = el.defaultPlaybackRate = rate();
       Rec.at0 = at;
+      try { el.currentTime = 0; } catch (e) {}      // a new file: drop any start position the browser kept from the last one
       const p = el.play();
       if (p && p.then) p.then(() => fin('ok'), e => { const nm = e && e.name; if (nm === 'NotAllowedError') fin('gesture'); else if (nm === 'AbortError') fin('abort'); else { Rec.why = 'this browser could not play the file'; Rec.code = nm || 'play failed'; fin('fail'); } });
       else fin('ok');
@@ -1167,7 +1173,12 @@ function devicePlay(from) {
   const run = ++devTick.run, mine = () => Reader.engine === 'device' && run === devTick.run;
   let began = false;
   // Some phones drop speech that was not asked for by a tap, without any event. Do not sit on "Pause" in silence.
-  const blocked = () => { if (!mine() || began) return; halt(null); Reader.note = 'Tap Play to start the voice.'; Reader.resumeAt = from; Reader.setState('idle', 'blocked'); renderVoiceNote(); };
+  const blocked = () => {
+    if (!mine() || began) return;
+    halt(null);
+    if (Rec.bad[S.sid] && Rec.bad[S.sid] !== DIFFER) Rec.fails[S.sid] = 2;      // the tap asked for next must reach this voice, not retry the recording
+    Reader.note = 'Tap Play to start the voice.'; Reader.resumeAt = from; Reader.setState('idle', 'blocked'); renderVoiceNote();
+  };
   for (let i = from; i < end; i++) {
     const L = Reader.lines[i];
     const u = new SpeechSynthesisUtterance(L.say);
@@ -1234,6 +1245,7 @@ function openSection(sid, auto) {
   S.sid = sid;
   if (S.sess && !S.sess.studied.includes(sid) && !SEC[sid].practice) { S.sess.studied.push(sid); touchSess(); save(); }
   go('study');
+  if (!auto) handScroll = 0;          // a scroll of the home list is not a scroll of this card
   if (auto || P.settings.autoplay !== false) play(0);
 }
 
@@ -1455,7 +1467,7 @@ function renderVoiceNote() {
   const eng = (Reader.state !== 'idle' && Reader.engine) || pickEngine(S.sid), bad = recBad(S.sid) ? Rec.bad[S.sid] : '';
   n.textContent = eng === 'rec' ? 'Recorded voice. Tap any sentence to hear it from there.'
     : eng === 'claude' ? 'Claude voice. Tap any sentence to hear it from there.'
-    : eng === 'device' ? (bad ? 'The recorded voice could not load (' + bad + '), so Play uses this device’s voice.'
+    : eng === 'device' ? (bad ? 'The recorded voice could not load (' + bad + '), so Play uses this device’s voice.' + (bad === DIFFER ? '' : ' Open the card again to try the recording.')
       : narr(S.sid) ? 'Play uses this device’s voice.'
       : 'This card has no recording yet and the Claude voice is not offered in this browser or app, so Play uses this device’s voice.')
     : Reader.tts === 'pending' ? 'Loading the voice…'

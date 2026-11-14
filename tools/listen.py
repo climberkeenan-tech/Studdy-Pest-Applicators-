@@ -10,6 +10,8 @@ a dropped word, a garbled word, a number read wrongly, silence.
     <venv python> tools/listen.py                    # hear every recording not heard yet, then report
     <venv python> tools/listen.py --cards c02-s07    # only these cards
     <venv python> tools/listen.py --report           # report again from what was already heard
+    <venv python> tools/listen.py --shard 0/4 &      # four of these (0/4 .. 3/4) hear four times as fast;
+                                                     # each needs about 2.5 GB of memory. Then --report.
 
 <venv python> is the one tools/narrate.py --setup made. What was heard is kept in <home>/heard.json.
 A flagged sentence is not proof of a fault: the recogniser mishears rare words (miticide, FIFRA) often.
@@ -53,7 +55,18 @@ def sound(text):
     return re.sub(r'[^a-zA-Zæðŋɑɔəɛɜɡɪɹʃʊʌʒʤʧθ]', '', narrate.phonemize(text)[0].translate(FOLD))
 
 
-def hear(cards, threads):
+def all_heard():
+    """Everything heard so far, from the main file and from any shard files."""
+    out = {}
+    for f in sorted(HOME.glob('heard*.json')):
+        try:
+            out.update(json.loads(f.read_text()))
+        except ValueError:
+            pass
+    return out
+
+
+def hear(cards, threads, shard=None):
     import numpy as np
     import sherpa_onnx
     rec = sherpa_onnx.OfflineRecognizer.from_transducer(
@@ -61,10 +74,14 @@ def hear(cards, threads):
         tokens=str(MODEL / 'tokens.txt'), num_threads=threads, model_type='nemo_transducer')
     manifest = narrate.read_manifest()
     sections = {s['id']: s for s in narrate.load_sections()}
-    heard = json.loads(HEARD.read_text()) if HEARD.exists() else {}
+    path = HOME / f'heard.{shard[0]}.json' if shard else HEARD
+    before = all_heard()
+    heard = json.loads(path.read_text()) if path.exists() else {}
     done = 0
-    for sid, e in manifest['cards'].items():
-        if (cards and sid not in cards) or sid not in sections or heard.get(sid, {}).get('p') == e['p']:
+    for n, (sid, e) in enumerate(manifest['cards'].items()):
+        if shard and n % shard[1] != shard[0]:
+            continue
+        if (cards and sid not in cards) or sid not in sections or before.get(sid, {}).get('p') == e['p']:
             continue
         mp3 = narrate.OUT / f'{sid}.mp3'
         lines = narrate.spoken_lines(sections[sid])
@@ -84,17 +101,17 @@ def hear(cards, threads):
         heard[sid] = {'p': e['p'], 'lines': out}
         done += 1
         if done % 5 == 0:
-            HEARD.write_text(json.dumps(heard, ensure_ascii=False))
+            path.write_text(json.dumps(heard, ensure_ascii=False))
             print(done, 'cards heard', flush=True)
-    HEARD.write_text(json.dumps(heard, ensure_ascii=False))
-    print(done, 'cards heard now;', len(heard), 'in', HEARD)
+    path.write_text(json.dumps(heard, ensure_ascii=False))
+    print(done, 'cards heard now;', len(heard), 'in', path)
 
 
 def report(cards, cut):
     from rapidfuzz.distance import Levenshtein
     manifest = narrate.read_manifest()
     sections = {s['id']: s for s in narrate.load_sections()}
-    heard = json.loads(HEARD.read_text()) if HEARD.exists() else {}
+    heard = all_heard()
     narrate._init(1, voice=False)
     rows, total, wrong, ncards = [], 0, 0, 0
     for sid, h in heard.items():
@@ -127,10 +144,14 @@ def main():
     ap.add_argument('--report', action='store_true', help='do not listen, only report')
     ap.add_argument('--threads', type=int, default=4)
     ap.add_argument('--cut', type=float, default=0.12, help='flag a sentence when this share of its sounds differ')
+    ap.add_argument('--shard', default='', metavar='K/N', help='hear only every Nth card, starting at K (run N of these side by side)')
     a = ap.parse_args()
     if a.setup:
         return setup()
     cards = {c.strip() for c in a.cards.split(',') if c.strip()}
+    if a.shard:
+        k, n = (int(x) for x in a.shard.split('/'))
+        return hear(cards, a.threads, (k, n))
     if not a.report:
         hear(cards, a.threads)
     report(cards, a.cut)

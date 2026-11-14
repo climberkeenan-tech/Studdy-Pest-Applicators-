@@ -110,6 +110,9 @@ def check(data):
         if pages and len(pages) == 1:
             s["pages"] = [pages[0], pages[0]]
         resolve_figures(s, where)
+        for f in s.get("figures", []):
+            if not f.get("id"):
+                err(f"{where}: a figure has no id (title {f.get('title')!r})")
         figs = {f.get("id"): f for f in s.get("figures", [])}
         used = set()
         lines = 0

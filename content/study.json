@@ -22,9 +22,9 @@
         {
           "p": [
             "This card is practice. It is **not** from your manual, and it does not count toward your progress.",
-            "Press **Play** to hear it read in a Claude voice.",
+            "A card starts reading out loud as soon as you open it.", "**Pause** and **Play** are at the bottom of the screen.",
             "The **yellow highlight** follows the voice, word by word.",
-            "Tap any sentence to start reading from that spot."
+            "Tap any sentence to hear it from that spot."
           ]
         },
         {

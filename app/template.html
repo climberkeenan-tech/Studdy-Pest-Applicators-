@@ -729,6 +729,7 @@ function pickEngine(sid) {
   const order = pref === 'auto' && !P.settings.chain ? ['claude', 'rec', 'device'] : ['rec', 'claude', 'device'];
   return order.find(e => can[e]) || null;
 }
+const offNote = () => 'Reading aloud is turned off for this page. Turn it back on in the artifact’s Permissions menu' + (canUse(S.sid).rec ? ', or pick Recorded voice in the Voice menu.' : '.');
 const ENGINE_NAME = { rec: 'Recorded voice', claude: 'Claude voice', device: 'This device’s voice' };
 
 /* ----- the live Claude voice */
@@ -775,7 +776,7 @@ function claudeEnded(reason) {
     recPlay(S.sid, at); renderVoiceBar(); return;
   }
   Reader.note = {
-    not_granted: 'Reading aloud is turned off for this page. Turn it back on in the artifact’s Permissions menu.',
+    not_granted: offNote(),
     unavailable: 'The Claude voice is not available right now.',
     rate_limited: 'The Claude voice reached its limit for now. Read on screen and try Play again later.',
     upstream_error: 'The voice cut out. Press Play to try again.',
@@ -791,6 +792,8 @@ function claudeEnded(reason) {
 const Rec = { el: null, gen: 0, sid: null, n: null, mode: null, loading: false, bad: {}, why: '', raf: 0, li: 0, blob: null, shown: '',
   buf: null, bsrc: null, boff: 0, bt0: 0, brate: 1, brun: false };
 const recUrl = (sid, n) => 'audio/' + sid + '.' + n.p + '.mp3';
+/* Where in the recording a sentence starts, in seconds. The first sentence plays from the very top. */
+const lineStart = (n, i) => i > 0 ? Math.max(0, n.t[2 * i] / 1000 - 0.03) : 0;
 function recEl() {
   if (Rec.el) return Rec.el;
   const el = Rec.el = new Audio();
@@ -868,7 +871,7 @@ function elPlay(src, at) {
 }
 async function recLoad(sid, n, from) {
   const gen = ++Rec.gen, live = () => gen === Rec.gen && Reader.engine === 'rec';
-  const at = Math.max(0, n.t[2 * from] / 1000 - 0.03), url = recUrl(sid, n);
+  const at = lineStart(n, from), url = recUrl(sid, n);
   Rec.loading = true; Rec.sid = sid; Rec.n = n; Rec.mode = 'el'; Rec.why = ''; Rec.buf = null;
   if (Rec.blob) { try { URL.revokeObjectURL(Rec.blob); } catch (e) {} Rec.blob = null; }
   // 1. Straight from the file: starts quickest, and keeps the voice's pitch at any speed.
@@ -898,7 +901,11 @@ async function recLoad(sid, n, from) {
     }
   }
   Rec.loading = false;
-  if (r === 'ok') { recLoop(); mediaMeta(); return; }
+  if (r === 'ok') {
+    // Some phones ignore a jump asked for before the first sound: ask again once it is playing.
+    if (Rec.mode === 'el' && at > 0.5 && Math.abs(Rec.el.currentTime - at) > 1.5) { try { Rec.el.currentTime = at; } catch (e) {} }
+    recLoop(); mediaMeta(); return;
+  }
   if (r === 'abort') return;
   if (r === 'gesture') {            // loaded, but this browser wants a tap before any sound
     Reader.note = 'Tap Play to start the voice.';
@@ -918,7 +925,7 @@ function recPlay(sid, from) {
   Reader.setState('speaking');
   setCur(from); hiWord(from, 0);
   if (Rec.sid === sid && Rec.mode && !Rec.loading) {      // this card is already loaded: jump and go
-    Rec.seek(Math.max(0, n.t[2 * from] / 1000 - 0.03));
+    Rec.seek(lineStart(n, from));
     const gen = ++Rec.gen;
     Rec.resume().then(r => {
       if (gen !== Rec.gen || Reader.engine !== 'rec') return;
@@ -958,7 +965,11 @@ function recTick() {
   const L = Reader.lines[i], W = n.w[i], rel = ms - T[2 * i];
   if (L) {
     if (ms > T[2 * i + 1] + 140) { if (Reader.wordEl) { Reader.wordEl.classList.remove('on'); Reader.wordEl = null; } }      // the pause after a line
-    else if (W && W.length === L.words.length) { let k = 0; while (k + 1 < W.length && W[k + 1] <= rel) k++; hiWord(i, k); }
+    else if (W && W.length === L.words.length) {
+      let k = 0; while (k + 1 < W.length && W[k + 1] <= rel) k++;
+      while (k > 0 && L.words[k].mark) k--;          // a full stop set apart from its word never lights up alone
+      hiWord(i, k);
+    }
     else hiWord(i, wordAtUnits(L, Math.max(0, rel) / Math.max(1, T[2 * i + 1] - T[2 * i]) * L.total));
   }
   const clock = fmtClock(sec) + ' / ' + fmtClock(Rec.total());
@@ -980,7 +991,7 @@ function mediaMeta() {
 /* ----- lines, highlight */
 function buildLines() {
   Reader.lines = $$('#reading .sent').map(el => {
-    const words = $$('.w', el).map(w => ({ el: w, t: w.textContent }));
+    const words = $$('.w', el).map(w => ({ el: w, t: w.textContent, mark: !/[A-Za-z0-9]/.test(w.textContent) }));
     const say = el.textContent.replace(/\s+/g, ' ').trim();
     const cum = [], starts = []; let u = 0, pos = 0;
     for (const w of words) {
@@ -1367,7 +1378,7 @@ function renderVoiceNote() {
       : narr(S.sid) ? 'Play uses this device’s voice.'
       : 'This card has no recording yet and the Claude voice is not offered in this browser or app, so Play uses this device’s voice.')
     : Reader.tts === 'pending' ? 'Loading the voice…'
-    : Reader.tts === 'off' ? 'Reading aloud is turned off for this page. Turn it back on in the artifact’s Permissions menu, or pick the recorded voice.'
+    : Reader.tts === 'off' ? offNote()
     : 'Reading aloud is not available in this browser.';
 }
 function renderDock() {

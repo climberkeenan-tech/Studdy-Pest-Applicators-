@@ -94,6 +94,45 @@ Photo crops that would be better re-cropped from fresh photos (all minor): `p22-
 `p57-dust`, `p98-halfface`, `p100-sealcheck`, `p100-wash`, `p125-spillkit`, `p126-shed`, `p124-passenger`,
 `p148-triplerinse`.
 
+## Recorded narration (the natural voice)
+The user heard a robotic voice and had to tap to start each sentence: the Claude voice (`tts`) is not offered
+in Safari, Firefox, the Claude phone apps, desktop pop-out windows or the Code tab's artifact pane, so the page
+fell back to the device voice. Since 2026-11-14 every card has narration recorded ahead of time, and the page
+plays that everywhere. A card starts reading when it opens. Do not remove this.
+
+- **Voices in the page** (`app/template.html`, the "reader" block): `rec` (the recording), `claude` (live `tts`),
+  `device` (speechSynthesis). "Best available" uses the Claude voice where it is offered, else the recording,
+  else the device voice. With "Keep going to the next card" on, it prefers the recording (no hourly limit,
+  keeps playing with the screen off). The recording plays from one shared audio element; if that fails it
+  tries a fetched copy, then Web Audio, then the next voice, and says why in the voice note.
+  If the viewer turned reading aloud off (`not_granted`), nothing speaks unless they pick the recording themselves.
+- **Recording** (`tools/narrate.py`): Kokoro TTS, voice `af_heart`, on the CPU. All 221 cards are about 8.3 hours
+  of audio and 150 MB; about 90 minutes on 4 cores.
+  - Once per container: `python3 tools/narrate.py --setup` (Python 3.12 venv, model and word lists, about 700 MB;
+    needs `ffmpeg`). It prints the venv's python. `$NARRATE_HOME` moves the cache (default `~/.cache/pest-study-tts`).
+  - `<venv python> tools/narrate.py` records every card that is missing or whose text or pronunciation changed.
+    `--list` shows what is out of date. `--cards c01-s03 --force` records chosen cards again.
+  - Output: `dist/audio/<card>.mp3` (not in git) and `content/narration.json` (in git). Per card: `h` hash of the
+    card's sentences, `p` hash of what was rendered, `d` length in ms, `t` start and end of each sentence,
+    `w` start of each word in each sentence.
+  - Pronunciation: `say()`, `PHONEMES` (acronyms), `TERMS` (words the engine gets wrong), `CONTEXT` (a word with
+    two pronunciations, fixed for one sentence), `SPANISH`. `--say "text"` shows how a sentence will be read.
+    `--words` lists every word the engine had to guess. Check both after adding cards with new terms.
+    `python3 tools/narrate.py --check` runs `tools/say_cases.json` (sentences and how the rules must respell
+    them; needs no model). Run it after touching the rules, and add a case for each new rule.
+- **Build**: `tools/build.py` puts the timing of every recording that still matches its card into the page
+  (`C.narration`) and warns about cards with no current recording. Those cards still work: the page reads them
+  with a live voice until they are recorded.
+- **Publishing audio**: the MP3s are supporting files of the artifact, named `audio/<card>.<p>.mp3`.
+  `<venv python> tools/narrate.py --files 55` prints the Artifact `files` maps in batches under 55 MB (a publish
+  takes at most 64 MB and 255 files). Publish the page once per batch with that map as `files`. Files already
+  published stay. A card recorded again gets a new name: remove the old one with `"audio/<old name>": null`
+  (Artifact `action: "list"`, `scope: "files"` shows what is published).
+- **After changing a card's text**: build, record, build again, `node tools/check_narration.js`, publish the page
+  with the new audio file, remove the old file.
+- **The recordings exist only on the artifact** (and in this container until it is reclaimed). If they are lost,
+  `narrate.py` makes them again from the content.
+
 ## Rules for every session (the user's own rules)
 1. The user sends photos of manual pages. Work **only** from those pages.
    If a photo is blurry, cut off, or has glare, name the photo and ask for a retake.
@@ -127,6 +166,10 @@ Photo crops that would be better re-cropped from fresh photos (all minor): `p22-
 - `app/template.html`: the app (reader, quiz engine, grader, progress). Content gets injected at `__CONTENT__`.
 - `tools/build.py`: validates content, inlines figures and images, writes `dist/pest-study.html`. Fails on bad content.
 - `tools/check_grader.js` + `tools/grader_cases.json`: regression test for typed-answer grading.
+- `content/narration.json`: timing of the recorded narration (written by `tools/narrate.py`, read by the build).
+- `tools/narrate.py`: records the narration and holds the pronunciation rules. `dist/audio/*.mp3` is its output (not in git).
+- `tools/check_narration.js`: the page and `narrate.py` must split every card into the same sentences and words.
+- `tools/say_cases.json`: regression cases for the pronunciation rules (`python3 tools/narrate.py --check`).
 - `tools/crop_photos_chNN.py`, `tools/fig_1_4.py`, `tools/fig_9_1.py`: how the photo crops and two figures were made.
 - `tools/retired/`: retired one-time chapter generators. Do not run.
 - `tools/audit/`: the content audit kit as it ran (see its README).
@@ -139,10 +182,11 @@ Photo crops that would be better re-cropped from fresh photos (all minor): `p22-
 2. Write or extend `content/chapters/chNN.json` in manual order. Fill in `manual.totalPages` once known
    (the progress bar and daily pace depend on it).
 3. `python3 tools/build.py`, then `node tools/check_grader.js`
-4. Publish: Artifact tool, `file_path: dist/pest-study.html` (same path keeps the URL; from a new
-   conversation pass `url: https://claude.ai/artifact/1uWpmvZdD47qMje9MtvAE6`).
+4. Record the new cards (see "Recorded narration"), build again, then `node tools/check_narration.js`.
+5. Publish: Artifact tool, `file_path: dist/pest-study.html` (same path keeps the URL; from a new
+   conversation pass `url: https://claude.ai/artifact/1uWpmvZdD47qMje9MtvAE6`), with the new audio as `files`.
    Omit `capabilities` and `icon` on redeploys (keeps tts, sample, db, user).
-5. Commit and push to the working branch.
+6. Commit and push to the working branch.
 
 ## Section schema
 ```json
@@ -188,9 +232,11 @@ Photo crops that would be better re-cropped from fresh photos (all minor): `p22-
   Use `font-family="var(--f-display)"` or `var(--f-body)` for labels. Give `<marker>` ids a unique suffix.
 
 ## How the page works (for reference)
-- Claude voice through the artifact `tts` capability: Chrome or Edge on a computer, or the Claude desktop app.
-  Not available in Safari, Firefox, or the Claude phone apps; there it falls back to the device voice.
-- Yellow highlight: the current sentence is shaded, the current word is solid yellow.
-  Sentence timing is exact; word position inside a sentence is estimated from speech time.
+- Voices: see "Recorded narration". The Claude voice (`tts`) works in Chrome or Edge on a computer and in the
+  Claude desktop app's main window. Everywhere else the page plays the recording.
+- Yellow highlight: the current sentence is shaded, the current word is solid yellow. With the recording both
+  are exact (the model reports when each sound is spoken). With the live voices the word is estimated.
+- A card starts reading when it is opened ("Read to me when a card opens"). "Keep going to the next card" opens
+  the next card and reads it when one ends. Both are settings in the voice bar, saved with the profile.
 - Progress is saved per user in the artifact database (`data/users/<id>/profile`), mirrored in localStorage.
 - Session: 5-question rapid round from studied cards (open misses first), next card, quiz, summary.

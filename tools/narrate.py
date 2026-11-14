@@ -3,9 +3,10 @@
 
     python3 tools/narrate.py --setup               # one time: Python venv, voice model, word lists (about 700 MB)
     <home>/venv/bin/python tools/narrate.py        # record every card that is missing or out of date
-        --chapters ch01,ch02    --cards c01-s01,c03-s02    --jobs 3    --force    --list
+        --chapters ch01,ch02    --cards c01-s01,c03-s02    --jobs 3    --force    --list    --new-first
         --say "LD50 is 25 mg/kg"                   # show how a sentence will be read (text, then phonemes)
         --words                                    # every word the engine had to guess, for a pronunciation check
+        --check                                    # the rules still respell tools/say_cases.json as recorded there
         --files 55                                 # the Artifact "files" maps for publishing, in batches of 55 MB
         --stage DIR                                # copy the audio into DIR under its published names (for local tests)
 
@@ -136,8 +137,36 @@ TERMS = {
     'prefilter': 'pɹifˈɪltəɹ', 'preheated': 'pɹihˈiTᵻd', 'premeasured': 'pɹimˈɛʒəɹd',
     'recertification': 'ɹˌisɜɹTəfəkˈAʃən', 'refiller': 'ɹifˈɪləɹ', 'reregistration': 'ɹˌiɹɛʤəstɹˈAʃən',
     'replanting': 'ɹiplˈæntɪŋ', 'safener': 'sˈAfənəɹ', 'acquavella': 'ˌækwəvˈɛlə',
-    'peligro': 'pɛlˈiɡɹO', 'aviso': 'ɑvˈisO',
+    'peligro': 'pɛlˈiɡɹO', 'aviso': 'ɑvˈisO', 'phosphorothiate': 'fˌɑsfəɹəθˈIAt',
+    'breathed': 'bɹˈiðd', 'postapplication': 'pˌOstæpləkˈAʃən',
+    # words with two pronunciations that mean one thing in this manual: a tear is a rip, wind is moving air,
+    # discard and decreases are verbs, records are papers
+    'tear': 'tˈɛɹ', 'wind': 'wˈɪnd', 'discard': 'dəskˈɑɹd', 'arsenic': 'ˈɑɹsᵊnɪk', 'records': 'ɹˈɛkəɹdz',
+    'decreases': 'dəkɹˈisᵻz',
 }
+# Words with two pronunciations where the engine picks the wrong one in a particular sentence. Each pattern
+# matches just the word, in its context.
+CONTEXT = [
+    (r'(?<=, )read(?= the label)', 'ɹˈid'),                 # an instruction ("reed"), not the past tense
+    (r'(?<=hear it )read\b', 'ɹˈɛd'),
+    (r'(?<=pests )present(?= daily)', 'pɹˈɛzᵊnt'),
+    (r'(?<=cleaning )presents\b', 'pɹizˈɛnts'),
+    (r'(?<=settle out or )separate\b', 'sˈɛpəɹˌAt'),
+    (r'(?<=clearly )separate\b', 'sˈɛpəɹˌAt'),
+    (r'(?<=records or )permit\b', 'pəɹmˈɪt'),
+    (r'\bRecord(?= and evaluate)', 'ɹəkˈɔɹd'),
+    (r'\b[Dd]ocument(?= (?:the steps|that)\b)', 'dˈɑkjəmˌɛnt'),
+    (r'\bclose(?= (?:vents|containers|all windows)\b)', 'klˈOz'),
+    # "use": the noun ends in s ("yoos"), the verb in z ("yooz")
+    (r'(?<=equipment to )use(?= is\b)', 'jˈuz'),
+    (r'\bUse(?= integrated pest management principles)', 'jˈuz'),
+    (r'(?<=clarify )use(?= instructions)', 'jˈus'),
+    (r'(?<=and )use(?= (?:classification|directions)\b)', 'jˈus'),
+    (r'\bUse(?= classification statement)', 'jˈus'),
+    (r'(?<=sale to and )use(?= only by)', 'jˈus'),
+    (r'(?<=Discontinue )use\b', 'jˈus'),
+    (r'(?i)\bready-to-use\b', 'ɹˈɛditəjˈuz'),            # "ready to yooz", every time
+]
 # The sample label's Spanish sentence, word by word.
 SPANISH = {'si': 'sˈi', 'usted': 'ustˈɛd', 'no': 'nˈO', 'entiende': 'ɛntjˈɛndA', 'la': 'lɑ', 'etiqueta': 'ˌɛtikˈɛtɑ',
            'busque': 'bˈuskA', 'a': 'ɑ', 'alguien': 'ˈɑlɡjɛn', 'para': 'pˈɑɹɑ', 'que': 'kA', 'se': 'sA',
@@ -163,7 +192,8 @@ def _code(m):
         return f'{groups[0]} to {groups[1]}'
     if sum(c.isdigit() for c in tok) < 5:
         return tok
-    return ', '.join(' '.join(g) if g.isdigit() else ' '.join(g) if g.isalpha() and len(g) <= 3 else g for g in groups)
+    letters = lambda g: ' '.join('[A](/ˈA/)' if c == 'A' else c for c in g)       # a bare A would be read as the article
+    return ', '.join(' '.join(g) if g.isdigit() else letters(g) if g.isalpha() and len(g) <= 3 else g for g in groups)
 
 
 def say(text):
@@ -172,6 +202,8 @@ def say(text):
     t = t.replace('®', '').replace('™', '').replace('’', "'").replace('‘', "'")
     t = t.replace('[', '(').replace(']', ')')                                  # square brackets mark phonemes below
     t = t.replace('β-', 'beta ').replace(' / ', ', ')
+    t = t.replace('Bulletins Live!', 'Bulletins Live')                         # a name, not the end of a sentence
+    t = re.sub(r'\ba\.i\.(?=[\s),;:]|$)', '[a.i.](/ˌAˈI/)', t)                  # active ingredient: no full stop mid-sentence
     t = re.sub(r'(?<=\w)\(s\)', 's', t)                                        # ingredient(s) -> ingredients
     # a bare site name is read out; an address with a path is not
     t = re.sub(r'\b(?:https?://)?www\.([a-z0-9-]+)\.(gov|org|com|edu)(/[^\s,;)]*[^\s,;).])?',
@@ -189,6 +221,9 @@ def say(text):
     t = re.sub(r'\bReg\.\s*No\.', 'registration number', t)
     t = re.sub(r'\bEst\.\s*No\.', 'establishment number', t)
     t = re.sub(r'\bNo\.\s*(?=[A-Z0-9])', 'number ', t)
+    t = re.sub(r'\bReg\.\s*(?=\d)', 'registration number ', t)                 # "EPA Est. 56787-CO-1" has no "No."
+    t = re.sub(r'\bEst\.\s*(?=\d)', 'establishment number ', t)
+    t = re.sub(r'\bMI (\d{5})\b', lambda m: 'Michigan ' + ' '.join(m.group(1)), t)   # the sample label's address
     t = re.sub(r'\bTC-(\d+)([A-Z])\b', r'TC \1 \2', t)
     t = re.sub(r'\bS-(\d+)\.(\d+)\b', r'S \1 point \2', t)
     t = re.sub(r'\b(\d+):(\d+)\b', r'\1 to \2', t)                              # a 1:1 ratio
@@ -197,6 +232,7 @@ def say(text):
     t = re.sub(r'(?<=\b[A-Z]{2} )\d{5}\b', lambda m: ' '.join(m.group(0)), t)       # a zip code
     t = re.sub(r'\b\d{3,5}(?= identifies\b)', lambda m: ' '.join(m.group(0)), t)    # the parts of a registration number
     t = re.sub(r'(?<![\w.])\.(\d+)', lambda m: 'point ' + ' '.join(m.group(1)), t)          # .04 -> point 0 4
+    t = re.sub(r'(?<![\w.,-])(\d+)\.(0+)(?![\d%])', lambda m: m.group(1) + ' point ' + ' '.join(m.group(2)), t)   # 2.0 keeps its zero
     for k, v in FRACTIONS.items():
         t = re.sub(r'(?<![\w/.-])' + re.escape(k) + r'(?![\w/-])', v, t)
     t = re.sub(r'(?<![\w.-])(\d+(?:\.\d+)?)\s?[–-]\s?(\d+(?:\.\d+)?)(?=\s?(?:%|percent|°|[a-z]))',
@@ -207,7 +243,7 @@ def say(text):
     t = t.replace(' x ', ' times ')
     t = re.sub(r'\b(Class|Classes|Categor(?:y|ies)|War)\s+(IV|III|II|I|V)\b', lambda m: m.group(1) + ' ' + ROMAN[m.group(2)], t)
     t = re.sub(r'\band/or\b', 'and or', t)
-    t = re.sub(r'(?<=[A-Z]{3})/(?=[A-Z]{3})', ' ', t)                            # MSHA/NIOSH approval
+    t = t.replace('MSHA/NIOSH', 'MSHA NIOSH')                                  # one joint approval, not a choice
     t = re.sub(r'(?<=[A-Za-z])/(?=[A-Za-z])', ' or ', t)
     for k, v in WORDS.items():
         t = re.sub(r'(?<![\w.-])' + re.escape(k) + r'(?![\w-])', v, t)
@@ -221,6 +257,8 @@ def say(text):
     t = re.sub(r'\bSi [Uu]sted no entiende[^.]*', lambda m: re.sub(
         r"[A-Za-z]+", lambda w: f'[{w.group(0)}](/{SPANISH[w.group(0).lower()]}/)' if w.group(0).lower() in SPANISH else w.group(0),
         m.group(0)), t)
+    for pat, ph in CONTEXT:
+        t = re.sub(pat, lambda m: f'[{m.group(0)}](/{ph}/)', t)
     for k, v in PHONEMES.items():
         t = re.sub(r'(?<![\w.\[-])' + re.escape(k) + r"(?:(')?(s))?(?![\w\]-])",
                    lambda m: f'[{m.group(0)}](/{plural(v) if m.group(2) else v}/)', t)
@@ -235,6 +273,7 @@ def say(text):
 # ---------------------------------------------------------------- engine
 
 _K = _G2P = None
+VOWELS_ETC = 'ˈˌᵊᵻ'
 
 
 def espeak_data():
@@ -307,6 +346,11 @@ def phonemize(text):
     out = out.rstrip()
     for w in words:
         w[1], w[2] = min(w[1], len(out)), min(w[2], len(out))
+    # A sentence that ends in an abbreviation ("in 950 B.C.") comes back with no full stop, and the voice
+    # then does not let its pitch fall. Put the sentence's own end mark back.
+    end = re.search(r'([.!?:])["”\')\]]*$', text.strip())
+    if end and out and (out[-1].isalpha() or out[-1] in VOWELS_ETC):
+        out += end.group(1)
     return out, words
 
 
@@ -454,7 +498,9 @@ def read_manifest():
 
 def write_manifest(m):
     m['cards'] = dict(sorted(m['cards'].items()))
-    MANIFEST.write_text(json.dumps(m, separators=(',', ':')) + '\n', encoding='utf-8')
+    tmp = MANIFEST.with_suffix('.json.tmp')
+    tmp.write_text(json.dumps(m, separators=(',', ':')) + '\n', encoding='utf-8')
+    os.replace(tmp, MANIFEST)          # in one step: a build running at the same time never reads half a file
 
 
 def published_name(sid, entry):
@@ -510,14 +556,23 @@ def main():
     ap.add_argument('--jobs', type=int, default=3)
     ap.add_argument('--threads', type=int, default=1)
     ap.add_argument('--force', action='store_true')
+    ap.add_argument('--new-first', action='store_true', help='record cards with no recording before re-recording changed ones')
     ap.add_argument('--say', default='')
     ap.add_argument('--words', action='store_true', help='list every word the engine had to guess')
     ap.add_argument('--list', action='store_true', help='show what is missing or out of date, record nothing')
+    ap.add_argument('--check', action='store_true', help='test the pronunciation rules against tools/say_cases.json')
     ap.add_argument('--files', type=float, default=0, metavar='MB', help='print the Artifact "files" maps, each batch under MB')
     ap.add_argument('--stage', default='', metavar='DIR', help='copy the audio into DIR under its published names')
     a = ap.parse_args()
     if a.setup:
         return setup()
+    if a.check:
+        cases = json.loads((ROOT / 'tools' / 'say_cases.json').read_text(encoding='utf-8'))
+        bad = [(t, want, say(t)) for t, want in cases if say(t) != want]
+        for t, want, got in bad:
+            print(f'FAIL {t}\n  want {want}\n  got  {got}')
+        print(f'{len(cases) - len(bad)}/{len(cases)} pronunciation cases pass')
+        sys.exit(1 if bad else 0)
     if a.say:
         _init(1, voice=False)
         print(say(a.say))
@@ -575,6 +630,8 @@ def main():
         ok = cur and cur['h'] == text_hash(lines) and cur.get('p') == render_hash(lines) and (OUT / f'{sid}.mp3').exists()
         if not ok or a.force:
             jobs.append((sid, lines))
+    if a.new_first:
+        jobs.sort(key=lambda j: j[0] in manifest['cards'])
     gone = [k for k in manifest['cards'] if k not in live]
     for sid in gone:
         manifest['cards'].pop(sid)

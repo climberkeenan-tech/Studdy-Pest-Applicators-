@@ -294,11 +294,16 @@ plays that everywhere. A card starts reading when it opens. Do not remove this.
   - The store keeps whichever write lands last, so a slow save on one device can land on top of a save from
     another. The page therefore looks at the account again 6 and 35 seconds after each of its writes (`lookT`)
     and by itself while it stays in view with nothing waiting: half a minute after the last look, then twice
-    as long each time, up to 4 minutes (`pollWait`). News from another device brings the half minute back.
+    as long each time, up to 2 minutes (`pollWait`). News from another device brings the half minute back,
+    and a mouse that moves again after a minute without one makes the page look at once (`lastMove`).
     A constant half minute would be 120 reads an hour of a document that grows to about 140 KB.
     It saves again if the account lacks something it holds. This uses `get()` only. `onSnapshot` would do it
     live, but it has never been run against the real store from here: do not switch to it without a way to
-    test it in the real viewer.
+    test it in the real viewer. The same holds for two other calls the store offers (`db.d.ts`): `update()`
+    merges nested objects, so a save could send only the changed question records (a few hundred bytes instead
+    of the whole document, and two devices would then collide only on the same question), and `acquire()` is a
+    short lease that would let one page at a time read, join and write. A way to test them: a self-test in the
+    page on a scratch document, with the result read back through the ArtifactData tool.
     What is left: if the page whose save was overtaken is closed or asleep within those seconds, the account
     lacks that save until that device opens the page again (its own copy still has it).
   - Known limits: when two copies both record answers on the same day, that day's counts and XP take the larger

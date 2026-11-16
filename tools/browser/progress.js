@@ -331,10 +331,13 @@ const run = async (name, fn) => { if (ONLY && ONLY !== name) return; try { await
     await later(30000); await wait(a, 32000);                     // about a minute after the last look
     check('... and looks that find nothing new get rarer: no look a minute after the last one', A.gets === g1, { looks: A.gets - g1 });
     await startQuiz(b, 'c01-s02'); const qb = await answer(b, true); await wait(b, 2500);      // the other device saves something new
-    await later(300000);
-    const got = await a.waitForFunction(([k, id]) => { const p = JSON.parse(localStorage.getItem(k) || 'null'); return !!(p && p.q && p.q[id]); }, [LS, qb], { timeout: 40000 }).then(() => true, () => false);
-    await wait(a, 10000); const g2 = A.gets; await wait(a, 22500);      // the tick after the one that brought the news (no clock moved this time)
-    check('... and news from another device brings the half-minute pace back', got && A.gets === g2 + 1, { gotTheNews: got, looksInTheNextHalfMinute: A.gets - g2 });
+    const hasNews = () => a.evaluate(([k, id]) => { const p = JSON.parse(localStorage.getItem(k) || 'null'); return !!(p && p.q && p.q[id]); }, [LS, qb]);
+    const hadIt = await hasNews();                                // not yet: the next look by itself is most of a minute away
+    await a.mouse.move(120, 300); await a.mouse.move(140, 320);   // the student is back at this device: the mouse moves for the first time in minutes
+    await wait(a, 1500);
+    check('... and a mouse that moves again after minutes makes the page look at once', !hadIt && await hasNews(), { hadItBefore: hadIt, hasItNow: await hasNews() });
+    const g2 = A.gets; await wait(a, 52000);                      // no clock moved this time
+    check('... and news from another device brings the half-minute pace back', A.gets === g2 + 1, { looksInTheNextMinute: A.gets - g2 });
     check('no page errors (in view)', w.errs().length === 0, w.errs());
     await w.close();
   });

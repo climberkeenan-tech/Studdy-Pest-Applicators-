@@ -565,14 +565,24 @@ window.addEventListener('focus', () => { if (document.visibilityState !== 'hidde
 window.addEventListener('online', wake);
 /* A page that simply stays in view (a laptop on the desk) looks at the account by itself: it shows what another
    device saved, and it repairs the account if a save from elsewhere landed on top of its own. Half a minute after
-   the last look at first. Every such look doubles the wait, up to 4 minutes, and news from another device brings
+   the last look at first. Every such look doubles the wait, up to 2 minutes, and news from another device brings
    the half minute back (takeIn): a student with one device, or with no connection, is not charged 120 reads an hour.
    Not while something waits to be saved or the account cannot be reached: flush() reads it then, at its own pace. */
 setInterval(() => {
   if (document.visibilityState === 'hidden' || sync !== 'synced' || dirty || saving || Date.now() - seenAt < pollWait - 10000) return;
-  pollWait = Math.min(pollWait * 2, 240000);
+  pollWait = Math.min(pollWait * 2, 120000);
   refresh();
 }, 30000);
+/* The mouse moves again over a page that nobody touched for a minute: the student is back at this device (after
+   the phone, say). Look at the account now, so that the click that follows acts on today's numbers. Mouse only:
+   it moves before it clicks, which gives the read a head start. A phone comes back through wake(). */
+let lastMove = Date.now();
+window.addEventListener('pointermove', e => {
+  if (e.pointerType !== 'mouse') return;
+  const now = Date.now(), back = now - lastMove > 60000;
+  lastMove = now;
+  if (back && sync === 'synced' && !dirty && !saving && now - seenAt > 20000) refresh();
+}, { passive: true });
 
 async function initDb() {
   if (!window.claude || !claude.use) return;

@@ -44,9 +44,15 @@ async function world(browser, url) {
   const acct = { doc: null, gets: 0, sets: 0 };
   const devices = [];
   async function device(opts) {
-    const dev = { down: false, hang: false, lateNext: 0, flying: 0, overlap: 0 };      // down: calls fail at once. hang: calls never answer. lateNext: the next write lands after that many ms.
+    const dev = { down: false, hang: false, lateNext: 0, slowGetNext: 0, flying: 0, overlap: 0 };      // slowGetNext: the next read answers after that many ms, with what the account held when it was asked      // down: calls fail at once. hang: calls never answer. lateNext: the next write lands after that many ms.
     dev.ctx = await browser.newContext({ viewport: { width: 420, height: 900 }, timezoneId: (opts && opts.timezoneId) || 'America/New_York', locale: 'en-US' });
-    await dev.ctx.exposeFunction('__acctGet', () => { if (dev.hang) return new Promise(() => {}); if (dev.down) throw new Error('down'); acct.gets++; return acct.doc; });
+    await dev.ctx.exposeFunction('__acctGet', () => {
+      if (dev.hang) return new Promise(() => {});
+      if (dev.down) throw new Error('down');
+      acct.gets++;
+      if (dev.slowGetNext) { const ms = dev.slowGetNext, then = acct.doc; dev.slowGetNext = 0; return new Promise(r => setTimeout(() => r(then), ms)); }
+      return acct.doc;
+    });
     await dev.ctx.exposeFunction('__acctSet', v => {
       if (dev.hang) return new Promise(() => {});
       if (dev.down) throw new Error('down');
@@ -263,6 +269,43 @@ const run = async (name, fn) => { if (ONLY && ONLY !== name) return; try { await
     A.down = false;                                               // the connection returns; nothing tells the page
     await a.waitForFunction(() => [...document.querySelectorAll('.secrow[data-sid="c01-s01"] .pill')].some(x => x.textContent.trim() === 'Passed'), null, { timeout: 35000 }).catch(() => {});
     check('a page that came back into view with no connection looks again by itself and catches up', (await rowPills(a, 'c01-s01')).includes('Passed'), await rowPills(a, 'c01-s01'));
+    await w.close();
+  });
+
+  await run('overtaken', async () => {
+    const w = await world(browser, url); const A = await w.device(), B = await w.device();
+    const a = await A.tab(), b = await B.tab();
+    A.slowGetNext = 13000;                                        // the laptop's next read of the account takes 13 s to come back
+    await startQuiz(a, 'c01-s02'); const qa = await answer(a, true);            // its save starts: the read is sent, the reply is on its way
+    await wait(a, 1200);
+    await startQuiz(b, 'c01-s01'); await passQuiz(b); await wait(b, 2500);      // meanwhile the phone passes a card and saves it
+    const mid = !!(w.acct.doc && w.acct.doc.passed && w.acct.doc.passed['c01-s01']);
+    // the laptop's reply arrives and it writes what it joined: an account without the phone's card
+    for (let k = 0; k < 40 && !(w.acct.doc && w.acct.doc.q && w.acct.doc.q[qa]); k++) await wait(a, 500);
+    const after = !!(w.acct.doc.passed && w.acct.doc.passed['c01-s01']);
+    check('(setup) the phone saved its card while the laptop\'s save was under way, and the laptop\'s write then landed on top of it', mid && !after, { mid, after });
+    for (let k = 0; k < 90 && !(w.acct.doc.passed && w.acct.doc.passed['c01-s01']); k++) await wait(b, 500);      // the phone looks at the account again by itself
+    const d = w.acct.doc;
+    check('a save from another device landing on top does not cost the passed card: the phone puts it back by itself, with nobody touching it', !!(d.passed && d.passed['c01-s01'] && d.q[qa]), { passed: Object.keys(d.passed || {}), laptopAnswer: !!d.q[qa] });
+    await home(a);
+    await a.evaluate(() => { window.__off += 61000; });
+    await a.waitForFunction(() => [...document.querySelectorAll('.secrow[data-sid="c01-s01"] .pill')].some(x => x.textContent.trim() === 'Passed'), null, { timeout: 40000 }).catch(() => {});
+    check('... and the laptop shows the phone\'s card too', (await rowPills(a, 'c01-s01')).includes('Passed'), await rowPills(a, 'c01-s01'));
+    check('no page errors (overtaken)', w.errs().length === 0, w.errs());
+    await w.close();
+  });
+
+  await run('in-view', async () => {
+    const w = await world(browser, url); const A = await w.device(), B = await w.device();
+    const a = await A.tab();                                      // stays open and in view the whole time: no reload, no event
+    const b = await B.tab(); await startQuiz(b, 'c01-s01'); await passQuiz(b); await wait(b, 2500);
+    const reads = w.acct.gets;
+    await a.evaluate(() => { window.__off += 61000; });           // a minute passes on that page's clock
+    await a.waitForFunction(() => [...document.querySelectorAll('.secrow[data-sid="c01-s01"] .pill')].some(x => x.textContent.trim() === 'Passed'), null, { timeout: 40000 }).catch(() => {});
+    check('a page that simply stays in view shows what another device saved within about a minute', (await rowPills(a, 'c01-s01')).includes('Passed') && w.acct.sets > 0, { pills: await rowPills(a, 'c01-s01'), readsByThatPage: w.acct.gets - reads });
+    const sets = w.acct.sets;
+    await a.evaluate(() => { window.__off += 61000; }); await wait(a, 32000);
+    check('... and looking again with nothing new writes nothing', w.acct.sets === sets, { sets, now: w.acct.sets });
     await w.close();
   });
 

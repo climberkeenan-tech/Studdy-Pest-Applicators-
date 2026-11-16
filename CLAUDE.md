@@ -110,7 +110,7 @@ plays that everywhere. A card starts reading when it opens. Do not remove this.
   If the viewer turned reading aloud off (`not_granted`), nothing speaks unless they pick the recording themselves.
 - **After changing the reader or the storage code** in `app/template.html`:
   `python3 tools/build.py && node tools/check_join.js && tools/browser/run.sh` (the rules for joining two copies
-  of the progress against random histories, then seven suites in real Chromium, about 8 minutes: the recorded
+  of the progress against random histories, then seven suites in real Chromium, about 10 minutes: the recorded
   voice and its fallbacks, a stand-in for the live Claude voice, stalled and dead connections, progress saved
   across devices and tabs, the day streak over a moved calendar). It needs the Chapter 1 recordings in `dist/audio`.
   Browser tests load the page over http (`tools/browser/serve.js`), never from a `file://` address: Chromium
@@ -290,6 +290,11 @@ plays that everywhere. A card starts reading when it opens. Do not remove this.
   - Two tabs on one device join through the `storage` event. A write that got no answer in 15 seconds may still
     land, so the next write waits for it (`held`). A read that fails is tried again with a growing pause, also
     when the account was never read (`initDb`), and at once when the page or the connection comes back (`wake`).
+  - The store keeps whichever write lands last, so a slow save on one device can land on top of a save from
+    another. The page therefore looks at the account again 6 and 35 seconds after each of its writes (`lookT`)
+    and once a minute while it is in view, and saves again if the account lacks something it holds. This uses
+    `get()` only. `onSnapshot` would do it live, but it has never been run against the real store from here:
+    do not switch to it without a way to test it in the real viewer.
   - Known limits: when two copies both record answers on the same day, that day's counts and XP take the larger
     of the two, not the sum. Settings are joined as a whole (the copy that changed a setting last wins all of
     them). Two devices whose clocks disagree by minutes can order two answers to one question wrongly.

@@ -176,6 +176,12 @@ function holdsAll(m, x, name) {
   // settings follow the copy whose settings were changed last, not the copy that was saved last
   m = joinProfiles(P({ settings: { rate: 1.3 }, settingsAt: 50, updatedAt: 60 }), P({ settings: { rate: 0.8 }, settingsAt: 40, updatedAt: 900 }));
   ok(m.settings.rate === 1.3 && m.settingsAt === 50, 'settings come from the copy that changed them last', m.settings);
+  // settings saved before settingsAt existed: what somebody chose beats a fresh device's untouched defaults, in either order
+  {
+    const chosen = P({ settings: { autoplay: false, sound: false }, updatedAt: 700 }), fresh = P({ updatedAt: 900 });
+    const one = joinProfiles(chosen, fresh), two = joinProfiles(fresh, chosen);
+    ok(one.settings.autoplay === false && one.settings.sound === false && sig(one) === sig(two), 'settings chosen before this change are not replaced by a fresh device\'s defaults', [one.settings, two.settings]);
+  }
   // sessions: ended on either copy is ended, lists are joined, the newest 30 are kept
   const s1 = { id: 's1', start: 10, touch: 20, end: null, a: 2, c: 1, xp: 20, best: 1, passed: [], cleared: [], failed: [], missed: ['q1'], studied: ['a'], rapid: null };
   const s2 = Object.assign(clone(s1), { touch: 30, end: 40, a: 3, c: 2, xp: 32, missed: ['q1', 'q2'], studied: ['a', 'b'] });

@@ -422,7 +422,8 @@ function joinProfiles(a, b) {
   for (const x of [...a.sessions, ...b.sessions]) byId[x.id] = byId[x.id] ? joinSession(byId[x.id], x) : clone(x);
   out.sessions = Object.values(byId).sort((x, y) => num(y.start) - num(x.start) || (String(y.id) > String(x.id) ? 1 : String(y.id) < String(x.id) ? -1 : 0)).slice(0, 30);
   // settings: the copy that changed its settings last
-  const sNew = num(a.settingsAt) - num(b.settingsAt) || (sig(a.settings) >= sig(b.settings) ? 1 : -1);
+  const dflt = sig(blank().settings), own = c => (sig(c.settings) === dflt ? 0 : 1);      // same age: settings somebody chose beat untouched defaults
+  const sNew = num(a.settingsAt) - num(b.settingsAt) || own(a) - own(b) || (sig(a.settings) >= sig(b.settings) ? 1 : -1);
   out.settings = clone((sNew >= 0 ? a : b).settings);
   out.settingsAt = Math.max(num(a.settingsAt), num(b.settingsAt));
   out.xp = Math.max(num(a.xp), num(b.xp), Object.values(out.days).reduce((t, d) => t + num(d.xp), 0));
@@ -435,6 +436,7 @@ let P = normalize(lsGet(LS_KEY));
 let profRef = null, sync = 'local', dirty = false, saving = false, saveT = null, loaded = false, seenAt = 0, acctAt = 0, fails = 0;
 /* A call to the account that gets no answer must not hold everything up: after `ms` it counts as failed. */
 let held = null;      // a write that got no answer in time and may still land: the next write waits for it
+let lookT = null;     // a second look at the account a few seconds after a write
 let writing = false;  // a write is on its way (the footer must not say "saved" yet)
 const timed = (p, ms) => new Promise((ok, no) => { const t = setTimeout(() => no({ code: 'unavailable', message: 'no answer', late: true }), ms); Promise.resolve(p).then(v => { clearTimeout(t); ok(v); }, e => { clearTimeout(t); no(e); }); });
 /* What a failed call means for the footer: full (a storage cap), off (this view may not use the account), error (try again). */
@@ -444,6 +446,7 @@ function save() {
   P.updatedAt = Date.now();
   lsSet(LS_KEY, P);
   dirty = true;
+  clearTimeout(lookT);
   clearTimeout(saveT);
   saveT = setTimeout(flush, 700);
   renderFoot();
@@ -492,14 +495,20 @@ async function flush() {
       const sent = profRef.set(JSON.parse(body));
       try { await timed(sent, 15000); }
       catch (e) {
-        if (e && e.late) {      // no answer yet, but it may still land: the next write waits for it (2 minutes at most)
+        if (e && e.late) {      // no answer yet, but it may still land: the next write waits for it (45 s at most; the later looks repair the rest)
           const mine = held = {};
-          const free = () => { if (held !== mine) return; held = null; dirty = true; clearTimeout(saveT); saveT = setTimeout(flush, 700); };
-          Promise.resolve(sent).then(free, free); setTimeout(free, 120000);
+          const free = () => { if (held === mine) held = null; dirty = true; clearTimeout(saveT); saveT = setTimeout(flush, 700); };
+          Promise.resolve(sent).then(free, free);      // answered at last, even after the hold ran out: it may sit on top of a newer write, so read and save again
+          setTimeout(() => { if (held === mine) free(); }, 45000);
         }
         throw e;
       }
       acctAt = Date.now();
+      // The store keeps whichever write lands last. If another device read the account just before this write
+      // and writes after it, this write is gone from the account. So look again, 6 s on and once more 35 s on
+      // (a slow read and a slow write elsewhere can take that long): refresh() joins what is there and saves
+      // again if the account lacks something this page holds.
+      clearTimeout(lookT); lookT = setTimeout(() => { refresh(); lookT = setTimeout(refresh, 29000); }, 6000);
     }
     sync = 'synced'; seenAt = Date.now(); fails = 0;
   } catch (e) { dirty = true; sync = failKind(e); fails++; }
@@ -517,7 +526,12 @@ async function refresh() {
   if (!loaded || !profRef || saving) return;
   saving = true;
   let news = false, failed = false;
-  try { const t = takeIn(await readAcct()); news = t.news; if (t.need) dirty = true; seenAt = Date.now(); seeFails = 0; if (sync === 'error') { sync = 'synced'; fails = 0; } } catch (e) { failed = failKind(e) === 'error'; }
+  try {
+    const snap = await readAcct(), t = takeIn(snap);
+    news = t.news; if (t.need) dirty = true;
+    if (snap && snap.metadata && snap.metadata.fromCache) failed = true;      // a copy the store has not confirmed: joined, but not a look at the account
+    else { seenAt = Date.now(); seeFails = 0; if (sync === 'error') { sync = 'synced'; fails = 0; } }
+  } catch (e) { failed = failKind(e) === 'error'; }
   saving = false;
   if (news) remoteNews();
   renderFoot();
@@ -528,7 +542,7 @@ async function refresh() {
 /* The calendar day the screen was last drawn for. A page left open overnight must not go on saying
    "Today is counted": when the day changes, the home page (or, elsewhere, the header) is drawn again. */
 let shownDay = dayKey();
-function newDay() { if (shownDay === dayKey()) return; shownDay = dayKey(); if (S.view === 'home') render(); else renderChips(); }
+function newDay() { if (shownDay === dayKey()) return; shownDay = dayKey(); if (S.view === 'home') render(); else { renderChips(); renderFoot(); } }
 setInterval(newDay, 30000);
 /* The page is back in view, or the connection is back: look at the calendar and at the account. */
 function wake() {
@@ -548,6 +562,9 @@ window.addEventListener('storage', e => {
 document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') flush(); else wake(); });
 window.addEventListener('focus', () => { if (document.visibilityState !== 'hidden') wake(); });
 window.addEventListener('online', wake);
+/* A page that simply stays in view (a laptop on the desk) looks at the account once a minute: it shows what
+   another device saved, and it repairs the account if a save from elsewhere landed on top of its own. */
+setInterval(() => { if (loaded && document.visibilityState !== 'hidden' && Date.now() - seenAt > 60000) refresh(); }, 30000);
 
 async function initDb() {
   if (!window.claude || !claude.use) return;
@@ -1981,7 +1998,7 @@ function start(data) {
   try {
     if (data && data.view) {
       const okQuiz = !data.quiz || data.quiz.items.every(it => Q[it.id]);
-      if (okQuiz && (!data.sid || SEC[data.sid])) { Object.assign(S, { view: data.view, sid: data.sid, quiz: data.quiz, result: data.result, summary: data.summary, combo: data.combo || 0 }); if (S.view === 'quiz' && !S.quiz) S.view = 'home'; }
+      if (okQuiz && (!data.sid || SEC[data.sid])) { Object.assign(S, { view: data.view, sid: data.sid, quiz: data.quiz, result: data.result, summary: data.summary, combo: data.combo || 0 }); if (S.view === 'quiz' && !S.quiz) S.view = 'home'; if (S.quiz && S.quiz.cur) S.quiz.cur.grading = false; }
     }
   } catch (e) { S.view = 'home'; }
   render();

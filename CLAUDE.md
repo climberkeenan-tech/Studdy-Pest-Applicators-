@@ -107,11 +107,12 @@ plays that everywhere. A card starts reading when it opens. Do not remove this.
   tries a fetched copy, then Web Audio, then the next voice, and says why in the voice note. Every wait has a
   15-second limit (no data from the file, no data from the fetched copy), so a dead connection ends in a note
   and another voice, never in silence.
-- **After changing the reader or the storage code** in `app/template.html`:
-  `python3 tools/build.py && tools/browser/run.sh` (72 checks in real Chromium, about 3 minutes: the recorded
-  voice and its fallbacks, a stand-in for the live Claude voice, stalled and dead connections, saved progress).
-  It needs the Chapter 1 recordings in `dist/audio`.
   If the viewer turned reading aloud off (`not_granted`), nothing speaks unless they pick the recording themselves.
+- **After changing the reader or the storage code** in `app/template.html`:
+  `python3 tools/build.py && node tools/check_join.js && tools/browser/run.sh` (the rules for joining two copies
+  of the progress against random histories, then seven suites in real Chromium, about 5 minutes: the recorded
+  voice and its fallbacks, a stand-in for the live Claude voice, stalled and dead connections, progress saved
+  across devices and tabs, the day streak over a moved calendar). It needs the Chapter 1 recordings in `dist/audio`.
 - **Recording** (`tools/narrate.py`): Kokoro TTS, voice `af_heart`, on the CPU. All 221 cards are 8.2 hours
   of audio and 148 MB; about 90 minutes on 4 cores.
   - Once per container: `python3 tools/narrate.py --setup` (Python 3.12 venv, model and word lists, about 700 MB;
@@ -196,7 +197,9 @@ plays that everywhere. A card starts reading when it opens. Do not remove this.
 - `content/narration.json`: timing of the recorded narration (written by `tools/narrate.py`, read by the build).
 - `tools/narrate.py`: records the narration and holds the pronunciation rules. `dist/audio/*.mp3` is its output (not in git).
 - `tools/check_narration.js`: the page and `narrate.py` must split every card into the same sentences and words.
-- `tools/browser/`: browser tests of the reader (`run.sh` runs all five; each file says what it covers).
+- `tools/browser/`: browser tests of the reader and of saved progress (`run.sh` runs all seven; each file says
+  what it covers). `progress.js` is the one for saving and the day streak.
+- `tools/check_join.js`: the rules for joining two copies of the saved progress (`joinProfiles` in the page).
 - `tools/say_cases.json`: regression cases for the pronunciation rules (`python3 tools/narrate.py --check`).
 - `tools/listen.py`: listening check for the recordings (speech recogniser; optional, large download).
 - `tools/crop_photos_chNN.py`, `tools/fig_1_4.py`, `tools/fig_9_1.py`: how the photo crops and two figures were made.
@@ -267,7 +270,24 @@ plays that everywhere. A card starts reading when it opens. Do not remove this.
   are exact (the model reports when each sound is spoken). With the live voices the word is estimated.
 - A card starts reading when it is opened ("Read to me when a card opens"). "Keep going to the next card" opens
   the next card and reads it when one ends. Both are settings in the voice bar, saved with the profile.
-- Progress is saved per user in the artifact database (`data/users/<id>/profile`), mirrored in localStorage.
-  The page never writes to the account before it has read it (`loaded`, `P.base` in `app/template.html`).
-  Keep that guard: without it a visit that could not read the saved copy overwrote it with an empty one.
+- **Saved progress.** One document per user in the artifact database (`data/users/<id>/profile`), mirrored in
+  localStorage. Every answered real question is saved at once on the device and about a second later in the account.
+  - Copies are **joined, never replaced** (`joinProfiles` in `app/template.html`). The store is "last write
+    wins", and until 2026-11-16 a page left open on one device wrote its older copy over the account and wiped
+    what another device had saved. Now every save is read, join, write (`flush`), and a page that comes back
+    into view reads again (`refresh`). Nothing is written before the account copy has been read (`loaded`):
+    keep that guard. A call that gets no answer counts as failed after 15 seconds (`timed`) and is retried.
+  - Join rules: counts only grow. A card passed anywhere stays passed. Per question the later answer decides
+    the run, and a miss on either copy keeps the question on the weak list. A copy joined with an older version
+    of itself comes back unchanged. Ties are settled by content only, so the order of joining does not matter.
+    `node tools/check_join.js` tests these. Known limit: when two copies both record answers on the same day,
+    that day's counts and XP take the larger of the two, not the sum.
+  - The footer and the result screens say when progress was last saved (`syncText`).
+- **What counts.** Only answered questions on real cards. `P.days[date].a` is that day's answers, and the day
+  streak counts back over days with `a > 0` (the device's calendar days; one missed day ends it).
+  A card listened to the end (80% of its sentences started) is remembered (`P.read`, `days[date].r`) and shown
+  as "Listened", but it is not a pass and not a study day. The practice card records nothing and says so.
+  On 2026-11-16 the user's saved copy held two visits and zero answers, and they asked whether saving and the
+  streak "really work". They were asked whether listening should count for the streak: do not change that
+  rule until they answer.
 - Session: 5-question rapid round from studied cards (open misses first), next card, quiz, summary.

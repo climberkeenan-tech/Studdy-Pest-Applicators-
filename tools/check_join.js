@@ -9,7 +9,8 @@
 //   - the order of joining does not matter, and devices that keep syncing end up identical
 //   - a miss is never forgiven by a join
 const fs = require('fs'), path = require('path');
-const src = fs.readFileSync(path.join(__dirname, '..', 'app/template.html'), 'utf8');
+const ROOT = process.env.JOIN_ROOT || path.join(__dirname, '..');      // JOIN_SRC: another copy of the page to test (a patched trial)
+const src = fs.readFileSync(process.env.JOIN_SRC || path.join(ROOT, 'app/template.html'), 'utf8');
 const i = src.indexOf('function blank()'), j = src.indexOf('let P = normalize(lsGet(LS_KEY));', i);
 if (i < 0 || j < 0) { console.error('joinProfiles not found in app/template.html'); process.exit(2); }
 const { blank, normalize, joinProfiles, sig, sigP } = new Function(src.slice(i, j) + '\nreturn { blank, normalize, joinProfiles, sig, sigP };')();
@@ -23,9 +24,10 @@ const ok = (cond, name, detail) => { checks++; if (!cond) { failures++; if (fail
 
 // ---- a small model of how the page changes the profile (record(), finishQuiz(), sessions, markRead(), settings)
 const CARDS = Array.from({ length: 12 }, (_, k) => 'c01-s' + String(k + 1).padStart(2, '0'));
-const QIDS = CARDS.flatMap(c => [1, 2, 3, 4].map(n => c + '-t' + n));
+const ALLQ = CARDS.flatMap(c => [1, 2, 3, 4].map(n => c + '-t' + n));
+let QIDS = ALLQ;                                            // some runs use only a few questions, so two devices answer the same ones
 const dayOf = t => 'd' + Math.floor(t / 1000);              // 1000 ticks to a "day"
-function device(p) { return { P: normalize(clone(p)), combo: 0, sess: null }; }
+function device(p) { return { P: normalize(clone(p)), combo: 0, sess: null, log: [] }; }
 function touch(d, t) { d.P.updatedAt = Math.max(d.P.updatedAt || 0, t); }
 function today(d, t) { return d.P.days[dayOf(t)] || (d.P.days[dayOf(t)] = { a: 0, c: 0, xp: 0 }); }
 function sessOf(d) { return d.sess && d.P.sessions.find(x => x.id === d.sess && !x.end); }
@@ -34,9 +36,10 @@ function answer(d, qid, right, t) {
   let gain = 0;
   if (right) { d.combo++; gain = 10 + Math.min(d.combo - 1, 5) * 2; } else d.combo = 0;
   st.seen++; st.last = t;
+  d.log.push([t, qid, right]);
   const s = sessOf(d);
-  if (right) { st.right++; st.run++; if (st.open && st.run >= 2) { st.open = false; gain += 25; if (s) s.cleared.push(qid); } }
-  else { st.wrong++; st.run = 0; st.open = true; if (s && !s.missed.includes(qid)) s.missed.push(qid); }
+  if (right) { st.right++; st.run++; if (st.open && st.run >= 2) { st.open = false; gain += 25; if (s && !s.cleared.includes(qid)) s.cleared.push(qid); } }
+  else { st.wrong++; st.run = 0; st.open = true; st.miss = t; if (s && !s.missed.includes(qid)) s.missed.push(qid); }
   const day = today(d, t); day.a++; if (right) day.c++; day.xp += gain;
   d.P.xp += gain; d.P.bestCombo = Math.max(d.P.bestCombo, d.combo);
   if (s) { s.a++; if (right) s.c++; s.xp += gain; s.best = Math.max(s.best, d.combo); s.touch = t; }
@@ -63,13 +66,26 @@ function listen(d, sid, t) {
   const s = sessOf(d); if (s && !s.studied.includes(sid)) { s.studied.push(sid); s.touch = t; }
   touch(d, t);
 }
+// a reload: the page closes a session this copy last saw in use more than 3 "hours" ago (resumeSession)
+function reload(d, t) { for (const x of d.P.sessions) if (!x.end && t - (x.touch || x.start) > 125) x.end = x.touch || x.start; d.sess = (d.P.sessions.find(x => !x.end) || {}).id || null; }
+// the weak list as it truly is: every answer of every device, in the order given, by the page's own rule
+function truth(logs) {
+  const st = {};
+  for (const [t, qid, right] of logs.flat().sort((a, b) => a[0] - b[0])) {
+    const r = st[qid] || (st[qid] = { run: 0, open: false, n: 0 });
+    r.n++;
+    if (right) { r.run++; if (r.open && r.run >= 2) r.open = false; } else { r.run = 0; r.open = true; }
+  }
+  return st;
+}
 function setting(d, t) { d.P.settings.rate = pick([0.8, 1, 1.15, 1.3]); d.P.settings.chain = rnd() < 0.5; d.P.settingsAt = t; touch(d, t); }
 function step(d, t) {
   const r = rnd();
   if (r < 0.62) answer(d, pick(QIDS), rnd() < 0.7, t);
   else if (r < 0.74) finish(d, pick(CARDS), rnd() < 0.5 ? 100 : pick([40, 60, 80]), t);
   else if (r < 0.80) { if (sessOf(d)) endSession(d, t); else startSession(d, t); }
-  else if (r < 0.90) listen(d, pick(CARDS), t);
+  else if (r < 0.88) listen(d, pick(CARDS), t);
+  else if (r < 0.93) reload(d, t);
   else setting(d, t);
 }
 function streak(P, t) {
@@ -115,6 +131,38 @@ function holdsAll(m, x, name) {
   const missedLater = q({ seen: 4, right: 1, wrong: 3, run: 0, open: true, last: 300 });
   m = joinProfiles(P({ q: { x: cleared }, updatedAt: 210 }), P({ q: { x: missedLater }, updatedAt: 300 })).q.x;
   ok(m.open === true && m.run === 0, 'a miss on the other copy is not forgiven (missed later)', m);
+  // the review's first case: both devices miss it while one cannot save. Monday phone: wrong, right, right (cleared).
+  // Tuesday laptop: wrong. Wednesday phone: right once. Only one right answer came after the last miss.
+  const phone = q({ seen: 4, right: 3, wrong: 1, run: 3, open: false, last: 300, miss: 100 });
+  const laptop = q({ seen: 1, right: 0, wrong: 1, run: 0, open: true, last: 200, miss: 200 });
+  for (const [a, b] of [[phone, laptop], [laptop, phone]]) {
+    m = joinProfiles(P({ q: { x: a }, updatedAt: a.last }), P({ q: { x: b }, updatedAt: b.last })).q.x;
+    ok(m.open === true && m.run <= 1 && m.miss === 200, 'a miss made while a device could not save is not forgiven by the other device\'s later right answer', m);
+  }
+  // the review's second case: cleared on the phone; a laptop page left open still lists it and answers right once
+  const cleared2 = q({ seen: 3, right: 2, wrong: 1, run: 2, open: false, last: 210, miss: 100 });
+  const stale = q({ seen: 2, right: 1, wrong: 1, run: 1, open: true, last: 300, miss: 100 });
+  for (const [a, b] of [[cleared2, stale], [stale, cleared2]]) {
+    m = joinProfiles(P({ q: { x: a }, updatedAt: a.last }), P({ q: { x: b }, updatedAt: b.last })).q.x;
+    ok(m.open === false && m.run >= 2, 'a question cleared after the newest miss stays cleared when a page left open answers it again', m);
+  }
+  // lists that hold the same items in another order, or one of them twice: both orders of joining agree
+  {
+    const sA = { id: 's5', start: 10, touch: 20, end: null, a: 2, c: 1, xp: 20, best: 1, passed: [], cleared: ['q1'], failed: [], missed: ['q1', 'q2'], studied: [], rapid: null };
+    const sB = Object.assign(clone(sA), { cleared: ['q1', 'q1'], missed: ['q2', 'q1'] });
+    const ab = joinProfiles(P({ sessions: [sA], updatedAt: 20 }), P({ sessions: [sB], updatedAt: 20 })), ba = joinProfiles(P({ sessions: [sB], updatedAt: 20 }), P({ sessions: [sA], updatedAt: 20 }));
+    ok(sig(ab) === sig(ba), 'session lists with the same items in another order join to one result', [ab.sessions[0].cleared, ba.sessions[0].cleared, ab.sessions[0].missed, ba.sessions[0].missed]);
+  }
+  // a session closed by a stale page's 3-hour rule (end = its old touch) stays open if another copy used it later
+  {
+    const live = { id: 's6', start: 10, touch: 900, end: null, a: 7, c: 5, xp: 70, best: 3, passed: [], cleared: [], failed: [], missed: [], studied: [], rapid: null };
+    const closedByStalePage = Object.assign(clone(live), { touch: 300, end: 300, a: 3, c: 2, xp: 30 });
+    m = joinProfiles(P({ sessions: [live], updatedAt: 900 }), P({ sessions: [closedByStalePage], updatedAt: 950 })).sessions[0];
+    ok(m.end === null && m.a === 7 && m.touch === 900, 'a session a stale page closed is still open when another copy used it after that', m);
+    const reallyEnded = Object.assign(clone(live), { end: 905 });
+    m = joinProfiles(P({ sessions: [live], updatedAt: 900 }), P({ sessions: [reallyEnded], updatedAt: 905 })).sessions[0];
+    ok(m.end === 905, 'a session the student ended stays ended', m);
+  }
   // an older version of the same record does not un-clear a question
   m = joinProfiles(P({ q: { x: q(base) }, updatedAt: 100 }), P({ q: { x: cleared }, updatedAt: 210 })).q.x;
   ok(m.open === false && m.run === 2 && m.seen === 4, 'an older copy does not put a cleared question back', m);
@@ -156,7 +204,9 @@ function holdsAll(m, x, name) {
 
 // ================= 2. random histories
 const RUNS = 1500;
+let forgiven = 0, strict = 0, compared = 0;
 for (let run = 0; run < RUNS; run++) {
+  QIDS = run % 3 === 0 ? ALLQ : ALLQ.slice(0, run % 3 === 1 ? 5 : 12);
   let t = 1000 + Math.floor(rnd() * 3000);
   const start = device(blank());
   for (let k = Math.floor(rnd() * 25); k > 0; k--) step(start, t += 1 + Math.floor(rnd() * 400));
@@ -170,9 +220,10 @@ for (let run = 0; run < RUNS; run++) {
 
   // (b) two devices going on from the base at the same time
   const A = device(base), B = device(base);
-  let ta = t, tb = t;
-  for (let k = Math.floor(rnd() * 18); k > 0; k--) step(A, ta += 1 + Math.floor(rnd() * 500));
-  for (let k = Math.floor(rnd() * 18); k > 0; k--) step(B, tb += 1 + Math.floor(rnd() * 500));
+  A.sess = B.sess = (base.sessions.find(x => !x.end) || {}).id || null;
+  let ta = t + (t % 2), tb = t + (t % 2) + 1;               // A answers on even ticks, B on odd ones: the order of all answers is known
+  for (let k = Math.floor(rnd() * 18); k > 0; k--) step(A, ta += 2 * (1 + Math.floor(rnd() * 250)));
+  for (let k = Math.floor(rnd() * 18); k > 0; k--) step(B, tb += 2 * (1 + Math.floor(rnd() * 250)));
   const ab = joinProfiles(A.P, B.P), ba = joinProfiles(B.P, A.P);
   ok(sig(ab) === sig(ba), 'the order of joining does not matter', { run });
   const again = [joinProfiles(ab, A.P), joinProfiles(ab, B.P), joinProfiles(B.P, ab)].find(x => sig(x) !== sig(ab));
@@ -181,15 +232,16 @@ for (let run = 0; run < RUNS; run++) {
   const now = Math.max(ta, tb);
   ok(streak(ab, now) >= Math.max(streak(A.P, now), streak(B.P, now)), 'the day streak never gets shorter by joining', { run, joined: streak(ab, now), a: streak(A.P, now), b: streak(B.P, now) });
   for (const k of Object.keys(ab.q)) {
-    const x = A.P.q[k], y = B.P.q[k], m = ab.q[k], b0 = base.q[k];
+    const x = A.P.q[k], y = B.P.q[k], m = ab.q[k];
     if (x && y && x.open && y.open) ok(m.open, 'a question on both weak lists stays on the weak list', k);
-    // each copy answered it since the base, and one of them missed it last: the miss must stand
-    const moved = r => r && (!b0 || r.seen > b0.seen);
-    if (moved(x) && moved(y) && (x.open || y.open) && (x.wrong > (b0 ? b0.wrong : 0) || y.wrong > (b0 ? b0.wrong : 0)) && !(x.open && y.open)) {
-      const missedSide = x.open ? x : y, otherSide = x.open ? y : x;
-      if (missedSide.wrong > (b0 ? b0.wrong : 0) && otherSide.wrong <= missedSide.wrong && missedSide.run === 0) ok(m.open, 'a fresh miss on one device is not forgiven by the other device\'s right answers', { k, x, y, m });
-    }
     if (m.open === false) ok((x && !x.open) || (y && !y.open), 'a question leaves the weak list only if some copy cleared it', k);
+  }
+  // against the truth: every answer of both devices in the order given
+  const real = truth([start.log, A.log, B.log]);
+  for (const k of Object.keys(real)) {
+    compared++;
+    if (real[k].open && !(ab.q[k] && ab.q[k].open)) { forgiven++; ok(false, 'a question that is truly on the weak list is on it after the join (no miss is forgiven)', { run, k, real: real[k], a: A.P.q[k], b: B.P.q[k], joined: ab.q[k] }); }
+    if (!real[k].open && ab.q[k] && ab.q[k].open) strict++;      // kept on the list although truly cleared: the safe side, counted below
   }
   for (const id of [...A.P.sessions, ...B.P.sessions].map(x => x.id)) {
     const all = [...new Map([...A.P.sessions, ...B.P.sessions].map(x => [x.id, x])).values()].sort((p, q) => q.start - p.start).slice(0, 30).map(x => x.id);
@@ -214,8 +266,10 @@ for (let run = 0; run < RUNS; run++) {
     const devs2 = before.map(p => device(p)); let account2 = clone(base);
     const sync2 = d => { d.P = joinProfiles(d.P, account2); account2 = clone(d.P); };
     for (let round = 0; round < 2; round++) for (const d of devs2.slice().reverse()) sync2(d);
-    const core = p => { const c = clone(p); delete c.settings; delete c.settingsAt; c.updatedAt = 0; return sig(c); };
-    void account2; void core;      // the order of syncing may change which copy's run counts on a question three devices answered; totals are checked above
+    // whatever the order of syncing, the same progress comes out: passed cards, days, counts, and the weak list
+    const core = p => sig({ passed: Object.keys(p.passed).sort(), days: p.days, read: p.read, xp: p.xp, attempts: Object.fromEntries(Object.entries(p.attempts).map(([k, v]) => [k, [v.n, v.best]])),
+      q: Object.fromEntries(Object.entries(p.q).map(([k, v]) => [k, [v.seen, v.right, v.wrong, v.open]])) });
+    ok(core(account) === core(account2), 'three devices synced in the opposite order end at the same progress and the same weak list', { run, where: firstDiff(JSON.parse(core(account)), JSON.parse(core(account2))) });
   }
 }
 
@@ -229,7 +283,7 @@ for (let run = 0; run < RUNS; run++) {
   // size: the profile at full use of the real manual (every question answered many times, every card passed and
   // listened to, four months of study days, 30 long sessions) must fit the store's 256 KiB limit.
   // The page trims old sessions once the text passes 200,000 characters and never below 3 sessions.
-  const dir = path.join(__dirname, '..', 'content/chapters');
+  const dir = path.join(ROOT, 'content/chapters');
   const cards = fs.readdirSync(dir).filter(f => f.endsWith('.json')).flatMap(f => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')).sections);
   const big = blank(); let tt = 1;
   for (const c of cards) {
@@ -248,5 +302,6 @@ for (let run = 0; run < RUNS; run++) {
   console.log('size at full use: ' + noSessions + ' characters without sessions, ' + full + ' with 30 long sessions, ' + body.length + ' written with ' + big.sessions.length + ' sessions kept (the store allows 262,144)');
 }
 
+console.log(`weak list against the true order of answers: ${compared} questions compared, ${forgiven} misses forgiven (must be 0), ${strict} kept on the list although truly cleared (the safe side: one more right answer clears them).`);
 console.log(`${checks - failures}/${checks} join checks pass (${RUNS} random histories, seed ${process.argv[2] || 20261116}).`);
 process.exit(failures ? 1 : 0);

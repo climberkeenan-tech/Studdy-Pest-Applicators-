@@ -1,6 +1,7 @@
 // Saved progress must survive taps made before it has loaded. usage: node sync.js <built page>
 const { chromium } = require('playwright');
-const page_ = process.argv[2];
+const path = require('path'), serve = require('./serve.js');
+const page_ = path.resolve(process.argv[2]);
 const results = [];
 const check = (name, ok, detail) => { results.push(ok); console.log((ok ? 'PASS ' : 'FAIL ') + name + (detail !== undefined ? '  ' + JSON.stringify(detail) : '')); };
 
@@ -17,11 +18,12 @@ const state = () => ({ sets: window.__sets.map(s => ({ xp: s.xp, passed: Object.
 
 (async () => {
   const browser = await chromium.launch();
+  const { srv, base } = await serve(path.dirname(page_));
   const run = async (name, opts, act) => {
     const ctx = await browser.newContext({ viewport: { width: 420, height: 900 } });
     const page = await ctx.newPage();
     await page.addInitScript(fake, opts);
-    await page.goto('file://' + page_);
+    await page.goto(base + path.basename(page_));
     await page.waitForTimeout(250);
     await act(page);                      // taps made while the saved copy is still loading
     await page.waitForTimeout(opts.delay + 1800);
@@ -53,7 +55,7 @@ const state = () => ({ sets: window.__sets.map(s => ({ xp: s.xp, passed: Object.
   s = await run('loaded, then a change', { remoteStamp: 1700000000000, delay: 300 }, async page => { await page.waitForTimeout(900); await tapEarly(page); });
   check('after loading, a change is saved on top of the saved progress', s.sets.length >= 1 && s.sets[s.sets.length - 1].xp === 4321 && s.sets[s.sets.length - 1].chain === true, s);
 
-  await browser.close();
+  await browser.close(); srv.close();
   console.log(`\n${results.filter(Boolean).length} of ${results.length} checks passed`);
   process.exit(results.every(Boolean) ? 0 : 1);
 })();

@@ -110,9 +110,11 @@ plays that everywhere. A card starts reading when it opens. Do not remove this.
   If the viewer turned reading aloud off (`not_granted`), nothing speaks unless they pick the recording themselves.
 - **After changing the reader or the storage code** in `app/template.html`:
   `python3 tools/build.py && node tools/check_join.js && tools/browser/run.sh` (the rules for joining two copies
-  of the progress against random histories, then seven suites in real Chromium, about 5 minutes: the recorded
+  of the progress against random histories, then seven suites in real Chromium, about 8 minutes: the recorded
   voice and its fallbacks, a stand-in for the live Claude voice, stalled and dead connections, progress saved
   across devices and tabs, the day streak over a moved calendar). It needs the Chapter 1 recordings in `dist/audio`.
+  Browser tests load the page over http (`tools/browser/serve.js`), never from a `file://` address: Chromium
+  sometimes hands a reloaded `file://` page an empty localStorage, and a saving test then fails at random.
 - **Recording** (`tools/narrate.py`): Kokoro TTS, voice `af_heart`, on the CPU. All 221 cards are 8.2 hours
   of audio and 148 MB; about 90 minutes on 4 cores.
   - Once per container: `python3 tools/narrate.py --setup` (Python 3.12 venv, model and word lists, about 700 MB;
@@ -280,13 +282,27 @@ plays that everywhere. A card starts reading when it opens. Do not remove this.
   - Join rules: counts only grow. A card passed anywhere stays passed. Per question the later answer decides
     the run, and a miss on either copy keeps the question on the weak list. A copy joined with an older version
     of itself comes back unchanged. Ties are settled by content only, so the order of joining does not matter.
-    `node tools/check_join.js` tests these. Known limit: when two copies both record answers on the same day,
-    that day's counts and XP take the larger of the two, not the sum.
-  - The footer and the result screens say when progress was last saved (`syncText`).
+    `node tools/check_join.js` tests these, including against the true order of every answer.
+  - Each question record keeps `miss`, the time of its last wrong answer. With it a join never forgives a miss
+    made on a device that could not save, and a question cleared after the newest miss stays cleared when a page
+    left open answers it again. Where the join cannot tell, the question stays on the weak list (one more right
+    answer clears it). Stamps only move forward (`st.last`, `settingsAt`), so a device clock set back undoes nothing.
+  - Two tabs on one device join through the `storage` event. A write that got no answer in 15 seconds may still
+    land, so the next write waits for it (`held`). A read that fails is tried again with a growing pause, also
+    when the account was never read (`initDb`), and at once when the page or the connection comes back (`wake`).
+  - Known limits: when two copies both record answers on the same day, that day's counts and XP take the larger
+    of the two, not the sum. Settings are joined as a whole (the copy that changed a setting last wins all of
+    them). Two devices whose clocks disagree by minutes can order two answers to one question wrongly.
+  - The footer and the result screens say when progress was last saved (`syncText`), and say so plainly when the
+    account cannot be reached or the browser refuses to store anything.
 - **What counts.** Only answered questions on real cards. `P.days[date].a` is that day's answers, and the day
   streak counts back over days with `a > 0` (the device's calendar days; one missed day ends it).
   A card listened to the end (80% of its sentences started) is remembered (`P.read`, `days[date].r`) and shown
-  as "Listened", but it is not a pass and not a study day. The practice card records nothing and says so.
+  as "Listened", but it is not a pass and not a study day. The sentences are counted from the audio's own clock
+  (`timeupdate`) and from what really played (`el.played` in `recEnded`), not only from animation frames: a
+  browser runs none while the phone is locked or the tab is in the background, which is how cards get listened to.
+  The practice card records nothing, says so, and does not feed the answer streak.
+  A page left open notices a new calendar day by itself (`newDay`) and redraws the streak, Today and days left.
   On 2026-11-16 the user's saved copy held two visits and zero answers, and they asked whether saving and the
   streak "really work". They were asked whether listening should count for the streak: do not change that
   rule until they answer.

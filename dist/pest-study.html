@@ -277,7 +277,7 @@ const Q = {};
 for (const s of SECTIONS) for (const q of (s.questions || [])) Q[q.id] = Object.assign({ sid: s.id }, q);
 const DEADLINE = new Date((C.manual?.deadline || '2027-01-11') + 'T00:00:00');
 const DAILY_GOAL = 25;
-const RANKS = [[0,'Trainee'],[250,'Apprentice'],[750,'Technician'],[1600,'Field Tech'],[3000,'Lead Applicator'],[5000,'License Ready']];
+const RANKS = [[0,'Trainee'],[250,'Apprentice'],[750,'Technician'],[1600,'Field Tech'],[3000,'Lead Applicator'],[5000,'Crew Chief']];
 
 /* ================= utils ================= */
 const $ = (s, r = document) => r.querySelector(s);
@@ -308,7 +308,9 @@ const ICON = {
 /* ================= profile + storage ================= */
 const LS_KEY = 'pas-profile-v1';
 const lsGet = k => { try { return JSON.parse(localStorage.getItem(k)); } catch (e) { return null; } };
-const lsSet = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
+let lsOk = true;      // false once this browser has refused to store the profile (a private window, blocked site data)
+const lsSet = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); if (k === LS_KEY) lsOk = true; } catch (e) { if (k === LS_KEY) lsOk = false; } };
+try { localStorage.setItem(LS_KEY + '-probe', '1'); localStorage.removeItem(LS_KEY + '-probe'); } catch (e) { lsOk = false; }
 function blank() { return { v: 1, updatedAt: 0, xp: 0, bestCombo: 0, days: {}, passed: {}, attempts: {}, q: {}, read: {}, sessions: [], settingsAt: 0, settings: { voice: 'buttery', rate: 1, sound: true, engine: 'auto', autoplay: true, chain: false } }; }
 const isMap = x => !!x && typeof x === 'object' && !Array.isArray(x);
 function normalize(p) {
@@ -347,7 +349,8 @@ function joinMax(x, y) {
   }
   return out;
 }
-/* One question's record: { seen, right, wrong, run, open, last }. */
+/* One question's record: { seen, right, wrong, run, open, last, miss }. `miss` is the time of the last wrong
+   answer the copy knows of (records from before 2026-11-16 have none). */
 function joinQ(x, y) {
   if (!isMap(x) || !isMap(y)) return clone(isMap(x) ? x : isMap(y) ? y : {});
   const key = r => [num(r.last), num(r.seen), num(r.right), num(r.wrong), num(r.run), r.open ? 1 : 0];
@@ -359,6 +362,11 @@ function joinQ(x, y) {
   out.last = num(late.last); out.run = num(late.run); out.open = !!late.open;
   const covers = num(late.seen) >= num(early.seen) && num(late.right) >= num(early.right) && num(late.wrong) >= num(early.wrong);
   if (!covers && early.open && !late.open) { out.open = true; out.run = Math.min(out.run, 1); }      // both answered it: the miss stands
+  // A miss newer than any the later copy knows of stands too (a device that answered while it could not sync).
+  if (!out.open && early.open && num(early.miss) > num(late.miss)) { out.open = true; out.run = Math.min(out.run, 1); }
+  // Cleared by a copy that knew the newest miss anywhere: it stays cleared, whatever a page left open still shows.
+  const top = Math.max(num(x.miss), num(y.miss));
+  if (out.open && top && [x, y].some(r => !r.open && num(r.miss) === top)) { out.open = false; out.run = Math.max(num(x.run), num(y.run)); }
   return out;
 }
 /* Every tie below is settled by content alone (never by which copy came first or was saved last),
@@ -367,9 +375,9 @@ const pickOne = (p, q) => (p === undefined || p === null ? (q === undefined ? nu
 /* A list of ids. One list holding everything in the other is used as it is; otherwise both, without repeats. */
 function joinList(p, q) {
   const a = Array.isArray(p) ? p : [], b = Array.isArray(q) ? q : [];
-  if (b.every(v => a.includes(v))) return a.slice();
-  if (a.every(v => b.includes(v))) return b.slice();
   const [first, second] = sig(a) >= sig(b) ? [a, b] : [b, a];
+  if (second.every(v => first.includes(v))) return first.slice();
+  if (first.every(v => second.includes(v))) return second.slice();
   return [...first, ...second.filter(v => !first.includes(v))];
 }
 function joinSession(x, y) {
@@ -382,7 +390,8 @@ function joinSession(x, y) {
     else out[k] = clone(pickOne(p, q));
   }
   out.start = Math.min(num(x.start) || num(y.start), num(y.start) || num(x.start));
-  out.end = num(x.end) || num(y.end) ? Math.max(num(x.end), num(y.end)) : null;      // ended on either copy: ended
+  out.end = num(x.end) || num(y.end) ? Math.max(num(x.end), num(y.end)) : null;      // ended on either copy: ended ...
+  if (out.end && num(out.touch) > out.end) out.end = null;      // ... unless a copy shows it in use after that (a page with an old copy closed it by the 3-hour rule)
   return out;
 }
 const KNOWN = new Set(Object.keys(blank()));
@@ -425,7 +434,9 @@ let P = normalize(lsGet(LS_KEY));
    seenAt: when this tab last read or wrote the account. acctAt: when the account copy was last saved, by any device. */
 let profRef = null, sync = 'local', dirty = false, saving = false, saveT = null, loaded = false, seenAt = 0, acctAt = 0, fails = 0;
 /* A call to the account that gets no answer must not hold everything up: after `ms` it counts as failed. */
-const timed = (p, ms) => new Promise((ok, no) => { const t = setTimeout(() => no({ code: 'unavailable', message: 'no answer' }), ms); Promise.resolve(p).then(v => { clearTimeout(t); ok(v); }, e => { clearTimeout(t); no(e); }); });
+let held = null;      // a write that got no answer in time and may still land: the next write waits for it
+let writing = false;  // a write is on its way (the footer must not say "saved" yet)
+const timed = (p, ms) => new Promise((ok, no) => { const t = setTimeout(() => no({ code: 'unavailable', message: 'no answer', late: true }), ms); Promise.resolve(p).then(v => { clearTimeout(t); ok(v); }, e => { clearTimeout(t); no(e); }); });
 /* What a failed call means for the footer: full (a storage cap), off (this view may not use the account), error (try again). */
 const failKind = e => { const c = e && e.code; return c === 'quota_exceeded' ? 'full' : c === 'revoked' || c === 'not_granted' || c === 'capability_disabled' || c === 'capability_removed' ? 'off' : 'error'; };
 
@@ -437,7 +448,7 @@ function save() {
   saveT = setTimeout(flush, 700);
   renderFoot();
 }
-function saveSettings() { P.settingsAt = Date.now(); save(); }
+function saveSettings() { P.settingsAt = Math.max(Date.now(), num(P.settingsAt) + 1); save(); }
 /* Make `next` the profile in use. The session in progress is an object inside the profile: find it again. */
 function adopt(next) {
   const id = S.sess && S.sess.id;
@@ -457,25 +468,42 @@ function takeIn(snap) {
   return { news: after !== before, need: after !== sigP(remote) };
 }
 function remoteNews() { if (S.view === 'home') render(); else renderChips(); }
+/* One read of the account copy. "No document" that comes from a cache is not an answer: writing on the strength
+   of it could put this device's copy over an account copy the cache has not seen. */
+async function readAcct() {
+  const snap = await timed(profRef.get(), 15000);
+  if (snap && !snap.exists && snap.metadata && snap.metadata.fromCache) throw { code: 'unavailable', message: 'not confirmed by the store' };
+  return snap;
+}
 async function flush() {
   if (!loaded) { if (dirty && sync === 'error') initDb(); return; }      // initDb gave up earlier: try the read again
-  if (!profRef || saving || !dirty) return;
-  saving = true;
+  if (!profRef || saving || held || !dirty) return;
+  saving = writing = true;
   let news = false;
   try {
     // Another tab or device may have saved since this one last looked: read, join, then write. Never overwrite.
-    const t = takeIn(await timed(profRef.get(), 15000));
+    const t = takeIn(await readAcct());
     news = t.news;
     dirty = false;
     if (t.need) {
-      let body = JSON.stringify(P);
-      while (body.length > 200000 && P.sessions.length > 3) { P.sessions.pop(); body = JSON.stringify(P); }
-      await timed(profRef.set(JSON.parse(body)), 15000);
+      let body = JSON.stringify(P), cut = false;
+      while (body.length > 200000 && P.sessions.length > 3) { P.sessions.pop(); body = JSON.stringify(P); cut = true; }
+      if (cut) lsSet(LS_KEY, P);      // the device keeps the same trimmed copy, or every visit would write it again
+      const sent = profRef.set(JSON.parse(body));
+      try { await timed(sent, 15000); }
+      catch (e) {
+        if (e && e.late) {      // no answer yet, but it may still land: the next write waits for it (2 minutes at most)
+          const mine = held = {};
+          const free = () => { if (held !== mine) return; held = null; dirty = true; clearTimeout(saveT); saveT = setTimeout(flush, 700); };
+          Promise.resolve(sent).then(free, free); setTimeout(free, 120000);
+        }
+        throw e;
+      }
       acctAt = Date.now();
     }
     sync = 'synced'; seenAt = Date.now(); fails = 0;
   } catch (e) { dirty = true; sync = failKind(e); fails++; }
-  saving = false;
+  saving = writing = false;
   if (news) remoteNews();
   renderFoot();
   clearTimeout(saveT);
@@ -484,19 +512,42 @@ async function flush() {
   else if (dirty && sync === 'error') saveT = setTimeout(flush, Math.min(300000, 20000 * Math.pow(2, Math.min(fails - 1, 4))));
 }
 /* The tab is back in view: another device may have saved in the meantime. */
+let seeT = null, seeFails = 0;
 async function refresh() {
   if (!loaded || !profRef || saving) return;
   saving = true;
-  let news = false;
-  try { const t = takeIn(await timed(profRef.get(), 15000)); news = t.news; if (t.need) dirty = true; seenAt = Date.now(); if (sync === 'error') { sync = 'synced'; fails = 0; } } catch (e) {}
+  let news = false, failed = false;
+  try { const t = takeIn(await readAcct()); news = t.news; if (t.need) dirty = true; seenAt = Date.now(); seeFails = 0; if (sync === 'error') { sync = 'synced'; fails = 0; } } catch (e) { failed = failKind(e) === 'error'; }
   saving = false;
   if (news) remoteNews();
   renderFoot();
+  clearTimeout(seeT);
   if (dirty) flush();
+  else if (failed) seeT = setTimeout(refresh, Math.min(300000, 20000 * Math.pow(2, Math.min(seeFails++, 4))));      // the read failed: look again later, less and less often
 }
-document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') flush(); else if (Date.now() - seenAt > 20000) refresh(); });
-window.addEventListener('focus', () => { if (document.visibilityState !== 'hidden' && Date.now() - seenAt > 20000) refresh(); });
-window.addEventListener('online', () => { if (dirty) flush(); });
+/* The calendar day the screen was last drawn for. A page left open overnight must not go on saying
+   "Today is counted": when the day changes, the home page (or, elsewhere, the header) is drawn again. */
+let shownDay = dayKey();
+function newDay() { if (shownDay === dayKey()) return; shownDay = dayKey(); if (S.view === 'home') render(); else renderChips(); }
+setInterval(newDay, 30000);
+/* The page is back in view, or the connection is back: look at the calendar and at the account. */
+function wake() {
+  newDay();
+  if (!loaded) { if (sync === 'error') initDb(); return; }      // the account was never read: try that first
+  if (dirty) flush(); else if (Date.now() - seenAt > 20000) refresh();
+}
+/* Another tab of this page on the same device stored its copy: join it. Without this the two tabs would
+   overwrite each other on the device whenever the account cannot be reached. */
+window.addEventListener('storage', e => {
+  if (e.key !== LS_KEY || !e.newValue) return;
+  let other = null; try { other = JSON.parse(e.newValue); } catch (x) { return; }
+  const joined = joinProfiles(P, other);
+  if (sigP(joined) === sigP(P)) return;
+  adopt(joined); dirty = true; clearTimeout(saveT); saveT = setTimeout(flush, 700); remoteNews(); renderFoot();
+});
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') flush(); else wake(); });
+window.addEventListener('focus', () => { if (document.visibilityState !== 'hidden') wake(); });
+window.addEventListener('online', wake);
 
 async function initDb() {
   if (!window.claude || !claude.use) return;
@@ -507,7 +558,7 @@ async function initDb() {
     const id = user ? await user.id() : null;
     if (!db || !id) { clearTimeout(slow); sync = 'local'; renderFoot(); return; }
     profRef = db.doc('data/users/' + id + '/profile');
-    const snap = await timed(profRef.get(), 15000);
+    const snap = await readAcct();
     clearTimeout(slow);
     dirty = takeIn(snap).need;                         // taps made before this point are kept: they were joined in
     loaded = true;
@@ -521,6 +572,9 @@ async function initDb() {
     if (failKind(e) === 'off') { sync = 'off'; renderFoot(); return; }      // this view may not use the account: the device's copy is all there is
     if (!loaded && (initDb.tries = (initDb.tries || 0) + 1) <= 3) { setTimeout(initDb, 1500 * initDb.tries + Math.random() * 1000); return; }
     sync = 'error'; renderFoot();
+    // The footer says "Trying again": do it, less and less often (20 s, 40 s ... 5 min). wake() tries at once.
+    clearTimeout(initDb.t);
+    initDb.t = setTimeout(() => { if (!loaded && sync === 'error') initDb(); }, Math.min(300000, 20000 * Math.pow(2, Math.min(Math.max(initDb.tries - 4, 0), 4))));
   }
 }
 
@@ -625,12 +679,13 @@ function record(ok, extra) {
   const practice = !isReal(cur.id);
   const rBefore = rank().name;
   let gain = 0, cleared = false, broke = 0;
-  if (ok) { S.combo++; gain = 10 + Math.min(S.combo - 1, 5) * 2; }
+  if (practice) { /* nothing on the practice card counts: it leaves the answer streak alone too */ }
+  else if (ok) { S.combo++; gain = 10 + Math.min(S.combo - 1, 5) * 2; }
   else { broke = S.combo; S.combo = 0; }
   if (!practice) {
-    const st = qs(cur.id); st.seen++; st.last = Date.now();
-    if (ok) { st.right++; st.run++; if (st.open && st.run >= 2) { st.open = false; cleared = true; gain += 25; if (S.sess) S.sess.cleared.push(cur.id); } }
-    else { st.wrong++; st.run = 0; st.open = true; if (S.sess && !S.sess.missed.includes(cur.id)) S.sess.missed.push(cur.id); }
+    const st = qs(cur.id); st.seen++; st.last = Math.max(Date.now(), num(st.last) + 1);      // always later than the answer before it, even if the device clock was moved back
+    if (ok) { st.right++; st.run++; if (st.open && st.run >= 2) { st.open = false; cleared = true; gain += 25; if (S.sess && !S.sess.cleared.includes(cur.id)) S.sess.cleared.push(cur.id); } }
+    else { st.wrong++; st.run = 0; st.open = true; st.miss = st.last; if (S.sess && !S.sess.missed.includes(cur.id)) S.sess.missed.push(cur.id); }
     const d = today(); d.a++; if (ok) d.c++; d.xp += gain;
     P.xp += gain; P.bestCombo = Math.max(P.bestCombo, S.combo);
     if (S.sess) { S.sess.a++; if (ok) S.sess.c++; S.sess.xp += gain; S.sess.best = Math.max(S.sess.best, S.combo); touchSess(); }
@@ -995,6 +1050,9 @@ function recEl() {
   // never be applied to the next file.
   el.addEventListener('loadedmetadata', () => { const a = Rec.at0; Rec.at0 = 0; if (a > 0.01) { try { el.currentTime = a; } catch (e) {} } });
   el.addEventListener('ended', () => { if (Reader.engine === 'rec' && Rec.mode === 'el' && !Rec.loading) recEnded(); });
+  // No animation frame runs while the page is not on screen (another tab, a locked phone), but the audio's own clock
+  // still reports. Follow it from there too, so the sentences heard are counted and the highlight is in place on return.
+  el.addEventListener('timeupdate', () => { if (Reader.engine === 'rec' && Rec.mode === 'el' && Reader.state !== 'idle') recTick(); });
   // The phone's own media buttons can pause and resume the element too.
   el.addEventListener('pause', () => { if (Reader.engine === 'rec' && Rec.mode === 'el' && !Rec.loading && Reader.state === 'speaking' && el.paused && !el.ended) Reader.setState('paused'); });
   el.addEventListener('play', () => { if (Reader.engine === 'rec' && Rec.mode === 'el' && !Rec.loading && Reader.state === 'paused' && !el.paused) { Reader.setState('speaking'); recLoop(); } });
@@ -1193,7 +1251,19 @@ function recStop() {
   cancelAnimationFrame(Rec.raf);
   try { Rec.pause(); } catch (e) {}
 }
-function recEnded() { cancelAnimationFrame(Rec.raf); Reader.engine = null; Reader.setState('idle', 'completed'); }
+function recEnded() {
+  cancelAnimationFrame(Rec.raf);
+  // Every sentence whose start really played counts as heard, even if neither a frame nor an event reported it
+  // (a locked phone can hold both back). A tap near the end plays only the end, so it still does not count.
+  try {
+    const n = Rec.n, pl = Rec.mode === 'el' && Rec.el ? Rec.el.played : null;
+    if (n && pl) for (let i = 0; i < n.t.length / 2; i++) {
+      const at = n.t[2 * i] / 1000 + 0.05;
+      for (let k = 0; k < pl.length; k++) if (pl.start(k) <= at && at < pl.end(k)) { Reader.heard.add(i); break; }
+    }
+  } catch (e) {}
+  Reader.engine = null; Reader.setState('idle', 'completed');
+}
 function recLoop() {
   cancelAnimationFrame(Rec.raf);
   const step = () => {
@@ -1418,7 +1488,7 @@ function markRead(sid) {
 function readingDone() {
   const s = SEC[S.sid];
   if (S.view !== 'study' || !s || s.practice) return;
-  if (Reader.heard.size >= Math.ceil(Reader.lines.length * 0.8)) markRead(s.id);      // most of the card, not just a tap on its last line
+  if (Reader.heard.size >= Math.ceil(Reader.lines.length * 0.8)) { markRead(s.id); Reader.heard = new Set(); }      // most of the card, not just a tap on its last line
   if (!P.settings.chain) { if (!P.passed[s.id]) toast('Card finished. Take the quiz to make it count.'); return; }
   const nx = nextCardId(S.sid);
   if (!nx) { toast('That was the last card.'); return; }
@@ -1458,6 +1528,7 @@ function bumpChips() {
   for (const id of ['chip-xp', 'chip-combo']) { const el = document.getElementById(id); if (el) { el.classList.remove('bump'); void el.offsetWidth; el.classList.add('bump'); } }
 }
 function render() {
+  shownDay = dayKey();
   renderChips();
   const v = S.view;
   const html = v === 'study' ? viewStudy() : v === 'quiz' ? viewQuiz() : v === 'result' ? viewResult() : v === 'summary' ? viewSummary() : viewHome();
@@ -1559,7 +1630,7 @@ function secRow(s, nx) {
   let pill = st === 'pass' ? '<span class="pill pass">Passed</span>' : st === 'fail' ? `<span class="pill fail">Failed ${P.attempts[s.id].last}%</span>` : st === 'practice' ? '<span class="pill new">Try it</span>'
     : P.read[s.id] ? `<span class="pills"><span class="pill read">Listened</span>${isNext ? '<span class="pill next">Quiz next</span>' : ''}</span>`
     : (isNext ? '<span class="pill next">Next</span>' : '<span class="pill new">New</span>');
-  if (weak && !s.practice) pill = `<span class="row" style="gap:4px">${pill}<span class="pill weak">${weak} weak</span></span>`;
+  if (weak && !s.practice) pill = `<span class="pills">${pill}<span class="pill weak">${weak} weak</span></span>`;
   return `<button class="secrow" data-act="open" data-sid="${esc(s.id)}"><span style="min-width:0"><span class="t">${esc(s.title)}</span><br><span class="m">${esc([pagesLabel(s), (s.questions || []).length + ' questions'].filter(Boolean).join(' · '))}</span></span>${pill}</button>`;
 }
 /* When the account copy was last saved: "1:25 PM" today, "Nov 14, 1:25 PM" before that. */
@@ -1568,8 +1639,10 @@ const fmtWhen = ms => {
   return dayKey(d) === dayKey() ? t : d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) + ', ' + t;
 };
 function syncText() {
-  if (sync === 'synced') return dirty || saving ? 'Saving to your account…' : 'Progress saved to your account' + (acctAt ? ' · last saved ' + fmtWhen(acctAt) : '');
-  return { local: 'Progress saved on this device', loading: 'Loading your progress…', slow: 'Can’t reach saved progress yet. Using this device’s copy.', error: 'Could not reach your account. Saved on this device. Trying again.', full: 'Account storage is full. Saved on this device.', off: 'Saving to your account is not available here. Saved on this device.' }[sync] || '';
+  if (sync === 'synced') return dirty || writing ? 'Saving to your account…' : !acctAt ? 'Your account is connected. Nothing to save yet.' : 'Progress saved to your account' + (acctAt <= Date.now() + 60000 ? ' · last saved ' + fmtWhen(acctAt) : '');      // never a time in the future (a clock that was wrong)
+  const txt = { local: 'Progress saved on this device', loading: 'Loading your progress…', slow: 'Can’t reach saved progress yet. Using this device’s copy.', error: 'Could not reach your account. Saved on this device. Trying again.', full: 'Account storage is full. Saved on this device.', off: 'Saving to your account is not available here. Saved on this device.' }[sync] || '';
+  // "on this device" is only true if the browser stored it
+  return lsOk ? txt : txt.replace(/(Progress saved|Saved) on this device\.?/, 'This browser is not storing your progress: it lasts only while this page stays open.');
 }
 function renderFoot() {
   const txt = syncText();
@@ -1813,6 +1886,7 @@ function viewSummary() {
   const mins = Math.max(1, Math.round(((x.end || Date.now()) - x.start) / 60000));
   const weak = openMisses();
   const failedNow = (x.failed || []).filter(id => !P.passed[id]);
+  const rapidWeak = rapidPool().filter(id => P.q[id] && P.q[id].open).length;      // the weak questions the next rapid round can really draw
   const nx = nextSection();
   const li = arr => arr.length ? `<ul class="sumlist">${arr.join('')}</ul>` : '<p class="muted">Nothing.</p>';
   return `<div class="view"><section class="result">
@@ -1826,7 +1900,7 @@ function viewSummary() {
     </div>
     <div class="panel" style="width:100%"><h2>Mastered</h2>${li([...(x.passed || []).map(id => SEC[id] ? `<li>Passed card: <b>${esc(SEC[id].title)}</b></li>` : ''), ...(x.cleared || []).filter(isReal).map(id => `<li>Cleared: ${md(Q[id].q)}</li>`)].filter(Boolean))}</div>
     <div class="panel" style="width:100%"><h2>Weak on</h2>${li([...failedNow.map(id => SEC[id] ? `<li>Card not passed: <b>${esc(SEC[id].title)}</b></li>` : ''), ...weak.slice(0, 10).map(id => `<li>${md(Q[id].q)} <span class="muted">(${esc(Q[id].ref || '')})</span></li>`)].filter(Boolean))}${weak.length > 10 ? `<p class="muted">Plus ${weak.length - 10} more on your weak list.</p>` : ''}</div>
-    <div class="panel" style="width:100%"><h2>Next</h2><p>${nx ? `Card: <b>${esc(nx.title)}</b> (${esc(pagesLabel(nx))}).` : REAL.length ? 'Every loaded card is passed. Send Claude the next pages of your manual.' : 'Send Claude photos of your first manual pages.'}${weak.length ? ` Your next session opens with a rapid round that hits your ${weak.length} weak question${weak.length === 1 ? '' : 's'} first.` : ''}</p></div>
+    <div class="panel" style="width:100%"><h2>Next</h2><p>${nx ? `Card: <b>${esc(nx.title)}</b> (${esc(pagesLabel(nx))}).` : REAL.length ? 'Every loaded card is passed. Send Claude the next pages of your manual.' : 'Send Claude photos of your first manual pages.'}${rapidWeak ? ` Your next session opens with a rapid round that hits your ${rapidWeak} weak question${rapidWeak === 1 ? '' : 's'} first.` : ''}</p></div>
     <p class="hint" id="saved-line">${esc(syncText())}</p>
     <button class="btn primary" data-act="home">Back to home</button>
   </section></div>`;

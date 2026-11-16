@@ -4,7 +4,9 @@
 // The stand-in account lives in this script, not in the page: a browser may drop a page's own session
 // storage on reload, and a test of saving must not depend on that.
 const { chromium } = require('playwright');
-const page_ = process.argv[2];
+const path = require('path'), serve = require('./serve.js');
+const page_ = path.resolve(process.argv[2]);
+let URL_ = '';
 const results = [];
 const check = (name, ok, detail) => { results.push(ok); console.log((ok ? 'PASS ' : 'FAIL ') + name + (detail !== undefined ? '  ' + JSON.stringify(detail) : '')); };
 const START = () => ({ v: 1, updatedAt: 1700000000000, xp: 4321, bestCombo: 9, days: {}, passed: { 'c01-s01': { at: 5, score: 100 } }, attempts: {}, q: {}, sessions: [], settings: { voice: 'buttery', rate: 1, sound: true } });
@@ -26,7 +28,7 @@ async function visit(browser, local) {
   if (local) await w.ctx.addInitScript(l => { if (!localStorage.getItem('pas-profile-v1')) localStorage.setItem('pas-profile-v1', JSON.stringify(l)); }, local);
   w.page = await w.ctx.newPage();
   w.errs = []; w.page.on('pageerror', e => w.errs.push(e.message));
-  await w.page.goto('file://' + page_);
+  await w.page.goto(URL_);
   await w.page.waitForTimeout(300);
   return w;
 }
@@ -41,6 +43,8 @@ const tapOffline = async page => {      // open a card and change two settings: 
 
 (async () => {
   const browser = await chromium.launch();
+  const { srv, base } = await serve(path.dirname(page_));
+  URL_ = base + path.basename(page_);
   for (const [name, local] of [['empty device', null], ['older device copy', { v: 1, updatedAt: 1600000000000, xp: 10, passed: {}, q: {}, days: {}, attempts: {}, sessions: [], settings: {} }]]) {
     const w = await visit(browser, local);
     await tapOffline(w.page);
@@ -66,7 +70,7 @@ const tapOffline = async page => {      // open a card and change two settings: 
     check('a device that was in step saves its offline changes on the next visit', w.doc.xp === 4321 && w.doc.settings.chain === true && w.sets >= 1, { chain: w.doc.settings.chain, sets: w.sets });
     await w.ctx.close();
   }
-  await browser.close();
+  await browser.close(); srv.close();
   console.log(`\n${results.filter(Boolean).length} of ${results.length} checks passed`);
   process.exit(results.every(Boolean) ? 0 : 1);
 })();

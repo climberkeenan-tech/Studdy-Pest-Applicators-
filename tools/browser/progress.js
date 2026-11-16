@@ -44,11 +44,20 @@ async function world(browser, url) {
   const acct = { doc: null, gets: 0, sets: 0 };
   const devices = [];
   async function device(opts) {
-    const dev = { down: false, hang: false };          // down: calls fail at once. hang: calls never answer.
-    dev.ctx = await browser.newContext(Object.assign({ viewport: { width: 420, height: 900 }, timezoneId: 'America/New_York', locale: 'en-US' }, opts || {}));
+    const dev = { down: false, hang: false, lateNext: 0, flying: 0, overlap: 0 };      // down: calls fail at once. hang: calls never answer. lateNext: the next write lands after that many ms.
+    dev.ctx = await browser.newContext({ viewport: { width: 420, height: 900 }, timezoneId: (opts && opts.timezoneId) || 'America/New_York', locale: 'en-US' });
     await dev.ctx.exposeFunction('__acctGet', () => { if (dev.hang) return new Promise(() => {}); if (dev.down) throw new Error('down'); acct.gets++; return acct.doc; });
-    await dev.ctx.exposeFunction('__acctSet', v => { if (dev.hang) return new Promise(() => {}); if (dev.down) throw new Error('down'); acct.sets++; acct.doc = v; });
+    await dev.ctx.exposeFunction('__acctSet', v => {
+      if (dev.hang) return new Promise(() => {});
+      if (dev.down) throw new Error('down');
+      if (dev.flying) dev.overlap++;                    // a write sent while an earlier one from this device had not settled
+      if (dev.lateNext) { const ms = dev.lateNext; dev.lateNext = 0; dev.flying++; return new Promise(r => setTimeout(() => { acct.sets++; acct.doc = v; dev.flying--; r(); }, ms)); }
+      acct.sets++; acct.doc = v;
+    });
     await dev.ctx.addInitScript(inPage);
+    if (opts && opts.noFrames) await dev.ctx.addInitScript(() => { window.requestAnimationFrame = () => 0; window.cancelAnimationFrame = () => {}; });      // a page that is not on screen gets no animation frames
+    if (opts && opts.noAccount) await dev.ctx.addInitScript(() => { window.claude = { use: () => Promise.resolve(null) }; });
+    if (opts && opts.noStorage) await dev.ctx.addInitScript(() => { const real = Storage.prototype.setItem; Storage.prototype.setItem = function (k, v) { if (String(k).startsWith('pas-profile-v1')) throw new DOMException('refused', 'QuotaExceededError'); return real.call(this, k, v); }; });
     dev.errs = [];
     dev.tab = async () => { const page = await dev.ctx.newPage(); page.on('pageerror', e => dev.errs.push(e.message)); await page.goto(url); await page.waitForSelector('.mission'); await page.waitForTimeout(500); return page; };
     devices.push(dev);
@@ -101,7 +110,9 @@ const run = async (name, fn) => { if (ONLY && ONLY !== name) return; try { await
 
   await run('save', async () => {
     const w = await world(browser, url); const A = await w.device(); let a = await A.tab();
-    await setNow(a, '2026-11-16T15:00:00'); await a.reload(); await a.waitForSelector('.mission');
+    await setNow(a, '2026-11-16T15:00:00'); await a.reload(); await a.waitForSelector('.mission'); await wait(a, 600);
+    const first = (await stats(a)).saved;
+    check('a first visit does not claim anything was saved', /Nothing to save yet/.test(first), first);
     await startQuiz(a, 'c01-s01');
     const qid = await answer(a, true);
     let p = await prof(a);
@@ -209,6 +220,52 @@ const run = async (name, fn) => { if (ONLY && ONLY !== name) return; try { await
     await w.close();
   });
 
+  await run('two-tabs-offline', async () => {
+    const w = await world(browser, url); const A = await w.device();
+    const t1 = await A.tab(), t2 = await A.tab();                 // same device, two tabs, then the account cannot be reached
+    A.down = true;
+    await startQuiz(t1, 'c01-s01'); await passQuiz(t1); await wait(t1, 1200);
+    await home(t2); await t2.click('#foot [data-act="sound"]'); await wait(t2, 600);      // one tap that saves, in the other tab
+    const local = await prof(t2);
+    check('two tabs with no connection: a tap in one tab does not wipe the card passed in the other from the device', !!(local.passed && local.passed['c01-s01']), { passed: Object.keys(local.passed || {}) });
+    await t1.close();
+    A.down = false;
+    await t2.reload(); await t2.waitForSelector('.mission'); await wait(t2, 2500);
+    check('... and it reaches the account when the connection is back', !!(w.acct.doc && w.acct.doc.passed['c01-s01']), w.acct.doc && Object.keys(w.acct.doc.passed));
+    check('no page errors (two tabs offline)', w.errs().length === 0, w.errs());
+    await w.close();
+  });
+
+  await run('late-write', async () => {
+    const w = await world(browser, url); const A = await w.device(); const a = await A.tab();
+    A.lateNext = 26000;                                           // the next write gets no answer for 26 s, and then it lands
+    await startQuiz(a, 'c01-s01'); const q1 = await answer(a, true);
+    await wait(a, 17500);                                         // the page gave up on it after 15 s
+    await next(a); const q2 = await answer(a, true);              // the student goes on
+    await wait(a, 3000);
+    check('a write that is still on its way is not overtaken by the next one', A.overlap === 0, { overlap: A.overlap, sets: w.acct.sets });
+    await wait(a, 9000);                                          // the late write has landed; the page saves what came after it
+    const d = w.acct.doc;
+    check('... and once it lands, the account ends up with everything', !!(d && d.q[q1] && d.q[q2]) && A.overlap === 0, { q1: !!(d && d.q[q1]), q2: !!(d && d.q[q2]), overlap: A.overlap });
+    await home(a);
+    check('... and only then does the page say saved', /saved to your account/.test((await stats(a)).saved), (await stats(a)).saved);
+    check('no page errors (late write)', w.errs().length === 0, w.errs());
+    await w.close();
+  });
+
+  await run('wake-offline', async () => {
+    const w = await world(browser, url); const A = await w.device(), B = await w.device();
+    const a = await A.tab();
+    const b = await B.tab(); await startQuiz(b, 'c01-s01'); await passQuiz(b); await wait(b, 2200);
+    A.down = true;                                                // the page comes back into view while its connection is still down
+    await a.evaluate(() => { window.__off += 60000; document.dispatchEvent(new Event('visibilitychange')); });
+    await wait(a, 1500);
+    A.down = false;                                               // the connection returns; nothing tells the page
+    await a.waitForFunction(() => [...document.querySelectorAll('.secrow[data-sid="c01-s01"] .pill')].some(x => x.textContent.trim() === 'Passed'), null, { timeout: 35000 }).catch(() => {});
+    check('a page that came back into view with no connection looks again by itself and catches up', (await rowPills(a, 'c01-s01')).includes('Passed'), await rowPills(a, 'c01-s01'));
+    await w.close();
+  });
+
   await run('streak', async () => {
     const w = await world(browser, url); const A = await w.device(); const a = await A.tab();
     const day = async (iso) => { await setNow(a, iso); await a.reload(); await a.waitForSelector('.mission'); await wait(a, 600); return stats(a); };
@@ -238,6 +295,62 @@ const run = async (name, fn) => { if (ONLY && ONLY !== name) return; try { await
     await w.close();
   });
 
+  await run('overnight', async () => {
+    const w = await world(browser, url); const A = await w.device(); const a = await A.tab();
+    await setNow(a, '2026-11-16T21:30:00'); await a.reload(); await a.waitForSelector('.mission');
+    await startQuiz(a, 'c01-s01'); await answer(a, true); await next(a); await answer(a, true); await home(a); await wait(a, 1500);
+    let s = await stats(a);
+    check('evening: two answers, streak 1, today counted', s.streak === '1' && /Today is counted/.test(s.hint || '') && /^2 \/ 25/.test(s.today || ''), s);
+    await setNow(a, '2026-11-17T08:00:00');                       // the page stayed open; next morning the student looks at it again
+    await a.evaluate(() => { document.dispatchEvent(new Event('visibilitychange')); window.dispatchEvent(new Event('focus')); });
+    await wait(a, 900); s = await stats(a);
+    check('the same page the next morning no longer says today is counted', s.streak === '1' && /to keep it/.test(s.hint || '') && /^0 \/ 25/.test(s.today || ''), s);
+    await setNow(a, '2026-11-18T08:00:00');                       // nobody touches it: the page notices the date by itself
+    await wait(a, 32000); s = await stats(a);
+    check('a day later, untouched, the streak has dropped to 0 by itself', s.streak === '0' && /to start it/.test(s.hint || ''), s);
+    check('no page errors (overnight)', w.errs().length === 0, w.errs());
+    await w.close();
+  });
+
+  await run('first-read-fails', async () => {
+    const w = await world(browser, url); const A = await w.device(), B = await w.device();
+    const b = await B.tab(); await startQuiz(b, 'c01-s01'); await passQuiz(b); await wait(b, 2200);      // the account holds a passed card
+    A.down = true;
+    const a = await A.tab();                                      // this device cannot read the account when the page opens
+    await a.waitForFunction(() => /Could not reach your account/.test((document.querySelector('#sync-text') || {}).textContent || ''), null, { timeout: 30000 });
+    const gets = w.acct.gets;
+    check('the account cannot be read at the start: the page says so, and shows only this device', /Trying again/.test((await stats(a)).saved) && !(await rowPills(a, 'c01-s01')).includes('Passed'), (await stats(a)).saved);
+    A.down = false;                                               // the outage ends. The student does nothing.
+    await a.waitForFunction(() => /saved to your account/.test((document.querySelector('#sync-text') || {}).textContent || ''), null, { timeout: 40000 }).catch(() => {});
+    const s = await stats(a);
+    check('... and it does try again by itself: the saved progress appears without a tap', /saved to your account/.test(s.saved) && (await rowPills(a, 'c01-s01')).includes('Passed') && w.acct.gets > gets, { saved: s.saved, pills: await rowPills(a, 'c01-s01') });
+    check('no page errors (first read fails)', w.errs().length === 0, w.errs());
+    await w.close();
+  });
+
+  await run('storage-refused', async () => {
+    const w = await world(browser, url); const A = await w.device({ noAccount: true, noStorage: true }); const a = await A.tab();
+    await startQuiz(a, 'c01-s01'); await answer(a, true); await home(a);
+    const s = await stats(a);
+    check('a browser that refuses to store anything, and no account: the page does not say "saved on this device"', /not storing your progress/.test(s.saved) && !/saved on this device/i.test(s.saved), s.saved);
+    const B = await w.device({ noAccount: true }); const b = await B.tab();
+    await startQuiz(b, 'c01-s01'); await answer(b, true); await home(b);
+    check('... and with storage working it says saved on this device', /Progress saved on this device/.test((await stats(b)).saved), (await stats(b)).saved);
+    await w.close();
+  });
+
+  await run('summary', async () => {
+    const w = await world(browser, url); const A = await w.device(); const a = await A.tab();
+    await a.click('[data-act="start-session"]'); await a.waitForSelector('#reading');
+    await a.click('.view > button[data-act="quiz"]'); await a.waitForSelector('.qcard');
+    await answer(a, false);                                       // one miss, then the quiz is left before its end
+    await a.click('[data-act="quit-quiz"]'); await a.waitForSelector('.mission');
+    await a.click('[data-act="end-session"]'); await a.waitForSelector('.sumgrid');
+    const txt = await a.evaluate(() => document.querySelector('.result').textContent);
+    check('the session summary does not promise a rapid round the next session cannot give', !/rapid round/.test(txt) && /Weak on/.test(txt), txt.slice(-260));
+    await w.close();
+  });
+
   await run('listening', async () => {
     const w = await world(browser, url); const A = await w.device(); const a = await A.tab();
     await setNow(a, '2026-11-16T15:00:00'); await a.reload(); await a.waitForSelector('.mission');
@@ -264,6 +377,38 @@ const run = async (name, fn) => { if (ONLY && ONLY !== name) return; try { await
     await w.close();
   });
 
+  await run('listening-off-screen', async () => {
+    // a locked phone or a tab in the background: the sound plays, but the browser runs no animation frames
+    const w = await world(browser, url); const A = await w.device({ noFrames: true }); const a = await A.tab();
+    await openCard(a, 'c01-s05'); await wait(a, 700);
+    await a.evaluate(() => { window.__audios[0].playbackRate = 12; });
+    await a.waitForSelector('#dock-quiz.hi', { timeout: 60000 });
+    let p = (await prof(a)) || {};
+    check('a card heard to the end while the page is not on screen is still marked as listened', !!(p.read && p.read['c01-s05']), p.read);
+    await openCard(a, 'c01-s06'); await wait(a, 700);
+    await a.evaluate(() => { const all = document.querySelectorAll('#reading .sent'); all[all.length - 1].click(); });
+    await a.waitForSelector('#dock-quiz.hi', { timeout: 30000 });
+    p = (await prof(a)) || {};
+    check('... and hearing only the last sentence that way still does not mark a card', !(p.read && p.read['c01-s06']), p.read);
+    check('no page errors (listening off screen)', w.errs().length === 0, w.errs());
+    await w.close();
+  });
+
+  await run('clock-back', async () => {
+    const w = await world(browser, url); const A = await w.device(); const a = await A.tab();
+    await setNow(a, '2026-11-18T10:00:00'); await a.reload(); await a.waitForSelector('.mission');      // the device clock is two days ahead
+    await startQuiz(a, 'c01-s01'); const qid = await answer(a, false); await home(a); await wait(a, 1500);
+    await setNow(a, '2026-11-16T10:00:00'); await a.reload(); await a.waitForSelector('.mission'); await wait(a, 800);      // the clock is corrected
+    for (let round = 0; round < 2; round++) {                     // the missed question, drilled right twice
+      await home(a); await a.click('[data-act="drill"]'); await a.waitForSelector('.qcard');
+      await answer(a, true); await next(a); await wait(a, 1800);
+    }
+    const p = await prof(a); await home(a); const s = await stats(a);
+    check('after the device clock was moved back, a miss answered right twice still leaves the weak list', !!(p.q[qid] && p.q[qid].open === false && p.q[qid].run >= 2) && w.acct.doc.q[qid].open === false, { device: p.q[qid], account: w.acct.doc.q[qid] });
+    check('... and the page shows no save time from the future', !/Nov 18/.test(s.saved) && /saved to your account/.test(s.saved), s.saved);
+    await w.close();
+  });
+
   await run('practice', async () => {
     const w = await world(browser, url); const A = await w.device(); const a = await A.tab();
     await startQuiz(a, 'practice'); await answer(a, true);
@@ -274,6 +419,9 @@ const run = async (name, fn) => { if (ONLY && ONLY !== name) return; try { await
     const p = await prof(a);
     check('... its result says nothing on it counts', /Nothing on it counts/.test(note), note);
     check('... and nothing was recorded for it', (!p || (p.xp === 0 && Object.keys(p.days).length === 0 && Object.keys(p.q).length === 0)) && w.acct.sets === 0, { xp: p && p.xp, sets: w.acct.sets });
+    await startQuiz(a, 'c01-s01'); await answer(a, true);
+    const band2 = await a.evaluate(() => document.querySelector('.band').textContent), p2 = await prof(a);
+    check('... and its right answers do not raise the pay or the best streak of the first real answer', /\+10 XP/.test(band2) && p2.xp === 10 && p2.bestCombo === 1, { band: band2, xp: p2.xp, bestCombo: p2.bestCombo });
     check('no page errors (practice)', w.errs().length === 0, w.errs());
     await w.close();
   });

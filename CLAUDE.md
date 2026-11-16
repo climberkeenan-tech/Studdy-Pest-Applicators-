@@ -110,7 +110,7 @@ plays that everywhere. A card starts reading when it opens. Do not remove this.
   If the viewer turned reading aloud off (`not_granted`), nothing speaks unless they pick the recording themselves.
 - **After changing the reader or the storage code** in `app/template.html`:
   `python3 tools/build.py && node tools/check_join.js && tools/browser/run.sh` (the rules for joining two copies
-  of the progress against random histories, then seven suites in real Chromium, about 10 minutes: the recorded
+  of the progress against random histories, then six suites in real Chromium, about 12 minutes: the recorded
   voice and its fallbacks, a stand-in for the live Claude voice, stalled and dead connections, progress saved
   across devices and tabs, the day streak over a moved calendar). It needs the Chapter 1 recordings in `dist/audio`.
   Browser tests load the page over http (`tools/browser/serve.js`), never from a `file://` address: Chromium
@@ -199,7 +199,7 @@ plays that everywhere. A card starts reading when it opens. Do not remove this.
 - `content/narration.json`: timing of the recorded narration (written by `tools/narrate.py`, read by the build).
 - `tools/narrate.py`: records the narration and holds the pronunciation rules. `dist/audio/*.mp3` is its output (not in git).
 - `tools/check_narration.js`: the page and `narrate.py` must split every card into the same sentences and words.
-- `tools/browser/`: browser tests of the reader and of saved progress (`run.sh` runs all seven; each file says
+- `tools/browser/`: browser tests of the reader and of saved progress (`run.sh` runs all six; each file says
   what it covers). `progress.js` is the one for saving and the day streak.
 - `tools/check_join.js`: the rules for joining two copies of the saved progress (`joinProfiles` in the page).
 - `tools/say_cases.json`: regression cases for the pronunciation rules (`python3 tools/narrate.py --check`).
@@ -288,13 +288,19 @@ plays that everywhere. A card starts reading when it opens. Do not remove this.
     left open answers it again. Where the join cannot tell, the question stays on the weak list (one more right
     answer clears it). Stamps only move forward (`st.last`, `settingsAt`), so a device clock set back undoes nothing.
   - Two tabs on one device join through the `storage` event. A write that got no answer in 15 seconds may still
-    land, so the next write waits for it (`held`). A read that fails is tried again with a growing pause, also
+    land, so the next write waits for it (`held`: until it is answered, 20 seconds at most, which is when the
+    first retry is due anyway). A read that fails is tried again with a growing pause, also
     when the account was never read (`initDb`), and at once when the page or the connection comes back (`wake`).
   - The store keeps whichever write lands last, so a slow save on one device can land on top of a save from
     another. The page therefore looks at the account again 6 and 35 seconds after each of its writes (`lookT`)
-    and once a minute while it is in view, and saves again if the account lacks something it holds. This uses
-    `get()` only. `onSnapshot` would do it live, but it has never been run against the real store from here:
-    do not switch to it without a way to test it in the real viewer.
+    and by itself while it stays in view with nothing waiting: half a minute after the last look, then twice
+    as long each time, up to 4 minutes (`pollWait`). News from another device brings the half minute back.
+    A constant half minute would be 120 reads an hour of a document that grows to about 140 KB.
+    It saves again if the account lacks something it holds. This uses `get()` only. `onSnapshot` would do it
+    live, but it has never been run against the real store from here: do not switch to it without a way to
+    test it in the real viewer.
+    What is left: if the page whose save was overtaken is closed or asleep within those seconds, the account
+    lacks that save until that device opens the page again (its own copy still has it).
   - Known limits: when two copies both record answers on the same day, that day's counts and XP take the larger
     of the two, not the sum. Settings are joined as a whole (the copy that changed a setting last wins all of
     them). Two devices whose clocks disagree by minutes can order two answers to one question wrongly.

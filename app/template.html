@@ -437,6 +437,7 @@ let profRef = null, sync = 'local', dirty = false, saving = false, saveT = null,
 /* A call to the account that gets no answer must not hold everything up: after `ms` it counts as failed. */
 let held = null;      // a write that got no answer in time and may still land: the next write waits for it
 let lookT = null;     // a second look at the account a few seconds after a write
+let pollWait = 30000; // how long a page that stays in view waits between two looks at the account: it grows while they bring nothing new
 let writing = false;  // a write is on its way (the footer must not say "saved" yet)
 const timed = (p, ms) => new Promise((ok, no) => { const t = setTimeout(() => no({ code: 'unavailable', message: 'no answer', late: true }), ms); Promise.resolve(p).then(v => { clearTimeout(t); ok(v); }, e => { clearTimeout(t); no(e); }); });
 /* What a failed call means for the footer: full (a storage cap), off (this view may not use the account), error (try again). */
@@ -467,7 +468,7 @@ function takeIn(snap) {
   const remote = normalize(clone(snap.data()));
   acctAt = Math.max(acctAt, num(remote.updatedAt));
   const before = sigP(P), joined = joinProfiles(P, remote), after = sigP(joined);
-  if (after !== before) adopt(joined);
+  if (after !== before) { adopt(joined); pollWait = 30000; }      // another device is saving: a page in view looks again soon
   return { news: after !== before, need: after !== sigP(remote) };
 }
 function remoteNews() { if (S.view === 'home') render(); else renderChips(); }
@@ -495,11 +496,11 @@ async function flush() {
       const sent = profRef.set(JSON.parse(body));
       try { await timed(sent, 15000); }
       catch (e) {
-        if (e && e.late) {      // no answer yet, but it may still land: the next write waits for it (45 s at most; the later looks repair the rest)
+        if (e && e.late) {      // no answer yet, but it may still land: the next write waits for it (20 s at most, when the first retry is due anyway; the later looks repair the rest)
           const mine = held = {};
           const free = () => { if (held === mine) held = null; dirty = true; clearTimeout(saveT); saveT = setTimeout(flush, 700); };
           Promise.resolve(sent).then(free, free);      // answered at last, even after the hold ran out: it may sit on top of a newer write, so read and save again
-          setTimeout(() => { if (held === mine) free(); }, 45000);
+          setTimeout(() => { if (held === mine) free(); }, 20000);
         }
         throw e;
       }
@@ -528,7 +529,7 @@ async function refresh() {
   let news = false, failed = false;
   try {
     const snap = await readAcct(), t = takeIn(snap);
-    news = t.news; if (t.need) dirty = true;
+    news = t.news; if (t.need) { dirty = true; pollWait = 30000; }      // the account lacks something this page holds: another device wrote over it, so keep looking
     if (snap && snap.metadata && snap.metadata.fromCache) failed = true;      // a copy the store has not confirmed: joined, but not a look at the account
     else { seenAt = Date.now(); seeFails = 0; if (sync === 'error') { sync = 'synced'; fails = 0; } }
   } catch (e) { failed = failKind(e) === 'error'; }
@@ -562,9 +563,16 @@ window.addEventListener('storage', e => {
 document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') flush(); else wake(); });
 window.addEventListener('focus', () => { if (document.visibilityState !== 'hidden') wake(); });
 window.addEventListener('online', wake);
-/* A page that simply stays in view (a laptop on the desk) looks at the account once a minute: it shows what
-   another device saved, and it repairs the account if a save from elsewhere landed on top of its own. */
-setInterval(() => { if (loaded && document.visibilityState !== 'hidden' && Date.now() - seenAt > 60000) refresh(); }, 30000);
+/* A page that simply stays in view (a laptop on the desk) looks at the account by itself: it shows what another
+   device saved, and it repairs the account if a save from elsewhere landed on top of its own. Half a minute after
+   the last look at first. Every such look doubles the wait, up to 4 minutes, and news from another device brings
+   the half minute back (takeIn): a student with one device, or with no connection, is not charged 120 reads an hour.
+   Not while something waits to be saved or the account cannot be reached: flush() reads it then, at its own pace. */
+setInterval(() => {
+  if (document.visibilityState === 'hidden' || sync !== 'synced' || dirty || saving || Date.now() - seenAt < pollWait - 10000) return;
+  pollWait = Math.min(pollWait * 2, 240000);
+  refresh();
+}, 30000);
 
 async function initDb() {
   if (!window.claude || !claude.use) return;
@@ -1903,7 +1911,7 @@ function viewSummary() {
   const mins = Math.max(1, Math.round(((x.end || Date.now()) - x.start) / 60000));
   const weak = openMisses();
   const failedNow = (x.failed || []).filter(id => !P.passed[id]);
-  const rapidWeak = rapidPool().filter(id => P.q[id] && P.q[id].open).length;      // the weak questions the next rapid round can really draw
+  const rapidWeak = rapidPool().slice(0, 5).filter(id => P.q[id] && P.q[id].open).length;      // the weak questions the next rapid round will really ask: startSession() takes the first 5 of this pool
   const nx = nextSection();
   const li = arr => arr.length ? `<ul class="sumlist">${arr.join('')}</ul>` : '<p class="muted">Nothing.</p>';
   return `<div class="view"><section class="result">
@@ -1917,7 +1925,7 @@ function viewSummary() {
     </div>
     <div class="panel" style="width:100%"><h2>Mastered</h2>${li([...(x.passed || []).map(id => SEC[id] ? `<li>Passed card: <b>${esc(SEC[id].title)}</b></li>` : ''), ...(x.cleared || []).filter(isReal).map(id => `<li>Cleared: ${md(Q[id].q)}</li>`)].filter(Boolean))}</div>
     <div class="panel" style="width:100%"><h2>Weak on</h2>${li([...failedNow.map(id => SEC[id] ? `<li>Card not passed: <b>${esc(SEC[id].title)}</b></li>` : ''), ...weak.slice(0, 10).map(id => `<li>${md(Q[id].q)} <span class="muted">(${esc(Q[id].ref || '')})</span></li>`)].filter(Boolean))}${weak.length > 10 ? `<p class="muted">Plus ${weak.length - 10} more on your weak list.</p>` : ''}</div>
-    <div class="panel" style="width:100%"><h2>Next</h2><p>${nx ? `Card: <b>${esc(nx.title)}</b> (${esc(pagesLabel(nx))}).` : REAL.length ? 'Every loaded card is passed. Send Claude the next pages of your manual.' : 'Send Claude photos of your first manual pages.'}${rapidWeak ? ` Your next session opens with a rapid round that hits your ${rapidWeak} weak question${rapidWeak === 1 ? '' : 's'} first.` : ''}</p></div>
+    <div class="panel" style="width:100%"><h2>Next</h2><p>${nx ? `Card: <b>${esc(nx.title)}</b> (${esc(pagesLabel(nx))}).` : REAL.length ? 'Every loaded card is passed. Send Claude the next pages of your manual.' : 'Send Claude photos of your first manual pages.'}${rapidWeak ? ` Your next session opens with a rapid round that hits ${rapidWeak < weak.length ? rapidWeak + ' of your ' + weak.length + ' weak questions' : 'your ' + rapidWeak + ' weak question' + (rapidWeak === 1 ? '' : 's')} first.` : ''}</p></div>
     <p class="hint" id="saved-line">${esc(syncText())}</p>
     <button class="btn primary" data-act="home">Back to home</button>
   </section></div>`;

@@ -44,12 +44,12 @@ async function world(browser, url) {
   const acct = { doc: null, gets: 0, sets: 0 };
   const devices = [];
   async function device(opts) {
-    const dev = { down: false, hang: false, lateNext: 0, slowGetNext: 0, flying: 0, overlap: 0 };      // slowGetNext: the next read answers after that many ms, with what the account held when it was asked      // down: calls fail at once. hang: calls never answer. lateNext: the next write lands after that many ms.
+    const dev = { down: false, hang: false, lateNext: 0, slowGetNext: 0, flying: 0, overlap: 0, gets: 0 };      // slowGetNext: the next read answers after that many ms, with what the account held when it was asked      // down: calls fail at once. hang: calls never answer. lateNext: the next write lands after that many ms.
     dev.ctx = await browser.newContext({ viewport: { width: 420, height: 900 }, timezoneId: (opts && opts.timezoneId) || 'America/New_York', locale: 'en-US' });
     await dev.ctx.exposeFunction('__acctGet', () => {
       if (dev.hang) return new Promise(() => {});
       if (dev.down) throw new Error('down');
-      acct.gets++;
+      acct.gets++; dev.gets++;
       if (dev.slowGetNext) { const ms = dev.slowGetNext, then = acct.doc; dev.slowGetNext = 0; return new Promise(r => setTimeout(() => r(then), ms)); }
       return acct.doc;
     });
@@ -57,7 +57,7 @@ async function world(browser, url) {
       if (dev.hang) return new Promise(() => {});
       if (dev.down) throw new Error('down');
       if (dev.flying) dev.overlap++;                    // a write sent while an earlier one from this device had not settled
-      if (dev.lateNext) { const ms = dev.lateNext; dev.lateNext = 0; dev.flying++; return new Promise(r => setTimeout(() => { acct.sets++; acct.doc = v; dev.flying--; r(); }, ms)); }
+      if (dev.lateNext) { const ms = dev.lateNext; dev.lateNext = 0; dev.flying++; return new Promise(r => setTimeout(() => { acct.sets++; acct.doc = v; dev.flying--; dev.landedLate = (dev.landedLate || 0) + 1; r(); }, ms)); }
       acct.sets++; acct.doc = v;
     });
     await dev.ctx.addInitScript(inPage);
@@ -259,6 +259,26 @@ const run = async (name, fn) => { if (ONLY && ONLY !== name) return; try { await
     await w.close();
   });
 
+  await run('late-write-after-retry', async () => {
+    const w = await world(browser, url); const A = await w.device(); const a = await A.tab();
+    A.lateNext = 48000;                                           // the next write gets no answer for 48 s: longer than the page waits for it (15 s, then 20 s more)
+    await startQuiz(a, 'c01-s01'); const q1 = await answer(a, true); const t0 = Date.now();
+    await wait(a, 17500);
+    await next(a); const q2 = await answer(a, true);              // an answer the stuck write does not hold
+    const has = () => !!(w.acct.doc && w.acct.doc.q[q1] && w.acct.doc.q[q2]);
+    let retried = null;
+    for (let i = 0; i < 260 && retried === null; i++) { if (has()) retried = Date.now() - t0; else await wait(a, 100); }
+    check('a write that stays silent: the page stops waiting for it and saves everything about 36 s after it was sent', retried !== null && retried > 30000 && retried < 43000, { ms: retried, landedLate: A.landedLate || 0 });
+    for (let i = 0; i < 300 && !A.landedLate; i++) await wait(a, 100);      // the stuck write lands at last, on top of the newer one
+    const after = { landedLate: A.landedLate || 0, lacksNewAnswer: !(w.acct.doc && w.acct.doc.q[q2]) };
+    await wait(a, 3000);
+    check('... and when the old write then lands on top, the page notices and saves again', after.landedLate === 1 && has(), Object.assign(after, { has: has(), sets: w.acct.sets }));
+    await home(a);
+    check('... and says saved', /saved to your account/.test((await stats(a)).saved), (await stats(a)).saved);
+    check('no page errors (late write after retry)', w.errs().length === 0, w.errs());
+    await w.close();
+  });
+
   await run('wake-offline', async () => {
     const w = await world(browser, url); const A = await w.device(), B = await w.device();
     const a = await A.tab();
@@ -288,7 +308,7 @@ const run = async (name, fn) => { if (ONLY && ONLY !== name) return; try { await
     const d = w.acct.doc;
     check('a save from another device landing on top does not cost the passed card: the phone puts it back by itself, with nobody touching it', !!(d.passed && d.passed['c01-s01'] && d.q[qa]), { passed: Object.keys(d.passed || {}), laptopAnswer: !!d.q[qa] });
     await home(a);
-    await a.evaluate(() => { window.__off += 61000; });
+    await a.evaluate(() => { window.__off += 300000; });         // five minutes pass on the laptop's clock: more than its longest wait between two looks
     await a.waitForFunction(() => [...document.querySelectorAll('.secrow[data-sid="c01-s01"] .pill')].some(x => x.textContent.trim() === 'Passed'), null, { timeout: 40000 }).catch(() => {});
     check('... and the laptop shows the phone\'s card too', (await rowPills(a, 'c01-s01')).includes('Passed'), await rowPills(a, 'c01-s01'));
     check('no page errors (overtaken)', w.errs().length === 0, w.errs());
@@ -297,15 +317,25 @@ const run = async (name, fn) => { if (ONLY && ONLY !== name) return; try { await
 
   await run('in-view', async () => {
     const w = await world(browser, url); const A = await w.device(), B = await w.device();
-    const a = await A.tab();                                      // stays open and in view the whole time: no reload, no event
+    const a = await A.tab();                                      // stays open and in view the whole time: no reload, no event, no tap
     const b = await B.tab(); await startQuiz(b, 'c01-s01'); await passQuiz(b); await wait(b, 2500);
-    const reads = w.acct.gets;
-    await a.evaluate(() => { window.__off += 61000; });           // a minute passes on that page's clock
+    const later = ms => a.evaluate(n => { window.__off += n; }, ms);      // time passes on that page's clock (its timers keep their real pace: one tick every 30 s)
+    const reads = A.gets;
+    await later(300000);
     await a.waitForFunction(() => [...document.querySelectorAll('.secrow[data-sid="c01-s01"] .pill')].some(x => x.textContent.trim() === 'Passed'), null, { timeout: 40000 }).catch(() => {});
-    check('a page that simply stays in view shows what another device saved within about a minute', (await rowPills(a, 'c01-s01')).includes('Passed') && w.acct.sets > 0, { pills: await rowPills(a, 'c01-s01'), readsByThatPage: w.acct.gets - reads });
-    const sets = w.acct.sets;
-    await a.evaluate(() => { window.__off += 61000; }); await wait(a, 32000);
-    check('... and looking again with nothing new writes nothing', w.acct.sets === sets, { sets, now: w.acct.sets });
+    check('a page that simply stays in view shows what another device saved, by itself', (await rowPills(a, 'c01-s01')).includes('Passed') && w.acct.sets > 0, { pills: await rowPills(a, 'c01-s01'), readsByThatPage: A.gets - reads });
+    const sets = w.acct.sets, g0 = A.gets;
+    for (let i = 0; i < 2; i++) { await later(300000); await wait(a, 32000); }      // two more looks, each finding nothing new
+    check('... and looking again with nothing new writes nothing', w.acct.sets === sets && A.gets === g0 + 2, { sets, now: w.acct.sets, looks: A.gets - g0 });
+    const g1 = A.gets;
+    await later(30000); await wait(a, 32000);                     // about a minute after the last look
+    check('... and looks that find nothing new get rarer: no look a minute after the last one', A.gets === g1, { looks: A.gets - g1 });
+    await startQuiz(b, 'c01-s02'); const qb = await answer(b, true); await wait(b, 2500);      // the other device saves something new
+    await later(300000);
+    const got = await a.waitForFunction(([k, id]) => { const p = JSON.parse(localStorage.getItem(k) || 'null'); return !!(p && p.q && p.q[id]); }, [LS, qb], { timeout: 40000 }).then(() => true, () => false);
+    await wait(a, 10000); const g2 = A.gets; await wait(a, 22500);      // the tick after the one that brought the news (no clock moved this time)
+    check('... and news from another device brings the half-minute pace back', got && A.gets === g2 + 1, { gotTheNews: got, looksInTheNextHalfMinute: A.gets - g2 });
+    check('no page errors (in view)', w.errs().length === 0, w.errs());
     await w.close();
   });
 

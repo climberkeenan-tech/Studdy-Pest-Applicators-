@@ -129,6 +129,8 @@ p{margin:0}
 .pill.weak{background:var(--warn-bg);color:var(--warn);border-color:var(--warn)}
 .pill.review{background:var(--field-2);color:var(--field);border-color:var(--field)}
 .pill.retry{background:var(--warn-bg);color:var(--warn);border-color:var(--warn)}
+.pill.read{background:var(--field-2);color:var(--field);border-color:var(--field)}
+.pills{display:flex;flex-direction:column;align-items:flex-end;gap:4px}
 .empty{border:2px dashed var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:8px}
 .weaklist{display:flex;flex-direction:column;gap:6px;margin:0;padding:0;list-style:none}
 .weaklist li{border-left:4px solid var(--warn);padding:4px 10px;background:var(--paper);border-radius:0 8px 8px 0;font-size:15px}
@@ -307,44 +309,194 @@ const ICON = {
 const LS_KEY = 'pas-profile-v1';
 const lsGet = k => { try { return JSON.parse(localStorage.getItem(k)); } catch (e) { return null; } };
 const lsSet = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
-function blank() { return { v: 1, updatedAt: 0, xp: 0, bestCombo: 0, days: {}, passed: {}, attempts: {}, q: {}, sessions: [], settings: { voice: 'buttery', rate: 1, sound: true, engine: 'auto', autoplay: true, chain: false } }; }
+function blank() { return { v: 1, updatedAt: 0, xp: 0, bestCombo: 0, days: {}, passed: {}, attempts: {}, q: {}, read: {}, sessions: [], settingsAt: 0, settings: { voice: 'buttery', rate: 1, sound: true, engine: 'auto', autoplay: true, chain: false } }; }
+const isMap = x => !!x && typeof x === 'object' && !Array.isArray(x);
 function normalize(p) {
   const b = blank();
-  if (!p || typeof p !== 'object') return b;
+  if (!isMap(p)) return b;
   for (const k of Object.keys(b)) if (p[k] === undefined || p[k] === null) p[k] = b[k];
-  p.settings = Object.assign(b.settings, p.settings || {});
-  if (!Array.isArray(p.sessions)) p.sessions = [];
+  for (const k of ['days', 'passed', 'attempts', 'q', 'read']) if (!isMap(p[k])) p[k] = {};
+  p.settings = Object.assign(b.settings, isMap(p.settings) ? p.settings : {});
+  p.sessions = (Array.isArray(p.sessions) ? p.sessions : []).filter(x => isMap(x) && x.id);
+  delete p.base;                                  // a mark an older version of this page kept on the device
   return p;
 }
+
+/* ---------- joining two copies of the profile ----------
+   Every open tab and every device edits the same profile, and the store only knows "the last write wins".
+   So one copy never replaces another: they are joined, and nothing either copy holds is dropped.
+   - Counts only grow, so the larger count wins. A card passed anywhere stays passed.
+   - Per question the later answer decides the run. If both copies answered it since they last agreed,
+     a miss on either keeps it on the weak list (it still takes two right in a row to clear).
+   - Joining a copy with an older version of itself gives the newer one back unchanged, so a device that is
+     merely behind changes nothing.
+   tools/check_join.js tests these rules. Keep it passing. */
+const clone = x => (x === undefined ? undefined : JSON.parse(JSON.stringify(x)));
+const num = v => (typeof v === 'number' && isFinite(v) ? v : 0);
+const bothKeys = (x, y) => [...new Set([...Object.keys(x || {}), ...Object.keys(y || {})])];
+/* A stable text form of a value (keys sorted): two copies with the same content give the same text. */
+const sig = v => JSON.stringify(v, (k, x) => isMap(x) ? Object.keys(x).sort().reduce((o, key) => { o[key] = x[key]; return o; }, {}) : x);
+const sigP = p => sig(Object.assign({}, p, { updatedAt: 0 }));
+/* Two records of counts: the larger of each. */
+function joinMax(x, y) {
+  if (!isMap(x) || !isMap(y)) return clone(isMap(x) ? x : isMap(y) ? y : {});
+  const out = {};
+  for (const k of bothKeys(x, y)) {
+    if (typeof x[k] === 'number' || typeof y[k] === 'number') out[k] = Math.max(num(x[k]), num(y[k]));
+    else out[k] = clone(x[k] === undefined ? y[k] : y[k] === undefined ? x[k] : sig(x[k]) >= sig(y[k]) ? x[k] : y[k]);
+  }
+  return out;
+}
+/* One question's record: { seen, right, wrong, run, open, last }. */
+function joinQ(x, y) {
+  if (!isMap(x) || !isMap(y)) return clone(isMap(x) ? x : isMap(y) ? y : {});
+  const key = r => [num(r.last), num(r.seen), num(r.right), num(r.wrong), num(r.run), r.open ? 1 : 0];
+  const kx = key(x), ky = key(y);
+  let d = 0; for (let i = 0; i < kx.length && !d; i++) d = kx[i] - ky[i];
+  const late = d >= 0 ? x : y, early = d >= 0 ? y : x;
+  const out = joinMax(x, y);
+  out.seen = Math.max(num(out.seen), num(out.right) + num(out.wrong));
+  out.last = num(late.last); out.run = num(late.run); out.open = !!late.open;
+  const covers = num(late.seen) >= num(early.seen) && num(late.right) >= num(early.right) && num(late.wrong) >= num(early.wrong);
+  if (!covers && early.open && !late.open) { out.open = true; out.run = Math.min(out.run, 1); }      // both answered it: the miss stands
+  return out;
+}
+/* Every tie below is settled by content alone (never by which copy came first or was saved last),
+   so joining in any order, any number of times, ends at the same result. */
+const pickOne = (p, q) => (p === undefined || p === null ? (q === undefined ? null : q) : q === undefined || q === null ? p : sig(p) >= sig(q) ? p : q);
+/* A list of ids. One list holding everything in the other is used as it is; otherwise both, without repeats. */
+function joinList(p, q) {
+  const a = Array.isArray(p) ? p : [], b = Array.isArray(q) ? q : [];
+  if (b.every(v => a.includes(v))) return a.slice();
+  if (a.every(v => b.includes(v))) return b.slice();
+  const [first, second] = sig(a) >= sig(b) ? [a, b] : [b, a];
+  return [...first, ...second.filter(v => !first.includes(v))];
+}
+function joinSession(x, y) {
+  if (!isMap(x) || !isMap(y)) return clone(isMap(x) ? x : y);
+  const out = {};
+  for (const k of bothKeys(x, y)) {
+    const p = x[k], q = y[k];
+    if (Array.isArray(p) || Array.isArray(q)) out[k] = joinList(p, q);
+    else if (typeof p === 'number' && typeof q === 'number') out[k] = Math.max(p, q);
+    else out[k] = clone(pickOne(p, q));
+  }
+  out.start = Math.min(num(x.start) || num(y.start), num(y.start) || num(x.start));
+  out.end = num(x.end) || num(y.end) ? Math.max(num(x.end), num(y.end)) : null;      // ended on either copy: ended
+  return out;
+}
+const KNOWN = new Set(Object.keys(blank()));
+function joinProfiles(a, b) {
+  a = normalize(clone(a)); b = normalize(clone(b));
+  const out = {};
+  for (const k of bothKeys(a, b)) if (!KNOWN.has(k)) out[k] = clone(pickOne(a[k], b[k]));      // something a later version of this page adds is carried along
+  out.v = 1;
+  out.updatedAt = Math.max(num(a.updatedAt), num(b.updatedAt));
+  out.bestCombo = Math.max(num(a.bestCombo), num(b.bestCombo));
+  out.days = {}; for (const k of bothKeys(a.days, b.days)) out.days[k] = joinMax(a.days[k], b.days[k]);
+  out.read = {}; for (const k of bothKeys(a.read, b.read)) out.read[k] = joinMax(a.read[k], b.read[k]);
+  out.q = {}; for (const k of bothKeys(a.q, b.q)) out.q[k] = joinQ(a.q[k], b.q[k]);
+  out.passed = {};
+  for (const k of bothKeys(a.passed, b.passed)) {
+    const x = a.passed[k], y = b.passed[k];
+    out.passed[k] = clone(!isMap(x) ? (y || x) : !isMap(y) ? x : (num(x.at) - num(y.at) || num(x.tries) - num(y.tries)) <= 0 ? x : y);      // the first pass stands
+  }
+  out.attempts = {};
+  for (const k of bothKeys(a.attempts, b.attempts)) {
+    const x = a.attempts[k], y = b.attempts[k];
+    if (!isMap(x) || !isMap(y)) { out.attempts[k] = clone(isMap(x) ? x : isMap(y) ? y : {}); continue; }
+    const m = joinMax(x, y);                           // n and best: the larger
+    m.last = num(x.n) !== num(y.n) ? num((num(x.n) > num(y.n) ? x : y).last) : Math.max(num(x.last), num(y.last));
+    out.attempts[k] = m;
+  }
+  const byId = {};
+  for (const x of [...a.sessions, ...b.sessions]) byId[x.id] = byId[x.id] ? joinSession(byId[x.id], x) : clone(x);
+  out.sessions = Object.values(byId).sort((x, y) => num(y.start) - num(x.start) || (String(y.id) > String(x.id) ? 1 : String(y.id) < String(x.id) ? -1 : 0)).slice(0, 30);
+  // settings: the copy that changed its settings last
+  const sNew = num(a.settingsAt) - num(b.settingsAt) || (sig(a.settings) >= sig(b.settings) ? 1 : -1);
+  out.settings = clone((sNew >= 0 ? a : b).settings);
+  out.settingsAt = Math.max(num(a.settingsAt), num(b.settingsAt));
+  out.xp = Math.max(num(a.xp), num(b.xp), Object.values(out.days).reduce((t, d) => t + num(d.xp), 0));
+  return out;
+}
+
 let P = normalize(lsGet(LS_KEY));
-/* bootStamp: how new this device's copy was when the page opened. A tap made before the saved copy has
-   loaded stamps P with the time now; that must never make an empty or old copy win over the saved one. */
-/* P.base: set by a save made before the saved copy was read; it keeps the stamp at which this device and the
-   account were last in step, so a later visit still sees that the account copy is the newer one. */
-const bootStamp = typeof P.base === 'number' ? P.base : (P.updatedAt || 0);
-let profRef = null, sync = 'local', dirty = false, saving = false, saveT = null, loaded = false;
+/* loaded: the account copy has been read. Nothing is written to the account before that.
+   seenAt: when this tab last read or wrote the account. acctAt: when the account copy was last saved, by any device. */
+let profRef = null, sync = 'local', dirty = false, saving = false, saveT = null, loaded = false, seenAt = 0, acctAt = 0, fails = 0;
+/* A call to the account that gets no answer must not hold everything up: after `ms` it counts as failed. */
+const timed = (p, ms) => new Promise((ok, no) => { const t = setTimeout(() => no({ code: 'unavailable', message: 'no answer' }), ms); Promise.resolve(p).then(v => { clearTimeout(t); ok(v); }, e => { clearTimeout(t); no(e); }); });
+/* What a failed call means for the footer: full (a storage cap), off (this view may not use the account), error (try again). */
+const failKind = e => { const c = e && e.code; return c === 'quota_exceeded' ? 'full' : c === 'revoked' || c === 'not_granted' || c === 'capability_disabled' || c === 'capability_removed' ? 'off' : 'error'; };
 
 function save() {
-  if (!loaded && typeof P.base !== 'number') P.base = bootStamp;
   P.updatedAt = Date.now();
   lsSet(LS_KEY, P);
   dirty = true;
   clearTimeout(saveT);
   saveT = setTimeout(flush, 700);
-}
-async function flush() {
-  if (!loaded && dirty && sync === 'error') { initDb(); return; }      // initDb gave up earlier: try the read again
-  if (!profRef || !loaded || saving || !dirty) return;
-  saving = true; dirty = false;
-  let body = JSON.stringify(P);
-  while (body.length > 200000 && P.sessions.length > 3) { P.sessions.pop(); body = JSON.stringify(P); }
-  try { await profRef.set(JSON.parse(body)); sync = 'synced'; }
-  catch (e) { dirty = true; sync = e && e.code === 'quota_exceeded' ? 'full' : 'error'; }
-  saving = false;
   renderFoot();
-  if (dirty && sync === 'synced') saveT = setTimeout(flush, 700);
 }
-document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') flush(); });
+function saveSettings() { P.settingsAt = Date.now(); save(); }
+/* Make `next` the profile in use. The session in progress is an object inside the profile: find it again. */
+function adopt(next) {
+  const id = S.sess && S.sess.id;
+  P = next;
+  lsSet(LS_KEY, P);
+  if (id) S.sess = P.sessions.find(x => x.id === id && !x.end) || null;
+  else if (S.view === 'home') resumeSession();
+}
+/* The account copy has just been read: join it into the profile in use.
+   news: this tab now holds something it did not. need: this tab holds something the account copy does not. */
+function takeIn(snap) {
+  if (!snap || !snap.exists) return { news: false, need: !!P.updatedAt };
+  const remote = normalize(clone(snap.data()));
+  acctAt = Math.max(acctAt, num(remote.updatedAt));
+  const before = sigP(P), joined = joinProfiles(P, remote), after = sigP(joined);
+  if (after !== before) adopt(joined);
+  return { news: after !== before, need: after !== sigP(remote) };
+}
+function remoteNews() { if (S.view === 'home') render(); else renderChips(); }
+async function flush() {
+  if (!loaded) { if (dirty && sync === 'error') initDb(); return; }      // initDb gave up earlier: try the read again
+  if (!profRef || saving || !dirty) return;
+  saving = true;
+  let news = false;
+  try {
+    // Another tab or device may have saved since this one last looked: read, join, then write. Never overwrite.
+    const t = takeIn(await timed(profRef.get(), 15000));
+    news = t.news;
+    dirty = false;
+    if (t.need) {
+      let body = JSON.stringify(P);
+      while (body.length > 200000 && P.sessions.length > 3) { P.sessions.pop(); body = JSON.stringify(P); }
+      await timed(profRef.set(JSON.parse(body)), 15000);
+      acctAt = Date.now();
+    }
+    sync = 'synced'; seenAt = Date.now(); fails = 0;
+  } catch (e) { dirty = true; sync = failKind(e); fails++; }
+  saving = false;
+  if (news) remoteNews();
+  renderFoot();
+  clearTimeout(saveT);
+  // Changed meanwhile: save again. Failed: try again later, less and less often (20 s, 40 s ... 5 min). Full or off: retrying cannot help.
+  if (dirty && sync === 'synced') saveT = setTimeout(flush, 700);
+  else if (dirty && sync === 'error') saveT = setTimeout(flush, Math.min(300000, 20000 * Math.pow(2, Math.min(fails - 1, 4))));
+}
+/* The tab is back in view: another device may have saved in the meantime. */
+async function refresh() {
+  if (!loaded || !profRef || saving) return;
+  saving = true;
+  let news = false;
+  try { const t = takeIn(await timed(profRef.get(), 15000)); news = t.news; if (t.need) dirty = true; seenAt = Date.now(); if (sync === 'error') { sync = 'synced'; fails = 0; } } catch (e) {}
+  saving = false;
+  if (news) remoteNews();
+  renderFoot();
+  if (dirty) flush();
+}
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') flush(); else if (Date.now() - seenAt > 20000) refresh(); });
+window.addEventListener('focus', () => { if (document.visibilityState !== 'hidden' && Date.now() - seenAt > 20000) refresh(); });
+window.addEventListener('online', () => { if (dirty) flush(); });
 
 async function initDb() {
   if (!window.claude || !claude.use) return;
@@ -355,22 +507,18 @@ async function initDb() {
     const id = user ? await user.id() : null;
     if (!db || !id) { clearTimeout(slow); sync = 'local'; renderFoot(); return; }
     profRef = db.doc('data/users/' + id + '/profile');
-    const snap = await profRef.get();
+    const snap = await timed(profRef.get(), 15000);
     clearTimeout(slow);
-    if (snap.exists) {
-      const remote = normalize(JSON.parse(JSON.stringify(snap.data())));
-      if ((remote.updatedAt || 0) > bootStamp) { P = remote; lsSet(LS_KEY, P); resumeSession(); dirty = false; }
-      else if ((P.updatedAt || 0) > (remote.updatedAt || 0)) { dirty = true; }
-    } else if (P.updatedAt) { dirty = true; }
-    if (typeof P.base === 'number') { delete P.base; lsSet(LS_KEY, P); }
+    dirty = takeIn(snap).need;                         // taps made before this point are kept: they were joined in
     loaded = true;
-    sync = 'synced';
+    sync = 'synced'; seenAt = Date.now();
     if (dirty) flush();
     if (S.view === 'home') render(); else { renderChips(); renderFoot(); }
   } catch (e) {
     clearTimeout(slow);
     // The first read failed (a connection hiccup). Nothing is saved to the account until it has been read,
     // so try a few more times before settling for this device's copy.
+    if (failKind(e) === 'off') { sync = 'off'; renderFoot(); return; }      // this view may not use the account: the device's copy is all there is
     if (!loaded && (initDb.tries = (initDb.tries || 0) + 1) <= 3) { setTimeout(initDb, 1500 * initDb.tries + Math.random() * 1000); return; }
     sync = 'error'; renderFoot();
   }
@@ -716,6 +864,7 @@ const Reader = {
   tts: 'pending',          // pending | ready | none | off (the viewer turned reading aloud off)
   t: null, engine: null,   // engine: the voice speaking now (rec | claude | device)
   state: 'idle', lines: [], cur: -1, wordEl: null, done: false, cgen: 0, resumeAt: 0,
+  heard: new Set(),        // the sentences started since this card was opened
   msPerUnit: 62, lastMs: 0, note: '', voices: ['buttery', 'airy', 'glassy', 'rounded'], devVoice: null,
   stop() { if (this.state === 'idle' && !this.engine) return; halt(null); this.setState('idle', 'stopped'); },
   setState(state, reason) {
@@ -1112,6 +1261,7 @@ function setCur(i) {
   if (Reader.wordEl) { Reader.wordEl.classList.remove('on'); Reader.wordEl = null; }
   Reader.cur = i;
   const L = Reader.lines[i]; if (!L) return;
+  Reader.heard.add(i);
   L.el.classList.add('on');
   if (Date.now() - handScroll < 5000) return;        // the student is scrolling by hand (reaching for a control): leave the page alone
   const r = L.el.getBoundingClientRect(), behavior = reduced() ? 'auto' : 'smooth';
@@ -1257,8 +1407,19 @@ function playToggle() {
 }
 /* A card was read to its end. With "keep going" on, open the next card and read that too. */
 function nextCardId(sid) { const i = REAL.findIndex(s => s.id === sid); return i >= 0 && i + 1 < REAL.length ? REAL[i + 1].id : null; }
+/* A card was listened to the end. That is remembered and shown, but it is not a pass and it does not count
+   as a study day: only answered questions do. */
+function markRead(sid) {
+  const r = P.read[sid] || (P.read[sid] = { n: 0, at: 0 });
+  r.n++; r.at = Date.now();
+  const d = today(); d.r = (d.r || 0) + 1;
+  save();
+}
 function readingDone() {
-  if (!P.settings.chain || S.view !== 'study' || (SEC[S.sid] || {}).practice) return;
+  const s = SEC[S.sid];
+  if (S.view !== 'study' || !s || s.practice) return;
+  if (Reader.heard.size >= Math.ceil(Reader.lines.length * 0.8)) markRead(s.id);      // most of the card, not just a tap on its last line
+  if (!P.settings.chain) { if (!P.passed[s.id]) toast('Card finished. Take the quiz to make it count.'); return; }
   const nx = nextCardId(S.sid);
   if (!nx) { toast('That was the last card.'); return; }
   openSection(nx, true);
@@ -1271,6 +1432,7 @@ function go(view) { if (view !== 'study') Reader.stop(); S.view = view; render()
 function openSection(sid, auto) {
   Reader.stop();
   Reader.done = false;
+  Reader.heard = new Set();
   Reader.note = '';
   Reader.resumeAt = 0;
   recRetry(sid);
@@ -1322,6 +1484,8 @@ function viewHome() {
   else pace = 'Tell Claude how many pages your manual has, and this will show your daily pace.';
   const ctaSub = S.sess ? 'Session in progress. Pick up where you left off.' : (rapidPool().length ? '5-question rapid round first, then ' : 'Next up: ') + (nx ? '<b>' + esc(nx.title) + '</b>' : (REAL.length ? 'drilling your weak spots' : 'the practice card'));
   const totalA = Object.values(P.days).reduce((s, x) => s + (x.a || 0), 0), totalC = Object.values(P.days).reduce((s, x) => s + (x.c || 0), 0);
+  const streakN = dayStreak();
+  const streakHint = d.a ? 'Today is counted.' : (d.r ? 'Listening does not count. ' : '') + 'Answer 1 question today to ' + (streakN ? 'keep it.' : 'start it.');
   const week = []; for (let k = 6; k >= 0; k--) { const dd = new Date(); dd.setDate(dd.getDate() - k); const rec = P.days[dayKey(dd)]; week.push(`<i class="${rec && rec.a ? 'on' : ''}${k === 0 ? ' today' : ''}" title="${dayKey(dd)}"></i>`); }
   return `<div class="view">
   <section class="mission">
@@ -1343,7 +1507,7 @@ function viewHome() {
 
   <section class="stats" aria-label="Your stats">
     <div class="stat"><span class="lbl">Rank</span><b style="font-size:24px">${esc(r.name)}</b><div class="meter yellow"><i style="width:${(r.frac * 100).toFixed(0)}%"></i></div><span class="hint">${r.next ? fmt(r.need) + ' XP to ' + esc(r.next) : 'Top rank'}</span></div>
-    <div class="stat"><span class="lbl">Day streak</span><b>${dayStreak()}</b><div class="dots">${week.join('')}</div></div>
+    <div class="stat"><span class="lbl">Day streak</span><b>${streakN}</b><div class="dots">${week.join('')}</div><span class="hint" id="streak-hint">${esc(streakHint)}</span></div>
     <div class="stat"><span class="lbl">Today</span><b>${d.a}<span class="muted" style="font-size:18px"> / ${DAILY_GOAL}</span></b><div class="meter"><i style="width:${Math.min(100, pct(d.a, DAILY_GOAL))}%"></i></div><span class="hint">questions answered</span></div>
     <div class="stat"><span class="lbl">Accuracy</span><b>${totalA ? pct(totalC, totalA) + '%' : '—'}</b><span class="hint">${fmt(totalA)} answered · best streak ${P.bestCombo}</span></div>
   </section>
@@ -1391,14 +1555,27 @@ function groupSections(list, nx) {
 function secRow(s, nx) {
   const st = s.practice ? 'practice' : secStatus(s);
   const weak = (s.questions || []).filter(q => P.q[q.id] && P.q[q.id].open).length;
-  let pill = st === 'pass' ? '<span class="pill pass">Passed</span>' : st === 'fail' ? `<span class="pill fail">Failed ${P.attempts[s.id].last}%</span>` : st === 'practice' ? '<span class="pill new">Try it</span>' : (nx && nx.id === s.id ? '<span class="pill next">Next</span>' : '<span class="pill new">New</span>');
+  const isNext = nx && nx.id === s.id;
+  let pill = st === 'pass' ? '<span class="pill pass">Passed</span>' : st === 'fail' ? `<span class="pill fail">Failed ${P.attempts[s.id].last}%</span>` : st === 'practice' ? '<span class="pill new">Try it</span>'
+    : P.read[s.id] ? `<span class="pills"><span class="pill read">Listened</span>${isNext ? '<span class="pill next">Quiz next</span>' : ''}</span>`
+    : (isNext ? '<span class="pill next">Next</span>' : '<span class="pill new">New</span>');
   if (weak && !s.practice) pill = `<span class="row" style="gap:4px">${pill}<span class="pill weak">${weak} weak</span></span>`;
   return `<button class="secrow" data-act="open" data-sid="${esc(s.id)}"><span style="min-width:0"><span class="t">${esc(s.title)}</span><br><span class="m">${esc([pagesLabel(s), (s.questions || []).length + ' questions'].filter(Boolean).join(' · '))}</span></span>${pill}</button>`;
 }
+/* When the account copy was last saved: "1:25 PM" today, "Nov 14, 1:25 PM" before that. */
+const fmtWhen = ms => {
+  const d = new Date(ms), t = d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+  return dayKey(d) === dayKey() ? t : d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) + ', ' + t;
+};
+function syncText() {
+  if (sync === 'synced') return dirty || saving ? 'Saving to your account…' : 'Progress saved to your account' + (acctAt ? ' · last saved ' + fmtWhen(acctAt) : '');
+  return { local: 'Progress saved on this device', loading: 'Loading your progress…', slow: 'Can’t reach saved progress yet. Using this device’s copy.', error: 'Could not reach your account. Saved on this device. Trying again.', full: 'Account storage is full. Saved on this device.', off: 'Saving to your account is not available here. Saved on this device.' }[sync] || '';
+}
 function renderFoot() {
+  const txt = syncText();
+  const line = $('#saved-line'); if (line) line.textContent = txt;
   const f = $('#foot'); if (!f) return;
-  const syncTxt = { local: 'Progress saved on this device', loading: 'Loading your progress…', slow: 'Can’t reach saved progress yet. Using this device’s copy.', synced: 'Progress saved to your account', error: 'Could not save to your account. Saved on this device.', full: 'Account storage is full. Saved on this device.' }[sync] || '';
-  f.innerHTML = `<span>${esc(syncTxt)}</span><button class="linkish" data-act="sound">${P.settings.sound ? 'Sound on' : 'Sound off'}</button>`;
+  f.innerHTML = `<span id="sync-text">${esc(txt)}</span><button class="linkish" data-act="sound">${P.settings.sound ? 'Sound on' : 'Sound off'}</button>`;
 }
 function fmtDate(d) { return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }); }
 
@@ -1464,7 +1641,7 @@ function viewStudy() {
         ${s.photos && s.photos.length ? `<span>From ${esc(s.photos.join(', '))}</span>` : ''}
         <span>About ${Math.max(1, Math.round(words / 150))} min read</span>
         <span>${(s.questions || []).length} questions</span>
-        ${st === 'pass' ? '<span class="pill pass">Passed</span>' : st === 'fail' ? '<span class="pill fail">Failed last try</span>' : ''}
+        ${st === 'pass' ? '<span class="pill pass">Passed</span>' : st === 'fail' ? '<span class="pill fail">Failed last try</span>' : st && P.read[s.id] ? '<span class="pill read">Listened · quiz not passed</span>' : ''}
       </div>
     </div>
     <div class="voicebar" id="voicebar"></div>
@@ -1564,7 +1741,7 @@ function viewQuiz() {
   if (cur.grading) fb = `<div class="band wait">Checking…</div><p class="hint">Claude is reading your answer. Spelling does not count.</p>`;
   else if (R) {
     const correctText = q.kind === 'mc' ? `${LET[cur.order.indexOf(q.answer)]}. ${q.choices[q.answer]}` : q.kind === 'tf' ? (q.answer ? 'True' : 'False') : q.answer;
-    fb = `<div class="band ${R.ok ? 'ok' : 'bad'}"><span>${R.ok ? 'Right' : 'Wrong'}</span>${R.gain ? `<span class="xp">+${R.gain} XP</span>` : ''}</div>
+    fb = `<div class="band ${R.ok ? 'ok' : 'bad'}"><span>${R.ok ? 'Right' : 'Wrong'}</span>${R.practice ? '<span class="xp">Practice · not counted</span>' : R.gain ? `<span class="xp">+${R.gain} XP</span>` : ''}</div>
     <div class="fb">
       ${R.ok ? '' : `<p class="ans">Correct answer: ${md(correctText)}</p>`}
       ${R.why2 ? `<p>${esc(R.why2)}</p>` : ''}
@@ -1615,6 +1792,7 @@ function viewResult() {
       <div class="row" style="width:100%">
         ${pass ? '' : `<button class="btn primary big grow" data-act="quiz" data-sid="${esc(r.sid)}">Retake quiz</button><button class="btn" data-act="open" data-sid="${esc(r.sid)}">Reread the card</button>`}
       </div>
+      ${s && s.practice ? '<p class="hint" id="practice-note">This was the practice card. Nothing on it counts toward progress, XP or your day streak.</p>' : `<p class="hint" id="saved-line">${esc(syncText())}</p>`}
       ${pass ? nextBtn : (nx && nx.id !== r.sid ? `<button class="btn" data-act="next-section">Move on for now (stays failed)</button>` : '')}
       ${endBtn}
     </section></div>`;
@@ -1625,6 +1803,7 @@ function viewResult() {
     <div class="bigscore">${r.right} / ${r.total} · ${r.score}%</div>
     <p>${r.score === 100 ? 'Clean sweep.' + (r.bonus ? ' +' + r.bonus + ' XP bonus.' : '') : 'Missed ' + (r.total - r.right) + '. Those stay on your weak list until you get each right twice in a row.'}</p>
     ${r.missed.length ? missList(r.missed) : ''}
+    <p class="hint" id="saved-line">${esc(syncText())}</p>
     ${nextBtn || ''}
     ${endBtn}
   </section></div>`;
@@ -1648,6 +1827,7 @@ function viewSummary() {
     <div class="panel" style="width:100%"><h2>Mastered</h2>${li([...(x.passed || []).map(id => SEC[id] ? `<li>Passed card: <b>${esc(SEC[id].title)}</b></li>` : ''), ...(x.cleared || []).filter(isReal).map(id => `<li>Cleared: ${md(Q[id].q)}</li>`)].filter(Boolean))}</div>
     <div class="panel" style="width:100%"><h2>Weak on</h2>${li([...failedNow.map(id => SEC[id] ? `<li>Card not passed: <b>${esc(SEC[id].title)}</b></li>` : ''), ...weak.slice(0, 10).map(id => `<li>${md(Q[id].q)} <span class="muted">(${esc(Q[id].ref || '')})</span></li>`)].filter(Boolean))}${weak.length > 10 ? `<p class="muted">Plus ${weak.length - 10} more on your weak list.</p>` : ''}</div>
     <div class="panel" style="width:100%"><h2>Next</h2><p>${nx ? `Card: <b>${esc(nx.title)}</b> (${esc(pagesLabel(nx))}).` : REAL.length ? 'Every loaded card is passed. Send Claude the next pages of your manual.' : 'Send Claude photos of your first manual pages.'}${weak.length ? ` Your next session opens with a rapid round that hits your ${weak.length} weak question${weak.length === 1 ? '' : 's'} first.` : ''}</p></div>
+    <p class="hint" id="saved-line">${esc(syncText())}</p>
     <button class="btn primary" data-act="home">Back to home</button>
   </section></div>`;
 }
@@ -1672,7 +1852,7 @@ const ACT = {
   drill: () => startQuiz('drill', null, openMisses().slice(0, 15)),
   play: () => playToggle(),
   stop: () => Reader.stop(),
-  sound: () => { P.settings.sound = !P.settings.sound; save(); renderFoot(); },
+  sound: () => { P.settings.sound = !P.settings.sound; saveSettings(); renderFoot(); },
 };
 document.addEventListener('click', e => {
   const b = e.target.closest('[data-act]');
@@ -1689,22 +1869,22 @@ document.addEventListener('submit', e => { if (e.target.matches('[data-form="sho
 document.addEventListener('change', e => {
   const id = e.target.id;
   if (id === 'sel-engine') {
-    P.settings.engine = e.target.value; save();
+    P.settings.engine = e.target.value; saveSettings();
     if (e.target.value === 'rec') recRetry(S.sid);
     const at = Reader.state !== 'idle' ? Math.max(0, Reader.cur) : -1;
     Reader.note = '';
     if (at >= 0) play(at);
     renderVoiceBar(); renderDock();
   }
-  if (id === 'sel-voice') { P.settings.voice = e.target.value; save(); if (Reader.engine === 'claude' && Reader.state !== 'idle' && Reader.cur >= 0) play(Reader.cur); }
+  if (id === 'sel-voice') { P.settings.voice = e.target.value; saveSettings(); if (Reader.engine === 'claude' && Reader.state !== 'idle' && Reader.cur >= 0) play(Reader.cur); }
   if (id === 'sel-rate') {
-    P.settings.rate = parseFloat(e.target.value) || 1; save();
+    P.settings.rate = parseFloat(e.target.value) || 1; saveSettings();
     if (Reader.t && Reader.t.setRate) { try { const r = Reader.t.setRate(P.settings.rate); if (r && r.catch) r.catch(() => {}); } catch (x) {} }
     if (Reader.engine === 'device' && Reader.state !== 'idle' && Reader.cur >= 0) play(Reader.cur);
     if (Reader.engine === 'rec') Rec.setRate();
   }
-  if (id === 'chk-auto') { P.settings.autoplay = e.target.checked; save(); }
-  if (id === 'chk-chain') { P.settings.chain = e.target.checked; save(); if (Reader.state === 'idle') { renderVoiceBar(); renderDock(); } }
+  if (id === 'chk-auto') { P.settings.autoplay = e.target.checked; saveSettings(); }
+  if (id === 'chk-chain') { P.settings.chain = e.target.checked; saveSettings(); if (Reader.state === 'idle') { renderVoiceBar(); renderDock(); } }
 });
 document.addEventListener('keydown', e => {
   if (e.metaKey || e.ctrlKey || e.altKey) return;

@@ -137,7 +137,7 @@ const settle = (page, ms) => page.waitForTimeout(ms);
     p = await page.evaluate(probe);
     check('at the end the reader goes idle and the Quiz button lights up', p.quizHi && /Play/.test(p.btn) && p.view === 'study' && p.sid === 'c01-s01', { quizHi: p.quizHi, btn: (p.btn || '').trim() });
     check('no page errors', errs.length === 0, errs.slice(0, 3));
-    await page.screenshot({ path: path.join(__dirname, 'rec-idle.png') });
+    await page.screenshot({ path: path.join(SITE, 'rec-idle.png') });      // kept with the staged site, not in the repo
     await ctx.close();
   });
 
@@ -150,7 +150,7 @@ const settle = (page, ms) => page.waitForTimeout(ms);
     await settle(page, 3500);
     const p = await page.evaluate(probe);
     check('with "keep going" on, the next card opens and reads itself', p.sid === 'c01-s02' && p.paused === false && p.t > 0.3 && /c01-s02/.test(p.src), { sid: p.sid, t: p.t, src: p.src, title: p.title });
-    await page.screenshot({ path: path.join(__dirname, 'rec-playing.png') });
+    await page.screenshot({ path: path.join(SITE, 'rec-playing.png') });      // kept with the staged site, not in the repo
     // leaving the card stops the voice
     await page.click('[data-act="home"]');
     await settle(page, 300);

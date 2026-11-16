@@ -1,6 +1,6 @@
 #!/bin/bash
-# Browser tests of the reader: the recorded voice, the live Claude voice (a stand-in for it), saved progress,
-# and bad connections. Run them after any change to the reader or the storage code in app/template.html:
+# Browser tests of the reader and of saved progress: the recorded voice, the live Claude voice (a stand-in for
+# it), bad connections, progress saved across devices and tabs, and the day streak over a moved calendar. Run them after any change to the reader or the storage code in app/template.html:
 #
 #     python3 tools/build.py && tools/browser/run.sh
 #
@@ -31,5 +31,6 @@ run "Claude voice (stand-in)"           tools/browser/claude.js "$site"
 run "stalled and dead connections"      tools/browser/cold.js "$site"
 run "saved progress, taps before load"  tools/browser/sync.js "$site/pest-study.html"
 run "saved progress, failed first read" tools/browser/sync2.js "$site/pest-study.html"
+run "progress across devices, day streak" tools/browser/progress.js "$site"
 if [ $fail -eq 0 ]; then echo "all browser tests passed"; rm -rf "$site"; else echo "FAILED (site kept: $site)"; fi
 exit $fail

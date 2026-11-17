@@ -12,6 +12,7 @@ Usage: python3 tools/build.py
 Fails loudly on any content error so a broken card never ships.
 """
 import base64
+import hashlib
 import json
 import pathlib
 import re
@@ -277,6 +278,11 @@ def main():
         sys.exit(1)
     payload = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     html = TEMPLATE.read_text(encoding="utf-8").replace("__CONTENT__", payload, 1)
+    # A short name for this exact page: the hash of everything else in it. The page's field log reports it.
+    if html.count("__BUILD__") != 1:
+        print("ERROR: the template must hold __BUILD__ exactly once")
+        sys.exit(1)
+    html = html.replace("__BUILD__", hashlib.sha1(html.encode("utf-8")).hexdigest()[:10], 1)
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(html, encoding="utf-8")
     real = [s for s in data["sections"] if not s.get("practice")]

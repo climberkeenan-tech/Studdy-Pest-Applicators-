@@ -36,12 +36,14 @@ const inPage = () => {
     get: async () => { let d; try { d = await window.__acctGet(); } catch (e) { throw down(); } return { id: 'profile', exists: d !== null && d !== undefined, data: () => d, metadata: { fromCache: false, hasPendingWrites: false } }; },
     set: async v => { try { await window.__acctSet(JSON.parse(JSON.stringify(v))); } catch (e) { throw down(); } },
   };
-  window.claude = { use: name => Promise.resolve(name === 'db' ? { doc: () => doc } : name === 'user' ? { id: () => Promise.resolve('u_test') } : null) };
+  // every other document (the field log) is only written: the test sees what was sent, under which path
+  const side = path => ({ get: async () => ({ id: 'x', exists: false, data: () => undefined, metadata: { fromCache: false, hasPendingWrites: false } }), set: async v => { await window.__sideSet(path, JSON.parse(JSON.stringify(v))); } });
+  window.claude = { use: name => Promise.resolve(name === 'db' ? { doc: path => (/\/profile$/.test(path) ? doc : side(path)) } : name === 'user' ? { id: () => Promise.resolve('u_test') } : null) };
 };
 
 // One account, any number of devices. A device is a browser context with its own storage and its own connection.
 async function world(browser, url) {
-  const acct = { doc: null, gets: 0, sets: 0 };
+  const acct = { doc: null, gets: 0, sets: 0, side: [] };      // side: writes to any document other than the progress
   const devices = [];
   async function device(opts) {
     const dev = { down: false, hang: false, lateNext: 0, slowGetNext: 0, flying: 0, overlap: 0, gets: 0 };      // slowGetNext: the next read answers after that many ms, with what the account held when it was asked      // down: calls fail at once. hang: calls never answer. lateNext: the next write lands after that many ms.
@@ -60,6 +62,7 @@ async function world(browser, url) {
       if (dev.lateNext) { const ms = dev.lateNext; dev.lateNext = 0; dev.flying++; return new Promise(r => setTimeout(() => { acct.sets++; acct.doc = v; dev.flying--; dev.landedLate = (dev.landedLate || 0) + 1; r(); }, ms)); }
       acct.sets++; acct.doc = v;
     });
+    await dev.ctx.exposeFunction('__sideSet', (path, v) => { acct.side.push({ path, v }); });
     await dev.ctx.addInitScript(inPage);
     if (opts && opts.noFrames) await dev.ctx.addInitScript(() => { window.requestAnimationFrame = () => 0; window.cancelAnimationFrame = () => {}; });      // a page that is not on screen gets no animation frames
     if (opts && opts.noAccount) await dev.ctx.addInitScript(() => { window.claude = { use: () => Promise.resolve(null) }; });
@@ -342,6 +345,56 @@ const run = async (name, fn) => { if (ONLY && ONLY !== name) return; try { await
     await w.close();
   });
 
+  await run('news-under-the-pointer', async () => {
+    const pass = async (w) => { const B = await w.device(); const b = await B.tab(); await startQuiz(b, 'c01-s01'); await passQuiz(b); await wait(b, 1500); };
+    const firstLook = async (A, a) => { for (let i = 0; i < 450 && A.gets < 2; i++) await wait(a, 100); };      // the page's first look by itself is over: the next is most of a minute away
+    const data = async a => { const p = await prof(a); return !!(p && p.passed && p.passed['c01-s01']); };      // what the page holds, whatever the list shows
+    const backAtTheMouse = async a => { await a.evaluate(() => { window.__off += 70000; }); await a.mouse.move(200, 400); await wait(a, 150); await a.mouse.move(210, 410); await wait(a, 150); await a.mouse.move(220, 420); };
+
+    let w = await world(browser, url); let A = await w.device(); let a = await A.tab();
+    await firstLook(A, a); await pass(w);
+    const before = { list: await rowPills(a, 'c01-s01'), data: await data(a) };
+    await backAtTheMouse(a);                                      // the student is back at the laptop: the mouse moves, the page looks at the account
+    const during = { list: await rowPills(a, 'c01-s01'), data: await data(a) };
+    check('news that arrives while the mouse is moving is taken in at once, but the list is not redrawn under the pointer', !before.data && during.data && !during.list.includes('Passed'), { before, during });
+    await wait(a, 1200);                                          // the mouse rests
+    check('... and the list is redrawn once the mouse has come to rest', (await rowPills(a, 'c01-s01')).includes('Passed'), await rowPills(a, 'c01-s01'));
+    check('no page errors (pointer, rest)', w.errs().length === 0, w.errs());
+    await w.close();
+
+    w = await world(browser, url); A = await w.device(); a = await A.tab();
+    await firstLook(A, a); await pass(w);
+    await backAtTheMouse(a);
+    const stale = !(await rowPills(a, 'c01-s01')).includes('Passed');
+    await a.click('[data-act="start-session"]');                  // pressed while the list still shows the old numbers
+    await wait(a, 400);
+    const first = await a.evaluate(() => ({ view: document.body.dataset.view, heading: ((document.querySelector('.view h1') || {}).textContent || '').slice(0, 60) }));
+    check('... and a click made meanwhile acts on the new numbers: Start session does not go back to the card the phone has passed', stale && first.view === 'quiz', { listStillOld: stale, first });
+    check('no page errors (pointer, click)', w.errs().length === 0, w.errs());
+    await w.close();
+  });
+
+  await run('field-log', async () => {
+    const w = await world(browser, url); const A = await w.device(); const a = await A.tab();
+    await startQuiz(a, 'c01-s01'); const qid = await answer(a, true); await wait(a, 2500);
+    const before = w.acct.side.length;
+    await a.evaluate(() => { Object.defineProperty(document, 'visibilityState', { configurable: true, get: () => 'hidden' }); document.dispatchEvent(new Event('visibilitychange')); });      // the student leaves the page
+    await wait(a, 800);
+    const logs = w.acct.side, last = logs[logs.length - 1] || {}, v = last.v || {}, n = v.n || {};
+    check('leaving the page writes the field log to a document of its own', logs.length === before + 1 && /^data\/users\/u_test\/fieldlog-[a-z0-9]+$/.test(last.path || ''), { writes: logs.length, path: last.path });
+    check('... it holds counts and timings of the calls to the store, the build and the browser', n.get >= 2 && n.set >= 1 && n.set_ok >= 1 && n.get_ok >= 2 && /^[0-9a-f]{10}$/.test(v.build || '') && /Mozilla/.test(v.ua || '') && v.loads === 1, v);
+    check('... and no answers: not the question, not the progress', !JSON.stringify(v).includes(qid) && !('q' in v) && !('passed' in v), Object.keys(v));
+    check('... and the progress document holds no trace of the log', !!w.acct.doc.q[qid] && !('n' in w.acct.doc) && !('ua' in w.acct.doc), Object.keys(w.acct.doc));
+    const sets = w.acct.sets;
+    await a.evaluate(() => { Object.defineProperty(document, 'visibilityState', { configurable: true, get: () => 'visible' }); document.dispatchEvent(new Event('visibilitychange')); });
+    await wait(a, 500);
+    await a.evaluate(() => { Object.defineProperty(document, 'visibilityState', { configurable: true, get: () => 'hidden' }); document.dispatchEvent(new Event('visibilitychange')); });
+    await wait(a, 600);
+    check('... coming back and leaving again writes it once more at most, and the log never writes the progress', w.acct.side.length <= before + 2 && w.acct.sets === sets, { logWrites: w.acct.side.length - before, sets: w.acct.sets - sets });
+    check('no page errors (field log)', w.errs().length === 0, w.errs());
+    await w.close();
+  });
+
   await run('streak', async () => {
     const w = await world(browser, url); const A = await w.device(); const a = await A.tab();
     const day = async (iso) => { await setNow(a, iso); await a.reload(); await a.waitForSelector('.mission'); await wait(a, 600); return stats(a); };
@@ -394,12 +447,12 @@ const run = async (name, fn) => { if (ONLY && ONLY !== name) return; try { await
     A.down = true;
     const a = await A.tab();                                      // this device cannot read the account when the page opens
     await a.waitForFunction(() => /Could not reach your account/.test((document.querySelector('#sync-text') || {}).textContent || ''), null, { timeout: 30000 });
-    const gets = w.acct.gets;
+    const gets = A.gets;      // this device's own reads: the other device looks at the account by itself too
     check('the account cannot be read at the start: the page says so, and shows only this device', /Trying again/.test((await stats(a)).saved) && !(await rowPills(a, 'c01-s01')).includes('Passed'), (await stats(a)).saved);
     A.down = false;                                               // the outage ends. The student does nothing.
     await a.waitForFunction(() => /saved to your account/.test((document.querySelector('#sync-text') || {}).textContent || ''), null, { timeout: 40000 }).catch(() => {});
     const s = await stats(a);
-    check('... and it does try again by itself: the saved progress appears without a tap', /saved to your account/.test(s.saved) && (await rowPills(a, 'c01-s01')).includes('Passed') && w.acct.gets > gets, { saved: s.saved, pills: await rowPills(a, 'c01-s01') });
+    check('... and it does try again by itself: the saved progress appears without a tap', /saved to your account/.test(s.saved) && (await rowPills(a, 'c01-s01')).includes('Passed') && A.gets > gets, { saved: s.saved, pills: await rowPills(a, 'c01-s01') });
     check('no page errors (first read fails)', w.errs().length === 0, w.errs());
     await w.close();
   });

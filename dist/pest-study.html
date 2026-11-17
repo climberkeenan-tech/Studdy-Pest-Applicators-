@@ -432,16 +432,66 @@ function joinProfiles(a, b) {
 
 let P = normalize(lsGet(LS_KEY));
 /* loaded: the account copy has been read. Nothing is written to the account before that.
-   seenAt: when this tab last read or wrote the account. acctAt: when the account copy was last saved, by any device. */
-let profRef = null, sync = 'local', dirty = false, saving = false, saveT = null, loaded = false, seenAt = 0, acctAt = 0, fails = 0;
-/* A call to the account that gets no answer must not hold everything up: after `ms` it counts as failed. */
+   seenAt: when this tab last read or wrote the account. triedAt: when it last asked, answered or not.
+   acctAt: when the account copy was last saved, by any device. */
+let profRef = null, sync = 'local', dirty = false, saving = false, saveT = null, loaded = false, seenAt = 0, triedAt = 0, acctAt = 0;
+let fails = 0;        // tries the page made by itself and that failed, in a row: the pause before the next one grows with it
 let held = null;      // a write that got no answer in time and may still land: the next write waits for it
+let silent = 0;       // writes in a row that got no answer at all: no extra tries while the store is like that
+let lateAnswers = 0;  // answers that came after the page had stopped waiting for them
 let lookT = null;     // a second look at the account a few seconds after a write
 let pollWait = 30000; // how long a page that stays in view waits between two looks at the account: it grows while they bring nothing new
 let writing = false;  // a write is on its way (the footer must not say "saved" yet)
+let unproven = false; // a write of this page went out and no write has been answered since: only an answer proves a save
+/* A call to the account that gets no answer must not hold everything up: after `ms` it counts as failed. */
 const timed = (p, ms) => new Promise((ok, no) => { const t = setTimeout(() => no({ code: 'unavailable', message: 'no answer', late: true }), ms); Promise.resolve(p).then(v => { clearTimeout(t); ok(v); }, e => { clearTimeout(t); no(e); }); });
 /* What a failed call means for the footer: full (a storage cap), off (this view may not use the account), error (try again). */
 const failKind = e => { const c = e && e.code; return c === 'quota_exceeded' ? 'full' : c === 'revoked' || c === 'not_granted' || c === 'capability_disabled' || c === 'capability_removed' ? 'off' : 'error'; };
+/* How long ago, in ms. A time that lies in the future (the device clock was set back) counts as long ago:
+   otherwise every wait measured from it would last until the clock had caught up. */
+const since = t => { const d = Date.now() - t; return d < 0 ? Infinity : d; };
+/* The pause before the page tries again by itself: 20 s, 40 s ... 5 min. */
+const pauseFor = n => Math.min(300000, 20000 * Math.pow(2, Math.min(Math.max(n, 1) - 1, 4)));
+
+/* ----- field log: what the real store did on this device. One small document per device in the viewer's own
+   private space, for whoever maintains this page (CLAUDE.md, "Field log"). It holds counts, timings and error
+   codes, never answers or progress, and nothing in it can stop a save. */
+const BUILD = '6ad08b4713';
+const LOG_KEY = 'pas-fieldlog-v1';
+const flog = (() => { const d = lsGet(LOG_KEY); return isMap(d) && d.v === 1 && typeof d.dev === 'string' && isMap(d.n) ? d : { v: 1, dev: Math.random().toString(36).slice(2, 10), first: Date.now(), loads: 0, n: {} }; })();
+flog.loads++;
+let logRef = null, logSig = '', logAt = 0, logBusy = false;
+function logNote(key, n) { try { flog.n[key] = (flog.n[key] || 0) + (n === undefined ? 1 : n); } catch (e) {} }
+function logMax(key, v) { try { if (!(flog.n[key] >= v)) flog.n[key] = Math.round(v); } catch (e) {} }
+/* One call to the store: how long it took, how it ended, and whether the reply was a confirmed one. */
+function logCall(op, t0, err, snap) {
+  try {
+    logNote(op);
+    if (err) { logNote('err_' + op + '_' + String(err.late ? 'no_answer' : err.code || 'unknown').replace(/[^a-z_]/gi, '').slice(0, 30)); return; }
+    const ms = Math.max(0, Date.now() - t0);
+    logNote(op + '_ok'); logNote(op + '_ms', ms); logMax(op + '_max', ms);
+    const m = snap && snap.metadata;
+    if (m && m.fromCache) logNote('get_cache');
+    if (m && m.hasPendingWrites) logNote('get_pending');
+    if (snap && !snap.exists) logNote('get_none');
+  } catch (e) {}
+}
+/* Store the log: on this device always. In the account when the page is left (now), and otherwise every five
+   minutes at most, and only when something other than a plain read has been counted since: a page that sits
+   idle and looks at the account now and then writes nothing. */
+function logSave(now) {
+  try {
+    lsSet(LOG_KEY, flog);
+    if (!logRef || logRef === profRef || logBusy) return;      // a store that hands out one reference for every path: never write the log into the progress
+    const sig = JSON.stringify([Object.keys(flog.n).filter(k => !/^get(_ok|_ms|_max|_none)?$/.test(k)).sort().map(k => [k, flog.n[k]]), flog.loads, sync]);
+    if (sig === logSig || (!now && since(logAt) < 300000)) return;
+    logSig = sig; logAt = Date.now(); logBusy = true;
+    const free = () => { logBusy = false; };
+    setTimeout(free, 30000);
+    Promise.resolve(logRef.set({ v: 1, dev: flog.dev, build: BUILD, first: flog.first, at: Date.now(), loads: flog.loads, sync, dirty, n: clone(flog.n),
+      ua: String(typeof navigator !== 'undefined' && navigator.userAgent || '').slice(0, 240) })).then(free, free);
+  } catch (e) {}
+}
 
 function save() {
   P.updatedAt = Date.now();
@@ -449,7 +499,7 @@ function save() {
   dirty = true;
   clearTimeout(lookT);
   clearTimeout(saveT);
-  saveT = setTimeout(flush, 700);
+  saveT = setTimeout(() => flush(), 700);
   renderFoot();
 }
 function saveSettings() { P.settingsAt = Math.max(Date.now(), num(P.settingsAt) + 1); save(); }
@@ -471,36 +521,75 @@ function takeIn(snap) {
   if (after !== before) { adopt(joined); pollWait = 30000; }      // another device is saving: a page in view looks again soon
   return { news: after !== before, need: after !== sigP(remote) };
 }
-function remoteNews() { if (S.view === 'home') render(); else renderChips(); }
+/* News from another device is taken in at once, but the home page is not redrawn under a hand that is about to
+   click: the rows would move, or the button being pressed would be replaced and the click lost. The redraw waits
+   until the pointer has rested for half a second (5 seconds at most). A click meanwhile acts on the new numbers:
+   only the drawing is late. The numbers in the header change at once. */
+let newsT = null, newsAt = 0, ptrDown = false, ptrAt = 0;
+function remoteNews() {
+  clearTimeout(newsT);
+  if (S.view !== 'home') { newsAt = 0; renderChips(); return; }
+  if (!newsAt) newsAt = Date.now();
+  if ((ptrDown || since(ptrAt) < 500) && since(newsAt) < 5000) { renderChips(); newsT = setTimeout(remoteNews, 250); return; }
+  newsAt = 0;
+  render();
+}
+/* A reply the store has not confirmed: a copy from a cache, or one that includes this page's own unanswered write
+   (db.d.ts, SnapshotMetadata). It is joined in like any other, but it proves nothing about the account. */
+const unsure = snap => !!(snap && snap.metadata && (snap.metadata.fromCache || snap.metadata.hasPendingWrites));
 /* One read of the account copy. "No document" that comes from a cache is not an answer: writing on the strength
    of it could put this device's copy over an account copy the cache has not seen. */
 async function readAcct() {
-  const snap = await timed(profRef.get(), 15000);
+  const t0 = triedAt = Date.now();
+  let snap;
+  try { snap = await timed(profRef.get(), 15000); } catch (e) { logCall('get', t0, e); throw e; }
+  logCall('get', t0, null, snap);
   if (snap && !snap.exists && snap.metadata && snap.metadata.fromCache) throw { code: 'unavailable', message: 'not confirmed by the store' };
   return snap;
 }
-async function flush() {
+/* auto: the page tries again by itself (a timer). Only those tries make the next pause longer: six answers
+   given during a short outage are six failed saves, and must not mean a wait of five minutes afterwards. */
+async function flush(auto) {
   if (!loaded) { if (dirty && sync === 'error') initDb(); return; }      // initDb gave up earlier: try the read again
-  if (!profRef || saving || held || !dirty) return;
+  if (held) { held.want = true; return; }                                 // a write is still out: the hold starts this again when it ends
+  if (!profRef || saving || !dirty) return;
   saving = writing = true;
-  let news = false;
+  let news = false, wrote = false;
+  const answers = lateAnswers;
   try {
     // Another tab or device may have saved since this one last looked: read, join, then write. Never overwrite.
-    const t = takeIn(await readAcct());
+    const snap = await readAcct(), t = takeIn(snap);
     news = t.news;
     dirty = false;
-    if (t.need) {
+    // "Nothing to write" is taken from the reply only if the reply can be believed. After a write that got no
+    // answer, or on a reply the store has not confirmed, the reply may show this page's own write that never
+    // arrived: then the page writes again, and only the answer to that write counts as saved.
+    const force = !t.need && (unproven || unsure(snap));
+    if (force) logNote('forced_write');
+    if (t.need || force) {
       let body = JSON.stringify(P), cut = false;
       while (body.length > 200000 && P.sessions.length > 3) { P.sessions.pop(); body = JSON.stringify(P); cut = true; }
       if (cut) lsSet(LS_KEY, P);      // the device keeps the same trimmed copy, or every visit would write it again
-      const sent = profRef.set(JSON.parse(body));
-      try { await timed(sent, 15000); }
+      logMax('doc_chars', body.length);
+      wrote = true;
+      const w0 = Date.now(), sent = profRef.set(JSON.parse(body));
+      try { await timed(sent, 15000); logCall('set', w0); silent = 0; unproven = false; }
       catch (e) {
-        if (e && e.late) {      // no answer yet, but it may still land: the next write waits for it (20 s at most, when the first retry is due anyway; the later looks repair the rest)
-          const mine = held = {};
-          const free = () => { if (held === mine) held = null; dirty = true; clearTimeout(saveT); saveT = setTimeout(flush, 700); };
-          Promise.resolve(sent).then(free, free);      // answered at last, even after the hold ran out: it may sit on top of a newer write, so read and save again
-          setTimeout(() => { if (held === mine) free(); }, 20000);
+        logCall('set', w0, e);
+        if (e && e.late) {
+          // No answer yet, but the write may still land: the next write waits for it, 20 s at most (the first
+          // retry is due then anyway). What ends the wait decides what follows:
+          silent++; unproven = true;
+          // ... and it may land minutes later, on top of a newer write, without a word. So for three minutes the
+          // page looks at the account now and then, in view or not, and saves again if something has gone missing.
+          for (const ms of [45000, 80000, 125000, 185000]) setTimeout(() => { if (!dirty && !saving) refresh(); }, ms);
+          const mine = held = { want: false };
+          const lift = () => { const was = held === mine; if (was) held = null; return was; };
+          const again = () => { clearTimeout(saveT); saveT = setTimeout(() => flush(), 700); };
+          Promise.resolve(sent).then(
+            () => { lift(); silent = 0; unproven = false; lateAnswers++; dirty = true; logNote('set_late_ok'); logMax('set_late_max', Date.now() - w0); again(); },      // it landed after all, perhaps on top of a newer write: read and save again now
+            () => { silent = 0; logNote('set_late_no'); if (lift() && mine.want) again(); });      // it failed after all: the retry that is already set will do
+          setTimeout(() => { if (lift() && mine.want) again(); }, 20000);      // still no answer: stop waiting. A save that was asked for meanwhile goes out now, else the retry does it
         }
         throw e;
       }
@@ -512,33 +601,38 @@ async function flush() {
       clearTimeout(lookT); lookT = setTimeout(() => { refresh(); lookT = setTimeout(refresh, 29000); }, 6000);
     }
     sync = 'synced'; seenAt = Date.now(); fails = 0;
-  } catch (e) { dirty = true; sync = failKind(e); fails++; }
+    if (lateAnswers !== answers) dirty = true;      // a write this page had given up on was answered meanwhile: what was just read may be older than the account is now
+  } catch (e) {
+    dirty = true; sync = failKind(e); fails = auto ? fails + 1 : Math.max(fails, 1);
+    if (!wrote) silent = 0;      // it failed before any write went out: the store is not swallowing writes just now
+  }
   saving = writing = false;
   if (news) remoteNews();
   renderFoot();
   clearTimeout(saveT);
   // Changed meanwhile: save again. Failed: try again later, less and less often (20 s, 40 s ... 5 min). Full or off: retrying cannot help.
-  if (dirty && sync === 'synced') saveT = setTimeout(flush, 700);
-  else if (dirty && sync === 'error') saveT = setTimeout(flush, Math.min(300000, 20000 * Math.pow(2, Math.min(fails - 1, 4))));
+  if (dirty && sync === 'synced') saveT = setTimeout(() => flush(), 700);
+  else if (dirty && sync === 'error') saveT = setTimeout(() => flush(true), pauseFor(fails));
 }
-/* The tab is back in view: another device may have saved in the meantime. */
+/* A look at the account: the tab is back in view, or it is time to see what another device saved. */
 let seeT = null, seeFails = 0;
 async function refresh() {
-  if (!loaded || !profRef || saving) return;
+  if (!loaded || !profRef || saving || sync === 'off') return;
   saving = true;
   let news = false, failed = false;
   try {
     const snap = await readAcct(), t = takeIn(snap);
-    news = t.news; if (t.need) { dirty = true; pollWait = 30000; }      // the account lacks something this page holds: another device wrote over it, so keep looking
-    if (snap && snap.metadata && snap.metadata.fromCache) failed = true;      // a copy the store has not confirmed: joined, but not a look at the account
+    news = t.news;
+    if (t.need) { dirty = true; pollWait = 30000; }      // the account lacks something this page holds: another device wrote over it. Save again, and keep looking
+    if (unsure(snap)) failed = true;      // a copy the store has not confirmed: joined, but not a look at the account
     else { seenAt = Date.now(); seeFails = 0; if (sync === 'error') { sync = 'synced'; fails = 0; } }
-  } catch (e) { failed = failKind(e) === 'error'; }
+  } catch (e) { const k = failKind(e); if (k === 'off') sync = 'off'; failed = k === 'error'; }      // off: this view may no longer use the account, so the looks stop
   saving = false;
   if (news) remoteNews();
   renderFoot();
   clearTimeout(seeT);
   if (dirty) flush();
-  else if (failed) seeT = setTimeout(refresh, Math.min(300000, 20000 * Math.pow(2, Math.min(seeFails++, 4))));      // the read failed: look again later, less and less often
+  else if (failed) seeT = setTimeout(refresh, pauseFor(++seeFails));      // the read failed: look again later, less and less often
 }
 /* The calendar day the screen was last drawn for. A page left open overnight must not go on saying
    "Today is counted": when the day changes, the home page (or, elsewhere, the header) is drawn again. */
@@ -549,7 +643,7 @@ setInterval(newDay, 30000);
 function wake() {
   newDay();
   if (!loaded) { if (sync === 'error') initDb(); return; }      // the account was never read: try that first
-  if (dirty) flush(); else if (Date.now() - seenAt > 20000) refresh();
+  if (dirty) flush(); else if (since(seenAt) > 20000) refresh();
 }
 /* Another tab of this page on the same device stored its copy: join it. Without this the two tabs would
    overwrite each other on the device whenever the account cannot be reached. */
@@ -558,41 +652,53 @@ window.addEventListener('storage', e => {
   let other = null; try { other = JSON.parse(e.newValue); } catch (x) { return; }
   const joined = joinProfiles(P, other);
   if (sigP(joined) === sigP(P)) return;
-  adopt(joined); dirty = true; clearTimeout(saveT); saveT = setTimeout(flush, 700); remoteNews(); renderFoot();
+  adopt(joined); dirty = true; clearTimeout(saveT); saveT = setTimeout(() => flush(), 700); remoteNews(); renderFoot();
 });
-document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') flush(); else wake(); });
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') { flush(); logSave(true); } else wake(); });
 window.addEventListener('focus', () => { if (document.visibilityState !== 'hidden') wake(); });
 window.addEventListener('online', wake);
-/* A page that simply stays in view (a laptop on the desk) looks at the account by itself: it shows what another
-   device saved, and it repairs the account if a save from elsewhere landed on top of its own. Half a minute after
-   the last look at first. Every such look doubles the wait, up to 2 minutes, and news from another device brings
-   the half minute back (takeIn): a student with one device, or with no connection, is not charged 120 reads an hour.
-   Not while something waits to be saved or the account cannot be reached: flush() reads it then, at its own pace. */
+/* Every half minute, on a page that is in view (a laptop on the desk, a phone with the screen on):
+   - Progress that could not be saved does not wait out a pause of minutes: one try a minute. (Not while the store
+     swallows writes without an answer: every further try would be one more write on its way.)
+   - With nothing to save, the page looks at the account by itself. It shows what another device saved, and it
+     repairs the account if a save from elsewhere landed on top of its own. Half a minute after the last look at
+     first; every such look doubles the wait, up to 2 minutes, and news from another device brings the half minute
+     back (takeIn). The wait counts from the last try, answered or not, so a store that cannot be reached is not
+     asked 120 times an hour. */
 setInterval(() => {
-  if (document.visibilityState === 'hidden' || sync !== 'synced' || dirty || saving || Date.now() - seenAt < pollWait - 10000) return;
+  if (document.visibilityState === 'hidden') return;
+  logSave();
+  if (!loaded) { if (sync === 'error' && since(triedAt) > 55000) initDb(); return; }      // the account was never read: the same, one try a minute
+  if (saving || held) return;
+  if (dirty) { if (sync === 'error' && !silent && since(triedAt) > 55000) { logNote('rescue'); flush(true); } return; }
+  if (sync !== 'synced' || since(Math.max(seenAt, triedAt)) < pollWait - 10000) return;
   pollWait = Math.min(pollWait * 2, 120000);
   refresh();
 }, 30000);
 /* The mouse moves again over a page that nobody touched for a minute: the student is back at this device (after
-   the phone, say). Look at the account now, so that the click that follows acts on today's numbers. Mouse only:
-   it moves before it clicks, which gives the read a head start. A phone comes back through wake(). */
+   the phone, say). Do at once what a tab coming back into view does: save what is waiting, or look at the account,
+   so that the click that follows acts on today's numbers. Mouse only: it moves before it clicks, which gives the
+   read a head start. A phone comes back through wake(). */
 let lastMove = Date.now();
 window.addEventListener('pointermove', e => {
-  if (e.pointerType !== 'mouse') return;
-  const now = Date.now(), back = now - lastMove > 60000;
-  lastMove = now;
-  if (back && sync === 'synced' && !dirty && !saving && now - seenAt > 20000) refresh();
+  const away = since(lastMove) > 60000;
+  ptrAt = lastMove = Date.now();
+  if (away && e.pointerType === 'mouse') wake();
 }, { passive: true });
+window.addEventListener('pointerdown', () => { ptrDown = true; ptrAt = Date.now(); }, { passive: true, capture: true });
+for (const ev of ['pointerup', 'pointercancel']) window.addEventListener(ev, () => { ptrDown = false; ptrAt = Date.now(); }, { passive: true, capture: true });
 
 async function initDb() {
   if (!window.claude || !claude.use) return;
   sync = 'loading'; renderFoot();
+  triedAt = Date.now();
   let slow = setTimeout(() => { if (sync === 'loading') { sync = 'slow'; renderFoot(); } }, 10000);
   try {
     const [db, user] = await Promise.all([claude.use('db'), claude.use('user')]);
     const id = user ? await user.id() : null;
     if (!db || !id) { clearTimeout(slow); sync = 'local'; renderFoot(); return; }
     profRef = db.doc('data/users/' + id + '/profile');
+    try { logRef = db.doc('data/users/' + id + '/fieldlog-' + flog.dev); } catch (e) { logRef = null; }
     const snap = await readAcct();
     clearTimeout(slow);
     dirty = takeIn(snap).need;                         // taps made before this point are kept: they were joined in
@@ -609,7 +715,7 @@ async function initDb() {
     sync = 'error'; renderFoot();
     // The footer says "Trying again": do it, less and less often (20 s, 40 s ... 5 min). wake() tries at once.
     clearTimeout(initDb.t);
-    initDb.t = setTimeout(() => { if (!loaded && sync === 'error') initDb(); }, Math.min(300000, 20000 * Math.pow(2, Math.min(Math.max(initDb.tries - 4, 0), 4))));
+    initDb.t = setTimeout(() => { if (!loaded && sync === 'error') initDb(); }, pauseFor(initDb.tries - 3));
   }
 }
 
@@ -1026,7 +1132,7 @@ ttsP.then(t => {
 function claudePlay(from) {
   const gen = ++Reader.cgen;
   const lines = Reader.lines.slice(from, from + 100).map((L, k) => ({ text: L.say.slice(0, 2000), id: gen + 'L' + (from + k) }));
-  Reader.engine = 'claude';
+  Reader.engine = 'claude'; logNote('voice_claude');
   Reader.lastMs = 0; setCur(from);          // the place asked for, known even if the platform refuses this call
   Reader.setState('speaking');
   const mine = () => gen === Reader.cgen && Reader.engine === 'claude';
@@ -1250,7 +1356,7 @@ async function recLoad(sid, n, from) {
   // The recording cannot be played here: remember that for this card and use the next best voice.
   const why = Rec.why || 'this browser could not play the file';
   try { console.warn('recorded voice failed:', sid, why, Rec.code); } catch (e) {}
-  Rec.bad[sid] = why; Rec.badAt[sid] = Date.now(); Rec.fails[sid] = (Rec.fails[sid] || 0) + 1; Rec.sid = null; Rec.mode = null; Reader.engine = null;
+  Rec.bad[sid] = why; Rec.badAt[sid] = Date.now(); Rec.fails[sid] = (Rec.fails[sid] || 0) + 1; Rec.sid = null; Rec.mode = null; Reader.engine = null; logNote('voice_rec_failed');
   const next = pickEngine(sid);
   if (!next) delete Rec.bad[sid];           // no other voice here: let Play try the recording again
   const held = Reader.state === 'paused';          // Pause was pressed while the file was still arriving: no other voice starts by itself
@@ -1262,7 +1368,7 @@ async function recLoad(sid, n, from) {
 function recPlay(sid, from) {
   const n = narr(sid);
   if (!n || n.t.length !== Reader.lines.length * 2) { Rec.bad[sid] = DIFFER; return play(from); }
-  Reader.engine = 'rec'; Rec.li = from;
+  Reader.engine = 'rec'; Rec.li = from; logNote('voice_rec');
   if (Rec.sid !== sid) Rec.shown = '';
   Reader.setState('speaking');
   setCur(from); hiWord(from, 0);
@@ -1455,7 +1561,7 @@ function devicePlay(from) {
   const voice = pickDeviceVoice();
   const tick = { i: -1, t0: 0, boundary: false };
   const end = Reader.lines.length;
-  Reader.engine = 'device';
+  Reader.engine = 'device'; logNote('voice_device');
   const run = ++devTick.run, mine = () => Reader.engine === 'device' && run === devTick.run;
   let began = false;
   // Some phones drop speech that was not asked for by a tap, without any event. Do not sit on "Pause" in silence.

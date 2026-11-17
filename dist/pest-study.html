@@ -456,7 +456,7 @@ const pauseFor = n => Math.min(300000, 20000 * Math.pow(2, Math.min(Math.max(n, 
 /* ----- field log: what the real store did on this device. One small document per device in the viewer's own
    private space, for whoever maintains this page (CLAUDE.md, "Field log"). It holds counts, timings and error
    codes, never answers or progress, and nothing in it can stop a save. */
-const BUILD = '6ad08b4713';
+const BUILD = 'df90786afd';
 const LOG_KEY = 'pas-fieldlog-v1';
 const flog = (() => { const d = lsGet(LOG_KEY); return isMap(d) && d.v === 1 && typeof d.dev === 'string' && isMap(d.n) ? d : { v: 1, dev: Math.random().toString(36).slice(2, 10), first: Date.now(), loads: 0, n: {} }; })();
 flog.loads++;
@@ -482,6 +482,7 @@ function logCall(op, t0, err, snap) {
 function logSave(now) {
   try {
     lsSet(LOG_KEY, flog);
+    if (!loaded || saving || held) return;      // like the progress: nothing is written before the account has been read, and never two writes of this page at once
     if (!logRef || logRef === profRef || logBusy) return;      // a store that hands out one reference for every path: never write the log into the progress
     const sig = JSON.stringify([Object.keys(flog.n).filter(k => !/^get(_ok|_ms|_max|_none)?$/.test(k)).sort().map(k => [k, flog.n[k]]), flog.loads, sync]);
     if (sig === logSig || (!now && since(logAt) < 300000)) return;
@@ -515,7 +516,14 @@ function adopt(next) {
    news: this tab now holds something it did not. need: this tab holds something the account copy does not. */
 function takeIn(snap) {
   if (!snap || !snap.exists) return { news: false, need: !!P.updatedAt };
-  const remote = normalize(clone(snap.data()));
+  const raw = snap.data();
+  if (isMap(raw) && typeof raw.dev === 'string' && isMap(raw.n) && !isMap(raw.q)) {
+    // The progress document holds a field log: this store keeps one document for every path. Never log again
+    // on this device, take nothing from that reply, and put the progress back.
+    flog.off = true; logRef = null; logNote('log_in_progress'); lsSet(LOG_KEY, flog);
+    return { news: false, need: !!P.updatedAt };
+  }
+  const remote = normalize(clone(raw));
   acctAt = Math.max(acctAt, num(remote.updatedAt));
   const before = sigP(P), joined = joinProfiles(P, remote), after = sigP(joined);
   if (after !== before) { adopt(joined); pollWait = 30000; }      // another device is saving: a page in view looks again soon
@@ -698,7 +706,7 @@ async function initDb() {
     const id = user ? await user.id() : null;
     if (!db || !id) { clearTimeout(slow); sync = 'local'; renderFoot(); return; }
     profRef = db.doc('data/users/' + id + '/profile');
-    try { logRef = db.doc('data/users/' + id + '/fieldlog-' + flog.dev); } catch (e) { logRef = null; }
+    try { logRef = flog.off ? null : db.doc('data/users/' + id + '/fieldlog-' + flog.dev); } catch (e) { logRef = null; }
     const snap = await readAcct();
     clearTimeout(slow);
     dirty = takeIn(snap).need;                         // taps made before this point are kept: they were joined in

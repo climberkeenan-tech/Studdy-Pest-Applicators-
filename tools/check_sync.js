@@ -44,7 +44,7 @@ function world() {
 
   W.device = (name, opts) => {
     opts = opts || {};
-    const dev = { name, off: 0, vis: 'visible', calls: [], flying: 0, overlaps: 0, renders: 0, chips: 0, foot: [], ls: {}, on: {}, cached: undefined,
+    const dev = { name, off: 0, vis: 'visible', calls: [], flying: 0, overlaps: 0, renders: 0, chips: 0, foot: [], ls: opts.ls || {}, on: {}, cached: undefined,
       get: () => ({}), set: () => ({}) };                 // plans: get() -> { ms, fail, hang, cache, pending }   set() -> { land, answer, fail }   (ms; null = never)
     class FDate extends Date { constructor(...a) { if (a.length) super(...a); else super(START + now + dev.off); } static now() { return START + now + dev.off; } }
     const copy = x => (x === undefined || x === null ? x : JSON.parse(JSON.stringify(x)));
@@ -73,7 +73,8 @@ function world() {
         });
       },
     };
-    const other = { get: () => Promise.reject({ code: 'invalid_argument' }), set: () => { dev.logWrites = (dev.logWrites || 0) + 1; return Promise.resolve(); } };
+    // any other document (the field log). opts.onePlace: a store that keeps one document whatever the path
+    const other = { get: () => Promise.reject({ code: 'invalid_argument' }), set: v => { dev.logWrites = (dev.logWrites || 0) + 1; if (opts.onePlace) { acct.doc = copy(v); acct.writes.push({ t: now / 1000, by: name + ' (log)', q: [] }); } return Promise.resolve(); } };
     const claude = { use: n => Promise.resolve(n === 'db' ? { doc: p => (/\/profile$/.test(p) ? ref : other) } : n === 'user' ? { id: () => Promise.resolve('u_test') } : null) };
     const listen = (type, fn) => { (dev.on[type] = dev.on[type] || []).push(fn); };
     const document = { get visibilityState() { return dev.vis; }, addEventListener: listen, querySelector: () => null };
@@ -382,6 +383,41 @@ const down = { fail: 'unavailable', ms: 30 };
     check('... after an answer it is written again, once in five minutes at most while in view, and at once when the page is left', afterAnswer === 2 && a.logWrites === 3, { afterAnswer, onLeaving: a.logWrites });
     const log = JSON.parse(a.ls['pas-fieldlog-v1'] || '{}');
     check('... it counts calls and timings, and holds no answers', !!log.n && log.n.get >= 2 && log.n.set === 3 && log.n.set_ok === 3 && !/q1|q2|q3/.test(JSON.stringify(log)), log);
+  }
+
+  // ---- 15b. A store that keeps one document for every path: the log would land in the progress
+  {
+    const w = world(), a = w.device('a', { onePlace: true });
+    a.api.initDb(); await w.run(5); w.at(10, () => a.api.answer('q1')); await w.run(29);
+    const before = !!(w.acct.doc && w.acct.doc.q && w.acct.doc.q.q1);
+    await w.run(31);
+    const clobbered = !(w.acct.doc && w.acct.doc.q);            // the first log write has replaced the progress
+    await w.run(400); a.hide(); await w.run(410); a.show(); w.at(420, () => a.api.answer('q2')); await w.run(800);
+    const d = w.acct.doc || {};
+    check('a store with one document for every path: the page sees its log in the progress document, puts the progress back and never logs again', before && clobbered && a.logWrites === 1 && !!(d.q && d.q.q1 && d.q.q2) && !('ua' in d) && !('n' in d) && !('dev' in d) && !('ua' in a.api.P()), { before, clobbered, logWrites: a.logWrites, keys: Object.keys(d) });
+    const b = w.device('b', { onePlace: true, ls: a.ls });    // the same browser later: a new page load, with what the first one stored
+    b.api.initDb(); await w.run(900); w.at(905, () => b.api.answer('q3')); await w.run(1300);
+    check('... also not after the page is opened again on that device', (b.logWrites || 0) === 0 && !!(w.acct.doc.q && w.acct.doc.q.q3), { logWrites: b.logWrites || 0, keys: Object.keys(w.acct.doc) });
+  }
+
+  // ---- 15c. The log, too, waits for the first read of the account, and for a write that is on its way
+  {
+    const w = world(), a = w.device('a', { onePlace: true });
+    w.acct.doc = { v: 1, updatedAt: START - 5000, xp: 50, q: { old: { seen: 1, right: 1, wrong: 0, run: 1, open: false, last: START - 5000 } }, passed: { c1: { at: START - 5000, tries: 1 } }, days: {}, attempts: {}, sessions: [] };
+    let out = true; a.get = () => (out ? down : {});
+    a.api.initDb(); w.at(200, () => { out = false; });
+    await w.run(199);
+    check('while the account has never been read, nothing at all is written, the log included', (a.logWrites || 0) === 0 && !!(w.acct.doc.passed && w.acct.doc.passed.c1), { logWrites: a.logWrites || 0, keys: Object.keys(w.acct.doc) });
+    await w.run(900);
+    check('... so even a store with one document for every path cannot lose what the account held: the page has it, and puts it back', a.has('old') && !!(w.acct.doc.q && w.acct.doc.q.old && w.acct.doc.passed && w.acct.doc.passed.c1) && a.logWrites === 1, { has: a.has('old'), logWrites: a.logWrites, keys: Object.keys(w.acct.doc) });
+
+    const w2 = world(), b = w2.device('b');
+    b.api.initDb(); await w2.run(5);
+    let n = 0; b.set = () => (++n === 1 ? { land: 29000, answer: 29000 } : {});      // a write that takes 29 s
+    w2.at(10, () => b.api.answer('q1')); await w2.run(38);
+    check('no log is written while a write of the progress has not been answered', (b.logWrites || 0) === 0, { logWrites: b.logWrites || 0, sets: b.times('set') });
+    await w2.run(75);
+    check('... it follows once that write is settled', b.logWrites === 1 && !b.lacks().length, { logWrites: b.logWrites, lacks: b.lacks() });
   }
 
   // ---- 16. Random histories: whatever the store does for five minutes, the page settles once it is healthy

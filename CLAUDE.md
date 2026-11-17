@@ -350,8 +350,13 @@ plays that everywhere. A card starts reading when it opens. Do not remove this.
   `voice_device`, `voice_rec_failed`), the number of page loads, the browser's user agent and the page build
   (`build`: `tools/build.py` puts the hash of the page into `__BUILD__`). No answers and no progress. It is
   written half a minute after the page opens, when the page is hidden, and otherwise every five minutes at
-  most, and only if something other than a plain read was counted since. Never into the progress document, and
+  most, and only if something other than a plain read was counted since. Like the progress it is never
+  written before the account has been read (`loaded`), and never while a write of the progress is on its way.
+  Never into the progress document, and
   not at all when the store hands out the same reference for every path (the simple stand-ins of the tests).
+  If the progress document ever comes back holding a field log (a store that keeps one document whatever the
+  path: one test stand-in did), the page takes nothing from it, puts the progress back and stops logging on
+  that device for good (`flog.off`).
   **Read it at the start of a session**, once the user has opened the page again: ArtifactData `list` on
   collection `data/users/me` (with `out_dir`). It answers what could not be tested from here: do writes get
   through (`set_ok` against `set`), how slow is the store, does it answer from a cache, does the recorded voice
